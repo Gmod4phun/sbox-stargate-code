@@ -134,7 +134,7 @@ namespace Sandbox.Components.Stargate
         public void StopRollSound()
         {
             // if ( RollSound.HasValue ) RollSound.Value.Stop();
-            if ( RollSound.IsPlaying) RollSound.Stop(true);
+            if ( RollSound.IsPlaying) RollSound.Stop();
         }
 
         // INBOUND

@@ -114,7 +114,7 @@ namespace Sandbox.Components.Stargate
 		// sounds
 		public void StopStartSound()
 		{
-			StartSoundInstance.Stop(false);
+			StartSoundInstance.Stop();
 		}
 
 		public void PlayStartSound()
@@ -125,7 +125,7 @@ namespace Sandbox.Components.Stargate
 
 		public void StopStopSound()
 		{
-			StopSoundInstance.Stop(false);
+			StopSoundInstance.Stop();
 		}
 
 		public void PlayStopSound()
@@ -408,8 +408,8 @@ namespace Sandbox.Components.Stargate
 
 		protected override void OnDestroy()
 		{
-			StartSoundInstance.Stop(true);
-			StopSoundInstance.Stop(true);
+			StartSoundInstance.Stop();
+			StopSoundInstance.Stop();
 
 			base.OnDestroy();
 		}

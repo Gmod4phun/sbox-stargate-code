@@ -196,7 +196,7 @@ namespace Sandbox.Components.Stargate
 				DissolveEntity( ent );
 			}
 
-			WormholeLoop.Stop(true);
+			WormholeLoop.Stop();
 
 			await GameTask.DelaySeconds( 0.5f );
 			if ( !this.IsValid() ) return;
@@ -893,7 +893,7 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnDestroy();
 
-			WormholeLoop.Stop(true);
+			WormholeLoop.Stop();
 
 			_frontTrigger?.Destroy();
 			_backTrigger?.Destroy();
