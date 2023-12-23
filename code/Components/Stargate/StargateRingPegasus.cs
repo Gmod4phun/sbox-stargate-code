@@ -432,7 +432,7 @@ namespace Sandbox.Components.Stargate
         {
             foreach ( var part in SymbolParts )
             {
-                if ( Game.IsServer && part.IsValid() ) part.Destroy();
+                if ( part.IsValid() ) part.Destroy();
             }
 
             base.OnDestroy();

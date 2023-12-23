@@ -937,7 +937,7 @@ namespace Sandbox.Components.Stargate
 		{
 			// if ( Ramp != null ) Ramp.Gate.Remove( this );
 
-			if ( Game.IsServer && OtherGate.IsValid() )
+			if ( OtherGate.IsValid() )
 			{
 				if ( OtherGate.Inbound && !OtherGate.Dialing ) OtherGate.StopDialing();
 				if ( OtherGate.Open ) OtherGate.DoStargateClose();
