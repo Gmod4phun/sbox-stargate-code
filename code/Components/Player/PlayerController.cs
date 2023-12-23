@@ -84,7 +84,7 @@ public class PlayerController : Component, INetworkSerializable
 			}
 
 			if ( Input.Pressed( "Use" ) ) {
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 100000 ).Run();
+				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 80 ).Run();
 
 				if ( tr.Hit )
 				{
