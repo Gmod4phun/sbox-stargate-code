@@ -302,7 +302,9 @@
             {
               "__type": "RotatingRing",
               "__enabled": true,
-              "RingRotationEnabled": false
+              "_currentRingAngle": 0,
+              "RingRotationEnabled": false,
+              "TargetSymbol": 0
             }
           ]
         }

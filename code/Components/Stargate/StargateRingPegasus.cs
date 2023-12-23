@@ -29,12 +29,6 @@ namespace Sandbox.Components.Stargate
         public List<int> DialSequenceActiveSymbols { get; private set; } = new();
         private SoundHandle RollSound { get; set; }
 
-        // public override void Stargate()
-        // {
-
-        //     SetRingState( true );
-        // }
-
         // create symbols
         // symbol models
 
@@ -57,7 +51,7 @@ namespace Sandbox.Components.Stargate
             }
 
             num = (num + 1).UnsignedMod( 36 );
-            SymbolParts[num < 18 ? 0 : 1].SceneModel.SetBodyGroup( $"symbol_{num+1}", state ? 1 : 0 );
+            SymbolParts[num < 18 ? 0 : 1].SetBodyGroup( $"symbol_{num+1}", state ? 1 : 0 );
         }
 
         public async void SetRingState( bool state, float delay = 0 )
@@ -68,7 +62,10 @@ namespace Sandbox.Components.Stargate
                 if ( !this.IsValid() ) return;
             }
 
-            // SetBodyGroup( 1, state ? 1 : 0 );
+            if (RingModel.IsValid())
+            {
+                RingModel.SetBodyGroup( "glyphs", state ? 1 : 0 );
+            }
         }
 
         public void RollSymbol( int start, int count, bool counterclockwise = false, float time = 2.0f )
@@ -134,7 +131,8 @@ namespace Sandbox.Components.Stargate
         public void StopRollSound()
         {
             // if ( RollSound.HasValue ) RollSound.Value.Stop();
-            if ( RollSound.IsPlaying) RollSound.Stop();
+            if ( RollSound.IsValid() && RollSound.IsPlaying)
+                RollSound?.Stop();
         }
 
         // INBOUND

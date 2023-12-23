@@ -132,8 +132,6 @@ namespace Sandbox.Components.Stargate
 			// gate_component.Ring = ring_component;
 			// ring_component.Gate = gate_component;
 
-			Log.Info(ring_component.RingModel.SceneObject);
-
 			var sym_part1 = ring.Components.Create<SkinnedModelRenderer>();
 			sym_part1.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_1_18.vmdl" );
 			ring_component.SymbolParts.Add(sym_part1);
@@ -141,6 +139,9 @@ namespace Sandbox.Components.Stargate
 			var sym_part2 = ring.Components.Create<SkinnedModelRenderer>();
 			sym_part2.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_19_36.vmdl" );
 			ring_component.SymbolParts.Add(sym_part2);
+
+			ring_component.ResetSymbols();
+			ring_component.SetRingState(true);
 		}
 	}
 }

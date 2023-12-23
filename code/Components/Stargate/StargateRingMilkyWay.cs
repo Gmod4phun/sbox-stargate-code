@@ -408,8 +408,8 @@ namespace Sandbox.Components.Stargate
 
 		protected override void OnDestroy()
 		{
-			StartSoundInstance.Stop();
-			StopSoundInstance.Stop();
+			StartSoundInstance?.Stop();
+			StopSoundInstance?.Stop();
 
 			base.OnDestroy();
 		}

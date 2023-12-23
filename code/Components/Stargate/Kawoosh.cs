@@ -30,37 +30,6 @@ namespace Sandbox.Components.Stargate
             get => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 10f, Transform.Rotation.Forward.Normal );
         }
 
-		// public override void Spawn()
-		// {
-		//     base.Spawn();
-
-		//     Transmit = TransmitType.Always;
-		//     SetModel( "models/sbox_stargate/kawoosh/kawoosh.vmdl" );
-		// }
-
-		/*
-        public override void ClientSpawn()
-        {
-            base.ClientSpawn();
-
-            EnableDrawing = false;
-
-            KawooshModelInside = new ModelEntity( GetModelName() )
-            {
-                Position = Position,
-                Rotation = Rotation,
-                Parent = this,
-                Scale = 0.95f,
-                EnableDrawing = false
-            };
-
-            Morphs.Set( 0, 1 ); // set initial morph value for kawoosh to 1 (retracted)
-
-            KawooshModelInside.SetMaterialGroup( "inside" );
-            KawooshModelInside.Morphs.Set( 0, 1 );
-        }
-        */
-
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -99,14 +68,6 @@ namespace Sandbox.Components.Stargate
             if ( _isExpanding )
             {
                 _currentProgress = 0;
-
-                KawooshModel.Model = Model.Load("models/citizen/citizen.vmdl");
-                KawooshModel.Model = Model.Load("models/sbox_stargate/kawoosh/kawoosh.vmdl");
-
-                KawooshModelInside.Model = Model.Load("models/citizen/citizen.vmdl");
-                KawooshModelInside.Model = Model.Load("models/sbox_stargate/kawoosh/kawoosh.vmdl");
-
-                // Log.Info(KawooshModelInside.SceneObject);
 
                 KawooshModel.SceneObject.RenderingEnabled = false;
                 KawooshModelInside.SceneObject.RenderingEnabled = false;
