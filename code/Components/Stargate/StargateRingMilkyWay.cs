@@ -114,7 +114,7 @@ namespace Sandbox.Components.Stargate
 		// sounds
 		public void StopStartSound()
 		{
-			StartSoundInstance.Stop();
+			StartSoundInstance?.Stop();
 		}
 
 		public void PlayStartSound()
@@ -125,7 +125,7 @@ namespace Sandbox.Components.Stargate
 
 		public void StopStopSound()
 		{
-			StopSoundInstance.Stop();
+			StopSoundInstance?.Stop();
 		}
 
 		public void PlayStopSound()

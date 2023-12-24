@@ -14,7 +14,7 @@ namespace Sandbox.Components.Stargate
         public StargatePegasus Gate
         {
             get {
-				return GameObject.Children.Find(go => go.Components.Get<StargatePegasus>().IsValid()).Components.Get<StargatePegasus>();
+				return GameObject.Parent.Components.Get<StargatePegasus>();
 			}
         }
 
@@ -112,7 +112,6 @@ namespace Sandbox.Components.Stargate
 
         public void ResetSymbol( int num, bool clearDialActive = true )
         {
-            Log.Info( $"Reset symbol with index {num}" );
             SetSymbolState( num, false );
             if ( clearDialActive ) DialSequenceActiveSymbols.Remove( num );
         }
@@ -130,9 +129,7 @@ namespace Sandbox.Components.Stargate
 
         public void StopRollSound()
         {
-            // if ( RollSound.HasValue ) RollSound.Value.Stop();
-            if ( RollSound.IsValid() && RollSound.IsPlaying)
-                RollSound?.Stop();
+            RollSound?.Stop();
         }
 
         // INBOUND
@@ -328,7 +325,6 @@ namespace Sandbox.Components.Stargate
         {
             // try
             {
-                Log.Info("symbols roll dial fast");
                 ResetSymbols();
 
                 SetRingState( false );
