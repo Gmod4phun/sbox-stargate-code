@@ -93,8 +93,8 @@ public class PlayerController : Component, INetworkSerializable
 							var ignore = new List<Stargate>() {gate};
 							var closestGate = Stargate.FindClosestGate(tr.GameObject.Transform.Position, exclude: ignore.ToArray());
 							if (closestGate.IsValid()) {
-								gate.BeginDialInstant($"{closestGate.GateAddress}{Stargate.PointOfOrigin}");
-								// gate.BeginDialFast("LV6RT1P#");
+								var addressToDial = Stargate.GetOtherGateAddressForMenu(gate, closestGate);
+								gate.BeginDialSlow(addressToDial);
 							}
 						}
 						else {
