@@ -196,7 +196,7 @@ namespace Sandbox.Components.Stargate
 				DissolveEntity( ent );
 			}
 
-			WormholeLoop.Stop(true);
+			WormholeLoop.Stop();
 
 			await GameTask.DelaySeconds( 0.5f );
 			if ( !this.IsValid() ) return;
@@ -712,7 +712,7 @@ namespace Sandbox.Components.Stargate
 
 		public void StartTouchEH( GameObject other, bool fromBack )
 		{
-			if ( !Game.IsServer || !other.IsValid() || other == CurrentTeleportingEntity )
+			if ( !other.IsValid() || other == CurrentTeleportingEntity )
 				return;
 
 			if ( !Stargate.IsAllowedForGateTeleport( other ) )
@@ -747,7 +747,7 @@ namespace Sandbox.Components.Stargate
 
 		public void EndTouchEH( GameObject other, bool fromBack = false )
 		{
-			if ( !Game.IsServer || !other.IsValid() )
+			if ( !other.IsValid() )
 				return;
 
 			if ( !Stargate.IsAllowedForGateTeleport( other ) )
@@ -893,7 +893,7 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnDestroy();
 
-			WormholeLoop.Stop(true);
+			WormholeLoop.Stop();
 
 			_frontTrigger?.Destroy();
 			_backTrigger?.Destroy();

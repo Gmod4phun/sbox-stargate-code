@@ -14,7 +14,7 @@ namespace Sandbox.Components.Stargate
         public StargatePegasus Gate
         {
             get {
-				return GameObject.Children.Find(go => go.Components.Get<StargatePegasus>().IsValid()).Components.Get<StargatePegasus>();
+				return GameObject.Parent.Components.Get<StargatePegasus>();
 			}
         }
 
@@ -28,12 +28,6 @@ namespace Sandbox.Components.Stargate
 
         public List<int> DialSequenceActiveSymbols { get; private set; } = new();
         private SoundHandle RollSound { get; set; }
-
-        // public override void Stargate()
-        // {
-
-        //     SetRingState( true );
-        // }
 
         // create symbols
         // symbol models
@@ -57,7 +51,7 @@ namespace Sandbox.Components.Stargate
             }
 
             num = (num + 1).UnsignedMod( 36 );
-            SymbolParts[num < 18 ? 0 : 1].SceneModel.SetBodyGroup( $"symbol_{num+1}", state ? 1 : 0 );
+            SymbolParts[num < 18 ? 0 : 1].SetBodyGroup( $"symbol_{num+1}", state ? 1 : 0 );
         }
 
         public async void SetRingState( bool state, float delay = 0 )
@@ -68,7 +62,10 @@ namespace Sandbox.Components.Stargate
                 if ( !this.IsValid() ) return;
             }
 
-            // SetBodyGroup( 1, state ? 1 : 0 );
+            if (RingModel.IsValid())
+            {
+                RingModel.SetBodyGroup( "glyphs", state ? 1 : 0 );
+            }
         }
 
         public void RollSymbol( int start, int count, bool counterclockwise = false, float time = 2.0f )
@@ -115,7 +112,6 @@ namespace Sandbox.Components.Stargate
 
         public void ResetSymbol( int num, bool clearDialActive = true )
         {
-            Log.Info( $"Reset symbol with index {num}" );
             SetSymbolState( num, false );
             if ( clearDialActive ) DialSequenceActiveSymbols.Remove( num );
         }
@@ -133,8 +129,7 @@ namespace Sandbox.Components.Stargate
 
         public void StopRollSound()
         {
-            // if ( RollSound.HasValue ) RollSound.Value.Stop();
-            if ( RollSound.IsPlaying) RollSound.Stop(true);
+            RollSound?.Stop();
         }
 
         // INBOUND
@@ -330,7 +325,6 @@ namespace Sandbox.Components.Stargate
         {
             // try
             {
-                Log.Info("symbols roll dial fast");
                 ResetSymbols();
 
                 SetRingState( false );
@@ -432,7 +426,7 @@ namespace Sandbox.Components.Stargate
         {
             foreach ( var part in SymbolParts )
             {
-                if ( Game.IsServer && part.IsValid() ) part.Destroy();
+                if ( part.IsValid() ) part.Destroy();
             }
 
             base.OnDestroy();

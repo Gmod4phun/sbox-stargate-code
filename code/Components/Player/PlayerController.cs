@@ -77,14 +77,14 @@ public class PlayerController : Component, INetworkSerializable
 					}
 					else
 					{
-						StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						StargateSceneUtils.SpawnGateMovie( pos, rot );
 					}
 					
 				}
 			}
 
 			if ( Input.Pressed( "Use" ) ) {
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 100000 ).Run();
+				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 80 ).Run();
 
 				if ( tr.Hit )
 				{
@@ -93,8 +93,8 @@ public class PlayerController : Component, INetworkSerializable
 							var ignore = new List<Stargate>() {gate};
 							var closestGate = Stargate.FindClosestGate(tr.GameObject.Transform.Position, exclude: ignore.ToArray());
 							if (closestGate.IsValid()) {
-								gate.BeginDialInstant($"{closestGate.GateAddress}{Stargate.PointOfOrigin}");
-								// gate.BeginDialFast("LV6RT1P#");
+								var addressToDial = Stargate.GetOtherGateAddressForMenu(gate, closestGate);
+								gate.BeginDialSlow(addressToDial);
 							}
 						}
 						else {

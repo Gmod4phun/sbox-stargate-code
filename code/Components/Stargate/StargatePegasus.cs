@@ -34,7 +34,7 @@ namespace Sandbox.Components.Stargate
 		}
 
 		[Property]
-		public StargateRingPegasus? Ring
+		public StargateRingPegasus Ring
 		{
 			get {
 				return GameObject.Children.Find(go => go.Components.Get<StargateRingPegasus>().IsValid()).Components.Get<StargateRingPegasus>();
