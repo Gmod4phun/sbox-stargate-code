@@ -61,7 +61,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( delay > 0 )
 			{
-				await GameTask.DelayRealtimeSeconds( delay );
+				await Task.DelayRealtimeSeconds( delay );
 				if ( !this.IsValid() ) return;
 			}
 
@@ -72,7 +72,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( delay > 0 )
 			{
-				await GameTask.DelayRealtimeSeconds( delay );
+				await Task.DelayRealtimeSeconds( delay );
 				if ( !this.IsValid() ) return;
 			}
 
@@ -83,22 +83,30 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( delay > 0 )
 			{
-				await GameTask.DelayRealtimeSeconds( delay );
+				await Task.DelayRealtimeSeconds( delay );
 				if ( !this.IsValid() ) return;
 			}
 
 			Open = open;
 		}
 
+		public void PlayOpenSound(float delay = 0) {
+			Stargate.PlaySound( this, Gate.GetSound( "chevron_open" ), delay );
+		}
+
+		public void PlayCloseSound(float delay = 0) {
+			Stargate.PlaySound( this, Gate.GetSound( "chevron_close" ), delay );
+		}
+
 		public void ChevronOpen( float delay = 0 )
 		{
-			Stargate.PlaySound( this, Gate.GetSound( "chevron_open" ), delay );
+			// PlayOpenSound(delay);
 			SetOpen( true, delay );
 		}
 
 		public void ChevronClose( float delay = 0 )
 		{
-			Stargate.PlaySound( this, Gate.GetSound( "chevron_close" ), delay );
+			// PlayCloseSound(delay);
 			SetOpen( false, delay );
 		}
 	}

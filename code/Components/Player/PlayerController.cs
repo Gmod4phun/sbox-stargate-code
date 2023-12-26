@@ -77,7 +77,7 @@ public class PlayerController : Component, INetworkSerializable
 					}
 					else
 					{
-						StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						StargateSceneUtils.SpawnGateMovie( pos, rot );
 					}
 					
 				}

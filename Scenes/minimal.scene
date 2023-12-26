@@ -67,38 +67,9 @@
       ]
     },
     {
-      "Id": "3c2490ef-54a0-49bb-8f13-490e40aa51d1",
-      "Name": "Cube",
-      "Position": "15.44442,82.48373,14.40159",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/dev/dev_metal_rough20.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
       "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
       "Name": "Citizen",
-      "Position": "0,0,8",
+      "Position": "-64,0,8",
       "Enabled": true,
       "Components": [
         {
@@ -253,60 +224,6 @@
           "Name": "EyePos",
           "Position": "0,0,64",
           "Enabled": true
-        }
-      ]
-    },
-    {
-      "Id": "1d55beb9-799e-49d9-9330-442e808f3de8",
-      "Name": "MockGate",
-      "Position": "200,0,90",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ],
-      "Children": [
-        {
-          "Id": "80431e59-f34e-4d76-83f5-e412437a8be1",
-          "Name": "MockRing",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "RotatingRing",
-              "__enabled": true,
-              "_currentRingAngle": 0,
-              "RingRotationEnabled": false,
-              "TargetSymbol": 0
-            }
-          ]
         }
       ]
     }
