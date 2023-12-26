@@ -33,12 +33,14 @@ namespace Sandbox.Components.Stargate
 		// public IStargateRamp Ramp { get; set; } = null;
 
 		[Net]
-		public Vector3 SpawnOffset { get; private set; } = new(0, 0, 95);
+		public Vector3 SpawnOffset { get; private set; } = new( 0, 0, 95 );
 
 		[Property]
-		public List<Chevron> Chevrons {
-			get {
-				return GameObject.Children.Where(go => go.Components.Get<Chevron>().IsValid()).Select(go => go.Components.Get<Chevron>()).ToList();
+		public List<Chevron> Chevrons
+		{
+			get
+			{
+				return GameObject.Children.Where( go => go.Components.Get<Chevron>().IsValid() ).Select( go => go.Components.Get<Chevron>() ).ToList();
 			}
 		}
 
@@ -379,7 +381,7 @@ namespace Sandbox.Components.Stargate
 			EventHorizon.EventHorizonSkinGroup = EventHorizonSkinGroup;
 
 			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>();
-			EventHorizon.EventHorizonModel.Model = Model.Load("models/sbox_stargate/event_horizon/event_horizon.vmdl");
+			EventHorizon.EventHorizonModel.Model = Model.Load( "models/sbox_stargate/event_horizon/event_horizon.vmdl" );
 		}
 
 		public void DeleteEventHorizon()
@@ -458,7 +460,7 @@ namespace Sandbox.Components.Stargate
 
 		public bool CanStargateStartDial()
 		{
-			return ( Idle && !Busy && !Dialing && !Inbound && !Open && !Opening && !Closing && ( IsManualDialInProgress ? !IsLocked : true ) );
+			return (Idle && !Busy && !Dialing && !Inbound && !Open && !Opening && !Closing && (IsManualDialInProgress ? !IsLocked : true));
 		}
 
 		public bool CanStargateStopDial()
@@ -562,12 +564,12 @@ namespace Sandbox.Components.Stargate
 		// begin inbound
 		public virtual void BeginInboundFast( int numChevs )
 		{
-			if ( Inbound && !Dialing ) StopDialing(true);
+			if ( Inbound && !Dialing ) StopDialing( true );
 		}
 
 		public virtual void BeginInboundSlow( int numChevs ) // this can be used with Instant dial, too
 		{
-			if ( Inbound && !Dialing ) StopDialing(true);
+			if ( Inbound && !Dialing ) StopDialing( true );
 		}
 
 		// DHD DIAL
@@ -575,7 +577,7 @@ namespace Sandbox.Components.Stargate
 		public virtual void BeginInboundDHD( int numChevs ) { } // when a dhd dialing gate locks onto another gate
 
 		// stop dial
-		public async void StopDialing(bool immediate = false)
+		public async void StopDialing( bool immediate = false )
 		{
 			if ( !CanStargateStopDial() ) return;
 
@@ -586,7 +588,7 @@ namespace Sandbox.Components.Stargate
 				await GameTask.DelayRealtimeSeconds( 1.25f );
 				if ( !this.IsValid() ) return;
 			}
-				
+
 
 			OnStopDialingFinish();
 		}
@@ -676,7 +678,7 @@ namespace Sandbox.Components.Stargate
 
 		public virtual Chevron GetChevron( int num )
 		{
-			return Chevrons.Where(c => c.Number == num).FirstOrDefault();
+			return Chevrons.Where( c => c.Number == num ).FirstOrDefault();
 		}
 
 		public virtual Chevron GetTopChevron()

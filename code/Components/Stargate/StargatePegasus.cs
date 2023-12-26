@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox.Components.Stargate
 {
-	public partial class StargatePegasus : Stargate
+	public class StargatePegasus : Stargate
 	{
 		public StargatePegasus()
 		{
@@ -36,8 +36,9 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public StargateRingPegasus Ring
 		{
-			get {
-				return GameObject.Children.Find(go => go.Components.Get<StargateRingPegasus>().IsValid()).Components.Get<StargateRingPegasus>();
+			get
+			{
+				return GameObject.Children.Find( go => go.Components.Get<StargateRingPegasus>().IsValid() ).Components.Get<StargateRingPegasus>();
 			}
 		}
 
@@ -394,9 +395,9 @@ namespace Sandbox.Components.Stargate
 
 				EstablishWormholeTo( otherGate );
 			}
-			catch ( Exception e)
+			catch ( Exception e )
 			{
-									Log.Info(e);
+				Log.Info( e );
 				if ( this.IsValid() ) StopDialing();
 			}
 		}
@@ -519,7 +520,7 @@ namespace Sandbox.Components.Stargate
 			ActiveChevrons++;
 
 			var chev = GetChevronBasedOnAddressLength( chevNum, DialingAddress.Length + 1 ); // addrLen+1 since we are not locking
-			//var chev = GetChevronBasedOnAddressLength( 7, 8 );
+																							 //var chev = GetChevronBasedOnAddressLength( 7, 8 );
 			ChevronActivateDHD( chev, 0, true );
 
 			// Event.Run( StargateEvent.ChevronEncoded, this, chevNum );

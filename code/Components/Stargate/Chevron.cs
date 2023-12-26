@@ -16,10 +16,10 @@ namespace Sandbox.Components.Stargate
 
 		[Property]
 		public PointLight ChevronLight { get; set; }
-		
+
 		[Property]
 		public bool On { get; set; }
-		
+
 		[Property, OnChange( nameof( OnOpenChanged ) )]
 		public bool Open { get; set; }
 
@@ -29,7 +29,7 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public int Number { get; set; } = 0;
 
-		public void OnOpenChanged(bool oldValue, bool newValue)
+		public void OnOpenChanged( bool oldValue, bool newValue )
 		{
 			if ( ChevronModel.IsValid() && ChevronModel.SceneModel.IsValid() )
 			{
@@ -51,7 +51,7 @@ namespace Sandbox.Components.Stargate
 				so.Batchable = false;
 			}
 
-			if (ChevronLight.IsValid())
+			if ( ChevronLight.IsValid() )
 			{
 				ChevronLight.Enabled = On;
 			}
@@ -66,6 +66,7 @@ namespace Sandbox.Components.Stargate
 			}
 
 			On = true;
+			ChevronModel.MaterialGroup = "On";
 		}
 
 		public async void TurnOff( float delay = 0 )
@@ -77,6 +78,7 @@ namespace Sandbox.Components.Stargate
 			}
 
 			On = false;
+			ChevronModel.MaterialGroup = "default";
 		}
 
 		public async void SetOpen( bool open, float delay = 0 )
@@ -90,11 +92,13 @@ namespace Sandbox.Components.Stargate
 			Open = open;
 		}
 
-		public void PlayOpenSound(float delay = 0) {
+		public void PlayOpenSound( float delay = 0 )
+		{
 			Stargate.PlaySound( this, Gate.GetSound( "chevron_open" ), delay );
 		}
 
-		public void PlayCloseSound(float delay = 0) {
+		public void PlayCloseSound( float delay = 0 )
+		{
 			Stargate.PlaySound( this, Gate.GetSound( "chevron_close" ), delay );
 		}
 

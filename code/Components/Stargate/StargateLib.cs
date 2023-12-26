@@ -62,7 +62,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>Gate Group.</returns>
         public static string GenerateGateGroup()
         {
-            StringBuilder symbolsCopy = new(SymbolsForAddress + SymbolsForGroup);
+            StringBuilder symbolsCopy = new( SymbolsForAddress + SymbolsForGroup );
 
             string generatedGroup = "";
             for ( int i = 0; i < 2; i++ ) // pick random symbols without repeating
@@ -82,7 +82,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>Gate Adress.</returns>
         public static string GenerateGateAddress( string excludeGroup )
         {
-            StringBuilder symbolsCopy = new(SymbolsForAddress);
+            StringBuilder symbolsCopy = new( SymbolsForAddress );
 
             foreach ( var c in excludeGroup ) // remove group chars from symbols
             {
@@ -354,7 +354,8 @@ namespace Sandbox.Components.Stargate
             if ( allGates.Count() is 0 ) return null;
 
             var distances = new float[allGates.Count()];
-            for ( int i = 0; i < allGates.Count(); i++ ) {
+            for ( int i = 0; i < allGates.Count(); i++ )
+            {
                 distances[i] = ent.Transform.Position.Distance( allGates[i].Transform.Position );
             }
 
@@ -456,8 +457,9 @@ namespace Sandbox.Components.Stargate
 
         */
 
-        public static void PlaySound( Component comp, string name, float delay = 0) {
-            PlaySound(comp.GameObject, name, delay);
+        public static void PlaySound( Component comp, string name, float delay = 0 )
+        {
+            PlaySound( comp.GameObject, name, delay );
         }
 
         public static async void PlaySound( GameObject ent, string name, float delay = 0 )
@@ -465,13 +467,13 @@ namespace Sandbox.Components.Stargate
             if ( delay > 0 ) await GameTask.DelaySeconds( delay );
             if ( !ent.IsValid() ) return;
 
-            PlaySound(ent.Transform.Position, name, delay); // TODO: make it folow the ent
+            PlaySound( ent.Transform.Position, name, delay ); // TODO: make it folow the ent
         }
 
         public static async void PlaySound( Vector3 position, string name, float delay = 0 )
         {
             if ( delay > 0 ) await GameTask.DelaySeconds( delay );
-            Sound.Play(name, position);
+            Sound.Play( name, position );
         }
 
         /*
