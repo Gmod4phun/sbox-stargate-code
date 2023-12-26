@@ -464,6 +464,12 @@ namespace Sandbox.Components.Stargate
 					var offset = MovieDialingType ? movieOffset : 0;
 					CurRingSymbolOffset = -offset;
 
+					if ( ShouldStopDialing )
+					{
+						StopDialing();
+						return;
+					}
+
 					var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
 					if ( !success || ShouldStopDialing )
 					{

@@ -25,7 +25,7 @@ namespace Sandbox.Components.Stargate
             GateGlyphType = GlyphType.MILKYWAY;
 
             MovieDialingType = true;
-            ChevronLightup = true;
+            ChevronLightup = false;
 		}
 	}
 }
