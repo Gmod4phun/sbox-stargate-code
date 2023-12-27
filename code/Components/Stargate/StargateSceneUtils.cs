@@ -41,7 +41,6 @@ namespace Sandbox.Components.Stargate
 
 				var chev_component = chev.Components.Create<Chevron>();
 				chev_component.Number = i + 1;
-				chev_component.Gate = gate.Components.Get<Stargate>();
 				chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 				chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl" );
 				gate_component.Chevrons.Add( chev_component );
@@ -69,8 +68,6 @@ namespace Sandbox.Components.Stargate
 			var ring_component = ring.Components.Create<StargateRingMilkyWay>();
 			ring_component.RingModel = ring_component.Components.Create<ModelRenderer>();
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
-			gate_component.Ring = ring_component;
-			// ring_component.Gate = gate_component;
 		}
 
 		public static void SpawnGateMovie( Vector3 pos, Rotation rot )
@@ -99,7 +96,6 @@ namespace Sandbox.Components.Stargate
 
 				var chev_component = chev.Components.Create<Chevron>();
 				chev_component.Number = i + 1;
-				chev_component.Gate = gate.Components.Get<Stargate>();
 				chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 				chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl" );
 				gate_component.Chevrons.Add( chev_component );
@@ -127,8 +123,6 @@ namespace Sandbox.Components.Stargate
 			var ring_component = ring.Components.Create<StargateRingMovie>();
 			ring_component.RingModel = ring_component.Components.Create<ModelRenderer>();
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
-			gate_component.Ring = ring_component;
-			// ring_component.Gate = gate_component;
 		}
 
 		public static void SpawnGatePegasus( Vector3 pos, Rotation rot )
@@ -157,7 +151,6 @@ namespace Sandbox.Components.Stargate
 
 				var chev_component = chev.Components.Create<Chevron>();
 				chev_component.Number = i + 1;
-				chev_component.Gate = gate.Components.Get<Stargate>();
 				chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 				chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl" );
 				chev_component.ChevronModel.Enabled = false;
@@ -189,8 +182,6 @@ namespace Sandbox.Components.Stargate
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_ring.vmdl" );
 			ring_component.RingModel.Enabled = false;
 			ring_component.RingModel.Enabled = true;
-			// gate_component.Ring = ring_component;
-			// ring_component.Gate = gate_component;
 
 			var sym_part1 = ring.Components.Create<SkinnedModelRenderer>();
 			sym_part1.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_1_18.vmdl" );
@@ -210,9 +201,6 @@ namespace Sandbox.Components.Stargate
 			gate.Name = "Stargate (Universe)";
 			gate.Transform.Position = pos;
 			gate.Transform.Rotation = rot;
-
-			// var mdl = gate.Components.Create<ModelRenderer>();
-			// mdl.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl" );
 
 			var phy = gate.Components.Create<ModelCollider>();
 			phy.Model = Model.Load( "models/sbox_stargate/gate_universe/gate_universe.vmdl" );
@@ -245,7 +233,6 @@ namespace Sandbox.Components.Stargate
 
 			var chev_component = chev.Components.Create<Chevron>();
 			chev_component.Number = 1;
-			// chev_component.Gate = gate.Components.Get<Stargate>();
 			chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 			chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/gate_universe/chevrons_universe.vmdl" );
 			gate_component.Chevrons.Add( chev_component );

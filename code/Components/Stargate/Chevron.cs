@@ -23,8 +23,7 @@ namespace Sandbox.Components.Stargate
 		[Property, OnChange( nameof( OnOpenChanged ) )]
 		public bool Open { get; set; }
 
-		[Property]
-		public Stargate Gate { get; set; }
+		public Stargate Gate => GameObject.Parent.Components.Get<Stargate>( FindMode.EnabledInSelfAndDescendants );
 
 		[Property]
 		public int Number { get; set; } = 0;

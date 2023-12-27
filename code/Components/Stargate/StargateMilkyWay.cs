@@ -27,16 +27,20 @@ namespace Sandbox.Components.Stargate
 			GateAddress = GenerateGateAddress( GateGroup );
 		}
 
+		public override float RingRotationStepSize => AcceleratedDialup ? 1.2f : 0.35f;
+
 		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
 
-		// [Property]
-		public StargateRing Ring { get; set; } = null;
+		public StargateRingMilkyWay Ring => Components.Get<StargateRingMilkyWay>( FindMode.EnabledInSelfAndDescendants );
 
 		[Property]
 		public bool MovieDialingType { get; set; } = false; // when enabled, encodes the symbol under each chevron like in the movie
 
 		[Property]
 		public bool ChevronLightup { get; set; } = true;
+
+		[Property]
+		public bool AcceleratedDialup { get; set; } = false;
 
 		public static void DrawGizmos( EditorContext context )
 		{

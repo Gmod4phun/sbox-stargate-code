@@ -25,25 +25,14 @@ namespace Sandbox.Components.Stargate
 			GateGlyphType = GlyphType.UNIVERSE;
 			GateGroup = "U@";
 			GateAddress = GenerateGateAddress( GateGroup );
-
 			EventHorizonMaterialGroup = "universe";
 		}
 
-		public StargateRingUniverse Ring
-		{
-			get
-			{
-				return Components.Get<StargateRingUniverse>( FindMode.EnabledInSelfAndDescendants );
-			}
-		}
+		public override float RingRotationStepSize => 0.55f;
 
-		public Chevron Chevron
-		{
-			get
-			{
-				return Components.Get<Chevron>( FindMode.EnabledInSelfAndDescendants );
-			}
-		}
+		public StargateRingUniverse Ring => Components.Get<StargateRingUniverse>( FindMode.EnabledInSelfAndDescendants );
+
+		public Chevron Chevron => Components.Get<Chevron>( FindMode.EnabledInSelfAndDescendants );
 
 		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
 

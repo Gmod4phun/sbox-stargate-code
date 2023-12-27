@@ -43,11 +43,9 @@ namespace Sandbox.Components.Stargate
 		// private SpotLight _frontLight;
 		// private SpotLight _backLight;
 
-		[Property]
-		public Kawoosh Kawoosh { get; set; }
+		private Kawoosh Kawoosh { get; set; }
 
-		[Net]
-		public Stargate Gate { get; set; } = null;
+		public Stargate Gate => GameObject.Parent.Components.Get<Stargate>( FindMode.EnabledInSelfAndDescendants );
 
 		[Net]
 		public bool IsFullyFormed { get; set; } = false;
@@ -74,15 +72,9 @@ namespace Sandbox.Components.Stargate
 		private List<GameObject> InTriggerFront { get; } = new();
 		private List<GameObject> InTriggerBack { get; } = new();
 
-		public Plane ClipPlaneFront
-		{
-			get => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 0.75f, Transform.Rotation.Forward.Normal );
-		}
+		public Plane ClipPlaneFront => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 0.75f, Transform.Rotation.Forward.Normal );
 
-		public Plane ClipPlaneBack
-		{
-			get => new( Transform.Position - Camera.Position - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
-		}
+		public Plane ClipPlaneBack => new( Transform.Position - Camera.Position - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
 
 		/*
 		public override void Spawn()
@@ -125,7 +117,6 @@ namespace Sandbox.Components.Stargate
 			kawoosh_object.SetParent( GameObject );
 
 			Kawoosh = kawoosh_object.Components.Create<Kawoosh>();
-			Kawoosh.EventHorizon = this;
 			Kawoosh.KawooshModel = kawoosh_object.Components.Create<SkinnedModelRenderer>();
 			Kawoosh.KawooshModel.Model = Model.Load( "models/sbox_stargate/kawoosh/kawoosh.vmdl" );
 

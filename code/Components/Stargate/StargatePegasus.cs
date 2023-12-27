@@ -29,18 +29,11 @@ namespace Sandbox.Components.Stargate
 			GateGlyphType = GlyphType.PEGASUS;
 			GateGroup = "P@";
 			GateAddress = GenerateGateAddress( GateGroup );
-
 			EventHorizonMaterialGroup = "pegasus";
 		}
 
 		[Property]
-		public StargateRingPegasus Ring
-		{
-			get
-			{
-				return GameObject.Children.Find( go => go.Components.Get<StargateRingPegasus>().IsValid() ).Components.Get<StargateRingPegasus>();
-			}
-		}
+		public StargateRingPegasus Ring => GameObject.Children.Find( go => go.Components.Get<StargateRingPegasus>().IsValid() ).Components.Get<StargateRingPegasus>();
 
 		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
 

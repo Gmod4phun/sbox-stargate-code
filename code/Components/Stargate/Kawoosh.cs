@@ -12,38 +12,36 @@ namespace Sandbox.Components.Stargate
         // private CapsuleLightEntity _light;
 
         [Property]
-        public SkinnedModelRenderer KawooshModel {get; set;}
+        public SkinnedModelRenderer KawooshModel { get; set; }
 
         [Property]
-        public SkinnedModelRenderer KawooshModelInside {get; set;}
+        public SkinnedModelRenderer KawooshModelInside { get; set; }
 
         private bool _isExpanding = false;
         private float _currentProgress = 0;
         private static float _minProgress = 0;
         private static float _maxProgress = 1.5f;
 
-        public EventHorizon EventHorizon;
+        public EventHorizon EventHorizon => GameObject.Parent.Components.Get<EventHorizon>( FindMode.EnabledInSelfAndDescendants );
+
         public Collider Trigger;
 
-        private Plane KawooshClipPlane
+        private Plane KawooshClipPlane => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 10f, Transform.Rotation.Forward.Normal );
+
+        protected override void OnStart()
         {
-            get => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 10f, Transform.Rotation.Forward.Normal );
+            base.OnStart();
         }
 
-		protected override void OnStart()
-		{
-			base.OnStart();
-		}
+        // protected override void OnDestroy()
+        // {
+        //     base.OnDestroy();
+        //     Trigger?.Delete();
+        //     _light?.Delete();
+        //     KawooshModelInside?.Delete();
+        // }
 
-		// protected override void OnDestroy()
-		// {
-		//     base.OnDestroy();
-		//     Trigger?.Delete();
-		//     _light?.Delete();
-		//     KawooshModelInside?.Delete();
-		// }
-
-		public async void DoKawooshAnimation()
+        public async void DoKawooshAnimation()
         {
             // Trigger = new EventHorizonTrigger( EventHorizon, "models/sbox_stargate/event_horizon/event_horizon_trigger_kawoosh.vmdl" )
             // {	Position = EventHorizon.Position + EventHorizon.Rotation.Forward * 2,
@@ -61,7 +59,7 @@ namespace Sandbox.Components.Stargate
         // [ClientRpc]
         public void KawooshClientAnim( bool ending = false )
         {
-            if (!KawooshModel.IsValid() || !KawooshModel.SceneObject.IsValid() /*|| !KawooshModelInside.IsValid()*/)
+            if ( !KawooshModel.IsValid() || !KawooshModel.SceneObject.IsValid() /*|| !KawooshModelInside.IsValid()*/)
                 return;
 
             _isExpanding = !ending;
@@ -90,18 +88,19 @@ namespace Sandbox.Components.Stargate
         {
             base.OnUpdate();
 
-            if (!KawooshModel.IsValid() || !KawooshModel.SceneObject.IsValid() || !KawooshModelInside.IsValid() || !KawooshModelInside.SceneObject.IsValid())
+            if ( !KawooshModel.IsValid() || !KawooshModel.SceneObject.IsValid() || !KawooshModelInside.IsValid() || !KawooshModelInside.SceneObject.IsValid() )
                 return;
 
             var delta = Time.Delta * (_isExpanding ? 1.8f : 3.2f);
-            _currentProgress = _currentProgress.LerpTo(_isExpanding ? _maxProgress : _minProgress, delta);
+            _currentProgress = _currentProgress.LerpTo( _isExpanding ? _maxProgress : _minProgress, delta );
 
             var morphValue = CalculateAnimationValue( _maxProgress - _currentProgress );
-            KawooshModel.SceneModel.Morphs.Set( "Shrinkwrap", morphValue);
+            KawooshModel.SceneModel.Morphs.Set( "Shrinkwrap", morphValue );
             KawooshModelInside.SceneModel.Morphs.Set( "Shrinkwrap", morphValue );
-            GameObject.Transform.LocalScale = GameObject.Transform.LocalScale.WithX(1-morphValue); // scale the kawoosh along the X axis, too
+            GameObject.Transform.LocalScale = GameObject.Transform.LocalScale.WithX( 1 - morphValue ); // scale the kawoosh along the X axis, too
 
-            if (morphValue < 0.98) {
+            if ( morphValue < 0.98 )
+            {
                 KawooshModel.SceneObject.RenderingEnabled = true;
                 KawooshModelInside.SceneObject.RenderingEnabled = true;
             }

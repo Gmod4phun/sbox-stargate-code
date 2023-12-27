@@ -16,14 +16,6 @@ namespace Sandbox.Components.Stargate
 			RingSymbols = " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3";
 		}
 
-		// [Property]
-		// public StargatePegasus Gate
-		// {
-		//     get {
-		// 		return GameObject.Parent.Components.Get<StargatePegasus>();
-		// 	}
-		// }
-
 		[Property]
 		public List<SkinnedModelRenderer> SymbolParts { get; set; } = new();
 

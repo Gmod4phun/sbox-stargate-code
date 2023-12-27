@@ -13,6 +13,9 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public string EventHorizonMaterialGroup { get; set; } = "default";
 
+		// [Property]
+		public virtual float RingRotationStepSize => 0.4f;
+
 		// public GateBearing Bearing { get; set; }
 
 		public float AutoCloseTime { get; set; } = -1;
@@ -36,14 +39,7 @@ namespace Sandbox.Components.Stargate
 		[Net]
 		public Vector3 SpawnOffset { get; private set; } = new( 0, 0, 95 );
 
-		[Property]
-		public List<Chevron> Chevrons
-		{
-			get
-			{
-				return GameObject.Children.Where( go => go.Components.Get<Chevron>().IsValid() ).Select( go => go.Components.Get<Chevron>() ).ToList();
-			}
-		}
+		public List<Chevron> Chevrons => GameObject.Children.Where( go => go.Components.Get<Chevron>().IsValid() ).Select( go => go.Components.Get<Chevron>() ).ToList();
 
 		[Property]
 		public EventHorizon EventHorizon { get; private set; } = null;
@@ -378,7 +374,6 @@ namespace Sandbox.Components.Stargate
 			eh.SetParent( GameObject );
 
 			EventHorizon = eh.Components.Create<EventHorizon>();
-			EventHorizon.Gate = this;
 			EventHorizon.EventHorizonMaterialGroup = EventHorizonMaterialGroup;
 
 			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>();
