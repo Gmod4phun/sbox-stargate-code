@@ -68,6 +68,8 @@ namespace Sandbox.Components.Stargate
 			var ring_component = ring.Components.Create<StargateRingMilkyWay>();
 			ring_component.RingModel = ring_component.Components.Create<ModelRenderer>();
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
+
+			Stargate.AddIris( gate_component );
 		}
 
 		public static void SpawnGateMovie( Vector3 pos, Rotation rot )
@@ -193,6 +195,8 @@ namespace Sandbox.Components.Stargate
 
 			ring_component.ResetSymbols();
 			ring_component.SetRingState( true );
+
+			Stargate.AddIris( gate_component, true );
 		}
 
 		public static void SpawnGateUniverse( Vector3 pos, Rotation rot )

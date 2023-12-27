@@ -78,7 +78,7 @@ public class PlayerController : Component, INetworkSerializable
 					}
 					else
 					{
-						StargateSceneUtils.SpawnGateUniverse( pos, rot );
+						StargateSceneUtils.SpawnGatePegasus( pos, rot );
 					}
 
 				}
@@ -120,6 +120,10 @@ public class PlayerController : Component, INetworkSerializable
 								gate.StopDialing();
 							}
 						}
+					}
+					else if ( tr.GameObject.Components.Get<StargateIris>() is StargateIris iris )
+					{
+						iris.Toggle();
 					}
 				}
 			}

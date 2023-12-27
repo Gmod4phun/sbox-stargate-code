@@ -45,7 +45,7 @@ namespace Sandbox.Components.Stargate
 		public EventHorizon EventHorizon { get; private set; } = null;
 
 		[Property]
-		public StargateIris Iris { get; set; } = null;
+		public StargateIris Iris => GameObject.Components.Get<StargateIris>( FindMode.EnabledInSelfAndDescendants );
 
 		[Net]
 		public Stargate OtherGate { get; set; } = null;

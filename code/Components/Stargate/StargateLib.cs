@@ -385,24 +385,29 @@ namespace Sandbox.Components.Stargate
             return allGates[distances.ToList().IndexOf( distances.Max() )];
         }
 
-
-        /* TODO: implement iris
-
         /// <summary>
         /// Adds an Iris or Atlantis Gate Shield to the target Stargate if it does not have one yet.
         /// </summary>
         /// <returns>The just created, or already existing Iris.</returns>
-        public static StargateIris AddIris( Stargate gate, Entity owner = null, bool atlantis = false )
+        public static StargateIris AddIris( Stargate gate, bool atlantis = false )
         {
             if ( !gate.HasIris() )
             {
-                var iris = atlantis ? new StargateIrisAtlantis() : new StargateIris();
-                iris.Position = gate.Position;
-                iris.Rotation = gate.Rotation;
-                iris.Scale = gate.Scale;
-                iris.SetParent( gate );
-                iris.Gate = gate;
-                gate.Iris = iris;
+                var iris_object = new GameObject();
+                iris_object.Name = "Iris";
+                iris_object.Transform.Position = gate.Transform.Position;
+                iris_object.Transform.Rotation = gate.Transform.Rotation;
+                iris_object.Transform.Scale = gate.Transform.Scale;
+                iris_object.SetParent( gate.GameObject );
+
+                var iris_component = atlantis ? iris_object.Components.Create<StargateIrisAtlantis>() : iris_object.Components.Create<StargateIris>();
+                iris_component.IrisModel = iris_object.Components.Create<SkinnedModelRenderer>();
+                iris_component.IrisModel.Model = Model.Load( atlantis ? "models/sbox_stargate/iris_atlantis/iris_atlantis.vmdl" : "models/sbox_stargate/iris/iris.vmdl" );
+
+                iris_component.IrisCollider = iris_object.Components.Create<ModelCollider>();
+                iris_component.IrisCollider.Model = iris_component.IrisModel.Model;
+
+                iris_component.Close();
             }
             return gate.Iris;
         }
@@ -420,7 +425,6 @@ namespace Sandbox.Components.Stargate
             }
             return false;
         }
-        */
 
         /// <summary>
         /// Adds a Gate Bearing to the target Universe Stargate if it does not have one yet.
