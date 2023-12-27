@@ -62,7 +62,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>Gate Group.</returns>
         public static string GenerateGateGroup()
         {
-            StringBuilder symbolsCopy = new(SymbolsForAddress + SymbolsForGroup);
+            StringBuilder symbolsCopy = new( SymbolsForAddress + SymbolsForGroup );
 
             string generatedGroup = "";
             for ( int i = 0; i < 2; i++ ) // pick random symbols without repeating
@@ -82,7 +82,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>Gate Adress.</returns>
         public static string GenerateGateAddress( string excludeGroup )
         {
-            StringBuilder symbolsCopy = new(SymbolsForAddress);
+            StringBuilder symbolsCopy = new( SymbolsForAddress );
 
             foreach ( var c in excludeGroup ) // remove group chars from symbols
             {
@@ -354,7 +354,8 @@ namespace Sandbox.Components.Stargate
             if ( allGates.Count() is 0 ) return null;
 
             var distances = new float[allGates.Count()];
-            for ( int i = 0; i < allGates.Count(); i++ ) {
+            for ( int i = 0; i < allGates.Count(); i++ )
+            {
                 distances[i] = ent.Transform.Position.Distance( allGates[i].Transform.Position );
             }
 
@@ -385,7 +386,7 @@ namespace Sandbox.Components.Stargate
         }
 
 
-        /* TODO: implement iris, bearing
+        /* TODO: implement iris
 
         /// <summary>
         /// Adds an Iris or Atlantis Gate Shield to the target Stargate if it does not have one yet.
@@ -419,6 +420,7 @@ namespace Sandbox.Components.Stargate
             }
             return false;
         }
+        */
 
         /// <summary>
         /// Adds a Gate Bearing to the target Universe Stargate if it does not have one yet.
@@ -428,13 +430,16 @@ namespace Sandbox.Components.Stargate
         {
             if ( !gate.HasBearing() && gate is StargateUniverse )
             {
-                var bearing = new GateBearing();
-                bearing.Position = gate.Position + gate.Rotation.Up * 135.5f;
-                bearing.Rotation = gate.Rotation;
-                bearing.Scale = gate.Scale;
-                bearing.SetParent( gate );
-                bearing.Gate = gate;
-                gate.Bearing = bearing;
+                var bearing_object = new GameObject();
+                bearing_object.Name = "Bearing";
+                bearing_object.Transform.Position = gate.Transform.Position + gate.Transform.Rotation.Up * 135.5f;
+                bearing_object.Transform.Rotation = gate.Transform.Rotation;
+                bearing_object.Transform.Scale = gate.Transform.Scale;
+                bearing_object.SetParent( gate.GameObject );
+
+                var bearing_component = bearing_object.Components.Create<GateBearing>();
+                bearing_component.BearingModel = bearing_object.Components.Create<SkinnedModelRenderer>();
+                bearing_component.BearingModel.Model = Model.Load( "models/sbox_stargate/universe_bearing/universe_bearing.vmdl" );
             }
 
             return gate.Bearing;
@@ -448,16 +453,15 @@ namespace Sandbox.Components.Stargate
         {
             if ( gate.HasBearing() )
             {
-                gate.Bearing.Delete();
+                gate.Bearing.GameObject.Destroy();
                 return true;
             }
             return false;
         }
 
-        */
-
-        public static void PlaySound( Component comp, string name, float delay = 0) {
-            PlaySound(comp.GameObject, name, delay);
+        public static void PlaySound( Component comp, string name, float delay = 0 )
+        {
+            PlaySound( comp.GameObject, name, delay );
         }
 
         public static async void PlaySound( GameObject ent, string name, float delay = 0 )
@@ -465,13 +469,13 @@ namespace Sandbox.Components.Stargate
             if ( delay > 0 ) await GameTask.DelaySeconds( delay );
             if ( !ent.IsValid() ) return;
 
-            PlaySound(ent.Transform.Position, name, delay); // TODO: make it folow the ent
+            PlaySound( ent.Transform.Position, name, delay ); // TODO: make it folow the ent
         }
 
         public static async void PlaySound( Vector3 position, string name, float delay = 0 )
         {
             if ( delay > 0 ) await GameTask.DelaySeconds( delay );
-            Sound.Play(name, position);
+            Sound.Play( name, position );
         }
 
         /*

@@ -15,8 +15,6 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public ModelRenderer RingModel { get; set; }
 
-		[Property]
-		public Stargate Gate { get; set; } = null;
 		protected SoundHandle StartSoundInstance { get; set; }
 		protected SoundHandle StopSoundInstance { get; set; }
 

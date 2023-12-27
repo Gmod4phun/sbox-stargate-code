@@ -11,17 +11,12 @@ namespace Sandbox.Components.Stargate
         // ring variables
 
         [Property]
-        public StargatePegasus Gate
-        {
-            get {
-				return GameObject.Parent.Components.Get<StargatePegasus>();
-			}
-        }
+        public StargatePegasus Gate => GameObject.Parent.Components.Get<StargatePegasus>();
 
         public string RingSymbols { get; private set; } = "?0JKNTR3MBZX*H69IGPL#@QFS1E4AU85OCW72YVD";
 
         [Property]
-        public ModelRenderer RingModel {get; set;}
+        public ModelRenderer RingModel { get; set; }
 
         [Property]
         public List<SkinnedModelRenderer> SymbolParts { get; set; } = new();
@@ -51,7 +46,7 @@ namespace Sandbox.Components.Stargate
             }
 
             num = (num + 1).UnsignedMod( 36 );
-            SymbolParts[num < 18 ? 0 : 1].SetBodyGroup( $"symbol_{num+1}", state ? 1 : 0 );
+            SymbolParts[num < 18 ? 0 : 1].SetBodyGroup( $"symbol_{num + 1}", state ? 1 : 0 );
         }
 
         public async void SetRingState( bool state, float delay = 0 )
@@ -62,7 +57,7 @@ namespace Sandbox.Components.Stargate
                 if ( !this.IsValid() ) return;
             }
 
-            if (RingModel.IsValid())
+            if ( RingModel.IsValid() )
             {
                 RingModel.SetBodyGroup( "glyphs", state ? 1 : 0 );
             }

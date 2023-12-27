@@ -63,7 +63,8 @@ public class PlayerController : Component, INetworkSerializable
 
 			IsRunning = Input.Down( "Run" );
 
-			if ( Input.Pressed( "Attack1" ) || Input.Pressed("Attack2" ) ) {
+			if ( Input.Pressed( "Attack1" ) || Input.Pressed( "Attack2" ) )
+			{
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).Run();
 
 				if ( tr.Hit )
@@ -71,37 +72,51 @@ public class PlayerController : Component, INetworkSerializable
 					var pos = tr.HitPosition + Vector3.Up * 90;
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-					if (!Input.Pressed("Attack2"))
+					if ( !Input.Pressed( "Attack2" ) )
 					{
 						StargateSceneUtils.SpawnGateMilkyWay( pos, rot );
 					}
 					else
 					{
-						StargateSceneUtils.SpawnGateMovie( pos, rot );
+						StargateSceneUtils.SpawnGateUniverse( pos, rot );
 					}
-					
+
 				}
 			}
 
-			if ( Input.Pressed( "Use" ) ) {
+			if ( Input.Pressed( "Use" ) )
+			{
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 80 ).Run();
 
 				if ( tr.Hit )
 				{
-					if (tr.GameObject.Components.Get<Stargate>() is Stargate gate) {
-						if (gate.CanStargateStartDial()) {
-							var ignore = new List<Stargate>() {gate};
-							var closestGate = Stargate.FindClosestGate(tr.GameObject.Transform.Position, exclude: ignore.ToArray());
-							if (closestGate.IsValid()) {
-								var addressToDial = Stargate.GetOtherGateAddressForMenu(gate, closestGate);
-								gate.BeginDialSlow(addressToDial);
+					if ( tr.GameObject.Components.Get<Stargate>() is Stargate gate )
+					{
+						if ( gate.CanStargateStartDial() )
+						{
+							var ignore = new List<Stargate>() { gate };
+							var closestGate = Stargate.FindClosestGate( tr.GameObject.Transform.Position, exclude: ignore.ToArray() );
+							if ( closestGate.IsValid() )
+							{
+								var addressToDial = Stargate.GetOtherGateAddressForMenu( gate, closestGate );
+								if ( IsRunning )
+								{
+									gate.BeginDialFast( addressToDial );
+								}
+								else
+								{
+									gate.BeginDialSlow( addressToDial );
+								}
 							}
 						}
-						else {
-							if (gate.Open) {
-								gate.DoStargateClose(true);
+						else
+						{
+							if ( gate.Open && !gate.Inbound )
+							{
+								gate.DoStargateClose( true );
 							}
-							else if (gate.Dialing) {
+							else if ( gate.Dialing )
+							{
 								gate.StopDialing();
 							}
 						}
@@ -135,7 +150,8 @@ public class PlayerController : Component, INetworkSerializable
 			}
 
 			var bodyModels = Body.Components.GetAll<ModelRenderer>();
-			foreach ( var bodyModel in bodyModels ) {
+			foreach ( var bodyModel in bodyModels )
+			{
 				if ( bodyModel is not null )
 				{
 					bodyModel.RenderType = FirstPerson ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
