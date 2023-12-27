@@ -9,7 +9,7 @@ namespace Sandbox.Components.Stargate
 		private readonly VideoPlayer _eventHorizonVideo;
 
 		[Property]
-		public ModelRenderer EventHorizonModel {get; set;}
+		public ModelRenderer EventHorizonModel { get; set; }
 
 		// material VARIABLES - probably name this better one day
 
@@ -44,7 +44,7 @@ namespace Sandbox.Components.Stargate
 		// private SpotLight _backLight;
 
 		[Property]
-		public Kawoosh Kawoosh {get; set;}
+		public Kawoosh Kawoosh { get; set; }
 
 		[Net]
 		public Stargate Gate { get; set; } = null;
@@ -54,8 +54,8 @@ namespace Sandbox.Components.Stargate
 
 		public List<GameObject> InTransitPlayers { get; set; } = new();
 
-		[Net]
-		public int EventHorizonSkinGroup { get; set; } = 0;
+		[Property]
+		public string EventHorizonMaterialGroup { get; set; } = "default";
 
 		protected SoundHandle WormholeLoop { get; set; }
 
@@ -106,7 +106,8 @@ namespace Sandbox.Components.Stargate
 		}
 		*/
 
-		public EventHorizon() {
+		public EventHorizon()
+		{
 			_eventHorizonVideo = new();
 		}
 
@@ -121,21 +122,21 @@ namespace Sandbox.Components.Stargate
 			kawoosh_object.Transform.Position = Transform.Position;
 			kawoosh_object.Transform.Rotation = Transform.Rotation;
 			kawoosh_object.Transform.Scale = Transform.Scale;
-			kawoosh_object.SetParent(GameObject);
+			kawoosh_object.SetParent( GameObject );
 
 			Kawoosh = kawoosh_object.Components.Create<Kawoosh>();
 			Kawoosh.EventHorizon = this;
 			Kawoosh.KawooshModel = kawoosh_object.Components.Create<SkinnedModelRenderer>();
-			Kawoosh.KawooshModel.Model = Model.Load("models/sbox_stargate/kawoosh/kawoosh.vmdl");
+			Kawoosh.KawooshModel.Model = Model.Load( "models/sbox_stargate/kawoosh/kawoosh.vmdl" );
 
 			var kawoosh_inside_object = new GameObject();
 			kawoosh_inside_object.Name = "Kawoosh Inside";
 			kawoosh_inside_object.Transform.Position = Transform.Position;
 			kawoosh_inside_object.Transform.Rotation = Transform.Rotation;
 			kawoosh_inside_object.Transform.Scale = Transform.Scale * 0.96f;
-			kawoosh_inside_object.SetParent(kawoosh_object);
+			kawoosh_inside_object.SetParent( kawoosh_object );
 			Kawoosh.KawooshModelInside = kawoosh_inside_object.Components.Create<SkinnedModelRenderer>();
-			Kawoosh.KawooshModelInside.Model = Model.Load("models/sbox_stargate/kawoosh/kawoosh.vmdl");
+			Kawoosh.KawooshModelInside.Model = Model.Load( "models/sbox_stargate/kawoosh/kawoosh.vmdl" );
 			Kawoosh.KawooshModelInside.MaterialGroup = "inside";
 
 			// {
@@ -150,21 +151,23 @@ namespace Sandbox.Components.Stargate
 
 			Kawoosh.DoKawooshAnimation();
 
-			await GameTask.DelayRealtimeSeconds(2f);
+			await GameTask.DelayRealtimeSeconds( 2f );
 
 			Kawoosh?.GameObject?.Destroy();
 		}
 
 		public virtual void SkinEventHorizon()
 		{
-			// EventHorizonModel.SetMaterialGroup( EventHorizonSkinGroup );
-			if (EventHorizonModel.IsValid()) {
-				EventHorizonModel.MaterialGroup = "default";
+			if ( EventHorizonModel.IsValid() )
+			{
+				EventHorizonModel.MaterialGroup = EventHorizonMaterialGroup;
 			}
 		}
 
-		public void SkinEstablish() {
-			if (EventHorizonModel.IsValid()) {
+		public void SkinEstablish()
+		{
+			if ( EventHorizonModel.IsValid() )
+			{
 				EventHorizonModel.MaterialGroup = "establish";
 			}
 		}
@@ -211,7 +214,7 @@ namespace Sandbox.Components.Stargate
 			{
 				_lastSoundTime = 0;
 				// Sound.FromEntity( "stargate.event_horizon.enter", this );
-				Sound.Play("stargate.event_horizon.enter", Transform.Position);
+				Sound.Play( "stargate.event_horizon.enter", Transform.Position );
 			}
 		}
 
@@ -233,7 +236,7 @@ namespace Sandbox.Components.Stargate
 			// if ( !model.PhysicsBody.IsValid() ) return false;
 			// return IsPointBehindEventHorizon( model.PhysicsBody.MassCenter ); // check masscenter instead
 
-			return IsPointBehindEventHorizon(ent.Transform.Position);
+			return IsPointBehindEventHorizon( ent.Transform.Position );
 		}
 
 		/*
@@ -293,10 +296,11 @@ namespace Sandbox.Components.Stargate
 			SkinEventHorizon();
 		}
 
-		
+
 		public void ClientAnimLogic()
 		{
-			if (!EventHorizonModel.IsValid() || !EventHorizonModel.SceneObject.IsValid()) {
+			if ( !EventHorizonModel.IsValid() || !EventHorizonModel.SceneObject.IsValid() )
+			{
 				return;
 			}
 
@@ -374,7 +378,7 @@ namespace Sandbox.Components.Stargate
 
 		public void ClientAlphaRenderLogic()
 		{
-			if (!EventHorizonModel.IsValid())
+			if ( !EventHorizonModel.IsValid() )
 				return;
 
 			// draw the EH at 0.6 alpha when looking at it from behind
@@ -383,7 +387,8 @@ namespace Sandbox.Components.Stargate
 
 			// adjust translucent/opaque flags
 			var establishing = EventHorizonModel.MaterialGroup == "establish";
-			if ( EventHorizonModel.SceneObject is SceneObject so && so.IsValid()) {
+			if ( EventHorizonModel.SceneObject is SceneObject so && so.IsValid() )
+			{
 				so.Flags.CastShadows = false;
 				so.Flags.IsTranslucent = establishing || behind;
 				so.Flags.IsOpaque = !so.Flags.IsTranslucent;

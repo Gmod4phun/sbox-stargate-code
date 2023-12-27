@@ -68,13 +68,13 @@ namespace Sandbox.Components.Stargate
 			for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, false );
 		}
 
-		public override void StopStopSound() { }
-		public override void PlayStopSound() { }
+		// public override void StopStopSound() { }
+		// public override void PlayStopSound() { }
 
-		public override void StopStartSound()
-		{
-			StartSoundInstance?.Stop( 1.2f );
-		}
+		// public override void StopStartSound()
+		// {
+		// 	StartSoundInstance?.Stop( 1.2f );
+		// }
 
 		protected override void OnDestroy()
 		{
@@ -86,16 +86,6 @@ namespace Sandbox.Components.Stargate
 			}
 
 			base.OnDestroy();
-		}
-
-		public override void OnStarting()
-		{
-			PlayStartSound();
-		}
-
-		public override void OnStopping()
-		{
-			StopStartSound();
 		}
 	}
 }

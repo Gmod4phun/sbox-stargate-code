@@ -10,7 +10,8 @@ namespace Sandbox.Components.Stargate
 	public partial class Stargate : Component
 	{
 		// private StargateWorldPanel _worldPanel;
-		public int EventHorizonSkinGroup { get; set; } = 0;
+		[Property]
+		public string EventHorizonMaterialGroup { get; set; } = "default";
 
 		// public GateBearing Bearing { get; set; }
 
@@ -378,7 +379,7 @@ namespace Sandbox.Components.Stargate
 
 			EventHorizon = eh.Components.Create<EventHorizon>();
 			EventHorizon.Gate = this;
-			EventHorizon.EventHorizonSkinGroup = EventHorizonSkinGroup;
+			EventHorizon.EventHorizonMaterialGroup = EventHorizonMaterialGroup;
 
 			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>();
 			EventHorizon.EventHorizonModel.Model = Model.Load( "models/sbox_stargate/event_horizon/event_horizon.vmdl" );

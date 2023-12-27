@@ -25,14 +25,14 @@ namespace Sandbox.Components.Stargate
 			GateGlyphType = GlyphType.UNIVERSE;
 			GateGroup = "U@";
 			GateAddress = GenerateGateAddress( GateGroup );
+
+			EventHorizonMaterialGroup = "universe";
 		}
 
-		// [Property]
 		public StargateRingUniverse Ring
 		{
 			get
 			{
-				// return GameObject.Children.Find( go => go.Components.Get<StargateRingUniverse>().IsValid() ).Components.Get<StargateRingUniverse>();
 				return Components.Get<StargateRingUniverse>( FindMode.EnabledInSelfAndDescendants );
 			}
 		}
@@ -41,7 +41,6 @@ namespace Sandbox.Components.Stargate
 		{
 			get
 			{
-				// return GameObject.Children.Find( go => go.Components.Get<Chevron>().IsValid() ).Components.Get<Chevron>();
 				return Components.Get<Chevron>( FindMode.EnabledInSelfAndDescendants );
 			}
 		}
@@ -74,7 +73,7 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnStopDialingBegin();
 
-			PlaySound( this, GetSound( "dial_fail" ), 1f );
+			PlaySound( this, GetSound( "dial_fail" ), 0.5f );
 		}
 
 		public override void OnStopDialingFinish()
@@ -85,7 +84,9 @@ namespace Sandbox.Components.Stargate
 			Ring?.ResetSymbols();
 			// Bearing?.TurnOff();
 
-			if ( !IsGateUpright() ) AddTask( Time.Now + 2.5f, () => DoResetGateRoll(), TimedTaskCategory.GENERIC );
+			Ring.SpinDown();
+
+			AddTask( Time.Now + 2.5f, () => { if ( !IsGateUpright() ) DoResetGateRoll(); }, TimedTaskCategory.GENERIC );
 		}
 
 		public override void OnStargateBeginOpen()
@@ -116,7 +117,7 @@ namespace Sandbox.Components.Stargate
 			Ring?.ResetSymbols();
 			// Bearing?.TurnOff();
 
-			if ( !IsGateUpright() ) AddTask( Time.Now + 1.5f, () => DoResetGateRoll(), TimedTaskCategory.GENERIC );
+			AddTask( Time.Now + 2.5f, () => { if ( !IsGateUpright() ) DoResetGateRoll(); }, TimedTaskCategory.GENERIC );
 		}
 
 		public override void DoStargateReset()
@@ -348,9 +349,11 @@ namespace Sandbox.Components.Stargate
 				{
 					var isLastChev = sym == address.Last();
 
-					// try to encode each symbol
 					if ( ShouldStopDialing )
+					{
+						StopDialing();
 						return;
+					}
 
 					var success = await RotateRingToSymbol( sym ); // wait for ring to rotate to the target symbol
 					if ( !success || ShouldStopDialing )
@@ -363,7 +366,6 @@ namespace Sandbox.Components.Stargate
 					{
 						SymbolOn( sym );
 						// Bearing?.TurnOn( 0.1f );
-						Log.Info( "symbol action" );
 
 						CurDialingSymbol = sym;
 
@@ -383,9 +385,7 @@ namespace Sandbox.Components.Stargate
 						}
 					}
 
-					var taskTime = Time.Now + 0.65f;
-					Log.Info( Time.Now );
-					AddTask( taskTime, symbolAction, TimedTaskCategory.DIALING );
+					AddTask( Time.Now + 0.65f, symbolAction, TimedTaskCategory.DIALING );
 
 					await Task.DelayRealtimeSeconds( 1.25f );
 

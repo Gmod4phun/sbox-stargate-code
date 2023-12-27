@@ -74,7 +74,7 @@ public class PlayerController : Component, INetworkSerializable
 
 					if ( !Input.Pressed( "Attack2" ) )
 					{
-						StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						StargateSceneUtils.SpawnGateMilkyWay( pos, rot );
 					}
 					else
 					{

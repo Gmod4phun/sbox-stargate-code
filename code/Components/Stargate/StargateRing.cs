@@ -24,7 +24,7 @@ public class StargateRing : PropertyChangeComponent, Component.ExecuteInEditor
 	private float _curRingSymbolOffset = 0f;
 
 	[Property, OnChange( nameof( OnRingStateChanged ) ), System.ComponentModel.ReadOnly( true )]
-	private RingState _ringState { get; set; } = RingState.STOPPED;
+	public RingState _ringState { get; set; } = RingState.STOPPED;
 
 	protected override void OnUpdate()
 	{
@@ -161,11 +161,14 @@ public class StargateRing : PropertyChangeComponent, Component.ExecuteInEditor
 					_currentRotatingToSymbol = "";
 
 					// ring is stopped, now check if it reached what we wanted
-					// if (CurRingSymbol == sym.ToString()) {
 					if ( Math.Abs( traveledAngle - toTravelTotal ) <= stepSize )
 					{
-						// _currentRingAngle = desiredAngle.UnsignedMod(360f);
-						// Log.Info($"Ring rotation finished OK at {Time.Now}");
+						// if we want to rotate the gate upright (sgu) or to the point of origin, force it upright
+						if ( desiredAngle % 360 == 0 )
+						{
+							RingAngle = 0;
+						}
+
 						return true;
 					}
 					else
@@ -247,7 +250,8 @@ public class StargateRing : PropertyChangeComponent, Component.ExecuteInEditor
 
 	public void SpinDown()
 	{
-		_ringState = RingState.STOPPING;
+		if ( _ringState != RingState.STOPPED )
+			_ringState = RingState.STOPPING;
 	}
 
 	// DEBUG

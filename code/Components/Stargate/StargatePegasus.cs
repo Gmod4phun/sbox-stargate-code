@@ -30,7 +30,7 @@ namespace Sandbox.Components.Stargate
 			GateGroup = "P@";
 			GateAddress = GenerateGateAddress( GateGroup );
 
-			EventHorizonSkinGroup = 3;
+			EventHorizonMaterialGroup = "pegasus";
 		}
 
 		[Property]

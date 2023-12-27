@@ -307,8 +307,10 @@ namespace Sandbox.Components.Stargate
 					}
 					else
 					{
-						ChevronAnimLock( topChev, 0.2f );
-						ChevronAnimUnlock( topChev, 1f );
+						// ChevronAnimLock( topChev, 0.2f );
+						// ChevronAnimUnlock( topChev, 1f );
+						topChev.SetOpen( true );
+						topChev.SetOpen( false, 0.8f );
 					}
 
 					ActiveChevrons++;
@@ -470,6 +472,8 @@ namespace Sandbox.Components.Stargate
 						return;
 					}
 
+					// await Task.DelayRealtimeSeconds( 0.05f );
+					// var success = true;
 					var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
 					if ( !success || ShouldStopDialing )
 					{
@@ -477,7 +481,7 @@ namespace Sandbox.Components.Stargate
 						return;
 					}
 
-					await Task.DelayRealtimeSeconds( MovieDialingType ? 0.15f : 1f ); // wait a bit
+					await Task.DelayRealtimeSeconds( MovieDialingType ? 0.15f : 0.75f ); // wait a bit
 
 					if ( isLastChev ) target = FindDestinationGateByDialingAddress( this, address ); // if its last chevron, try to find the target gate
 
@@ -496,16 +500,18 @@ namespace Sandbox.Components.Stargate
 							// ChevronAnimLockUnlock( topChev, ChevronLightup );
 							topChev.ChevronOpen();
 
-							if (ChevronLightup) {
-								chev.PlayOpenSound(0.2f);
+							if ( ChevronLightup )
+							{
+								chev.PlayOpenSound( 0.2f );
 								chev.TurnOn( 0.5f );
-								topChev.TurnOn(0.5f);
+								topChev.TurnOn( 0.5f );
 							}
 
-							topChev.ChevronClose(1f);
+							topChev.ChevronClose( 1f );
 
-							if (ChevronLightup) {
-								topChev.TurnOff(1.3f);
+							if ( ChevronLightup )
+							{
+								topChev.TurnOff( 1.3f );
 							}
 						}
 
@@ -520,7 +526,14 @@ namespace Sandbox.Components.Stargate
 						}
 						else
 						{
-							ChevronAnimLockUnlock( topChev, valid && ChevronLightup, true );
+							// ChevronAnimLockUnlock( topChev, valid && ChevronLightup, true );
+							topChev.SetOpen( true );
+							if ( valid )
+							{
+								topChev.TurnOn();
+								topChev.SetOpen( false, 0.75f );
+							}
+
 						}
 
 						IsLocked = true;
@@ -545,7 +558,7 @@ namespace Sandbox.Components.Stargate
 						readyForOpen = true;
 					}
 
-					await Task.DelayRealtimeSeconds( isLastChev && MovieDialingType ? 0.5f : 1.5f ); // wait a bit
+					await Task.DelayRealtimeSeconds( isLastChev && MovieDialingType ? 0.5f : 1.75f ); // wait a bit
 
 					chevNum++;
 				}
@@ -654,7 +667,7 @@ namespace Sandbox.Components.Stargate
 					}
 				}
 
-				await Task.DelayRealtimeSeconds(0.5f);
+				await Task.DelayRealtimeSeconds( 0.5f );
 
 				EstablishWormholeTo( otherGate );
 			}
@@ -783,7 +796,7 @@ namespace Sandbox.Components.Stargate
 			CurRingSymbolOffset = -offset;
 
 			// var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
-			await Task.DelayRealtimeSeconds(1f);
+			await Task.DelayRealtimeSeconds( 1f );
 			var success = true;
 			if ( !success || ShouldStopDialing )
 			{
@@ -835,7 +848,7 @@ namespace Sandbox.Components.Stargate
 			CurRingSymbolOffset = -offset;
 
 			// var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
-			await Task.DelayRealtimeSeconds(1f);
+			await Task.DelayRealtimeSeconds( 1f );
 			var success = true;
 			if ( !success || ShouldStopDialing )
 			{
