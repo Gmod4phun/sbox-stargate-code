@@ -16,7 +16,7 @@ namespace Sandbox.Components.Stargate
 		// [Property]
 		public virtual float RingRotationStepSize => 0.4f;
 
-		// public GateBearing Bearing { get; set; }
+		public GateBearing Bearing => Components.Get<GateBearing>( FindMode.EnabledInSelfAndDescendants );
 
 		public float AutoCloseTime { get; set; } = -1;
 
@@ -432,8 +432,7 @@ namespace Sandbox.Components.Stargate
 		// BEARING
 		public bool HasBearing()
 		{
-			// return Bearing.IsValid();
-			return false;
+			return Bearing.IsValid();
 		}
 
 		// DIALING -- please don't touch any of these, dialing is heavy WIP

@@ -78,7 +78,7 @@ public class PlayerController : Component, INetworkSerializable
 					}
 					else
 					{
-						StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						StargateSceneUtils.SpawnGateUniverse( pos, rot );
 					}
 
 				}
@@ -99,7 +99,14 @@ public class PlayerController : Component, INetworkSerializable
 							if ( closestGate.IsValid() )
 							{
 								var addressToDial = Stargate.GetOtherGateAddressForMenu( gate, closestGate );
-								gate.BeginDialFast( addressToDial );
+								if ( IsRunning )
+								{
+									gate.BeginDialFast( addressToDial );
+								}
+								else
+								{
+									gate.BeginDialSlow( addressToDial );
+								}
 							}
 						}
 						else

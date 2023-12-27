@@ -71,7 +71,7 @@ namespace Sandbox.Components.Stargate
 
 			SetChevronsGlowState( false );
 			Ring?.ResetSymbols();
-			// Bearing?.TurnOff();
+			Bearing?.TurnOff();
 
 			Ring.SpinDown();
 
@@ -83,7 +83,7 @@ namespace Sandbox.Components.Stargate
 			base.OnStargateBeginOpen();
 
 			PlaySound( this, GetSound( "gate_open" ) );
-			// Bearing?.TurnOn();
+			Bearing?.TurnOn();
 		}
 
 		public override void OnStargateOpened()
@@ -104,7 +104,7 @@ namespace Sandbox.Components.Stargate
 
 			SetChevronsGlowState( false );
 			Ring?.ResetSymbols();
-			// Bearing?.TurnOff();
+			Bearing?.TurnOff();
 
 			AddTask( Time.Now + 2.5f, () => { if ( !IsGateUpright() ) DoResetGateRoll(); }, TimedTaskCategory.GENERIC );
 		}
@@ -117,7 +117,7 @@ namespace Sandbox.Components.Stargate
 
 			SetChevronsGlowState( false );
 			Ring?.ResetSymbols();
-			// Bearing?.TurnOff();
+			Bearing?.TurnOff();
 		}
 
 		public async Task DoPreRoll()
@@ -354,13 +354,13 @@ namespace Sandbox.Components.Stargate
 					void symbolAction()
 					{
 						SymbolOn( sym );
-						// Bearing?.TurnOn( 0.1f );
+						Bearing?.TurnOn( 0.1f );
 
 						CurDialingSymbol = sym;
 
 						if ( !isLastChev )
 						{
-							// Bearing?.TurnOff( 0.6f );
+							Bearing?.TurnOff( 0.6f );
 							// Event.Run( StargateEvent.ChevronEncoded, this, address.IndexOf( sym ) + 1 );
 						}
 						else
@@ -574,14 +574,14 @@ namespace Sandbox.Components.Stargate
 			void symbolAction()
 			{
 				SymbolOn( sym );
-				// Bearing?.TurnOn( 0.1f );
+				Bearing?.TurnOn( 0.1f );
 
 				CurDialingSymbol = sym;
 
 				DialingAddress += sym;
 				ActiveChevrons++;
 
-				// Bearing?.TurnOff( 0.6f );
+				Bearing?.TurnOff( 0.6f );
 				// Event.Run( StargateEvent.ChevronEncoded, this, chevNum );
 			}
 
@@ -627,7 +627,7 @@ namespace Sandbox.Components.Stargate
 			void symbolAction()
 			{
 				SymbolOn( sym );
-				// Bearing?.TurnOn( 0.1f );
+				Bearing?.TurnOn( 0.1f );
 
 				CurDialingSymbol = sym;
 

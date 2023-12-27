@@ -236,6 +236,8 @@ namespace Sandbox.Components.Stargate
 			chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 			chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/gate_universe/chevrons_universe.vmdl" );
 			gate_component.Chevrons.Add( chev_component );
+
+			Stargate.AddBearing( gate_component );
 		}
 	}
 }
