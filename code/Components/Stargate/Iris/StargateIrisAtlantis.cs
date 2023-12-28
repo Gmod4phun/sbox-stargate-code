@@ -67,5 +67,18 @@ namespace Sandbox.Components.Stargate
 				Sound.Play( "stargate.iris.atlantis.open", Transform.Position );
 			}
 		}
+
+		protected override void OnUpdate()
+		{
+			base.OnUpdate();
+
+			if ( IrisModel.IsValid() && IrisModel.SceneModel.IsValid() )
+			{
+				var sm = IrisModel.SceneModel;
+				sm.Flags.IsOpaque = false;
+				sm.Flags.IsTranslucent = true;
+				sm.Flags.BloomLayer = true;
+			}
+		}
 	}
 }
