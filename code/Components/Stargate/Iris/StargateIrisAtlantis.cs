@@ -15,8 +15,6 @@ namespace Sandbox.Components.Stargate
 			IrisModel.SceneModel.RenderingEnabled = true;
 			IrisCollider.Enabled = true;
 
-			Log.Info( IrisModel.SceneModel );
-
 			Sound.Play( "stargate.iris.atlantis.close", Transform.Position );
 
 			await Task.DelaySeconds( _openCloseDelay );
