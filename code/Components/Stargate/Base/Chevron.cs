@@ -60,7 +60,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( delay > 0 )
 			{
-				await Task.DelayRealtimeSeconds( delay );
+				await Task.DelaySeconds( delay );
 				if ( !this.IsValid() ) return;
 			}
 
@@ -72,7 +72,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( delay > 0 )
 			{
-				await Task.DelayRealtimeSeconds( delay );
+				await Task.DelaySeconds( delay );
 				if ( !this.IsValid() ) return;
 			}
 
@@ -84,7 +84,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( delay > 0 )
 			{
-				await Task.DelayRealtimeSeconds( delay );
+				await Task.DelaySeconds( delay );
 				if ( !this.IsValid() ) return;
 			}
 

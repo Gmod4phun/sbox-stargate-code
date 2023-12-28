@@ -142,7 +142,7 @@ namespace Sandbox.Components.Stargate
 
 			Kawoosh.DoKawooshAnimation();
 
-			await GameTask.DelayRealtimeSeconds( 2f );
+			await GameTask.DelaySeconds( 2f );
 
 			Kawoosh?.GameObject?.Destroy();
 		}
@@ -1050,7 +1050,7 @@ namespace Sandbox.Components.Stargate
 			// TODO: Find a way to call this when the EH is deleted before the cinematic end to not keep the player stuck in this
 			var panel = Game.RootPanel.AddChild<WormholeCinematic>();
 
-			await GameTask.DelayRealtimeSeconds( 7.07f );
+			await GameTask.DelaySeconds( 7.07f );
 
 			panel.Delete( true );
 			OnPlayerEndWormhole( NetworkIdent );

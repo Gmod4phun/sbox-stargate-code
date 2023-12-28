@@ -115,8 +115,8 @@ namespace Sandbox.Components.Stargate
 			if ( Dialing )
 			{
 				ShouldStopDialing = true;
-				// await Task.DelayRealtimeSeconds( Game.Tick * 4 ); // give the ring logic a chance to catch up
-				await Task.DelayRealtimeSeconds( 0.05f );
+				// await Task.DelaySeconds( Game.Tick * 4 ); // give the ring logic a chance to catch up
+				await Task.DelaySeconds( 0.05f );
 			}
 
 			base.DoStargateReset();
@@ -239,7 +239,7 @@ namespace Sandbox.Components.Stargate
 				var chevronAfterLastDelay = (addrLen == 9) ? 1.25f : ((addrLen == 8) ? 1.25f : 1.35f);
 				var chevronDelay = chevronsLoopDuration / (addrLen - 1);
 
-				await Task.DelayRealtimeSeconds( chevronsStartDelay ); // wait 0.5 sec and start locking chevrons
+				await Task.DelaySeconds( chevronsStartDelay ); // wait 0.5 sec and start locking chevrons
 
 				// lets encode each chevron but the last
 				for ( var i = 1; i < addrLen; i++ )
@@ -269,7 +269,7 @@ namespace Sandbox.Components.Stargate
 
 					if ( i == addrLen - 1 ) Ring.SpinDown(); // stop rotating ring when the last looped chevron locks
 
-					await Task.DelayRealtimeSeconds( chevronDelay );
+					await Task.DelaySeconds( chevronDelay );
 				}
 
 				if ( ShouldStopDialing )
@@ -278,7 +278,7 @@ namespace Sandbox.Components.Stargate
 					return;
 				} // check if we should stop dialing
 
-				await Task.DelayRealtimeSeconds( chevronBeforeLastDelay ); // wait before locking the last chevron
+				await Task.DelaySeconds( chevronBeforeLastDelay ); // wait before locking the last chevron
 
 				if ( ShouldStopDialing )
 				{
@@ -320,7 +320,7 @@ namespace Sandbox.Components.Stargate
 					ActiveChevrons++;
 				}
 
-				await Task.DelayRealtimeSeconds( chevronAfterLastDelay ); // wait after the last chevron, then open the gate or fail dial (if gate became invalid/was busy)
+				await Task.DelaySeconds( chevronAfterLastDelay ); // wait after the last chevron, then open the gate or fail dial (if gate became invalid/was busy)
 
 				if ( ShouldStopDialing )
 				{
@@ -336,7 +336,7 @@ namespace Sandbox.Components.Stargate
 				}
 				else
 				{
-					await Task.DelayRealtimeSeconds( 0.25f ); // otherwise wait a bit, fail and stop dialing
+					await Task.DelaySeconds( 0.25f ); // otherwise wait a bit, fail and stop dialing
 					StopDialing();
 				}
 			}
@@ -361,7 +361,7 @@ namespace Sandbox.Components.Stargate
 				{
 					StopDialing( true );
 					ShouldStopDialing = true;
-					await Task.DelayRealtimeSeconds( 0.05f );
+					await Task.DelaySeconds( 0.05f );
 					ShouldStopDialing = false;
 				}
 
@@ -375,7 +375,7 @@ namespace Sandbox.Components.Stargate
 				var chevronBeforeLastDelay = (numChevs == 9) ? 0.50f : ((numChevs == 8) ? 0.60f : 0.50f);
 				var chevronDelay = chevronsLoopDuration / (numChevs);
 
-				await Task.DelayRealtimeSeconds( chevronsStartDelay ); // wait 0.5 sec and start locking chevrons
+				await Task.DelaySeconds( chevronsStartDelay ); // wait 0.5 sec and start locking chevrons
 
 				for ( var i = 1; i < numChevs; i++ )
 				{
@@ -396,10 +396,10 @@ namespace Sandbox.Components.Stargate
 						ActiveChevrons++;
 					}
 
-					await Task.DelayRealtimeSeconds( chevronDelay ); // each chevron delay
+					await Task.DelaySeconds( chevronDelay ); // each chevron delay
 				}
 
-				await Task.DelayRealtimeSeconds( chevronBeforeLastDelay - 0.4f ); // wait before locking the last chevron
+				await Task.DelaySeconds( chevronBeforeLastDelay - 0.4f ); // wait before locking the last chevron
 
 				var topChev = GetChevron( 7 );
 				if ( topChev.IsValid() )
@@ -445,12 +445,12 @@ namespace Sandbox.Components.Stargate
 				if ( address.Length == 9 )
 				{
 					PlaySound( this, GetSound( "dial_begin_9chev" ), 0.2f );
-					await Task.DelayRealtimeSeconds( 1f ); // wait a bit
+					await Task.DelaySeconds( 1f ); // wait a bit
 				}
 				else
 				{
 					if ( initialDelay > 0 )
-						await Task.DelayRealtimeSeconds( initialDelay );
+						await Task.DelaySeconds( initialDelay );
 				}
 
 				if ( ShouldStopDialing || !Dialing )
@@ -476,7 +476,7 @@ namespace Sandbox.Components.Stargate
 						return;
 					}
 
-					// await Task.DelayRealtimeSeconds( 0.05f );
+					// await Task.DelaySeconds( 0.05f );
 					// var success = true;
 					var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
 					if ( !success || ShouldStopDialing )
@@ -485,7 +485,7 @@ namespace Sandbox.Components.Stargate
 						return;
 					}
 
-					await Task.DelayRealtimeSeconds( MovieDialingType ? 0.15f : 0.75f ); // wait a bit
+					await Task.DelaySeconds( MovieDialingType ? 0.15f : 0.75f ); // wait a bit
 
 					if ( isLastChev ) target = FindDestinationGateByDialingAddress( this, address ); // if its last chevron, try to find the target gate
 
@@ -548,7 +548,7 @@ namespace Sandbox.Components.Stargate
 
 					ActiveChevrons++;
 
-					// await Task.DelayRealtimeSeconds( 0.5f );
+					// await Task.DelaySeconds( 0.5f );
 
 					if ( ShouldStopDialing || !Dialing )
 					{
@@ -562,7 +562,7 @@ namespace Sandbox.Components.Stargate
 						readyForOpen = true;
 					}
 
-					await Task.DelayRealtimeSeconds( isLastChev && MovieDialingType ? 0.5f : 1.75f ); // wait a bit
+					await Task.DelaySeconds( isLastChev && MovieDialingType ? 0.5f : 1.75f ); // wait a bit
 
 					chevNum++;
 				}
@@ -671,7 +671,7 @@ namespace Sandbox.Components.Stargate
 					}
 				}
 
-				await Task.DelayRealtimeSeconds( 0.5f );
+				await Task.DelaySeconds( 0.5f );
 
 				EstablishWormholeTo( otherGate );
 			}
@@ -694,7 +694,7 @@ namespace Sandbox.Components.Stargate
 				CurGateState = GateState.DIALING;
 				CurDialType = DialType.DHD;
 
-				await Task.DelayRealtimeSeconds( 0.35f );
+				await Task.DelaySeconds( 0.35f );
 
 				var otherGate = FindDestinationGateByDialingAddress( this, address );
 				if ( otherGate.IsValid() && otherGate != this && otherGate.IsStargateReadyForInboundDHD() )
@@ -707,7 +707,7 @@ namespace Sandbox.Components.Stargate
 					return;
 				}
 
-				await Task.DelayRealtimeSeconds( 0.15f );
+				await Task.DelaySeconds( 0.15f );
 
 				EstablishWormholeTo( otherGate );
 			}
@@ -800,7 +800,7 @@ namespace Sandbox.Components.Stargate
 			CurRingSymbolOffset = -offset;
 
 			// var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
-			await Task.DelayRealtimeSeconds( 1f );
+			await Task.DelaySeconds( 1f );
 			var success = true;
 			if ( !success || ShouldStopDialing )
 			{
@@ -808,7 +808,7 @@ namespace Sandbox.Components.Stargate
 				return false;
 			}
 
-			await Task.DelayRealtimeSeconds( MovieDialingType ? 0.15f : 0.65f ); // wait a bit
+			await Task.DelaySeconds( MovieDialingType ? 0.15f : 0.65f ); // wait a bit
 
 			// go do chevron stuff
 			var chev = GetChevronBasedOnAddressLength( chevNum, chevNum );
@@ -852,7 +852,7 @@ namespace Sandbox.Components.Stargate
 			CurRingSymbolOffset = -offset;
 
 			// var success = await RotateRingToSymbol( sym, offset ); // wait for ring to rotate to the target symbol
-			await Task.DelayRealtimeSeconds( 1f );
+			await Task.DelaySeconds( 1f );
 			var success = true;
 			if ( !success || ShouldStopDialing )
 			{
@@ -860,7 +860,7 @@ namespace Sandbox.Components.Stargate
 				return false;
 			}
 
-			await Task.DelayRealtimeSeconds( MovieDialingType ? 0.15f : 0.65f ); // wait a bit
+			await Task.DelaySeconds( MovieDialingType ? 0.15f : 0.65f ); // wait a bit
 
 			var target = FindDestinationGateByDialingAddress( this, DialingAddress + sym ); // last chevron, so try to find the target gate
 
@@ -885,7 +885,7 @@ namespace Sandbox.Components.Stargate
 
 			// Event.Run( StargateEvent.ChevronLocked, this, chevNum, valid );
 
-			await Task.DelayRealtimeSeconds( 0.75f );
+			await Task.DelaySeconds( 0.75f );
 
 			TimeSinceDialAction = 0;
 
@@ -904,13 +904,13 @@ namespace Sandbox.Components.Stargate
 					otherGate.BeginInboundSlow( address.Length );
 					IsManualDialInProgress = false;
 
-					await Task.DelayRealtimeSeconds( 0.5f );
+					await Task.DelaySeconds( 0.5f );
 
 					EstablishWormholeTo( otherGate );
 				}
 				else
 				{
-					await Task.DelayRealtimeSeconds( 0.75f );
+					await Task.DelaySeconds( 0.75f );
 
 					StopDialing();
 					return;

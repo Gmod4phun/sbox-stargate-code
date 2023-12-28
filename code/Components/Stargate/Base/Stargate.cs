@@ -387,13 +387,13 @@ namespace Sandbox.Components.Stargate
 
 		public async Task EstablishEventHorizon( float delay = 0 )
 		{
-			await GameTask.DelayRealtimeSeconds( delay );
+			await GameTask.DelaySeconds( delay );
 			if ( !this.IsValid() ) return;
 
 			CreateEventHorizon();
 			EventHorizon.Establish();
 
-			await GameTask.DelayRealtimeSeconds( 3f );
+			await GameTask.DelaySeconds( 3f );
 			if ( !this.IsValid() || !EventHorizon.IsValid() ) return;
 
 			EventHorizon.IsFullyFormed = true;
@@ -401,13 +401,13 @@ namespace Sandbox.Components.Stargate
 
 		public async Task CollapseEventHorizon( float sec = 0 )
 		{
-			await GameTask.DelayRealtimeSeconds( sec );
+			await GameTask.DelaySeconds( sec );
 			if ( !this.IsValid() || !EventHorizon.IsValid() ) return;
 
 			EventHorizon.IsFullyFormed = false;
 			EventHorizon.Collapse();
 
-			await GameTask.DelayRealtimeSeconds( sec + 2f );
+			await GameTask.DelaySeconds( sec + 2f );
 			if ( !this.IsValid() || !EventHorizon.IsValid() ) return;
 
 			DeleteEventHorizon();
@@ -580,7 +580,7 @@ namespace Sandbox.Components.Stargate
 
 			if ( !immediate )
 			{
-				await GameTask.DelayRealtimeSeconds( 1.25f );
+				await GameTask.DelaySeconds( 1.25f );
 				if ( !this.IsValid() ) return;
 			}
 

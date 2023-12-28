@@ -29,7 +29,7 @@ namespace Sandbox.Components.Stargate
 
 			Sound.Play( "stargate.iris.close", Transform.Position );
 
-			await Task.DelayRealtimeSeconds( _openCloseDelay );
+			await Task.DelaySeconds( _openCloseDelay );
 
 			Busy = false;
 		}
@@ -47,7 +47,7 @@ namespace Sandbox.Components.Stargate
 
 			Sound.Play( "stargate.iris.open", Transform.Position );
 
-			await Task.DelayRealtimeSeconds( _openCloseDelay );
+			await Task.DelaySeconds( _openCloseDelay );
 
 			IrisModel.SceneModel.RenderingEnabled = false;
 

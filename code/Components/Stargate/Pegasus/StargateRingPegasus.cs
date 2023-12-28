@@ -41,7 +41,7 @@ namespace Sandbox.Components.Stargate
         {
             if ( delay > 0 )
             {
-                await GameTask.DelayRealtimeSeconds( delay );
+                await GameTask.DelaySeconds( delay );
                 if ( !this.IsValid() ) return;
             }
 
@@ -53,7 +53,7 @@ namespace Sandbox.Components.Stargate
         {
             if ( delay > 0 )
             {
-                await GameTask.DelayRealtimeSeconds( delay );
+                await GameTask.DelaySeconds( delay );
                 if ( !this.IsValid() ) return;
             }
 
@@ -210,7 +210,7 @@ namespace Sandbox.Components.Stargate
                 if ( i_copy == 0 )
                     Gate.AddTask( symTaskTime, () => SetRingState( false ), Stargate.TimedTaskCategory.DIALING );
 
-                await GameTask.DelayRealtimeSeconds( finishTime - startTime );
+                await GameTask.DelaySeconds( finishTime - startTime );
 
                 return true;
 

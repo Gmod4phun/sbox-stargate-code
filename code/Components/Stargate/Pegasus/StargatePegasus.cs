@@ -196,7 +196,7 @@ namespace Sandbox.Components.Stargate
 					}
 					else
 					{
-						await GameTask.DelayRealtimeSeconds( 0.25f ); // otherwise wait a bit, fail and stop dialing
+						await GameTask.DelaySeconds( 0.25f ); // otherwise wait a bit, fail and stop dialing
 						StopDialing();
 					}
 				}
@@ -260,7 +260,7 @@ namespace Sandbox.Components.Stargate
 				}
 
 				if ( initialDelay > 0 )
-					await GameTask.DelayRealtimeSeconds( initialDelay );
+					await GameTask.DelaySeconds( initialDelay );
 
 				if ( ShouldStopDialing || !Dialing )
 					return;
@@ -384,7 +384,7 @@ namespace Sandbox.Components.Stargate
 
 				PlaySound( this, GetSound( "chevron_lock_inbound" ) );
 
-				await GameTask.DelayRealtimeSeconds( 0.5f );
+				await GameTask.DelaySeconds( 0.5f );
 
 				EstablishWormholeTo( otherGate );
 			}
@@ -408,7 +408,7 @@ namespace Sandbox.Components.Stargate
 				CurGateState = GateState.DIALING;
 				CurDialType = DialType.DHD;
 
-				await GameTask.DelayRealtimeSeconds( 0.35f );
+				await GameTask.DelaySeconds( 0.35f );
 
 				var otherGate = FindDestinationGateByDialingAddress( this, address );
 				if ( otherGate.IsValid() && otherGate != this && otherGate.IsStargateReadyForInboundDHD() )
@@ -421,7 +421,7 @@ namespace Sandbox.Components.Stargate
 					return;
 				}
 
-				await GameTask.DelayRealtimeSeconds( 0.15f );
+				await GameTask.DelaySeconds( 0.15f );
 
 				EstablishWormholeTo( otherGate );
 			}
@@ -578,13 +578,13 @@ namespace Sandbox.Components.Stargate
 					otherGate.BeginInboundSlow( address.Length );
 					IsManualDialInProgress = false;
 
-					await GameTask.DelayRealtimeSeconds( 0.5f );
+					await GameTask.DelaySeconds( 0.5f );
 
 					EstablishWormholeTo( otherGate );
 				}
 				else
 				{
-					await GameTask.DelayRealtimeSeconds( 1f );
+					await GameTask.DelaySeconds( 1f );
 
 					StopDialing();
 					return;

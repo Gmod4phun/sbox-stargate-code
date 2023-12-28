@@ -13,7 +13,7 @@ namespace Sandbox.Components.Stargate
         public async void TurnOn( float delay = 0 )
         {
             if ( delay > 0 )
-                await Task.DelayRealtimeSeconds( delay );
+                await Task.DelaySeconds( delay );
 
             On = true;
         }
@@ -21,7 +21,7 @@ namespace Sandbox.Components.Stargate
         public async void TurnOff( float delay = 0 )
         {
             if ( delay > 0 )
-                await Task.DelayRealtimeSeconds( delay );
+                await Task.DelaySeconds( delay );
 
             On = false;
         }

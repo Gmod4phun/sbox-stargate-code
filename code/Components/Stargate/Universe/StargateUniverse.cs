@@ -125,7 +125,7 @@ namespace Sandbox.Components.Stargate
 			SetChevronsGlowState( true, 0.2f );
 			PlaySound( this, GetSound( "gate_activate" ) );
 
-			await Task.DelayRealtimeSeconds( 1.5f );
+			await Task.DelaySeconds( 1.5f );
 		}
 
 		public bool IsGateUpright( float tolerance = 1f )
@@ -235,7 +235,7 @@ namespace Sandbox.Components.Stargate
 					}
 					else
 					{
-						await Task.DelayRealtimeSeconds( 0.25f ); // otherwise wait a bit, fail and stop dialing
+						await Task.DelaySeconds( 0.25f ); // otherwise wait a bit, fail and stop dialing
 						StopDialing();
 					}
 				}
@@ -263,7 +263,7 @@ namespace Sandbox.Components.Stargate
 				{
 					StopDialing( true );
 					ShouldStopDialing = true;
-					await Task.DelayRealtimeSeconds( 0.05f );
+					await Task.DelaySeconds( 0.05f );
 					ShouldStopDialing = false;
 				}
 
@@ -305,14 +305,14 @@ namespace Sandbox.Components.Stargate
 				}
 
 				if ( initialDelay > 0 )
-					await Task.DelayRealtimeSeconds( initialDelay );
+					await Task.DelaySeconds( initialDelay );
 
 				if ( ShouldStopDialing || !Dialing )
 					return;
 
 				await DoPreRoll();
 
-				//await Task.DelayRealtimeSeconds( 1.5f );
+				//await Task.DelaySeconds( 1.5f );
 
 				Stargate target = null;
 				var readyForOpen = false;
@@ -376,7 +376,7 @@ namespace Sandbox.Components.Stargate
 
 					AddTask( Time.Now + 0.65f, symbolAction, TimedTaskCategory.DIALING );
 
-					await Task.DelayRealtimeSeconds( 1.25f );
+					await Task.DelaySeconds( 1.25f );
 
 					if ( isLastChev ) readyForOpen = gateValidCheck();
 				}
@@ -487,7 +487,7 @@ namespace Sandbox.Components.Stargate
 				CurGateState = GateState.DIALING;
 				CurDialType = DialType.DHD;
 
-				await Task.DelayRealtimeSeconds( 0.35f );
+				await Task.DelaySeconds( 0.35f );
 
 				var otherGate = FindDestinationGateByDialingAddress( this, address );
 				if ( otherGate.IsValid() && otherGate != this && otherGate.IsStargateReadyForInboundDHD() )
@@ -500,7 +500,7 @@ namespace Sandbox.Components.Stargate
 					return;
 				}
 
-				await Task.DelayRealtimeSeconds( 0.15f );
+				await Task.DelaySeconds( 0.15f );
 
 				EstablishWormholeTo( otherGate );
 			}
@@ -587,7 +587,7 @@ namespace Sandbox.Components.Stargate
 
 			AddTask( Time.Now + 0.65f, symbolAction, TimedTaskCategory.DIALING );
 
-			await Task.DelayRealtimeSeconds( 1.25f );
+			await Task.DelaySeconds( 1.25f );
 
 			IsManualDialInProgress = false;
 
@@ -644,7 +644,7 @@ namespace Sandbox.Components.Stargate
 
 			AddTask( Time.Now + 0.65f, symbolAction, TimedTaskCategory.DIALING );
 
-			await Task.DelayRealtimeSeconds( 1.25f );
+			await Task.DelaySeconds( 1.25f );
 
 			BeginManualOpen( DialingAddress );
 
@@ -661,7 +661,7 @@ namespace Sandbox.Components.Stargate
 					otherGate.BeginInboundSlow( address.Length );
 					IsManualDialInProgress = false;
 
-					await Task.DelayRealtimeSeconds( 0.5f );
+					await Task.DelaySeconds( 0.5f );
 
 					EstablishWormholeTo( otherGate );
 				}

@@ -19,11 +19,11 @@ namespace Sandbox.Components.Stargate
 
 			Sound.Play( "stargate.iris.atlantis.close", Transform.Position );
 
-			await Task.DelayRealtimeSeconds( _openCloseDelay );
+			await Task.DelaySeconds( _openCloseDelay );
 
 			Busy = false;
 
-			await Task.DelayRealtimeSeconds( 0.6f );
+			await Task.DelaySeconds( 0.6f );
 
 			if ( Closed )
 			{
@@ -46,7 +46,7 @@ namespace Sandbox.Components.Stargate
 
 			Sound.Play( "stargate.iris.atlantis.open", Transform.Position );
 
-			await Task.DelayRealtimeSeconds( _openCloseDelay );
+			await Task.DelaySeconds( _openCloseDelay );
 
 			Busy = false;
 		}
