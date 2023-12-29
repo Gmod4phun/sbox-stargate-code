@@ -4,6 +4,7 @@ namespace Sandbox.Components.Stargate
 	{
 		protected override float _openCloseDelay => 1f;
 		private SoundHandle IrisLoop;
+		private float _currentAlpha = 0;
 
 		public override async void Close()
 		{
@@ -11,7 +12,6 @@ namespace Sandbox.Components.Stargate
 
 			Busy = true;
 			Closed = true;
-
 			IrisModel.SceneModel.RenderingEnabled = true;
 			IrisCollider.Enabled = true;
 
@@ -21,11 +21,11 @@ namespace Sandbox.Components.Stargate
 
 			Busy = false;
 
-			await Task.DelaySeconds( 0.6f );
+			await Task.DelaySeconds( 0.5f );
 
 			if ( Closed )
 			{
-				IrisLoop?.Stop();
+				IrisLoop?.Stop(0.1f);
 				IrisLoop = Sound.Play( "stargate.iris.atlantis.loop", Transform.Position );
 			}
 		}
@@ -33,19 +33,16 @@ namespace Sandbox.Components.Stargate
 		public override async void Open()
 		{
 			if ( Busy || !Closed ) return;
-
-			IrisLoop?.Stop();
+			IrisLoop?.Stop(0.1f);
 
 			Busy = true;
 			Closed = false;
-
-			IrisModel.SceneModel.RenderingEnabled = false;
 			IrisCollider.Enabled = false;
-
 			Sound.Play( "stargate.iris.atlantis.open", Transform.Position );
 
 			await Task.DelaySeconds( _openCloseDelay );
 
+			IrisModel.SceneModel.RenderingEnabled = false;
 			Busy = false;
 		}
 
@@ -70,12 +67,15 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnUpdate();
 
+			_currentAlpha = _currentAlpha.LerpTo(Closed ? 1 : 0, Time.Delta * 6);
+
 			if ( IrisModel.IsValid() && IrisModel.SceneModel.IsValid() )
 			{
 				var sm = IrisModel.SceneModel;
 				sm.Flags.IsOpaque = false;
 				sm.Flags.IsTranslucent = true;
 				sm.Flags.BloomLayer = true;
+				sm.ColorTint = sm.ColorTint.WithAlpha(_currentAlpha);
 			}
 		}
 	}
