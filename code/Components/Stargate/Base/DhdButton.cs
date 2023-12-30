@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate
 {
-    public class DhdButton : Component
+    public class DhdButton : Component, IUse
     {
         public SkinnedModelRenderer ButtonModel;
         public ModelCollider ButtonCollider;
@@ -21,13 +21,18 @@ namespace Sandbox.Components.Stargate
 
         public virtual bool OnUse( GameObject user )
         {
-            if ( Disabled || Time.Now < DHD.LastPressTime + DHD.PressDelay )
+            if ( Time.Now < DHD.LastPressTime + DHD.PressDelay )
                 return false;
 
             DHD.LastPressTime = Time.Now;
             DHD.TriggerAction( Action, user );
 
             return false;
+        }
+
+        public bool IsUsable( GameObject user )
+        {
+            return !Disabled;
         }
 
         protected override void OnUpdate()

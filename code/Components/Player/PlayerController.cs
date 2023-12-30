@@ -35,6 +35,64 @@ public class PlayerController : Component, INetworkSerializable
 		}
 	}
 
+	private bool _lastUseState = false;
+	private IUse _lastUseComponent;
+	private static HighlightOutline _currentOutline;
+
+	private static async void HideOutline( HighlightOutline outline )
+	{
+		await GameTask.Delay( 10 );
+
+		if ( outline.IsValid() && _currentOutline != outline )
+			outline.Enabled = false;
+	}
+
+	private void UseLogic()
+	{
+		var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
+		var lookDir = EyeAngles.ToRotation();
+
+		if ( !cam.IsValid() )
+		{
+			return;
+		}
+
+		_currentOutline = null;
+
+		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 60 ).Run();
+		if ( tr.Hit )
+		{
+			if ( tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
+			{
+				// glowy outline
+				var outline = tr.GameObject.Components.GetOrCreate<HighlightOutline>();
+				outline.Color = Color.Yellow.WithAlpha( 0.1f );
+				outline.Width = 0.75f;
+				outline.Enabled = true;
+				_currentOutline = outline;
+
+				HideOutline( outline );
+
+				// actual use check
+				if ( Input.Down( "use" ) )
+				{
+					if ( Input.Pressed( "use" ) )
+					{
+						_lastUseState = usable.OnUse( Body );
+						_lastUseComponent = usable;
+					}
+					else
+					{
+						if ( _lastUseState )
+						{
+							_lastUseState = _lastUseComponent == usable ? usable.OnUse( Body ) : false;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	protected override void OnUpdate()
 	{
 		// Eye input
@@ -84,53 +142,7 @@ public class PlayerController : Component, INetworkSerializable
 				}
 			}
 
-			if ( Input.Pressed( "Use" ) )
-			{
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 80 ).Run();
-
-				if ( tr.Hit )
-				{
-					if ( tr.GameObject.Components.Get<Stargate>() is Stargate gate )
-					{
-						if ( gate.CanStargateStartDial() )
-						{
-							var ignore = new List<Stargate>() { gate };
-							var closestGate = Stargate.FindClosestGate( tr.GameObject.Transform.Position, exclude: ignore.ToArray() );
-							if ( closestGate.IsValid() )
-							{
-								var addressToDial = Stargate.GetOtherGateAddressForMenu( gate, closestGate );
-								if ( IsRunning )
-								{
-									gate.BeginDialFast( addressToDial );
-								}
-								else
-								{
-									gate.BeginDialSlow( addressToDial );
-								}
-							}
-						}
-						else
-						{
-							if ( gate.Open && !gate.Inbound )
-							{
-								gate.DoStargateClose( true );
-							}
-							else if ( gate.Dialing )
-							{
-								gate.StopDialing();
-							}
-						}
-					}
-					else if ( tr.GameObject.Components.Get<StargateIris>() is StargateIris iris )
-					{
-						iris.Toggle();
-					}
-					else if ( tr.GameObject.Components.Get<DhdButton>() is DhdButton btn )
-					{
-						btn.OnUse( tr.GameObject );
-					}
-				}
-			}
+			UseLogic();
 		}
 
 		var cc = GameObject.Components.Get<CharacterController>();
