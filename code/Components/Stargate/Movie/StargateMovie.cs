@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Sandbox.Components.Stargate
 {
-	public class StargateMovie : StargateMilkyWay
-	{
-		public StargateMovie()
-		{
+    public class StargateMovie : StargateMilkyWay
+    {
+        public StargateMovie()
+        {
             SoundDict = new()
             {
                 { "gate_open", "stargate.movie.open" },
@@ -26,6 +20,6 @@ namespace Sandbox.Components.Stargate
 
             MovieDialingType = true;
             ChevronLightup = false;
-		}
-	}
+        }
+    }
 }

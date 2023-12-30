@@ -1,10 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Sandbox.Components.Stargate
 {
     public partial class Kawoosh : Component, Component.ExecuteInEditor

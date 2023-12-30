@@ -1,10 +1,5 @@
-using Sandbox;
 using Sandbox.Citizen;
 using Sandbox.Components.Stargate;
-//using Sandbox.GameObjects;
-using System.Diagnostics;
-using System.Drawing;
-using System.Runtime;
 
 public class PlayerController : Component, INetworkSerializable
 {

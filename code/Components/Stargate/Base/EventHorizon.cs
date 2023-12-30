@@ -1,5 +1,3 @@
-using Microsoft.VisualBasic;
-
 namespace Sandbox.Components.Stargate
 {
 	public partial class EventHorizon : Component

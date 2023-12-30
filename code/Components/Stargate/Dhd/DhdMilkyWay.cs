@@ -1,4 +1,3 @@
-
 namespace Sandbox.Components.Stargate
 {
     public partial class DhdMilkyWay : Dhd

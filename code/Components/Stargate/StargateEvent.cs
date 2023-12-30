@@ -1,6 +1,4 @@
-﻿using Sandbox;
-
-public static class StargateEvent
+﻿public static class StargateEvent
 {
 	public const string Reset = "stargate.reset";
 

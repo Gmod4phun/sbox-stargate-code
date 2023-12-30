@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Sandbox.Components.Stargate
 {
 	public static class StargateSceneUtils
@@ -69,8 +63,6 @@ namespace Sandbox.Components.Stargate
 			var ring_component = ring.Components.Create<StargateRingMilkyWay>();
 			ring_component.RingModel = ring_component.Components.Create<ModelRenderer>();
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
-
-			Stargate.AddIris( gate_component );
 		}
 
 		public static void SpawnGateMovie( Vector3 pos, Rotation rot )
@@ -196,8 +188,6 @@ namespace Sandbox.Components.Stargate
 
 			ring_component.ResetSymbols();
 			ring_component.SetRingState( true );
-
-			Stargate.AddIris( gate_component, true );
 		}
 
 		public static void SpawnGateUniverse( Vector3 pos, Rotation rot )
@@ -241,8 +231,6 @@ namespace Sandbox.Components.Stargate
 			chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 			chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/gate_universe/chevrons_universe.vmdl" );
 			gate_component.Chevrons.Add( chev_component );
-
-			Stargate.AddBearing( gate_component );
 		}
 
 		// DHD's
