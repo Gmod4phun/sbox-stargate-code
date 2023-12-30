@@ -15,11 +15,12 @@ namespace Sandbox.Components.Stargate
 			return Transform.Zero.WithPosition( gt.Position ).WithRotation( gt.Rotation ).WithScale( gt.Scale );
 		}
 
+		// Gates
 		public static void SpawnGateMilkyWay( Vector3 pos, Rotation rot )
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Milky Way)";
-			gate.Transform.Position = pos;
+			gate.Transform.Position = pos + Vector3.Up * 90;
 			gate.Transform.Rotation = rot;
 
 			var mdl = gate.Components.Create<ModelRenderer>();
@@ -76,7 +77,7 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Movie)";
-			gate.Transform.Position = pos;
+			gate.Transform.Position = pos + Vector3.Up * 90;
 			gate.Transform.Rotation = rot;
 
 			var mdl = gate.Components.Create<ModelRenderer>();
@@ -131,7 +132,7 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Pegasus)";
-			gate.Transform.Position = pos;
+			gate.Transform.Position = pos + Vector3.Up * 90;
 			gate.Transform.Rotation = rot;
 
 			var mdl = gate.Components.Create<ModelRenderer>();
@@ -203,7 +204,7 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Universe)";
-			gate.Transform.Position = pos;
+			gate.Transform.Position = pos + Vector3.Up * 90;
 			gate.Transform.Rotation = rot;
 
 			var phy = gate.Components.Create<ModelCollider>();
@@ -242,6 +243,57 @@ namespace Sandbox.Components.Stargate
 			gate_component.Chevrons.Add( chev_component );
 
 			Stargate.AddBearing( gate_component );
+		}
+
+		// DHD's
+		public static void SpawnDhdMilkyWay( Vector3 pos, Rotation rot )
+		{
+			var dhd_object = new GameObject();
+			dhd_object.Name = "Dhd (Milky Way)";
+			dhd_object.Transform.Position = pos + new Vector3( 0, 0, -3 );
+			dhd_object.Transform.Rotation = rot.RotateAroundAxis( Vector3.Right, -15 );
+
+			var dhd_component = dhd_object.Components.Create<DhdMilkyWay>();
+			dhd_component.DhdModel = dhd_component.Components.Create<SkinnedModelRenderer>();
+			dhd_component.DhdModel.Model = Model.Load( "models/sbox_stargate/dhd/dhd.vmdl" );
+			var phy = dhd_component.Components.Create<ModelCollider>();
+			phy.Model = dhd_component.DhdModel.Model;
+
+			dhd_component.CreateButtons();
+		}
+
+		public static void SpawnDhdPegasus( Vector3 pos, Rotation rot )
+		{
+			var dhd_object = new GameObject();
+			dhd_object.Name = "Dhd (Pegasus)";
+			dhd_object.Transform.Position = pos + new Vector3( 0, 0, -3 );
+			dhd_object.Transform.Rotation = rot.RotateAroundAxis( Vector3.Right, -15 );
+
+			var dhd_component = dhd_object.Components.Create<DhdPegasus>();
+			dhd_component.DhdModel = dhd_component.Components.Create<SkinnedModelRenderer>();
+			dhd_component.DhdModel.Model = Model.Load( "models/sbox_stargate/dhd/dhd.vmdl" );
+			dhd_component.DhdModel.MaterialGroup = "peg";
+			var phy = dhd_component.Components.Create<ModelCollider>();
+			phy.Model = dhd_component.DhdModel.Model;
+
+			dhd_component.CreateButtons();
+		}
+
+		public static void SpawnDhdAtlantis( Vector3 pos, Rotation rot )
+		{
+			var dhd_object = new GameObject();
+			dhd_object.Name = "Dhd (Atlantis)";
+			dhd_object.Transform.Position = pos;
+			dhd_object.Transform.Rotation = rot;
+
+			var dhd_component = dhd_object.Components.Create<DhdAtlantis>();
+			dhd_component.DhdModel = dhd_component.Components.Create<SkinnedModelRenderer>( false );
+			dhd_component.DhdModel.Model = Model.Load( "models/sbox_stargate/dhd_atlantis/dhd_atlantis.vmdl" );
+			dhd_component.DhdModel.Enabled = true;
+			var phy = dhd_component.Components.Create<ModelCollider>();
+			phy.Model = dhd_component.DhdModel.Model;
+
+			dhd_component.CreateButtons();
 		}
 	}
 }

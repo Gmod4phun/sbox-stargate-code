@@ -69,16 +69,16 @@ public class PlayerController : Component, INetworkSerializable
 
 				if ( tr.Hit )
 				{
-					var pos = tr.HitPosition + Vector3.Up * 90;
+					var pos = tr.HitPosition;
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
 					if ( !Input.Pressed( "Attack2" ) )
 					{
-						StargateSceneUtils.SpawnGateMilkyWay( pos, rot );
+						StargateSceneUtils.SpawnGatePegasus( pos, rot );
 					}
 					else
 					{
-						StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
 					}
 
 				}
@@ -124,6 +124,10 @@ public class PlayerController : Component, INetworkSerializable
 					else if ( tr.GameObject.Components.Get<StargateIris>() is StargateIris iris )
 					{
 						iris.Toggle();
+					}
+					else if ( tr.GameObject.Components.Get<DhdButton>() is DhdButton btn )
+					{
+						btn.OnUse( tr.GameObject );
 					}
 				}
 			}
