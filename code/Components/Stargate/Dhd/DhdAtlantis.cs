@@ -8,6 +8,7 @@ namespace Sandbox.Components.Stargate
         public DhdAtlantis()
         {
             Data = new( "peg", "dhd.atlantis.press", "dhd.press_dial" );
+            DialIsLock = true;
         }
 
         public override void CreateButtons() // visible models of buttons that turn on/off and animate
