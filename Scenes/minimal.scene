@@ -235,6 +235,11 @@
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Crosshair",
+                  "__enabled": true,
+                  "CrosshairModel": "2456f759-f56d-45fe-aeab-4e4b441a828d"
                 }
               ]
             }
