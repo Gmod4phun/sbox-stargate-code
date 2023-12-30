@@ -217,6 +217,27 @@
               "Threshold": 0.3,
               "ThresholdWidth": 2
             }
+          ],
+          "Children": [
+            {
+              "Id": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+              "Name": "Crosshair",
+              "Position": "64,0,0",
+              "Scale": "0.01,0.01,0.01",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
           ]
         },
         {
