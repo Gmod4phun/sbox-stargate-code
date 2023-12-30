@@ -65,13 +65,13 @@ public class PlayerController : Component, INetworkSerializable
 			if ( tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
 			{
 				// glowy outline
-				var outline = tr.GameObject.Components.GetOrCreate<HighlightOutline>();
-				outline.Color = Color.Yellow.WithAlpha( 0.1f );
-				outline.Width = 0.75f;
-				outline.Enabled = true;
-				_currentOutline = outline;
+				// var outline = tr.GameObject.Components.GetOrCreate<HighlightOutline>();
+				// outline.Color = Color.Yellow.WithAlpha( 0.1f );
+				// outline.Width = 0.75f;
+				// outline.Enabled = true;
+				// _currentOutline = outline;
 
-				HideOutline( outline );
+				// HideOutline( outline );
 
 				// actual use check
 				if ( Input.Down( "use" ) )
