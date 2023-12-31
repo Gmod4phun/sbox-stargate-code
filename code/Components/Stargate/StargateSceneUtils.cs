@@ -188,6 +188,8 @@ namespace Sandbox.Components.Stargate
 
 			ring_component.ResetSymbols();
 			ring_component.SetRingState( true );
+
+			// ring_component.CreateGlyphs();
 		}
 
 		public static void SpawnGateUniverse( Vector3 pos, Rotation rot )

@@ -9,6 +9,8 @@ namespace Sandbox.Components.Stargate
 
         public string RingSymbols { get; private set; } = "?0JKNTR3MBZX*H69IGPL#@QFS1E4AU85OCW72YVD";
 
+        public List<Superglyph> Glyphs { get; set; } = new();
+
         [Property]
         public ModelRenderer RingModel { get; set; }
 
@@ -17,6 +19,18 @@ namespace Sandbox.Components.Stargate
 
         public List<int> DialSequenceActiveSymbols { get; private set; } = new();
         private SoundHandle RollSound { get; set; }
+
+        public void CreateGlyphs()
+        {
+            for ( var i = 0; i < 36; i++ )
+            {
+                var glyph = Components.Create<Superglyph>();
+                glyph.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl" );
+                glyph.PositionOnRing = i;
+                glyph.GlyphNumber = i;
+                Glyphs.Add( glyph );
+            }
+        }
 
         // create symbols
         // symbol models
