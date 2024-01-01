@@ -7,15 +7,16 @@ namespace Sandbox.Components.Stargate
         [Property]
         public StargatePegasus Gate => GameObject.Parent.Components.Get<StargatePegasus>();
 
-        public string RingSymbols { get; private set; } = "?0JKNTR3MBZX*H69IGPL#@QFS1E4AU85OCW72YVD";
+        public static string RingSymbols => "@E2LMQYB3OIWT8UG967KVZNR0#F1JSHXPDCA";
 
+        [Property]
         public List<Superglyph> Glyphs { get; set; } = new();
 
         [Property]
         public ModelRenderer RingModel { get; set; }
 
-        [Property]
-        public List<SkinnedModelRenderer> SymbolParts { get; set; } = new();
+        // [Property]
+        // public List<SkinnedModelRenderer> SymbolParts { get; set; } = new();
 
         public List<int> DialSequenceActiveSymbols { get; private set; } = new();
         private SoundHandle RollSound { get; set; }
@@ -45,33 +46,33 @@ namespace Sandbox.Components.Stargate
             return GetSymbolNum( (4 * chevNum) - 1 );
         }
 
-        public async void SetSymbolState( int num, bool state, float delay = 0 )
+        public async void SetSymbolState( int num, int displayedGlyph, bool state, float delay = 0 )
         {
             if ( delay > 0 )
             {
-                await GameTask.DelaySeconds( delay );
-                if ( !this.IsValid() ) return;
+                await Task.DelaySeconds( delay );
             }
 
             num = (num + 1).UnsignedMod( 36 );
-            SymbolParts[num < 18 ? 0 : 1].SetBodyGroup( $"symbol_{num + 1}", state ? 1 : 0 );
+            var glyph = Glyphs[num];
+            glyph.GlyphNumber = displayedGlyph;
+            glyph.GlyphEnabled = state;
         }
 
         public async void SetRingState( bool state, float delay = 0 )
         {
             if ( delay > 0 )
             {
-                await GameTask.DelaySeconds( delay );
-                if ( !this.IsValid() ) return;
+                await Task.DelaySeconds( delay );
             }
 
             if ( RingModel.IsValid() )
             {
-                RingModel.SetBodyGroup( "glyphs", state ? 1 : 0 );
+                RingModel.SetBodyGroup( "glyphs", 0 );
             }
         }
 
-        public void RollSymbol( int start, int count, bool counterclockwise = false, float time = 2.0f )
+        public void RollSymbol( int displayedGlyph, int start, int count, bool counterclockwise = false, float time = 2.0f )
         {
             if ( start < 0 || start > 35 ) return;
 
@@ -92,8 +93,15 @@ namespace Sandbox.Components.Stargate
                         var symIndex = counterclockwise ? (start - i_copy) : start + i_copy;
                         var symPrevIndex = counterclockwise ? (symIndex + 1) : symIndex - 1;
 
-                        SetSymbolState( symIndex, true );
-                        if ( !DialSequenceActiveSymbols.Contains( symPrevIndex.UnsignedMod( 36 ) ) ) SetSymbolState( symPrevIndex, false );
+                        if ( !DialSequenceActiveSymbols.Contains( symIndex.UnsignedMod( 36 ) ) )
+                        {
+                            SetSymbolState( symIndex, displayedGlyph, true );
+                        }
+
+                        if ( !DialSequenceActiveSymbols.Contains( symPrevIndex.UnsignedMod( 36 ) ) )
+                        {
+                            SetSymbolState( symPrevIndex, displayedGlyph, false );
+                        }
 
                         if ( i_copy == count )
                         {
@@ -109,19 +117,19 @@ namespace Sandbox.Components.Stargate
 
         public void ResetSymbols( bool clearDialActive = true )
         {
-            for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, false );
+            for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, i, false );
             if ( clearDialActive ) DialSequenceActiveSymbols.Clear();
         }
 
         public void ResetSymbol( int num, bool clearDialActive = true )
         {
-            SetSymbolState( num, false );
+            SetSymbolState( num, num, false );
             if ( clearDialActive ) DialSequenceActiveSymbols.Remove( num );
         }
 
         public void LightupSymbols()
         {
-            for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, true );
+            for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, i, true );
         }
 
         public void PlayRollSound( bool fast = false )
@@ -145,7 +153,7 @@ namespace Sandbox.Components.Stargate
                 void firstRun()
                 {
                     ResetSymbols();
-                    SetSymbolState( 0, true );
+                    SetSymbolState( 0, 0, true );
                 }
 
                 var pegasusSymbolChevrons = new Dictionary<int, int>() { { 3, 1 }, { 7, 2 }, { 11, 3 }, { 15, 8 }, { 19, 9 }, { 23, 4 }, { 27, 5 }, { 31, 6 }, { 35, 7 } };
@@ -156,7 +164,7 @@ namespace Sandbox.Components.Stargate
                     var i_copy = i;
                     var taskTime = startTime + startDelay + (delay * i_copy);
 
-                    Gate.AddTask( taskTime, i_copy == 0 ? firstRun : () => SetSymbolState( i_copy, true ), Stargate.TimedTaskCategory.DIALING );
+                    Gate.AddTask( taskTime, i_copy == 0 ? firstRun : () => SetSymbolState( i_copy, i_copy, true ), Stargate.TimedTaskCategory.DIALING );
 
                     if ( (i + 1) % 4 == 0 )
                     {
@@ -175,7 +183,7 @@ namespace Sandbox.Components.Stargate
 
         public void DoSymbolsInboundInstant()
         {
-            for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, true );
+            for ( int i = 0; i <= 35; i++ ) SetSymbolState( i, i, true );
         }
 
         public async Task<bool> RollSymbolSlow( char symbol, int chevNum, bool isLast = false )
@@ -212,13 +220,13 @@ namespace Sandbox.Components.Stargate
                 var finishTime = startTime + rollStartDelay + symRollTime;
 
                 Gate.AddTask( rollSoundTaskTime, () => PlayRollSound(), Stargate.TimedTaskCategory.DIALING );
-                Gate.AddTask( symTaskTime, () => RollSymbol( startPos, symSteps, i_copy % 2 == 0, symRollTime ), Stargate.TimedTaskCategory.DIALING );
+                Gate.AddTask( symTaskTime, () => RollSymbol( RingSymbols.IndexOf( symbol ), startPos, symSteps, i_copy % 2 == 0, symRollTime ), Stargate.TimedTaskCategory.DIALING );
                 Gate.AddTask( finishTime, () => StopRollSound(), Stargate.TimedTaskCategory.DIALING );
 
                 if ( i_copy == 0 )
                     Gate.AddTask( symTaskTime, () => SetRingState( false ), Stargate.TimedTaskCategory.DIALING );
 
-                await GameTask.DelaySeconds( finishTime - startTime );
+                await Task.DelaySeconds( finishTime - startTime );
 
                 return true;
 
@@ -288,8 +296,10 @@ namespace Sandbox.Components.Stargate
 
                     elapsedTime += rollStartDelay + symRollTime + delayBetweenSymbols;
 
+                    var symbol = address[i_copy];
+
                     Gate.AddTask( rollSoundTaskTime, () => PlayRollSound(), Stargate.TimedTaskCategory.DIALING );
-                    Gate.AddTask( symTaskTime, () => RollSymbol( startPos, symSteps, i_copy % 2 == 0, symRollTime ), Stargate.TimedTaskCategory.DIALING );
+                    Gate.AddTask( symTaskTime, () => RollSymbol( RingSymbols.IndexOf( symbol ), startPos, symSteps, i_copy % 2 == 0, symRollTime ), Stargate.TimedTaskCategory.DIALING );
 
                     if ( i_copy == 0 )
                         Gate.AddTask( symTaskTime, () => SetRingState( false ), Stargate.TimedTaskCategory.DIALING );
@@ -349,9 +359,10 @@ namespace Sandbox.Components.Stargate
                 for ( int i = 0; i < chevCount; i++ )
                 {
                     var i_copy = i;
-
                     var symTaskTime = startTime + (symRollTime + delayBetweenSymbols) * (i_copy);
-                    Gate.AddTask( symTaskTime, () => RollSymbol( data[i_copy], 12, i_copy % 2 == 1, symRollTime ), Stargate.TimedTaskCategory.DIALING );
+                    var symbol = address[i_copy];
+
+                    Gate.AddTask( symTaskTime, () => RollSymbol( RingSymbols.IndexOf( symbol ), data[i_copy], 12, i_copy % 2 == 1, symRollTime ), Stargate.TimedTaskCategory.DIALING );
 
                     var chevTaskTime = startTime + (symRollTime + delayBetweenSymbols) * (i_copy + 1) - delayBetweenSymbols;
                     Gate.AddTask( chevTaskTime, () =>
@@ -377,7 +388,7 @@ namespace Sandbox.Components.Stargate
             // catch ( Exception ) { }
         }
 
-        public void RollSymbolDHDFast( int chevCount, Func<bool> validCheck, int chevNum, float symRollTime )
+        public void RollSymbolDHDFast( char symbol, int chevCount, Func<bool> validCheck, int chevNum, float symRollTime )
         {
             // try
             {
@@ -393,7 +404,7 @@ namespace Sandbox.Components.Stargate
 
                 var startTime = Time.Now;
                 var symTaskTime = startTime;
-                Gate.AddTask( symTaskTime, () => RollSymbol( data[chevNum - 1], 12, (chevNum - 1) % 2 == 1, symRollTime ), Stargate.TimedTaskCategory.SYMBOL_ROLL_PEGASUS_DHD );
+                Gate.AddTask( symTaskTime, () => RollSymbol( RingSymbols.IndexOf( symbol ), data[chevNum - 1], 12, (chevNum - 1) % 2 == 1, symRollTime ), Stargate.TimedTaskCategory.SYMBOL_ROLL_PEGASUS_DHD );
 
                 var chevTaskTime = startTime + symRollTime;
                 Gate.AddTask( chevTaskTime, () => Gate.ChevronActivateDHD( Gate.GetChevronBasedOnAddressLength( chevNum, chevCount ), 0, isLast ? validCheck() : true ), Stargate.TimedTaskCategory.SYMBOL_ROLL_PEGASUS_DHD );
@@ -404,8 +415,6 @@ namespace Sandbox.Components.Stargate
         // DEBUG
         public void DrawSymbols()
         {
-            if ( !this.IsValid() ) return;
-
             var deg = 10;
             var ang = Transform.Rotation.Angles();
             for ( int i = 0; i < 36; i++ )
@@ -424,15 +433,5 @@ namespace Sandbox.Components.Stargate
             //DrawSymbols();
         }
         */
-
-        protected override void OnDestroy()
-        {
-            foreach ( var part in SymbolParts )
-            {
-                if ( part.IsValid() ) part.Destroy();
-            }
-
-            base.OnDestroy();
-        }
     }
 }

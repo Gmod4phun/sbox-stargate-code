@@ -2,7 +2,7 @@ namespace Sandbox.Components.Stargate
 {
     public class DhdButton : Component, IUse
     {
-        public SkinnedModelRenderer ButtonModel;
+        public ModelRenderer ButtonModel;
         public ModelCollider ButtonCollider;
 
         private float _glowScale = 0;
@@ -45,7 +45,12 @@ namespace Sandbox.Components.Stargate
                 so.Batchable = false;
                 so.Attributes.Set( "selfillumscale", _glowScale );
 
-                DrawSymbol();
+                if ( ButtonModel is Superglyph glyph )
+                {
+                    glyph.GlyphEnabled = On;
+                }
+
+                // DrawSymbol();
             }
         }
 

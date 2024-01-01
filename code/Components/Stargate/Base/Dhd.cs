@@ -206,11 +206,6 @@ namespace Sandbox.Components.Stargate
             button_component.ButtonCollider = button_object.Components.Create<ModelCollider>();
             button_component.ButtonCollider.Model = button_component.ButtonModel.Model;
 
-            // button_object.SetupPhysicsFromModel( PhysicsMotionType.Static, true ); // needs to have physics for traces
-            // button_object.PhysicsBody.BodyType = PhysicsBodyType.Static;
-            // button_object.EnableAllCollisions = false;
-            // button_object.EnableTraceAndQueries = true;
-
             button_component.Action = action;
             button_component.DHD = this;
             button_component.Disabled = disabled;
@@ -311,6 +306,30 @@ namespace Sandbox.Components.Stargate
                 return;
             }
 
+            if ( action == "FAST" || action == "SLOW" ) // button for toggling the iris
+            {
+                if ( Gate.Dialing )
+                {
+                    Gate.StopDialing();
+                    return;
+                }
+
+                if ( Gate.CanStargateStartDial() )
+                {
+                    var closestGate = Gate.FindClosestGate();
+                    if ( closestGate.IsValid() )
+                    {
+                        var address = Stargate.GetOtherGateAddressForMenu( Gate, closestGate );
+
+                        if ( action == "FAST" )
+                            Gate.BeginDialFast( address );
+                        else
+                            Gate.BeginDialSlow( address );
+                    }
+                }
+                return;
+            }
+
             if ( Gate.Busy || Gate.Inbound ) return; // if gate is busy, we cant do anything
 
             if ( Gate.Dialing && Gate.CurDialType is not Stargate.DialType.DHD ) return; // if we are dialing, but not by DHD, cant do anything
@@ -408,6 +427,14 @@ namespace Sandbox.Components.Stargate
 
                     if ( PressedActions.Count == 8 || symbol is '#' ) // lock if we are putting Point of Origin or 9th symbol, otherwise encode
                     {
+                        if ( DialIsLock && !IsDialLocking ) // if the DIAL button should also lock the last symbol, do that (Atlantis City DHD)
+                        {
+                            IsDialLocking = true;
+                            TriggerAction( action, user );
+                            TriggerAction( "DIAL", user, 1 );
+                            return;
+                        }
+
                         Gate.DoDHDChevronLock( symbol );
                     }
                     else

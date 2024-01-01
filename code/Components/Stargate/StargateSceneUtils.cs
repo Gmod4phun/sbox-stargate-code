@@ -178,18 +178,17 @@ namespace Sandbox.Components.Stargate
 			ring_component.RingModel.Enabled = false;
 			ring_component.RingModel.Enabled = true;
 
-			var sym_part1 = ring.Components.Create<SkinnedModelRenderer>();
-			sym_part1.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_1_18.vmdl" );
-			ring_component.SymbolParts.Add( sym_part1 );
+			// var sym_part1 = ring.Components.Create<SkinnedModelRenderer>();
+			// sym_part1.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_1_18.vmdl" );
+			// ring_component.SymbolParts.Add( sym_part1 );
 
-			var sym_part2 = ring.Components.Create<SkinnedModelRenderer>();
-			sym_part2.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_19_36.vmdl" );
-			ring_component.SymbolParts.Add( sym_part2 );
+			// var sym_part2 = ring.Components.Create<SkinnedModelRenderer>();
+			// sym_part2.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyphs_19_36.vmdl" );
+			// ring_component.SymbolParts.Add( sym_part2 );
 
+			ring_component.CreateGlyphs();
 			ring_component.ResetSymbols();
-			ring_component.SetRingState( true );
-
-			// ring_component.CreateGlyphs();
+			// ring_component.SetRingState( true );
 		}
 
 		public static void SpawnGateUniverse( Vector3 pos, Rotation rot )

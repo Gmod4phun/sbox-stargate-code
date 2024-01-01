@@ -373,7 +373,8 @@
 					var chev = GetChevronBasedOnAddressLength( i, address.Length );
 					ChevronActivate( chev, nosound: true );
 
-					Ring.SetSymbolState( Ring.GetSymbolNumFromChevron( GetChevronOrderOnGateFromChevronIndex( Chevrons.IndexOf( chev ) + 1 ) ), true );
+					var symbolNumer = Ring.GetSymbolNumFromChevron( GetChevronOrderOnGateFromChevronIndex( Chevrons.IndexOf( chev ) + 1 ) );
+					Ring.SetSymbolState( symbolNumer, symbolNumer, true );
 				}
 
 				PlaySound( this, GetSound( "chevron_lock_inbound" ) );
@@ -463,7 +464,7 @@
 			var chev = GetChevronBasedOnAddressLength( DialingAddress.Length, clampLen );
 			EncodedChevronsOrdered.Add( chev );
 
-			Ring.RollSymbolDHDFast( clampLen, () => true, DialingAddress.Length, 0.6f );
+			Ring.RollSymbolDHDFast( sym, clampLen, () => true, DialingAddress.Length, 0.6f );
 		}
 
 		public override void DoDHDChevronLock( char sym ) // only the top chevron locks, always
@@ -480,7 +481,7 @@
 			}
 
 			var rollTime = 0.6f;
-			Ring.RollSymbolDHDFast( DialingAddress.Length, validCheck, DialingAddress.Length, rollTime );
+			Ring.RollSymbolDHDFast( sym, DialingAddress.Length, validCheck, DialingAddress.Length, rollTime );
 			MakeBusy( rollTime );
 		}
 

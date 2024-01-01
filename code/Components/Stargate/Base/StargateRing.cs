@@ -187,7 +187,7 @@ namespace Sandbox.Components.Stargate
 				RingAngle += toTravelStep * _ringDirection;
 				RingAngle = RingAngle.UnsignedMod( 360f );
 
-				await Task.Delay( 1 );
+				await Task.Delay( 5 );
 			}
 		}
 
@@ -248,7 +248,7 @@ namespace Sandbox.Components.Stargate
 				RingAngle += toTravelStep * _ringDirection;
 				RingAngle = RingAngle.UnsignedMod( 360f );
 
-				await Task.Delay( 1 );
+				await Task.Delay( 5 );
 			}
 		}
 
