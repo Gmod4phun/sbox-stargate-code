@@ -69,7 +69,7 @@
     {
       "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
       "Name": "Citizen",
-      "Position": "-64,0,8",
+      "Position": "-64,-319.484,16",
       "Enabled": true,
       "Components": [
         {
@@ -78,7 +78,7 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 72,
-          "IgnoreLayers": "solid,trigger",
+          "IgnoreLayers": "solid,trigger,player",
           "Radius": 10,
           "StepHeight": 18
         },
@@ -118,6 +118,7 @@
           "Id": "3a78266a-da75-475e-9317-94c71c3418fa",
           "Name": "Body",
           "Position": "0,-0.66093,0",
+          "Tags": "player",
           "Enabled": true,
           "Components": [
             {

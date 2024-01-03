@@ -57,7 +57,7 @@ public class PlayerController : Component, INetworkSerializable
 		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 60 ).Run();
 		if ( tr.Hit )
 		{
-			if ( tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
+			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
 			{
 				// glowy outline
 				// var outline = tr.GameObject.Components.GetOrCreate<HighlightOutline>();
