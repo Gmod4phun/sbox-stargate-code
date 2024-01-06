@@ -374,7 +374,7 @@ namespace Sandbox.Components.Stargate
 			EventHorizon = eh.Components.Create<EventHorizon>();
 			EventHorizon.EventHorizonMaterialGroup = EventHorizonMaterialGroup;
 
-			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>();
+			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>( false );
 			EventHorizon.EventHorizonModel.Model = Model.Load( "models/sbox_stargate/event_horizon/event_horizon.vmdl" );
 		}
 

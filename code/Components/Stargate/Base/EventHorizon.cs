@@ -272,6 +272,8 @@ namespace Sandbox.Components.Stargate
 			_shouldBeOff = false;
 
 			SkinEstablish();
+
+			EventHorizonModel.Enabled = true;
 		}
 
 		// [ClientRpc]
