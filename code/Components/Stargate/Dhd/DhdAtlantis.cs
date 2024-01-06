@@ -88,5 +88,15 @@ namespace Sandbox.Components.Stargate
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_5.vmdl", "FAST" );
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_6.vmdl", "SLOW" );
         }
+
+        protected override void OnUpdate()
+        {
+            base.OnUpdate();
+
+            if ( DhdModel.IsValid() && DhdModel.SceneObject is SceneObject so )
+            {
+                so.Attributes.Set( "selfillumscale", 1 );
+            }
+        }
     }
 }
