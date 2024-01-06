@@ -19,7 +19,7 @@ namespace Sandbox.Components.Stargate
 
         public Collider Trigger;
 
-        private Plane KawooshClipPlane => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 10f, Transform.Rotation.Forward.Normal );
+        private Plane KawooshClipPlane => new( Transform.Position - Scene.Camera.Transform.Position + Transform.Rotation.Forward * 10f, Transform.Rotation.Forward.Normal );
 
         protected override void OnStart()
         {

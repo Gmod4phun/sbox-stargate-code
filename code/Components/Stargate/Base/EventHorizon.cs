@@ -70,9 +70,9 @@ namespace Sandbox.Components.Stargate
 		private List<GameObject> InTriggerFront { get; } = new();
 		private List<GameObject> InTriggerBack { get; } = new();
 
-		public Plane ClipPlaneFront => new( Transform.Position - Camera.Position + Transform.Rotation.Forward * 0.75f, Transform.Rotation.Forward.Normal );
+		public Plane ClipPlaneFront => new( Transform.Position - Scene.Camera.Transform.Position + Transform.Rotation.Forward * 0.75f, Transform.Rotation.Forward.Normal );
 
-		public Plane ClipPlaneBack => new( Transform.Position - Camera.Position - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
+		public Plane ClipPlaneBack => new( Transform.Position - Scene.Camera.Transform.Position - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
 
 		/*
 		public override void Spawn()
@@ -249,7 +249,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( !this.IsValid() ) return false;
 
-			return (Camera.Position - Transform.Position).Dot( Transform.Rotation.Forward ) < 0;
+			return (Scene.Camera.Transform.Position - Transform.Position).Dot( Transform.Rotation.Forward ) < 0;
 		}
 
 		// CLIENT ANIM CONTROL

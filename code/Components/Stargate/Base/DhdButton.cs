@@ -59,7 +59,7 @@ namespace Sandbox.Components.Stargate
             if ( ButtonCollider.IsValid() )
             {
                 var pos = ButtonCollider.KeyframeBody.MassCenter;
-                if ( pos.DistanceSquared( Camera.Position ) < 4096 )
+                if ( pos.DistanceSquared( Scene.Camera.Transform.Position ) < 4096 )
                 {
                     using ( Gizmo.Scope( "DhdSymbol", global::Transform.Zero ) )
                     {
