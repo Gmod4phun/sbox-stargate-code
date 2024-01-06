@@ -1,9 +1,10 @@
 {
+  "Id": "187c258a-c8cc-41ee-b629-54c5a3b4699b",
   "GameObjects": [
     {
       "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Name": "Sun",
-      "Rotation": "0.06665878,-0.4503894,0.130354,-0.880748",
+      "Rotation": "0.4474398,0.08421277,-0.8851708,-0.09582705",
       "Enabled": true,
       "Components": [
         {
@@ -33,6 +34,7 @@
             "Mins": "-1600,-1600,0",
             "Maxs": "1600,1600,1024"
           },
+          "Feathering": 0.02,
           "Projection": "Sphere",
           "Texture": "textures/cubemaps/default2.vtex",
           "TintColor": "1,1,1,1"
@@ -69,7 +71,8 @@
     {
       "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
       "Name": "Citizen",
-      "Position": "-64,-319.484,16",
+      "Position": "200,0,16.00004",
+      "Rotation": "0.0000000504776,0.00000002146427,1,-0.0000006397578",
       "Enabled": true,
       "Components": [
         {
@@ -251,6 +254,41 @@
           "Name": "EyePos",
           "Position": "0,0,64",
           "Enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "9b653830-8bb8-490d-86d8-41a8a1838db1",
+      "Name": "Brick Ramp",
+      "Position": "-258.1436,5.069897,64",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "BrickRamp",
+          "__enabled": true,
+          "Gates": [],
+          "RampModel": "9b653830-8bb8-490d-86d8-41a8a1838db1",
+          "SpawnOffset": "0,0,70",
+          "StargatePositionOffset": "0,0,95",
+          "StargateRotationOffset": "0,0,0"
         }
       ]
     }

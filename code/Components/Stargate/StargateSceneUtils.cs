@@ -120,7 +120,7 @@ namespace Sandbox.Components.Stargate
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
 		}
 
-		public static void SpawnGatePegasus( Vector3 pos, Rotation rot )
+		public static Stargate SpawnGatePegasus( Vector3 pos, Rotation rot )
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Pegasus)";
@@ -189,6 +189,8 @@ namespace Sandbox.Components.Stargate
 			ring_component.CreateGlyphs();
 			ring_component.ResetSymbols();
 			// ring_component.SetRingState( true );
+
+			return gate_component;
 		}
 
 		public static void SpawnGateUniverse( Vector3 pos, Rotation rot )

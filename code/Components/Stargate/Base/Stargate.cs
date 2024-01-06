@@ -1,4 +1,6 @@
-﻿namespace Sandbox.Components.Stargate
+﻿using Sandbox.Components.Stargate.Ramps;
+
+namespace Sandbox.Components.Stargate
 {
 	public partial class Stargate : Component
 	{
@@ -40,7 +42,10 @@
 		[Property]
 		public StargateIris Iris => GameObject.Components.Get<StargateIris>( FindMode.EnabledInSelfAndDescendants );
 
-		[Net]
+		[Property]
+		public GateRamp Ramp { get; protected set; }
+
+		[Property]
 		public Stargate OtherGate { get; set; } = null;
 
 		[Property]

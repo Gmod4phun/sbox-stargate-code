@@ -1,5 +1,6 @@
 using Sandbox.Citizen;
 using Sandbox.Components.Stargate;
+using Sandbox.Components.Stargate.Ramps;
 
 public class PlayerController : Component, INetworkSerializable
 {
@@ -127,7 +128,13 @@ public class PlayerController : Component, INetworkSerializable
 
 					if ( !Input.Pressed( "Attack2" ) )
 					{
-						StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						var gate = StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						var ramp = GateRamp.GetClosest( pos );
+
+						if ( ramp.IsValid() )
+						{
+							Stargate.PutGateOnRamp( gate, ramp );
+						}
 					}
 					else
 					{

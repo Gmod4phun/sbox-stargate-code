@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Sandbox.Components.Stargate.Ramps;
 
 namespace Sandbox.Components.Stargate
 {
@@ -478,35 +479,27 @@ namespace Sandbox.Components.Stargate
             Sound.Play( name, position );
         }
 
-        /*
-
         /// <summary>
         /// Attempts to position a Stargate onto a Ramp.
         /// </summary>
         /// <returns>Whether or not the Gate was positioned on the Ramp succesfully.</returns>
-        public static bool PutGateOnRamp( Stargate gate, IStargateRamp ramp )
+        public static bool PutGateOnRamp( Stargate gate, GateRamp ramp )
         {
-            var rampEnt = (Entity)ramp;
-            if ( gate.IsValid() && rampEnt.IsValid() ) // gate ramps
+            if ( gate.IsValid() && ramp.IsValid() ) // gate ramps
             {
-                if ( ramp.Gate.Count < ramp.AmountOfGates )
+                if ( ramp.HasFreeSlot() )
                 {
-                    int offsetIndex = ramp.Gate.Count;
-                    gate.Position = rampEnt.Transform.PointToWorld( ramp.StargatePositionOffset[offsetIndex] );
-                    gate.Rotation = rampEnt.Transform.RotationToWorld( ramp.StargateRotationOffset[offsetIndex].ToRotation() );
-                    gate.SetParent( rampEnt );
+                    gate.Transform.Position = ramp.Transform.World.PointToWorld( ramp.StargatePositionOffset );
+                    gate.Transform.Rotation = ramp.Transform.World.RotationToWorld( ramp.StargateRotationOffset.ToRotation() );
+                    gate.GameObject.SetParent( ramp.GameObject );
                     gate.Ramp = ramp;
-
-                    ramp.Gate.Add( gate );
-
+                    ramp.Gates.Add( gate );
                     return true;
                 }
             }
 
             return false;
         }
-
-        */
 
         [Event( "trace.prepare" )]
         public static void OnTracePrepare( SceneTrace trace, GameObject ent, Action<SceneTrace> returnFn )
