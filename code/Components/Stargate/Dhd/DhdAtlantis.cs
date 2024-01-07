@@ -84,7 +84,7 @@ namespace Sandbox.Components.Stargate
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_1.vmdl", "@" );
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_2.vmdl", "*" );
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_3.vmdl", "IRIS" );
-            CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_4.vmdl", "_", true );
+            CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_4.vmdl", "INSTANT" );
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_5.vmdl", "FAST" );
             CreateSingleButton( "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_6.vmdl", "SLOW" );
         }

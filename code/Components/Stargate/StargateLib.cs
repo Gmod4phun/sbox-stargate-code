@@ -533,7 +533,14 @@ namespace Sandbox.Components.Stargate
             if ( !e.IsValid() )
                 return false;
 
-            if ( e.Parent != null )
+            if ( e.Tags.Has( "player" ) )
+                return true;
+
+            // if our parent isnt the scene, we are a child of something else
+            if ( e.Parent is not Scene _ )
+                return false;
+
+            if ( e.Components.Get<Rigidbody>() is null )
                 return false;
 
             // if ( e is StargateIris || e is GateBearing || e is PickupTrigger || e is EventHorizonTrigger || e is EventHorizonCollider )

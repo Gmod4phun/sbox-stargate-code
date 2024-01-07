@@ -43,8 +43,8 @@
     },
     {
       "Id": "6ad70641-3c6c-4402-9c85-9a4969af4764",
-      "Name": "Plane",
-      "Scale": "32,32,1",
+      "Name": "Ground",
+      "Scale": "20,20,1",
       "Enabled": true,
       "Components": [
         {
@@ -63,7 +63,7 @@
           "Center": "0,0,-1",
           "IsTrigger": false,
           "Scale": "100,100,2",
-          "Static": false,
+          "Static": true,
           "Surface": null
         }
       ]
@@ -73,6 +73,7 @@
       "Name": "Citizen",
       "Position": "200,0,16.00004",
       "Rotation": "0.0000000504776,0.00000002146427,1,-0.0000006397578",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
@@ -90,6 +91,7 @@
           "__enabled": true,
           "AnimationHelper": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
           "Body": "3a78266a-da75-475e-9317-94c71c3418fa",
+          "Camera": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
           "Eye": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
           "FirstPerson": true,
           "Gravity": "0,0,800"
@@ -120,8 +122,8 @@
         {
           "Id": "3a78266a-da75-475e-9317-94c71c3418fa",
           "Name": "Body",
-          "Position": "0,-0.66093,0",
-          "Tags": "player",
+          "Position": "0,0,0",
+          "Tags": "player_body,player",
           "Enabled": true,
           "Components": [
             {
@@ -141,7 +143,8 @@
         {
           "Id": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
           "Name": "Camera",
-          "Position": "-200,0,64",
+          "Position": "0.000006461131,-0.000000000008185452,64",
+          "Tags": "player_camera,player",
           "Enabled": true,
           "Components": [
             {
@@ -154,7 +157,7 @@
               "Orthographic": false,
               "OrthographicHeight": 1204,
               "Priority": 1,
-              "RenderExcludeTags": "",
+              "RenderExcludeTags": "player_body",
               "RenderTags": "",
               "TargetEye": "None",
               "Viewport": "0,0,1,1",
@@ -228,6 +231,7 @@
               "Name": "Crosshair",
               "Position": "64,0,0",
               "Scale": "0.01,0.01,0.01",
+              "Tags": "player_camera,player",
               "Enabled": true,
               "Components": [
                 {
@@ -253,7 +257,47 @@
           "Id": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
           "Name": "EyePos",
           "Position": "0,0,64",
+          "Tags": "player",
           "Enabled": true
+        },
+        {
+          "Id": "4255a67b-28f3-42ce-9dbf-5414a2a220a2",
+          "Name": "Shadow",
+          "Position": "0,0,0",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 341,
+              "BoneMergeTarget": "3a78266a-da75-475e-9317-94c71c3418fa",
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "ShadowsOnly",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "4d4c6c50-8b44-4ccf-af33-21a334a94edf",
+          "Name": "Collider",
+          "Position": "0,0,36",
+          "Tags": "player_collider,player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "20,20,72",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         }
       ]
     },
@@ -278,7 +322,7 @@
           "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
-          "Static": false,
+          "Static": true,
           "Surface": null
         },
         {
@@ -289,6 +333,64 @@
           "SpawnOffset": "0,0,70",
           "StargatePositionOffset": "0,0,95",
           "StargateRotationOffset": "0,0,0"
+        }
+      ]
+    },
+    {
+      "Id": "dffd010d-1627-4a01-8b89-34f673daf5b6",
+      "Name": "Test Object",
+      "Position": "62.68187,234.1283,17.48023",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Rigidbody",
+          "__enabled": true,
+          "AngularDamping": 5.6000004,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {},
+          "StartAsleep": false
+        },
+        {
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "TouchingDebug",
+          "__enabled": false,
+          "Body": "dffd010d-1627-4a01-8b89-34f673daf5b6",
+          "Trigger": null
+        }
+      ]
+    },
+    {
+      "Id": "99ff6ab8-aae1-4fd5-8267-6f28cbb42540",
+      "Name": "Test Trigger",
+      "Position": "61.21304,273.7693,29.08295",
+      "Rotation": "0,0,0.707107,0.7071065",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TriggerDebug",
+          "__enabled": true,
+          "IsTrigger": true,
+          "Model": "models/citizen_props/cardboardbox01.vmdl",
+          "Static": false,
+          "Surface": null
         }
       ]
     }
@@ -304,5 +406,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "__references": []
+  "__references": [
+    "facepunch.toilet_a"
+  ]
 }

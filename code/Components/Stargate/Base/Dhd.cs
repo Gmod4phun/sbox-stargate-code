@@ -306,7 +306,7 @@ namespace Sandbox.Components.Stargate
                 return;
             }
 
-            if ( action == "FAST" || action == "SLOW" ) // button for toggling the iris
+            if ( action == "FAST" || action == "SLOW" || action == "INSTANT" ) // button for toggling the iris
             {
                 if ( Gate.Dialing )
                 {
@@ -323,6 +323,8 @@ namespace Sandbox.Components.Stargate
 
                         if ( action == "FAST" )
                             Gate.BeginDialFast( address );
+                        else if ( action == "INSTANT" )
+                            Gate.BeginDialInstant( address );
                         else
                             Gate.BeginDialSlow( address );
                     }

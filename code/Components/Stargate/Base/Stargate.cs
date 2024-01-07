@@ -61,7 +61,7 @@ namespace Sandbox.Components.Stargate
 		public string GateName { get; set; } = "";
 
 		[Property]
-		public bool AutoClose { get; set; } = true;
+		public bool AutoClose { get; set; } = false;
 
 		[Property]
 		public bool GatePrivate { get; set; } = false;
@@ -370,12 +370,20 @@ namespace Sandbox.Components.Stargate
 			eh.Transform.Rotation = Transform.Rotation;
 			eh.Transform.Scale = Transform.Scale;
 			eh.SetParent( GameObject );
+			eh.Tags.Add( StargateTags.EventHorizon, "trigger" );
 
 			EventHorizon = eh.Components.Create<EventHorizon>();
 			EventHorizon.EventHorizonMaterialGroup = EventHorizonMaterialGroup;
 
 			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>( false );
 			EventHorizon.EventHorizonModel.Model = Model.Load( "models/sbox_stargate/event_horizon/event_horizon.vmdl" );
+
+			EventHorizon.EventHorizonTrigger = eh.Components.Create<EventHorizonTrigger>();
+			EventHorizon.EventHorizonTrigger.Model = EventHorizon.EventHorizonModel.Model;
+			EventHorizon.EventHorizonTrigger.IsTrigger = true;
+			EventHorizon.EventHorizonTrigger.IsMainTrigger = true;
+
+			EventHorizon.CreateTriggers();
 		}
 
 		public void DeleteEventHorizon()
