@@ -4,11 +4,6 @@ namespace Sandbox.Components.Stargate
 	{
 		public static readonly int[] ChevronAngles = { 40, 80, 120, 240, 280, 320, 0, 160, 200 };
 
-		public static Transform ToTransform( this GameTransform gt )
-		{
-			return Transform.Zero.WithPosition( gt.Position ).WithRotation( gt.Rotation ).WithScale( gt.Scale );
-		}
-
 		// Gates
 		public static void SpawnGateMilkyWay( Vector3 pos, Rotation rot )
 		{
