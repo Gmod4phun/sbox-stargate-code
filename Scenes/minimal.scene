@@ -361,6 +361,44 @@
       ]
     },
     {
+      "Id": "c40b23f8-0c91-4a02-9202-ccae00155373",
+      "Name": "Brick Ramp (1)",
+      "Position": "-258.1436,-438.5218,146.1867",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/ramps/sgc_ramp/sgc_ramp.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/ramps/sgc_ramp/sgc_ramp.vmdl",
+          "Static": true,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "BrickRamp",
+          "__enabled": true,
+          "Gates": [],
+          "RampModel": "c40b23f8-0c91-4a02-9202-ccae00155373",
+          "SpawnOffset": "0,0,70",
+          "StargatePositionOffset": "0,0,0",
+          "StargateRotationOffset": "0,0,0"
+        }
+      ]
+    },
+    {
       "Id": "dffd010d-1627-4a01-8b89-34f673daf5b6",
       "Name": "Test Object",
       "Position": "62.68187,234.1283,17.48023",
@@ -421,6 +459,35 @@
           "Model": "models/citizen_props/cardboardbox01.vmdl",
           "Static": false,
           "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "2368756b-66f8-4d91-a02a-48eaeebb7ae8",
+      "Name": "Object",
+      "Position": "133.4963,132.8618,41.131",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkinnedModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelPhysics",
+          "__enabled": true,
+          "Locking": {},
+          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
+          "Renderer": "2368756b-66f8-4d91-a02a-48eaeebb7ae8"
         }
       ]
     }

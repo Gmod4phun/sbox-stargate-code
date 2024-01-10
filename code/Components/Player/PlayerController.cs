@@ -48,8 +48,24 @@ public class PlayerController : Component, INetworkSerializable
 
 	public void SetPlayerViewAngles( Angles target )
 	{
-		// (To.Single( ply ), ply.EyeRotation.Angles() + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ));
 		EyeAngles = target;
+	}
+
+	public Vector3 GetPlayerVelocity()
+	{
+		var cc = GameObject.Components.Get<CharacterController>();
+		if ( cc is null )
+			return Vector3.Zero;
+
+		return cc.Velocity;
+	}
+
+	public void SetPlayerVelocity( Vector3 velocity )
+	{
+		var cc = GameObject.Components.Get<CharacterController>();
+		if ( cc is null ) return;
+
+		cc.Velocity = velocity;
 	}
 
 	private void UseLogic()

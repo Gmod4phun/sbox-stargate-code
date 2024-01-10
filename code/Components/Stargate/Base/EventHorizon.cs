@@ -479,13 +479,19 @@ namespace Sandbox.Components.Stargate
 			var entPosCenterDiff = ent.Transform.World.PointToLocal( ent.Transform.Position ) - ent.Transform.World.PointToLocal( center );
 			var otherPos = otherCenter + otherRot.Forward * entPosCenterDiff.x + otherRot.Right * entPosCenterDiff.y + otherRot.Up * entPosCenterDiff.z;
 
-			if ( ent.Tags.Has( "player" ) && ent.Components.Get<PlayerController>() is PlayerController ply )
+			if ( ent.Tags.Has( "player" ) && ent.Components.Get<PlayerController>() is PlayerController ply && ent.Components.Get<Collider>() is Collider col )
 			{
 				// TeleportScreenOverlay( To.Single( ply ) );
 				var DeltaAngleEH = otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
 
 				// SetPlayerViewAngles( To.Single( ply ), ply.EyeRotation.Angles() + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );
 				ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );
+
+				var localVelNormPlayer = Transform.World.NormalToLocal( ply.GetPlayerVelocity().Normal );
+				var otherVelNormPlayer = otherEH.Transform.Local.NormalToWorld( localVelNormPlayer.WithX( -localVelNormPlayer.x ).WithY( -localVelNormPlayer.y ) );
+
+				var newPlayerVel = otherVelNormPlayer * ply.GetPlayerVelocity().Length;
+				ply.SetPlayerVelocity( newPlayerVel );
 
 				// if ( Gate.ShowWormholeCinematic )
 				// {
@@ -776,12 +782,12 @@ namespace Sandbox.Components.Stargate
 			if ( !Stargate.IsAllowedForGateTeleport( other ) )
 				return;
 
-			// if ( other == CurrentTeleportingEntity && other is Player )
-			// {
-			// 	CurrentTeleportingEntity = null;
-			// 	Gate.OtherGate.EventHorizon.CurrentTeleportingEntity = null;
-			// 	return;
-			// }
+			if ( other == CurrentTeleportingEntity )
+			{
+				CurrentTeleportingEntity = null;
+				Gate.OtherGate.EventHorizon.CurrentTeleportingEntity = null;
+				return;
+			}
 
 			if ( !BufferFront.Concat( BufferBack ).Contains( other ) )
 				return;
