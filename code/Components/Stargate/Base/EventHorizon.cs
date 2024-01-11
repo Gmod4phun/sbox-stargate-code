@@ -476,6 +476,8 @@ namespace Sandbox.Components.Stargate
 
 			otherEH.PlayTeleportSound(); // other EH plays sound now
 
+			var isPlayer = ent.Tags.Has( "player" );
+
 			var body = ent.Components.Get<Rigidbody>();
 
 			var localVelNorm = Transform.World.NormalToLocal( body.IsValid() ? body.Velocity.Normal : Vector3.Zero );
@@ -488,7 +490,7 @@ namespace Sandbox.Components.Stargate
 			var otherTransformRotated = otherEH.Transform.World.RotateAround( otherEH.Transform.Position, Rotation.FromAxis( otherEH.Transform.Rotation.Up, 180 ) );
 
 			var localCenter = Transform.World.PointToLocal( center );
-			var otherCenter = otherTransformRotated.PointToWorld( localCenter.WithX( -localCenter.x ) );
+			var otherCenter = otherTransformRotated.PointToWorld( localCenter.WithX( -localCenter.x - (isPlayer ? 2 : 0) ) ); // move player forward 2 units (try to prevent triggering enter upon exit)
 
 			var localRot = Transform.World.RotationToLocal( ent.Transform.Rotation );
 			var otherRot = otherTransformRotated.RotationToWorld( localRot );
@@ -496,7 +498,7 @@ namespace Sandbox.Components.Stargate
 			var entPosCenterDiff = ent.Transform.World.PointToLocal( ent.Transform.Position ) - ent.Transform.World.PointToLocal( center );
 			var otherPos = otherCenter + otherRot.Forward * entPosCenterDiff.x + otherRot.Right * entPosCenterDiff.y + otherRot.Up * entPosCenterDiff.z;
 
-			if ( ent.Tags.Has( "player" ) && ent.Components.Get<PlayerController>() is PlayerController ply )
+			if ( isPlayer && ent.Components.Get<PlayerController>() is PlayerController ply )
 			{
 				// TeleportScreenOverlay( To.Single( ply ) );
 				var DeltaAngleEH = otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
