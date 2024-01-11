@@ -48,6 +48,7 @@
       "Id": "6ad70641-3c6c-4402-9c85-9a4969af4764",
       "Name": "Ground",
       "Scale": "20,20,1",
+      "Tags": "world",
       "Enabled": true,
       "Components": [
         {
@@ -388,166 +389,6 @@
           "StargateRotationOffset": "0,0,0"
         }
       ]
-    },
-    {
-      "Id": "dffd010d-1627-4a01-8b89-34f673daf5b6",
-      "Name": "Test Object",
-      "Position": "62.68187,234.1283,17.48023",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "Rigidbody",
-          "__enabled": true,
-          "AngularDamping": 5.6000004,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__version": 0,
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__version": 0,
-          "__type": "TouchingDebug",
-          "__enabled": false,
-          "Body": "dffd010d-1627-4a01-8b89-34f673daf5b6",
-          "Trigger": null
-        }
-      ]
-    },
-    {
-      "Id": "99ff6ab8-aae1-4fd5-8267-6f28cbb42540",
-      "Name": "Test Trigger",
-      "Position": "61.21304,273.7693,29.08295",
-      "Rotation": "0,0,0.707107,0.7071065",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "TriggerDebug",
-          "__enabled": true,
-          "IsTrigger": true,
-          "Model": "models/citizen_props/cardboardbox01.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "2368756b-66f8-4d91-a02a-48eaeebb7ae8",
-      "Name": "Object",
-      "Position": "133.4963,132.8618,41.131",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SkinnedModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
-          "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "ModelPhysics",
-          "__enabled": true,
-          "Locking": {},
-          "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
-          "Renderer": "2368756b-66f8-4d91-a02a-48eaeebb7ae8"
-        }
-      ]
-    },
-    {
-      "Id": "75a42780-ff22-41bf-8030-bcca82950106",
-      "Name": "ring_ancient_cover",
-      "Position": "-64,448,0.00001566158",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "36d41177-82f2-4132-8106-301b535c192d",
-      "Name": "ring_ancient (5)",
-      "Position": "-63.99993,448,38.97211",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__version": 0,
-          "__type": "Rigidbody",
-          "__enabled": true,
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
     }
   ],
   "SceneProperties": {
@@ -561,7 +402,5 @@
   },
   "Title": "minimal",
   "Description": "",
-  "__references": [
-    "facepunch.toilet_a"
-  ]
+  "__references": []
 }

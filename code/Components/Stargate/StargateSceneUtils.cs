@@ -1,3 +1,5 @@
+using Sandbox.Components.Stargate.Rings;
+
 namespace Sandbox.Components.Stargate
 {
 	public static class StargateSceneUtils
@@ -280,6 +282,23 @@ namespace Sandbox.Components.Stargate
 			phy.Model = dhd_component.DhdModel.Model;
 
 			dhd_component.CreateButtons();
+		}
+
+		// Rings
+		public static void SpawnRingtransporter( Vector3 pos, Rotation rot )
+		{
+			var transporter_object = new GameObject();
+			transporter_object.Name = "Ring Transporter";
+			transporter_object.Transform.Position = pos + Vector3.Up * 32;
+			transporter_object.Transform.Rotation = rot;
+			transporter_object.Tags.Add( "rings_no_teleport" );
+
+			var transporter_component = transporter_object.Components.Create<Ringtransporter>();
+			var renderer = transporter_component.Components.Create<ModelRenderer>();
+			renderer.Model = Model.Load( "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl" );
+
+			var collider = transporter_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
 		}
 	}
 }

@@ -80,7 +80,7 @@ public class PlayerController : Component, INetworkSerializable
 
 		_currentOutline = null;
 
-		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 60 ).Run();
+		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).Run();
 		if ( tr.Hit )
 		{
 			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
@@ -181,7 +181,7 @@ public class PlayerController : Component, INetworkSerializable
 	private static async void DestroyGameObjectDelayed( GameObject ball, float time )
 	{
 		await GameTask.DelaySeconds( time );
-		ball?.Destroy();
+		// ball?.Destroy();
 	}
 
 	protected override void OnUpdate()
@@ -243,7 +243,8 @@ public class PlayerController : Component, INetworkSerializable
 					}
 					else
 					{
-						StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
+						// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
+						StargateSceneUtils.SpawnRingtransporter( pos, rot );
 					}
 				}
 				else
