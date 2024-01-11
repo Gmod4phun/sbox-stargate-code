@@ -237,11 +237,28 @@ namespace Sandbox.Components.Stargate
 			if ( !this.IsValid() || !ent.IsValid() ) return false;
 
 			var body = ent.Components.Get<Rigidbody>();
-			if ( !body.IsValid() || !body.PhysicsBody.IsValid() ) return false;
+			var isPlayer = ent.Tags.Has( "player" );
 
-			var vel = body.Velocity;
-			var start = body.PhysicsBody.MassCenter - vel.Normal * 1024;
-			var end = body.PhysicsBody.MassCenter + vel.Normal * 1024;
+			if ( !isPlayer && (!body.IsValid() || !body.PhysicsBody.IsValid()) ) return false;
+
+
+			Vector3 vel;
+			Vector3 start;
+			Vector3 end;
+
+			if ( isPlayer )
+			{
+				var ply = ent.Components.Get<PlayerController>();
+				vel = ply.GetPlayerVelocity();
+				start = ply.Transform.Position - vel.Normal * 1024;
+				end = ply.Transform.Position + vel.Normal * 1024;
+			}
+			else
+			{
+				vel = body.Velocity;
+				start = body.PhysicsBody.MassCenter - vel.Normal * 1024;
+				end = body.PhysicsBody.MassCenter + vel.Normal * 1024;
+			}
 
 			return IsPointBehindEventHorizon( start ) && !IsPointBehindEventHorizon( end );
 		}
@@ -479,7 +496,7 @@ namespace Sandbox.Components.Stargate
 			var entPosCenterDiff = ent.Transform.World.PointToLocal( ent.Transform.Position ) - ent.Transform.World.PointToLocal( center );
 			var otherPos = otherCenter + otherRot.Forward * entPosCenterDiff.x + otherRot.Right * entPosCenterDiff.y + otherRot.Up * entPosCenterDiff.z;
 
-			if ( ent.Tags.Has( "player" ) && ent.Components.Get<PlayerController>() is PlayerController ply && ent.Components.Get<Collider>() is Collider col )
+			if ( ent.Tags.Has( "player" ) && ent.Components.Get<PlayerController>() is PlayerController ply )
 			{
 				// TeleportScreenOverlay( To.Single( ply ) );
 				var DeltaAngleEH = otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
@@ -553,17 +570,14 @@ namespace Sandbox.Components.Stargate
 			if ( !fromBack && Gate.IsIrisClosed() ) // prevent shit accidentaly touching EH from front if our iris is closed
 				return;
 
-			// Log.Info( "onentityentered" );
-
 			foreach ( var c in Stargate.GetSelfWithAllChildrenRecursive( ent ) )
 			{
+				(fromBack ? BufferBack : BufferFront).Add( c );
+				c.Tags.Add( fromBack ? StargateTags.InBufferBack : StargateTags.InBufferFront );
+
 				var mdl = c.Components.Get<Rigidbody>();
 				if ( !mdl.IsValid() )
 					continue;
-
-				(fromBack ? BufferBack : BufferFront).Add( mdl.GameObject );
-
-				mdl.Tags.Add( fromBack ? StargateTags.InBufferBack : StargateTags.InBufferFront );
 
 				SetModelClippingForEntity( ent, true, fromBack ? ClipPlaneBack : ClipPlaneFront );
 
@@ -572,8 +586,6 @@ namespace Sandbox.Components.Stargate
 				{
 					model.SceneObject.ColorTint = model.SceneObject.ColorTint.WithAlpha( model.SceneObject.ColorTint.a.Clamp( 0, 0.99f ) ); // hack to fix MC (doesnt fix it all the times, job for sbox devs)
 				}
-
-				// Log.Info( "do entered stuff" );
 			}
 		}
 
@@ -582,21 +594,16 @@ namespace Sandbox.Components.Stargate
 			if ( !ent.IsValid() )
 				return;
 
-			Log.Info( "onentityexited" );
-
 			foreach ( var c in Stargate.GetSelfWithAllChildrenRecursive( ent ) )
 			{
+				(fromBack ? BufferBack : BufferFront).Remove( c );
+				c.Tags.Remove( fromBack ? StargateTags.InBufferBack : StargateTags.InBufferFront );
+
 				var mdl = c.Components.Get<Rigidbody>();
 				if ( !mdl.IsValid() )
 					continue;
 
-				(fromBack ? BufferBack : BufferFront).Remove( mdl.GameObject );
-
-				mdl.Tags.Remove( fromBack ? StargateTags.InBufferBack : StargateTags.InBufferFront );
-
 				SetModelClippingForEntity( ent, false, fromBack ? ClipPlaneBack : ClipPlaneFront );
-
-				Log.Info( "do exited stuff" );
 			}
 
 			ent.Tags.Remove( StargateTags.ExittingFromEventHorizon );
@@ -731,8 +738,6 @@ namespace Sandbox.Components.Stargate
 
 		public bool ShouldTeleportInstantly( GameObject ent )
 		{
-			// if ( ent is Player ) return true;
-
 			if ( ent.Tags.Has( "player" ) ) return true;
 
 			return false;
@@ -762,8 +767,10 @@ namespace Sandbox.Components.Stargate
 			if ( ShouldTeleportInstantly( other ) ) // players, projectiles and whatnot should get teleported instantly on EH touch
 			{
 				TeleportLogic( other, () => TeleportEntity( other ), fromBack );
+				return;
 			}
-			else if ( other.Components.Get<Rigidbody>() is Rigidbody body ) // props get handled differently (aka model clipping)
+
+			if ( other.Components.Get<Rigidbody>() is Rigidbody body || other.Components.Get<PlayerController>() is PlayerController ply ) // props get handled differently (aka model clipping)
 			{
 				OnEntityEntered( other, fromBack );
 			}
