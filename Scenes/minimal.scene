@@ -125,6 +125,16 @@
           "__type": "FootstepEvent",
           "__enabled": true,
           "Source": "3a78266a-da75-475e-9317-94c71c3418fa"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,36",
+          "IsTrigger": false,
+          "Scale": "20,20,72",
+          "Static": false,
+          "Surface": null
         }
       ],
       "Children": [
@@ -300,25 +310,6 @@
               "Tint": "1,1,1,1"
             }
           ]
-        },
-        {
-          "Id": "4d4c6c50-8b44-4ccf-af33-21a334a94edf",
-          "Name": "Collider",
-          "Position": "0,0,36",
-          "Tags": "player_collider,player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "BoxCollider",
-              "__enabled": true,
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "20,20,72",
-              "Static": false,
-              "Surface": null
-            }
-          ]
         }
       ]
     },
@@ -355,14 +346,14 @@
           "Gates": [],
           "RampModel": "9b653830-8bb8-490d-86d8-41a8a1838db1",
           "SpawnOffset": "0,0,70",
-          "StargatePositionOffset": "0,0,95",
+          "StargatePositionOffset": "0,0,90.00005",
           "StargateRotationOffset": "0,0,0"
         }
       ]
     },
     {
       "Id": "c40b23f8-0c91-4a02-9202-ccae00155373",
-      "Name": "Brick Ramp (1)",
+      "Name": "SGC Ramp",
       "Position": "-258.1436,-438.5218,146.1867",
       "Enabled": true,
       "Components": [
@@ -393,7 +384,7 @@
           "Gates": [],
           "RampModel": "c40b23f8-0c91-4a02-9202-ccae00155373",
           "SpawnOffset": "0,0,70",
-          "StargatePositionOffset": "0,0,0",
+          "StargatePositionOffset": "0,0,10",
           "StargateRotationOffset": "0,0,0"
         }
       ]
@@ -488,6 +479,73 @@
           "Locking": {},
           "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
           "Renderer": "2368756b-66f8-4d91-a02a-48eaeebb7ae8"
+        }
+      ]
+    },
+    {
+      "Id": "75a42780-ff22-41bf-8030-bcca82950106",
+      "Name": "ring_ancient_cover",
+      "Position": "-64,448,0.00001566158",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "36d41177-82f2-4132-8106-301b535c192d",
+      "Name": "ring_ancient (5)",
+      "Position": "-63.99993,448,38.97211",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "Rigidbody",
+          "__enabled": true,
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     }
