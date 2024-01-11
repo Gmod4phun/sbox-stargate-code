@@ -248,7 +248,7 @@ namespace Sandbox.Components.Stargate
 
 		public bool IsCameraBehindEventHorizon()
 		{
-			if ( !this.IsValid() ) return false;
+			if ( !this.IsValid() || !Scene.Camera.IsValid() ) return false;
 
 			return (Scene.Camera.Transform.Position - Transform.Position).Dot( Transform.Rotation.Forward ) < 0;
 		}
