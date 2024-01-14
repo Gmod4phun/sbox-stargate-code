@@ -289,12 +289,12 @@ namespace Sandbox.Components.Stargate
 		{
 			var transporter_object = new GameObject();
 			transporter_object.Name = "Ring Transporter";
-			transporter_object.Transform.Position = pos + Vector3.Up * 32;
+			transporter_object.Transform.Position = pos;
 			transporter_object.Transform.Rotation = rot;
 			transporter_object.Tags.Add( "rings_no_teleport" );
 
 			var transporter_component = transporter_object.Components.Create<Ringtransporter>();
-			var renderer = transporter_component.Components.Create<ModelRenderer>();
+			var renderer = transporter_component.Components.Create<SkinnedModelRenderer>();
 			renderer.Model = Model.Load( "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl" );
 
 			var collider = transporter_component.Components.Create<ModelCollider>();

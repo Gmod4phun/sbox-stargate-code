@@ -128,9 +128,27 @@ public class PlayerController : Component, INetworkSerializable
 		var phys = ball_object.Components.Create<Rigidbody>();
 
 		phys.Velocity = dir.Normal * power;
-		// phys.Gravity = false;
+		phys.PhysicsBody.SpeculativeContactEnabled = true;
 
 		return ball_object;
+	}
+
+	public static GameObject SpawnProp( Vector3 pos, Rotation rot )
+	{
+		var prop_object = new GameObject();
+		prop_object.Name = "Prop";
+		prop_object.Transform.Position = pos;
+		prop_object.Transform.Rotation = rot;
+
+		var renderer = prop_object.Components.Create<ModelRenderer>();
+		renderer.Model = Cloud.Model( "facepunch.wooden_crate" );
+
+		var collider = prop_object.Components.Create<ModelCollider>();
+		collider.Model = renderer.Model;
+
+		prop_object.Components.Create<Rigidbody>();
+
+		return prop_object;
 	}
 
 	private GameObject ShootProp( Vector3 pos, Vector3 dir, float power )
@@ -181,7 +199,7 @@ public class PlayerController : Component, INetworkSerializable
 	private static async void DestroyGameObjectDelayed( GameObject ball, float time )
 	{
 		await GameTask.DelaySeconds( time );
-		// ball?.Destroy();
+		ball?.Destroy();
 	}
 
 	protected override void OnUpdate()
@@ -224,38 +242,35 @@ public class PlayerController : Component, INetworkSerializable
 
 			IsRunning = Input.Down( "Run" );
 
-			if ( Input.Pressed( "Attack1" ) || Input.Pressed( "Attack2" ) )
+			if ( Input.Pressed( "Attack1" ) )
+			{
+				var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 4000 );
+				ball.Transform.Scale *= 0.2f;
+			}
+
+			if ( Input.Pressed( "Attack2" ) )
 			{
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
 
-				if ( tr.Hit && Input.Down( "Run" ) )
+				if ( tr.Hit )
 				{
 					var pos = tr.HitPosition;
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
 					if ( !Input.Pressed( "Attack2" ) )
 					{
-						var gate = StargateSceneUtils.SpawnGatePegasus( pos, rot );
-						if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
-						{
-							Stargate.PutGateOnRamp( gate, ramp );
-						}
+						// var gate = StargateSceneUtils.SpawnGatePegasus( pos, rot );
+						// if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
+						// {
+						// 	Stargate.PutGateOnRamp( gate, ramp );
+						// }
+						// StargateSceneUtils.SpawnRingtransporter( pos, rot );
 					}
 					else
 					{
 						// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
-						StargateSceneUtils.SpawnRingtransporter( pos, rot );
+						SpawnProp( pos, rot );
 					}
-				}
-				else
-				{
-					var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 200 );
-					ball.Transform.Scale *= Input.Pressed( "Attack2" ) ? 0.25f : 2;
-
-					DestroyGameObjectDelayed( ball, 6 );
-
-					// var jumper = ShootPuddleJumper( Eye.Transform.Position + EyeAngles.Forward * 300, EyeAngles.Forward, 200 );
-					// DestroyGameObjectDelayed( jumper, 20 );
 				}
 
 			}

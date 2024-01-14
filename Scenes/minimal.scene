@@ -89,7 +89,7 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 72,
-          "IgnoreLayers": "solid,trigger,player",
+          "IgnoreLayers": "trigger,player",
           "Radius": 10,
           "StepHeight": 18
         },
@@ -317,7 +317,7 @@
     {
       "Id": "9b653830-8bb8-490d-86d8-41a8a1838db1",
       "Name": "Brick Ramp",
-      "Position": "-258.1436,5.069897,64",
+      "Position": "-256,512,64",
       "Enabled": true,
       "Components": [
         {
@@ -355,7 +355,7 @@
     {
       "Id": "c40b23f8-0c91-4a02-9202-ccae00155373",
       "Name": "SGC Ramp",
-      "Position": "-258.1436,-438.5218,146.1867",
+      "Position": "-256,-512,146",
       "Enabled": true,
       "Components": [
         {
@@ -387,6 +387,84 @@
           "SpawnOffset": "0,0,70",
           "StargatePositionOffset": "0,0,10",
           "StargateRotationOffset": "0,0,0"
+        }
+      ]
+    },
+    {
+      "Id": "c3181e88-7d70-4f71-adf1-80886827542a",
+      "Name": "Ring Transporter",
+      "Position": "-256,-192,0",
+      "Tags": "rings_no_teleport",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "Ringtransporter",
+          "__enabled": true,
+          "OtherTransporter": null,
+          "Collider": "c3181e88-7d70-4f71-adf1-80886827542a",
+          "Renderer": "c3181e88-7d70-4f71-adf1-80886827542a"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "SkinnedModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
+      "Name": "Ring Transporter (1)",
+      "Position": "-256,192,0",
+      "Tags": "rings_no_teleport",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "Ringtransporter",
+          "__enabled": true,
+          "OtherTransporter": null,
+          "Collider": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
+          "Renderer": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "SkinnedModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
         }
       ]
     }

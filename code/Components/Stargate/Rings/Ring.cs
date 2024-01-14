@@ -14,49 +14,79 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         public Ringtransporter Transporter => GameObject.Parent.Components.Get<Ringtransporter>();
 
-        private Vector3 _desiredPosition;
-        public bool IsInDesiredPosition => Transform.Position.AlmostEqual( _desiredPosition, 0.1f );
+        [Property]
+        public Transform DesiredPosition { get; set; }
 
-        private bool ShouldBreakAsyncLoop = false;
+        [Property]
+        public Transform RestingPosition { get; set; }
 
-        public void BreakAsyncLoop()
+        [Property]
+        public bool TryToReachDesiredPosition { get; set; }
+
+        [Property]
+        public bool TryToReachRestingPosition { get; set; }
+
+        private float _equalThreshold = 0.05f;
+        private float _desiredOffset = 0;
+
+        [Property, ReadOnly]
+        public bool IsInDesiredPosition => Transform.Position.AlmostEqual( DesiredPosition.Position, _equalThreshold ) && Transform.Rotation.Angles().AsVector3().AlmostEqual( DesiredPosition.Rotation.Angles().AsVector3(), _equalThreshold );
+
+        [Property, ReadOnly]
+        public bool IsInRestingPosition => Transform.Position.AlmostEqual( RestingPosition.Position, _equalThreshold ) && Transform.Rotation.Angles().AsVector3().AlmostEqual( RestingPosition.Rotation.Angles().AsVector3(), _equalThreshold );
+
+        protected override void OnUpdate()
         {
-            ShouldBreakAsyncLoop = true;
+            base.OnUpdate();
+
+            if ( Body.IsValid() )
+            {
+                DesiredPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position + Transporter.Transform.Rotation.Up * _desiredOffset );
+                RestingPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position - Transporter.Transform.Rotation.Up * 16 );
+
+                if ( Body.PhysicsBody.IsValid() )
+                {
+                    if ( TryToReachDesiredPosition )
+                    {
+                        Body.PhysicsBody.SmoothMove( DesiredPosition, 0.4f, Time.Delta );
+                    }
+                    else if ( TryToReachRestingPosition )
+                    {
+                        Body.PhysicsBody.SmoothMove( RestingPosition, 0.4f, Time.Delta );
+                    }
+                }
+            }
         }
 
-        public async Task MoveToPosition( Vector3 pos, float startDelay = 0, bool retracting = false )
+        public void SetDesiredUpOffset( float offset )
         {
-            _desiredPosition = pos;
+            _desiredOffset = offset;
+        }
 
+        public async void StartReachingDesired( float startDelay = 0 )
+        {
             if ( startDelay > 0 )
             {
                 await Task.DelaySeconds( startDelay );
             }
 
-            if ( !retracting )
-                Collider.Enabled = true;
+            TryToReachRestingPosition = false;
+            TryToReachDesiredPosition = true;
 
-            var t = global::Transform.Zero.WithScale( 1 );
-            Body.PhysicsBody.UseController = true;
+            Body.PhysicsBody.EnableSolidCollisions = true;
+        }
 
-            while ( !ShouldBreakAsyncLoop )
+        public async void StartReachingResting( float startDelay = 0 )
+        {
+            if ( startDelay > 0 )
             {
-                // Transform.Position = Transform.Position.LerpTo( _desiredPosition, Time.Delta * 5f );
-                // Transform.Rotation = Transporter.Transform.Rotation;
-
-                // Body.PhysicsBody.Move( t.WithPosition( _desiredPosition ).WithRotation( Transporter.Transform.Rotation ), Time.Delta * 0.5f );
-                Body.PhysicsBody.SmoothMove( t.WithPosition( _desiredPosition ).WithRotation( Transporter.Transform.Rotation ), Time.Delta, Time.Delta * 0.5f );
-
-                // disable ring collider when it nears the base (to avoid rings bumping to each other when retracting)
-                if ( retracting && Collider.Enabled && Transform.Position.DistanceSquared( _desiredPosition ) <= 256 )
-                {
-                    Collider.Enabled = false;
-                }
-
-                await Task.Frame();
+                await Task.DelaySeconds( startDelay );
             }
 
-            ShouldBreakAsyncLoop = false;
+            TryToReachRestingPosition = true;
+            TryToReachDesiredPosition = false;
+
+            Body.PhysicsBody.EnableSolidCollisions = false;
         }
     }
 }

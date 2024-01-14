@@ -3,7 +3,7 @@ namespace Sandbox.Components.Stargate.Rings
     public class Ringtransporter : Component, IUse
     {
         [Property]
-        public ModelRenderer Renderer => Components.Get<ModelRenderer>( true );
+        public SkinnedModelRenderer Renderer => Components.Get<SkinnedModelRenderer>( true );
 
         [Property]
         public ModelCollider Collider => Components.Get<ModelCollider>( true );
@@ -50,77 +50,64 @@ namespace Sandbox.Components.Stargate.Rings
 
             var collider = ring_object.Components.Create<ModelCollider>();
             collider.Model = renderer.Model;
-            collider.Enabled = false;
 
-            var physics = ring_object.Components.Create<Rigidbody>();
-            physics.Gravity = false;
+            var body = ring_object.Components.Create<Rigidbody>();
+            body.Gravity = false;
+            body.PhysicsBody.EnableSolidCollisions = false;
 
-            ring_object.Tags.Add( "rings_no_teleport", "ignoreworld" );
+            ring_object.Tags.Add( "rings_no_teleport", "ignoreworld", "ringsring" );
 
             return ring_component;
         }
 
-        private async Task DeployRings()
+        public bool AreAllRingsInDesiredPosition()
+        {
+            return DeployedRings.Where( ring => ring.IsInDesiredPosition ).Count() == DeployedRings.Count();
+        }
+
+        public bool AreAllRingsInRestingPosition()
+        {
+            return DeployedRings.Where( ring => ring.IsInRestingPosition ).Count() == DeployedRings.Count();
+        }
+
+        private void DeleteRings()
+        {
+            foreach ( var ring in DeployedRings )
+                ring.GameObject.Destroy();
+
+            DeployedRings.Clear();
+        }
+
+        private void DeployRings()
         {
             Sound.Play( "sounds/sbox_stargate/rings/ringtransporter.part1.sound", GameObject.Transform.Position );
 
             float[] delays = { 2, 2.5f, 3f, 3.4f, 3.7f };
             var tasks = new List<Task>();
 
-            for ( var i = 0; i < 1; i++ )
+            for ( var i = 0; i < 5; i++ )
             {
                 var ring = CreateRing( -4 );
                 DeployedRings.Add( ring );
 
-                tasks.Add( ring.MoveToPosition( Transform.Position + Transform.Rotation.Up * (80 - i * 16), delays[i] ) );
+                ring.TryToReachRestingPosition = true;
+                ring.SetDesiredUpOffset( 80 - i * 16 );
+                ring.StartReachingDesired( delays[i] );
             }
-
-            while ( DeployedRings.Where( ring => ring.IsInDesiredPosition ).Count() != DeployedRings.Count() )
-            {
-                await Task.Frame();
-            }
-
-            foreach ( var ring in DeployedRings )
-            {
-                ring.BreakAsyncLoop();
-            }
-
-            await Task.WhenAll( tasks );
-
-            Log.Info( "all rings deployed" );
         }
 
-        private async Task RetractRings()
+        private void RetractRings()
         {
             Sound.Play( "sounds/sbox_stargate/rings/ringtransporter.part2.sound", GameObject.Transform.Position );
 
             float[] delays = { 0, 0.3f, 0.6f, 0.9f, 1.2f };
             var tasks = new List<Task>();
 
-            for ( var i = 0; i < 1; i++ )
+            for ( var i = 0; i < 5; i++ )
             {
                 var ring = DeployedRings[4 - i];
-                tasks.Add( ring.MoveToPosition( Transform.Position - Transform.Rotation.Up * 16, delays[i] + 0.6f, true ) );
+                ring.StartReachingResting( delays[i] + 0.6f );
             }
-
-            while ( DeployedRings.Where( ring => ring.IsInDesiredPosition ).Count() != DeployedRings.Count() )
-            {
-                await Task.Frame();
-            }
-
-            foreach ( var ring in DeployedRings )
-            {
-                ring.BreakAsyncLoop();
-            }
-
-            await Task.WhenAll( tasks );
-
-            Log.Info( "all rings retracted" );
-
-            foreach ( var ring in DeployedRings )
-                ring.GameObject.Destroy();
-
-            DeployedRings.Clear();
         }
 
         private void TeleportBothSides()
@@ -183,20 +170,119 @@ namespace Sandbox.Components.Stargate.Rings
             Collider.Enabled = false;
             OtherTransporter.Collider.Enabled = false;
 
-            await Task.WhenAll( DeployRings(), OtherTransporter.DeployRings() );
+            Renderer.SceneModel.SetAnimParameter( "Open", true );
+            OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", true );
+
+            DeployRings();
+            OtherTransporter.DeployRings();
+
+            while ( !AreAllRingsInDesiredPosition() || !OtherTransporter.AreAllRingsInDesiredPosition() )
+            {
+                await Task.Frame();
+            }
+
+            // await Task.WhenAll( DeployRings(), OtherTransporter.DeployRings() );
+
+            DoParticleEffect();
+            OtherTransporter.DoParticleEffect();
+
+            DoLightEffect();
+            OtherTransporter.DoLightEffect();
+
+            await Task.DelaySeconds( 0.5f );
 
             TeleportBothSides();
 
-            await Task.WhenAll( RetractRings(), OtherTransporter.RetractRings() );
+            RetractRings();
+            OtherTransporter.RetractRings();
 
-            Busy = false;
-            OtherTransporter.Busy = false;
+            while ( !AreAllRingsInRestingPosition() || !OtherTransporter.AreAllRingsInRestingPosition() )
+            {
+                await Task.Frame();
+            }
+
+            DeleteRings();
+            OtherTransporter.DeleteRings();
+
+            // await Task.WhenAll( RetractRings(), OtherTransporter.RetractRings() );
+
+            Renderer.SceneModel.SetAnimParameter( "Open", false );
+            OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", false );
 
             Collider.Enabled = true;
             OtherTransporter.Collider.Enabled = true;
 
+            await Task.DelaySeconds( 1.5f );
+
+            Busy = false;
+            OtherTransporter.Busy = false;
+
             OtherTransporter.OtherTransporter = null;
             OtherTransporter = null;
+        }
+
+        private async void DoParticleEffect()
+        {
+            var particle = Components.Create<LegacyParticleSystem>();
+            particle.Particles = ParticleSystem.Load( "particles/sbox_stargate/rings_transporter.vpcf" );
+
+            var angles = Transform.Rotation.Angles();
+            particle.ControlPoints = new()
+            {
+                new ParticleControlPoint()
+                {
+                    StringCP = "1",
+                    Value = ParticleControlPoint.ControlPointValueInput.Vector3,
+                    VectorValue = Transform.Rotation.Up * 80
+                },
+                new ParticleControlPoint()
+                {
+                    StringCP = "2",
+                    Value = ParticleControlPoint.ControlPointValueInput.Vector3,
+                    VectorValue = new Vector3( angles.roll, angles.pitch, angles.yaw )
+                },
+                new ParticleControlPoint()
+                {
+                    StringCP = "3",
+                    Value = ParticleControlPoint.ControlPointValueInput.Vector3,
+                    VectorValue = new Vector3( Transform.Scale.x, 0, 0 )
+                }
+            };
+
+            await Task.DelaySeconds( 2f );
+
+            particle.Destroy();
+        }
+
+        private async void DoLightEffect()
+        {
+            var light_object = new GameObject();
+            light_object.Transform.World = Transform.World;
+            light_object.SetParent( GameObject );
+            light_object.Tags.Add( "rings_no_teleport" );
+
+            var light = light_object.Components.Create<PointLight>( false );
+            light.LightColor = Color.FromBytes( 255, 255, 255 ) * 10f;
+            light.Radius = 300;
+            light.Enabled = true;
+
+            var lightDistance = 15f;
+            var targetDistance = 85f;
+            var timeToReachTargetMs = 350;
+            var delayMs = 5;
+
+            var distanceToTravel = targetDistance - lightDistance;
+            var numSteps = timeToReachTargetMs / delayMs;
+            var lightDistanceStep = distanceToTravel / numSteps;
+
+            while ( lightDistance <= targetDistance )
+            {
+                light_object.Transform.World = Transform.World.WithPosition( Transform.Position + Transform.Rotation.Up * lightDistance );
+                lightDistance += lightDistanceStep;
+                await Task.Delay( delayMs );
+            }
+
+            light_object.Destroy();
         }
 
         public bool OnUse( GameObject user )
