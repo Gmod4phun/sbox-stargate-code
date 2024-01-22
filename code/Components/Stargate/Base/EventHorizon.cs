@@ -884,7 +884,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if ( !_eventHorizonVideoInitialized )
 			{
-				_eventHorizonVideo.Play( FileSystem.Mounted, "videos/event_horizon_loop.mp4" );
+				_eventHorizonVideo.Play( FileSystem.Mounted, "videos/event_horizon/event_horizon_loop.mp4" );
 				_eventHorizonVideo.Muted = true;
 				_eventHorizonVideo.Repeat = true;
 				_eventHorizonVideoInitialized = true;
