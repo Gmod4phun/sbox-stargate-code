@@ -8,9 +8,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "DirectionalLight",
-          "__enabled": true,
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
@@ -25,16 +23,12 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "SkyBox2D",
-          "__enabled": true,
           "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "EnvmapProbe",
-          "__enabled": true,
           "Bounds": {
             "Mins": "-1600,-1600,0",
             "Maxs": "1600,1600,1024"
@@ -54,9 +48,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
@@ -65,9 +57,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,-1",
           "IsTrigger": false,
           "Scale": "100,100,2",
@@ -85,9 +75,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "CharacterController",
-          "__enabled": true,
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 72,
@@ -96,20 +84,24 @@
           "StepHeight": 18
         },
         {
-          "__version": 0,
           "__type": "PlayerController",
-          "__enabled": true,
-          "AnimationHelper": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+          "AnimationHelper": {
+            "_type": "component",
+            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+            "component_type": "CitizenAnimationHelper"
+          },
           "Body": "3a78266a-da75-475e-9317-94c71c3418fa",
-          "Camera": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+          "Camera": {
+            "_type": "component",
+            "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+            "component_type": "CameraComponent"
+          },
           "Eye": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
           "FirstPerson": true,
           "Gravity": "0,0,800"
         },
         {
-          "__version": 0,
           "__type": "CitizenAnimationHelper",
-          "__enabled": true,
           "BodyWeight": 1,
           "EyeSource": null,
           "EyesWeight": 1,
@@ -121,18 +113,22 @@
           "IkRightHand": null,
           "LookAt": null,
           "LookAtEnabled": false,
-          "Target": "3a78266a-da75-475e-9317-94c71c3418fa"
+          "Target": {
+            "_type": "component",
+            "go": "3a78266a-da75-475e-9317-94c71c3418fa",
+            "component_type": "SkinnedModelRenderer"
+          }
         },
         {
-          "__version": 0,
           "__type": "FootstepEvent",
-          "__enabled": true,
-          "Source": "3a78266a-da75-475e-9317-94c71c3418fa"
+          "Source": {
+            "_type": "component",
+            "go": "3a78266a-da75-475e-9317-94c71c3418fa",
+            "component_type": "SkinnedModelRenderer"
+          }
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,36",
           "IsTrigger": false,
           "Scale": "20,20,72",
@@ -149,9 +145,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "BoneMergeTarget": null,
               "CreateBoneObjects": false,
@@ -171,9 +165,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "CameraComponent",
-              "__enabled": true,
               "BackgroundColor": "0.25292,0.26086,0.29703,1",
               "ClearFlags": "All",
               "FieldOfView": 90,
@@ -189,16 +181,12 @@
               "ZNear": 1
             },
             {
-              "__version": 0,
               "__type": "FilmGrain",
-              "__enabled": true,
               "Intensity": 0.03,
               "Response": 1
             },
             {
-              "__version": 0,
               "__type": "Vignette",
-              "__enabled": true,
               "Center": "0.5,0.5",
               "Color": "0,0,0,0.38",
               "Intensity": 1,
@@ -206,27 +194,19 @@
               "Smoothness": 1
             },
             {
-              "__version": 0,
               "__type": "ChromaticAberration",
-              "__enabled": true,
               "Offset": "4,6,4.049999",
               "Scale": 0.05
             },
             {
-              "__version": 0,
               "__type": "Sharpen",
-              "__enabled": true,
               "Scale": 0.25
             },
             {
-              "__version": 0,
-              "__type": "Highlight",
-              "__enabled": true
+              "__type": "Highlight"
             },
             {
-              "__version": 0,
               "__type": "Bloom",
-              "__enabled": true,
               "BloomColor": {
                 "color": [
                   {
@@ -265,9 +245,7 @@
               "Enabled": true,
               "Components": [
                 {
-                  "__version": 0,
                   "__type": "ModelRenderer",
-                  "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "MaterialGroup": null,
                   "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
@@ -276,10 +254,12 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__version": 0,
                   "__type": "Crosshair",
-                  "__enabled": true,
-                  "CrosshairModel": "2456f759-f56d-45fe-aeab-4e4b441a828d"
+                  "CrosshairModel": {
+                    "_type": "component",
+                    "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+                    "component_type": "ModelRenderer"
+                  }
                 }
               ]
             }
@@ -300,11 +280,13 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
               "BodyGroups": 341,
-              "BoneMergeTarget": "3a78266a-da75-475e-9317-94c71c3418fa",
+              "BoneMergeTarget": {
+                "_type": "component",
+                "go": "3a78266a-da75-475e-9317-94c71c3418fa",
+                "component_type": "SkinnedModelRenderer"
+              },
               "CreateBoneObjects": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -323,9 +305,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -334,20 +314,20 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
           "Static": true,
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "BrickRamp",
-          "__enabled": true,
           "Gates": [],
-          "RampModel": "9b653830-8bb8-490d-86d8-41a8a1838db1",
+          "RampModel": {
+            "_type": "component",
+            "go": "9b653830-8bb8-490d-86d8-41a8a1838db1",
+            "component_type": "ModelRenderer"
+          },
           "SpawnOffset": "0,0,70",
           "StargatePositionOffset": "0,0,90.00005",
           "StargateRotationOffset": "0,0,0"
@@ -361,9 +341,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -372,20 +350,20 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_stargate/ramps/sgc_ramp/sgc_ramp.vmdl",
           "Static": true,
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "BrickRamp",
-          "__enabled": true,
           "Gates": [],
-          "RampModel": "c40b23f8-0c91-4a02-9202-ccae00155373",
+          "RampModel": {
+            "_type": "component",
+            "go": "c40b23f8-0c91-4a02-9202-ccae00155373",
+            "component_type": "ModelRenderer"
+          },
           "SpawnOffset": "0,0,70",
           "StargatePositionOffset": "0,0,10",
           "StargateRotationOffset": "0,0,0"
@@ -400,26 +378,28 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "Ringtransporter",
-          "__enabled": true,
           "OtherTransporter": null,
-          "Collider": "c3181e88-7d70-4f71-adf1-80886827542a",
-          "Renderer": "c3181e88-7d70-4f71-adf1-80886827542a"
+          "Collider": {
+            "_type": "component",
+            "go": "c3181e88-7d70-4f71-adf1-80886827542a",
+            "component_type": "ModelCollider"
+          },
+          "Renderer": {
+            "_type": "component",
+            "go": "c3181e88-7d70-4f71-adf1-80886827542a",
+            "component_type": "SkinnedModelRenderer"
+          }
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
           "Static": false,
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "BoneMergeTarget": null,
           "CreateBoneObjects": false,
@@ -439,26 +419,28 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "Ringtransporter",
-          "__enabled": true,
           "OtherTransporter": null,
-          "Collider": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
-          "Renderer": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9"
+          "Collider": {
+            "_type": "component",
+            "go": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
+            "component_type": "ModelCollider"
+          },
+          "Renderer": {
+            "_type": "component",
+            "go": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
+            "component_type": "SkinnedModelRenderer"
+          }
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
           "Static": false,
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "BoneMergeTarget": null,
           "CreateBoneObjects": false,
