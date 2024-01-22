@@ -7,7 +7,7 @@ namespace Sandbox.Components.Stargate
 		public static readonly int[] ChevronAngles = { 40, 80, 120, 240, 280, 320, 0, 160, 200 };
 
 		// Gates
-		public static void SpawnGateMilkyWay( Vector3 pos, Rotation rot )
+		public static Stargate SpawnGateMilkyWay( Vector3 pos, Rotation rot )
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Milky Way)";
@@ -60,9 +60,11 @@ namespace Sandbox.Components.Stargate
 			var ring_component = ring.Components.Create<StargateRingMilkyWay>();
 			ring_component.RingModel = ring_component.Components.Create<ModelRenderer>();
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
+
+			return gate_component;
 		}
 
-		public static void SpawnGateMovie( Vector3 pos, Rotation rot )
+		public static Stargate SpawnGateMovie( Vector3 pos, Rotation rot )
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Movie)";
@@ -115,6 +117,8 @@ namespace Sandbox.Components.Stargate
 			var ring_component = ring.Components.Create<StargateRingMovie>();
 			ring_component.RingModel = ring_component.Components.Create<ModelRenderer>();
 			ring_component.RingModel.Model = Model.Load( "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl" );
+
+			return gate_component;
 		}
 
 		public static Stargate SpawnGatePegasus( Vector3 pos, Rotation rot )
@@ -190,7 +194,7 @@ namespace Sandbox.Components.Stargate
 			return gate_component;
 		}
 
-		public static void SpawnGateUniverse( Vector3 pos, Rotation rot )
+		public static Stargate SpawnGateUniverse( Vector3 pos, Rotation rot )
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Universe)";
@@ -231,6 +235,8 @@ namespace Sandbox.Components.Stargate
 			chev_component.ChevronModel = chev.Components.Create<SkinnedModelRenderer>();
 			chev_component.ChevronModel.Model = Model.Load( "models/sbox_stargate/gate_universe/chevrons_universe.vmdl" );
 			gate_component.Chevrons.Add( chev_component );
+
+			return gate_component;
 		}
 
 		// DHD's

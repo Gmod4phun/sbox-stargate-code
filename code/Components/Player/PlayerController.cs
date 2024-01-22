@@ -244,12 +244,8 @@ public class PlayerController : Component, INetworkSerializable
 
 			if ( Input.Pressed( "Attack1" ) )
 			{
-				var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 4000 );
-				ball.Transform.Scale *= 0.2f;
-			}
-
-			if ( Input.Pressed( "Attack2" ) )
-			{
+				// var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 4000 );
+				// ball.Transform.Scale *= 0.2f;
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
 
 				if ( tr.Hit )
@@ -257,22 +253,26 @@ public class PlayerController : Component, INetworkSerializable
 					var pos = tr.HitPosition;
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-					if ( !Input.Pressed( "Attack2" ) )
+					var gate = StargateSceneUtils.SpawnGateMilkyWay( pos, rot );
+					if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
 					{
-						// var gate = StargateSceneUtils.SpawnGatePegasus( pos, rot );
-						// if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
-						// {
-						// 	Stargate.PutGateOnRamp( gate, ramp );
-						// }
-						// StargateSceneUtils.SpawnRingtransporter( pos, rot );
-					}
-					else
-					{
-						// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
-						SpawnProp( pos, rot );
+						Stargate.PutGateOnRamp( gate, ramp );
 					}
 				}
+			}
 
+			if ( Input.Pressed( "Attack2" ) )
+			{
+				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
+				if ( tr.Hit )
+				{
+					var pos = tr.HitPosition;
+					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
+
+					StargateSceneUtils.SpawnDhdMilkyWay( pos, rot );
+					// var gate = StargateSceneUtils.SpawnGatePegasus( pos, rot );
+					// SpawnProp( pos, rot );
+				}
 			}
 
 			UseLogic();
