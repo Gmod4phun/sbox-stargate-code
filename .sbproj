@@ -26,7 +26,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/minimal.scene",
+    "StartupScene": "scenes/scenegate.scene",
     "ProjectTemplate": null,
     "Collision": {
       "Defaults": {
@@ -75,6 +75,8 @@
           "r": "Ignore"
         }
       ]
-    }
+    },
+    "MapStartupScene": null,
+    "LaunchMode": "Normal"
   }
 }
