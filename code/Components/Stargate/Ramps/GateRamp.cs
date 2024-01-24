@@ -1,17 +1,20 @@
 namespace Sandbox.Components.Stargate.Ramps
 {
-    public abstract class GateRamp : Component
+    public class GateRamp : Component, Component.ExecuteInEditor
     {
-        public virtual int GateSlots => 1;
+        [Property]
+        public virtual int GateSlots { get; protected set; } = 1;
 
         [Property]
-        public List<Stargate> Gates { get; protected set; }
+        public List<Stargate> Gates { get; protected set; } = new();
 
         [Property]
         public Vector3 StargatePositionOffset { get; protected set; }
 
         [Property]
         public Angles StargateRotationOffset { get; protected set; }
+
+        public IEnumerable<ParticleEmitter> SmokeEmitters => GameObject.Components.GetAll<ParticleEmitter>( FindMode.InChildren );
 
         public bool HasFreeSlot() => Gates.Count < GateSlots;
 
@@ -38,6 +41,19 @@ namespace Sandbox.Components.Stargate.Ramps
             }
 
             return closestRamp;
+        }
+
+        protected override void OnUpdate()
+        {
+            base.OnUpdate();
+
+            var hasActiveGate = Gates.Any( gate => gate.IsValid() && !gate.Idle );
+
+            foreach ( var emitter in SmokeEmitters )
+            {
+                if ( emitter.IsValid() )
+                    emitter.Enabled = hasActiveGate;
+            }
         }
     }
 }
