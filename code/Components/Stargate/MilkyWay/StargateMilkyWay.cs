@@ -21,7 +21,7 @@
 			GateAddress = GenerateGateAddress( GateGroup );
 		}
 
-		public override float RingRotationStepSize => AcceleratedDialup ? 1.2f : 0.35f;
+		public override float RingRotationStepSize => AcceleratedDialup ? 1f : 0.2f;
 
 		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
 
