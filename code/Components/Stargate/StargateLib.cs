@@ -199,12 +199,12 @@ namespace Sandbox.Components.Stargate
             }
             else // classic 7 chevron connection - must have same group, unless both are universe, they always use 7 symbols
             {
-                target = FindByAddressOnly( address );
+                target = FindByAddressAndGroup( address, gate.GateGroup );
                 if ( !IsUniverseGate( gate ) && !IsUniverseGate( target ) ) // both arent universe gates
                 {
                     if ( target.IsValid() && target.GateGroup != gate.GateGroup ) target = null; // if found gate does not have same group, its not valid
                 }
-                else if ( (IsUniverseGate( gate ) != IsUniverseGate( target )) ) // only one of them is universe gate and the other is not
+                else if ( IsUniverseGate( gate ) != IsUniverseGate( target ) ) // only one of them is universe gate and the other is not
                 {
                     target = null;
                 }
@@ -232,12 +232,14 @@ namespace Sandbox.Components.Stargate
         /// Returns the gate if it finds it by a specified address.
         /// </summary>
         /// <param name="address">The gate address represented in the string.</param>
+        /// /// <param name="group">The gate group represented in the string.</param>
         /// <returns>A gate that matches the parameter.</returns>
-        public static Stargate FindByAddressOnly( string address )
+        public static Stargate FindByAddressAndGroup( string address, string group )
         {
             foreach ( Stargate gate in GameManager.ActiveScene.GetAllComponents<Stargate>() )
             {
-                if ( gate.GateAddress + PointOfOrigin == address ) return gate;
+                if ( gate.GateAddress + PointOfOrigin == address && gate.GateGroup == group )
+                    return gate;
             }
             return null;
         }
