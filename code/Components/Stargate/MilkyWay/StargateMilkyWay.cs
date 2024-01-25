@@ -152,21 +152,27 @@
 			}
 		}
 
-		public void ChevronActivate( Chevron chev, float delay = 0, bool turnon = false )
+		public void ChevronActivate( Chevron chev, float delay = 0, bool turnon = false, bool noSound = false )
 		{
 			if ( chev.IsValid() )
 			{
-				Stargate.PlaySound( chev, GetSound( "chevron_open" ), delay );
-				if ( turnon ) chev.TurnOn( delay );
+				if ( !noSound )
+					Stargate.PlaySound( chev, GetSound( "chevron_open" ), delay );
+
+				if ( turnon )
+					chev.TurnOn( delay );
 			}
 		}
 
-		public void ChevronDeactivate( Chevron chev, float delay = 0, bool turnoff = false )
+		public void ChevronDeactivate( Chevron chev, float delay = 0, bool turnoff = false, bool noSound = false )
 		{
 			if ( chev.IsValid() )
 			{
-				Stargate.PlaySound( chev, GetSound( "chevron_close" ), delay );
-				if ( turnoff ) chev.TurnOff( delay );
+				if ( !noSound )
+					Stargate.PlaySound( chev, GetSound( "chevron_close" ), delay );
+
+				if ( turnoff )
+					chev.TurnOff( delay );
 			}
 		}
 
@@ -221,7 +227,7 @@
 					OtherGate.OtherGate = this;
 				}
 
-				Ring.SpinUp(); // start rotating ring
+				_ = Ring.SpinUp(); // start rotating ring
 
 				var addrLen = address.Length;
 
@@ -608,7 +614,7 @@
 						var chev = GetChevronBasedOnAddressLength( i, numChevs );
 						if ( chev.IsValid() )
 						{
-							ChevronActivate( chev, 0, ChevronLightup );
+							ChevronActivate( chev, 0, ChevronLightup, noSound: i < numChevs );
 						}
 					}
 				}
@@ -729,7 +735,7 @@
 				for ( var i = 1; i <= numChevs; i++ )
 				{
 					var chev = GetChevronBasedOnAddressLength( i, numChevs );
-					ChevronActivate( chev, 0, ChevronLightup );
+					ChevronActivate( chev, 0, ChevronLightup, noSound: i < numChevs );
 				}
 
 				if ( MovieDialingType ) ChevronAnimLockAll( numChevs, 0, ChevronLightup );

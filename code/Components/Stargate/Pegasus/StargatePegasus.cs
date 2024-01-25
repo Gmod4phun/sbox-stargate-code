@@ -111,11 +111,11 @@
 
 		// CHEVRON ANIMS & SOUNDS
 
-		public void ChevronActivate( Chevron chev, float delay = 0, bool turnon = true, bool chevLock = false, bool longer = false, bool shorter = false, bool nosound = false )
+		public void ChevronActivate( Chevron chev, float delay = 0, bool turnon = true, bool chevLock = false, bool longer = false, bool shorter = false, bool noSound = false )
 		{
 			if ( chev.IsValid() )
 			{
-				if ( !nosound ) Stargate.PlaySound( chev, GetSound( "chevron" + (chevLock ? "_lock" : "") + (Inbound ? "_inbound" : "") + (longer ? "_longer" : "") + (shorter ? "_shorter" : "") ), delay );
+				if ( !noSound ) Stargate.PlaySound( chev, GetSound( "chevron" + (chevLock ? "_lock" : "") + (Inbound ? "_inbound" : "") + (longer ? "_longer" : "") + (shorter ? "_shorter" : "") ), delay );
 				if ( turnon ) chev.TurnOn( delay );
 			}
 		}
@@ -371,7 +371,7 @@
 				for ( var i = 1; i <= address.Length; i++ )
 				{
 					var chev = GetChevronBasedOnAddressLength( i, address.Length );
-					ChevronActivate( chev, nosound: true );
+					ChevronActivate( chev, noSound: true );
 
 					var symbolNumer = Ring.GetSymbolNumFromChevron( GetChevronOrderOnGateFromChevronIndex( Chevrons.IndexOf( chev ) + 1 ) );
 					Ring.SetSymbolState( symbolNumer, symbolNumer, true );
@@ -408,7 +408,7 @@
 				var otherGate = FindDestinationGateByDialingAddress( this, address );
 				if ( otherGate.IsValid() && otherGate != this && otherGate.IsStargateReadyForInboundDHD() )
 				{
-					otherGate.BeginInboundSlow( address.Length );
+					otherGate.BeginInboundDHD( address.Length );
 				}
 				else
 				{
@@ -444,7 +444,7 @@
 				for ( var i = 1; i <= numChevs; i++ )
 				{
 					var chev = GetChevronBasedOnAddressLength( i, numChevs );
-					ChevronActivate( chev, 0, true, true );
+					ChevronActivate( chev, 0, true, true, noSound: i < numChevs );
 					Ring.DoSymbolsInboundInstant();
 				}
 			}
