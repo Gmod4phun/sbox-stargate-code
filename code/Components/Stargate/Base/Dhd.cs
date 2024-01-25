@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate
 {
-    public class Dhd : Component
+    public class Dhd : Component, Component.ExecuteInEditor
     {
         public struct DhdData
         {
@@ -16,7 +16,7 @@ namespace Sandbox.Components.Stargate
             public string DialPressSound { get; }
         }
 
-        public SkinnedModelRenderer DhdModel;
+        public SkinnedModelRenderer DhdModel => Components.Get<SkinnedModelRenderer>();
 
         public List<string> PressedActions = new();
 
@@ -25,13 +25,10 @@ namespace Sandbox.Components.Stargate
 
         public DhdData Data { get; set; } = new( "default", "dhd.milkyway.press", "dhd.press_dial" );
 
-        [Net]
+        [Property]
         public Stargate Gate { get; set; }
 
-        public Dictionary<string, DhdButton> Buttons { get; protected set; } = new();
-
-        [Net]
-        public IList<int> ButtonSkins { get; set; } = new List<int> { 0, 0 };
+        public IEnumerable<DhdButton> Buttons => Components.GetAll<DhdButton>( FindMode.InChildren );
 
         protected virtual string ButtonSymbols => "ABCDEFGHI0123456789STUVWXYZ@JKLMNO#PQR";
 
@@ -200,17 +197,14 @@ namespace Sandbox.Components.Stargate
             button_object.SetParent( GameObject );
 
             var button_component = button_object.Components.Create<DhdButton>();
-            button_component.ButtonModel = button_object.Components.Create<SkinnedModelRenderer>();
-            button_component.ButtonModel.Model = Model.Load( model );
-            button_component.ButtonModel.MaterialGroup = Data.ButtonMaterialGroup;
-            button_component.ButtonCollider = button_object.Components.Create<ModelCollider>();
-            button_component.ButtonCollider.Model = button_component.ButtonModel.Model;
+            var renderer = button_object.Components.Create<SkinnedModelRenderer>();
+            renderer.Model = Model.Load( model );
+            renderer.MaterialGroup = Data.ButtonMaterialGroup;
+            var collider = button_object.Components.Create<ModelCollider>();
+            collider.Model = renderer.Model;
 
             button_component.Action = action;
-            button_component.DHD = this;
             button_component.Disabled = disabled;
-
-            Buttons.Add( action, button_component );
         }
 
         public virtual void CreateButtons() // visible models of buttons that turn on/off and animate
@@ -229,7 +223,7 @@ namespace Sandbox.Components.Stargate
 
         public DhdButton GetButtonByAction( string action )
         {
-            return Buttons.GetValueOrDefault( action );
+            return Buttons.FirstOrDefault( b => b.Action == action );
         }
 
         public void PlayButtonPressAnim( DhdButton button )
@@ -261,12 +255,12 @@ namespace Sandbox.Components.Stargate
 
         public void EnableAllButtons()
         {
-            foreach ( DhdButton b in Buttons.Values ) SetButtonState( b, true );
+            foreach ( DhdButton b in Buttons ) SetButtonState( b, true );
         }
 
         public void DisableAllButtons()
         {
-            foreach ( DhdButton b in Buttons.Values ) SetButtonState( b, false );
+            foreach ( DhdButton b in Buttons ) SetButtonState( b, false );
         }
 
         // BUTTON PRESS LOGIC

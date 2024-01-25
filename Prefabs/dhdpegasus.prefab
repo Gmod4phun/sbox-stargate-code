@@ -1,0 +1,1442 @@
+{
+  "RootObject": {
+    "Id": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+    "Name": "Dhd (Pegasus)",
+    "Position": "-34.24686,67.24061,-3",
+    "Rotation": "-0.02758357,0.1275783,0.209518,0.9690538",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "DhdPegasus"
+      },
+      {
+        "__type": "SkinnedModelRenderer",
+        "BodyGroups": 3,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": "peg",
+        "MaterialOverride": null,
+        "Model": "models/sbox_stargate/dhd/dhd.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/sbox_stargate/dhd/dhd.vmdl",
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "88d2da2d-f95d-40fa-8018-2bdcd403003f",
+        "Name": "Button (A)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "A",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_1.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_1.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "26d1c572-d77f-45be-87f8-ceb6cf3fed00",
+        "Name": "Button (B)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "B",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_2.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_2.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "73e869cf-aee8-4aba-a118-698c50f65b30",
+        "Name": "Button (C)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "C",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_3.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_3.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7b9eed2d-1039-48cb-b109-6995faa7cd50",
+        "Name": "Button (D)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "D",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_4.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_4.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "4bfde6aa-f1c5-4ce3-8435-d004a315a5c7",
+        "Name": "Button (E)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "E",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_5.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_5.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "18641e07-5fd4-43ae-b4bc-b90943526804",
+        "Name": "Button (F)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "F",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_6.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_6.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ea8adc33-b3b2-41a2-bf1d-84daca2f6573",
+        "Name": "Button (G)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "G",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_7.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_7.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "8bd04806-f2d2-4ad6-b170-6de8e252d9d9",
+        "Name": "Button (H)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "H",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_8.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_8.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7272cd72-93c8-454a-b726-a3283eef743f",
+        "Name": "Button (I)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "I",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_9.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_9.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "1518cdbb-0458-4524-8b30-41d73c9b37a5",
+        "Name": "Button (0)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "0",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_10.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_10.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "f50356ed-8ea4-424d-ac5c-f382cf6230f5",
+        "Name": "Button (1)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "1",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_11.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_11.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "c7e4a423-0345-42c7-a556-ca81e7fd1f8a",
+        "Name": "Button (2)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "2",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_12.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_12.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "9c580fbf-9389-41a2-b54d-0269814a4152",
+        "Name": "Button (3)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "3",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_13.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_13.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "bb3ee115-38ee-4573-9be1-cfd71e3a959e",
+        "Name": "Button (4)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "4",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_14.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_14.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "bb2563a6-13a8-43a7-89cf-917823f8be9c",
+        "Name": "Button (5)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "5",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_15.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_15.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "0576ad71-091a-4959-a58a-de6ab953be87",
+        "Name": "Button (6)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "6",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_16.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_16.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "8d31d585-595a-4806-b3ff-b0591e687ea0",
+        "Name": "Button (7)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "7",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_17.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_17.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "649a1b99-36c0-458c-92e0-09a787386623",
+        "Name": "Button (8)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "8",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_18.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_18.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "b86e9052-02df-4bd2-8524-047562d2daae",
+        "Name": "Button (9)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "9",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_19.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_19.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ac675935-a708-4dc9-aebb-b5c4a0b14f6d",
+        "Name": "Button (S)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "S",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_20.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_20.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "c76d635d-50b7-43e7-a2dd-a71251add46d",
+        "Name": "Button (T)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "T",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_21.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_21.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "03b9769f-19a7-4a72-8a99-db4debc40345",
+        "Name": "Button (U)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "U",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_22.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_22.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "c7490fb1-ee28-4611-a4d0-fbc3e7661b4e",
+        "Name": "Button (V)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "V",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_23.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_23.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "afd44d08-5c23-40de-a052-e45089dbb84e",
+        "Name": "Button (W)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "W",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_24.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_24.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "5cb5253d-1847-4adb-8f4b-694e3425def2",
+        "Name": "Button (X)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "X",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_25.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_25.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "94770ba0-5709-451a-a520-bde55cad11f3",
+        "Name": "Button (Y)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "Y",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_26.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_26.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "55bc1f60-8f58-4574-801c-74e49b9cbfe2",
+        "Name": "Button (Z)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "Z",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_27.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_27.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "41c2c799-373c-42b0-81ef-22a7c108fb39",
+        "Name": "Button (@)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "@",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_28.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_28.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "0573bef5-05cf-4ec9-89b8-5bd86e01e612",
+        "Name": "Button (J)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "J",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_29.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_29.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "45ff8af0-d867-4bb7-af05-7fbe6ad2c669",
+        "Name": "Button (K)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "K",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_30.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_30.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "08e93f14-f0ce-43bc-a74b-ad87c14b85aa",
+        "Name": "Button (L)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "L",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_31.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_31.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "17b38bd1-9822-4ce2-b2b3-c59b7dd59ca7",
+        "Name": "Button (M)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "M",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_32.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_32.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ac0513f3-6027-42b0-ac90-d5c22d3ba131",
+        "Name": "Button (N)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "N",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_33.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_33.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "8075ffa4-9465-4e58-b6bc-bb00aacc0da4",
+        "Name": "Button (O)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "O",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_34.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_34.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "c4132580-5744-45cb-a4ee-65249332631e",
+        "Name": "Button (#)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "#",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_35.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_35.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "4ec0a882-8f8a-4ac6-9fde-f27d06ddf53b",
+        "Name": "Button (P)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "P",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_36.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_36.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "93b02c3d-bfa8-4afc-b9c4-257e79bf469a",
+        "Name": "Button (Q)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "Q",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_37.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_37.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "0cabe599-38da-4248-9ee6-65dacde94ac2",
+        "Name": "Button (R)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "R",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_38.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_38.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ad4f6c2e-e7ba-4687-98ad-df4a5384cceb",
+        "Name": "Button (DIAL)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "DIAL",
+            "DHD": {
+              "_type": "component",
+              "go": "57bcc43d-c1a2-46a9-9ee2-c1802ff654c7",
+              "component_type": "DhdPegasus"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "peg",
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_39.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd/buttons/dhd_button_39.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

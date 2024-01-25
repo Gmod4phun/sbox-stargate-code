@@ -267,10 +267,10 @@ namespace Sandbox.Components.Stargate
 			dhd_object.Transform.Rotation = rot.RotateAroundAxis( Vector3.Right, -15 );
 
 			var dhd_component = dhd_object.Components.Create<DhdMilkyWay>();
-			dhd_component.DhdModel = dhd_component.Components.Create<SkinnedModelRenderer>();
-			dhd_component.DhdModel.Model = Model.Load( "models/sbox_stargate/dhd/dhd.vmdl" );
-			var phy = dhd_component.Components.Create<ModelCollider>();
-			phy.Model = dhd_component.DhdModel.Model;
+			var renderer = dhd_component.Components.Create<SkinnedModelRenderer>();
+			renderer.Model = Model.Load( "models/sbox_stargate/dhd/dhd.vmdl" );
+			var collider = dhd_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
 
 			dhd_component.CreateButtons();
 		}
@@ -283,11 +283,11 @@ namespace Sandbox.Components.Stargate
 			dhd_object.Transform.Rotation = rot.RotateAroundAxis( Vector3.Right, -15 );
 
 			var dhd_component = dhd_object.Components.Create<DhdPegasus>();
-			dhd_component.DhdModel = dhd_component.Components.Create<SkinnedModelRenderer>();
-			dhd_component.DhdModel.Model = Model.Load( "models/sbox_stargate/dhd/dhd.vmdl" );
-			dhd_component.DhdModel.MaterialGroup = "peg";
-			var phy = dhd_component.Components.Create<ModelCollider>();
-			phy.Model = dhd_component.DhdModel.Model;
+			var renderer = dhd_component.Components.Create<SkinnedModelRenderer>();
+			renderer.Model = Model.Load( "models/sbox_stargate/dhd/dhd.vmdl" );
+			renderer.MaterialGroup = "peg";
+			var collider = dhd_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
 
 			dhd_component.CreateButtons();
 		}
@@ -300,13 +300,31 @@ namespace Sandbox.Components.Stargate
 			dhd_object.Transform.Rotation = rot;
 
 			var dhd_component = dhd_object.Components.Create<DhdAtlantis>();
-			dhd_component.DhdModel = dhd_component.Components.Create<SkinnedModelRenderer>( false );
-			dhd_component.DhdModel.Model = Model.Load( "models/sbox_stargate/dhd_atlantis/dhd_atlantis.vmdl" );
-			dhd_component.DhdModel.Enabled = true;
-			var phy = dhd_component.Components.Create<ModelCollider>();
-			phy.Model = dhd_component.DhdModel.Model;
+			var renderer = dhd_component.Components.Create<SkinnedModelRenderer>( false );
+			renderer.Model = Model.Load( "models/sbox_stargate/dhd_atlantis/dhd_atlantis.vmdl" );
+			renderer.Enabled = true;
+			var collider = dhd_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
 
 			dhd_component.CreateButtons();
+		}
+
+		// DHD Prefabs
+		public static Dhd SpawnDhdPrefab( Vector3 pos, Rotation rot, string prefabPath )
+		{
+			try
+			{
+				var go = SceneUtility.GetPrefabScene( ResourceLibrary.Get<PrefabFile>( prefabPath ) ).Clone( pos, rot );
+				go.BreakFromPrefab();
+
+				var dhd = go.Components.Get<Dhd>();
+				return dhd;
+			}
+			catch
+			{
+				Log.Warning( "Problem creating dhd from prefab" );
+				return null;
+			}
 		}
 
 		// Rings
@@ -324,6 +342,43 @@ namespace Sandbox.Components.Stargate
 
 			var collider = transporter_component.Components.Create<ModelCollider>();
 			collider.Model = renderer.Model;
+		}
+
+		// Ring Panels
+		public static void SpawnRingPanelGoauld( Vector3 pos, Rotation rot )
+		{
+			var panel_object = new GameObject();
+			panel_object.Name = "Ring Panel (Goauld)";
+			panel_object.Transform.Position = pos;
+			panel_object.Transform.Rotation = rot;
+			panel_object.Tags.Add( "rings_no_teleport" );
+
+			var panel_component = panel_object.Components.Create<RingPanelGoauld>();
+			var renderer = panel_component.Components.Create<SkinnedModelRenderer>();
+			renderer.Model = Model.Load( "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld.vmdl" );
+
+			var collider = panel_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
+
+			panel_component.CreateButtons();
+		}
+
+		public static void SpawnRingPanelAncient( Vector3 pos, Rotation rot )
+		{
+			var panel_object = new GameObject();
+			panel_object.Name = "Ring Panel (Ancient)";
+			panel_object.Transform.Position = pos;
+			panel_object.Transform.Rotation = rot;
+			panel_object.Tags.Add( "rings_no_teleport" );
+
+			var panel_component = panel_object.Components.Create<RingPanelAncient>();
+			var renderer = panel_component.Components.Create<SkinnedModelRenderer>();
+			renderer.Model = Model.Load( "models/sbox_stargate/rings_panel/ancient/ring_panel_ancient.vmdl" );
+
+			var collider = panel_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
+
+			panel_component.CreateButtons();
 		}
 	}
 }

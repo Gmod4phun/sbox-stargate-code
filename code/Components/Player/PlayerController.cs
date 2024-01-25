@@ -269,7 +269,10 @@ public class PlayerController : Component, INetworkSerializable
 					var pos = tr.HitPosition;
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-					StargateSceneUtils.SpawnDhdMilkyWay( pos, rot );
+					// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
+					StargateSceneUtils.SpawnRingPanelGoauld( pos, rot );
+					// StargateSceneUtils.SpawnDhdPrefab( pos, rot, "prefabs/dhdmilkyway.prefab" );
+					// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
 				}
 			}
 

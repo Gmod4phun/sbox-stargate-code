@@ -1,23 +1,21 @@
 namespace Sandbox.Components.Stargate
 {
-    public class DhdButton : Component, IUse
+    public class DhdButton : Component, Component.ExecuteInEditor, IUse
     {
-        public ModelRenderer ButtonModel;
-        public ModelCollider ButtonCollider;
+        public ModelRenderer ButtonModel => Components.Get<ModelRenderer>();
+        public ModelCollider ButtonCollider => Components.Get<ModelCollider>();
 
-        private float _glowScale = 0;
+        [Property]
+        public Dhd DHD => GameObject.Components.Get<Dhd>( FindMode.InParent );
 
-        [Net]
-        public Dhd DHD { get; set; } = null;
-
-        [Net]
+        [Property]
         public string Action { get; set; } = "";
 
-        [Net]
-        public bool On { get; set; } = false;
-
-        [Net]
+        [Property]
         public bool Disabled { get; set; } = false;
+
+        public bool On { get; set; } = false;
+        private float _glowScale = 0;
 
         public virtual bool OnUse( GameObject user )
         {
@@ -56,7 +54,7 @@ namespace Sandbox.Components.Stargate
 
         public void DrawSymbol()
         {
-            if ( ButtonCollider.IsValid() )
+            if ( Scene.Camera.IsValid() && ButtonCollider.IsValid() )
             {
                 var pos = ButtonCollider.KeyframeBody.MassCenter;
                 if ( pos.DistanceSquared( Scene.Camera.Transform.Position ) < 4096 )

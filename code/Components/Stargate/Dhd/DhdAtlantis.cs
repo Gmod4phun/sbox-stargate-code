@@ -24,28 +24,25 @@ namespace Sandbox.Components.Stargate
             }
 
             var button_component = button_object.Components.Create<DhdButton>();
-            button_component.ButtonModel = button_object.Components.Create<Superglyph>();
-            button_component.ButtonModel.Model = Model.Load( model );
-            button_component.ButtonModel.SetBodyGroup( "glyph", glyphBodyGroup );
+            var renderer = button_object.Components.Create<Superglyph>();
+            renderer.Model = Model.Load( model );
+            renderer.SetBodyGroup( "glyph", glyphBodyGroup );
 
-            (button_component.ButtonModel as Superglyph).GlyphEnabled = false;
-            (button_component.ButtonModel as Superglyph).BrightnessTimeDelta = 12;
+            renderer.GlyphEnabled = false;
+            renderer.BrightnessTimeDelta = 12;
 
             if ( action.Length == 1 )
             {
-                (button_component.ButtonModel as Superglyph).GlyphNumber = StargateRingPegasus.RingSymbols.IndexOf( action );
+                renderer.GlyphNumber = StargateRingPegasus.RingSymbols.IndexOf( action );
             }
 
-            button_component.ButtonCollider = button_object.Components.Create<ModelCollider>();
-            button_component.ButtonCollider.Model = button_component.ButtonModel.Model;
-            button_component.ButtonModel.Enabled = false;
-            button_component.ButtonModel.Enabled = true;
+            var collider = button_object.Components.Create<ModelCollider>();
+            collider.Model = renderer.Model;
+            renderer.Enabled = false;
+            renderer.Enabled = true;
 
             button_component.Action = action;
-            button_component.DHD = this;
             button_component.Disabled = disabled;
-
-            Buttons.Add( action, button_component );
         }
 
         public override void CreateButtons() // visible models of buttons that turn on/off and animate

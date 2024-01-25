@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate.Rings
 {
-    public class Ringtransporter : Component, IUse
+    public class Ringtransporter : Component
     {
         [Property]
         public SkinnedModelRenderer Renderer => Components.Get<SkinnedModelRenderer>( true );
@@ -10,6 +10,9 @@ namespace Sandbox.Components.Stargate.Rings
 
         [Property]
         public Ringtransporter OtherTransporter;
+
+        [Property]
+        public string Address { get; set; }
 
         private List<Ring> DeployedRings = new();
 
@@ -152,16 +155,15 @@ namespace Sandbox.Components.Stargate.Rings
             }
         }
 
-        public async void DoRings()
+        private async void DoRings( Ringtransporter other )
         {
             if ( Busy )
                 return;
 
-            var closestRings = FindClosest();
-            if ( !closestRings.IsValid() || closestRings.Busy )
+            if ( !other.IsValid() || other.Busy )
                 return;
 
-            OtherTransporter = closestRings;
+            OtherTransporter = other;
             OtherTransporter.OtherTransporter = this;
 
             Busy = true;
@@ -285,16 +287,18 @@ namespace Sandbox.Components.Stargate.Rings
             light_object.Destroy();
         }
 
-        public bool OnUse( GameObject user )
+        public async void DialRings( Ringtransporter other, float delay = 0 )
         {
-            DoRings();
+            if ( Busy )
+                return;
 
-            return false;
-        }
+            if ( !other.IsValid() || other.Busy )
+                return;
 
-        public bool IsUsable( GameObject user )
-        {
-            return true;
+            if ( delay > 0 )
+                await Task.DelaySeconds( delay );
+
+            DoRings( other );
         }
     }
 }

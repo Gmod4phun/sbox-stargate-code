@@ -1,0 +1,213 @@
+{
+  "RootObject": {
+    "Id": "e2895ed9-0246-4760-abf9-08d99f7c21b6",
+    "Name": "ringpanelgoauld",
+    "Tags": "rings_no_teleport",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "RingPanelGoauld",
+        "ComposedAddress": "",
+        "Rings": null
+      },
+      {
+        "__type": "SkinnedModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld.vmdl",
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "a13baa1f-9f02-4615-81d5-9b0c8d0b221a",
+        "Name": "GameObject",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "1"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_1.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_1.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "19af09b8-e9ce-49e7-ad03-b8b7323795ee",
+        "Name": "GameObject",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "2"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_2.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_2.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "36c61f91-b2d3-4a82-9f2e-f7c63a52ebca",
+        "Name": "GameObject",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "3"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_3.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_3.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "58519679-a0b9-4147-986f-b96bd257b83a",
+        "Name": "GameObject",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "4"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_4.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_4.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "cd414c2e-325f-4845-abe2-38831f78fda3",
+        "Name": "GameObject",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "5"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_5.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_5.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "59e7b1e1-2b05-4cf8-a451-e6012d945982",
+        "Name": "GameObject",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "DIAL"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_6.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld_button_6.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

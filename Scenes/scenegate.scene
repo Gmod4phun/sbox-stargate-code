@@ -69,7 +69,7 @@
     {
       "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
       "Name": "Citizen",
-      "Position": "199.9999,59.68357,127.448",
+      "Position": "0,0,16",
       "Rotation": "0.0000000504776,0.00000002146427,1,-0.0000006397578",
       "Tags": "player",
       "Enabled": true,
@@ -182,6 +182,7 @@
             },
             {
               "__type": "FilmGrain",
+              "__enabled": false,
               "Intensity": 0.03,
               "Response": 1
             },
@@ -298,7 +299,7 @@
     {
       "Id": "9b653830-8bb8-490d-86d8-41a8a1838db1",
       "Name": "Brick Ramp",
-      "Position": "-256,512,64",
+      "Position": "-512,512,64",
       "Enabled": true,
       "Components": [
         {
@@ -1572,9 +1573,163 @@
       ]
     },
     {
+      "Id": "ece95783-75b0-4aed-916e-7bd6a740ce1c",
+      "Name": "Universe Ramp",
+      "Position": "-512,0,51.5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp.vmdl",
+          "Static": true,
+          "Surface": null
+        },
+        {
+          "__type": "GateRamp",
+          "GateSlots": 1,
+          "StargatePositionOffset": "0,0,90",
+          "StargateRotationOffset": "0,0,0"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "9fe7f306-be4c-4d70-a020-e4b475918eb7",
+          "Name": "Stargate (Universe)",
+          "Position": "0,0,90",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "StargateUniverse",
+              "AutoClose": false,
+              "CanOpenMenu": true,
+              "EventHorizon": null,
+              "EventHorizonMaterialGroup": "universe",
+              "GateAddress": "123456",
+              "GateGlyphType": "UNIVERSE",
+              "GateGroup": "U@",
+              "GateLocal": false,
+              "GateName": "",
+              "GatePrivate": false,
+              "Iris": null,
+              "OtherGate": null,
+              "Ramp": {
+                "_type": "component",
+                "go": "ece95783-75b0-4aed-916e-7bd6a740ce1c",
+                "component_type": "GateRamp"
+              },
+              "ShowWormholeCinematic": false
+            }
+          ],
+          "Children": [
+            {
+              "Id": "f5374d8f-7eb7-46cf-a1f5-0648446cb7f9",
+              "Name": "Ring",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "StargateRingUniverse",
+                  "_ringState": "STOPPED",
+                  "CurRingSymbol": " ",
+                  "RingAngle": 0,
+                  "RingModel": {
+                    "_type": "component",
+                    "go": "f5374d8f-7eb7-46cf-a1f5-0648446cb7f9",
+                    "component_type": "ModelRenderer"
+                  },
+                  "RingSymbols": " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3"
+                },
+                {
+                  "__type": "ModelRenderer",
+                  "BodyGroups": 1,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "BodyGroups": 22906492245,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "BodyGroups": 22906492245,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "155d7ad6-3ff9-4c48-a44f-9582c9a97bde",
+                  "Name": "Chevrons",
+                  "Position": "0,0,0",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Chevron",
+                      "ChevronLight": null,
+                      "ChevronModel": {
+                        "_type": "component",
+                        "go": "155d7ad6-3ff9-4c48-a44f-9582c9a97bde",
+                        "component_type": "SkinnedModelRenderer"
+                      },
+                      "Number": 1,
+                      "On": false,
+                      "Open": false
+                    },
+                    {
+                      "__type": "SkinnedModelRenderer",
+                      "BodyGroups": 18446744073709551615,
+                      "BoneMergeTarget": null,
+                      "CreateBoneObjects": false,
+                      "MaterialGroup": null,
+                      "MaterialOverride": null,
+                      "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "Id": "c40b23f8-0c91-4a02-9202-ccae00155373",
       "Name": "SGC Ramp",
-      "Position": "-256,-512,146",
+      "Position": "-512,-512,146",
       "Enabled": true,
       "Components": [
         {
@@ -2797,13 +2952,14 @@
     {
       "Id": "c3181e88-7d70-4f71-adf1-80886827542a",
       "Name": "Ring Transporter",
-      "Position": "-256,-192,0",
+      "Position": "340,-192,0",
       "Tags": "rings_no_teleport",
       "Enabled": true,
       "Components": [
         {
           "__type": "Ringtransporter",
           "OtherTransporter": null,
+          "Address": "123",
           "Collider": {
             "_type": "component",
             "go": "c3181e88-7d70-4f71-adf1-80886827542a",
@@ -2832,19 +2988,41 @@
           "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "aa218998-c37e-419f-b1de-6a323707bc42",
+          "Name": "Decal",
+          "Position": "0,0,1",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DecalRenderer",
+              "CutoffAngle": 10,
+              "CutoffAngleSoftness": 5,
+              "Material": "materials/decals/default.vmat",
+              "Mod2XBlending": false,
+              "Size": "120,120,2",
+              "TintColor": "1,1,1,1",
+              "TriPlanar": false
+            }
+          ]
         }
       ]
     },
     {
       "Id": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
       "Name": "Ring Transporter",
-      "Position": "-256,192,0",
+      "Position": "340,192,0",
       "Tags": "rings_no_teleport",
       "Enabled": true,
       "Components": [
         {
           "__type": "Ringtransporter",
           "OtherTransporter": null,
+          "Address": "1525",
           "Collider": {
             "_type": "component",
             "go": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
@@ -2874,7 +3052,67 @@
           "RenderType": "On",
           "Tint": "1,1,1,1"
         }
+      ],
+      "Children": [
+        {
+          "Id": "83f71275-1505-4f3c-8137-15fcb49168e4",
+          "Name": "Decal",
+          "Position": "0,0,1",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DecalRenderer",
+              "CutoffAngle": 10,
+              "CutoffAngleSoftness": 5,
+              "Material": "materials/decals/default.vmat",
+              "Mod2XBlending": false,
+              "Size": "120,120,2",
+              "TintColor": "1,1,1,1",
+              "TriPlanar": false
+            }
+          ]
+        }
       ]
+    },
+    {
+      "Id": "58bf1323-b94f-48e5-bacd-a14b86580c8e",
+      "Name": "Dhd (Atlantis)",
+      "Position": "-128,0,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/dhdatlantis.prefab"
+    },
+    {
+      "Id": "12b9e705-00cb-49fd-be30-0c0e85ec61d7",
+      "Name": "Dhd (Milky Way)",
+      "Position": "-128,-360,-5",
+      "Rotation": "0,0.1305262,0,0.9914449",
+      "Enabled": true,
+      "__Prefab": "prefabs/dhdmilkyway.prefab"
+    },
+    {
+      "Id": "48275147-eb5f-44a9-bc54-9c350e0f4eb3",
+      "Name": "Dhd (Pegasus)",
+      "Position": "-128,360,-5",
+      "Rotation": "0,0.1305262,0,0.9914449",
+      "Enabled": true,
+      "__Prefab": "prefabs/dhdpegasus.prefab"
+    },
+    {
+      "Id": "8876044e-22e2-475c-bf9c-a8a8c9eff4e1",
+      "Name": "Ring Panel (Ancient)",
+      "Position": "250,-192,48",
+      "Tags": "rings_no_teleport",
+      "Enabled": true,
+      "__Prefab": "prefabs/ringpanelancient.prefab"
+    },
+    {
+      "Id": "e2895ed9-0246-4760-abf9-08d99f7c21b6",
+      "Name": "Ring Panel (Goauld)",
+      "Position": "250,192,48",
+      "Tags": "rings_no_teleport",
+      "Enabled": true,
+      "__Prefab": "prefabs/ringpanelgoauld.prefab"
     }
   ],
   "SceneProperties": {

@@ -1,0 +1,1690 @@
+{
+  "RootObject": {
+    "Id": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+    "Name": "Dhd (Atlantis)",
+    "Position": "-78.11546,160.3425,0",
+    "Rotation": "0,0,0.02443327,0.9997014",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "DhdAtlantis"
+      },
+      {
+        "__type": "SkinnedModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/sbox_stargate/dhd_atlantis/dhd_atlantis.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/sbox_stargate/dhd_atlantis/dhd_atlantis.vmdl",
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "e4eb6772-198f-4ead-a8b1-4651da6440d4",
+        "Name": "Button (A)",
+        "Position": "-7.965,-5.02,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "A",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 35,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "87e08841-ee68-45c2-821a-434644905203",
+        "Name": "Button (B)",
+        "Position": "-7.965,-1.42,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "B",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 7,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "79b6eab6-8592-4508-91e9-35920e93d6a5",
+        "Name": "Button (C)",
+        "Position": "-7.965,2.18,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "C",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 34,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "58055b84-a978-445a-b027-8502821c64a5",
+        "Name": "Button (D)",
+        "Position": "-7.965,5.78,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "D",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 33,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "707dd71b-5637-45fc-a93e-c719299b10ca",
+        "Name": "Button (E)",
+        "Position": "-7.965,9.38,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "E",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 1,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7f55ca8f-4ead-4263-9f06-1cd394078a9a",
+        "Name": "Button (F)",
+        "Position": "-2.365,-8.619999,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "F",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 26,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "2efabe07-a568-4c06-8b6b-d5a409dfd2d2",
+        "Name": "Button (G)",
+        "Position": "-2.365,-5.02,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "G",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 15,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "1ba8d782-ebec-42e0-8a9e-788765e4869d",
+        "Name": "Button (H)",
+        "Position": "-2.365,-1.42,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "H",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 30,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a294685c-b561-4e4a-81de-cdebd2bce272",
+        "Name": "Button (I)",
+        "Position": "-2.365,2.18,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "I",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 10,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "02dfceb2-43f4-4809-9c9f-3ec401a8ee9a",
+        "Name": "Button (J)",
+        "Position": "-2.365,5.78,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "J",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 28,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "6022786d-32e2-4bc6-abf6-83d92a112cab",
+        "Name": "Button (K)",
+        "Position": "-2.365,9.38,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "K",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 19,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "45f9c93f-d5af-425a-a91a-ff07cca19b05",
+        "Name": "Button (L)",
+        "Position": "-2.365,12.98,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "L",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 3,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "202f1423-c4e1-4e98-bc99-3e71b1284b3d",
+        "Name": "Button (M)",
+        "Position": "3.235,-12.22,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "M",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 4,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "87bbe8ff-f222-4dc4-a430-a23e9892c9ac",
+        "Name": "Button (N)",
+        "Position": "3.235,-8.619999,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "N",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 22,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "0dbae888-7de4-4487-a5f2-73d42af3fe7d",
+        "Name": "Button (O)",
+        "Position": "3.235,-5.02,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "O",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 9,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "bd91568c-6c97-4914-8287-d04634e9bcd5",
+        "Name": "Button (P)",
+        "Position": "3.235,-1.42,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "P",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 32,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "47aa2bf0-e32e-4369-b438-acb583fa99c2",
+        "Name": "Button (Q)",
+        "Position": "3.235,5.78,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "Q",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 5,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a9a0ce6a-8f24-4d34-9743-12d0e174ceac",
+        "Name": "Button (R)",
+        "Position": "3.235,9.38,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "R",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 23,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "4f0d2611-34f9-4ae5-92e3-bc0072c0ba07",
+        "Name": "Button (S)",
+        "Position": "3.235,12.98,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "S",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 29,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "b3cb2e5d-ef6f-401f-8029-25d0be62daae",
+        "Name": "Button (T)",
+        "Position": "3.235,16.58,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "T",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 12,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ed467e39-6e3d-425e-80f4-dd652b31af53",
+        "Name": "Button (1)",
+        "Position": "8.835,-12.22,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "1",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 27,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a4c09c43-3652-4fe1-a412-07797483ba8d",
+        "Name": "Button (2)",
+        "Position": "8.835,-8.619999,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "2",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 2,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a4a74100-6bd6-4f1a-baed-4b9ba6b3bab9",
+        "Name": "Button (3)",
+        "Position": "8.835,-5.02,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "3",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 8,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "11de91b9-452e-42a0-b201-ae55c7f337fe",
+        "Name": "Button (4)",
+        "Position": "8.835,-1.42,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "4",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": -1,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ba621c96-793b-4cf3-af71-08b2f1cec38f",
+        "Name": "Button (5)",
+        "Position": "8.835,2.18,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "5",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": -1,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "bf20b801-d8fb-4dc4-8c79-e6f5da368dad",
+        "Name": "Button (6)",
+        "Position": "8.835,5.78,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "6",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 17,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "d70d6a0b-8baa-46ec-96f2-96060a24046e",
+        "Name": "Button (7)",
+        "Position": "8.835,9.38,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "7",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 18,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "871fea79-c845-4ecc-9b94-21be24387bbb",
+        "Name": "Button (8)",
+        "Position": "8.835,12.98,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "8",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 13,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "f07c63e3-f778-4083-afc2-66ee105ebc30",
+        "Name": "Button (9)",
+        "Position": "8.835,16.58,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "9",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 16,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ad03b331-3744-48cd-8b7e-e30f0a6caa91",
+        "Name": "Button (U)",
+        "Position": "14.435,-8.619999,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "U",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 14,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "3b53979d-d561-4b69-83c1-fa1040d22dac",
+        "Name": "Button (V)",
+        "Position": "14.435,-5.02,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "V",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 20,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "43471cd0-aee5-42e1-ad50-ae2680453bbe",
+        "Name": "Button (W)",
+        "Position": "14.435,-1.42,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "W",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 11,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "515b00e1-6cbd-45c7-9e80-7b0d6ea7ec05",
+        "Name": "Button (0)",
+        "Position": "14.435,2.18,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "0",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 24,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "3112ac3e-bed7-4b6d-843a-5b182b918928",
+        "Name": "Button (X)",
+        "Position": "14.435,5.78,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "X",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 31,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "39ee8262-91dc-4939-98af-19eb1a360a69",
+        "Name": "Button (Y)",
+        "Position": "14.435,9.38,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "Y",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 11,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 6,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7d81a149-1f6c-4983-a714-0a7561b4af4f",
+        "Name": "Button (Z)",
+        "Position": "14.435,12.98,37.45",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "Z",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 13,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 21,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "ffd511c0-249f-4792-af10-f71b7cd03ebb",
+        "Name": "Button (DIAL)",
+        "Position": "3.235,2.18,37.45",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "DIAL",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 9,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 0,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_dynamic.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "23055862-9514-4821-b041-4a8b65c17405",
+        "Name": "Button (@)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "@",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 18446744073709551615,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 0,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_1.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_1.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "feb0fe6f-ba37-4d24-b235-86192699f9da",
+        "Name": "Button (*)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "*",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 18446744073709551615,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": -1,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_2.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_2.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "dd557a94-7591-44df-ab2f-7e02871f7cf2",
+        "Name": "Button (IRIS)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "IRIS",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 18446744073709551615,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 0,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_3.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_3.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "14a57ff2-89ac-44d0-8fb9-19c84af91dd3",
+        "Name": "Button (INSTANT)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "INSTANT",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 18446744073709551615,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 0,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_4.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_4.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "25d4c27a-db77-4214-a9a2-9d3318ee28a3",
+        "Name": "Button (FAST)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "FAST",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 18446744073709551615,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 0,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_5.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_5.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "f422fcb5-5b46-40f8-ac54-08c56f25f32d",
+        "Name": "Button (SLOW)",
+        "Position": "0,0,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "DhdButton",
+            "Action": "SLOW",
+            "DHD": {
+              "_type": "component",
+              "go": "7ebf99a8-2765-4703-8ec4-f7bd34a3091e",
+              "component_type": "DhdAtlantis"
+            },
+            "Disabled": false
+          },
+          {
+            "__type": "Superglyph",
+            "BodyGroups": 18446744073709551615,
+            "BrightnessTimeDelta": 12,
+            "GlyphEnabled": false,
+            "GlyphNumber": 0,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_6.vmdl",
+            "PositionOnRing": 0,
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/dhd_atlantis/buttons/dhd_atlantis_button_extra_6.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
