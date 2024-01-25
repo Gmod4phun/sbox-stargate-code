@@ -253,7 +253,7 @@ public class PlayerController : Component, INetworkSerializable
 					var pos = tr.HitPosition;
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-					var gate = StargateSceneUtils.SpawnGateMilkyWay( pos, rot );
+					var gate = StargateSceneUtils.SpawnGatePrefab( pos, rot, "prefabs/stargatemilkyway.prefab" );
 					if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
 					{
 						Stargate.PutGateOnRamp( gate, ramp );
@@ -270,8 +270,6 @@ public class PlayerController : Component, INetworkSerializable
 					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
 					StargateSceneUtils.SpawnDhdMilkyWay( pos, rot );
-					// var gate = StargateSceneUtils.SpawnGatePegasus( pos, rot );
-					// SpawnProp( pos, rot );
 				}
 			}
 

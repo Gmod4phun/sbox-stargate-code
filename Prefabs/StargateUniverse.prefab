@@ -1,0 +1,121 @@
+{
+  "RootObject": {
+    "Id": "0b1f80c3-23d0-41db-acc6-5b5647510c53",
+    "Name": "stargateuniverse",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "StargateUniverse",
+        "AutoClose": false,
+        "CanOpenMenu": true,
+        "EventHorizon": null,
+        "EventHorizonMaterialGroup": "universe",
+        "GateAddress": "",
+        "GateGlyphType": "UNIVERSE",
+        "GateGroup": "U@",
+        "GateLocal": false,
+        "GateName": "",
+        "GatePrivate": false,
+        "Iris": null,
+        "OtherGate": null,
+        "Ramp": null,
+        "ShowWormholeCinematic": false
+      }
+    ],
+    "Children": [
+      {
+        "Id": "20aef137-b98c-4761-b3ec-8af00d990336",
+        "Name": "Ring",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "StargateRingUniverse",
+            "_ringState": "STOPPED",
+            "CurRingSymbol": " ",
+            "RingAngle": 0,
+            "RingModel": {
+              "_type": "component",
+              "go": "20aef137-b98c-4761-b3ec-8af00d990336",
+              "component_type": "ModelRenderer"
+            },
+            "RingSymbols": " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3"
+          },
+          {
+            "__type": "ModelRenderer",
+            "BodyGroups": 1,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 22906492245,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 22906492245,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": [
+          {
+            "Id": "387f1482-9739-482e-abde-2aff3536e3d1",
+            "Name": "Chevrons",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Chevron",
+                "ChevronLight": null,
+                "ChevronModel": {
+                  "_type": "component",
+                  "go": "387f1482-9739-482e-abde-2aff3536e3d1",
+                  "component_type": "SkinnedModelRenderer"
+                },
+                "Number": 1,
+                "On": false,
+                "Open": false
+              },
+              {
+                "__type": "SkinnedModelRenderer",
+                "BodyGroups": 18446744073709551615,
+                "BoneMergeTarget": null,
+                "CreateBoneObjects": false,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

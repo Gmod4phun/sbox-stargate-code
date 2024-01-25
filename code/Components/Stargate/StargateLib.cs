@@ -492,8 +492,6 @@ namespace Sandbox.Components.Stargate
                     gate.Transform.Position = ramp.Transform.World.PointToWorld( ramp.StargatePositionOffset );
                     gate.Transform.Rotation = ramp.Transform.World.RotationToWorld( ramp.StargateRotationOffset.ToRotation() );
                     gate.GameObject.SetParent( ramp.GameObject );
-                    gate.Ramp = ramp;
-                    ramp.Gates.Add( gate );
                     return true;
                 }
             }

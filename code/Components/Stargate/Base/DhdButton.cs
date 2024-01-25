@@ -50,7 +50,7 @@ namespace Sandbox.Components.Stargate
                     glyph.GlyphEnabled = On;
                 }
 
-                // DrawSymbol();
+                DrawSymbol();
             }
         }
 

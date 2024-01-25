@@ -9,8 +9,17 @@
 			RingSymbols = " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3";
 		}
 
-		[Property]
-		public List<SkinnedModelRenderer> SymbolParts { get; set; } = new();
+		public SkinnedModelRenderer SymbolsPart1 => GameObject
+			.Components
+			.GetAll<SkinnedModelRenderer>()
+			.Where( c => c.Model.Name == "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl" )
+			.FirstOrDefault();
+
+		public SkinnedModelRenderer SymbolsPart2 => GameObject
+			.Components
+			.GetAll<SkinnedModelRenderer>()
+			.Where( c => c.Model.Name == "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl" )
+			.FirstOrDefault();
 
 		public override float GetSymbolAngle( char sym )
 		{
@@ -39,7 +48,7 @@
 
 			num = num.UnsignedMod( 36 );
 			var isPart1 = num < 18;
-			SymbolParts[isPart1 ? 0 : 1].SetBodyGroup( (isPart1 ? num : num - 18), state ? 1 : 0 );
+			(isPart1 ? SymbolsPart1 : SymbolsPart2).SetBodyGroup( (isPart1 ? num : num - 18), state ? 1 : 0 );
 		}
 
 		public void SetSymbolState( char sym, bool state )
@@ -65,10 +74,8 @@
 		{
 			StartSoundInstance?.Stop();
 
-			foreach ( var part in SymbolParts )
-			{
-				part.Destroy();
-			}
+			SymbolsPart1?.Destroy();
+			SymbolsPart2?.Destroy();
 
 			base.OnDestroy();
 		}

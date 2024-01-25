@@ -216,11 +216,11 @@ namespace Sandbox.Components.Stargate
 
 			var sym_part1 = ring.Components.Create<SkinnedModelRenderer>();
 			sym_part1.Model = Model.Load( "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl" );
-			ring_component.SymbolParts.Add( sym_part1 );
+			// ring_component.SymbolParts.Add( sym_part1 );
 
 			var sym_part2 = ring.Components.Create<SkinnedModelRenderer>();
 			sym_part2.Model = Model.Load( "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl" );
-			ring_component.SymbolParts.Add( sym_part2 );
+			// ring_component.SymbolParts.Add( sym_part2 );
 
 			ring_component.ResetSymbols();
 
@@ -237,6 +237,25 @@ namespace Sandbox.Components.Stargate
 			gate_component.Chevrons.Add( chev_component );
 
 			return gate_component;
+		}
+
+		// Gate Prefabs
+		public static Stargate SpawnGatePrefab( Vector3 pos, Rotation rot, string prefabPath )
+		{
+			try
+			{
+				var go = SceneUtility.GetPrefabScene( ResourceLibrary.Get<PrefabFile>( prefabPath ) ).Clone( pos + Vector3.Up * 90, rot );
+				go.BreakFromPrefab();
+
+				var gate = go.Components.Get<Stargate>();
+				gate.GateAddress = Stargate.GenerateGateAddress( gate.GateGroup );
+				return gate;
+			}
+			catch
+			{
+				Log.Warning( "Problem creating stargate from prefab" );
+				return null;
+			}
 		}
 
 		// DHD's

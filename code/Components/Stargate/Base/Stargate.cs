@@ -43,7 +43,7 @@ namespace Sandbox.Components.Stargate
 		public StargateIris Iris => GameObject.Components.Get<StargateIris>( FindMode.EnabledInSelfAndDescendants );
 
 		[Property]
-		public GateRamp Ramp { get; protected set; }
+		public GateRamp Ramp => GameObject.Components.Get<GateRamp>( FindMode.InParent );
 
 		[Property]
 		public Stargate OtherGate { get; set; } = null;

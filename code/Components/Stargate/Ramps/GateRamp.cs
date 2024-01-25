@@ -5,8 +5,7 @@ namespace Sandbox.Components.Stargate.Ramps
         [Property]
         public virtual int GateSlots { get; protected set; } = 1;
 
-        [Property]
-        public List<Stargate> Gates { get; protected set; } = new();
+        public IEnumerable<Stargate> Gates => GameObject.Components.GetAll<Stargate>( FindMode.InChildren );
 
         [Property]
         public Vector3 StargatePositionOffset { get; protected set; }
@@ -16,7 +15,7 @@ namespace Sandbox.Components.Stargate.Ramps
 
         public IEnumerable<ParticleEmitter> SmokeEmitters => GameObject.Components.GetAll<ParticleEmitter>( FindMode.InChildren );
 
-        public bool HasFreeSlot() => Gates.Count < GateSlots;
+        public bool HasFreeSlot() => Gates.Count() < GateSlots;
 
         public static GateRamp GetClosest( Vector3 position, float max = -1f )
         {

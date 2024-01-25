@@ -10,7 +10,7 @@ namespace Sandbox.Components.Stargate
         public static string RingSymbols => "@E2LMQYB3OIWT8UG967KVZNR0#F1JSHXPDCA";
 
         [Property]
-        public List<Superglyph> Glyphs { get; set; } = new();
+        public IEnumerable<Superglyph> Glyphs => GameObject.Components.GetAll<Superglyph>( FindMode.InSelf );
 
         [Property]
         public ModelRenderer RingModel { get; set; }
@@ -29,7 +29,6 @@ namespace Sandbox.Components.Stargate
                 glyph.Model = Model.Load( "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl" );
                 glyph.PositionOnRing = i;
                 glyph.GlyphNumber = i;
-                Glyphs.Add( glyph );
             }
         }
 
@@ -54,7 +53,7 @@ namespace Sandbox.Components.Stargate
             }
 
             num = (num + 1).UnsignedMod( 36 );
-            var glyph = Glyphs[num];
+            var glyph = Glyphs.First( g => g.PositionOnRing == num );
             glyph.GlyphNumber = displayedGlyph;
             glyph.GlyphEnabled = state;
         }
