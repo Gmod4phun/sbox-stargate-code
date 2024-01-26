@@ -501,6 +501,11 @@ namespace Sandbox.Components.Stargate
 			if ( isPlayer && ent.Components.Get<PlayerController>() is PlayerController ply )
 			{
 				// TeleportScreenOverlay( To.Single( ply ) );
+				if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
+				{
+					overlay.ActivateFor( 0.05f );
+				}
+
 				var DeltaAngleEH = otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
 
 				// SetPlayerViewAngles( To.Single( ply ), ply.EyeRotation.Angles() + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );

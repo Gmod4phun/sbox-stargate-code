@@ -1,0 +1,31 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+    <div class="overlay" @ref="panelRef">
+    </div>
+</root>
+
+@code {
+    Panel panelRef;
+
+    [Property]
+    public bool Visible { get; set; } = false;
+
+    protected override int BuildHash() => System.HashCode.Combine(Time.Now);
+
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+
+        panelRef.SetClass("hidden", !Visible);
+    }
+
+    public async void ActivateFor(float duration)
+    {
+        Visible = true;
+        await Task.DelaySeconds(duration);
+        Visible = false;
+    }
+}

@@ -234,6 +234,17 @@
               "Strength": 1,
               "Threshold": 0.3,
               "ThresholdWidth": 2
+            },
+            {
+              "__type": "ScreenPanel",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "TeleportScreenoverlay",
+              "Visible": false
             }
           ],
           "Children": [
