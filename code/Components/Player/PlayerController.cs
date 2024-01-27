@@ -121,6 +121,7 @@ public class PlayerController : Component, INetworkSerializable
 
 		var ball_model = ball_object.Components.Create<ModelRenderer>();
 		ball_model.Model = Model.Load( "models/dev/sphere.vmdl" );
+		ball_model.Tint = Color.Random;
 
 		var col = ball_object.Components.Create<SphereCollider>();
 		col.Radius = 32;

@@ -292,7 +292,6 @@ namespace Sandbox.Components.Stargate
 					_shouldEstablish = true;
 					_curBrightness = _maxBrightness;
 					SkinEventHorizon();
-					// Log.Info(EventHorizonModel.SceneObject.Flags);
 
 					/*
 					_frontLight = new SpotLightEntity
@@ -507,7 +506,6 @@ namespace Sandbox.Components.Stargate
 
 		public void DissolveEntity( GameObject ent )
 		{
-			Log.Info( "begone" );
 			// remove ent from both EH buffers (just in case something fucks up)
 			BufferFront.Remove( ent );
 			BufferBack.Remove( ent );
@@ -579,8 +577,6 @@ namespace Sandbox.Components.Stargate
 			// if ( ent is Player ply && ply.Health <= 0 )
 			// 	return;
 
-			Log.Info( $"{Time.Now} fullenter from back" );
-
 			if ( fromBack )
 			{
 				BufferBack.Remove( ent );
@@ -651,14 +647,12 @@ namespace Sandbox.Components.Stargate
 			if ( Gate.Inbound || !IsFullyFormed ) // if we entered inbound gate from any direction, dissolve
 			{
 				DissolveEntity( other );
-				Log.Info( "AAA" );
 			}
 			else // we entered a good gate
 			{
 				if ( fromBack ) // check if we entered from the back and if yes, dissolve
 				{
 					DissolveEntity( other );
-					Log.Info( "AAb" );
 				}
 				else // othwerwise we entered from the front, so now decide what happens
 				{
@@ -667,8 +661,7 @@ namespace Sandbox.Components.Stargate
 						if ( Gate.OtherGate.IsValid() && Gate.OtherGate.IsIrisClosed() ) // if other gate's iris is closed, dissolve
 						{
 							DissolveEntity( other );
-							Log.Info( "AAC" );
-							// Gate.OtherGate.Iris.PlayHitSound(); // iris goes boom
+							Gate.OtherGate.Iris.PlayHitSound(); // iris goes boom
 						}
 						else // otherwise we should be fine for teleportation
 						{
@@ -679,7 +672,6 @@ namespace Sandbox.Components.Stargate
 							else // if the other gate or EH is removed for some reason, dissolve
 							{
 								DissolveEntity( other );
-								Log.Info( "AAD" );
 							}
 						}
 					}
