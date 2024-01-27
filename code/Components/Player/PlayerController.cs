@@ -2,7 +2,7 @@ using Sandbox.Citizen;
 using Sandbox.Components.Stargate;
 using Sandbox.Components.Stargate.Ramps;
 
-public class PlayerController : Component, INetworkSerializable
+public class PlayerController : Component
 {
 	[Property] public Vector3 Gravity { get; set; } = new Vector3( 0, 0, 800 );
 
@@ -13,8 +13,11 @@ public class PlayerController : Component, INetworkSerializable
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	[Property] public bool FirstPerson { get; set; }
 
-	public Angles EyeAngles;
-	public bool IsRunning;
+	[Sync]
+	public Angles EyeAngles { get; set; }
+
+	[Sync]
+	public bool IsRunning { get; set; }
 
 	[Property]
 	public CameraComponent Camera { get; set; }
@@ -29,8 +32,9 @@ public class PlayerController : Component, INetworkSerializable
 		var cam = Camera;
 		if ( cam is not null )
 		{
-			EyeAngles = cam.Transform.Rotation.Angles();
-			EyeAngles.roll = 0;
+			var ee = cam.Transform.Rotation.Angles();
+			ee.roll = 0;
+			EyeAngles = ee;
 		}
 	}
 
@@ -208,11 +212,13 @@ public class PlayerController : Component, INetworkSerializable
 		// Eye input
 		if ( !IsProxy )
 		{
-			EyeAngles.pitch += Input.MouseDelta.y * 0.1f;
-			EyeAngles.yaw -= Input.MouseDelta.x * 0.1f;
-			EyeAngles.roll = 0;
+			var ee = EyeAngles;
+			ee += Input.AnalogLook * 0.5f;
+			ee.roll = 0;
+			ee.pitch = ee.pitch.Clamp( -89f, 89f );
+			EyeAngles = ee;
 
-			EyeAngles.pitch = EyeAngles.pitch.Clamp( -90, 90 );
+			// EyeAngles.pitch = EyeAngles.pitch.Clamp( -90, 90 );
 
 			var cam = Camera;
 
@@ -236,9 +242,7 @@ public class PlayerController : Component, INetworkSerializable
 
 			if ( cam is not null )
 			{
-				EyeAngles = cam.Transform.Rotation.Angles();
-				EyeAngles.roll = 0;
-				(cam.RenderExcludeTags as ITagSet).Set( "player_body", FirstPerson );
+				cam.RenderExcludeTags.Set( "player_body", FirstPerson );
 			}
 
 			IsRunning = Input.Down( "Run" );
@@ -402,17 +406,5 @@ public class PlayerController : Component, INetworkSerializable
 
 		if ( Input.Down( "Run" ) ) WishVelocity *= 320.0f;
 		else WishVelocity *= 110.0f;
-	}
-
-	public void Write( ref ByteStream stream )
-	{
-		stream.Write( IsRunning );
-		stream.Write( EyeAngles );
-	}
-
-	public void Read( ByteStream stream )
-	{
-		IsRunning = stream.Read<bool>();
-		EyeAngles = stream.Read<Angles>();
 	}
 }
