@@ -88,28 +88,6 @@ namespace Sandbox.Components.Stargate
 
 		public Plane ClipPlaneBack => new( Transform.Position - Scene.Camera.Transform.Position - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
 
-		/*
-		public override void Spawn()
-		{
-			base.Spawn();
-			Transmit = TransmitType.Always;
-
-			SetModel( "models/sbox_stargate/event_horizon/event_horizon.vmdl" );
-			SkinEstablish();
-			SetupPhysicsFromModel( PhysicsMotionType.Static, true );
-			PhysicsBody.BodyType = PhysicsBodyType.Static;
-			EnableShadowCasting = false;
-
-			Tags.Add( "trigger", StargateTags.EventHorizon, "physgun-block" );
-
-			EnableAllCollisions = false;
-			EnableTraceAndQueries = true;
-			EnableTouch = true;
-
-			PostSpawn();
-		}
-		*/
-
 		public EventHorizon()
 		{
 			_eventHorizonVideo = new();
@@ -195,8 +173,6 @@ namespace Sandbox.Components.Stargate
 
 			await GameTask.DelaySeconds( 0.5f );
 			if ( !this.IsValid() ) return;
-
-			// EnableAllCollisions = false;
 		}
 
 		// UTILITY
@@ -205,7 +181,6 @@ namespace Sandbox.Components.Stargate
 			if ( _lastSoundTime > 0.1f ) // delay for playing sounds to avoid constant spam
 			{
 				_lastSoundTime = 0;
-				// Sound.FromEntity( "stargate.event_horizon.enter", this );
 				Sound.Play( "stargate.event_horizon.enter", Transform.Position );
 			}
 		}
@@ -271,15 +246,6 @@ namespace Sandbox.Components.Stargate
 		}
 
 		// CLIENT ANIM CONTROL
-
-		/*
-		[ClientRpc]
-		public void TeleportScreenOverlay()
-		{
-			var hud = Game.RootPanel;
-			hud?.AddChild<EventHorizonScreenOverlay>();
-		}
-		*/
 
 		// [ClientRpc]
 		public void EstablishClientAnim()
@@ -452,14 +418,6 @@ namespace Sandbox.Components.Stargate
 			return Tuple.Create( newPos, newDir );
 		}
 
-		/*
-		[ClientRpc]
-		public void SetPlayerViewAngles( Angles ang )
-		{
-			(Game.LocalPawn as Player).ViewAngles = ang;
-		}
-		*/
-
 		// TELEPORT
 		public void TeleportEntity( GameObject ent )
 		{
@@ -502,15 +460,12 @@ namespace Sandbox.Components.Stargate
 
 			if ( isPlayer && ent.Components.Get<PlayerController>() is PlayerController ply )
 			{
-				// TeleportScreenOverlay( To.Single( ply ) );
 				if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
 				{
 					overlay.ActivateFor( 0.05f );
 				}
 
 				var DeltaAngleEH = otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
-
-				// SetPlayerViewAngles( To.Single( ply ), ply.EyeRotation.Angles() + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );
 				ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );
 
 				var localVelNormPlayer = Transform.World.NormalToLocal( ply.GetPlayerVelocity().Normal );
@@ -529,12 +484,6 @@ namespace Sandbox.Components.Stargate
 			{
 				ent.Transform.Rotation = otherRot;
 			}
-
-			// if ( body.IsValid() )
-			// {
-			// 	body.Velocity = Vector3.Zero;
-			// 	body.AngularVelocity = Vector3.Zero;
-			// }
 
 			if ( body.IsValid() )
 			{
@@ -646,15 +595,8 @@ namespace Sandbox.Components.Stargate
 					var otherEH = GetOther();
 					otherEH.OnEntityEntered( ent, false );
 					otherEH.OnEntityTriggerStartTouch( otherEH._frontTrigger, ent );
-
-					// ent.EnableDrawing = false;
 					TeleportEntity( ent );
-
 					ent.Tags.Add( StargateTags.ExittingFromEventHorizon );
-
-					// await Task.DelaySeconds( 0.05f ); // cheap trick to avoid seeing the entity on the wrong side of the EH for a few frames
-
-					// ent.EnableDrawing = true;
 				}
 
 				TeleportLogic( ent, () => tpFunc(), fromBack );
