@@ -36,7 +36,9 @@
         "water": "Trigger",
         "world": "Unset",
         "ignoreworld": "Unset",
-        "ringsring": "Unset"
+        "ringsring": "Unset",
+        "terrain": "Unset",
+        "ehtrigger": "Unset"
       },
       "Pairs": [
         {
@@ -72,6 +74,11 @@
         {
           "a": "ringsring",
           "b": "ringsring",
+          "r": "Ignore"
+        },
+        {
+          "a": "terrain",
+          "b": "ehtrigger",
           "r": "Ignore"
         }
       ]

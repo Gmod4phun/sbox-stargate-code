@@ -264,16 +264,23 @@ public class PlayerController : Component, INetworkSerializable
 			if ( Input.Pressed( "Attack2" ) )
 			{
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
-				if ( tr.Hit )
-				{
-					var pos = tr.HitPosition;
-					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
+				// if ( tr.Hit )
+				// {
+				var pos = tr.HitPosition;
+				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-					// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
-					StargateSceneUtils.SpawnRingPanelGoauld( pos, rot );
-					// StargateSceneUtils.SpawnDhdPrefab( pos, rot, "prefabs/dhdmilkyway.prefab" );
-					// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
-				}
+				// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
+				// StargateSceneUtils.SpawnRingPanelGoauld( pos, rot );
+				// StargateSceneUtils.SpawnDhdPrefab( pos, rot, "prefabs/dhdmilkyway.prefab" );
+				// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
+
+
+				// }
+				// else
+				// {
+				var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
+				ball.Transform.Scale *= 0.2f;
+				// }
 			}
 
 			UseLogic();

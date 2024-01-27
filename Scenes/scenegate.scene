@@ -310,7 +310,7 @@
     {
       "Id": "9b653830-8bb8-490d-86d8-41a8a1838db1",
       "Name": "Brick Ramp",
-      "Position": "-512,512,64",
+      "Position": "-512,511.9994,64",
       "Enabled": true,
       "Components": [
         {
@@ -341,7 +341,6 @@
           "Id": "45f65a17-f381-4970-8337-d22889c856e4",
           "Name": "Stargate (Pegasus)",
           "Position": "0,0,90",
-          "Enabled": true,
           "Components": [
             {
               "__type": "ModelRenderer",
@@ -358,32 +357,6 @@
               "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
               "Static": false,
               "Surface": null
-            },
-            {
-              "__type": "StargatePegasus",
-              "AutoClose": false,
-              "CanOpenMenu": true,
-              "EventHorizon": null,
-              "EventHorizonMaterialGroup": "pegasus",
-              "GateAddress": "123456",
-              "GateGlyphType": "PEGASUS",
-              "GateGroup": "P@",
-              "GateLocal": false,
-              "GateName": "",
-              "GatePrivate": false,
-              "Iris": null,
-              "OtherGate": null,
-              "Ramp": {
-                "_type": "component",
-                "go": "9b653830-8bb8-490d-86d8-41a8a1838db1",
-                "component_type": "GateRamp"
-              },
-              "Ring": {
-                "_type": "component",
-                "go": "a0904ea8-eeba-4273-b1aa-632b6e299f14",
-                "component_type": "StargateRingPegasus"
-              },
-              "ShowWormholeCinematic": false
             }
           ],
           "Children": [
@@ -907,11 +880,7 @@
               "Components": [
                 {
                   "__type": "StargateRingPegasus",
-                  "Gate": {
-                    "_type": "component",
-                    "go": "45f65a17-f381-4970-8337-d22889c856e4",
-                    "component_type": "StargatePegasus"
-                  },
+                  "Gate": null,
                   "Glyphs": [
                     {
                       "_type": "component",
@@ -1740,7 +1709,7 @@
     {
       "Id": "c40b23f8-0c91-4a02-9202-ccae00155373",
       "Name": "SGC Ramp",
-      "Position": "-512,-512,146",
+      "Position": "-512,-512.0007,146",
       "Enabled": true,
       "Components": [
         {
@@ -3096,7 +3065,7 @@
     {
       "Id": "12b9e705-00cb-49fd-be30-0c0e85ec61d7",
       "Name": "Dhd (Milky Way)",
-      "Position": "-128,-360,-5",
+      "Position": "-256,-360,-5",
       "Rotation": "0,0.1305262,0,0.9914449",
       "Enabled": true,
       "__Prefab": "prefabs/dhdmilkyway.prefab"
@@ -3104,9 +3073,8 @@
     {
       "Id": "48275147-eb5f-44a9-bc54-9c350e0f4eb3",
       "Name": "Dhd (Pegasus)",
-      "Position": "-128,360,-5",
+      "Position": "-256,360,-5",
       "Rotation": "0,0.1305262,0,0.9914449",
-      "Enabled": true,
       "__Prefab": "prefabs/dhdpegasus.prefab"
     },
     {
@@ -3124,6 +3092,30 @@
       "Tags": "rings_no_teleport",
       "Enabled": true,
       "__Prefab": "prefabs/ringpanelgoauld.prefab"
+    },
+    {
+      "Id": "f4f65695-e655-4e8e-9e08-9540f360d421",
+      "Name": "Terrain",
+      "Position": "-3000,-1000,0",
+      "Tags": "terrain",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Terrain",
+          "ClipMapLodExtentTexels": 128,
+          "ClipMapLodLevels": 7,
+          "DebugView": "None",
+          "RenderType": "Off",
+          "TerrainDataFile": "new terrain.terrain",
+          "TerrainMaterial": "materials/core/terrain.vmat"
+        },
+        {
+          "__type": "TerrainCollider",
+          "IsTrigger": false,
+          "Static": true,
+          "Surface": null
+        }
+      ]
     }
   ],
   "SceneProperties": {

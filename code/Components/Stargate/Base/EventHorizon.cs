@@ -1055,6 +1055,7 @@ namespace Sandbox.Components.Stargate
 			_frontTrigger = trigger_object.Components.Create<EventHorizonTrigger>();
 			_frontTrigger.Model = Model.Load( "models/sbox_stargate/event_horizon/event_horizon_trigger.vmdl" );
 			_frontTrigger.IsTrigger = true;
+			_frontTrigger.Tags.Add( "ehtrigger" );
 
 			// _backTrigger = new(this) { Position = Position - Rotation.Forward * 2, Rotation = Rotation.RotateAroundAxis( Vector3.Up, 180 ), Parent = Gate };
 			trigger_object = new GameObject();
@@ -1065,6 +1066,7 @@ namespace Sandbox.Components.Stargate
 			_backTrigger = trigger_object.Components.Create<EventHorizonTrigger>();
 			_backTrigger.Model = Model.Load( "models/sbox_stargate/event_horizon/event_horizon_trigger.vmdl" );
 			_backTrigger.IsTrigger = true;
+			_backTrigger.Tags.Add( "ehtrigger" );
 
 			// _colliderFloor = new() { Position = Gate.Position, Rotation = Gate.Rotation, Parent = Gate };
 		}
