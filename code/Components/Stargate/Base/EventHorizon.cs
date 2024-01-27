@@ -480,11 +480,13 @@ namespace Sandbox.Components.Stargate
 
 			var body = ent.Components.Get<Rigidbody>();
 
-			var localVelNorm = Transform.World.NormalToLocal( body.IsValid() ? body.Velocity.Normal : Vector3.Zero );
-			var otherVelNorm = otherEH.Transform.Local.NormalToWorld( localVelNorm.WithX( -localVelNorm.x ).WithY( -localVelNorm.y ) );
+			var otherLocal = Scene.Transform.World.ToLocal( otherEH.Transform.World );
 
-			var localVelNormAngular = Transform.World.NormalToLocal( body.IsValid() ? body.Velocity.Normal : Vector3.Zero );
-			var otherVelNormAngular = otherEH.Transform.Local.NormalToWorld( localVelNormAngular.WithX( -localVelNormAngular.x ).WithY( -localVelNormAngular.y ) );
+			var localVelNorm = Transform.World.NormalToLocal( body.IsValid() ? body.Velocity.Normal : Vector3.Zero );
+			var otherVelNorm = otherLocal.NormalToWorld( localVelNorm.WithX( -localVelNorm.x ).WithY( -localVelNorm.y ) );
+
+			var localVelNormAngular = Transform.World.NormalToLocal( body.IsValid() ? body.AngularVelocity.Normal : Vector3.Zero );
+			var otherVelNormAngular = otherLocal.NormalToWorld( localVelNormAngular.WithX( -localVelNormAngular.x ).WithY( -localVelNormAngular.y ) );
 
 			var center = body.IsValid() ? body.PhysicsBody.MassCenter : ent.Transform.Position;
 			var otherTransformRotated = otherEH.Transform.World.RotateAround( otherEH.Transform.Position, Rotation.FromAxis( otherEH.Transform.Rotation.Up, 180 ) );
@@ -495,7 +497,7 @@ namespace Sandbox.Components.Stargate
 			var localRot = Transform.World.RotationToLocal( ent.Transform.Rotation );
 			var otherRot = otherTransformRotated.RotationToWorld( localRot );
 
-			var entPosCenterDiff = ent.Transform.World.PointToLocal( ent.Transform.Position ) - ent.Transform.World.PointToLocal( center );
+			var entPosCenterDiff = Transform.World.PointToLocal( ent.Transform.Position ) - Transform.World.PointToLocal( center );
 			var otherPos = otherCenter + otherRot.Forward * entPosCenterDiff.x + otherRot.Right * entPosCenterDiff.y + otherRot.Up * entPosCenterDiff.z;
 
 			if ( isPlayer && ent.Components.Get<PlayerController>() is PlayerController ply )
@@ -512,7 +514,7 @@ namespace Sandbox.Components.Stargate
 				ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );
 
 				var localVelNormPlayer = Transform.World.NormalToLocal( ply.GetPlayerVelocity().Normal );
-				var otherVelNormPlayer = otherEH.Transform.Local.NormalToWorld( localVelNormPlayer.WithX( -localVelNormPlayer.x ).WithY( -localVelNormPlayer.y ) );
+				var otherVelNormPlayer = otherLocal.NormalToWorld( localVelNormPlayer.WithX( -localVelNormPlayer.x ).WithY( -localVelNormPlayer.y ) );
 
 				var newPlayerVel = otherVelNormPlayer * ply.GetPlayerVelocity().Length;
 				ply.SetPlayerVelocity( newPlayerVel );
