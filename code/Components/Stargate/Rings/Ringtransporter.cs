@@ -122,6 +122,35 @@ namespace Sandbox.Components.Stargate.Rings
             }
         }
 
+        private void TeleportObjects( List<GameObject> objects, Ringtransporter from, Ringtransporter to )
+        {
+            foreach ( GameObject e in objects )
+            {
+                var platformHeightOffsetDiff = to.PlatformHeightOffset - from.PlatformHeightOffset;
+
+                var localPos = from.Transform.World.PointToLocal( e.Transform.Position );
+                var newPos = to.Transform.Local.PointToWorld( localPos + Vector3.Up * platformHeightOffsetDiff );
+
+                var localRot = from.Transform.World.RotationToLocal( e.Transform.Rotation );
+                var newRot = to.Transform.Local.RotationToWorld( localRot.RotateAroundAxis( Vector3.Up, 180 ) );
+
+                if ( e.Components.Get<PlayerController>() is PlayerController ply )
+                {
+                    if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
+                    {
+                        overlay.ActivateFor( 0.2f );
+                    }
+
+                    var DeltaAngleEH = to.Transform.Rotation.Angles() - from.Transform.Rotation.Angles();
+                    ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
+                }
+
+                e.Transform.Position = newPos;
+                e.Transform.Rotation = newRot;
+                e.Transform.ClearLerp();
+            }
+        }
+
         private void TeleportBothSides()
         {
             if ( !OtherTransporter.IsValid() )
@@ -131,57 +160,8 @@ namespace Sandbox.Components.Stargate.Rings
             var ourObjects = Scene.GetAllObjects( true ).Where( x => IsObjectAllowedToTeleport( x ) && x.Transform.Position.DistanceSquared( Transform.Position ) <= 80 * 80 ).ToList();
             var otherObjects = Scene.GetAllObjects( true ).Where( x => IsObjectAllowedToTeleport( x ) && x.Transform.Position.DistanceSquared( OtherTransporter.Transform.Position ) <= 80 * 80 ).ToList();
 
-            foreach ( GameObject e in ourObjects )
-            {
-                var localPos = Transform.World.PointToLocal( e.Transform.Position );
-                var newPos = OtherTransporter.Transform.Local.PointToWorld( localPos );
-
-                var localRot = Transform.World.RotationToLocal( e.Transform.Rotation );
-                var newRot = OtherTransporter.Transform.Local.RotationToWorld( localRot.RotateAroundAxis( Vector3.Up, 180 ) );
-
-                if ( e.Components.Get<PlayerController>() is PlayerController ply )
-                {
-                    if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
-                    {
-                        overlay.ActivateFor( 0.2f );
-                    }
-
-                    var DeltaAngleEH = OtherTransporter.Transform.Rotation.Angles() - Transform.Rotation.Angles();
-                    ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
-
-                    ply.TemporarilyDisableCollider();
-                }
-
-                e.Transform.Position = newPos;
-                e.Transform.Rotation = newRot;
-                e.Transform.ClearLerp();
-            }
-
-            foreach ( GameObject e in otherObjects )
-            {
-                var localPos = OtherTransporter.Transform.World.PointToLocal( e.Transform.Position );
-                var newPos = Transform.Local.PointToWorld( localPos );
-
-                var localRot = Transform.World.RotationToLocal( e.Transform.Rotation );
-                var newRot = OtherTransporter.Transform.Local.RotationToWorld( localRot );
-
-                if ( e.Components.Get<PlayerController>() is PlayerController ply )
-                {
-                    if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
-                    {
-                        overlay.ActivateFor( 0.2f );
-                    }
-
-                    var DeltaAngleEH = Transform.Rotation.Angles() - OtherTransporter.Transform.Rotation.Angles();
-                    ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
-
-                    ply.TemporarilyDisableCollider();
-                }
-
-                e.Transform.Position = newPos;
-                e.Transform.Rotation = newRot;
-                e.Transform.ClearLerp();
-            }
+            TeleportObjects( ourObjects, this, OtherTransporter );
+            TeleportObjects( otherObjects, OtherTransporter, this );
         }
 
         private async void DoRings( Ringtransporter other )

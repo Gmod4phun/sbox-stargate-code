@@ -96,11 +96,6 @@
             "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
             "component_type": "CameraComponent"
           },
-          "Collider": {
-            "_type": "component",
-            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
-            "component_type": "BoxCollider"
-          },
           "Eye": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
           "FirstPerson": true,
           "Gravity": "0,0,800"
@@ -135,7 +130,7 @@
         {
           "__type": "BoxCollider",
           "Center": "0,0,36",
-          "IsTrigger": false,
+          "IsTrigger": true,
           "Scale": "20,20,72",
           "Static": false,
           "Surface": null
@@ -2992,7 +2987,7 @@
             "component_type": "SkinnedModelRenderer"
           },
           "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
-          "RingsRestingHeightOffset": 0
+          "RingsRestingHeightOffset": -8
         },
         {
           "__type": "ModelCollider",
@@ -3058,7 +3053,7 @@
             "component_type": "SkinnedModelRenderer"
           },
           "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
-          "RingsRestingHeightOffset": -4
+          "RingsRestingHeightOffset": -8
         },
         {
           "__type": "ModelCollider",
@@ -3169,7 +3164,7 @@
     },
     {
       "Id": "c46ab59e-b9ff-4108-bfa4-297e9732cbed",
-      "Name": "Ring Transporter (1)",
+      "Name": "Ring Transporter (Ori)",
       "Position": "340,-512,0",
       "Tags": "rings_no_teleport,ringplatform",
       "Enabled": true,
@@ -3907,6 +3902,20 @@
       "Rotation": "0.00250578,0.1305021,-0.01903339,0.9912621",
       "Enabled": true,
       "__Prefab": "prefabs/dhdmilkyway.prefab"
+    },
+    {
+      "Id": "61711ede-871c-413a-8678-911203919fb5",
+      "Name": "Map",
+      "Position": "1357.869,-614.8002,507.7727",
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "facepunch.flatgrass",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ]
     }
   ],
   "SceneProperties": {

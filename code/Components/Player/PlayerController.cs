@@ -12,7 +12,6 @@ public class PlayerController : Component
 	[Property] public GameObject Eye { get; set; }
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	[Property] public bool FirstPerson { get; set; }
-	[Property] public Collider Collider { get; set; }
 
 	[Sync]
 	public Angles EyeAngles { get; set; }
@@ -71,13 +70,6 @@ public class PlayerController : Component
 		if ( cc is null ) return;
 
 		cc.Velocity = velocity;
-	}
-
-	public async void TemporarilyDisableCollider()
-	{
-		Collider.Enabled = false;
-		await Task.DelaySeconds( 0.1f );
-		Collider.Enabled = true;
 	}
 
 	private void UseLogic()
