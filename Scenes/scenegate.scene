@@ -2968,7 +2968,7 @@
       "Id": "c3181e88-7d70-4f71-adf1-80886827542a",
       "Name": "Ring Transporter",
       "Position": "340,-192,0",
-      "Tags": "rings_no_teleport",
+      "Tags": "rings_no_teleport,ringplatform",
       "Enabled": true,
       "Components": [
         {
@@ -2980,11 +2980,14 @@
             "go": "c3181e88-7d70-4f71-adf1-80886827542a",
             "component_type": "ModelCollider"
           },
+          "PlatformHeightOffset": 0,
           "Renderer": {
             "_type": "component",
             "go": "c3181e88-7d70-4f71-adf1-80886827542a",
             "component_type": "SkinnedModelRenderer"
-          }
+          },
+          "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
+          "RingsRestingHeightOffset": 0
         },
         {
           "__type": "ModelCollider",
@@ -3031,7 +3034,7 @@
       "Id": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
       "Name": "Ring Transporter",
       "Position": "340,192,0",
-      "Tags": "rings_no_teleport",
+      "Tags": "rings_no_teleport,ringplatform",
       "Enabled": true,
       "Components": [
         {
@@ -3043,11 +3046,14 @@
             "go": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
             "component_type": "ModelCollider"
           },
+          "PlatformHeightOffset": 0,
           "Renderer": {
             "_type": "component",
             "go": "52d89d8f-6fc7-4fa5-a454-81639ebe67d9",
             "component_type": "SkinnedModelRenderer"
-          }
+          },
+          "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
+          "RingsRestingHeightOffset": -4
         },
         {
           "__type": "ModelCollider",
@@ -3073,6 +3079,72 @@
           "Id": "83f71275-1505-4f3c-8137-15fcb49168e4",
           "Name": "Decal",
           "Position": "0,0,1",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DecalRenderer",
+              "CutoffAngle": 10,
+              "CutoffAngleSoftness": 5,
+              "Material": "materials/decals/default.vmat",
+              "Mod2XBlending": false,
+              "Size": "120,120,2",
+              "TintColor": "1,1,1,1",
+              "TriPlanar": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+      "Name": "Ring Transporter (Ori)",
+      "Position": "340,512,0",
+      "Tags": "rings_no_teleport,ringplatform",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Ringtransporter",
+          "OtherTransporter": null,
+          "Address": "5243",
+          "Collider": {
+            "_type": "component",
+            "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+            "component_type": "ModelCollider"
+          },
+          "PlatformHeightOffset": 20,
+          "Renderer": {
+            "_type": "component",
+            "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RingModel": "models/sbox_stargate/rings_ori/ring_ori.vmdl",
+          "RingsRestingHeightOffset": 12
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "SkinnedModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "87943935-7cf4-4f0a-a064-f2f9d58e8702",
+          "Name": "Decal",
+          "Position": "0,0,21",
           "Rotation": "0,0.7071068,0,0.7071068",
           "Enabled": true,
           "Components": [
@@ -3117,6 +3189,14 @@
       "Id": "8876044e-22e2-475c-bf9c-a8a8c9eff4e1",
       "Name": "Ring Panel (Ancient)",
       "Position": "250,-192,48",
+      "Tags": "rings_no_teleport",
+      "Enabled": true,
+      "__Prefab": "prefabs/ringpanelancient.prefab"
+    },
+    {
+      "Id": "93cdd34a-8c2a-46b7-8c37-d6013a266f31",
+      "Name": "Ring Panel (1)",
+      "Position": "250,512,48",
       "Tags": "rings_no_teleport",
       "Enabled": true,
       "__Prefab": "prefabs/ringpanelancient.prefab"

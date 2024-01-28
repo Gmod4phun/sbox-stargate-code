@@ -38,7 +38,8 @@
         "ignoreworld": "Unset",
         "ringsring": "Unset",
         "terrain": "Unset",
-        "ehtrigger": "Unset"
+        "ehtrigger": "Unset",
+        "ringplatform": "Unset"
       },
       "Pairs": [
         {
@@ -79,6 +80,11 @@
         {
           "a": "terrain",
           "b": "ehtrigger",
+          "r": "Ignore"
+        },
+        {
+          "a": "ringsring",
+          "b": "ringplatform",
           "r": "Ignore"
         }
       ]

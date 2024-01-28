@@ -14,6 +14,15 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         public string Address { get; set; }
 
+        [Property]
+        public Model RingModel { get; set; } = Model.Load( "models/sbox_stargate/rings_ancient/ring_ancient.vmdl" );
+
+        [Property]
+        public float PlatformHeightOffset { get; set; } = 0;
+
+        [Property]
+        public float RingsRestingHeightOffset { get; set; } = 0;
+
         private List<Ring> DeployedRings = new();
 
         private bool Busy = false;
@@ -40,16 +49,16 @@ namespace Sandbox.Components.Stargate.Rings
             return false;
         }
 
-        private Ring CreateRing( float heightOffset = 0 )
+        private Ring CreateRing()
         {
             var ring_object = new GameObject();
             ring_object.Transform.World = Transform.World;
-            ring_object.Transform.Position += ring_object.Transform.Rotation.Up * heightOffset;
+            ring_object.Transform.Position += ring_object.Transform.Rotation.Up * RingsRestingHeightOffset;
             ring_object.SetParent( GameObject );
 
             var ring_component = ring_object.Components.Create<Ring>();
             var renderer = ring_object.Components.Create<ModelRenderer>();
-            renderer.Model = Model.Load( "models/sbox_stargate/rings_ancient/ring_ancient.vmdl" );
+            renderer.Model = RingModel;
 
             var collider = ring_object.Components.Create<ModelCollider>();
             collider.Model = renderer.Model;
@@ -90,11 +99,11 @@ namespace Sandbox.Components.Stargate.Rings
 
             for ( var i = 0; i < 5; i++ )
             {
-                var ring = CreateRing( -4 );
+                var ring = CreateRing();
                 DeployedRings.Add( ring );
 
                 ring.TryToReachRestingPosition = true;
-                ring.SetDesiredUpOffset( 80 - i * 16 );
+                ring.SetDesiredUpOffset( PlatformHeightOffset + 80 - i * 16 );
                 ring.StartReachingDesired( delays[i] );
             }
         }
@@ -185,9 +194,6 @@ namespace Sandbox.Components.Stargate.Rings
             Busy = true;
             OtherTransporter.Busy = true;
 
-            Collider.Enabled = false;
-            OtherTransporter.Collider.Enabled = false;
-
             Renderer.SceneModel.SetAnimParameter( "Open", true );
             OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", true );
 
@@ -206,6 +212,9 @@ namespace Sandbox.Components.Stargate.Rings
 
             DoLightEffect();
             OtherTransporter.DoLightEffect();
+
+            DoRingGlowEffect();
+            OtherTransporter.DoRingGlowEffect();
 
             await Task.DelaySeconds( 0.5f );
 
@@ -226,9 +235,6 @@ namespace Sandbox.Components.Stargate.Rings
 
             Renderer.SceneModel.SetAnimParameter( "Open", false );
             OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", false );
-
-            Collider.Enabled = true;
-            OtherTransporter.Collider.Enabled = true;
 
             await Task.DelaySeconds( 1.5f );
 
@@ -301,6 +307,15 @@ namespace Sandbox.Components.Stargate.Rings
             }
 
             light_object.Destroy();
+        }
+
+        private void DoRingGlowEffect()
+        {
+            foreach ( var ring in DeployedRings )
+            {
+                ring.SetGlowState( true );
+                ring.SetGlowState( false, 0.75f );
+            }
         }
 
         public async void DialRings( Ringtransporter other, float delay = 0 )

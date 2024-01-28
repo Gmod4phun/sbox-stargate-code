@@ -26,8 +26,12 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         public bool TryToReachRestingPosition { get; set; }
 
+        [Property]
+        public bool Glowing { get; set; } = false;
+
         private float _equalThreshold = 0.05f;
         private float _desiredOffset = 0;
+        private float _selfIllumScale = 0;
 
         [Property, ReadOnly]
         public bool IsInDesiredPosition => Transform.Position.AlmostEqual( DesiredPosition.Position, _equalThreshold ) && Transform.Rotation.Angles().AsVector3().AlmostEqual( DesiredPosition.Rotation.Angles().AsVector3(), _equalThreshold );
@@ -42,7 +46,7 @@ namespace Sandbox.Components.Stargate.Rings
             if ( Body.IsValid() )
             {
                 DesiredPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position + Transporter.Transform.Rotation.Up * _desiredOffset );
-                RestingPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position - Transporter.Transform.Rotation.Up * 16 );
+                RestingPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position + Transporter.Transform.Rotation.Up * Transporter.RingsRestingHeightOffset );
 
                 if ( Body.PhysicsBody.IsValid() )
                 {
@@ -54,6 +58,17 @@ namespace Sandbox.Components.Stargate.Rings
                     {
                         Body.PhysicsBody.SmoothMove( RestingPosition, 0.4f, Time.Delta );
                     }
+                }
+            }
+
+            if ( Renderer.IsValid() )
+            {
+                var so = Renderer.SceneObject;
+                if ( so.IsValid() )
+                {
+                    _selfIllumScale = _selfIllumScale.LerpTo( Glowing ? 1 : 0, Time.Delta * (Glowing ? 2f : 16f) );
+                    so.Batchable = false;
+                    so.Attributes.Set( "selfillumscale", _selfIllumScale );
                 }
             }
         }
@@ -87,6 +102,14 @@ namespace Sandbox.Components.Stargate.Rings
             TryToReachDesiredPosition = false;
 
             Body.PhysicsBody.EnableSolidCollisions = false;
+        }
+
+        public async void SetGlowState( bool state, float delay = 0 )
+        {
+            if ( delay > 0 )
+                await Task.DelaySeconds( delay );
+
+            Glowing = state;
         }
     }
 }
