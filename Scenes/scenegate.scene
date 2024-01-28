@@ -3163,6 +3163,72 @@
       ]
     },
     {
+      "Id": "c46ab59e-b9ff-4108-bfa4-297e9732cbed",
+      "Name": "Ring Transporter (1)",
+      "Position": "340,-512,0",
+      "Tags": "rings_no_teleport,ringplatform",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Ringtransporter",
+          "OtherTransporter": null,
+          "Address": "7142",
+          "Collider": {
+            "_type": "component",
+            "go": "c46ab59e-b9ff-4108-bfa4-297e9732cbed",
+            "component_type": "ModelCollider"
+          },
+          "PlatformHeightOffset": 20,
+          "Renderer": {
+            "_type": "component",
+            "go": "c46ab59e-b9ff-4108-bfa4-297e9732cbed",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RingModel": "models/sbox_stargate/rings_ori/ring_ori.vmdl",
+          "RingsRestingHeightOffset": 12
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "SkinnedModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "126fdc27-ccf0-4f7a-9aa3-c2b0df0f3048",
+          "Name": "Decal",
+          "Position": "0,0,21",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DecalRenderer",
+              "CutoffAngle": 10,
+              "CutoffAngleSoftness": 5,
+              "Material": "materials/decals/default.vmat",
+              "Mod2XBlending": false,
+              "Size": "120,120,2",
+              "TintColor": "1,1,1,1",
+              "TriPlanar": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "Id": "58bf1323-b94f-48e5-bacd-a14b86580c8e",
       "Name": "Dhd (Atlantis)",
       "Position": "-128,0,0",
@@ -3197,6 +3263,14 @@
       "Id": "93cdd34a-8c2a-46b7-8c37-d6013a266f31",
       "Name": "Ring Panel (1)",
       "Position": "250,512,48",
+      "Tags": "rings_no_teleport",
+      "Enabled": true,
+      "__Prefab": "prefabs/ringpanelancient.prefab"
+    },
+    {
+      "Id": "08800261-0cf6-4831-934c-047621c818c8",
+      "Name": "Ring Panel (2)",
+      "Position": "250,-512,48",
       "Tags": "rings_no_teleport",
       "Enabled": true,
       "__Prefab": "prefabs/ringpanelancient.prefab"
