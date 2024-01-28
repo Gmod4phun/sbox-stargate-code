@@ -70,7 +70,7 @@
       "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
       "Name": "Citizen",
       "Position": "0,0,16",
-      "Rotation": "0.0000000504776,0.00000002146427,1,-0.0000006397578",
+      "Rotation": "0,0,1,-0.00000004371139",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -214,8 +214,12 @@
                     "c": "1,1,1,1"
                   },
                   {
+                    "t": 0.508547,
+                    "c": "0.14419,0.14419,0.14419,1"
+                  },
+                  {
                     "t": 1,
-                    "c": "0.5,0.5,0.5,1"
+                    "c": "0.12558,0.12558,0.12558,1"
                   }
                 ],
                 "alpha": []
@@ -230,9 +234,9 @@
                   }
                 ]
               },
-              "Mode": "Screen",
-              "Strength": 1,
-              "Threshold": 0.3,
+              "Mode": "Additive",
+              "Strength": 0.75,
+              "Threshold": 1,
               "ThresholdWidth": 2
             },
             {
