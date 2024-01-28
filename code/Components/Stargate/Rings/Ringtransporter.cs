@@ -139,10 +139,6 @@ namespace Sandbox.Components.Stargate.Rings
                 var localRot = Transform.World.RotationToLocal( e.Transform.Rotation );
                 var newRot = OtherTransporter.Transform.Local.RotationToWorld( localRot.RotateAroundAxis( Vector3.Up, 180 ) );
 
-                e.Transform.Position = newPos;
-                e.Transform.Rotation = newRot;
-                e.Transform.ClearLerp();
-
                 if ( e.Components.Get<PlayerController>() is PlayerController ply )
                 {
                     if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
@@ -152,7 +148,13 @@ namespace Sandbox.Components.Stargate.Rings
 
                     var DeltaAngleEH = OtherTransporter.Transform.Rotation.Angles() - Transform.Rotation.Angles();
                     ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
+
+                    ply.TemporarilyDisableCollider();
                 }
+
+                e.Transform.Position = newPos;
+                e.Transform.Rotation = newRot;
+                e.Transform.ClearLerp();
             }
 
             foreach ( GameObject e in otherObjects )
@@ -163,10 +165,6 @@ namespace Sandbox.Components.Stargate.Rings
                 var localRot = Transform.World.RotationToLocal( e.Transform.Rotation );
                 var newRot = OtherTransporter.Transform.Local.RotationToWorld( localRot );
 
-                e.Transform.Position = newPos;
-                e.Transform.Rotation = newRot;
-                e.Transform.ClearLerp();
-
                 if ( e.Components.Get<PlayerController>() is PlayerController ply )
                 {
                     if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
@@ -176,7 +174,13 @@ namespace Sandbox.Components.Stargate.Rings
 
                     var DeltaAngleEH = Transform.Rotation.Angles() - OtherTransporter.Transform.Rotation.Angles();
                     ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
+
+                    ply.TemporarilyDisableCollider();
                 }
+
+                e.Transform.Position = newPos;
+                e.Transform.Rotation = newRot;
+                e.Transform.ClearLerp();
             }
         }
 

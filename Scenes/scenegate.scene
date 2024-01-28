@@ -96,6 +96,11 @@
             "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
             "component_type": "CameraComponent"
           },
+          "Collider": {
+            "_type": "component",
+            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+            "component_type": "BoxCollider"
+          },
           "Eye": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
           "FirstPerson": true,
           "Gravity": "0,0,800"
