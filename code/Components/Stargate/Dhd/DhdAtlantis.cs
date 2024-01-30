@@ -11,17 +11,19 @@ namespace Sandbox.Components.Stargate
             DialIsLock = true;
         }
 
-        public void CreateSingleButton( string model, string action, bool disabled = false, Transform localTransformOverride = new Transform(), int glyphBodyGroup = 0 ) // visible model of buttons that turn on/off and animate
+        public void CreateSingleButton( string model, string action, bool disabled = false, Transform? localTransformOverride = null, int glyphBodyGroup = 0 ) // visible model of buttons that turn on/off and animate
         {
             var button_object = new GameObject();
             button_object.Name = $"Button ({action})";
             button_object.Transform.World = GameObject.Transform.World;
             button_object.SetParent( GameObject );
 
-            if ( localTransformOverride != new Transform() )
+            if ( localTransformOverride == null )
             {
-                button_object.Transform.Local = localTransformOverride;
+                localTransformOverride = new Transform();
             }
+
+            button_object.Transform.Local = (Transform)localTransformOverride;
 
             var button_component = button_object.Components.Create<DhdButton>();
             var renderer = button_object.Components.Create<Superglyph>();
