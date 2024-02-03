@@ -77,6 +77,7 @@
         {
           "__type": "CharacterController",
           "Acceleration": 10,
+          "Bounciness": 0.3,
           "GroundAngle": 45,
           "Height": 72,
           "IgnoreLayers": "trigger,player",
@@ -3918,10 +3919,22 @@
     "NetworkFrequency": 60,
     "ThreadedAnimation": true,
     "TimeScale": 1,
-    "UseFixedUpdate": true
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-01-30T17:43:15.2036491\u002B01:00",
+  "LastSaved": "2024-02-03T15:22:36.6228982\u002B01:00",
   "__references": []
 }

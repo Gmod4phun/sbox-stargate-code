@@ -3,7 +3,7 @@ namespace Sandbox.Components.Stargate.Rings
     public class RingPanelButton : Component, Component.ExecuteInEditor, IUse
     {
         public RingPanel RingPanel => Components.Get<RingPanel>( FindMode.InParent );
-        public SkinnedModelRenderer Renderer => Components.Get<SkinnedModelRenderer>( FindMode.InSelf );
+        public ModelRenderer Renderer => Components.Get<ModelRenderer>( FindMode.InSelf );
         public ModelCollider Collider => Components.Get<ModelCollider>( FindMode.InSelf );
 
         [Property]

@@ -354,7 +354,7 @@ namespace Sandbox.Components.Stargate
 			panel_object.Tags.Add( "rings_no_teleport" );
 
 			var panel_component = panel_object.Components.Create<RingPanelGoauld>();
-			var renderer = panel_component.Components.Create<SkinnedModelRenderer>();
+			var renderer = panel_component.Components.Create<ModelRenderer>();
 			renderer.Model = Model.Load( "models/sbox_stargate/rings_panel/goauld/ring_panel_goauld.vmdl" );
 
 			var collider = panel_component.Components.Create<ModelCollider>();
@@ -372,8 +372,26 @@ namespace Sandbox.Components.Stargate
 			panel_object.Tags.Add( "rings_no_teleport" );
 
 			var panel_component = panel_object.Components.Create<RingPanelAncient>();
-			var renderer = panel_component.Components.Create<SkinnedModelRenderer>();
+			var renderer = panel_component.Components.Create<ModelRenderer>();
 			renderer.Model = Model.Load( "models/sbox_stargate/rings_panel/ancient/ring_panel_ancient.vmdl" );
+
+			var collider = panel_component.Components.Create<ModelCollider>();
+			collider.Model = renderer.Model;
+
+			panel_component.CreateButtons();
+		}
+
+		public static void SpawnRingPanelOri( Vector3 pos, Rotation rot )
+		{
+			var panel_object = new GameObject();
+			panel_object.Name = "Ring Panel (Ori)";
+			panel_object.Transform.Position = pos;
+			panel_object.Transform.Rotation = rot;
+			panel_object.Tags.Add( "rings_no_teleport" );
+
+			var panel_component = panel_object.Components.Create<RingPanelOri>();
+			var renderer = panel_component.Components.Create<ModelRenderer>();
+			renderer.Model = Model.Load( "models/sbox_stargate/rings_panel/ori/ring_panel_ori.vmdl" );
 
 			var collider = panel_component.Components.Create<ModelCollider>();
 			collider.Model = renderer.Model;

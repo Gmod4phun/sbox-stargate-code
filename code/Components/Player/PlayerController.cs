@@ -145,39 +145,33 @@ public class PlayerController : Component
 		prop_object.Transform.Position = pos;
 		prop_object.Transform.Rotation = rot;
 
-		var renderer = prop_object.Components.Create<ModelRenderer>();
-		renderer.Model = Cloud.Model( "facepunch.wooden_crate" );
-
-		var collider = prop_object.Components.Create<ModelCollider>();
-		collider.Model = renderer.Model;
-
-		prop_object.Components.Create<Rigidbody>();
+		var prop = prop_object.Components.Create<Prop>();
+		prop.Model = Cloud.Model( "facepunch.wooden_crate" );
 
 		return prop_object;
 	}
 
-	private GameObject ShootProp( Vector3 pos, Vector3 dir, float power )
+	private static void ShootProp( Vector3 pos, Vector3 dir, float power )
 	{
-		var jumper_object = new GameObject();
-		jumper_object.Transform.Position = pos;
-		jumper_object.Transform.Rotation = Rotation.LookAt( dir );
+		var prop_object = new GameObject();
+		prop_object.Name = "Prop";
+		prop_object.Transform.Position = pos;
+		prop_object.Transform.Rotation = Rotation.LookAt( dir );
 
-		var jumper_model = jumper_object.Components.Create<ModelRenderer>();
-		// jumper_model.Model = Model.Load( "models/sbox_stargate/puddle_jumper/puddle_jumper.vmdl" ); // multiple phys meshes, problems
-		// jumper_model.Model = Model.Load( "models/sbox_props/studio_light_projector/studio_light_projector.vmdl" ); // multiple, problems
-		// jumper_model.Model = Model.Load( "models/sbox_props/watermelon/watermelon.vmdl" ); // single, OK
-		jumper_model.Model = Model.Load( "models/sbox_props/wooden_crate/wooden_crate.vmdl" ); // single, OK
-																							   // jumper_model.Model = Model.Load( "models/sbox_props/toilet_a/toilet_a.vmdl_c" );
+		var prop = prop_object.Components.Create<Prop>();
+		prop.Model = Cloud.Model( "facepunch.toilet_a" );
 
-		var col = jumper_object.Components.Create<ModelCollider>();
-		col.Model = jumper_model.Model;
+		prop.IsStatic = true;
 
-		var phys = jumper_object.Components.Create<Rigidbody>();
+		prop.Enabled = false;
+		prop.Enabled = true;
 
-		phys.Velocity = dir.Normal * power;
-		phys.Gravity = false;
+		var body = prop_object.Components.Get<Rigidbody>();
 
-		return jumper_object;
+		if ( body.IsValid() )
+		{
+			body.Velocity = dir.Normal * power;
+		}
 	}
 
 	private GameObject ShootPuddleJumper( Vector3 pos, Vector3 dir, float power )
@@ -287,7 +281,10 @@ public class PlayerController : Component
 				// ball.Transform.Scale *= 0.2f;
 				// }
 
-				SpawnProp( pos, rot );
+				// SpawnProp( pos, rot );
+				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
+
+				StargateSceneUtils.SpawnRingPanelOri( pos, rot );
 			}
 
 			UseLogic();

@@ -20,7 +20,7 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         protected string ComposedAddress { get; private set; } = "";
         protected virtual string[] ButtonsSounds { get; } = { "goauld_button1", "goauld_button2" };
-        protected virtual string ValidButtonActions => "12345678";
+        protected virtual string ValidButtonActions => "12345678ABCDEFGHIJKL";
 
         public RingPanelButton GetButtonByAction( string action )
         {
@@ -57,7 +57,7 @@ namespace Sandbox.Components.Stargate.Rings
         {
             if ( TimeSinceButtonPressed < ButtonPressDelay ) return;
 
-            if ( ValidButtonActions.Contains( action ) || action is "DIAL" )
+            if ( (ValidButtonActions.Contains( action ) && action.Length == 1) || action is "DIAL" )
             {
                 if ( action is "DIAL" ) // we pressed dial button
                 {
