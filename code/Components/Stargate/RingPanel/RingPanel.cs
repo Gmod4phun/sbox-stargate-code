@@ -11,7 +11,7 @@ namespace Sandbox.Components.Stargate.Rings
         public ModelCollider Collider => Components.Get<ModelCollider>( FindMode.InSelf );
 
         [Property]
-        public Ringtransporter Rings { get; set; } = null;
+        public RingTransporter Rings { get; set; } = null;
 
         protected TimeSince TimeSinceButtonPressed { get; set; } = 0;
         protected float ButtonPressDelay { get; set; } = 0.35f;
@@ -37,14 +37,14 @@ namespace Sandbox.Components.Stargate.Rings
             ComposedAddress = "";
         }
 
-        public Ringtransporter FindClosestRingTransporter()
+        public RingTransporter FindClosestRingTransporter()
         {
-            return Scene.GetAllComponents<Ringtransporter>().OrderBy( x => x.Transform.Position.DistanceSquared( Transform.Position ) ).FirstOrDefault();
+            return Scene.GetAllComponents<RingTransporter>().OrderBy( x => x.Transform.Position.DistanceSquared( Transform.Position ) ).FirstOrDefault();
         }
 
-        public Ringtransporter FindRingtransporterByAddress( string address )
+        public RingTransporter FindRingtransporterByAddress( string address )
         {
-            return Scene.GetAllComponents<Ringtransporter>().FirstOrDefault( x => x.Address == address );
+            return Scene.GetAllComponents<RingTransporter>().FirstOrDefault( x => x.Address == address );
         }
 
         public void TriggerAction( string action ) // this gets called from the Panel Button after pressing it

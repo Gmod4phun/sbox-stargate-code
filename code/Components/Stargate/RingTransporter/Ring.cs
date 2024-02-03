@@ -12,7 +12,7 @@ namespace Sandbox.Components.Stargate.Rings
         public Rigidbody Body => Components.Get<Rigidbody>( true );
 
         [Property]
-        public Ringtransporter Transporter => GameObject.Parent.Components.Get<Ringtransporter>();
+        public RingTransporter Transporter => GameObject.Parent.Components.Get<RingTransporter>();
 
         [Property]
         public Transform DesiredPosition { get; set; }

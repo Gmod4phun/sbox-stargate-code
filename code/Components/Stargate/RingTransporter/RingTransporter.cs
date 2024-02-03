@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate.Rings
 {
-    public class Ringtransporter : Component
+    public class RingTransporter : Component
     {
         [Property]
         public SkinnedModelRenderer Renderer => Components.Get<SkinnedModelRenderer>( true );
@@ -9,7 +9,7 @@ namespace Sandbox.Components.Stargate.Rings
         public ModelCollider Collider => Components.Get<ModelCollider>( true );
 
         [Property]
-        public Ringtransporter OtherTransporter;
+        public RingTransporter OtherTransporter;
 
         [Property]
         public string Address { get; set; }
@@ -27,9 +27,9 @@ namespace Sandbox.Components.Stargate.Rings
 
         private bool Busy = false;
 
-        public Ringtransporter FindClosest()
+        public RingTransporter FindClosest()
         {
-            return Scene.GetAllComponents<Ringtransporter>().Where( x => x != this ).OrderBy( x => x.Transform.Position.DistanceSquared( Transform.Position ) ).FirstOrDefault();
+            return Scene.GetAllComponents<RingTransporter>().Where( x => x != this ).OrderBy( x => x.Transform.Position.DistanceSquared( Transform.Position ) ).FirstOrDefault();
         }
 
         public bool IsObjectAllowedToTeleport( GameObject obj )
@@ -122,7 +122,7 @@ namespace Sandbox.Components.Stargate.Rings
             }
         }
 
-        private void TeleportObjects( List<GameObject> objects, Ringtransporter from, Ringtransporter to )
+        private void TeleportObjects( List<GameObject> objects, RingTransporter from, RingTransporter to )
         {
             foreach ( GameObject e in objects )
             {
@@ -164,7 +164,7 @@ namespace Sandbox.Components.Stargate.Rings
             TeleportObjects( otherObjects, OtherTransporter, this );
         }
 
-        private async void DoRings( Ringtransporter other )
+        private async void DoRings( RingTransporter other )
         {
             if ( Busy )
                 return;
@@ -302,7 +302,7 @@ namespace Sandbox.Components.Stargate.Rings
             }
         }
 
-        public async void DialRings( Ringtransporter other, float delay = 0 )
+        public async void DialRings( RingTransporter other, float delay = 0 )
         {
             if ( Busy )
                 return;
