@@ -8,6 +8,8 @@ namespace Sandbox.Components.Stargate.Rings
 
         [Property]
         public string Action { get; set; } = "";
+        [Property]
+        public SoundEvent PressSound { get; set; }
         public bool On { get; set; } = false;
         private float _glowScale = 0;
 

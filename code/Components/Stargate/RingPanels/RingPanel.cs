@@ -4,7 +4,7 @@ namespace Sandbox.Components.Stargate.Rings
     using Sandbox;
 
     [Category( "Transportation Rings" )]
-    public abstract class RingPanel : Component, Component.ExecuteInEditor
+    public class RingPanel : Component, Component.ExecuteInEditor
     {
         public IEnumerable<RingPanelButton> Buttons => Components.GetAll<RingPanelButton>( FindMode.InChildren );
         public SkinnedModelRenderer Renderer => Components.Get<SkinnedModelRenderer>( FindMode.InSelf );
@@ -30,12 +30,6 @@ namespace Sandbox.Components.Stargate.Rings
         public void SetButtonState( RingPanelButton b, bool glowing )
         {
             if ( b.IsValid() ) b.On = glowing;
-        }
-
-        public void SetButtonState( string action, bool glowing )
-        {
-            var b = GetButtonByAction( action );
-            SetButtonState( b, glowing );
         }
 
         public void ResetAddress()
@@ -104,12 +98,18 @@ namespace Sandbox.Components.Stargate.Rings
 
         protected async void ToggleButton( string action )
         {
-            SetButtonState( action, true );
-            Sound.Play( action is not "DIAL" ? ButtonsSounds[1] : ButtonsSounds[0], Transform.Position );
+            var btn = GetButtonByAction( action );
+            var snd = btn?.PressSound;
+            if ( snd != null )
+            {
+                Sound.Play( snd, Transform.Position );
+            }
+
+            SetButtonState( btn, true );
 
             await GameTask.DelaySeconds( ButtonGlowDelay );
 
-            SetButtonState( action, false );
+            SetButtonState( btn, false );
         }
     }
 }

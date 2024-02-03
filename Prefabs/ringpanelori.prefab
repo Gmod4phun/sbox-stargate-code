@@ -1,0 +1,577 @@
+{
+  "RootObject": {
+    "Id": "9812222c-8c10-42ff-97d7-62bb0ff8b8f6",
+    "Name": "ringpanelori",
+    "Tags": "rings_no_teleport",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori.vmdl",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "RingPanel",
+        "ComposedAddress": "",
+        "Rings": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "25072575-c01b-48d0-ba96-9ca9b3e82272",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "1",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_1.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_1.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "bc64a004-65c6-4817-9bf5-5472a91d34a6",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "2",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_2.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_2.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "c95d24a3-f3c6-43dd-9d22-6359ab3891a5",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "3",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_3.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_3.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "79a0bd7e-80ea-44b4-a281-5b033c24272b",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "4",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_4.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_4.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "b0a35aad-8d4e-4e7f-8dce-e2cfbb8d1fb4",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "5",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_5.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_5.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a7584308-6cd9-4a8e-a890-3abd5594940d",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "A",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_6.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_6.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "d9773122-4587-4e11-9261-bc06673e9cdf",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "B",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_7.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_7.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "420b5de5-6723-4c31-8805-479657772bb8",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "C",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_8.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_8.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a5ba67b0-7934-45ff-a0a6-3067f258f1d5",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "D",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_9.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_9.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "fa352b98-0bff-4199-b075-dc10834df9bb",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "E",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_10.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_10.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "063e7ed9-6df5-49db-ab68-b7bb4aed97d9",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "F",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_11.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_11.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "0a8a1b9a-5bea-4391-891c-2dd7b387832c",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "G",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_12.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_12.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a314c05a-365b-4e37-adce-358bea074a48",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "H",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_13.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_13.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a93da6bf-28c2-4826-9dab-e8957834945e",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "I",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_14.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_14.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "b10f2969-110d-4d6a-8fa9-f85ef5e1890b",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "J",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_15.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_15.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "378f95d5-d5e4-4bd3-8516-020cacf5cbdb",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "K",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_16.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_16.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "9d518a15-2423-42cf-95f0-5ddfd63c32f3",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "L",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_17.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_17.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "69c36ba5-193f-4448-9b1d-8de6ef4ecbb5",
+        "Name": "Button",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "RingPanelButton",
+            "Action": "DIAL",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button1.sound"
+          },
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_center.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "IsTrigger": false,
+            "Model": "models/sbox_stargate/rings_panel/ori/ring_panel_ori_button_center.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

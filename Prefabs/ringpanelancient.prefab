@@ -6,11 +6,6 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "RingPanelAncient",
-        "ComposedAddress": "",
-        "Rings": null
-      },
-      {
         "__type": "SkinnedModelRenderer",
         "BodyGroups": 18446744073709551615,
         "BoneMergeTarget": null,
@@ -27,6 +22,11 @@
         "Model": "models/sbox_stargate/rings_panel/ancient/ring_panel_ancient.vmdl",
         "Static": false,
         "Surface": null
+      },
+      {
+        "__type": "RingPanel",
+        "ComposedAddress": "",
+        "Rings": null
       }
     ],
     "Children": [
@@ -37,7 +37,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "1"
+            "Action": "1",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -66,7 +67,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "2"
+            "Action": "2",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -95,7 +97,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "3"
+            "Action": "3",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -124,7 +127,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "4"
+            "Action": "4",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -153,7 +157,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "5"
+            "Action": "5",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -182,7 +187,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "6"
+            "Action": "6",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -211,7 +217,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "7"
+            "Action": "7",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -240,7 +247,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "8"
+            "Action": "8",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button2.sound"
           },
           {
             "__type": "SkinnedModelRenderer",
@@ -269,7 +277,8 @@
         "Components": [
           {
             "__type": "RingPanelButton",
-            "Action": "DIAL"
+            "Action": "DIAL",
+            "PressSound": "sounds/sbox_stargate/rings_panel/ringpanel.ancient.button1.sound"
           },
           {
             "__type": "SkinnedModelRenderer",

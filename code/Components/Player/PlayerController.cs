@@ -283,8 +283,6 @@ public class PlayerController : Component
 
 				// SpawnProp( pos, rot );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
-
-				StargateSceneUtils.SpawnRingPanelOri( pos, rot );
 			}
 
 			UseLogic();
