@@ -1,0 +1,51 @@
+{
+  "RootObject": {
+    "Id": "c3181e88-7d70-4f71-adf1-80886827542a",
+    "Name": "ringtransporter",
+    "Tags": "rings_no_teleport,ringplatform",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "RingTransporter",
+        "OtherTransporter": null,
+        "Address": "",
+        "Collider": {
+          "_type": "component",
+          "go": "c3181e88-7d70-4f71-adf1-80886827542a",
+          "component_type": "ModelCollider"
+        },
+        "PlatformHeightOffset": 0,
+        "Renderer": {
+          "_type": "component",
+          "go": "c3181e88-7d70-4f71-adf1-80886827542a",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
+        "RingsRestingHeightOffset": -8
+      },
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "SkinnedModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
