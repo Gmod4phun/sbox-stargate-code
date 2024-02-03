@@ -169,7 +169,7 @@ namespace Sandbox.Components.Stargate.Rings
             if ( Busy )
                 return;
 
-            if ( !other.IsValid() || other.Busy )
+            if ( !other.IsValid() || other.Busy || other == this )
                 return;
 
             OtherTransporter = other;
