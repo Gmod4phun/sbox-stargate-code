@@ -138,15 +138,19 @@ public class PlayerController : Component
 		return ball_object;
 	}
 
-	public static GameObject SpawnProp( Vector3 pos, Rotation rot )
+	public static async Task<GameObject> SpawnProp( Vector3 pos, Rotation rot, string ident )
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
 		prop_object.Transform.Position = pos;
 		prop_object.Transform.Rotation = rot;
 
+		var package = await Package.FetchAsync( ident, false );
+		await package.MountAsync();
+		var model = Model.Load( package.GetMeta( "PrimaryAsset", "" ) );
+
 		var prop = prop_object.Components.Create<Prop>();
-		prop.Model = Cloud.Model( "facepunch.wooden_crate" );
+		prop.Model = model;
 
 		return prop_object;
 	}
@@ -247,17 +251,22 @@ public class PlayerController : Component
 				// ball.Transform.Scale *= 0.2f;
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
 
-				if ( tr.Hit )
-				{
-					var pos = tr.HitPosition;
-					var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
+				// if ( tr.Hit )
+				// {
+				// 	var pos = tr.HitPosition;
+				// 	var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-					var gate = StargateSceneUtils.SpawnGatePrefab( pos, rot, "prefabs/stargatemilkyway.prefab" );
-					if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
-					{
-						Stargate.PutGateOnRamp( gate, ramp );
-					}
-				}
+				// 	var gate = StargateSceneUtils.SpawnGatePrefab( pos, rot, "prefabs/stargatemilkyway.prefab" );
+				// 	if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
+				// 	{
+				// 		Stargate.PutGateOnRamp( gate, ramp );
+				// 	}
+				// }
+
+				var pos = tr.HitPosition;
+				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
+
+				SpawnProp( pos, rot, "facepunch.wooden_crate" );
 			}
 
 			if ( Input.Pressed( "Attack2" ) )
@@ -281,7 +290,7 @@ public class PlayerController : Component
 				// ball.Transform.Scale *= 0.2f;
 				// }
 
-				// SpawnProp( pos, rot );
+				SpawnProp( pos, rot, "facepunch.oildrumexplosive" );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
 
