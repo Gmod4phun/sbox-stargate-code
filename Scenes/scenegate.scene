@@ -1115,7 +1115,7 @@
                 {
                   "__type": "ModelRenderer",
                   "BodyGroups": 18446744073709551615,
-                  "MaterialGroup": null,
+                  "MaterialGroup": "complex",
                   "MaterialOverride": null,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_ring.vmdl",
                   "RenderType": "On",
@@ -3826,6 +3826,147 @@
       "Tags": "rings_no_teleport",
       "Enabled": true,
       "__Prefab": "prefabs/ringpanelori.prefab"
+    },
+    {
+      "Id": "693b4e34-8ac7-4724-8943-92e98e653238",
+      "Name": "Atlantis Transporter",
+      "Position": "-320,220,5.999997",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "SkinnedModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "AtlantisTransporter",
+          "DoorLeft": {
+            "_type": "component",
+            "go": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
+            "component_type": "AtlantisTransporterDoor"
+          },
+          "DoorRight": {
+            "_type": "component",
+            "go": "7ca443d2-d037-420a-aa66-6ea0f1589679",
+            "component_type": "AtlantisTransporterDoor"
+          },
+          "DoorsOpened": false,
+          "PanelOpened": false
+        }
+      ],
+      "Children": [
+        {
+          "Id": "2c723121-f98b-4d50-923b-f8ebac734dc0",
+          "Name": "Spot Light",
+          "Position": "-32,0,134",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SpotLight",
+              "Attenuation": 0.5,
+              "ConeInner": 64,
+              "ConeOuter": 70,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 200,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "Id": "7ca443d2-d037-420a-aa66-6ea0f1589679",
+          "Name": "Door R",
+          "Position": "2,0,0",
+          "Scale": "0.5,0.925,0.925",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "AtlantisTransporterDoor",
+              "DoorMoveDistance": 28,
+              "Open": false
+            }
+          ]
+        },
+        {
+          "Id": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
+          "Name": "Door L",
+          "Position": "-2,0,0",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Scale": "0.5,0.925,0.925",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "AtlantisTransporterDoor",
+              "DoorMoveDistance": 28,
+              "Open": false
+            }
+          ]
+        },
+        {
+          "Id": "74014b5a-95a1-45cc-bf61-23f832a8ff28",
+          "Name": "Trigger",
+          "Position": "0,0,0",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "AtlantisTransporterTrigger",
+              "IsTrigger": true,
+              "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter_trigger.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -3851,6 +3992,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-03T22:33:08.6729641\u002B01:00",
+  "LastSaved": "2024-02-04T21:01:40.5201293\u002B01:00",
   "__references": []
 }
