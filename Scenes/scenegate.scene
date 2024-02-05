@@ -3853,10 +3853,12 @@
         },
         {
           "__type": "AtlantisTransporter",
-          "DoorLeft": null,
-          "DoorRight": null,
-          "DoorsOpened": false,
-          "PanelOpened": false
+          "PanelOpened": false,
+          "Trigger": {
+            "_type": "component",
+            "go": "74014b5a-95a1-45cc-bf61-23f832a8ff28",
+            "component_type": "ModelCollider"
+          }
         }
       ],
       "Children": [
@@ -3971,7 +3973,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__type": "AtlantisTransporterTrigger",
+              "__type": "ModelCollider",
               "IsTrigger": true,
               "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter_trigger.vmdl",
               "Static": false,
@@ -4085,6 +4087,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-05T21:11:27.0307536\u002B01:00",
+  "LastSaved": "2024-02-05T22:15:05.7886133\u002B01:00",
   "__references": []
 }
