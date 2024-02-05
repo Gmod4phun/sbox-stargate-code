@@ -10,10 +10,10 @@ public class AtlantisTransporter : Component, Component.ExecuteInEditor
     private AtlantisTransporterTrigger Trigger => Components.Get<AtlantisTransporterTrigger>( FindMode.InChildren );
 
     [Property]
-    private AtlantisTransporterDoor DoorRight { get; set; } = null;
+    private Door DoorRight { get; set; } = null;
 
     [Property]
-    private AtlantisTransporterDoor DoorLeft { get; set; }
+    private Door DoorLeft { get; set; }
 
     protected override void OnUpdate()
     {
@@ -26,12 +26,12 @@ public class AtlantisTransporter : Component, Component.ExecuteInEditor
 
         if ( DoorRight.IsValid() )
         {
-            DoorRight.Open = DoorsOpened;
+            DoorRight.ToggleDoor();
         }
 
         if ( DoorLeft.IsValid() )
         {
-            DoorLeft.Open = DoorsOpened;
+            DoorLeft.ToggleDoor();
         }
     }
 }

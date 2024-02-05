@@ -3853,16 +3853,8 @@
         },
         {
           "__type": "AtlantisTransporter",
-          "DoorLeft": {
-            "_type": "component",
-            "go": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
-            "component_type": "AtlantisTransporterDoor"
-          },
-          "DoorRight": {
-            "_type": "component",
-            "go": "7ca443d2-d037-420a-aa66-6ea0f1589679",
-            "component_type": "AtlantisTransporterDoor"
-          },
+          "DoorLeft": null,
+          "DoorRight": null,
           "DoorsOpened": false,
           "PanelOpened": false
         }
@@ -3878,8 +3870,29 @@
             {
               "__type": "SpotLight",
               "Attenuation": 0.5,
-              "ConeInner": 64,
-              "ConeOuter": 70,
+              "ConeInner": 60,
+              "ConeOuter": 90,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 200,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "Id": "28f881ad-afea-4c31-a0a1-3028fab80228",
+          "Name": "Spot Light",
+          "Position": "-32,0,114.6548",
+          "Rotation": "0,-0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SpotLight",
+              "Attenuation": 0.5,
+              "ConeInner": 60,
+              "ConeOuter": 90,
               "Cookie": null,
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -3892,7 +3905,7 @@
         {
           "Id": "7ca443d2-d037-420a-aa66-6ea0f1589679",
           "Name": "Door R",
-          "Position": "2,0,0",
+          "Position": "0,0,0",
           "Scale": "0.5,0.925,0.925",
           "Enabled": true,
           "Components": [
@@ -3913,16 +3926,16 @@
               "Surface": null
             },
             {
-              "__type": "AtlantisTransporterDoor",
-              "DoorMoveDistance": 28,
-              "Open": false
+              "__type": "Door",
+              "currentDoorState": "Closed",
+              "DoorMoveDistance": 32
             }
           ]
         },
         {
           "Id": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
           "Name": "Door L",
-          "Position": "-2,0,0",
+          "Position": "0,0,0",
           "Rotation": "0,0,1,-0.00000004371139",
           "Scale": "0.5,0.925,0.925",
           "Enabled": true,
@@ -3944,9 +3957,9 @@
               "Surface": null
             },
             {
-              "__type": "AtlantisTransporterDoor",
-              "DoorMoveDistance": 28,
-              "Open": false
+              "__type": "Door",
+              "currentDoorState": "Closed",
+              "DoorMoveDistance": 32
             }
           ]
         },
@@ -3963,6 +3976,86 @@
               "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter_trigger.vmdl",
               "Static": false,
               "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "90ef44dd-72ef-42f0-bfe4-408d73797f0c",
+          "Name": "Door Controller",
+          "Position": "3.665009,36,60",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "DoorController",
+              "Doors": [
+                {
+                  "_type": "component",
+                  "go": "7ca443d2-d037-420a-aa66-6ea0f1589679",
+                  "component_type": "Door"
+                },
+                {
+                  "_type": "component",
+                  "go": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
+                  "component_type": "Door"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": "32dafc39-9377-471f-9755-852852ed8f3e",
+          "Name": "Door Controller",
+          "Position": "-4.5,-36,60",
+          "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "DoorController",
+              "Doors": [
+                {
+                  "_type": "component",
+                  "go": "7ca443d2-d037-420a-aa66-6ea0f1589679",
+                  "component_type": "Door"
+                },
+                {
+                  "_type": "component",
+                  "go": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
+                  "component_type": "Door"
+                }
+              ]
             }
           ]
         }
@@ -3992,6 +4085,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-04T21:01:40.5201293\u002B01:00",
+  "LastSaved": "2024-02-05T21:11:27.0307536\u002B01:00",
   "__references": []
 }
