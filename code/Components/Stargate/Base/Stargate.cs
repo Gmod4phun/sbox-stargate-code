@@ -31,7 +31,6 @@ namespace Sandbox.Components.Stargate
 
 		// public IStargateRamp Ramp { get; set; } = null;
 
-		[Net]
 		public Vector3 SpawnOffset { get; private set; } = new( 0, 0, 95 );
 
 		public List<Chevron> Chevrons => GameObject.Children.Where( go => go.Components.Get<Chevron>().IsValid() ).Select( go => go.Components.Get<Chevron>() ).ToList();
@@ -54,7 +53,6 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public string GateGroup { get; protected set; } = "";
 
-		[Net]
 		public int GateGroupLength { get; set; } = 2;
 
 		[Property]
@@ -76,22 +74,14 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public bool ShowWormholeCinematic { get; set; } = false;
 
-		[Net]
 		public bool Busy { get; set; } = false; // this is pretty much used anytime the gate is busy to do anything (usually during animations/transitions)
 
-		[Net]
 		public bool Inbound { get; set; } = false;
-
-		[Net]
 		public bool ShouldStopDialing { get; set; } = false;
 
-		[Net]
 		public GateState CurGateState { get; set; } = GateState.IDLE;
-
-		[Net]
 		public DialType CurDialType { get; set; } = DialType.FAST;
 
-		[Net]
 		public bool IsManualDialInProgress { get; set; } = false;
 
 		// gate state accessors
@@ -102,25 +92,18 @@ namespace Sandbox.Components.Stargate
 		public bool Open { get => CurGateState is GateState.OPEN; }
 		public bool Closing { get => CurGateState is GateState.CLOSING; }
 
-		[Net]
 		public string DialingAddress { get; set; } = "";
 
-		[Net]
 		public int ActiveChevrons { get; set; } = 0;
 
-		[Net]
 		public bool IsLocked { get; set; } = false;
 
-		[Net]
 		public bool IsLockedInvalid { get; set; } = false;
 
-		[Net]
 		public char CurDialingSymbol { get; set; } = ' ';
 
-		[Net]
 		public char CurRingSymbol { get; set; } = ' ';
 
-		[Net]
 		public float CurRingSymbolOffset { get; set; } = 0;
 
 		[Property]
