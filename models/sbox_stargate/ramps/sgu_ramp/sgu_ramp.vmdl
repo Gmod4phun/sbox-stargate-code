@@ -1,0 +1,242 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						name = "off"
+						remaps = 
+						[
+							{
+								from = "sgu_ramp.vmat"
+								to = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_off.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+					{
+						_class = "MaterialGroup"
+						name = "on_lights"
+						remaps = 
+						[
+							{
+								from = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_off.vmat"
+								to = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_on_lights.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "on_chev"
+						remaps = 
+						[
+							{
+								from = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_off.vmat"
+								to = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_on_chev.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "old_off"
+						remaps = 
+						[
+							{
+								from = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_off.vmat"
+								to = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_old_off.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "old_on_lights"
+						remaps = 
+						[
+							{
+								from = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_off.vmat"
+								to = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_old_on_lights.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "old_on_chev"
+						remaps = 
+						[
+							{
+								from = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_off.vmat"
+								to = "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp_old_on_chev.vmat"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFile"
+						name = "sgu_ramp_physics"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/sbox_stargate/ramps/sgu_ramp/src/sgu_ramp_physics.smd"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "HullPerElement"
+						optimization_algorithm = "Exact"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/sbox_stargate/ramps/sgu_ramp/src/sgu_ramp.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "light1"
+						parent_bone = ""
+						relative_origin = [ 233.5, 70.5, -39.0 ]
+						relative_angles = [ -73.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light2"
+						parent_bone = ""
+						relative_origin = [ 233.5, -70.5, -39.0 ]
+						relative_angles = [ -73.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light3"
+						parent_bone = ""
+						relative_origin = [ 124.5, 70.5, -5.5 ]
+						relative_angles = [ -73.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light4"
+						parent_bone = ""
+						relative_origin = [ 124.5, -70.5, -5.5 ]
+						relative_angles = [ -73.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light5"
+						parent_bone = ""
+						relative_origin = [ 35.0, 142.5, -55.5 ]
+						relative_angles = [ -45.0, 90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light6"
+						parent_bone = ""
+						relative_origin = [ 35.0, -142.5, -55.5 ]
+						relative_angles = [ -45.0, -90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light7"
+						parent_bone = ""
+						relative_origin = [ -35.0, 142.5, -55.5 ]
+						relative_angles = [ -45.0, 90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light8"
+						parent_bone = ""
+						relative_origin = [ -35.0, -142.5, -55.5 ]
+						relative_angles = [ -45.0, -90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "light9"
+						parent_bone = ""
+						relative_origin = [ 35.0, 0.0, 0.5 ]
+						relative_angles = [ -90.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.75
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+		]
+		model_archetype = "default"
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

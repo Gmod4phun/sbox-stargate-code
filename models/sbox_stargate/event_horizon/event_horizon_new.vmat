@@ -1,0 +1,33 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/eventhorizon.shader_c"
+
+	//---- Rendering ----
+	F_DO_NOT_CAST_SHADOWS 1
+
+	Color "materials/default/default_color.tga"
+	g_bGrayscale "0"
+	g_flIllumbrightness "1.000"
+	g_flInMax "1.000"
+	g_flInMin "0.460"
+	g_flOutMax "0.534"
+	g_flOutMin "0.075"
+	g_vSaturation "[0.294118 0.298039 0.341176 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	Attributes
+	{
+		illumbrightness "1"
+		alpha "1"
+	}
+
+	DynamicParams
+	{
+		Color "texture"
+		g_flIllumbrightness "illumbrightness"
+	}
+}

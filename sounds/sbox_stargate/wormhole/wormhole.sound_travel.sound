@@ -1,0 +1,16 @@
+{
+	"data":
+	{
+		"UI": true,
+		"Volume": "0.30,0.30,0",
+		"Pitch": "1.00,1.00,0",
+		"Decibels": 25,
+		"SelectionMode": "Forward",
+		"Sounds":
+		[
+			"sounds/sbox_stargate/wormhole/sound_stargate_travel.vsnd"
+		],
+		"MaximumDistance": 173.828260,
+		"MinimumDistance": 8.691413
+	}
+}

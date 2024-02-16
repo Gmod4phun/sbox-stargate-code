@@ -1,0 +1,24 @@
+{
+	"data":
+	{
+		"UI": false,
+		"Volume": 1,
+		"VolumeRandom": 0,
+		"Pitch": 1,
+		"PitchRandom": 0,
+		"Decibels": 50,
+		"Sounds":
+		[
+			"sounds/sbox_stargate/dhd/sg1/press1.vsnd",
+			"sounds/sbox_stargate/dhd/sg1/press2.vsnd",
+			"sounds/sbox_stargate/dhd/sg1/press3.vsnd",
+			"sounds/sbox_stargate/dhd/sg1/press4.vsnd",
+			"sounds/sbox_stargate/dhd/sg1/press5.vsnd",
+			"sounds/sbox_stargate/dhd/sg1/press6.vsnd",
+			"sounds/sbox_stargate/dhd/sg1/press7.vsnd"
+		],
+		"SelectionMode": "RandomExclusive",
+		"MaximumDistance": 599.313050,
+		"MinimumDistance": 29.965652
+	}
+}

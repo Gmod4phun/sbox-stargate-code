@@ -1,0 +1,15 @@
+{
+	"data":
+	{
+		"sounds":
+		[
+			"sounds/sbox_stargate/stargate/universe/sgu_symbol_encode_mix.vsnd"
+		],
+		"UI": false,
+		"Volume": 1.250000,
+		"VolumeRandom": 0.000000,
+		"Pitch": 1.000000,
+		"PitchRandom": 0.000000,
+		"DistanceMax": 1000.000000
+	}
+}

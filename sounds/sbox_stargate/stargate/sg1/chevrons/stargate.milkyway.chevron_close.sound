@@ -1,0 +1,17 @@
+{
+	"data":
+	{
+		"sounds":
+		[
+			"sounds/sbox_stargate/stargate/sg1/chevrons/close1.vsnd",
+			"sounds/sbox_stargate/stargate/sg1/chevrons/close2.vsnd",
+			"sounds/sbox_stargate/stargate/sg1/chevrons/close3.vsnd"
+		],
+		"UI": false,
+		"Volume": 1.000000,
+		"VolumeRandom": 0.000000,
+		"Pitch": 1.000000,
+		"PitchRandom": 0.000000,
+		"DistanceMax": 1000.000000
+	}
+}

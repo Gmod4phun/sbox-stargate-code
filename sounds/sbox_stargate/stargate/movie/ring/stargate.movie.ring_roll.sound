@@ -1,0 +1,15 @@
+{
+	"data":
+	{
+		"sounds":
+		[
+			"sounds/sbox_stargate/stargate/movie/ring/gate_movie_ring_roll.vsnd"
+		],
+		"UI": false,
+		"Volume": 2.000000,
+		"VolumeRandom": 0.000000,
+		"Pitch": 1.000000,
+		"PitchRandom": 0.000000,
+		"DistanceMax": 1000.000000
+	}
+}

@@ -1,0 +1,8 @@
+"Layer0"
+{
+	"shader"		"shaders/sky.shader_c"
+	"F_TEXTURE_FORMAT2"		"6"
+	"g_flBrightnessExposureBias"		"0.000000"
+	"g_flRenderOnlyExposureBias"		"-1.636000"
+	"SkyTexture"		"models/sbox_stargate/wormhole/tex/space_skybox.tga"
+}
