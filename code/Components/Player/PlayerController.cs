@@ -11,7 +11,11 @@ public class PlayerController : Component
 	[Property] public GameObject Body { get; set; }
 	[Property] public GameObject Eye { get; set; }
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
+	[Property] public CharacterController Controller => Components.Get<CharacterController>();
 	[Property] public bool FirstPerson { get; set; }
+
+	[Property]
+	public int CurrentWorldIndex { get; set; } = 0;
 
 	[Sync]
 	public Angles EyeAngles { get; set; }
@@ -57,19 +61,18 @@ public class PlayerController : Component
 
 	public Vector3 GetPlayerVelocity()
 	{
-		var cc = GameObject.Components.Get<CharacterController>();
-		if ( cc is null )
+		if ( Controller is null )
 			return Vector3.Zero;
 
-		return cc.Velocity;
+		return Controller.Velocity;
 	}
 
 	public void SetPlayerVelocity( Vector3 velocity )
 	{
-		var cc = GameObject.Components.Get<CharacterController>();
-		if ( cc is null ) return;
+		if ( Controller is null )
+			return;
 
-		cc.Velocity = velocity;
+		Controller.Velocity = velocity;
 	}
 
 	private void UseLogic()
@@ -297,7 +300,7 @@ public class PlayerController : Component
 			UseLogic();
 		}
 
-		var cc = GameObject.Components.Get<CharacterController>();
+		var cc = Controller;
 		if ( cc is null ) return;
 
 		float rotateDifference = 0;
@@ -350,7 +353,7 @@ public class PlayerController : Component
 
 		BuildWishVelocity();
 
-		var cc = GameObject.Components.Get<CharacterController>();
+		var cc = Controller;
 
 		if ( cc.IsOnGround && Input.Down( "Jump" ) )
 		{

@@ -1,6 +1,7 @@
 public sealed class FootstepEvent : Component
 {
 	[Property] SkinnedModelRenderer Source { get; set; }
+	[Property] PlayerController Player => Components.Get<PlayerController>( FindMode.InSelf );
 
 	protected override void OnEnabled()
 	{
@@ -20,14 +21,17 @@ public sealed class FootstepEvent : Component
 
 	private void OnEvent( SceneModel.FootstepEvent e )
 	{
-        var tr = Scene.Trace
+		var currentWorldTag = MultiWorldSystem.GetWorldTag( Player.CurrentWorldIndex );
+
+		var tr = Scene.Trace
 			.Ray( e.Transform.Position + Vector3.Up * 20, e.Transform.Position + Vector3.Up * -20 )
+			.WithTag( currentWorldTag )
 			.Run();
 
 		if ( !tr.Hit )
 			return;
 
-		var sound = Sound.Play("footstep-concrete", e.Transform.Position);
+		var sound = Sound.Play( "footstep-concrete", e.Transform.Position );
 		sound.Volume = e.Volume;
 	}
 }
