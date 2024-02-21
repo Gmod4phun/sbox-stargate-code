@@ -502,6 +502,10 @@ namespace Sandbox.Components.Stargate
 			{
 				Gate.AutoCloseTime = Time.Now + Stargate.AutoCloseTimerDuration + (Gate.ShowWormholeCinematic ? 7 : 0);
 			}
+
+			// handle multiWorld switching
+			var targetWorldIndex = MultiWorldSystem.Current.GetWorldIndexOfObject( otherEH.Gate.GameObject );
+			MultiWorldSystem.Current.AssignWorldToObject( ent, targetWorldIndex );
 		}
 
 		public void DissolveEntity( GameObject ent )

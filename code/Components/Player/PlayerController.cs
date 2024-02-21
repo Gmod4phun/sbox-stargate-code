@@ -141,12 +141,14 @@ public class PlayerController : Component
 		return ball_object;
 	}
 
-	public static async Task<GameObject> SpawnProp( Vector3 pos, Rotation rot, string ident )
+	public static async Task<GameObject> SpawnProp( Vector3 pos, Rotation rot, string ident, int worldIndex )
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
 		prop_object.Transform.Position = pos;
 		prop_object.Transform.Rotation = rot;
+
+		MultiWorldSystem.Current.AssignWorldToObject( prop_object, worldIndex );
 
 		var package = await Package.FetchAsync( ident, false );
 		await package.MountAsync();
@@ -269,7 +271,7 @@ public class PlayerController : Component
 				var pos = tr.HitPosition;
 				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-				SpawnProp( pos, rot, "facepunch.wooden_crate" );
+				SpawnProp( pos, rot, "facepunch.wooden_crate", CurrentWorldIndex );
 			}
 
 			if ( Input.Pressed( "Attack2" ) )
@@ -293,7 +295,7 @@ public class PlayerController : Component
 				// ball.Transform.Scale *= 0.2f;
 				// }
 
-				SpawnProp( pos, rot, "facepunch.oildrumexplosive" );
+				SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
 

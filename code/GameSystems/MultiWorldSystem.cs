@@ -1,5 +1,7 @@
 public class MultiWorldSystem : GameObjectSystem
 {
+    public static MultiWorldSystem Current => GameManager.ActiveScene.GetSystem<MultiWorldSystem>();
+
     public Dictionary<int, HashSet<GameObject>> WorldObjectsMap = new();
     public Dictionary<GameObject, int> GameObjectWorldMap = new();
 
@@ -15,6 +17,16 @@ public class MultiWorldSystem : GameObjectSystem
     public static string GetWorldTag( int worldIndex )
     {
         return $"world_{worldIndex}";
+    }
+
+    public int GetWorldIndexOfObject( GameObject gameObject )
+    {
+        if ( GameObjectWorldMap.TryGetValue( gameObject, out var worldIndex ) )
+        {
+            return worldIndex;
+        }
+
+        return -1;
     }
 
     public void AddNewWorld()
@@ -141,12 +153,15 @@ public class MultiWorldSystem : GameObjectSystem
             {
                 camera.RenderExcludeTags.Add( t );
                 controller.IgnoreLayers.Add( t );
+                player.Tags.Remove( t );
             }
         }
 
         // remove exluce tag of the world we will be in
         camera.RenderExcludeTags.Remove( newWorldTag );
         controller.IgnoreLayers.Remove( newWorldTag );
+        player.Tags.Add( newWorldTag );
+        player.CurrentWorldIndex = worldIndex;
 
         Log.Info( $"Player {player} is moving to {newWorldTag}" );
     }

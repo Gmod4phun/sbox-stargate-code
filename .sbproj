@@ -39,7 +39,10 @@
         "ringsring": "Unset",
         "terrain": "Unset",
         "ehtrigger": "Unset",
-        "ringplatform": "Unset"
+        "ringplatform": "Unset",
+        "world_0": "Unset",
+        "world_1": "Unset",
+        "world_2": "Unset"
       },
       "Pairs": [
         {
@@ -85,6 +88,21 @@
         {
           "a": "ringsring",
           "b": "ringplatform",
+          "r": "Ignore"
+        },
+        {
+          "a": "world_0",
+          "b": "world_2",
+          "r": "Ignore"
+        },
+        {
+          "a": "world_0",
+          "b": "world_1",
+          "r": "Ignore"
+        },
+        {
+          "a": "world_1",
+          "b": "world_2",
           "r": "Ignore"
         }
       ]
