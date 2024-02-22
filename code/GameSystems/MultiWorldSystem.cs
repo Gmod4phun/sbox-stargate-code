@@ -1,16 +1,15 @@
 public class MultiWorldSystem : GameObjectSystem
 {
-    public static MultiWorldSystem Current => GameManager.ActiveScene.GetSystem<MultiWorldSystem>();
+    // public static MultiWorldSystem Current => GameManager.ActiveScene.GetSystem<MultiWorldSystem>();
 
-    public Dictionary<int, HashSet<GameObject>> WorldObjectsMap = new();
-    public Dictionary<GameObject, int> GameObjectWorldMap = new();
-
-    public IEnumerable<int> AllWorldIndices => WorldObjectsMap.Keys;
-    public int HighestWorldIndex => WorldObjectsMap.Keys.Any() ? WorldObjectsMap.Keys.Max() : -1;
+    // public Dictionary<int, MultiWorld> Worlds = new();
+    public static IEnumerable<MultiWorld> Worlds => GameManager.ActiveScene.GetAllComponents<MultiWorld>();
+    public static IEnumerable<int> AllWorldIndices => Worlds.Select( w => w.WorldIndex );
 
     public MultiWorldSystem( Scene scene ) : base( scene )
     {
         Listen( Stage.PhysicsStep, 10, ProcessWorlds, "DoingSomething" );
+
         Init();
     }
 
@@ -19,118 +18,64 @@ public class MultiWorldSystem : GameObjectSystem
         return $"world_{worldIndex}";
     }
 
-    public int GetWorldIndexOfObject( GameObject gameObject )
+    public static bool WorldExists( int worldIndex )
     {
-        if ( GameObjectWorldMap.TryGetValue( gameObject, out var worldIndex ) )
+        return AllWorldIndices.Contains( worldIndex );
+    }
+
+    public static MultiWorld GetWorldByIndex( int worldIndex )
+    {
+        return Worlds.FirstOrDefault( w => w.WorldIndex == worldIndex );
+    }
+
+    public static int GetWorldIndexOfObject( GameObject gameObject )
+    {
+        if ( gameObject.Components.TryGet<MultiWorld>( out var world, FindMode.InAncestors ) )
         {
-            return worldIndex;
+            return world.WorldIndex;
         }
 
         return -1;
     }
 
-    public void AddNewWorld()
+    public static bool AreObjectsInSameWorld( GameObject a, GameObject b )
     {
-        var newWorldIndex = HighestWorldIndex + 1;
-        AddWorld( newWorldIndex );
-    }
-
-    public void AddWorld( int worldIndex )
-    {
-        if ( WorldObjectsMap.ContainsKey( worldIndex ) )
+        if ( a.Components.TryGet<MultiWorld>( out var worldA, FindMode.InAncestors ) )
         {
-            Log.Error( $"World {worldIndex} already exists" );
-            return;
-        }
-
-        WorldObjectsMap[worldIndex] = new();
-    }
-
-    public void RemoveWorld( int worldIndex )
-    {
-        if ( WorldObjectsMap.TryGetValue( worldIndex, out var objects ) )
-        {
-            if ( objects.Any() )
+            if ( b.Components.TryGet<MultiWorld>( out var worldB, FindMode.InAncestors ) )
             {
-                Log.Error( $"World {worldIndex} has objects in it, cannot remove" );
-                return;
+                return worldA.WorldIndex == worldB.WorldIndex;
             }
         }
 
-        WorldObjectsMap.Remove( worldIndex );
+        return false;
     }
 
-    public void AssignWorldToObject( GameObject gameObject, int worldIndex )
+    public static void AssignWorldToObject( GameObject gameObject, int worldIndex )
     {
-        if ( !WorldObjectsMap.TryGetValue( worldIndex, out var objects ) )
+        if ( !WorldExists( worldIndex ) )
         {
             Log.Error( $"World {worldIndex} does not exist" );
             return;
         }
 
-        if ( GameObjectWorldMap.TryGetValue( gameObject, out var currentWorldIndex ) )
-        {
-            if ( currentWorldIndex == worldIndex )
-            {
-                Log.Warning( $"Object {gameObject} is already in the desired world {worldIndex}" );
-                return;
-            }
-
-            // remove from current world (if any)
-            if ( WorldObjectsMap.TryGetValue( currentWorldIndex, out var currentWorldObjects ) )
-            {
-                currentWorldObjects.Remove( gameObject );
-                gameObject.Tags.Remove( GetWorldTag( currentWorldIndex ) );
-            }
-        }
-
         // add to new world
-        WorldObjectsMap[worldIndex].Add( gameObject );
-        GameObjectWorldMap[gameObject] = worldIndex;
-        gameObject.Tags.Add( GetWorldTag( worldIndex ) );
+        gameObject.Parent = GetWorldByIndex( worldIndex ).GameObject;
+
+        // temp fix until tags update after parenting is fixed
+        gameObject.Tags.Toggle( "_" );
+        gameObject.Tags.Toggle( "_" );
 
         // if it's a player, handle that
         if ( gameObject.Components.TryGet<PlayerController>( out var ply ) )
         {
             AssignWorldToPlayer( ply, worldIndex );
         }
+
+        // Log.Info( $"Object {gameObject} has moved to world {worldIndex}" );
     }
 
-    public void RemoveObjectFromWorld( GameObject gameObject )
-    {
-        if ( GameObjectWorldMap.TryGetValue( gameObject, out var worldIndex ) )
-        {
-            if ( WorldObjectsMap.TryGetValue( worldIndex, out var objects ) )
-            {
-                objects.Remove( gameObject );
-            }
-
-            GameObjectWorldMap.Remove( gameObject );
-        }
-    }
-
-    public async void AssignAllObjectsToDesiredWorlds()
-    {
-        await Task.Delay( 10 );
-
-        foreach ( var gameObject in GameManager.ActiveScene.GetAllObjects( false ) )
-        {
-            var allWorldTags = AllWorldIndices.Select( GetWorldTag ).ToHashSet();
-
-            foreach ( var tag in allWorldTags )
-            {
-                if ( gameObject.Tags.Has( tag ) )
-                {
-                    var worldIndex = tag.Split( '_' ).Last().ToInt();
-                    AssignWorldToObject( gameObject, worldIndex );
-                }
-            }
-
-            // Log.Info( $"Assigning {gameObject} to default world" );
-        }
-    }
-
-    public void AssignWorldToPlayer( PlayerController player, int worldIndex )
+    private static void AssignWorldToPlayer( PlayerController player, int worldIndex )
     {
         if ( !player.IsValid() )
             return;
@@ -153,50 +98,74 @@ public class MultiWorldSystem : GameObjectSystem
             {
                 camera.RenderExcludeTags.Add( t );
                 controller.IgnoreLayers.Add( t );
-                player.Tags.Remove( t );
+                // player.Tags.Remove( t );
             }
         }
 
         // remove exluce tag of the world we will be in
         camera.RenderExcludeTags.Remove( newWorldTag );
         controller.IgnoreLayers.Remove( newWorldTag );
-        player.Tags.Add( newWorldTag );
+        // player.Tags.Add( newWorldTag );
         player.CurrentWorldIndex = worldIndex;
-
-        Log.Info( $"Player {player} is moving to {newWorldTag}" );
     }
+
+    /*
+    public async void AssignAllObjectsToDesiredWorlds()
+    {
+        await Task.Delay( 10 );
+
+        foreach ( var gameObject in GameManager.ActiveScene.GetAllObjects( false ) )
+        {
+            var allWorldTags = AllWorldIndices.Select( GetWorldTag ).ToHashSet();
+
+            foreach ( var tag in allWorldTags )
+            {
+                if ( gameObject.Tags.Has( tag ) )
+                {
+                    var worldIndex = tag.Split( '_' ).Last().ToInt();
+                    AssignWorldToObject( gameObject, worldIndex );
+                }
+            }
+
+            // Log.Info( $"Assigning {gameObject} to default world" );
+        }
+    }
+    */
 
     public void Init()
     {
-        AddWorld( 0 ); // add the default world as world_0
+        // AddWorld( 0 ); // add the default world as world_0
 
         // Add some other worlds
-        AddWorld( 1 );
-        AddWorld( 2 );
+        // AddWorld( 1 );
+        // AddWorld( 2 );
 
-        AssignAllObjectsToDesiredWorlds();
+        // AssignAllObjectsToDesiredWorlds();
+
+        InitializePlayers();
     }
 
-    void ProcessWorlds()
+    private async void InitializePlayers()
     {
-        // Log.Info( $"Highest world index is {HighestWorldIndex}" );
-
-        // var allThings = Scene.GetAllComponents<MyThing>();
-        // do something to all of the things
-
-        // Log.Info( Scene.GetAllObjects( true ).Count() );
+        await Task.Delay( 10 );
 
         foreach ( var player in Scene.GetAllComponents<PlayerController>() )
         {
             if ( player.IsValid() )
             {
-                if ( GameObjectWorldMap.TryGetValue( player.GameObject, out var currentWorldIndex ) )
-                {
-                    if ( player.CurrentWorldIndex != currentWorldIndex )
-                    {
-                        AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
-                    }
-                }
+                Log.Info( "MultiWorld: Initializing player" );
+                AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
+            }
+        }
+    }
+
+    void ProcessWorlds()
+    {
+        foreach ( var player in Scene.GetAllComponents<PlayerController>() )
+        {
+            if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
+            {
+                AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
             }
         }
     }

@@ -59,6 +59,9 @@ namespace Sandbox.Components.Stargate
                 var pos = ButtonCollider.KeyframeBody.MassCenter;
                 if ( pos.DistanceSquared( Scene.Camera.Transform.Position ) < 4096 )
                 {
+                    if ( !MultiWorldSystem.AreObjectsInSameWorld( Scene.Camera.GameObject, GameObject ) )
+                        return;
+
                     using ( Gizmo.Scope( "DhdSymbol", global::Transform.Zero ) )
                     {
                         if ( Action != "DIAL" && !Disabled )

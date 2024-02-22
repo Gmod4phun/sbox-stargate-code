@@ -504,8 +504,8 @@ namespace Sandbox.Components.Stargate
 			}
 
 			// handle multiWorld switching
-			var targetWorldIndex = MultiWorldSystem.Current.GetWorldIndexOfObject( otherEH.Gate.GameObject );
-			MultiWorldSystem.Current.AssignWorldToObject( ent, targetWorldIndex );
+			var targetWorldIndex = MultiWorldSystem.GetWorldIndexOfObject( otherEH.GameObject );
+			MultiWorldSystem.AssignWorldToObject( ent, targetWorldIndex );
 		}
 
 		public void DissolveEntity( GameObject ent )
@@ -697,6 +697,9 @@ namespace Sandbox.Components.Stargate
 
 		public void StartTouchEH( GameObject other, bool fromBack )
 		{
+			if ( !MultiWorldSystem.AreObjectsInSameWorld( GameObject, other ) )
+				return;
+
 			if ( !other.IsValid() || other == CurrentTeleportingEntity )
 				return;
 

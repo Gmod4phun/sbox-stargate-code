@@ -537,7 +537,11 @@ namespace Sandbox.Components.Stargate
                 return true;
 
             // if our parent isnt the scene, we are a child of something else
-            if ( e.Parent is not Scene _ )
+            // if ( e.Parent is not Scene _ )
+            //     return false;
+
+            // if our parent does not have a multiworld component, we are not the root object, so we are not allowed
+            if ( !e.Parent.Components.TryGet<MultiWorld>( out var _, FindMode.InSelf ) )
                 return false;
 
             if ( e.Components.Get<Rigidbody>() is null )

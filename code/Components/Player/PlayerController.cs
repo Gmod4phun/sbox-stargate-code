@@ -87,7 +87,8 @@ public class PlayerController : Component
 
 		_currentOutline = null;
 
-		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).Run();
+		var curTag = MultiWorldSystem.GetWorldTag( CurrentWorldIndex );
+		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).WithTag( curTag ).Run();
 		if ( tr.Hit )
 		{
 			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
@@ -148,7 +149,7 @@ public class PlayerController : Component
 		prop_object.Transform.Position = pos;
 		prop_object.Transform.Rotation = rot;
 
-		MultiWorldSystem.Current.AssignWorldToObject( prop_object, worldIndex );
+		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
 
 		var package = await Package.FetchAsync( ident, false );
 		await package.MountAsync();
@@ -160,23 +161,22 @@ public class PlayerController : Component
 		return prop_object;
 	}
 
-	private static void ShootProp( Vector3 pos, Vector3 dir, float power )
+	private static async void ShootProp( Vector3 pos, Vector3 dir, float power, int worldIndex )
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
 		prop_object.Transform.Position = pos;
 		prop_object.Transform.Rotation = Rotation.LookAt( dir );
 
+		var worldobject = GameManager.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Name == $"World {worldIndex}" );
+		prop_object.SetParent( worldobject, false );
+
+		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
+
 		var prop = prop_object.Components.Create<Prop>();
-		prop.Model = Cloud.Model( "facepunch.toilet_a" );
-
-		prop.IsStatic = true;
-
-		prop.Enabled = false;
-		prop.Enabled = true;
+		prop.Model = Cloud.Model( "facepunch.wooden_crate" );
 
 		var body = prop_object.Components.Get<Rigidbody>();
-
 		if ( body.IsValid() )
 		{
 			body.Velocity = dir.Normal * power;
@@ -254,7 +254,9 @@ public class PlayerController : Component
 			{
 				// var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 4000 );
 				// ball.Transform.Scale *= 0.2f;
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
+				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 )
+					.WithoutTags( "player_collider" )
+					.WithTag( MultiWorldSystem.GetWorldTag( CurrentWorldIndex ) ).Run();
 
 				// if ( tr.Hit )
 				// {
@@ -271,12 +273,17 @@ public class PlayerController : Component
 				var pos = tr.HitPosition;
 				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-				SpawnProp( pos, rot, "facepunch.wooden_crate", CurrentWorldIndex );
+				// SpawnProp( pos, rot, "facepunch.wooden_crate", CurrentWorldIndex );
+
+				ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000, CurrentWorldIndex );
 			}
 
 			if ( Input.Pressed( "Attack2" ) )
 			{
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 ).WithoutTags( "player_collider" ).Run();
+				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 )
+					.WithoutTags( "player_collider" )
+					.WithTag( MultiWorldSystem.GetWorldTag( CurrentWorldIndex ) ).Run();
+
 				// if ( tr.Hit )
 				// {
 				var pos = tr.HitPosition;
