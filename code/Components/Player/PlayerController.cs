@@ -149,14 +149,34 @@ public class PlayerController : Component
 		prop_object.Transform.Position = pos;
 		prop_object.Transform.Rotation = rot;
 
-		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
-
 		var package = await Package.FetchAsync( ident, false );
 		await package.MountAsync();
 		var model = Model.Load( package.GetMeta( "PrimaryAsset", "" ) );
 
 		var prop = prop_object.Components.Create<Prop>();
 		prop.Model = model;
+
+		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
+
+		return prop_object;
+	}
+
+	public static async Task<GameObject> SpawnCitizenRagdoll( Vector3 pos, Rotation rot, int worldIndex )
+	{
+		var prop_object = new GameObject();
+		prop_object.Name = "Prop";
+		prop_object.Transform.Position = pos;
+		prop_object.Transform.Rotation = rot;
+
+		var model = Model.Load( "models/citizen/citizen.vmdl" );
+
+		var prop = prop_object.Components.Create<Prop>();
+		prop.Model = model;
+
+		prop.Enabled = false;
+		prop.Enabled = true;
+
+		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
 
 		return prop_object;
 	}
@@ -171,8 +191,6 @@ public class PlayerController : Component
 		var worldobject = GameManager.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Name == $"World {worldIndex}" );
 		prop_object.SetParent( worldobject, false );
 
-		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
-
 		var prop = prop_object.Components.Create<Prop>();
 		prop.Model = Cloud.Model( "facepunch.wooden_crate" );
 
@@ -181,6 +199,8 @@ public class PlayerController : Component
 		{
 			body.Velocity = dir.Normal * power;
 		}
+
+		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
 	}
 
 	private GameObject ShootPuddleJumper( Vector3 pos, Vector3 dir, float power )
@@ -302,7 +322,8 @@ public class PlayerController : Component
 				// ball.Transform.Scale *= 0.2f;
 				// }
 
-				SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
+				// SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
+				SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
 

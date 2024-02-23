@@ -1,3 +1,5 @@
+using System.Net.Sockets;
+
 namespace Sandbox.Components.Stargate
 {
     public class Dhd : Component, Component.ExecuteInEditor
@@ -440,7 +442,8 @@ namespace Sandbox.Components.Stargate
 
                     PressedActions.Add( action );
                     PlayButtonPressAnim( button );
-                    Stargate.PlaySound( Transform.Position + Transform.Rotation.Up * 16, Data.ButtonPressSound );
+
+                    Stargate.PlaySoundInWorld( MultiWorldSystem.GetWorldIndexOfObject( GameObject ), Transform.Position + Transform.Rotation.Up * 16, Data.ButtonPressSound );
                 }
             }
         }

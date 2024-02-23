@@ -481,6 +481,19 @@ namespace Sandbox.Components.Stargate
             Sound.Play( name, position );
         }
 
+        // TODO: try to setup multiworld audio
+        [Broadcast]
+        public static void PlaySoundInWorld( int worldIndex, Vector3 position, string name, float delay = 0 )
+        {
+            // get the name of our local client
+            foreach ( var c in Networking.Connections )
+            {
+                Log.Info( c );
+            }
+
+            PlaySound( position, name, delay );
+        }
+
         /// <summary>
         /// Attempts to position a Stargate onto a Ramp.
         /// </summary>
