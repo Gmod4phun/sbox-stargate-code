@@ -23,8 +23,9 @@ public class PlayerController : Component
 	[Sync]
 	public bool IsRunning { get; set; }
 
-	[Property]
-	public CameraComponent Camera { get; set; }
+	// [Property]
+	// public CameraComponent Camera { get; set; }
+	public CameraComponent Camera => Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 
 	protected override void OnEnabled()
 	{

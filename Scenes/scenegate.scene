@@ -2,6 +2,131 @@
   "Id": "187c258a-c8cc-41ee-b629-54c5a3b4699b",
   "GameObjects": [
     {
+      "Id": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+      "Name": "Camera",
+      "Position": "-0.000006461131,0.000000000007620602,64",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "player_camera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.25292,0.26086,0.29703,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "player_body",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 65536,
+          "ZNear": 1
+        },
+        {
+          "__type": "FilmGrain",
+          "__enabled": false,
+          "Intensity": 0.03,
+          "Response": 1
+        },
+        {
+          "__type": "Vignette",
+          "__enabled": false,
+          "Center": "0.5,0.5",
+          "Color": "0,0,0,0.38",
+          "Intensity": 1,
+          "Roundness": 0.5,
+          "Smoothness": 1
+        },
+        {
+          "__type": "ChromaticAberration",
+          "Offset": "4,6,4.049999",
+          "Scale": 0.05
+        },
+        {
+          "__type": "Sharpen",
+          "Scale": 0.25
+        },
+        {
+          "__type": "Highlight"
+        },
+        {
+          "__type": "Bloom",
+          "BloomColor": {
+            "color": [
+              {
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 0.508547,
+                "c": "0.14419,0.14419,0.14419,1"
+              },
+              {
+                "t": 1,
+                "c": "0.12558,0.12558,0.12558,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": {
+            "rangey": "0,106.45",
+            "frames": [
+              {},
+              {
+                "x": 1,
+                "y": 1
+              }
+            ]
+          },
+          "Mode": "Additive",
+          "Strength": 0.75,
+          "Threshold": 1,
+          "ThresholdWidth": 2
+        },
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "TeleportScreenoverlay",
+          "Visible": false
+        }
+      ],
+      "Children": [
+        {
+          "Id": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+          "Name": "Crosshair",
+          "Position": "64,0,0",
+          "Scale": "0.01,0.01,0.01",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Crosshair",
+              "CrosshairModel": {
+                "_type": "component",
+                "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+                "component_type": "ModelRenderer"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "Id": "93a2dd22-e05b-4f37-9f16-c442faf55143",
       "Name": "Network Helper",
       "Enabled": true,
@@ -48,11 +173,6 @@
           "Body": {
             "_type": "gameobject",
             "go": "3a78266a-da75-475e-9317-94c71c3418fa"
-          },
-          "Camera": {
-            "_type": "component",
-            "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
-            "component_type": "CameraComponent"
           },
           "Controller": null,
           "CurrentWorldIndex": 0,
@@ -122,130 +242,6 @@
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
-          "Name": "Camera",
-          "Position": "0.000006461131,-0.000000000008185452,64",
-          "Tags": "player_camera",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "CameraComponent",
-              "BackgroundColor": "0.25292,0.26086,0.29703,1",
-              "ClearFlags": "All",
-              "FieldOfView": 90,
-              "IsMainCamera": true,
-              "Orthographic": false,
-              "OrthographicHeight": 1204,
-              "Priority": 1,
-              "RenderExcludeTags": "player_body",
-              "RenderTags": "",
-              "TargetEye": "None",
-              "Viewport": "0,0,1,1",
-              "ZFar": 65536,
-              "ZNear": 1
-            },
-            {
-              "__type": "FilmGrain",
-              "__enabled": false,
-              "Intensity": 0.03,
-              "Response": 1
-            },
-            {
-              "__type": "Vignette",
-              "__enabled": false,
-              "Center": "0.5,0.5",
-              "Color": "0,0,0,0.38",
-              "Intensity": 1,
-              "Roundness": 0.5,
-              "Smoothness": 1
-            },
-            {
-              "__type": "ChromaticAberration",
-              "Offset": "4,6,4.049999",
-              "Scale": 0.05
-            },
-            {
-              "__type": "Sharpen",
-              "Scale": 0.25
-            },
-            {
-              "__type": "Highlight"
-            },
-            {
-              "__type": "Bloom",
-              "BloomColor": {
-                "color": [
-                  {
-                    "c": "1,1,1,1"
-                  },
-                  {
-                    "t": 0.508547,
-                    "c": "0.14419,0.14419,0.14419,1"
-                  },
-                  {
-                    "t": 1,
-                    "c": "0.12558,0.12558,0.12558,1"
-                  }
-                ],
-                "alpha": []
-              },
-              "BloomCurve": {
-                "rangey": "0,106.45",
-                "frames": [
-                  {},
-                  {
-                    "x": 1,
-                    "y": 1
-                  }
-                ]
-              },
-              "Mode": "Additive",
-              "Strength": 0.75,
-              "Threshold": 1,
-              "ThresholdWidth": 2
-            },
-            {
-              "__type": "ScreenPanel",
-              "AutoScreenScale": true,
-              "Opacity": 1,
-              "Scale": 1,
-              "ZIndex": 100
-            },
-            {
-              "__type": "TeleportScreenoverlay",
-              "Visible": false
-            }
-          ],
-          "Children": [
-            {
-              "Id": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-              "Name": "Crosshair",
-              "Position": "64,0,0",
-              "Scale": "0.01,0.01,0.01",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
-                  "Model": "models/dev/sphere.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Crosshair",
-                  "CrosshairModel": {
-                    "_type": "component",
-                    "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
             }
           ]
         },
@@ -4344,7 +4340,6 @@
     {
       "Id": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
       "Name": "World 3",
-      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -4364,8 +4359,7 @@
               "OnMapUnloaded": null,
               "UseMapFromLaunch": false
             }
-          ],
-          "Children": []
+          ]
         },
         {
           "Id": "295e315a-2c2f-4c07-87df-60fc7885fb18",
@@ -4454,6 +4448,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01095581,136.5016",
                   "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4512,6 +4507,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476437,-0.01095581,136.5016",
                   "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4570,6 +4566,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01086807,136.5016",
                   "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4628,6 +4625,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476439,-0.01103973,136.5016",
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4686,6 +4684,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01096344,136.5016",
                   "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4744,6 +4743,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476439,-0.01097107,136.5016",
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4801,6 +4801,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.0109611,136.5016",
                   "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4859,6 +4860,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01098251,136.5017",
                   "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4917,6 +4919,7 @@
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01093292,136.5017",
                   "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
+                  "Tags": "light_point,light",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4942,7 +4945,7 @@
                 {
                   "__type": "StargateRingMilkyWay",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
+                  "CurRingSymbol": "",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -4998,6 +5001,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-24T21:31:17.2749213\u002B01:00",
+  "LastSaved": "2024-02-24T22:39:18.3653331\u002B01:00",
   "__references": []
 }
