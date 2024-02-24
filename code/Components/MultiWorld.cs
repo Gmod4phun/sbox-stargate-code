@@ -20,5 +20,6 @@ public class MultiWorld : Component
         base.OnStart();
 
         Tags.Add( MultiWorldSystem.GetWorldTag( WorldIndex ) );
+        MultiWorldSystem.Init();
     }
 }

@@ -165,17 +165,17 @@ public class MultiWorldSystem : GameObjectSystem
         Sounds.Add( sound );
     }
 
-    public void Init()
+    public static void Init()
     {
         InitializePlayers();
         InitializeCollisionRules();
     }
 
-    private async void InitializePlayers()
+    private static async void InitializePlayers()
     {
         await Task.Delay( 10 );
 
-        foreach ( var player in Scene.GetAllComponents<PlayerController>() )
+        foreach ( var player in GameManager.ActiveScene.GetAllComponents<PlayerController>() )
         {
             if ( player.IsValid() )
             {
@@ -185,7 +185,7 @@ public class MultiWorldSystem : GameObjectSystem
         }
     }
 
-    private async void InitializeCollisionRules()
+    private static async void InitializeCollisionRules()
     {
         await Task.Delay( 10 );
 
