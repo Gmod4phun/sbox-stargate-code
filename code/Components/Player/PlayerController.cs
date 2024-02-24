@@ -135,34 +135,32 @@ public class PlayerController : Component
 
 			IsRunning = Input.Down( "Run" );
 
+			UseLogic();
+
+			// stuff for testing purposes
+
 			if ( Input.Pressed( "Attack1" ) )
 			{
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 )
-					.WithoutTags( "player_collider" )
-					.WithTag( MultiWorldSystem.GetWorldTag( CurrentWorldIndex ) ).Run();
-
-				var pos = tr.HitPosition;
-				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
-
-				// SpawnProp( pos, rot, "facepunch.wooden_crate", CurrentWorldIndex );
 				UtilityFunctions.ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000, CurrentWorldIndex );
 			}
 
 			if ( Input.Pressed( "Attack2" ) )
 			{
-				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 )
+				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 500 )
 					.WithoutTags( "player_collider" )
 					.WithTag( MultiWorldSystem.GetWorldTag( CurrentWorldIndex ) ).Run();
 
 				var pos = tr.HitPosition;
 				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-				_ = UtilityFunctions.SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
+				if ( tr.Hit )
+				{
+					_ = UtilityFunctions.SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
+				}
+
 				// UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
-
-			UseLogic();
 		}
 
 		var cc = Controller;
