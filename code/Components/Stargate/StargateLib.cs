@@ -515,7 +515,7 @@ namespace Sandbox.Components.Stargate
             return false;
         }
 
-        [Event( "trace.prepare" )]
+        [Event( "trace.prepare" )] // sbox plus legacy code
         public static void OnTracePrepare( SceneTrace trace, GameObject ent, Action<SceneTrace> returnFn )
         {
             returnFn( GetAdjustedTraceForClipping( ent, trace ) );
@@ -530,6 +530,14 @@ namespace Sandbox.Components.Stargate
                 trace = trace.WithoutTags( StargateTags.InBufferBack );
 
             return trace;
+        }
+
+        public static TagSet GetAdjustedIgnoreTagsForClipping( GameObject ent, TagSet tags )
+        {
+            tags.Set( StargateTags.InBufferFront, ent.Tags.Has( StargateTags.BehindGate ) );
+            tags.Set( StargateTags.InBufferBack, ent.Tags.Has( StargateTags.BeforeGate ) );
+
+            return tags;
         }
 
         public static bool IsPointBehindEventHorizon( Vector3 point, Stargate gate )

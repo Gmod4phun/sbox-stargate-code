@@ -3,7 +3,7 @@ public class MultiWorldSystem : GameObjectSystem
     // public static MultiWorldSystem Current => GameManager.ActiveScene.GetSystem<MultiWorldSystem>();
 
     // public Dictionary<int, MultiWorld> Worlds = new();
-    public static IEnumerable<MultiWorld> Worlds => GameManager.ActiveScene.GetAllComponents<MultiWorld>();
+    public static IEnumerable<MultiWorld> Worlds => GameManager.ActiveScene.IsValid() ? GameManager.ActiveScene.GetAllComponents<MultiWorld>() : null;
     public static IEnumerable<int> AllWorldIndices => Worlds.Select( w => w.WorldIndex );
     public static List<MultiWorldSound> Sounds = new();
 
@@ -167,15 +167,8 @@ public class MultiWorldSystem : GameObjectSystem
 
     public void Init()
     {
-        // AddWorld( 0 ); // add the default world as world_0
-
-        // Add some other worlds
-        // AddWorld( 1 );
-        // AddWorld( 2 );
-
-        // AssignAllObjectsToDesiredWorlds();
-
         InitializePlayers();
+        InitializeCollisionRules();
     }
 
     private async void InitializePlayers()
@@ -190,6 +183,49 @@ public class MultiWorldSystem : GameObjectSystem
                 AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
             }
         }
+    }
+
+    private async void InitializeCollisionRules()
+    {
+        await Task.Delay( 10 );
+
+        // default rules, will need to get them from the project when thats implemented
+        var rules = new Sandbox.Physics.CollisionRules();
+
+        // setup rules for Stargate shit
+        rules.Pairs.Add( new( StargateTags.BehindGate, StargateTags.InBufferFront, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+        rules.Pairs.Add( new( StargateTags.BehindGate, StargateTags.BeforeGate, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        rules.Pairs.Add( new( StargateTags.BeforeGate, StargateTags.InBufferBack, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        rules.Pairs.Add( new( StargateTags.InBufferFront, StargateTags.FakeWorld, Sandbox.Physics.CollisionRules.Result.Collide ) );
+        rules.Pairs.Add( new( StargateTags.InBufferFront, "world", Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        rules.Pairs.Add( new( StargateTags.InBufferFront, StargateTags.InBufferBack, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        rules.Pairs.Add( new( StargateTags.InBufferBack, StargateTags.FakeWorld, Sandbox.Physics.CollisionRules.Result.Collide ) );
+        rules.Pairs.Add( new( StargateTags.InBufferBack, "world", Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        rules.Pairs.Add( new( StargateTags.Ringsring, StargateTags.Ringplatform, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+        rules.Pairs.Add( new( StargateTags.Ringsring, StargateTags.Ringsring, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        rules.Pairs.Add( new( "world", "ignoreworld", Sandbox.Physics.CollisionRules.Result.Ignore ) );
+        rules.Pairs.Add( new( "terrain", StargateTags.EHTrigger, Sandbox.Physics.CollisionRules.Result.Ignore ) );
+
+        // world exclude rules
+        foreach ( var world in Worlds )
+        {
+            foreach ( var otherWorld in Worlds )
+            {
+                if ( world.WorldIndex != otherWorld.WorldIndex )
+                {
+                    rules.Pairs.Add( new( GetWorldTag( world.WorldIndex ), GetWorldTag( otherWorld.WorldIndex ), Sandbox.Physics.CollisionRules.Result.Ignore ) );
+                }
+            }
+        }
+
+        GameManager.ActiveScene.PhysicsWorld.SetCollisionRules( rules );
+        Log.Info( "MultiWorld: Collision rules initialized" );
     }
 
     void ProcessWorlds()

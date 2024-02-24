@@ -4344,7 +4344,6 @@
     {
       "Id": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
       "Name": "World 3",
-      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -4364,8 +4363,7 @@
               "OnMapUnloaded": null,
               "UseMapFromLaunch": false
             }
-          ],
-          "Children": []
+          ]
         }
       ]
     }
@@ -4393,6 +4391,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-24T18:35:22.5476854\u002B01:00",
+  "LastSaved": "2024-02-24T19:04:41.4197408\u002B01:00",
   "__references": []
 }

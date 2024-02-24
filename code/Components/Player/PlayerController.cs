@@ -157,8 +157,8 @@ public class PlayerController : Component
 				var pos = tr.HitPosition;
 				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-				// SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
-				UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
+				_ = UtilityFunctions.SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
+				// UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
 
@@ -217,6 +217,8 @@ public class PlayerController : Component
 		BuildWishVelocity();
 
 		var cc = Controller;
+
+		cc.IgnoreLayers = Stargate.GetAdjustedIgnoreTagsForClipping( GameObject, cc.IgnoreLayers );
 
 		if ( cc.IsOnGround && Input.Down( "Jump" ) )
 		{
