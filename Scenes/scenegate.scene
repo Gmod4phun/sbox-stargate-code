@@ -250,29 +250,6 @@
           "Name": "EyePos",
           "Position": "0,0,64",
           "Enabled": true
-        },
-        {
-          "Id": "4255a67b-28f3-42ce-9dbf-5414a2a220a2",
-          "Name": "Shadow",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "SkinnedModelRenderer",
-              "AnimationGraph": null,
-              "BodyGroups": 341,
-              "BoneMergeTarget": {
-                "_type": "component",
-                "go": "3a78266a-da75-475e-9317-94c71c3418fa",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "ShadowsOnly",
-              "Tint": "1,1,1,1"
-            }
-          ]
         }
       ]
     },
@@ -5001,6 +4978,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-24T23:01:30.7892773\u002B01:00",
+  "LastSaved": "2024-02-24T23:24:03.6930393\u002B01:00",
   "__references": []
 }
