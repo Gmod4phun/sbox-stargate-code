@@ -131,10 +131,9 @@ public class PlayerController : Component
 
 			if ( cam is not null )
 			{
-				// cam.RenderExcludeTags.Set( "player_body", FirstPerson );
-				if ( Body.IsValid() && Body.Components.TryGet<ModelRenderer>( out var renderer ) )
+				foreach ( var mr in Body.Components.GetAll<ModelRenderer>( FindMode.EnabledInSelfAndDescendants ).Where( x => x.Tags.Has( "player_body" ) || x.Tags.Has( "clothing" ) ) )
 				{
-					renderer.SceneObject.RenderingEnabled = !FirstPerson;
+					mr.RenderType = FirstPerson ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
 				}
 			}
 

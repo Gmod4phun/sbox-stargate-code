@@ -18,7 +18,7 @@
           "Orthographic": false,
           "OrthographicHeight": 1204,
           "Priority": 1,
-          "RenderExcludeTags": "player_body",
+          "RenderExcludeTags": "",
           "RenderTags": "",
           "TargetEye": "None",
           "Viewport": "0,0,1,1",
@@ -132,7 +132,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__type": "NetworkHelper",
+          "__type": "GameNetworkManager",
           "PlayerPrefab": {
             "_type": "gameobject",
             "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f"
@@ -5001,6 +5001,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-24T22:39:18.3653331\u002B01:00",
+  "LastSaved": "2024-02-24T23:01:30.7892773\u002B01:00",
   "__references": []
 }
