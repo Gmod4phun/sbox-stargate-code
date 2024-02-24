@@ -201,6 +201,21 @@ public class MultiWorldSystem : GameObjectSystem
                 AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
             }
         }
+
+        var localPlayer = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+        var playerWorldIndex = GetWorldIndexOfObject( localPlayer );
+
+        foreach ( var rigidbody in Scene.GetAllComponents<Rigidbody>() )
+        {
+            if ( rigidbody.IsValid() && GetWorldIndexOfObject( rigidbody.GameObject ) != playerWorldIndex )
+            {
+                rigidbody.RigidbodyFlags |= RigidbodyFlags.DisableCollisionSounds;
+            }
+            else
+            {
+                rigidbody.RigidbodyFlags &= ~RigidbodyFlags.DisableCollisionSounds;
+            }
+        }
     }
 
     void ProcessSounds()
