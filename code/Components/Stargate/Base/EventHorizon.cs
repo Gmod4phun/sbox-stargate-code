@@ -86,9 +86,11 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		private List<GameObject> InTriggerBack { get; } = new();
 
-		public Plane ClipPlaneFront => new( Transform.Position - Scene.Camera.Transform.Position + Transform.Rotation.Forward * 0.75f, Transform.Rotation.Forward.Normal );
+		public Vector3 CameraPosition => Scene.Camera.IsValid() ? Scene.Camera.Transform.Position : Vector3.Zero;
 
-		public Plane ClipPlaneBack => new( Transform.Position - Scene.Camera.Transform.Position - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
+		public Plane ClipPlaneFront => new( Transform.Position - CameraPosition + Transform.Rotation.Forward * 0.75f, Transform.Rotation.Forward.Normal );
+
+		public Plane ClipPlaneBack => new( Transform.Position - CameraPosition - Transform.Rotation.Forward * 0.75f, -Transform.Rotation.Forward.Normal );
 
 		public EventHorizon()
 		{
