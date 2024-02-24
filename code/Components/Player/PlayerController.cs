@@ -46,14 +46,6 @@ public class PlayerController : Component
 	private IUse _lastUseComponent;
 	private static HighlightOutline _currentOutline;
 
-	private static async void HideOutline( HighlightOutline outline )
-	{
-		await GameTask.Delay( 10 );
-
-		if ( outline.IsValid() && _currentOutline != outline )
-			outline.Enabled = false;
-	}
-
 	public void SetPlayerViewAngles( Angles target )
 	{
 		EyeAngles = target;
@@ -78,31 +70,17 @@ public class PlayerController : Component
 	private void UseLogic()
 	{
 		var cam = Camera;
-		var lookDir = EyeAngles.ToRotation();
-
 		if ( !cam.IsValid() )
 		{
 			return;
 		}
 
-		_currentOutline = null;
-
 		var curTag = MultiWorldSystem.GetWorldTag( CurrentWorldIndex );
-		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).WithTag( curTag ).Run();
+		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + EyeAngles.ToRotation().Forward * 90 ).WithTag( curTag ).Run();
 		if ( tr.Hit )
 		{
 			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )
 			{
-				// glowy outline
-				// var outline = tr.GameObject.Components.GetOrCreate<HighlightOutline>();
-				// outline.Color = Color.Yellow.WithAlpha( 0.1f );
-				// outline.Width = 0.75f;
-				// outline.Enabled = true;
-				// _currentOutline = outline;
-
-				// HideOutline( outline );
-
-				// actual use check
 				if ( Input.Down( "use" ) )
 				{
 					if ( Input.Pressed( "use" ) )
