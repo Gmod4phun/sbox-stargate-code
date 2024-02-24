@@ -156,10 +156,7 @@ namespace Sandbox.Components.Stargate
 			await GameTask.DelaySeconds( 2.5f );
 			if ( !this.IsValid() ) return;
 
-			// WormholeLoop = Sound.Play( "stargate.event_horizon.loop", Transform.Position );
-			WormholeLoop = Components.GetOrCreate<MultiWorldSound>();
-			WormholeLoop.FollowObject = GameObject;
-			WormholeLoop.Play( "stargate.event_horizon.loop", Transform.Position );
+			WormholeLoop = Stargate.PlayFollowingSound( GameObject, "stargate.event_horizon.loop" );
 		}
 
 		public async void Collapse()
@@ -186,7 +183,7 @@ namespace Sandbox.Components.Stargate
 			if ( _lastSoundTime > 0.1f ) // delay for playing sounds to avoid constant spam
 			{
 				_lastSoundTime = 0;
-				Sound.Play( "stargate.event_horizon.enter", Transform.Position );
+				Stargate.PlaySound( this, "stargate.event_horizon.enter" );
 			}
 		}
 

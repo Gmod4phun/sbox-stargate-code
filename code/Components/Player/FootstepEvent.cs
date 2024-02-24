@@ -31,7 +31,7 @@ public sealed class FootstepEvent : Component
 		if ( !tr.Hit )
 			return;
 
-		var sound = Sound.Play( "footstep-concrete", e.Transform.Position );
-		sound.Volume = e.Volume;
+		var sound = MultiWorldSound.Play( "footstep-concrete", e.Transform.Position, Player.CurrentWorldIndex );
+		sound.Handle.Volume = e.Volume;
 	}
 }

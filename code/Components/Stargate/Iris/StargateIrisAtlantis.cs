@@ -3,7 +3,7 @@ namespace Sandbox.Components.Stargate
 	public class StargateIrisAtlantis : StargateIris
 	{
 		protected override float _openCloseDelay => 1f;
-		private SoundHandle IrisLoop;
+		private MultiWorldSound IrisLoop;
 		private float _currentAlpha = 0;
 
 		public override async void Close()
@@ -15,7 +15,7 @@ namespace Sandbox.Components.Stargate
 			IrisModel.SceneModel.RenderingEnabled = true;
 			IrisCollider.Enabled = true;
 
-			Sound.Play( "stargate.iris.atlantis.close", Transform.Position );
+			Stargate.PlaySound( this, "stargate.iris.atlantis.close" );
 
 			await Task.DelaySeconds( _openCloseDelay );
 
@@ -26,7 +26,7 @@ namespace Sandbox.Components.Stargate
 			if ( Closed )
 			{
 				IrisLoop?.Stop( 0.1f );
-				IrisLoop = Sound.Play( "stargate.iris.atlantis.loop", Transform.Position );
+				IrisLoop = Stargate.PlayFollowingSound( GameObject, "stargate.iris.atlantis.loop" );
 			}
 		}
 
@@ -38,7 +38,7 @@ namespace Sandbox.Components.Stargate
 			Busy = true;
 			Closed = false;
 			IrisCollider.Enabled = false;
-			Sound.Play( "stargate.iris.atlantis.open", Transform.Position );
+			Stargate.PlaySound( this, "stargate.iris.atlantis.open" );
 
 			await Task.DelaySeconds( _openCloseDelay );
 
@@ -48,7 +48,7 @@ namespace Sandbox.Components.Stargate
 
 		public override void PlayHitSound()
 		{
-			Sound.Play( "stargate.iris.atlantis.hit", Transform.Position );
+			Stargate.PlaySound( this, "stargate.iris.atlantis.hit" );
 		}
 
 		protected override void OnDestroy()
@@ -59,7 +59,7 @@ namespace Sandbox.Components.Stargate
 
 			if ( Closed )
 			{
-				Sound.Play( "stargate.iris.atlantis.open", Transform.Position );
+				Stargate.PlaySound( this, "stargate.iris.atlantis.open" );
 			}
 		}
 

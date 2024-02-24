@@ -27,7 +27,7 @@ namespace Sandbox.Components.Stargate
 
 			IrisModel.SceneModel.SetAnimParameter( "Open", false );
 
-			Sound.Play( "stargate.iris.close", Transform.Position );
+			Stargate.PlaySound( this, "stargate.iris.close" );
 
 			await Task.DelaySeconds( _openCloseDelay );
 
@@ -45,7 +45,7 @@ namespace Sandbox.Components.Stargate
 
 			IrisModel.SceneModel.SetAnimParameter( "Open", true );
 
-			Sound.Play( "stargate.iris.open", Transform.Position );
+			Stargate.PlaySound( this, "stargate.iris.open" );
 
 			await Task.DelaySeconds( _openCloseDelay );
 
@@ -66,7 +66,7 @@ namespace Sandbox.Components.Stargate
 
 		public virtual void PlayHitSound()
 		{
-			Sound.Play( "stargate.iris.hit", Transform.Position );
+			Stargate.PlaySound( this, "stargate.iris.hit" );
 		}
 	}
 }

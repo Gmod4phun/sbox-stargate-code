@@ -102,7 +102,7 @@ namespace Sandbox.Components.Stargate.Rings
             var snd = btn?.PressSound;
             if ( snd != null )
             {
-                Sound.Play( snd, Transform.Position );
+                Stargate.PlaySound( this, snd.ResourceName );
             }
 
             SetButtonState( btn, true );

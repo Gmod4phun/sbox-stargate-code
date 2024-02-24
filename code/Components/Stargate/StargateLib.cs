@@ -463,6 +463,7 @@ namespace Sandbox.Components.Stargate
             return false;
         }
 
+        // sounds
         public static void PlaySound( Component comp, string name, float delay = 0 )
         {
             PlaySound( comp.GameObject, name, delay );
@@ -476,7 +477,7 @@ namespace Sandbox.Components.Stargate
             }
 
             var worldIndex = MultiWorldSystem.GetWorldIndexOfObject( gameObject );
-            PlaySoundInWorld( worldIndex, gameObject.Transform.Position, name, delay );
+            MultiWorldSound.Play( name, gameObject.Transform.Position, worldIndex );
         }
 
         public static async void PlaySound( int worldIndex, Vector3 position, string name, float delay = 0 )
@@ -486,30 +487,12 @@ namespace Sandbox.Components.Stargate
                 await GameTask.DelaySeconds( delay );
             }
 
-            PlaySoundInWorld( worldIndex, position, name, delay );
+            MultiWorldSound.Play( name, position, worldIndex );
         }
 
-        // TODO: try to setup multiworld audio
-        [Broadcast]
-        private static void PlaySoundInWorld( int worldIndex, Vector3 position, string name, float delay = 0 )
+        public static MultiWorldSound PlayFollowingSound( GameObject followObject, string name )
         {
-            var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
-
-            if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == worldIndex )
-            {
-                Sound.Play( name, position );
-            }
-        }
-
-        [Broadcast]
-        public static void PlaySoundInWorldLooping( int worldIndex, Vector3 position, string name )
-        {
-            var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
-
-            if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == worldIndex )
-            {
-                Sound.Play( name, position );
-            }
+            return MultiWorldSound.Play( name, followObject, true );
         }
 
         /// <summary>
@@ -572,7 +555,7 @@ namespace Sandbox.Components.Stargate
             //     return false;
 
             // if our parent does not have a multiworld component, we are not the root object, so we are not allowed
-            if ( !e.Parent.Components.TryGet<MultiWorld>( out var _, FindMode.InSelf ) )
+            if ( !MultiWorldSystem.IsObjectRootInWorld( e ) )
                 return false;
 
             if ( e.Components.Get<Rigidbody>() is null )

@@ -8,8 +8,8 @@
 		[Property]
 		public ModelRenderer RingModel { get; set; }
 
-		protected SoundHandle StartSoundInstance { get; set; }
-		protected SoundHandle StopSoundInstance { get; set; }
+		protected MultiWorldSound StartSoundInstance { get; set; }
+		protected MultiWorldSound StopSoundInstance { get; set; }
 
 		public virtual void StopStartSound()
 		{
@@ -19,7 +19,7 @@
 		public virtual void PlayStartSound()
 		{
 			StopStartSound();
-			StartSoundInstance = Sound.Play( StartSoundName, Transform.Position );
+			StartSoundInstance = Stargate.PlayFollowingSound( GameObject, StartSoundName );
 		}
 
 		public virtual void StopStopSound()
@@ -30,7 +30,7 @@
 		public virtual void PlayStopSound()
 		{
 			StopStopSound();
-			StopSoundInstance = Sound.Play( StopSoundName, Transform.Position );
+			StopSoundInstance = Stargate.PlayFollowingSound( GameObject, StopSoundName );
 		}
 
 		protected override void OnDestroy()

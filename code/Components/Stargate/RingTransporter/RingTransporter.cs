@@ -37,10 +37,13 @@ namespace Sandbox.Components.Stargate.Rings
             if ( obj.Tags.Has( "rings_no_teleport" ) )
                 return false;
 
+            if ( !MultiWorldSystem.AreObjectsInSameWorld( obj, GameObject ) )
+                return false;
+
             if ( obj.Tags.Has( "player" ) && obj.Components.Get<PlayerController>().IsValid() )
                 return true;
 
-            if ( obj.Parent is not Scene _ )
+            if ( !MultiWorldSystem.IsObjectRootInWorld( obj ) )
                 return false;
 
             if ( obj.Components.Get<Rigidbody>().IsValid() )
@@ -92,7 +95,7 @@ namespace Sandbox.Components.Stargate.Rings
 
         private void DeployRings()
         {
-            Sound.Play( "sounds/sbox_stargate/rings/ringtransporter.part1.sound", GameObject.Transform.Position );
+            Stargate.PlaySound( GameObject, "sounds/sbox_stargate/rings/ringtransporter.part1.sound" );
 
             float[] delays = { 2, 2.5f, 3f, 3.4f, 3.7f };
             var tasks = new List<Task>();
@@ -110,7 +113,7 @@ namespace Sandbox.Components.Stargate.Rings
 
         private void RetractRings()
         {
-            Sound.Play( "sounds/sbox_stargate/rings/ringtransporter.part2.sound", GameObject.Transform.Position );
+            Stargate.PlaySound( GameObject, "sounds/sbox_stargate/rings/ringtransporter.part2.sound" );
 
             float[] delays = { 0, 0.3f, 0.6f, 0.9f, 1.2f };
             var tasks = new List<Task>();

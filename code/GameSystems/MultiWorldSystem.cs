@@ -5,12 +5,29 @@ public class MultiWorldSystem : GameObjectSystem
     // public Dictionary<int, MultiWorld> Worlds = new();
     public static IEnumerable<MultiWorld> Worlds => GameManager.ActiveScene.GetAllComponents<MultiWorld>();
     public static IEnumerable<int> AllWorldIndices => Worlds.Select( w => w.WorldIndex );
+    public static List<MultiWorldSound> Sounds = new();
 
     public MultiWorldSystem( Scene scene ) : base( scene )
     {
-        Listen( Stage.PhysicsStep, 10, ProcessWorlds, "DoingSomething" );
+        Listen( Stage.PhysicsStep, 10, ProcessWorlds, "MultiWorld_ProcessWorlds" );
+        Listen( Stage.FinishUpdate, 1, ProcessSounds, "MultiWorld_ProcessSounds" );
 
         Init();
+    }
+
+    /// <summary>
+    /// Checks if the GameObject exists in a world and is not a child of another object in the world)
+    /// </summary>
+    /// <param name="gameObject"></param>
+    /// <returns></returns>
+    public static bool IsObjectRootInWorld( GameObject gameObject )
+    {
+        if ( gameObject.IsValid() && gameObject.Parent.IsValid() )
+        {
+            return gameObject.Parent.Components.TryGet<MultiWorld>( out var _, FindMode.InSelf );
+        }
+
+        return false;
     }
 
     public static string GetWorldTag( int worldIndex )
@@ -143,6 +160,11 @@ public class MultiWorldSystem : GameObjectSystem
     }
     */
 
+    public static void AddSound( MultiWorldSound sound )
+    {
+        Sounds.Add( sound );
+    }
+
     public void Init()
     {
         // AddWorld( 0 ); // add the default world as world_0
@@ -177,6 +199,31 @@ public class MultiWorldSystem : GameObjectSystem
             if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
             {
                 AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
+            }
+        }
+    }
+
+    void ProcessSounds()
+    {
+        foreach ( var sound in Sounds )
+        {
+            if ( sound.Handle.IsValid() )
+            {
+                var followObjectValid = sound.FollowObject.IsValid();
+                if ( followObjectValid )
+                {
+                    sound.Handle.Position = sound.FollowObject.Transform.Position;
+                }
+
+                var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+                if ( GetWorldIndexOfObject( player ) == (followObjectValid ? GetWorldIndexOfObject( sound.FollowObject ) : sound.WorldIndex) )
+                {
+                    sound.Handle.Volume = 1;
+                }
+                else
+                {
+                    sound.Handle.Volume = 0;
+                }
             }
         }
     }

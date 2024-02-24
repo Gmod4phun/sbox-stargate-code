@@ -19,7 +19,7 @@ namespace Sandbox.Components.Stargate
         // public List<SkinnedModelRenderer> SymbolParts { get; set; } = new();
 
         public List<int> DialSequenceActiveSymbols { get; private set; } = new();
-        private SoundHandle RollSound { get; set; }
+        private MultiWorldSound RollSound { get; set; }
 
         public void CreateGlyphs()
         {
@@ -134,7 +134,7 @@ namespace Sandbox.Components.Stargate
         public void PlayRollSound( bool fast = false )
         {
             StopRollSound();
-            RollSound = Sound.Play( Gate.GetSound( fast ? "gate_roll_fast" : "gate_roll_slow" ), Transform.Position );
+            RollSound = Stargate.PlayFollowingSound( GameObject, Gate.GetSound( fast ? "gate_roll_fast" : "gate_roll_slow" ) );
         }
 
         public void StopRollSound()
