@@ -44,7 +44,6 @@ public class PlayerController : Component
 
 	private bool _lastUseState = false;
 	private IUse _lastUseComponent;
-	private static HighlightOutline _currentOutline;
 
 	public void SetPlayerViewAngles( Angles target )
 	{
@@ -100,114 +99,6 @@ public class PlayerController : Component
 		}
 	}
 
-	private GameObject ShootBall( Vector3 pos, Vector3 dir, float power )
-	{
-		var ball_object = new GameObject();
-		ball_object.Transform.Position = pos;
-
-		var ball_model = ball_object.Components.Create<ModelRenderer>();
-		ball_model.Model = Model.Load( "models/dev/sphere.vmdl" );
-		ball_model.Tint = Color.Random;
-
-		var col = ball_object.Components.Create<SphereCollider>();
-		col.Radius = 32;
-
-		var phys = ball_object.Components.Create<Rigidbody>();
-
-		phys.Velocity = dir.Normal * power;
-		phys.PhysicsBody.SpeculativeContactEnabled = true;
-
-		return ball_object;
-	}
-
-	public static async Task<GameObject> SpawnProp( Vector3 pos, Rotation rot, string ident, int worldIndex )
-	{
-		var prop_object = new GameObject();
-		prop_object.Name = "Prop";
-		prop_object.Transform.Position = pos;
-		prop_object.Transform.Rotation = rot;
-
-		var package = await Package.FetchAsync( ident, false );
-		await package.MountAsync();
-		var model = Model.Load( package.GetMeta( "PrimaryAsset", "" ) );
-
-		var prop = prop_object.Components.Create<Prop>();
-		prop.Model = model;
-
-		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
-
-		return prop_object;
-	}
-
-	public static async Task<GameObject> SpawnCitizenRagdoll( Vector3 pos, Rotation rot, int worldIndex )
-	{
-		var prop_object = new GameObject();
-		prop_object.Name = "Prop";
-		prop_object.Transform.Position = pos;
-		prop_object.Transform.Rotation = rot;
-
-		var model = Model.Load( "models/citizen/citizen.vmdl" );
-
-		var prop = prop_object.Components.Create<Prop>();
-		prop.Model = model;
-
-		prop.Enabled = false;
-		prop.Enabled = true;
-
-		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
-
-		return prop_object;
-	}
-
-	private static async void ShootProp( Vector3 pos, Vector3 dir, float power, int worldIndex )
-	{
-		var prop_object = new GameObject();
-		prop_object.Name = "Prop";
-		prop_object.Transform.Position = pos;
-		prop_object.Transform.Rotation = Rotation.LookAt( dir );
-
-		var worldobject = GameManager.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Name == $"World {worldIndex}" );
-		prop_object.SetParent( worldobject, false );
-
-		var prop = prop_object.Components.Create<Prop>();
-		prop.Model = Cloud.Model( "facepunch.wooden_crate" );
-
-		var body = prop_object.Components.Get<Rigidbody>();
-		if ( body.IsValid() )
-		{
-			body.Velocity = dir.Normal * power;
-		}
-
-		MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
-	}
-
-	private GameObject ShootPuddleJumper( Vector3 pos, Vector3 dir, float power )
-	{
-		var jumper_object = new GameObject();
-		jumper_object.Transform.Position = pos;
-		jumper_object.Transform.Rotation = Rotation.LookAt( dir );
-
-		var jumper_model = jumper_object.Components.Create<ModelRenderer>();
-		jumper_model.Model = Model.Load( "models/sbox_stargate/puddle_jumper/puddle_jumper.vmdl" ); // multiple phys meshes, problems
-
-		var col = jumper_object.Components.Create<CapsuleCollider>();
-		col.Radius = 64;
-		col.Start = new Vector3( -200, 0, 0 );
-		col.End = new Vector3( 130, 0, 0 );
-
-		var phys = jumper_object.Components.Create<Rigidbody>();
-		phys.Velocity = dir.Normal * power;
-		phys.Gravity = false;
-
-		return jumper_object;
-	}
-
-	private static async void DestroyGameObjectDelayed( GameObject ball, float time )
-	{
-		await GameTask.DelaySeconds( time );
-		ball?.Destroy();
-	}
-
 	protected override void OnUpdate()
 	{
 		// Eye input
@@ -219,17 +110,13 @@ public class PlayerController : Component
 			ee.pitch = ee.pitch.Clamp( -89f, 89f );
 			EyeAngles = ee;
 
-			// EyeAngles.pitch = EyeAngles.pitch.Clamp( -90, 90 );
-
 			var cam = Camera;
-
 			if ( !cam.IsValid() )
 			{
 				return;
 			}
 
 			var lookDir = EyeAngles.ToRotation();
-
 			if ( FirstPerson )
 			{
 				cam.Transform.Position = Eye.Transform.Position;
@@ -250,30 +137,15 @@ public class PlayerController : Component
 
 			if ( Input.Pressed( "Attack1" ) )
 			{
-				// var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 4000 );
-				// ball.Transform.Scale *= 0.2f;
 				var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 264 )
 					.WithoutTags( "player_collider" )
 					.WithTag( MultiWorldSystem.GetWorldTag( CurrentWorldIndex ) ).Run();
-
-				// if ( tr.Hit )
-				// {
-				// 	var pos = tr.HitPosition;
-				// 	var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
-
-				// 	var gate = StargateSceneUtils.SpawnGatePrefab( pos, rot, "prefabs/stargatemilkyway.prefab" );
-				// 	if ( tr.GameObject.Components.Get<GateRamp>() is GateRamp ramp )
-				// 	{
-				// 		Stargate.PutGateOnRamp( gate, ramp );
-				// 	}
-				// }
 
 				var pos = tr.HitPosition;
 				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
 				// SpawnProp( pos, rot, "facepunch.wooden_crate", CurrentWorldIndex );
-
-				ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000, CurrentWorldIndex );
+				UtilityFunctions.ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000, CurrentWorldIndex );
 			}
 
 			if ( Input.Pressed( "Attack2" ) )
@@ -282,26 +154,11 @@ public class PlayerController : Component
 					.WithoutTags( "player_collider" )
 					.WithTag( MultiWorldSystem.GetWorldTag( CurrentWorldIndex ) ).Run();
 
-				// if ( tr.Hit )
-				// {
 				var pos = tr.HitPosition;
 				var rot = new Angles( 0, EyeAngles.yaw + 180, 0 ).ToRotation();
 
-				// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
-				// StargateSceneUtils.SpawnRingPanelGoauld( pos, rot );
-				// StargateSceneUtils.SpawnDhdPrefab( pos, rot, "prefabs/dhdmilkyway.prefab" );
-				// StargateSceneUtils.SpawnDhdAtlantis( pos, rot );
-
-
-				// }
-				// else
-				// {
-				// var ball = ShootBall( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
-				// ball.Transform.Scale *= 0.2f;
-				// }
-
 				// SpawnProp( pos, rot, "facepunch.oildrumexplosive", CurrentWorldIndex );
-				SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
+				UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
 				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
 
@@ -342,8 +199,6 @@ public class PlayerController : Component
 			AnimationHelper.WithLook( EyeAngles.Forward, 1, 1, 1.0f );
 			AnimationHelper.MoveStyle = IsRunning ? CitizenAnimationHelper.MoveStyles.Run : CitizenAnimationHelper.MoveStyles.Walk;
 		}
-
-		// Log.Info( Scene.IsEditor );
 	}
 
 	[Broadcast]
