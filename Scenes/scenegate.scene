@@ -4,7 +4,6 @@
     {
       "Id": "93a2dd22-e05b-4f37-9f16-c442faf55143",
       "Name": "Network Helper",
-      "Position": "249.976,168.122,284.2207",
       "Enabled": true,
       "Components": [
         {
@@ -26,7 +25,6 @@
     {
       "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
       "Name": "Citizen Instance",
-      "Position": "0,0,16",
       "Rotation": "0,0,1,-0.00000004371139",
       "Tags": "player",
       "Components": [
@@ -110,7 +108,6 @@
         {
           "Id": "3a78266a-da75-475e-9317-94c71c3418fa",
           "Name": "Body",
-          "Position": "0,0,0",
           "Tags": "player_body",
           "Enabled": true,
           "Components": [
@@ -148,7 +145,7 @@
               "RenderTags": "",
               "TargetEye": "None",
               "Viewport": "0,0,1,1",
-              "ZFar": 10000,
+              "ZFar": 65536,
               "ZNear": 1
             },
             {
@@ -261,7 +258,6 @@
         {
           "Id": "4255a67b-28f3-42ce-9dbf-5414a2a220a2",
           "Name": "Shadow",
-          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -4344,6 +4340,34 @@
           ]
         }
       ]
+    },
+    {
+      "Id": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
+      "Name": "World 3",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MultiWorld",
+          "WorldIndex": 3
+        }
+      ],
+      "Children": [
+        {
+          "Id": "7e744c8a-11a8-411c-b1b9-2617dda339d9",
+          "Name": "Map",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "MapInstance",
+              "MapName": "facepunch.flatgrass",
+              "OnMapLoaded": null,
+              "OnMapUnloaded": null,
+              "UseMapFromLaunch": false
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -4369,6 +4393,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-24T17:56:11.6446358\u002B01:00",
+  "LastSaved": "2024-02-24T18:35:22.5476854\u002B01:00",
   "__references": []
 }
