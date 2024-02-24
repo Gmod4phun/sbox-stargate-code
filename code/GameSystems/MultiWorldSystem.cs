@@ -225,9 +225,16 @@ public class MultiWorldSystem : GameObjectSystem
             if ( sound.Handle.IsValid() )
             {
                 var followObjectValid = sound.FollowObject.IsValid();
-                if ( followObjectValid )
+                if ( sound.FollowObject != null )
                 {
-                    sound.Handle.Position = sound.FollowObject.Transform.Position;
+                    if ( !followObjectValid )
+                    {
+                        sound.Handle.Stop();
+                    }
+                    else
+                    {
+                        sound.Handle.Position = sound.FollowObject.Transform.Position;
+                    }
                 }
 
                 var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
