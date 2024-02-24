@@ -88,7 +88,8 @@ public class PlayerController : Component
 		_currentOutline = null;
 
 		var curTag = MultiWorldSystem.GetWorldTag( CurrentWorldIndex );
-		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).WithTag( curTag ).Run();
+		// var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).WithTag( curTag ).Run();
+		var tr = Scene.Trace.Ray( cam.Transform.Position, cam.Transform.Position + lookDir.Forward * 90 ).Run();
 		if ( tr.Hit )
 		{
 			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Body ) )

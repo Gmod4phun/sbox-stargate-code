@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
 using Sandbox.Components.Stargate.Ramps;
 
 namespace Sandbox.Components.Stargate
@@ -467,31 +468,48 @@ namespace Sandbox.Components.Stargate
             PlaySound( comp.GameObject, name, delay );
         }
 
-        public static async void PlaySound( GameObject ent, string name, float delay = 0 )
+        public static async void PlaySound( GameObject gameObject, string name, float delay = 0 )
         {
-            if ( delay > 0 ) await GameTask.DelaySeconds( delay );
-            if ( !ent.IsValid() ) return;
+            if ( delay > 0 )
+            {
+                await GameTask.DelaySeconds( delay );
+            }
 
-            PlaySound( ent.Transform.Position, name, delay ); // TODO: make it folow the ent
+            var worldIndex = MultiWorldSystem.GetWorldIndexOfObject( gameObject );
+            PlaySoundInWorld( worldIndex, gameObject.Transform.Position, name, delay );
         }
 
-        public static async void PlaySound( Vector3 position, string name, float delay = 0 )
+        public static async void PlaySound( int worldIndex, Vector3 position, string name, float delay = 0 )
         {
-            if ( delay > 0 ) await GameTask.DelaySeconds( delay );
-            Sound.Play( name, position );
+            if ( delay > 0 )
+            {
+                await GameTask.DelaySeconds( delay );
+            }
+
+            PlaySoundInWorld( worldIndex, position, name, delay );
         }
 
         // TODO: try to setup multiworld audio
         [Broadcast]
-        public static void PlaySoundInWorld( int worldIndex, Vector3 position, string name, float delay = 0 )
+        private static void PlaySoundInWorld( int worldIndex, Vector3 position, string name, float delay = 0 )
         {
-            // get the name of our local client
-            foreach ( var c in Networking.Connections )
-            {
-                Log.Info( c );
-            }
+            var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
 
-            PlaySound( position, name, delay );
+            if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == worldIndex )
+            {
+                Sound.Play( name, position );
+            }
+        }
+
+        [Broadcast]
+        public static void PlaySoundInWorldLooping( int worldIndex, Vector3 position, string name )
+        {
+            var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+
+            if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == worldIndex )
+            {
+                Sound.Play( name, position );
+            }
         }
 
         /// <summary>

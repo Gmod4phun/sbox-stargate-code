@@ -28,8 +28,19 @@ public class MultiWorldSystem : GameObjectSystem
         return Worlds.FirstOrDefault( w => w.WorldIndex == worldIndex );
     }
 
+    public static int GetWorldIndexOfObject( Component component )
+    {
+        if ( !component.IsValid() )
+            return -1;
+
+        return GetWorldIndexOfObject( component.GameObject );
+    }
+
     public static int GetWorldIndexOfObject( GameObject gameObject )
     {
+        if ( !gameObject.IsValid() )
+            return -1;
+
         if ( gameObject.Components.TryGet<MultiWorld>( out var world, FindMode.InAncestors ) )
         {
             return world.WorldIndex;

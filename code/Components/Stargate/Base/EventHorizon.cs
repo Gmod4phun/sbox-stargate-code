@@ -1,3 +1,5 @@
+using System.Reflection.Metadata;
+
 namespace Sandbox.Components.Stargate
 {
 	public partial class EventHorizon : Component
@@ -63,7 +65,7 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public string EventHorizonMaterialGroup { get; set; } = "default";
 
-		protected SoundHandle WormholeLoop { get; set; }
+		protected MultiWorldSound WormholeLoop { get; set; }
 
 		[Property]
 		protected GameObject CurrentTeleportingEntity { get; set; }
@@ -154,7 +156,10 @@ namespace Sandbox.Components.Stargate
 			await GameTask.DelaySeconds( 2.5f );
 			if ( !this.IsValid() ) return;
 
-			WormholeLoop = Sound.Play( "stargate.event_horizon.loop", Transform.Position );
+			// WormholeLoop = Sound.Play( "stargate.event_horizon.loop", Transform.Position );
+			WormholeLoop = Components.GetOrCreate<MultiWorldSound>();
+			WormholeLoop.FollowObject = GameObject;
+			WormholeLoop.Play( "stargate.event_horizon.loop", Transform.Position );
 		}
 
 		public async void Collapse()
@@ -789,6 +794,24 @@ namespace Sandbox.Components.Stargate
 		protected override void OnUpdate()
 		{
 			base.OnUpdate();
+
+			/*
+			if ( WormholeLoop.IsValid() )
+			{
+				WormholeLoop.Position = Transform.Position;
+
+				var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+
+				if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == MultiWorldSystem.GetWorldIndexOfObject( this ) )
+				{
+					WormholeLoop.Volume = 1;
+				}
+				else
+				{
+					WormholeLoop.Volume = 0;
+				}
+			}
+			*/
 
 			EventHorizonTick();
 		}

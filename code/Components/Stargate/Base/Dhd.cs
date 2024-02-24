@@ -393,7 +393,7 @@ namespace Sandbox.Components.Stargate
                     var target = Stargate.FindDestinationGateByDialingAddress( Gate, sequence );
                     if ( target.IsValid() && target != Gate && target.IsStargateReadyForInboundDHD() && Gate.CanStargateOpen() && !Gate.IsLockedInvalid )
                     {
-                        Stargate.PlaySound( Transform.Position + Transform.Rotation.Up * 16, Data.DialPressSound );
+                        Stargate.PlaySound( MultiWorldSystem.GetWorldIndexOfObject( GameObject ), Transform.Position + Transform.Rotation.Up * 16, Data.DialPressSound );
 
                         Gate.CurGateState = Stargate.GateState.IDLE; // temporarily make it idle so it can 'begin' dialing
                         Gate.BeginOpenByDHD( sequence );
@@ -443,7 +443,7 @@ namespace Sandbox.Components.Stargate
                     PressedActions.Add( action );
                     PlayButtonPressAnim( button );
 
-                    Stargate.PlaySoundInWorld( MultiWorldSystem.GetWorldIndexOfObject( GameObject ), Transform.Position + Transform.Rotation.Up * 16, Data.ButtonPressSound );
+                    Stargate.PlaySound( MultiWorldSystem.GetWorldIndexOfObject( GameObject ), Transform.Position + Transform.Rotation.Up * 16, Data.ButtonPressSound );
                 }
             }
         }
