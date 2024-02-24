@@ -24,43 +24,275 @@
       ]
     },
     {
-      "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
-      "Name": "Sun",
-      "Rotation": "0.4474398,0.08421277,-0.8851708,-0.09582705",
-      "Tags": "light_directional,light",
-      "Enabled": true,
+      "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+      "Name": "Citizen Instance",
+      "Position": "0,0,16",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "player",
       "Components": [
         {
-          "__type": "DirectionalLight",
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "Shadows": true,
-          "SkyColor": "0.05882,0.07451,0.08235,1"
+          "__type": "CharacterController",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 72,
+          "IgnoreLayers": "trigger,player",
+          "Radius": 10,
+          "StepHeight": 18
+        },
+        {
+          "__type": "PlayerController",
+          "AnimationHelper": {
+            "_type": "component",
+            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+            "component_type": "CitizenAnimationHelper"
+          },
+          "Body": {
+            "_type": "gameobject",
+            "go": "3a78266a-da75-475e-9317-94c71c3418fa"
+          },
+          "Camera": {
+            "_type": "component",
+            "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+            "component_type": "CameraComponent"
+          },
+          "Controller": null,
+          "CurrentWorldIndex": 0,
+          "Eye": {
+            "_type": "gameobject",
+            "go": "94717ee8-42f9-408e-aab4-56944a3ff8aa"
+          },
+          "FirstPerson": true,
+          "Gravity": "0,0,800"
+        },
+        {
+          "__type": "CitizenAnimationHelper",
+          "BodyWeight": 1,
+          "EyeSource": null,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "Height": 1,
+          "IkLeftFoot": null,
+          "IkLeftHand": null,
+          "IkRightFoot": null,
+          "IkRightHand": null,
+          "LookAt": null,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "go": "3a78266a-da75-475e-9317-94c71c3418fa",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "FootstepEvent",
+          "Player": {
+            "_type": "component",
+            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+            "component_type": "PlayerController"
+          },
+          "Source": {
+            "_type": "component",
+            "go": "3a78266a-da75-475e-9317-94c71c3418fa",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,36",
+          "IsTrigger": true,
+          "Scale": "20,20,72",
+          "Static": false,
+          "Surface": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "3a78266a-da75-475e-9317-94c71c3418fa",
+          "Name": "Body",
+          "Position": "0,0,0",
+          "Tags": "player_body",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "AnimationGraph": null,
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+          "Name": "Camera",
+          "Position": "0.000006461131,-0.000000000008185452,64",
+          "Tags": "player_camera",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "CameraComponent",
+              "BackgroundColor": "0.25292,0.26086,0.29703,1",
+              "ClearFlags": "All",
+              "FieldOfView": 90,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "player_body",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 1
+            },
+            {
+              "__type": "FilmGrain",
+              "__enabled": false,
+              "Intensity": 0.03,
+              "Response": 1
+            },
+            {
+              "__type": "Vignette",
+              "__enabled": false,
+              "Center": "0.5,0.5",
+              "Color": "0,0,0,0.38",
+              "Intensity": 1,
+              "Roundness": 0.5,
+              "Smoothness": 1
+            },
+            {
+              "__type": "ChromaticAberration",
+              "Offset": "4,6,4.049999",
+              "Scale": 0.05
+            },
+            {
+              "__type": "Sharpen",
+              "Scale": 0.25
+            },
+            {
+              "__type": "Highlight"
+            },
+            {
+              "__type": "Bloom",
+              "BloomColor": {
+                "color": [
+                  {
+                    "c": "1,1,1,1"
+                  },
+                  {
+                    "t": 0.508547,
+                    "c": "0.14419,0.14419,0.14419,1"
+                  },
+                  {
+                    "t": 1,
+                    "c": "0.12558,0.12558,0.12558,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "BloomCurve": {
+                "rangey": "0,106.45",
+                "frames": [
+                  {},
+                  {
+                    "x": 1,
+                    "y": 1
+                  }
+                ]
+              },
+              "Mode": "Additive",
+              "Strength": 0.75,
+              "Threshold": 1,
+              "ThresholdWidth": 2
+            },
+            {
+              "__type": "ScreenPanel",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "TeleportScreenoverlay",
+              "Visible": false
+            }
+          ],
+          "Children": [
+            {
+              "Id": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+              "Name": "Crosshair",
+              "Position": "64,0,0",
+              "Scale": "0.01,0.01,0.01",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Crosshair",
+                  "CrosshairModel": {
+                    "_type": "component",
+                    "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
+          "Name": "EyePos",
+          "Position": "0,0,64",
+          "Enabled": true
+        },
+        {
+          "Id": "4255a67b-28f3-42ce-9dbf-5414a2a220a2",
+          "Name": "Shadow",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "AnimationGraph": null,
+              "BodyGroups": 341,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "go": "3a78266a-da75-475e-9317-94c71c3418fa",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "ShadowsOnly",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     },
     {
-      "Id": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
-      "Name": "2D Skybox",
-      "Tags": "skybox",
+      "Id": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
+      "Name": "Spawnpoint",
+      "Rotation": "0,0,1,-0.00000004371139",
       "Enabled": true,
       "Components": [
         {
-          "__type": "SkyBox2D",
-          "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "EnvmapProbe",
-          "Bounds": {
-            "Mins": "-1600,-1600,0",
-            "Maxs": "1600,1600,1024"
-          },
-          "Feathering": 0.02,
-          "Projection": "Sphere",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "TintColor": "1,1,1,1"
+          "__type": "SpawnPoint",
+          "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     },
@@ -2445,6 +2677,47 @@
               ]
             }
           ]
+        },
+        {
+          "Id": "d7c75a99-fe4f-4b15-98b2-03a89f38b79a",
+          "Name": "2D Skybox",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkyBox2D",
+              "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "EnvmapProbe",
+              "Bounds": {
+                "Mins": "-1600,-1600,0",
+                "Maxs": "1600,1600,1024"
+              },
+              "Feathering": 0.02,
+              "Projection": "Sphere",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "TintColor": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "13adb902-7f0e-466e-b09e-709b63246df0",
+          "Name": "Sun",
+          "Rotation": "-0.2272705,-0.2294598,0.9183475,-0.2287664",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DirectionalLight",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "1,0.96473,0.83721,1",
+              "Shadows": true,
+              "SkyColor": "0.05882,0.07451,0.08235,1"
+            }
+          ]
         }
       ]
     },
@@ -2647,6 +2920,47 @@
           "Position": "-128,0,0",
           "Enabled": true,
           "__Prefab": "prefabs/dhdatlantis.prefab"
+        },
+        {
+          "Id": "3d7de4bb-dd25-4c2e-96eb-df3a545f68f1",
+          "Name": "2D Skybox",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkyBox2D",
+              "SkyMaterial": "materials/skybox/light_test_sky_sunny_basic.vmat",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "EnvmapProbe",
+              "Bounds": {
+                "Mins": "-1600,-1600,0",
+                "Maxs": "1600,1600,1024"
+              },
+              "Feathering": 0.02,
+              "Projection": "Sphere",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "TintColor": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "616bd501-fa13-41f8-8075-c7b2f4bf99b8",
+          "Name": "Sun",
+          "Rotation": "-0.773366,-0.2286766,0.4223424,-0.4138102",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DirectionalLight",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.90698,0.98295,1,1",
+              "Shadows": true,
+              "SkyColor": "0.05882,0.07451,0.08235,1"
+            }
+          ]
         }
       ]
     },
@@ -3987,279 +4301,47 @@
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
           "__Prefab": "prefabs/dhdpegasus.prefab"
-        }
-      ]
-    },
-    {
-      "Id": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
-      "Name": "Citizen",
-      "Position": "0,0,16",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "player",
-      "Components": [
-        {
-          "__type": "CharacterController",
-          "Acceleration": 10,
-          "Bounciness": 0.3,
-          "GroundAngle": 45,
-          "Height": 72,
-          "IgnoreLayers": "trigger,player",
-          "Radius": 10,
-          "StepHeight": 18
         },
         {
-          "__type": "PlayerController",
-          "AnimationHelper": {
-            "_type": "component",
-            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
-            "component_type": "CitizenAnimationHelper"
-          },
-          "Body": {
-            "_type": "gameobject",
-            "go": "3a78266a-da75-475e-9317-94c71c3418fa"
-          },
-          "Camera": {
-            "_type": "component",
-            "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
-            "component_type": "CameraComponent"
-          },
-          "Controller": null,
-          "CurrentWorldIndex": 0,
-          "Eye": {
-            "_type": "gameobject",
-            "go": "94717ee8-42f9-408e-aab4-56944a3ff8aa"
-          },
-          "FirstPerson": true,
-          "Gravity": "0,0,800"
-        },
-        {
-          "__type": "CitizenAnimationHelper",
-          "BodyWeight": 1,
-          "EyeSource": null,
-          "EyesWeight": 1,
-          "HeadWeight": 1,
-          "Height": 1,
-          "IkLeftFoot": null,
-          "IkLeftHand": null,
-          "IkRightFoot": null,
-          "IkRightHand": null,
-          "LookAt": null,
-          "LookAtEnabled": false,
-          "Target": {
-            "_type": "component",
-            "go": "3a78266a-da75-475e-9317-94c71c3418fa",
-            "component_type": "SkinnedModelRenderer"
-          }
-        },
-        {
-          "__type": "FootstepEvent",
-          "Player": {
-            "_type": "component",
-            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
-            "component_type": "PlayerController"
-          },
-          "Source": {
-            "_type": "component",
-            "go": "3a78266a-da75-475e-9317-94c71c3418fa",
-            "component_type": "SkinnedModelRenderer"
-          }
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,36",
-          "IsTrigger": true,
-          "Scale": "20,20,72",
-          "Static": false,
-          "Surface": null
-        }
-      ],
-      "Children": [
-        {
-          "Id": "3a78266a-da75-475e-9317-94c71c3418fa",
-          "Name": "Body",
-          "Position": "0,0,0",
-          "Tags": "player_body",
+          "Id": "2bde09ff-444d-4ed6-83b9-9b7357824de7",
+          "Name": "2D Skybox",
+          "Tags": "skybox",
           "Enabled": true,
           "Components": [
             {
-              "__type": "SkinnedModelRenderer",
-              "AnimationGraph": null,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": null,
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
+              "__type": "SkyBox2D",
+              "SkyMaterial": "materials/skybox/light_test_dark.vmat",
               "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "EnvmapProbe",
+              "Bounds": {
+                "Mins": "-1600,-1600,0",
+                "Maxs": "1600,1600,1024"
+              },
+              "Feathering": 0.02,
+              "Projection": "Sphere",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "TintColor": "1,1,1,1"
             }
           ]
         },
         {
-          "Id": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
-          "Name": "Camera",
-          "Position": "0.000006461131,-0.000000000008185452,64",
-          "Tags": "player_camera",
+          "Id": "5fa992c9-a4b6-400b-b737-e0fcaa5b00fa",
+          "Name": "Sun",
+          "Rotation": "0.1917832,-0.09466422,-0.05136691,-0.9755098",
+          "Tags": "light_directional,light",
           "Enabled": true,
           "Components": [
             {
-              "__type": "CameraComponent",
-              "BackgroundColor": "0.25292,0.26086,0.29703,1",
-              "ClearFlags": "All",
-              "FieldOfView": 90,
-              "IsMainCamera": true,
-              "Orthographic": false,
-              "OrthographicHeight": 1204,
-              "Priority": 1,
-              "RenderExcludeTags": "player_body",
-              "RenderTags": "",
-              "TargetEye": "None",
-              "Viewport": "0,0,1,1",
-              "ZFar": 10000,
-              "ZNear": 1
-            },
-            {
-              "__type": "FilmGrain",
-              "__enabled": false,
-              "Intensity": 0.03,
-              "Response": 1
-            },
-            {
-              "__type": "Vignette",
-              "__enabled": false,
-              "Center": "0.5,0.5",
-              "Color": "0,0,0,0.38",
-              "Intensity": 1,
-              "Roundness": 0.5,
-              "Smoothness": 1
-            },
-            {
-              "__type": "ChromaticAberration",
-              "Offset": "4,6,4.049999",
-              "Scale": 0.05
-            },
-            {
-              "__type": "Sharpen",
-              "Scale": 0.25
-            },
-            {
-              "__type": "Highlight"
-            },
-            {
-              "__type": "Bloom",
-              "BloomColor": {
-                "color": [
-                  {
-                    "c": "1,1,1,1"
-                  },
-                  {
-                    "t": 0.508547,
-                    "c": "0.14419,0.14419,0.14419,1"
-                  },
-                  {
-                    "t": 1,
-                    "c": "0.12558,0.12558,0.12558,1"
-                  }
-                ],
-                "alpha": []
-              },
-              "BloomCurve": {
-                "rangey": "0,106.45",
-                "frames": [
-                  {},
-                  {
-                    "x": 1,
-                    "y": 1
-                  }
-                ]
-              },
-              "Mode": "Additive",
-              "Strength": 0.75,
-              "Threshold": 1,
-              "ThresholdWidth": 2
-            },
-            {
-              "__type": "ScreenPanel",
-              "AutoScreenScale": true,
-              "Opacity": 1,
-              "Scale": 1,
-              "ZIndex": 100
-            },
-            {
-              "__type": "TeleportScreenoverlay",
-              "Visible": false
-            }
-          ],
-          "Children": [
-            {
-              "Id": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-              "Name": "Crosshair",
-              "Position": "64,0,0",
-              "Scale": "0.01,0.01,0.01",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
-                  "Model": "models/dev/sphere.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Crosshair",
-                  "CrosshairModel": {
-                    "_type": "component",
-                    "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
+              "__type": "DirectionalLight",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.36744,0.27111,0.06323,1",
+              "Shadows": true,
+              "SkyColor": "0.05882,0.07451,0.08235,1"
             }
           ]
-        },
-        {
-          "Id": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
-          "Name": "EyePos",
-          "Position": "0,0,64",
-          "Enabled": true
-        },
-        {
-          "Id": "4255a67b-28f3-42ce-9dbf-5414a2a220a2",
-          "Name": "Shadow",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "SkinnedModelRenderer",
-              "AnimationGraph": null,
-              "BodyGroups": 341,
-              "BoneMergeTarget": {
-                "_type": "component",
-                "go": "3a78266a-da75-475e-9317-94c71c3418fa",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "ShadowsOnly",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Id": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
-      "Name": "Spawnpoint",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "SpawnPoint",
-          "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     }
@@ -4287,6 +4369,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-23T21:33:55.919873\u002B01:00",
+  "LastSaved": "2024-02-24T17:56:11.6446358\u002B01:00",
   "__references": []
 }
