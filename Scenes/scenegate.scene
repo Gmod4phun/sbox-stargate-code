@@ -4344,6 +4344,7 @@
     {
       "Id": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
       "Name": "World 3",
+      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -4363,7 +4364,613 @@
               "OnMapUnloaded": null,
               "UseMapFromLaunch": false
             }
+          ],
+          "Children": []
+        },
+        {
+          "Id": "295e315a-2c2f-4c07-87df-60fc7885fb18",
+          "Name": "Stargate",
+          "Position": "0,1024,90",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "StargateMilkyWay",
+              "AcceleratedDialup": false,
+              "AutoClose": false,
+              "CanOpenMenu": true,
+              "ChevronLightup": true,
+              "EventHorizon": null,
+              "EventHorizonMaterialGroup": "default",
+              "GateAddress": "FLATGR",
+              "GateGlyphType": "MILKYWAY",
+              "GateGroup": "M@",
+              "GateLocal": false,
+              "GateName": "",
+              "GatePrivate": false,
+              "Iris": null,
+              "MovieDialingType": false,
+              "OtherGate": null,
+              "Ramp": null,
+              "ShowWormholeCinematic": false
+            }
+          ],
+          "Children": [
+            {
+              "Id": "760dd4ee-9687-4fc9-9483-9cc6ff6c0d47",
+              "Name": "Chevron 1",
+              "Position": "0,0,0",
+              "Rotation": "-0.3420201,0,0,0.9396926",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "c7990567-7fbd-42db-99de-2f0020f22269",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "760dd4ee-9687-4fc9-9483-9cc6ff6c0d47",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 1,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "c7990567-7fbd-42db-99de-2f0020f22269",
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01095581,136.5016",
+                  "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "4d64e5cc-3c74-4519-8036-c99fe55829f7",
+              "Name": "Chevron 2",
+              "Position": "0,0,0",
+              "Rotation": "-0.6427876,0,0,0.7660444",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "b6132bb9-af80-4959-a566-6f64f2090baf",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "4d64e5cc-3c74-4519-8036-c99fe55829f7",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 2,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "b6132bb9-af80-4959-a566-6f64f2090baf",
+                  "Name": "Chevron Light",
+                  "Position": "9.476437,-0.01095581,136.5016",
+                  "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "6256162e-afab-4ba0-85b4-ebea85173e35",
+              "Name": "Chevron 3",
+              "Position": "0,0,0",
+              "Rotation": "-0.8660254,0,0,0.5",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "5a0cd26b-8b6c-44b1-9b06-99ff1e16358e",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "6256162e-afab-4ba0-85b4-ebea85173e35",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 3,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "5a0cd26b-8b6c-44b1-9b06-99ff1e16358e",
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01086807,136.5016",
+                  "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "0828935c-aa9d-44a5-b3c1-799c95578810",
+              "Name": "Chevron 4",
+              "Position": "0,0,0",
+              "Rotation": "-0.8660254,0,0,-0.5000001",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "979f0173-d6bc-4dbc-9f87-56b513dcc3f9",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "0828935c-aa9d-44a5-b3c1-799c95578810",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 4,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "979f0173-d6bc-4dbc-9f87-56b513dcc3f9",
+                  "Name": "Chevron Light",
+                  "Position": "9.476439,-0.01103973,136.5016",
+                  "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "ced1326f-4080-4de9-9504-0ed1268cf3f0",
+              "Name": "Chevron 5",
+              "Position": "0,0,0",
+              "Rotation": "-0.6427876,0,0,-0.7660444",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "c6318029-b694-4dba-9946-9bc13ed32a26",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "ced1326f-4080-4de9-9504-0ed1268cf3f0",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 5,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "c6318029-b694-4dba-9946-9bc13ed32a26",
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01096344,136.5016",
+                  "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "90fd6b24-ec05-4521-8fb0-4b3fa354a4e6",
+              "Name": "Chevron 6",
+              "Position": "0,0,0",
+              "Rotation": "-0.3420202,0,0,-0.9396926",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "339ba7a6-eb61-4f76-87e1-fbcac2ec1ff6",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "90fd6b24-ec05-4521-8fb0-4b3fa354a4e6",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 6,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "339ba7a6-eb61-4f76-87e1-fbcac2ec1ff6",
+                  "Name": "Chevron Light",
+                  "Position": "9.476439,-0.01097107,136.5016",
+                  "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "f8132deb-fe72-4c19-ae84-0da00766a0a9",
+              "Name": "Chevron 7",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "21309ec7-e9dc-4486-a7f9-54d4513cc4ea",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "f8132deb-fe72-4c19-ae84-0da00766a0a9",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 7,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "21309ec7-e9dc-4486-a7f9-54d4513cc4ea",
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.0109611,136.5016",
+                  "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "09ea6a84-a43f-4b82-ad31-42343b7c3439",
+              "Name": "Chevron 8",
+              "Position": "0,0,0",
+              "Rotation": "-0.9848077,0,0,0.1736482",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "559ef65a-b051-477e-bc95-2dbb987f267d",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "09ea6a84-a43f-4b82-ad31-42343b7c3439",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 8,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "559ef65a-b051-477e-bc95-2dbb987f267d",
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01098251,136.5017",
+                  "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "61d37c76-cfba-44d3-beea-b7ee208b3cb6",
+              "Name": "Chevron 9",
+              "Position": "0,0,0",
+              "Rotation": "-0.9848077,0,0,-0.1736482",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Chevron",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "go": "897daf41-95d4-4b48-85a3-b3f325ef55f1",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "go": "61d37c76-cfba-44d3-beea-b7ee208b3cb6",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 9,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "897daf41-95d4-4b48-85a3-b3f325ef55f1",
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01093292,136.5017",
+                  "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "PointLight",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "e279e301-0f6a-4fd3-89ff-3b7912959133",
+              "Name": "Ring",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "StargateRingMilkyWay",
+                  "_ringState": "STOPPED",
+                  "CurRingSymbol": "#",
+                  "RingAngle": 0,
+                  "RingModel": {
+                    "_type": "component",
+                    "go": "e279e301-0f6a-4fd3-89ff-3b7912959133",
+                    "component_type": "ModelRenderer"
+                  },
+                  "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
+                },
+                {
+                  "__type": "ModelRenderer",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
           ]
+        },
+        {
+          "Id": "0e26a623-67be-4447-ac38-838176ce79fa",
+          "Name": "DHD",
+          "Position": "164,800,-4.999985",
+          "Rotation": "0.09229596,0.09229596,-0.7010574,0.7010574",
+          "Enabled": true,
+          "__Prefab": "prefabs/dhdmilkyway.prefab"
         }
       ]
     }
@@ -4391,6 +4998,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-24T19:28:10.7265821\u002B01:00",
+  "LastSaved": "2024-02-24T21:31:17.2749213\u002B01:00",
   "__references": []
 }
