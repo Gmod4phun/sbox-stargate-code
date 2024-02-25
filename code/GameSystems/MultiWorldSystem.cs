@@ -108,6 +108,8 @@ public class MultiWorldSystem : GameObjectSystem
         if ( !player.IsValid() )
             return;
 
+        Log.Info( $"Assigning player {player} to world {worldIndex}" );
+
         var camera = player.Camera;
         var controller = player.Controller;
 
@@ -234,6 +236,7 @@ public class MultiWorldSystem : GameObjectSystem
         {
             if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
             {
+                Log.Info( "" );
                 AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
             }
         }

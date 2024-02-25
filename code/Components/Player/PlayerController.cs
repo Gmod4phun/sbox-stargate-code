@@ -14,7 +14,7 @@ public class PlayerController : Component
 	[Property] public CharacterController Controller => Components.Get<CharacterController>();
 	[Property] public bool FirstPerson { get; set; }
 
-	[Property]
+	[Property, Sync]
 	public int CurrentWorldIndex { get; set; } = 0;
 
 	[Sync]
@@ -102,6 +102,15 @@ public class PlayerController : Component
 
 	protected override void OnUpdate()
 	{
+		// render the body for other players normally
+		if ( IsProxy )
+		{
+			foreach ( var mr in Body.Components.GetAll<ModelRenderer>( FindMode.EnabledInSelfAndDescendants ).Where( x => x.Tags.Has( "player_body" ) || x.Tags.Has( "clothing" ) ) )
+			{
+				mr.RenderType = ModelRenderer.ShadowRenderType.On;
+			}
+		}
+
 		// Eye input
 		if ( !IsProxy )
 		{
@@ -142,6 +151,11 @@ public class PlayerController : Component
 			if ( Input.Pressed( "View" ) )
 			{
 				FirstPerson = !FirstPerson;
+			}
+
+			if ( Input.Pressed( "Score" ) )
+			{
+				CurrentWorldIndex = (CurrentWorldIndex + 1) % MultiWorldSystem.AllWorldIndices.Count();
 			}
 
 			UseLogic();

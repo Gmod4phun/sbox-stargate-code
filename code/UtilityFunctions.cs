@@ -15,6 +15,8 @@ public static class UtilityFunctions
         var prop = prop_object.Components.Create<Prop>();
         prop.Model = model;
 
+        prop_object.NetworkSpawn();
+
         MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
 
         return prop_object;
@@ -35,6 +37,8 @@ public static class UtilityFunctions
         prop.Enabled = false;
         prop.Enabled = true;
 
+        prop_object.NetworkSpawn();
+
         MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
 
         return prop_object;
@@ -50,14 +54,20 @@ public static class UtilityFunctions
         var worldobject = GameManager.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Name == $"World {worldIndex}" );
         prop_object.SetParent( worldobject, false );
 
+        var package = await Package.FetchAsync( "facepunch.wooden_crate", false );
+        await package.MountAsync();
+        var model = Model.Load( package.GetMeta( "PrimaryAsset", "" ) );
+
         var prop = prop_object.Components.Create<Prop>();
-        prop.Model = Cloud.Model( "facepunch.wooden_crate" );
+        prop.Model = model;
 
         var body = prop_object.Components.Get<Rigidbody>();
         if ( body.IsValid() )
         {
             body.Velocity = dir.Normal * power;
         }
+
+        prop_object.NetworkSpawn();
 
         MultiWorldSystem.AssignWorldToObject( prop_object, worldIndex );
     }
