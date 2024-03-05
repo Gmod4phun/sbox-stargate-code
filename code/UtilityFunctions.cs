@@ -51,7 +51,7 @@ public static class UtilityFunctions
         prop_object.Transform.Position = pos;
         prop_object.Transform.Rotation = Rotation.LookAt( dir );
 
-        var worldobject = GameManager.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Name == $"World {worldIndex}" );
+        var worldobject = Game.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Name == $"World {worldIndex}" );
         prop_object.SetParent( worldobject, false );
 
         var package = await Package.FetchAsync( "facepunch.wooden_crate", false );

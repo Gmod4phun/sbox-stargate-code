@@ -276,7 +276,7 @@ namespace Sandbox.Components.Stargate
 			Stargate current = null;
 			float distance = float.PositiveInfinity;
 
-			foreach ( Stargate gate in GameManager.ActiveScene.GetAllComponents<Stargate>() )
+			foreach ( Stargate gate in Game.ActiveScene.GetAllComponents<Stargate>() )
 			{
 				if ( exclude != null && exclude.Contains( gate ) )
 					continue;

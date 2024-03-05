@@ -19,7 +19,7 @@ namespace Sandbox.Components.Stargate.Ramps
 
         public static GateRamp GetClosest( Vector3 position, float max = -1f )
         {
-            var ramps = GameManager.ActiveScene.GetAllComponents<GateRamp>().Where( x => x.HasFreeSlot() );
+            var ramps = Game.ActiveScene.GetAllComponents<GateRamp>().Where( x => x.HasFreeSlot() );
             if ( !ramps.Any() )
             {
                 return null;

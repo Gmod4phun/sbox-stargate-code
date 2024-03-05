@@ -222,7 +222,7 @@ namespace Sandbox.Components.Stargate
         public static Stargate FindByFullAddress( string address )
         {
             // foreach ( Stargate gate in Entity.All.OfType<Stargate>() )
-            foreach ( Stargate gate in GameManager.ActiveScene.GetAllComponents<Stargate>() )
+            foreach ( Stargate gate in Game.ActiveScene.GetAllComponents<Stargate>() )
             {
                 if ( GetFullGateAddress( gate ) == address ) return gate;
             }
@@ -237,7 +237,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>A gate that matches the parameter.</returns>
         public static Stargate FindByAddressAndGroup( string address, string group )
         {
-            foreach ( Stargate gate in GameManager.ActiveScene.GetAllComponents<Stargate>() )
+            foreach ( Stargate gate in Game.ActiveScene.GetAllComponents<Stargate>() )
             {
                 if ( gate.GateAddress + PointOfOrigin == address && gate.GateGroup == group )
                     return gate;
@@ -252,7 +252,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>A gate that matches the parameter.</returns>
         public static Stargate FindByAddress8Chev( string address )
         {
-            foreach ( Stargate gate in GameManager.ActiveScene.GetAllComponents<Stargate>() )
+            foreach ( Stargate gate in Game.ActiveScene.GetAllComponents<Stargate>() )
             {
                 if ( gate.GateAddress + gate.GateGroup[0] + PointOfOrigin == address ) return gate;
             }
@@ -324,7 +324,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>A gate that matches the parameter.</returns>
         public static Stargate FindRandomGate()
         {
-            var allGates = GameManager.ActiveScene.GetAllComponents<Stargate>().ToList();
+            var allGates = Game.ActiveScene.GetAllComponents<Stargate>().ToList();
 
             return allGates.Count is 0 ? null : new Random().FromList( allGates );
         }
@@ -336,7 +336,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>A gate that matches the parameter.</returns>
         public static Stargate FindRandomGate( Stargate ent )
         {
-            var allGates = GameManager.ActiveScene.GetAllComponents<Stargate>().ToList();
+            var allGates = Game.ActiveScene.GetAllComponents<Stargate>().ToList();
             allGates.Remove( ent ); // it will always be in the list, since it is a stargate
 
             return allGates.Count is 0 ? null : new Random().FromList( allGates );
@@ -350,7 +350,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>A gate that matches the parameter.</returns>
         public static Stargate FindNearestGate( GameObject ent, float maxDistance = -1 )
         {
-            var allGates = GameManager.ActiveScene.GetAllComponents<Stargate>().ToList();
+            var allGates = Game.ActiveScene.GetAllComponents<Stargate>().ToList();
             if ( allGates.Count() is 0 ) return null;
 
             var distances = new float[allGates.Count()];
@@ -373,7 +373,7 @@ namespace Sandbox.Components.Stargate
         /// <returns>A gate that matches the parameter.</returns>
         public static Stargate FindFarthestGate( GameObject ent, float maxDistance = -1 )
         {
-            var allGates = GameManager.ActiveScene.GetAllComponents<Stargate>().ToList();
+            var allGates = Game.ActiveScene.GetAllComponents<Stargate>().ToList();
             if ( allGates.Count() is 0 ) return null;
 
             var distances = new float[allGates.Count()];

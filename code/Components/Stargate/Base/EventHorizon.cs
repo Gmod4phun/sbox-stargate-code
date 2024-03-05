@@ -799,7 +799,7 @@ namespace Sandbox.Components.Stargate
 			{
 				WormholeLoop.Position = Transform.Position;
 
-				var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+				var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
 
 				if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == MultiWorldSystem.GetWorldIndexOfObject( this ) )
 				{
@@ -934,8 +934,8 @@ namespace Sandbox.Components.Stargate
 
 		private static void HandleFastMovingEntities() // fix for fast moving objects
 		{
-			var scene = GameManager.ActiveScene;
-			foreach ( var ent in GameManager.ActiveScene.GetAllObjects( true ).Where( x => !x.Tags.Has( "player" ) && x.Components.Get<Stargate>() is null && (x.Tags.Has( StargateTags.BeforeGate ) || x.Tags.Has( StargateTags.BehindGate )) && Stargate.IsAllowedForGateTeleport( x ) ) )
+			var scene = Game.ActiveScene;
+			foreach ( var ent in Game.ActiveScene.GetAllObjects( true ).Where( x => !x.Tags.Has( "player" ) && x.Components.Get<Stargate>() is null && (x.Tags.Has( StargateTags.BeforeGate ) || x.Tags.Has( StargateTags.BehindGate )) && Stargate.IsAllowedForGateTeleport( x ) ) )
 			{
 				var shouldTeleport = true;
 

@@ -1,9 +1,9 @@
 public class MultiWorldSystem : GameObjectSystem
 {
-    // public static MultiWorldSystem Current => GameManager.ActiveScene.GetSystem<MultiWorldSystem>();
+    // public static MultiWorldSystem Current => Game.ActiveScene.GetSystem<MultiWorldSystem>();
 
     // public Dictionary<int, MultiWorld> Worlds = new();
-    public static IEnumerable<MultiWorld> Worlds => GameManager.ActiveScene.IsValid() ? GameManager.ActiveScene.GetAllComponents<MultiWorld>() : null;
+    public static IEnumerable<MultiWorld> Worlds => Game.ActiveScene.IsValid() ? Game.ActiveScene.GetAllComponents<MultiWorld>() : null;
     public static IEnumerable<int> AllWorldIndices => Worlds.Select( w => w.WorldIndex );
     public static List<MultiWorldSound> Sounds = new();
 
@@ -144,7 +144,7 @@ public class MultiWorldSystem : GameObjectSystem
     {
         await Task.Delay( 10 );
 
-        foreach ( var gameObject in GameManager.ActiveScene.GetAllObjects( false ) )
+        foreach ( var gameObject in Game.ActiveScene.GetAllObjects( false ) )
         {
             var allWorldTags = AllWorldIndices.Select( GetWorldTag ).ToHashSet();
 
@@ -177,7 +177,7 @@ public class MultiWorldSystem : GameObjectSystem
     {
         await Task.Delay( 10 );
 
-        foreach ( var player in GameManager.ActiveScene.GetAllComponents<PlayerController>() )
+        foreach ( var player in Game.ActiveScene.GetAllComponents<PlayerController>() )
         {
             if ( player.IsValid() )
             {
@@ -226,7 +226,7 @@ public class MultiWorldSystem : GameObjectSystem
             }
         }
 
-        GameManager.ActiveScene.PhysicsWorld.SetCollisionRules( rules );
+        Game.ActiveScene.PhysicsWorld.SetCollisionRules( rules );
         Log.Info( "MultiWorld: Collision rules initialized" );
     }
 
@@ -241,7 +241,7 @@ public class MultiWorldSystem : GameObjectSystem
             }
         }
 
-        var localPlayer = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+        var localPlayer = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
         var playerWorldIndex = GetWorldIndexOfObject( localPlayer );
 
         foreach ( var rigidbody in Scene.GetAllComponents<Rigidbody>() )
@@ -276,7 +276,7 @@ public class MultiWorldSystem : GameObjectSystem
                     }
                 }
 
-                var player = GameManager.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+                var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
                 if ( GetWorldIndexOfObject( player ) == (followObjectValid ? GetWorldIndexOfObject( sound.FollowObject ) : sound.WorldIndex) )
                 {
                     sound.Handle.Volume = 1;
