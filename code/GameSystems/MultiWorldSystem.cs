@@ -90,10 +90,6 @@ public class MultiWorldSystem : GameObjectSystem
         // add to new world
         gameObject.Parent = GetWorldByIndex( worldIndex ).GameObject;
 
-        // temp fix until tags update after parenting is fixed
-        gameObject.Tags.Toggle( "_" );
-        gameObject.Tags.Toggle( "_" );
-
         // if it's a player, handle that
         if ( gameObject.Components.TryGet<PlayerController>( out var ply ) )
         {
