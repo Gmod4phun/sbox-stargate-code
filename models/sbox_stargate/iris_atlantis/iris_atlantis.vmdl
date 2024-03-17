@@ -66,8 +66,8 @@
 						import_scale = 1.0
 						faceMergeAngle = 10.0
 						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
+						import_mode = "HullPerElement"
+						optimization_algorithm = "Exact"
 						import_filter = 
 						{
 							exclude_by_default = false
@@ -108,6 +108,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/sbox_stargate/iris_atlantis/src/shield_ref.smd"
 						start_frame = -1
 						end_frame = -1
