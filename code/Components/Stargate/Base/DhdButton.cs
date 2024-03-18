@@ -59,7 +59,12 @@ namespace Sandbox.Components.Stargate
                 var pos = ButtonCollider.KeyframeBody.MassCenter;
                 if ( pos.DistanceSquared( Scene.Camera.Transform.Position ) < 4096 )
                 {
-                    if ( !MultiWorldSystem.AreObjectsInSameWorld( Scene.Camera.GameObject, GameObject ) )
+                    var player = Scene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Camera == Scene.Camera );
+
+                    if ( !player.IsValid() )
+                        return;
+
+                    if ( !MultiWorldSystem.AreObjectsInSameWorld( player.GameObject, GameObject ) )
                         return;
 
                     using ( Gizmo.Scope( "DhdSymbol", global::Transform.Zero ) )
