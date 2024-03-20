@@ -139,10 +139,7 @@ namespace Sandbox.Components.Stargate.Rings
 
                 if ( e.Components.Get<PlayerController>() is PlayerController ply )
                 {
-                    if ( ply.Components.Get<TeleportScreenoverlay>( FindMode.InDescendants ) is TeleportScreenoverlay overlay )
-                    {
-                        overlay.ActivateFor( 0.2f );
-                    }
+                    ply.ActivateTeleportScreenOverlay( 0.2f );
 
                     var DeltaAngleEH = to.Transform.Rotation.Angles() - from.Transform.Rotation.Angles();
                     ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
