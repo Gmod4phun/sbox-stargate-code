@@ -67,6 +67,14 @@ public class PlayerController : Component
 		Controller.Velocity = velocity;
 	}
 
+	public void ActivateTeleportScreenOverlay( float duration )
+	{
+		if ( Camera.IsValid() && Camera.Components.TryGet<TeleportScreenoverlay>( out var overlay ) )
+		{
+			overlay.ActivateFor( duration );
+		}
+	}
+
 	private void UseLogic()
 	{
 		var cam = Camera;

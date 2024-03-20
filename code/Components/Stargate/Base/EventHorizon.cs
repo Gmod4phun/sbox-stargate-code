@@ -461,17 +461,10 @@ namespace Sandbox.Components.Stargate
 			var entPosCenterDiff = Transform.World.PointToLocal( ent.Transform.Position ) - Transform.World.PointToLocal( center );
 			var otherPos = otherCenter + otherRot.Forward * entPosCenterDiff.x + otherRot.Right * entPosCenterDiff.y + otherRot.Up * entPosCenterDiff.z;
 
-			if ( isPlayer && ent.Components.TryGet<TeleportScreenoverlay>( out var overlay, FindMode.InDescendants ) )
-			{
-				overlay.ActivateFor( 0.05f );
-			}
-
-			// wait 2 fixed updates, makes sure overlay is applied before teleporting :/
-			await Task.FixedUpdate();
-			await Task.FixedUpdate();
-
 			if ( isPlayer && ent.Components.Get<PlayerController>() is PlayerController ply )
 			{
+				ply.ActivateTeleportScreenOverlay( 0.05f );
+
 				var DeltaAngleEH = otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
 				ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw + 180, 0 ) );
 

@@ -15,10 +15,9 @@
 
     protected override int BuildHash() => System.HashCode.Combine(Time.Now);
 
-    protected override void OnUpdate()
+    protected override void OnPreRender()
     {
-        base.OnUpdate();
-
+        base.OnPreRender();
         panelRef.SetClass("hidden", !Visible);
     }
 
