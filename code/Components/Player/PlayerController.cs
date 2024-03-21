@@ -81,7 +81,7 @@ public class PlayerController : Component
 		}
 	}
 
-	public void OnDeath()
+	public void OnDeath( bool keepBody = true )
 	{
 		if ( !Controller.IsValid() || !Body.IsValid() )
 			return;
@@ -89,6 +89,21 @@ public class PlayerController : Component
 		PlayerHealth = 0;
 		PlayerDeathTime = 0;
 		PlayerCollider.Enabled = false;
+
+		if ( keepBody )
+		{
+			Ragdollize();
+		}
+		else
+		{
+			Body?.Destroy();
+		}
+	}
+
+	private void Ragdollize()
+	{
+		if ( !Body.IsValid() )
+			return;
 
 		var phys = Body.Components.Create<ModelPhysics>();
 		phys.Renderer = Body.Components.Get<SkinnedModelRenderer>();
@@ -159,7 +174,8 @@ public class PlayerController : Component
 
 			if ( !PlayerAlive )
 			{
-				cam.Transform.Position = Body.Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f; ;
+				var camPos = Body.IsValid() ? Body.Transform.Position : Transform.Position;
+				cam.Transform.Position = camPos + lookDir.Backward * 300 + Vector3.Up * 75.0f;
 			}
 			else
 			{

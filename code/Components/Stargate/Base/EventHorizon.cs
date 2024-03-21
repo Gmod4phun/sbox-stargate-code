@@ -520,7 +520,7 @@ namespace Sandbox.Components.Stargate
 
 			if ( ent.Components.TryGet<PlayerController>( out var ply ) )
 			{
-				ply.OnDeath();
+				ply.OnDeath( false );
 			}
 			else
 			{
