@@ -518,7 +518,14 @@ namespace Sandbox.Components.Stargate
 			GetOther()?.BufferFront.Remove( ent );
 			GetOther()?.BufferBack.Remove( ent );
 
-			ent.Destroy();
+			if ( ent.Components.TryGet<PlayerController>( out var ply ) )
+			{
+				ply.OnDeath();
+			}
+			else
+			{
+				ent.Destroy();
+			}
 
 			PlayTeleportSound();
 		}

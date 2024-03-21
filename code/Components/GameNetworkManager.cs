@@ -18,6 +18,8 @@ public class GameNetworkManager : Component, Component.INetworkListener
     /// </summary>
     [Property] public List<GameObject> SpawnPoints { get; set; }
 
+    public static GameNetworkManager Current => Game.ActiveScene.GetAllComponents<GameNetworkManager>().FirstOrDefault();
+
     protected override async Task OnLoad()
     {
         if ( Scene.IsEditor )
@@ -38,6 +40,11 @@ public class GameNetworkManager : Component, Component.INetworkListener
     {
         Log.Info( $"Player '{channel.DisplayName}' has joined the game" );
 
+        SpawnPlayer( channel );
+    }
+
+    public void SpawnPlayer( Connection channel )
+    {
         if ( PlayerPrefab is null )
             return;
 

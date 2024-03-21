@@ -21,6 +21,9 @@ public sealed class FootstepEvent : Component
 
 	private void OnEvent( SceneModel.FootstepEvent e )
 	{
+		if ( !Player.PlayerAlive )
+			return;
+
 		var currentWorldTag = MultiWorldSystem.GetWorldTag( Player.CurrentWorldIndex );
 
 		var tr = Scene.Trace

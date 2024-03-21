@@ -199,7 +199,14 @@
             "go": "94717ee8-42f9-408e-aab4-56944a3ff8aa"
           },
           "FirstPerson": true,
-          "Gravity": "0,0,800"
+          "Gravity": "0,0,800",
+          "PlayerCollider": {
+            "_type": "component",
+            "component_id": "15c0358c-8678-4bf4-ba97-038f22d47704",
+            "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+            "component_type": "BoxCollider"
+          },
+          "PlayerHealth": 100
         },
         {
           "__type": "CitizenAnimationHelper",
@@ -5165,7 +5172,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-20T21:10:19.666577\u002B01:00",
+  "LastSaved": "2024-03-21T21:24:41.0285501\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

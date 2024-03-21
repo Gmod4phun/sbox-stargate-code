@@ -13,6 +13,12 @@ public class PlayerController : Component
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	[Property] public CharacterController Controller => Components.Get<CharacterController>();
 	[Property] public bool FirstPerson { get; set; }
+	[Property] public Collider PlayerCollider { get; set; }
+	[Property] public float PlayerHealth { get; set; } = 100;
+
+	public bool PlayerAlive => PlayerHealth > 0;
+
+	private TimeSince PlayerDeathTime { get; set; }
 
 	[Property, Sync]
 	public int CurrentWorldIndex { get; set; } = 0;
@@ -75,6 +81,21 @@ public class PlayerController : Component
 		}
 	}
 
+	public void OnDeath()
+	{
+		if ( !Controller.IsValid() || !Body.IsValid() )
+			return;
+
+		PlayerHealth = 0;
+		PlayerDeathTime = 0;
+		PlayerCollider.Enabled = false;
+
+		var phys = Body.Components.Create<ModelPhysics>();
+		phys.Renderer = Body.Components.Get<SkinnedModelRenderer>();
+		phys.Model = phys.Renderer.Model;
+		phys.PhysicsGroup.Velocity = Controller.Velocity;
+	}
+
 	private void UseLogic()
 	{
 		var cam = Camera;
@@ -135,23 +156,43 @@ public class PlayerController : Component
 			}
 
 			var lookDir = EyeAngles.ToRotation();
-			if ( FirstPerson )
+
+			if ( !PlayerAlive )
 			{
-				cam.Transform.Position = Eye.Transform.Position;
-				cam.Transform.Rotation = lookDir;
+				cam.Transform.Position = Body.Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f; ;
 			}
 			else
 			{
-				cam.Transform.Position = Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f;
-				cam.Transform.Rotation = lookDir;
+				if ( FirstPerson )
+				{
+					cam.Transform.Position = Eye.Transform.Position;
+				}
+				else
+				{
+					cam.Transform.Position = Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f;
+				}
 			}
+
+			cam.Transform.Rotation = lookDir;
 
 			if ( cam is not null )
 			{
 				foreach ( var mr in Body.Components.GetAll<ModelRenderer>( FindMode.EnabledInSelfAndDescendants ).Where( x => x.Tags.Has( "player_body" ) || x.Tags.Has( "clothing" ) ) )
 				{
-					mr.RenderType = FirstPerson ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
+					mr.RenderType = FirstPerson && PlayerAlive ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
 				}
+			}
+
+			if ( !PlayerAlive )
+			{
+				if ( Input.Pressed( "Attack1" ) && PlayerDeathTime > 3f )
+				{
+					// respawn
+					GameNetworkManager.Current.SpawnPlayer( Network.OwnerConnection );
+					GameObject.Destroy();
+				}
+
+				return;
 			}
 
 			IsRunning = Input.Down( "Run" );
@@ -240,7 +281,7 @@ public class PlayerController : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if ( IsProxy )
+		if ( IsProxy || !PlayerAlive )
 			return;
 
 		BuildWishVelocity();
