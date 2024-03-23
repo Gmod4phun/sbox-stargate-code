@@ -45,7 +45,7 @@
 
 			if ( ChevronLight.IsValid() )
 			{
-				ChevronLight.Enabled = On;
+				// ChevronLight.Enabled = On; // disable chevron lights for now
 			}
 		}
 
