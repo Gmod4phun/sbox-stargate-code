@@ -288,12 +288,19 @@ public class PlayerController : Component
 	}
 
 	[Broadcast]
-	public void OnJump( float floatValue, string dataString, object[] objects, Vector3 position )
+	public void OnJump( Vector3 position )
 	{
 		AnimationHelper?.TriggerJump();
+		FootstepEvent.PlayJumpLandSound( this, position, false );
 	}
 
-	float fJumps;
+	[Broadcast]
+	public void OnLand( Vector3 position )
+	{
+		FootstepEvent.PlayJumpLandSound( this, position, true );
+	}
+
+	bool wasOnGround = true;
 
 	protected override void OnFixedUpdate()
 	{
@@ -316,10 +323,7 @@ public class PlayerController : Component
 			cc.Punch( Vector3.Up * flMul * flGroundFactor );
 			//	cc.IsOnGround = false;
 
-			OnJump( fJumps, "Hello", new object[] { Time.Now.ToString(), 43.0f }, Vector3.Random );
-
-			fJumps += 1.0f;
-
+			OnJump( Transform.Position );
 		}
 
 		if ( cc.IsOnGround )
@@ -327,12 +331,20 @@ public class PlayerController : Component
 			cc.Velocity = cc.Velocity.WithZ( 0 );
 			cc.Accelerate( WishVelocity );
 			cc.ApplyFriction( 4.0f );
+
+			if ( !wasOnGround )
+			{
+				wasOnGround = true;
+				OnLand( Transform.Position );
+			}
 		}
 		else
 		{
 			cc.Velocity -= Gravity * Time.Delta * 0.5f;
 			cc.Accelerate( WishVelocity.ClampLength( 50 ) );
 			cc.ApplyFriction( 0.1f );
+
+			wasOnGround = false;
 		}
 
 		cc.Move();

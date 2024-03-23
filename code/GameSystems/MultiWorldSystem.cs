@@ -278,7 +278,7 @@ public class MultiWorldSystem : GameObjectSystem
                 var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
                 if ( GetWorldIndexOfObject( player ) == (followObjectValid ? GetWorldIndexOfObject( sound.FollowObject ) : sound.WorldIndex) )
                 {
-                    sound.Handle.Volume = 1;
+                    sound.Handle.Volume = sound.Volume;
                 }
                 else
                 {

@@ -4,6 +4,8 @@ public class MultiWorldSound
     public SoundHandle Handle { get; set; }
     public GameObject FollowObject { get; set; }
 
+    public float Volume { get; set; } = 1;
+
     public static MultiWorldSound Play( string name, Vector3 position, int worldIndex )
     {
         var sound = new MultiWorldSound
