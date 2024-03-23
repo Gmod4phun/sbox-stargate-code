@@ -128,10 +128,13 @@ public class MultiWorldSystem : GameObjectSystem
             }
         }
 
+        // idk why this shit still has a problem, gotta figure out what broke recently
+        player.Tags.Toggle( "_" );
+        player.Tags.Toggle( "_" );
+
         // remove exluce tag of the world we will be in
         camera.RenderExcludeTags.Remove( newWorldTag );
         controller.IgnoreLayers.Remove( newWorldTag );
-        // player.Tags.Add( newWorldTag );
         player.CurrentWorldIndex = worldIndex;
     }
 
