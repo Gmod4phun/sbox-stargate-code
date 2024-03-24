@@ -18,13 +18,13 @@
     protected override void OnPreRender()
     {
         base.OnPreRender();
-        panelRef.SetClass("hidden", !Visible);
+        panelRef?.SetClass("hidden", !Visible);
     }
 
     public async void ActivateFor(float duration)
     {
         Visible = true;
-        await Task.DelaySeconds(duration);
+        await GameTask.DelaySeconds(duration);
         Visible = false;
     }
 }
