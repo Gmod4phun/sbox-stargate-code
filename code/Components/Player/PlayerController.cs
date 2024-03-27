@@ -15,6 +15,7 @@ public class PlayerController : Component
 	[Property] public bool FirstPerson { get; set; }
 	[Property] public Collider PlayerCollider { get; set; }
 	[Property] public float PlayerHealth { get; set; } = 100;
+	[Property] public bool NoClip { get; set; } = false;
 
 	public bool PlayerAlive => PlayerHealth > 0;
 
@@ -307,9 +308,29 @@ public class PlayerController : Component
 		if ( IsProxy || !PlayerAlive )
 			return;
 
-		BuildWishVelocity();
-
 		var cc = Controller;
+
+		if ( NoClip )
+		{
+			var clampAng = new Angles( EyeAngles );
+			clampAng.pitch = clampAng.pitch.Clamp( -89, 89 );
+			var rot = clampAng.ToRotation();
+
+			var dirVector = Vector3.Zero;
+
+			if ( Input.Down( "Forward" ) ) dirVector += rot.Forward;
+			if ( Input.Down( "Backward" ) ) dirVector += rot.Backward;
+			if ( Input.Down( "Left" ) ) dirVector += rot.Left;
+			if ( Input.Down( "Right" ) ) dirVector += rot.Right;
+
+			if ( Input.Down( "Run" ) ) dirVector *= 5;
+
+			Transform.Position += dirVector * 250 * Time.Delta;
+
+			return;
+		}
+
+		BuildWishVelocity();
 
 		cc.IgnoreLayers = Stargate.GetAdjustedIgnoreTagsForClipping( GameObject, cc.IgnoreLayers );
 
