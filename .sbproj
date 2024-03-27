@@ -27,7 +27,6 @@
     "CsProjName": "",
     "StartupScene": "scenes/scenegate.scene",
     "ProjectTemplate": null,
-    "MapStartupScene": null,
     "LaunchMode": "Normal"
   }
 }
