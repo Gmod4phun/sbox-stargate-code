@@ -73,7 +73,10 @@ public class GameNetworkManager : Component, Component.INetworkListener
 
         player.NetworkSpawn( channel );
 
-        MultiWorldSystem.AssignWorldToObject( player, 0 );
+        if ( player.Components.TryGet<PlayerController>( out var controller, FindMode.EverythingInSelfAndDescendants ) )
+        {
+            controller.CurrentWorldIndex = 0;
+        }
     }
 
     /// <summary>
