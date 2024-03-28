@@ -2,144 +2,6 @@
   "__guid": "187c258a-c8cc-41ee-b629-54c5a3b4699b",
   "GameObjects": [
     {
-      "__guid": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
-      "Name": "Camera",
-      "Position": "-0.000006461131,0.000000000007620602,64",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "player_camera",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "CameraComponent",
-          "__guid": "20a624fd-8c49-4b52-ad76-2dcdd0a3aaad",
-          "BackgroundColor": "0.25292,0.26086,0.29703,1",
-          "ClearFlags": "All",
-          "FieldOfView": 90,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 65536,
-          "ZNear": 1
-        },
-        {
-          "__type": "FilmGrain",
-          "__guid": "91d34a6b-4f25-4d35-87f0-dccabf6dc01a",
-          "__enabled": false,
-          "Intensity": 0.03,
-          "Response": 1
-        },
-        {
-          "__type": "Vignette",
-          "__guid": "12954a31-d220-40ee-9dd8-eedf9cda1255",
-          "__enabled": false,
-          "Center": "0.5,0.5",
-          "Color": "0,0,0,0.38",
-          "Intensity": 1,
-          "Roundness": 0.5,
-          "Smoothness": 1
-        },
-        {
-          "__type": "ChromaticAberration",
-          "__guid": "b686dd96-dcfb-4523-b44f-f338e948da91",
-          "Offset": "4,6,4.049999",
-          "Scale": 0.05
-        },
-        {
-          "__type": "Sharpen",
-          "__guid": "312f35c9-c172-415f-8f54-7051949d90dd",
-          "Scale": 0.25
-        },
-        {
-          "__type": "Highlight",
-          "__guid": "b93013b4-1cef-48fd-a5cd-3c141149e994"
-        },
-        {
-          "__type": "Bloom",
-          "__guid": "8dfd8b42-c6ce-4a42-aa2c-de5de88f7608",
-          "BloomColor": {
-            "color": [
-              {
-                "c": "1,1,1,1"
-              },
-              {
-                "t": 0.508547,
-                "c": "0.14419,0.14419,0.14419,1"
-              },
-              {
-                "t": 1,
-                "c": "0.12558,0.12558,0.12558,1"
-              }
-            ],
-            "alpha": []
-          },
-          "BloomCurve": {
-            "rangey": "0,106.45",
-            "frames": [
-              {},
-              {
-                "x": 1,
-                "y": 1
-              }
-            ]
-          },
-          "Mode": "Additive",
-          "Strength": 0.75,
-          "Threshold": 1,
-          "ThresholdWidth": 2
-        },
-        {
-          "__type": "ScreenPanel",
-          "__guid": "33674790-7ac5-4de5-b0a5-b581675fcc0e",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        },
-        {
-          "__type": "TeleportScreenoverlay",
-          "__guid": "b42f0097-81dd-48d2-be77-4a1ab7e33b08",
-          "Visible": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-          "Name": "Crosshair",
-          "Position": "64,0,0",
-          "Scale": "0.01,0.01,0.01",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "__guid": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
-              "BodyGroups": 18446744073709551615,
-              "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
-              "Model": "models/dev/sphere.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Crosshair",
-              "__guid": "e4c9f843-f81a-41ce-9d05-ba2ce4095fbf",
-              "CrosshairModel": {
-                "_type": "component",
-                "component_id": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
-                "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-                "component_type": "ModelRenderer"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
       "Name": "Network Helper",
       "Enabled": true,
@@ -192,6 +54,12 @@
           "Body": {
             "_type": "gameobject",
             "go": "3a78266a-da75-475e-9317-94c71c3418fa"
+          },
+          "Camera": {
+            "_type": "component",
+            "component_id": "20a624fd-8c49-4b52-ad76-2dcdd0a3aaad",
+            "go": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+            "component_type": "CameraComponent"
           },
           "CurrentWorldIndex": 0,
           "Eye": {
@@ -274,6 +142,143 @@
           "Position": "0,0,64",
           "Enabled": true,
           "NetworkMode": 2
+        },
+        {
+          "__guid": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+          "Name": "Camera",
+          "Position": "0.000006461131,-0.000000000008185452,64",
+          "Tags": "player_camera",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "CameraComponent",
+              "__guid": "20a624fd-8c49-4b52-ad76-2dcdd0a3aaad",
+              "BackgroundColor": "0.25292,0.26086,0.29703,1",
+              "ClearFlags": "All",
+              "FieldOfView": 90,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 65536,
+              "ZNear": 1
+            },
+            {
+              "__type": "FilmGrain",
+              "__guid": "91d34a6b-4f25-4d35-87f0-dccabf6dc01a",
+              "__enabled": false,
+              "Intensity": 0.03,
+              "Response": 1
+            },
+            {
+              "__type": "Vignette",
+              "__guid": "12954a31-d220-40ee-9dd8-eedf9cda1255",
+              "__enabled": false,
+              "Center": "0.5,0.5",
+              "Color": "0,0,0,0.38",
+              "Intensity": 1,
+              "Roundness": 0.5,
+              "Smoothness": 1
+            },
+            {
+              "__type": "ChromaticAberration",
+              "__guid": "b686dd96-dcfb-4523-b44f-f338e948da91",
+              "Offset": "4,6,4.049999",
+              "Scale": 0.05
+            },
+            {
+              "__type": "Sharpen",
+              "__guid": "312f35c9-c172-415f-8f54-7051949d90dd",
+              "Scale": 0.25
+            },
+            {
+              "__type": "Highlight",
+              "__guid": "b93013b4-1cef-48fd-a5cd-3c141149e994"
+            },
+            {
+              "__type": "Bloom",
+              "__guid": "8dfd8b42-c6ce-4a42-aa2c-de5de88f7608",
+              "BloomColor": {
+                "color": [
+                  {
+                    "c": "1,1,1,1"
+                  },
+                  {
+                    "t": 0.508547,
+                    "c": "0.14419,0.14419,0.14419,1"
+                  },
+                  {
+                    "t": 1,
+                    "c": "0.12558,0.12558,0.12558,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "BloomCurve": {
+                "rangey": "0,106.45",
+                "frames": [
+                  {},
+                  {
+                    "x": 1,
+                    "y": 1
+                  }
+                ]
+              },
+              "Mode": "Additive",
+              "Strength": 0.75,
+              "Threshold": 1,
+              "ThresholdWidth": 2
+            },
+            {
+              "__type": "ScreenPanel",
+              "__guid": "33674790-7ac5-4de5-b0a5-b581675fcc0e",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "TeleportScreenoverlay",
+              "__guid": "b42f0097-81dd-48d2-be77-4a1ab7e33b08",
+              "Visible": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+              "Name": "Crosshair",
+              "Position": "64,0,0",
+              "Scale": "0.01,0.01,0.01",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Crosshair",
+                  "__guid": "e4c9f843-f81a-41ce-9d05-ba2ce4095fbf",
+                  "CrosshairModel": {
+                    "_type": "component",
+                    "component_id": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
+                    "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -6498,7 +6503,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-28T15:46:57.1529637\u002B01:00",
+  "LastSaved": "2024-03-28T19:41:08.6668442\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

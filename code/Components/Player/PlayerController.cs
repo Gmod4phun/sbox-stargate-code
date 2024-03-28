@@ -30,9 +30,8 @@ public class PlayerController : Component
 	[Sync]
 	public bool IsRunning { get; set; }
 
-	// [Property]
-	// public CameraComponent Camera { get; set; }
-	public CameraComponent Camera => Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
+	[Property]
+	public CameraComponent Camera { get; set; }
 
 	protected override void OnEnabled()
 	{
@@ -154,6 +153,11 @@ public class PlayerController : Component
 			{
 				mr.RenderType = ModelRenderer.ShadowRenderType.On;
 			}
+		}
+
+		if ( Camera.IsValid() )
+		{
+			Camera.Enabled = !IsProxy;
 		}
 
 		// Eye input
