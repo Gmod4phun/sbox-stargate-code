@@ -1039,7 +1039,7 @@
           "Position": "-256,-360,-5",
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
-          "NetworkMode": 1,
+          "NetworkMode": 2,
           "__Prefab": "prefabs/dhdmilkyway.prefab"
         },
         {
@@ -1878,7 +1878,7 @@
               "Name": "Stargate (Milky Way)",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 1,
+              "NetworkMode": 2,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2600,7 +2600,7 @@
               "Position": "0,0,0",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
-              "NetworkMode": 1,
+              "NetworkMode": 2,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2632,7 +2632,7 @@
               "Rotation": "0,0,1,-0.00000004371139",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
-              "NetworkMode": 1,
+              "NetworkMode": 2,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2680,7 +2680,7 @@
               "Position": "3.665009,36,60",
               "Rotation": "0,0.7071068,0,0.7071068",
               "Enabled": true,
-              "NetworkMode": 1,
+              "NetworkMode": 2,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2723,7 +2723,7 @@
               "Position": "-4.5,-36,60",
               "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
               "Enabled": true,
-              "NetworkMode": 1,
+              "NetworkMode": 2,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -4547,7 +4547,7 @@
           "Name": "Stargate (Pegasus)",
           "Position": "-538.6984,-1201.478,90",
           "Enabled": true,
-          "NetworkMode": 1,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelRenderer",
@@ -6498,7 +6498,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-28T13:35:10.2748594\u002B01:00",
+  "LastSaved": "2024-03-28T15:46:57.1529637\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
