@@ -81,6 +81,21 @@ public class MultiWorldSystem : GameObjectSystem
 
     public static void AssignWorldToObject( GameObject gameObject, int worldIndex )
     {
+        AssignBroadcast( gameObject.Id, worldIndex );
+    }
+
+    [Broadcast]
+    public static void AssignBroadcast( Guid objectId, int worldIndex )
+    {
+        var obj = Game.ActiveScene.GetAllObjects( false ).FirstOrDefault( o => o.Id == objectId );
+        if ( obj.IsValid() )
+        {
+            AssignWorldToObjectMain( obj, worldIndex );
+        }
+    }
+
+    public static void AssignWorldToObjectMain( GameObject gameObject, int worldIndex )
+    {
         if ( !WorldExists( worldIndex ) )
         {
             Log.Error( $"World {worldIndex} does not exist" );
@@ -105,8 +120,6 @@ public class MultiWorldSystem : GameObjectSystem
             return;
 
         // Log.Info( $"Assigning player {player} to world {worldIndex}" );
-
-        Log.Info( $"Code executed on {Connection.Local.Id}" );
 
         var camera = player.Camera;
         var controller = player.Controller;
@@ -137,7 +150,6 @@ public class MultiWorldSystem : GameObjectSystem
         // remove exluce tag of the world we will be in
         camera.RenderExcludeTags.Remove( newWorldTag );
         controller.IgnoreLayers.Remove( newWorldTag );
-        player.CurrentWorldIndex = worldIndex;
     }
 
     public static void AddSound( MultiWorldSound sound )
