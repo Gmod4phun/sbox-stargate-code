@@ -72,6 +72,8 @@ public class GameNetworkManager : Component, Component.INetworkListener
         }
 
         player.NetworkSpawn( channel );
+
+        MultiWorldSystem.AssignWorldToObject( player, 0 );
     }
 
     /// <summary>

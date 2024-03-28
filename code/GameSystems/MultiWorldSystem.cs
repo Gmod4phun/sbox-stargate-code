@@ -9,7 +9,7 @@ public class MultiWorldSystem : GameObjectSystem
 
     public MultiWorldSystem( Scene scene ) : base( scene )
     {
-        Listen( Stage.PhysicsStep, 10, ProcessWorlds, "MultiWorld_ProcessWorlds" );
+        Listen( Stage.FinishUpdate, 2, ProcessWorlds, "MultiWorld_ProcessWorlds" );
         Listen( Stage.FinishUpdate, 1, ProcessSounds, "MultiWorld_ProcessSounds" );
 
         Init();
@@ -104,7 +104,9 @@ public class MultiWorldSystem : GameObjectSystem
         if ( !player.IsValid() )
             return;
 
-        Log.Info( $"Assigning player {player} to world {worldIndex}" );
+        // Log.Info( $"Assigning player {player} to world {worldIndex}" );
+
+        Log.Info( $"Code executed on {Connection.Local.Id}" );
 
         var camera = player.Camera;
         var controller = player.Controller;
@@ -138,29 +140,6 @@ public class MultiWorldSystem : GameObjectSystem
         player.CurrentWorldIndex = worldIndex;
     }
 
-    /*
-    public async void AssignAllObjectsToDesiredWorlds()
-    {
-        await Task.Delay( 10 );
-
-        foreach ( var gameObject in Game.ActiveScene.GetAllObjects( false ) )
-        {
-            var allWorldTags = AllWorldIndices.Select( GetWorldTag ).ToHashSet();
-
-            foreach ( var tag in allWorldTags )
-            {
-                if ( gameObject.Tags.Has( tag ) )
-                {
-                    var worldIndex = tag.Split( '_' ).Last().ToInt();
-                    AssignWorldToObject( gameObject, worldIndex );
-                }
-            }
-
-            // Log.Info( $"Assigning {gameObject} to default world" );
-        }
-    }
-    */
-
     public static void AddSound( MultiWorldSound sound )
     {
         Sounds.Add( sound );
@@ -168,22 +147,7 @@ public class MultiWorldSystem : GameObjectSystem
 
     public static void Init()
     {
-        InitializePlayers();
         InitializeCollisionRules();
-    }
-
-    private static async void InitializePlayers()
-    {
-        await Task.Delay( 10 );
-
-        foreach ( var player in Game.ActiveScene.GetAllComponents<PlayerController>() )
-        {
-            if ( player.IsValid() )
-            {
-                Log.Info( "MultiWorld: Initializing player" );
-                AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
-            }
-        }
     }
 
     private static async void InitializeCollisionRules()
@@ -235,7 +199,6 @@ public class MultiWorldSystem : GameObjectSystem
         {
             if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
             {
-                Log.Info( "" );
                 AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
             }
         }
