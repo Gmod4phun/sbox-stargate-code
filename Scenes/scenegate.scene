@@ -1039,7 +1039,7 @@
           "Position": "-256,-360,-5",
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/dhdmilkyway.prefab"
         },
         {
@@ -1878,7 +1878,7 @@
               "Name": "Stargate (Milky Way)",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2600,7 +2600,7 @@
               "Position": "0,0,0",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2632,7 +2632,7 @@
               "Rotation": "0,0,1,-0.00000004371139",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2680,7 +2680,7 @@
               "Position": "3.665009,36,60",
               "Rotation": "0,0.7071068,0,0.7071068",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2723,7 +2723,7 @@
               "Position": "-4.5,-36,60",
               "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2743,20 +2743,7 @@
                 {
                   "__type": "DoorController",
                   "__guid": "914413a7-1274-4901-bc0b-152975d4daea",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "097afeaa-feb6-45f8-a9fb-d709b0f63b17",
-                      "go": "7ca443d2-d037-420a-aa66-6ea0f1589679",
-                      "component_type": "Door"
-                    },
-                    {
-                      "_type": "component",
-                      "component_id": "facd5976-35b0-4914-9841-493c1c1d1514",
-                      "go": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
-                      "component_type": "Door"
-                    }
-                  ]
+                  "Doors": []
                 }
               ]
             }
@@ -4483,7 +4470,6 @@
     {
       "__guid": "f0bb4762-9274-449e-8214-6c6c2e58c58d",
       "Name": "World 3",
-      "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
@@ -4561,7 +4547,7 @@
           "Name": "Stargate (Pegasus)",
           "Position": "-538.6984,-1201.478,90",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "Components": [
             {
               "__type": "ModelRenderer",
@@ -4577,26 +4563,6 @@
               "IsTrigger": false,
               "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
               "Static": false
-            },
-            {
-              "__type": "StargatePegasus",
-              "__guid": "5be66b59-7835-401f-9a49-49bb79c43510",
-              "AutoClose": true,
-              "CanOpenMenu": true,
-              "EventHorizonMaterialGroup": "pegasus",
-              "GateAddress": "VOID01",
-              "GateGlyphType": "PEGASUS",
-              "GateGroup": "P@",
-              "GateLocal": false,
-              "GateName": "",
-              "GatePrivate": false,
-              "Ring": {
-                "_type": "component",
-                "component_id": "b989a6b5-ef78-4131-8804-72ae2a70710e",
-                "go": "e5a27aef-5e32-42ac-a735-226e7b64694f",
-                "component_type": "StargateRingPegasus"
-              },
-              "ShowWormholeCinematic": false
             }
           ],
           "Children": [
@@ -5167,12 +5133,6 @@
                 {
                   "__type": "StargateRingPegasus",
                   "__guid": "b989a6b5-ef78-4131-8804-72ae2a70710e",
-                  "Gate": {
-                    "_type": "component",
-                    "component_id": "5be66b59-7835-401f-9a49-49bb79c43510",
-                    "go": "c299a2f4-119c-491e-90ce-801b52fcd92c",
-                    "component_type": "StargatePegasus"
-                  },
                   "Glyphs": [
                     {
                       "_type": "component",
@@ -6538,7 +6498,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-27T21:39:42.7277877\u002B01:00",
+  "LastSaved": "2024-03-28T13:35:10.2748594\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
