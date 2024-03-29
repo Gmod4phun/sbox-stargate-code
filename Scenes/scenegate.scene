@@ -2625,7 +2625,7 @@
                 {
                   "__type": "Door",
                   "__guid": "097afeaa-feb6-45f8-a9fb-d709b0f63b17",
-                  "currentDoorState": "Closed",
+                  "CurrentDoorState": "Closed",
                   "DoorMoveDistance": 32
                 }
               ]
@@ -2657,7 +2657,7 @@
                 {
                   "__type": "Door",
                   "__guid": "facd5976-35b0-4914-9841-493c1c1d1514",
-                  "currentDoorState": "Closed",
+                  "CurrentDoorState": "Closed",
                   "DoorMoveDistance": 32
                 }
               ]
@@ -2748,7 +2748,20 @@
                 {
                   "__type": "DoorController",
                   "__guid": "914413a7-1274-4901-bc0b-152975d4daea",
-                  "Doors": []
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "097afeaa-feb6-45f8-a9fb-d709b0f63b17",
+                      "go": "7ca443d2-d037-420a-aa66-6ea0f1589679",
+                      "component_type": "Door"
+                    },
+                    {
+                      "_type": "component",
+                      "component_id": "facd5976-35b0-4914-9841-493c1c1d1514",
+                      "go": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
+                      "component_type": "Door"
+                    }
+                  ]
                 }
               ]
             }
@@ -6523,7 +6536,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-29T15:08:39.3551203\u002B01:00",
+  "LastSaved": "2024-03-29T21:39:39.282058\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

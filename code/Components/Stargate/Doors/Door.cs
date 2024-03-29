@@ -1,6 +1,7 @@
+
 public class Door : Component, Component.ExecuteInEditor
 {
-    enum DoorState
+    public enum DoorState
     {
         Closed,
         Closing,
@@ -8,16 +9,24 @@ public class Door : Component, Component.ExecuteInEditor
         Opening
     }
 
-    private ModelRenderer Renderer => Components.Get<ModelRenderer>();
-
-    private bool ShouldOpen { get; set; } = false;
-
-    [Property]
-    private DoorState currentDoorState { get; set; } = DoorState.Closed;
+    [Property, Sync]
+    public DoorState CurrentDoorState { get; set; } = DoorState.Closed;
 
     [Property]
     public float DoorMoveDistance { get; set; } = 32;
+
     private float currentMoveDistance = 0;
+
+    protected override void OnStart()
+    {
+        GameObject.NetworkMode = NetworkMode.Object;
+
+        if ( !GameObject.Network.Active )
+            GameObject.NetworkSpawn();
+
+        GameObject.Network.SetOwnerTransfer( OwnerTransfer.Takeover );
+        GameObject.Network.SetOrphanedMode( NetworkOrphaned.Host );
+    }
 
     protected override void OnUpdate()
     {
@@ -28,34 +37,36 @@ public class Door : Component, Component.ExecuteInEditor
 
     private void HandleMovement()
     {
-        currentMoveDistance = currentMoveDistance.Approach( ShouldOpen ? DoorMoveDistance : 0, Time.Delta * 20 );
-
-        if ( currentMoveDistance == DoorMoveDistance && currentDoorState != DoorState.Open )
+        if ( CurrentDoorState == DoorState.Open || CurrentDoorState == DoorState.Closed )
         {
-            currentDoorState = DoorState.Open;
-        }
-        else if ( currentMoveDistance == 0 && currentDoorState != DoorState.Closed )
-        {
-            currentDoorState = DoorState.Closed;
+            Transform.Local = Transform.Local.WithPosition( Transform.Rotation.Left * (CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0) );
+            return;
         }
 
-        if ( currentMoveDistance != 0 && currentMoveDistance != DoorMoveDistance )
+        var isOpening = CurrentDoorState == DoorState.Opening;
+        var targetMoveDistance = isOpening ? DoorMoveDistance : 0;
+
+        var delta = Time.Delta * 20f;
+        currentMoveDistance = currentMoveDistance.Approach( targetMoveDistance, delta );
+
+        var difference = Math.Abs( currentMoveDistance - targetMoveDistance );
+
+        if ( difference.AlmostEqual( 0, delta * 2 ) )
         {
-            currentDoorState = ShouldOpen ? DoorState.Opening : DoorState.Closing;
+            CurrentDoorState = isOpening ? DoorState.Open : DoorState.Closed;
+            Transform.Local = Transform.Local.WithPosition( Transform.Rotation.Left * targetMoveDistance );
+            return;
         }
 
-        Transform.Local = Transform.Local.WithPosition( Transform.Rotation.Right * -currentMoveDistance );
+        Transform.Local = Transform.Local.WithPosition( Transform.Rotation.Left * currentMoveDistance );
     }
 
     public void ToggleDoor()
     {
-        if ( currentDoorState == DoorState.Open )
-        {
-            ShouldOpen = false;
-        }
-        else if ( currentDoorState == DoorState.Closed )
-        {
-            ShouldOpen = true;
-        }
+        Network.TakeOwnership();
+        if ( CurrentDoorState == DoorState.Open )
+            CurrentDoorState = DoorState.Closing;
+        else if ( CurrentDoorState == DoorState.Closed )
+            CurrentDoorState = DoorState.Opening;
     }
 }
