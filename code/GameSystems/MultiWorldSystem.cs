@@ -208,11 +208,14 @@ public class MultiWorldSystem : GameObjectSystem
 
     void ProcessWorlds()
     {
-        foreach ( var player in Scene.GetAllComponents<PlayerController>() )
+        if ( Connection.Local.IsHost )
         {
-            if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
+            foreach ( var player in Scene.GetAllComponents<PlayerController>() )
             {
-                AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
+                if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
+                {
+                    AssignWorldToObject( player.GameObject, player.CurrentWorldIndex );
+                }
             }
         }
 
