@@ -7,7 +7,7 @@ public static class GameObjectExtensions
     {
         go.NetworkMode = NetworkMode.Object;
 
-        if ( !go.Network.Active && !Game.IsEditor )
+        if ( !go.Network.Active && !go.Scene.IsEditor )
             go.NetworkSpawn();
 
         go.Network.SetOwnerTransfer( transfer );
