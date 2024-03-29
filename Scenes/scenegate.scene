@@ -1,5 +1,5 @@
 {
-  "__guid": "187c258a-c8cc-41ee-b629-54c5a3b4699b",
+  "__guid": "ca978356-7942-4f84-b86f-95b69f0ba8d8",
   "GameObjects": [
     {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
@@ -341,7 +341,7 @@
           "Position": "250,-512,78",
           "Tags": "rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/ringpanelori.prefab"
         },
         {
@@ -350,7 +350,7 @@
           "Position": "250,512,78",
           "Tags": "rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/ringpanelori.prefab"
         },
         {
@@ -1026,7 +1026,7 @@
           "Position": "250,192,48",
           "Tags": "rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/ringpanelgoauld.prefab"
         },
         {
@@ -1035,7 +1035,7 @@
           "Position": "250,-192,48",
           "Tags": "rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/ringpanelancient.prefab"
         },
         {
@@ -6536,7 +6536,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-29T21:39:39.282058\u002B01:00",
+  "LastSaved": "2024-03-30T00:05:00.7795937\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

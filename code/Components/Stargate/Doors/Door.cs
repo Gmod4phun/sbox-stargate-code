@@ -19,7 +19,7 @@ public class Door : Component, Component.ExecuteInEditor
 
     protected override void OnStart()
     {
-        GameObject.SetupNetworking();
+        GameObject.SetupNetworking( orphaned: NetworkOrphaned.Host );
     }
 
     protected override void OnUpdate()

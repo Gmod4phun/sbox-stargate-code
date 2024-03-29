@@ -13,14 +13,20 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         public RingTransporter Rings { get; set; } = null;
 
+        [Sync]
         protected TimeSince TimeSinceButtonPressed { get; set; } = 0;
         protected float ButtonPressDelay { get; set; } = 0.35f;
         protected float ButtonGlowDelay { get; set; } = 0.2f;
 
-        [Property]
+        [Property, Sync]
         protected string ComposedAddress { get; private set; } = "";
         protected virtual string[] ButtonsSounds { get; } = { "goauld_button1", "goauld_button2" };
         protected virtual string ValidButtonActions => "12345678ABCDEFGHIJKL";
+
+        protected override void OnStart()
+        {
+            GameObject.SetupNetworking( orphaned: NetworkOrphaned.Host );
+        }
 
         public RingPanelButton GetButtonByAction( string action )
         {
@@ -49,6 +55,8 @@ namespace Sandbox.Components.Stargate.Rings
 
         public void TriggerAction( string action ) // this gets called from the Panel Button after pressing it
         {
+            Network.TakeOwnership();
+
             if ( TimeSinceButtonPressed < ButtonPressDelay ) return;
 
             if ( (ValidButtonActions.Contains( action ) && action.Length == 1) || action is "DIAL" )

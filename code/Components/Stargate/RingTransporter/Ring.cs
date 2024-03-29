@@ -14,19 +14,19 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         public RingTransporter Transporter => GameObject.Parent.Components.Get<RingTransporter>();
 
-        [Property]
+        [Property, Sync]
         public Transform DesiredPosition { get; set; }
 
-        [Property]
+        [Property, Sync]
         public Transform RestingPosition { get; set; }
 
-        [Property]
+        [Property, Sync]
         public bool TryToReachDesiredPosition { get; set; }
 
-        [Property]
+        [Property, Sync]
         public bool TryToReachRestingPosition { get; set; }
 
-        [Property]
+        [Property, Sync]
         public bool Glowing { get; set; } = false;
 
         private float _equalThreshold = 0.05f;
@@ -43,7 +43,7 @@ namespace Sandbox.Components.Stargate.Rings
         {
             base.OnUpdate();
 
-            if ( Body.IsValid() )
+            if ( Body.IsValid() && !IsProxy )
             {
                 DesiredPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position + Transporter.Transform.Rotation.Up * _desiredOffset );
                 RestingPosition = Transporter.Transform.World.WithPosition( Transporter.Transform.Position + Transporter.Transform.Rotation.Up * Transporter.RingsRestingHeightOffset );

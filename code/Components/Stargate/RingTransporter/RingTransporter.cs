@@ -11,7 +11,7 @@ namespace Sandbox.Components.Stargate.Rings
         [Property]
         public RingTransporter OtherTransporter;
 
-        [Property]
+        [Property, Sync]
         public string Address { get; set; }
 
         [Property]
@@ -25,7 +25,13 @@ namespace Sandbox.Components.Stargate.Rings
 
         private List<Ring> DeployedRings = new();
 
-        private bool Busy = false;
+        [Sync]
+        private bool Busy { get; set; } = false;
+
+        protected override void OnStart()
+        {
+            GameObject.SetupNetworking( orphaned: NetworkOrphaned.Host );
+        }
 
         public RingTransporter FindClosest()
         {
@@ -72,6 +78,8 @@ namespace Sandbox.Components.Stargate.Rings
 
             ring_object.Tags.Add( "rings_no_teleport", "ignoreworld", "ringsring" );
 
+            ring_object.NetworkSpawn();
+
             return ring_component;
         }
 
@@ -104,6 +112,7 @@ namespace Sandbox.Components.Stargate.Rings
             {
                 var ring = CreateRing();
                 DeployedRings.Add( ring );
+                ring.Network.TakeOwnership();
 
                 ring.TryToReachRestingPosition = true;
                 ring.SetDesiredUpOffset( PlatformHeightOffset + 80 - i * 16 );
@@ -121,6 +130,7 @@ namespace Sandbox.Components.Stargate.Rings
             for ( var i = 0; i < 5; i++ )
             {
                 var ring = DeployedRings[4 - i];
+                ring.Network.TakeOwnership();
                 ring.StartReachingResting( delays[i] + 0.6f );
             }
         }
@@ -166,6 +176,8 @@ namespace Sandbox.Components.Stargate.Rings
 
         private async void DoRings( RingTransporter other )
         {
+            // GameObject.Network.TakeOwnership();
+
             if ( Busy )
                 return;
 
@@ -274,6 +286,8 @@ namespace Sandbox.Components.Stargate.Rings
             light.Radius = 300;
             light.Enabled = true;
 
+            light_object.NetworkSpawn();
+
             var lightDistance = 15f;
             var targetDistance = 85f;
             var timeToReachTargetMs = 350;
@@ -304,6 +318,8 @@ namespace Sandbox.Components.Stargate.Rings
 
         public async void DialRings( RingTransporter other, float delay = 0 )
         {
+            GameObject.Network.TakeOwnership();
+
             if ( Busy )
                 return;
 
