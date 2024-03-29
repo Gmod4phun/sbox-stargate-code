@@ -6478,6 +6478,26 @@
           "__Prefab": "prefabs/dhdmilkyway.prefab"
         }
       ]
+    },
+    {
+      "__guid": "50bd1329-68c3-4a55-9f8a-4f552902afe7",
+      "Name": "Chat",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__guid": "77db7b84-930e-4c97-b917-784d03eed429",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Chat",
+          "__guid": "839b39a4-0cb0-4749-9617-a9bfa5e1688f"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -6503,7 +6523,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-28T19:41:08.6668442\u002B01:00",
+  "LastSaved": "2024-03-29T15:08:39.3551203\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
