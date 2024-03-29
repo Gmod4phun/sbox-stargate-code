@@ -19,13 +19,7 @@ public class Door : Component, Component.ExecuteInEditor
 
     protected override void OnStart()
     {
-        GameObject.NetworkMode = NetworkMode.Object;
-
-        if ( !GameObject.Network.Active )
-            GameObject.NetworkSpawn();
-
-        GameObject.Network.SetOwnerTransfer( OwnerTransfer.Takeover );
-        GameObject.Network.SetOrphanedMode( NetworkOrphaned.Host );
+        GameObject.SetupNetworking();
     }
 
     protected override void OnUpdate()
@@ -54,7 +48,6 @@ public class Door : Component, Component.ExecuteInEditor
         if ( difference.AlmostEqual( 0, delta * 2 ) )
         {
             CurrentDoorState = isOpening ? DoorState.Open : DoorState.Closed;
-            Transform.Local = Transform.Local.WithPosition( Transform.Rotation.Left * targetMoveDistance );
             return;
         }
 
