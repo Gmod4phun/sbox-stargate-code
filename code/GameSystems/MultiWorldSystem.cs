@@ -150,6 +150,7 @@ public class MultiWorldSystem : GameObjectSystem
         // remove exluce tag of the world we will be in
         camera.RenderExcludeTags.Remove( newWorldTag );
         controller.IgnoreLayers.Remove( newWorldTag );
+        player.CurrentWorldIndex = worldIndex;
     }
 
     public static void AddSound( MultiWorldSound sound )
