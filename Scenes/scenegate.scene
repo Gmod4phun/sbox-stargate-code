@@ -2605,7 +2605,7 @@
               "Position": "0,0,0",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -2637,7 +2637,7 @@
               "Rotation": "0,0,1,-0.00000004371139",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
-              "NetworkMode": 2,
+              "NetworkMode": 1,
               "Components": [
                 {
                   "__type": "ModelRenderer",
@@ -6514,7 +6514,7 @@
     }
   ],
   "SceneProperties": {
-    "FixedUpdateFrequency": 50,
+    "FixedUpdateFrequency": 60,
     "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
@@ -6536,7 +6536,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-30T00:05:00.7795937\u002B01:00",
+  "LastSaved": "2024-03-30T11:52:14.7399427\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

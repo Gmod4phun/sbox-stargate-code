@@ -464,6 +464,17 @@ namespace Sandbox.Components.Stargate
         }
 
         // sounds
+
+        [Broadcast]
+        public static void PlaySoundBroadcast( Guid gameObjectId, string name, float delay = 0 )
+        {
+            var go = Game.ActiveScene.GetAllObjects( true ).FirstOrDefault( x => x.Id == gameObjectId );
+            if ( go.IsValid() )
+            {
+                PlaySound( go, name, delay );
+            }
+        }
+
         public static void PlaySound( Component comp, string name, float delay = 0 )
         {
             PlaySound( comp.GameObject, name, delay );

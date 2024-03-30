@@ -103,7 +103,7 @@ namespace Sandbox.Components.Stargate.Rings
 
         private void DeployRings()
         {
-            Stargate.PlaySound( GameObject, "sounds/sbox_stargate/rings/ringtransporter.part1.sound" );
+            Stargate.PlaySoundBroadcast( GameObject.Id, "sounds/sbox_stargate/rings/ringtransporter.part1.sound" );
 
             float[] delays = { 2, 2.5f, 3f, 3.4f, 3.7f };
             var tasks = new List<Task>();
@@ -122,7 +122,7 @@ namespace Sandbox.Components.Stargate.Rings
 
         private void RetractRings()
         {
-            Stargate.PlaySound( GameObject, "sounds/sbox_stargate/rings/ringtransporter.part2.sound" );
+            Stargate.PlaySoundBroadcast( GameObject.Id, "sounds/sbox_stargate/rings/ringtransporter.part2.sound" );
 
             float[] delays = { 0, 0.3f, 0.6f, 0.9f, 1.2f };
             var tasks = new List<Task>();
@@ -155,9 +155,17 @@ namespace Sandbox.Components.Stargate.Rings
                     ply.SetPlayerViewAngles( ply.EyeAngles + new Angles( 0, DeltaAngleEH.yaw, 0 ) );
                 }
 
+                var prevOwner = e.Network.OwnerConnection;
+                e.Network.TakeOwnership();
+
                 e.Transform.Position = newPos;
                 e.Transform.Rotation = newRot;
                 e.Transform.ClearLerp();
+
+                if ( prevOwner != null )
+                    e.Network.AssignOwnership( prevOwner );
+                else
+                    e.Network.DropOwnership();
             }
         }
 
@@ -190,8 +198,10 @@ namespace Sandbox.Components.Stargate.Rings
             Busy = true;
             OtherTransporter.Busy = true;
 
-            Renderer.SceneModel.SetAnimParameter( "Open", true );
-            OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", true );
+            // Renderer.SceneModel.SetAnimParameter( "Open", true );
+            // OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", true );
+            DoAnimation( true );
+            OtherTransporter.DoAnimation( true );
 
             DeployRings();
             OtherTransporter.DeployRings();
@@ -229,8 +239,11 @@ namespace Sandbox.Components.Stargate.Rings
 
             // await Task.WhenAll( RetractRings(), OtherTransporter.RetractRings() );
 
-            Renderer.SceneModel.SetAnimParameter( "Open", false );
-            OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", false );
+            // Renderer.SceneModel.SetAnimParameter( "Open", false );
+            // OtherTransporter.Renderer.SceneModel.SetAnimParameter( "Open", false );
+
+            DoAnimation( false );
+            OtherTransporter.DoAnimation( false );
 
             await Task.DelaySeconds( 1.5f );
 
@@ -274,7 +287,13 @@ namespace Sandbox.Components.Stargate.Rings
             particle.Destroy();
         }
 
-        private async void DoLightEffect()
+        [Broadcast]
+        private void DoLightEffect()
+        {
+            DoLightEffectClient();
+        }
+
+        private async void DoLightEffectClient()
         {
             var light_object = new GameObject();
             light_object.Transform.World = Transform.World;
@@ -285,8 +304,6 @@ namespace Sandbox.Components.Stargate.Rings
             light.LightColor = Color.FromBytes( 255, 255, 255 ) * 10f;
             light.Radius = 300;
             light.Enabled = true;
-
-            light_object.NetworkSpawn();
 
             var lightDistance = 15f;
             var targetDistance = 85f;
@@ -301,7 +318,7 @@ namespace Sandbox.Components.Stargate.Rings
             {
                 light_object.Transform.World = Transform.World.WithPosition( Transform.Position + Transform.Rotation.Up * lightDistance );
                 lightDistance += lightDistanceStep;
-                await Task.Delay( delayMs );
+                await GameTask.Delay( delayMs );
             }
 
             light_object.Destroy();
@@ -314,6 +331,12 @@ namespace Sandbox.Components.Stargate.Rings
                 ring.SetGlowState( true );
                 ring.SetGlowState( false, 0.75f );
             }
+        }
+
+        [Broadcast]
+        private void DoAnimation( bool open )
+        {
+            Renderer?.SceneModel?.SetAnimParameter( "Open", open );
         }
 
         public async void DialRings( RingTransporter other, float delay = 0 )
