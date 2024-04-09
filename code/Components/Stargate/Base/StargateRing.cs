@@ -14,20 +14,25 @@ namespace Sandbox.Components.Stargate
 
 		public bool IsMoving => _ringState != RingState.STOPPED;
 
-		[Property]
+		[Property, Sync]
 		public float RingAngle { get; private set; } = 0;
+
+		[Sync]
 		private int _ringDirection { get; set; } = -1;
 
 		[Property]
 		public string RingSymbols { get; protected set; } = "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD";
+
+		[Sync]
 		private string _currentRotatingToSymbol { get; set; } = "";
 
-		[Property, System.ComponentModel.ReadOnly( true )]
+		[Property, System.ComponentModel.ReadOnly( true ), Sync]
 		public string CurRingSymbol { get; private set; } = "";
 
-		private float _curRingSymbolOffset = 0f;
+		[Sync]
+		private float _curRingSymbolOffset { get; set; } = 0f;
 
-		[Property, OnChange( nameof( OnRingStateChanged ) ), System.ComponentModel.ReadOnly( true )]
+		[Property, OnChange( nameof( OnRingStateChanged ) ), System.ComponentModel.ReadOnly( true ), Sync]
 		public RingState _ringState { get; set; } = RingState.STOPPED;
 
 		protected override void OnUpdate()

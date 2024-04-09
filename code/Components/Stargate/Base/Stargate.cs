@@ -13,6 +13,7 @@ namespace Sandbox.Components.Stargate
 
 		public GateBearing Bearing => Components.Get<GateBearing>( FindMode.EnabledInSelfAndDescendants );
 
+		[Sync]
 		public float AutoCloseTime { get; set; } = -1;
 
 		public Dictionary<string, string> SoundDict { get; set; } = new()
@@ -25,6 +26,7 @@ namespace Sandbox.Components.Stargate
 			{ "dial_fail_noclose", "baseValue" },
 		};
 
+		[Sync]
 		public TimeSince TimeSinceDialAction { get; set; } = 0f;
 
 		public float InactiveDialShutdownTime { get; set; } = 20f;
@@ -74,14 +76,22 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public bool ShowWormholeCinematic { get; set; } = false;
 
+		[Sync]
 		public bool Busy { get; set; } = false; // this is pretty much used anytime the gate is busy to do anything (usually during animations/transitions)
 
+		[Sync]
 		public bool Inbound { get; set; } = false;
+
+		[Sync]
 		public bool ShouldStopDialing { get; set; } = false;
 
+		[Sync]
 		public GateState CurGateState { get; set; } = GateState.IDLE;
+
+		[Sync]
 		public DialType CurDialType { get; set; } = DialType.FAST;
 
+		[Sync]
 		public bool IsManualDialInProgress { get; set; } = false;
 
 		// gate state accessors
@@ -92,22 +102,34 @@ namespace Sandbox.Components.Stargate
 		public bool Open { get => CurGateState is GateState.OPEN; }
 		public bool Closing { get => CurGateState is GateState.CLOSING; }
 
+		[Sync]
 		public string DialingAddress { get; set; } = "";
 
+		[Sync]
 		public int ActiveChevrons { get; set; } = 0;
 
+		[Sync]
 		public bool IsLocked { get; set; } = false;
 
+		[Sync]
 		public bool IsLockedInvalid { get; set; } = false;
 
+		[Sync]
 		public char CurDialingSymbol { get; set; } = ' ';
 
+		[Sync]
 		public char CurRingSymbol { get; set; } = ' ';
 
+		[Sync]
 		public float CurRingSymbolOffset { get; set; } = 0;
 
 		[Property]
 		public bool CanOpenMenu { get; set; } = true;
+
+		protected override void OnStart()
+		{
+			GameObject.SetupNetworking( orphaned: NetworkOrphaned.Host );
+		}
 
 		/*
 		[ConCmd.Server]
@@ -367,6 +389,8 @@ namespace Sandbox.Components.Stargate
 			EventHorizon.EventHorizonTrigger.IsMainTrigger = true;
 
 			EventHorizon.CreateTriggers();
+
+			eh.SetupNetworking();
 		}
 
 		public void DeleteEventHorizon()

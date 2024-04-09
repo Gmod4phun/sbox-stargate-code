@@ -56,35 +56,35 @@ namespace Sandbox.Components.Stargate
 
 		public Stargate Gate => GameObject.Parent.Components.Get<Stargate>( FindMode.EnabledInSelfAndDescendants );
 
-		[Property]
+		[Property, Sync]
 		public bool IsFullyFormed { get; set; } = false;
 
-		[Property]
-		public List<GameObject> InTransitPlayers { get; set; } = new();
+		[Property, Sync]
+		public NetList<GameObject> InTransitPlayers { get; set; } = new();
 
 		[Property]
 		public string EventHorizonMaterialGroup { get; set; } = "default";
 
 		protected MultiWorldSound WormholeLoop { get; set; }
 
-		[Property]
+		[Property, Sync]
 		protected GameObject CurrentTeleportingEntity { get; set; }
 
 		private static Dictionary<GameObject, Vector3> EntityPositionsPrevious { get; } = new Dictionary<GameObject, Vector3>();
 
 		private static Dictionary<GameObject, TimeSince> EntityTimeSinceTeleported { get; } = new Dictionary<GameObject, TimeSince>();
 
-		[Property]
-		private List<GameObject> BufferFront { get; set; } = new();
+		[Property, Sync]
+		private NetList<GameObject> BufferFront { get; set; } = new();
 
-		[Property]
-		private List<GameObject> BufferBack { get; set; } = new();
+		[Property, Sync]
+		private NetList<GameObject> BufferBack { get; set; } = new();
 
-		[Property]
-		private List<GameObject> InTriggerFront { get; } = new();
+		[Property, Sync]
+		private NetList<GameObject> InTriggerFront { get; } = new();
 
-		[Property]
-		private List<GameObject> InTriggerBack { get; } = new();
+		[Property, Sync]
+		private NetList<GameObject> InTriggerBack { get; } = new();
 
 		public Vector3 CameraPosition => Scene.Camera.IsValid() ? Scene.Camera.Transform.Position : Vector3.Zero;
 
@@ -125,6 +125,8 @@ namespace Sandbox.Components.Stargate
 			Kawoosh.KawooshModelInside.MaterialGroup = "inside";
 			Kawoosh.DoKawooshAnimation();
 
+			kawoosh_object.SetupNetworking();
+
 			await GameTask.DelaySeconds( 2f );
 
 			Kawoosh?.GameObject?.Destroy();
@@ -148,12 +150,23 @@ namespace Sandbox.Components.Stargate
 
 		// SERVER CONTROL
 
-		public async void Establish( bool doKawoosh = true )
+		[Broadcast]
+		public void Establish( bool doKawoosh = true )
+		{
+			EstablishBroadcast( doKawoosh );
+		}
+
+		public async void EstablishBroadcast( bool doKawoosh = true )
 		{
 			EstablishClientAnim();
 
 			if ( !Gate.IsIrisClosed() && doKawoosh )
-				CreateKawoosh( 0.5f );
+			{
+				if ( !IsProxy )
+				{
+					CreateKawoosh( 0.5f );
+				}
+			}
 
 			await GameTask.DelaySeconds( 2.5f );
 			if ( !this.IsValid() ) return;
@@ -161,7 +174,13 @@ namespace Sandbox.Components.Stargate
 			WormholeLoop = Stargate.PlayFollowingSound( GameObject, "stargate.event_horizon.loop" );
 		}
 
-		public async void Collapse()
+		[Broadcast]
+		public void Collapse()
+		{
+			CollapseBroadcast();
+		}
+
+		public async void CollapseBroadcast()
 		{
 			CollapseClientAnim();
 
@@ -815,7 +834,7 @@ namespace Sandbox.Components.Stargate
 			EventHorizonTick();
 		}
 
-		public void BufferCleanupLogic( List<GameObject> buffer )
+		public void BufferCleanupLogic( IList<GameObject> buffer )
 		{
 			if ( buffer.Count > 0 )
 			{

@@ -1,5 +1,3 @@
-using System.Net.Sockets;
-
 namespace Sandbox.Components.Stargate
 {
     public class Dhd : Component, Component.ExecuteInEditor
@@ -20,10 +18,17 @@ namespace Sandbox.Components.Stargate
 
         public SkinnedModelRenderer DhdModel => Components.Get<SkinnedModelRenderer>();
 
-        public List<string> PressedActions = new();
+        [Property, Sync]
+        public NetList<string> PressedActions { get; set; } = new();
 
-        protected bool DialIsLock = false;
-        protected bool IsDialLocking = false;
+        [Property]
+        public string PressedActionsString => GetJoinedPressedActions();
+
+        [Sync]
+        protected bool DialIsLock { get; set; } = false;
+
+        [Sync]
+        protected bool IsDialLocking { get; set; } = false;
 
         public DhdData Data { get; set; } = new( "default", "dhd.milkyway.press", "dhd.press_dial" );
 
@@ -82,8 +87,27 @@ namespace Sandbox.Components.Stargate
         };
 
         protected virtual Vector3 ButtonPositionsOffset => new( -14.8088f, -1.75652f, 8f );
+
+        [Sync]
         internal float LastPressTime { get; set; } = 0;
         internal float PressDelay { get; set; } = 0.5f;
+
+        public string GetJoinedPressedActions()
+        {
+            var retVal = "";
+            foreach ( var action in PressedActions )
+            {
+                retVal += action;
+            }
+            return retVal;
+        }
+
+        protected override void OnStart()
+        {
+            GameObject.SetupNetworking( orphaned: NetworkOrphaned.Host );
+
+            PostSpawn();
+        }
 
         protected override void OnUpdate()
         {
@@ -148,13 +172,6 @@ namespace Sandbox.Components.Stargate
             WorldPanels.Clear();
         }
         */
-
-        protected override void OnStart()
-        {
-            base.OnStart();
-
-            PostSpawn();
-        }
 
         public virtual async void PostSpawn()
         {

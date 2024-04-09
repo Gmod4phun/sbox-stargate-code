@@ -359,7 +359,7 @@
           "Position": "-1765.29,3.49012,39.08476",
           "Rotation": "0.00250578,0.1305021,-0.01903339,0.9912621",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/dhdmilkyway.prefab"
         },
         {
@@ -1044,7 +1044,7 @@
           "Position": "-256,-360,-5",
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/dhdmilkyway.prefab"
         },
         {
@@ -3012,7 +3012,7 @@
           "Name": "Dhd (Atlantis)",
           "Position": "-128,0,0",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/dhdatlantis.prefab"
         },
         {
@@ -4434,7 +4434,7 @@
           "Position": "-256,360,-5",
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
-          "NetworkMode": 2,
+          "NetworkMode": 1,
           "__Prefab": "prefabs/dhdpegasus.prefab"
         },
         {
@@ -6536,7 +6536,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-30T11:52:14.7399427\u002B01:00",
+  "LastSaved": "2024-04-02T21:15:19.6238175\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

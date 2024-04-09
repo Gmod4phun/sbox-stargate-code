@@ -10,10 +10,10 @@
 		[Property]
 		public PointLight ChevronLight { get; set; }
 
-		[Property]
+		[Property, Sync]
 		public bool On { get; set; }
 
-		[Property, OnChange( nameof( OnOpenChanged ) )]
+		[Property, OnChange( nameof( OnOpenChanged ) ), Sync]
 		public bool Open { get; set; }
 
 		public Stargate Gate => GameObject.Parent.Components.Get<Stargate>( FindMode.EnabledInSelfAndDescendants );

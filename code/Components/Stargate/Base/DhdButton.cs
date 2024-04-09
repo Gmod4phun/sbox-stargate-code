@@ -8,12 +8,13 @@ namespace Sandbox.Components.Stargate
         [Property]
         public Dhd DHD => GameObject.Components.Get<Dhd>( FindMode.InParent );
 
-        [Property]
+        [Property, Sync]
         public string Action { get; set; } = "";
 
-        [Property]
+        [Property, Sync]
         public bool Disabled { get; set; } = false;
 
+        [Sync]
         public bool On { get; set; } = false;
         private float _glowScale = 0;
 
@@ -21,6 +22,10 @@ namespace Sandbox.Components.Stargate
         {
             if ( Time.Now < DHD.LastPressTime + DHD.PressDelay )
                 return false;
+
+            Network.TakeOwnership();
+            DHD.Network.TakeOwnership();
+            DHD.Gate?.Network.TakeOwnership();
 
             DHD.LastPressTime = Time.Now;
             DHD.TriggerAction( Action, user );

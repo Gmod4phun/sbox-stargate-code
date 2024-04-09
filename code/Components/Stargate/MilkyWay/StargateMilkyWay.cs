@@ -23,17 +23,18 @@
 
 		public override float RingRotationStepSize => AcceleratedDialup ? 1f : 0.2f;
 
-		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
+		[Sync]
+		public NetList<Chevron> EncodedChevronsOrdered { get; set; } = new();
 
 		public StargateRingMilkyWay Ring => Components.Get<StargateRingMilkyWay>( FindMode.EnabledInSelfAndDescendants );
 
-		[Property]
+		[Property, Sync]
 		public bool MovieDialingType { get; set; } = false; // when enabled, encodes the symbol under each chevron like in the movie
 
-		[Property]
+		[Property, Sync]
 		public bool ChevronLightup { get; set; } = true;
 
-		[Property]
+		[Property, Sync]
 		public bool AcceleratedDialup { get; set; } = false;
 
 		public static void DrawGizmos( EditorContext context )
