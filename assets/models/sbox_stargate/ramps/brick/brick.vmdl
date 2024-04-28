@@ -31,7 +31,7 @@
 						_class = "PhysicsHullFile"
 						name = "ramp_brick_phyiscs"
 						parent_bone = ""
-						surface_prop = "default"
+						surface_prop = "brick"
 						collision_tags = "solid"
 						recenter_on_parent_bone = false
 						offset_origin = [ 0.0, 0.0, 0.0 ]
