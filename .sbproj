@@ -5,11 +5,7 @@
   "Ident": "scenegate",
   "Tags": null,
   "Schema": 1,
-  "HasAssets": true,
-  "AssetsPath": "",
   "Resources": "\nvideos/*\nfonts/*\nmaterials/sbox_stargate/glyphs/*\nmaterials/sbox_stargate/programs/*\nshaders/*\ncode\nPanels/*\nProjectSettings/*\n",
-  "HasCode": true,
-  "CodePath": "/code/",
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
