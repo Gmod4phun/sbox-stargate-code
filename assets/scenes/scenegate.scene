@@ -32,7 +32,7 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "CharacterController",
+          "__type": "Sandbox.CharacterController",
           "__guid": "91274fc4-559a-4e99-a2e2-80ca540b01bb",
           "Acceleration": 10,
           "Bounciness": 0.3,
@@ -78,7 +78,7 @@
           "PlayerHealth": 100
         },
         {
-          "__type": "CitizenAnimationHelper",
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
           "__guid": "0abb53e3-f36d-4e3b-9dc6-308fef5b203d",
           "BodyWeight": 1,
           "EyesWeight": 1,
@@ -109,7 +109,7 @@
           }
         },
         {
-          "__type": "BoxCollider",
+          "__type": "Sandbox.BoxCollider",
           "__guid": "15c0358c-8678-4bf4-ba97-038f22d47704",
           "Center": "0,0,36",
           "IsTrigger": true,
@@ -126,7 +126,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "SkinnedModelRenderer",
+              "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "129c6a86-2a04-46fe-b8c7-f4b1e2abd414",
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
@@ -152,7 +152,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "CameraComponent",
+              "__type": "Sandbox.CameraComponent",
               "__guid": "20a624fd-8c49-4b52-ad76-2dcdd0a3aaad",
               "BackgroundColor": "0.25292,0.26086,0.29703,1",
               "ClearFlags": "All",
@@ -169,14 +169,14 @@
               "ZNear": 1
             },
             {
-              "__type": "FilmGrain",
+              "__type": "Sandbox.FilmGrain",
               "__guid": "91d34a6b-4f25-4d35-87f0-dccabf6dc01a",
               "__enabled": false,
               "Intensity": 0.03,
               "Response": 1
             },
             {
-              "__type": "Vignette",
+              "__type": "Sandbox.Vignette",
               "__guid": "12954a31-d220-40ee-9dd8-eedf9cda1255",
               "__enabled": false,
               "Center": "0.5,0.5",
@@ -186,22 +186,22 @@
               "Smoothness": 1
             },
             {
-              "__type": "ChromaticAberration",
+              "__type": "Sandbox.ChromaticAberration",
               "__guid": "b686dd96-dcfb-4523-b44f-f338e948da91",
               "Offset": "4,6,4.049999",
               "Scale": 0.05
             },
             {
-              "__type": "Sharpen",
+              "__type": "Sandbox.Sharpen",
               "__guid": "312f35c9-c172-415f-8f54-7051949d90dd",
               "Scale": 0.25
             },
             {
-              "__type": "Highlight",
+              "__type": "Sandbox.Highlight",
               "__guid": "b93013b4-1cef-48fd-a5cd-3c141149e994"
             },
             {
-              "__type": "Bloom",
+              "__type": "Sandbox.Bloom",
               "__guid": "8dfd8b42-c6ce-4a42-aa2c-de5de88f7608",
               "BloomColor": {
                 "color": [
@@ -235,7 +235,7 @@
               "ThresholdWidth": 2
             },
             {
-              "__type": "ScreenPanel",
+              "__type": "Sandbox.ScreenPanel",
               "__guid": "33674790-7ac5-4de5-b0a5-b581675fcc0e",
               "AutoScreenScale": true,
               "Opacity": 1,
@@ -258,7 +258,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
@@ -290,7 +290,7 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "SpawnPoint",
+          "__type": "Sandbox.SpawnPoint",
           "__guid": "364e8fb0-7e9b-4567-9feb-f38163f01aa3",
           "Color": "0.8902,0.31765,0.05098,1"
         }
@@ -317,7 +317,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "bf3d88a1-ff6d-45dc-97b2-32e3fc4a6a75",
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
@@ -326,7 +326,7 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "BoxCollider",
+              "__type": "Sandbox.BoxCollider",
               "__guid": "9f95e077-caab-443d-bc50-b465e5af4b71",
               "Center": "0,0,-1",
               "IsTrigger": false,
@@ -371,7 +371,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "5fe7ff45-251a-4033-9beb-a9aa39ec20e3",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
@@ -379,14 +379,14 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "bcb43314-10ec-4971-b1a5-c7d166baeb44",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
               "Static": false
             },
             {
-              "__type": "StargateMilkyWay",
+              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
               "__guid": "31d36fe1-dfd3-4946-898c-b7d512dc8ffa",
               "AcceleratedDialup": false,
               "AutoClose": true,
@@ -413,7 +413,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "5c90b7b4-eaf9-4535-84c2-ac8d70d6df1f",
                   "ChevronLight": {
                     "_type": "component",
@@ -432,7 +432,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "d900a0a7-5a7d-4c8f-902a-33ae62fd999b",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -452,7 +452,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "c83b3163-8b20-40e2-a212-6594a97a5331",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -475,7 +475,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "0f80ac12-304e-4722-b092-5956ba88ab6c",
                   "ChevronLight": {
                     "_type": "component",
@@ -494,7 +494,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "45019003-3c14-4e8b-abe2-9175384db732",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -514,7 +514,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "7bc920ce-75d4-4c1d-a5c1-851c45efe753",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -537,7 +537,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "103ba962-2d59-43f1-a5f1-b69845ab2853",
                   "ChevronLight": {
                     "_type": "component",
@@ -556,7 +556,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "b21b4441-4a17-4d12-a5d8-f144330cb0ba",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -576,7 +576,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "a09a3dfe-db8f-4803-89e1-0c6e4422e6a3",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -599,7 +599,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "fb7ec007-5e58-418a-9f94-afabe84bc924",
                   "ChevronLight": {
                     "_type": "component",
@@ -618,7 +618,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "7270848f-e339-4214-bb6d-469ded6bb50d",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -638,7 +638,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "771173fa-bb5f-4ef7-aa67-bdf6097e019f",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -661,7 +661,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "4bc26a18-9f0c-494b-b29f-2e223820ae50",
                   "ChevronLight": {
                     "_type": "component",
@@ -680,7 +680,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "28298450-b4f6-423c-9c5d-a431077200e7",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -700,7 +700,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "57d40caa-3766-4567-b316-4a2cb781a778",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -723,7 +723,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "b9846e96-2ec8-4545-aba4-02275f511d07",
                   "ChevronLight": {
                     "_type": "component",
@@ -742,7 +742,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "dc641962-33a2-4e44-9f55-7d9f4da8fb6e",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -762,7 +762,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "5668c0ec-7d11-490d-b829-1d041cb64594",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -784,7 +784,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "3e59b9df-6bc8-42be-a396-4f77352912c6",
                   "ChevronLight": {
                     "_type": "component",
@@ -803,7 +803,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "ac710688-d285-4b91-9dda-6972d524f977",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -823,7 +823,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "512a699c-3354-4fb3-930b-815a5ff2774d",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -846,7 +846,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "71d5fba2-425d-413b-8ae9-cb5d43356979",
                   "ChevronLight": {
                     "_type": "component",
@@ -865,7 +865,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "b031d5e9-19cb-467b-a0dd-7714eaca10f1",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -885,7 +885,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "12d9044b-35ce-48e3-86b3-a03139b7a10c",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -908,7 +908,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "61efc2b7-516f-4028-a9aa-ea8411bd347f",
                   "ChevronLight": {
                     "_type": "component",
@@ -927,7 +927,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "f9c0fc05-590f-4544-b2c5-15a9417cd0b4",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -947,7 +947,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "5b825c36-d0ea-4b6e-b1e3-aa01ab3ec140",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -969,7 +969,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "StargateRingMilkyWay",
+                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "e8f76788-1383-46b5-9bea-18306162be63",
                   "_ringState": "STOPPED",
                   "CurRingSymbol": "#",
@@ -983,7 +983,7 @@
                   "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
                 },
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "b37b850b-fb74-4684-8276-db8b3a074729",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
@@ -1003,17 +1003,17 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "Terrain",
+              "__type": "Sandbox.Terrain",
               "__guid": "30129374-d2d0-4f53-a0c4-82b7904c266c",
               "ClipMapLodExtentTexels": 128,
               "ClipMapLodLevels": 7,
               "DebugView": "None",
               "RenderType": "Off",
-              "TerrainDataFile": "new terrain.terrain",
+              "TerrainDataFile": "terrain/terrain_test.terrain",
               "TerrainMaterial": "materials/core/terrain.vmat"
             },
             {
-              "__type": "TerrainCollider",
+              "__type": "Sandbox.TerrainCollider",
               "__guid": "ad1ee52a-e608-49b5-bf65-77b970120110",
               "IsTrigger": false,
               "Static": true
@@ -1056,7 +1056,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "RingTransporter",
+              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
               "__guid": "f19f217c-ec92-4e5b-9cd2-93b1934f2558",
               "Address": "52DB1",
               "Collider": {
@@ -1076,14 +1076,14 @@
               "RingsRestingHeightOffset": 12
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "2acaf605-7272-425a-9aa3-8454a42333c1",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "Static": false
             },
             {
-              "__type": "SkinnedModelRenderer",
+              "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "f8775ff9-5d44-4016-a4f6-32ee4e3712d2",
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
@@ -1102,7 +1102,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "RingTransporter",
+              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
               "__guid": "de7d7dcc-603f-4ee0-b22f-7f40d7b5bccc",
               "Address": "253",
               "Collider": {
@@ -1122,14 +1122,14 @@
               "RingsRestingHeightOffset": 12
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "54aadd1d-a01c-4983-a2a5-e3c786758c29",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "Static": false
             },
             {
-              "__type": "SkinnedModelRenderer",
+              "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "29df19d0-e25b-4257-845f-c2222c9ea683",
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
@@ -1148,7 +1148,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "RingTransporter",
+              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
               "__guid": "d4c2e446-7499-45ee-b664-80eac5e796d7",
               "Address": "7241",
               "Collider": {
@@ -1168,14 +1168,14 @@
               "RingsRestingHeightOffset": -8
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "0bc53a89-4274-4fe3-bc57-ad2f7a679ef1",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "Static": false
             },
             {
-              "__type": "SkinnedModelRenderer",
+              "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "642460fe-d17f-419d-85ae-fb2fb25fcc68",
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
@@ -1194,7 +1194,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "RingTransporter",
+              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
               "__guid": "c612fd19-3d7e-44b0-abed-f5bb25ba35ba",
               "Address": "135",
               "Collider": {
@@ -1214,14 +1214,14 @@
               "RingsRestingHeightOffset": -8
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "59906597-d58d-48e0-9607-9ee7cd07a6df",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "Static": false
             },
             {
-              "__type": "SkinnedModelRenderer",
+              "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "b7e187fb-0ee4-4ed6-a2c7-cb1c6b54f8ed",
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
@@ -1239,7 +1239,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "60d0fa68-74a2-438a-ba3d-ca691a8d841d",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/ramps/sgc_ramp/sgc_ramp.vmdl",
@@ -1247,14 +1247,14 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "b153b105-3ebd-4644-92a2-4a5f03576537",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/ramps/sgc_ramp/sgc_ramp.vmdl",
               "Static": true
             },
             {
-              "__type": "GateRamp",
+              "__type": "Sandbox.Components.Stargate.Ramps.GateRamp",
               "__guid": "4917510c-21a3-4735-aefe-af033e4d5f82",
               "GateSlots": 1,
               "StargatePositionOffset": "0,0,0",
@@ -1272,7 +1272,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ParticleEffect",
+                  "__type": "Sandbox.ParticleEffect",
                   "__guid": "73af4738-57a6-4313-9b72-0c2929bbc5b9",
                   "Alpha": {
                     "Type": "Curve",
@@ -1380,7 +1380,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ParticleSpriteRenderer",
+                  "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "8ee9a6f5-e48e-4957-9941-e66460fcadf9",
                   "Additive": false,
                   "BlurAmount": 0.5,
@@ -1399,7 +1399,7 @@
                   "Texture": "materials/particles/particle_smokegrenade.vtex"
                 },
                 {
-                  "__type": "ParticleConeEmitter",
+                  "__type": "Sandbox.ParticleConeEmitter",
                   "__guid": "cf6f3643-ba3c-45c3-8835-84a8f0e6504a",
                   "__enabled": false,
                   "Burst": 0,
@@ -1426,7 +1426,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ParticleEffect",
+                  "__type": "Sandbox.ParticleEffect",
                   "__guid": "3910306d-52ae-419d-9879-f812e50a42a3",
                   "Alpha": {
                     "Type": "Curve",
@@ -1534,7 +1534,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ParticleSpriteRenderer",
+                  "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "88206627-c9e3-4080-87a9-e1efb5e27add",
                   "Additive": false,
                   "BlurAmount": 0.5,
@@ -1553,7 +1553,7 @@
                   "Texture": "materials/particles/particle_smokegrenade.vtex"
                 },
                 {
-                  "__type": "ParticleConeEmitter",
+                  "__type": "Sandbox.ParticleConeEmitter",
                   "__guid": "ef938369-bb16-40ad-8695-59e91cad8640",
                   "__enabled": false,
                   "Burst": 0,
@@ -1580,7 +1580,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ParticleEffect",
+                  "__type": "Sandbox.ParticleEffect",
                   "__guid": "7c4f3ab0-8be8-4d5d-a5f4-3676d6d4045a",
                   "Alpha": {
                     "Type": "Curve",
@@ -1688,7 +1688,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ParticleSpriteRenderer",
+                  "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "0ec71c70-2ec8-44ee-96e3-ae060d6cdd36",
                   "Additive": false,
                   "BlurAmount": 0.5,
@@ -1707,7 +1707,7 @@
                   "Texture": "materials/particles/particle_smokegrenade.vtex"
                 },
                 {
-                  "__type": "ParticleConeEmitter",
+                  "__type": "Sandbox.ParticleConeEmitter",
                   "__guid": "d8baf491-dae9-447a-8ad4-4632f327556c",
                   "__enabled": false,
                   "Burst": 0,
@@ -1734,7 +1734,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ParticleEffect",
+                  "__type": "Sandbox.ParticleEffect",
                   "__guid": "d417a9f0-7b2a-4c48-8705-83a92148a705",
                   "Alpha": {
                     "Type": "Curve",
@@ -1842,7 +1842,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ParticleSpriteRenderer",
+                  "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "263afc9a-0298-40ec-b760-b0d4707c30fa",
                   "Additive": false,
                   "BlurAmount": 0.5,
@@ -1861,7 +1861,7 @@
                   "Texture": "materials/particles/particle_smokegrenade.vtex"
                 },
                 {
-                  "__type": "ParticleConeEmitter",
+                  "__type": "Sandbox.ParticleConeEmitter",
                   "__guid": "94de280b-fc71-42bf-ac75-ebe0f7ad2213",
                   "__enabled": false,
                   "Burst": 0,
@@ -1886,7 +1886,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "010fb795-a3d2-4f2d-adb8-c14c80d78078",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
@@ -1894,14 +1894,14 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "0deeed36-b40b-432c-9d3c-aebbb1b9e9e1",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
                   "Static": false
                 },
                 {
-                  "__type": "StargateMilkyWay",
+                  "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
                   "__guid": "66ce4767-9528-457a-a4e2-ab7f09792db5",
                   "AcceleratedDialup": false,
                   "AutoClose": true,
@@ -1934,7 +1934,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "49784712-325d-4b6a-b648-39e7adaeb3d7",
                       "ChevronLight": {
                         "_type": "component",
@@ -1953,7 +1953,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "a4f37c09-b2a7-4421-b48a-18fea81767b0",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -1973,7 +1973,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "67ddd111-426a-47c0-88da-1d1896ae930b",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -1996,7 +1996,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "5046689a-261e-42ea-ab48-b45a543e15a1",
                       "ChevronLight": {
                         "_type": "component",
@@ -2015,7 +2015,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "128ffdf5-3171-4788-8359-6da9953fa91b",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2035,7 +2035,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "63c939a5-64e7-4952-b2cd-577604543bfc",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2058,7 +2058,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "1c0e9aa2-b75b-4d44-830f-827f9ce762cb",
                       "ChevronLight": {
                         "_type": "component",
@@ -2077,7 +2077,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "1654bbd5-4275-49ee-a849-66854a603979",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2097,7 +2097,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "a5ea4909-9b79-44bf-a8fe-cd97ac867086",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2120,7 +2120,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "c0b7870e-b793-4b50-af1a-d78d0a928ae8",
                       "ChevronLight": {
                         "_type": "component",
@@ -2139,7 +2139,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "294f9099-3abe-42ee-acd5-f922baf4e936",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2159,7 +2159,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "3556116b-0fe9-4c8a-a314-7e52d33158df",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2182,7 +2182,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "c4e6435b-5825-4709-8f7a-2dbf76b203c1",
                       "ChevronLight": {
                         "_type": "component",
@@ -2201,7 +2201,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "79de77d2-473e-4013-8b10-dfe2c2dcf935",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2221,7 +2221,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "9a2959e0-8f21-4f84-9a5c-2925bc21af97",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2244,7 +2244,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "118252e6-f56d-46b2-b615-919ccc26b617",
                       "ChevronLight": {
                         "_type": "component",
@@ -2263,7 +2263,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "23945def-886a-489d-8367-e5628afc1d5b",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2283,7 +2283,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "8e4b61ea-cbac-42fd-a6a8-89d5915b11d7",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2305,7 +2305,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "fd8f9bc0-2b4b-4584-81cc-68176c3305de",
                       "ChevronLight": {
                         "_type": "component",
@@ -2324,7 +2324,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "3d595023-fab1-451e-8380-50ae7387304d",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2344,7 +2344,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "ccac9e20-332f-4f8b-9ef8-f9ba8edfbb53",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2367,7 +2367,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "8df5f4bd-113c-4c06-94c8-c2eb2ee1dafb",
                       "ChevronLight": {
                         "_type": "component",
@@ -2386,7 +2386,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "ea07a0ab-ab2e-4396-8d19-96bb1cc4a6ff",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2406,7 +2406,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "d729474e-04d5-4563-8917-1e32ff55032f",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2429,7 +2429,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "394242aa-0d50-471e-aa70-4eeb1b5604a1",
                       "ChevronLight": {
                         "_type": "component",
@@ -2448,7 +2448,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "284d9b1c-11b7-4252-9db0-a8039bc53877",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -2468,7 +2468,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "1240e2ab-aae1-47b4-812f-9c132458e143",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -2490,7 +2490,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "StargateRingMilkyWay",
+                      "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                       "__guid": "074f77f0-e65b-42bd-9962-7f8d05881e93",
                       "_ringState": "STOPPED",
                       "CurRingSymbol": "#",
@@ -2504,7 +2504,7 @@
                       "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
                     },
                     {
-                      "__type": "ModelRenderer",
+                      "__type": "Sandbox.ModelRenderer",
                       "__guid": "d36e423c-eb83-47ea-9e81-654ab58e3222",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
@@ -2525,14 +2525,14 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "ee94cfe0-a522-442f-ae95-104f1330444b",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter.vmdl",
               "Static": false
             },
             {
-              "__type": "SkinnedModelRenderer",
+              "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "a30e3dd6-4a89-4438-ab3c-6ed78ef38186",
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
@@ -2563,7 +2563,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "SpotLight",
+                  "__type": "Sandbox.SpotLight",
                   "__guid": "faf48c25-b893-4c64-bcff-9e2a8cb1e8de",
                   "Attenuation": 0.5,
                   "ConeInner": 60,
@@ -2586,7 +2586,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "SpotLight",
+                  "__type": "Sandbox.SpotLight",
                   "__guid": "4316a45f-93a7-4cc2-8fad-d81c5ab612f1",
                   "Attenuation": 0.5,
                   "ConeInner": 60,
@@ -2608,7 +2608,7 @@
               "NetworkMode": 1,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "0c9a3963-fc52-451a-9116-ce8e5e4d60c1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
@@ -2616,7 +2616,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "abb019f0-a524-4c8e-8ad6-546fa4cfe5af",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
@@ -2640,7 +2640,7 @@
               "NetworkMode": 1,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "abc0363f-14cc-4a19-a023-5845486ebb7a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
@@ -2648,7 +2648,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "2b62352f-2f6d-485a-a2cd-ad9cdb1f3135",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
@@ -2671,7 +2671,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "14ea9439-7dfb-4bd7-b982-04d6fe9fde8a",
                   "IsTrigger": true,
                   "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter_trigger.vmdl",
@@ -2688,7 +2688,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "5d305080-65ca-49b0-8ec2-4fdc194a91b1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
@@ -2696,7 +2696,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "b05232cf-e0d7-46e5-a661-4a45c4b306c9",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
@@ -2731,7 +2731,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "110066c4-ffa8-43b6-ad73-4046640b7c14",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
@@ -2739,7 +2739,7 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "23cbf946-e868-4c95-a377-dfa9263f9354",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
@@ -2775,22 +2775,29 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "SkyBox2D",
+              "__type": "Sandbox.SkyBox2D",
               "__guid": "0a75bc84-f3ea-4fbc-8e80-9cf0f11050dc",
-              "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
+              "SkyMaterial": "materials/error.vmat",
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "EnvmapProbe",
+              "__type": "Sandbox.EnvmapProbe",
               "__guid": "beafe30a-102b-4d13-b668-deb748830668",
+              "Texture": "textures/cubemaps/default2.vtex",
               "Bounds": {
                 "Mins": "-1600,-1600,0",
                 "Maxs": "1600,1600,1024"
               },
+              "DelayBetweenUpdates": 0.1,
               "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
               "Projection": "Sphere",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "TintColor": "1,1,1,1"
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
             }
           ]
         },
@@ -2803,7 +2810,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "DirectionalLight",
+              "__type": "Sandbox.DirectionalLight",
               "__guid": "3eed6648-1e1a-4315-ba21-5b1c6ef24792",
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -2836,7 +2843,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "493a3b48-40f4-4575-888b-a4c532ab72ab",
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/dev_measuregeneric01.vmat",
@@ -2845,7 +2852,7 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "BoxCollider",
+              "__type": "Sandbox.BoxCollider",
               "__guid": "234a623c-cd0a-4288-9294-60762de0d320",
               "Center": "0,0,-1",
               "IsTrigger": false,
@@ -2862,7 +2869,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "152b7f9c-bc53-4718-bea3-fbc307f093ba",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp.vmdl",
@@ -2870,14 +2877,14 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "ae22e121-ba0c-41a2-bc84-a4d3c807fd2d",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp.vmdl",
               "Static": true
             },
             {
-              "__type": "GateRamp",
+              "__type": "Sandbox.Components.Stargate.Ramps.GateRamp",
               "__guid": "e93ad140-cc63-476e-a523-d58bc3aede0a",
               "GateSlots": 1,
               "StargatePositionOffset": "0,0,90",
@@ -2893,14 +2900,14 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "83dab14f-bf6f-44e3-8068-0b7ba6bd7344",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
                   "Static": false
                 },
                 {
-                  "__type": "StargateUniverse",
+                  "__type": "Sandbox.Components.Stargate.StargateUniverse",
                   "__guid": "56bd5cca-18eb-4af6-96fb-06cdc840ec17",
                   "AutoClose": true,
                   "CanOpenMenu": true,
@@ -2929,7 +2936,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "StargateRingUniverse",
+                      "__type": "Sandbox.Components.Stargate.StargateRingUniverse",
                       "__guid": "be22e2d8-b2b5-4c44-b7e6-859da42dcd22",
                       "_ringState": "STOPPED",
                       "CurRingSymbol": " ",
@@ -2943,7 +2950,7 @@
                       "RingSymbols": " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3"
                     },
                     {
-                      "__type": "ModelRenderer",
+                      "__type": "Sandbox.ModelRenderer",
                       "__guid": "38a03966-4864-494f-bd7b-84edce40c1ca",
                       "BodyGroups": 1,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
@@ -2951,7 +2958,7 @@
                       "Tint": "1,1,1,1"
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "63c07423-e6a3-4ce0-a4cf-31b3a9acc0f7",
                       "BodyGroups": 22906492245,
                       "CreateBoneObjects": false,
@@ -2960,7 +2967,7 @@
                       "Tint": "1,1,1,1"
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "465d86df-438f-44fb-a841-9ebb6e06ddc4",
                       "BodyGroups": 22906492245,
                       "CreateBoneObjects": false,
@@ -2978,7 +2985,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "Chevron",
+                          "__type": "Sandbox.Components.Stargate.Chevron",
                           "__guid": "aa1d206e-e10a-4330-b0f2-5054b6c0ceb2",
                           "ChevronModel": {
                             "_type": "component",
@@ -2991,7 +2998,7 @@
                           "Open": false
                         },
                         {
-                          "__type": "SkinnedModelRenderer",
+                          "__type": "Sandbox.SkinnedModelRenderer",
                           "__guid": "44cb8b41-f537-4da7-9556-ae1e8baada80",
                           "BodyGroups": 18446744073709551615,
                           "CreateBoneObjects": false,
@@ -3023,22 +3030,29 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "SkyBox2D",
+              "__type": "Sandbox.SkyBox2D",
               "__guid": "4cd5e878-0b20-457b-95aa-31c550ae4666",
-              "SkyMaterial": "materials/skybox/light_test_sky_sunny_basic.vmat",
+              "SkyMaterial": "materials/error.vmat",
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "EnvmapProbe",
+              "__type": "Sandbox.EnvmapProbe",
               "__guid": "23c5b567-90a1-4a0e-bf87-459c8a7246c7",
+              "Texture": "textures/cubemaps/default2.vtex",
               "Bounds": {
                 "Mins": "-1600,-1600,0",
                 "Maxs": "1600,1600,1024"
               },
+              "DelayBetweenUpdates": 0.1,
               "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
               "Projection": "Sphere",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "TintColor": "1,1,1,1"
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
             }
           ]
         },
@@ -3051,7 +3065,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "DirectionalLight",
+              "__type": "Sandbox.DirectionalLight",
               "__guid": "c76a012a-5cbf-43e2-bf5d-e7b0c661dc0b",
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -3084,7 +3098,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "ae11a0d7-0a2c-4ebf-b734-7dbc2fab3708",
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/gray_grid_8.vmat",
@@ -3093,7 +3107,7 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "BoxCollider",
+              "__type": "Sandbox.BoxCollider",
               "__guid": "2ccff6c4-f340-4759-8d3b-d8073c971d73",
               "Center": "0,0,-1",
               "IsTrigger": false,
@@ -3110,7 +3124,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "467c2b61-0723-475a-bbb7-651caadfcb38",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
@@ -3118,14 +3132,14 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "ce3d409f-93e4-4976-bbb2-e0b9eee5f5c3",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
               "Static": true
             },
             {
-              "__type": "GateRamp",
+              "__type": "Sandbox.Components.Stargate.Ramps.GateRamp",
               "__guid": "ee02eaad-40e8-4ae5-a0f0-e0acbe4ff588",
               "GateSlots": 1,
               "StargatePositionOffset": "0,0,90",
@@ -3141,7 +3155,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "c44972a7-b3cc-4f16-b708-9aad92428430",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
@@ -3149,14 +3163,14 @@
                   "Tint": "1,1,1,1"
                 },
                 {
-                  "__type": "ModelCollider",
+                  "__type": "Sandbox.ModelCollider",
                   "__guid": "90341106-a465-4d20-b62c-2dbbf7e7d8ed",
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
                   "Static": false
                 },
                 {
-                  "__type": "StargatePegasus",
+                  "__type": "Sandbox.Components.Stargate.StargatePegasus",
                   "__guid": "4d544c6c-cb02-4187-b713-1519350bd418",
                   "AutoClose": true,
                   "CanOpenMenu": true,
@@ -3192,7 +3206,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "01c7672a-2cd1-4cc8-90a1-109f24f62bc7",
                       "ChevronLight": {
                         "_type": "component",
@@ -3211,7 +3225,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "20b0103c-1491-4767-a2a4-b84abdc823a7",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3231,7 +3245,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "86daa048-e3da-46e6-b132-ace38c2f370c",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3254,7 +3268,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "82deb20c-2a6c-43f4-ba46-b795ac89945c",
                       "ChevronLight": {
                         "_type": "component",
@@ -3273,7 +3287,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "963ae329-e6f5-4144-be07-b3bd8f998fdc",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3293,7 +3307,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "df7e274c-806d-469b-b51d-f92e04f7e00d",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3316,7 +3330,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "90686681-4c7f-471c-8a1e-dcd255983a2a",
                       "ChevronLight": {
                         "_type": "component",
@@ -3335,7 +3349,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "b4f5510a-0a16-47d6-ba0b-7fcace290421",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3355,7 +3369,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "87fb7ede-f449-44c5-9c6f-ad9641767880",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3378,7 +3392,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "b692a363-1ab0-4c46-be9d-07fa875a5206",
                       "ChevronLight": {
                         "_type": "component",
@@ -3397,7 +3411,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "3d96ba46-2923-4e79-9c0d-ec81f8d846c3",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3417,7 +3431,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "8891ed2d-1196-414b-ad7c-579a9b278209",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3440,7 +3454,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "ada32526-bf7d-4581-93a5-4f16097bc19c",
                       "ChevronLight": {
                         "_type": "component",
@@ -3459,7 +3473,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "0eaf29f2-eb20-43c4-9b19-d7943853cc17",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3479,7 +3493,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "56fd3e14-01a0-49f4-b2b8-abac23e2e4b6",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3502,7 +3516,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "111a7d7b-9517-4aeb-b582-0805e644a450",
                       "ChevronLight": {
                         "_type": "component",
@@ -3521,7 +3535,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "004b4616-8d47-41c6-a4a2-d567bc0c51cc",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3541,7 +3555,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "63878faa-d93d-4a94-8231-a05aef1ad8f6",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3563,7 +3577,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "39a80139-d9b1-47f2-bbca-d3052425dc84",
                       "ChevronLight": {
                         "_type": "component",
@@ -3582,7 +3596,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "d8e202bc-7a44-4a3d-a0a8-ababa21e94e2",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3602,7 +3616,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "cda73378-9ba6-473b-9d52-45e2e0341961",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3625,7 +3639,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "16e33332-4ae9-49e1-b4b0-a0b1036cf4c9",
                       "ChevronLight": {
                         "_type": "component",
@@ -3644,7 +3658,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "7b2545a3-8a06-44ed-9eb7-5973e8991edd",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3664,7 +3678,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "5f383836-5a48-4530-b126-78b665920981",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3687,7 +3701,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "Chevron",
+                      "__type": "Sandbox.Components.Stargate.Chevron",
                       "__guid": "ce40904f-c76f-478d-9b95-7cc31f98297b",
                       "ChevronLight": {
                         "_type": "component",
@@ -3706,7 +3720,7 @@
                       "Open": false
                     },
                     {
-                      "__type": "SkinnedModelRenderer",
+                      "__type": "Sandbox.SkinnedModelRenderer",
                       "__guid": "7213c58c-8491-492b-a959-29dd64c26063",
                       "BodyGroups": 18446744073709551615,
                       "CreateBoneObjects": false,
@@ -3726,7 +3740,7 @@
                       "NetworkMode": 2,
                       "Components": [
                         {
-                          "__type": "PointLight",
+                          "__type": "Sandbox.PointLight",
                           "__guid": "6799f64f-217b-4c1e-ae64-492452188f0a",
                           "__enabled": false,
                           "Attenuation": 1,
@@ -3748,7 +3762,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "StargateRingPegasus",
+                      "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
                       "__guid": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
                       "Gate": {
                         "_type": "component",
@@ -3982,7 +3996,7 @@
                       }
                     },
                     {
-                      "__type": "ModelRenderer",
+                      "__type": "Sandbox.ModelRenderer",
                       "__guid": "dc9840ce-da00-4483-a15b-f5fe272a2546",
                       "BodyGroups": 18446744073709551615,
                       "MaterialGroup": "complex",
@@ -4445,22 +4459,29 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "SkyBox2D",
+              "__type": "Sandbox.SkyBox2D",
               "__guid": "ae7c643c-989a-4d2a-82bc-cde0ab3a3c6f",
-              "SkyMaterial": "materials/skybox/light_test_dark.vmat",
+              "SkyMaterial": "materials/error.vmat",
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "EnvmapProbe",
+              "__type": "Sandbox.EnvmapProbe",
               "__guid": "d011a423-af13-4f09-9766-5de0ec776c4d",
+              "Texture": "textures/cubemaps/default2.vtex",
               "Bounds": {
                 "Mins": "-1600,-1600,0",
                 "Maxs": "1600,1600,1024"
               },
+              "DelayBetweenUpdates": 0.1,
               "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
               "Projection": "Sphere",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "TintColor": "1,1,1,1"
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
             }
           ]
         },
@@ -4473,7 +4494,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "DirectionalLight",
+              "__type": "Sandbox.DirectionalLight",
               "__guid": "8d27a1b8-bc30-4da1-b44e-0fad6693495e",
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -4505,22 +4526,29 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "SkyBox2D",
+              "__type": "Sandbox.SkyBox2D",
               "__guid": "1bfc3309-0462-4c43-8fb3-019de5c5ae94",
               "SkyMaterial": "models/sbox_stargate/wormhole/skybox.vmat",
               "Tint": "0.55814,0.55814,0.55814,1"
             },
             {
-              "__type": "EnvmapProbe",
+              "__type": "Sandbox.EnvmapProbe",
               "__guid": "1b3158f8-e99e-4d0d-b3a9-3675b96b909b",
+              "Texture": "textures/cubemaps/default2.vtex",
               "Bounds": {
                 "Mins": "-1600,-1600,0",
                 "Maxs": "1600,1600,1024"
               },
+              "DelayBetweenUpdates": 0.1,
               "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
               "Projection": "Sphere",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "TintColor": "1,1,1,1"
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
             }
           ]
         },
@@ -4532,7 +4560,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "Prop",
+              "__type": "Sandbox.Prop",
               "__guid": "2c78c4f1-30a1-43ac-9aa3-765283088eb3",
               "BodyGroups": 18446744073709551615,
               "Health": 0,
@@ -4550,7 +4578,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "DirectionalLight",
+              "__type": "Sandbox.DirectionalLight",
               "__guid": "34c0ec05-83ad-4201-ac7c-ac8f2134914d",
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -4568,7 +4596,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "69ac89c1-95e9-4927-94d3-189734c88a96",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
@@ -4576,7 +4604,7 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "b4b8734d-4b16-434b-a309-c19f1b5de291",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
@@ -4593,7 +4621,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "708d8779-d495-4cbb-b21f-bc03128a4a57",
                   "ChevronLight": {
                     "_type": "component",
@@ -4612,7 +4640,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "348bd41d-de7d-4f99-8bb3-660602f352ed",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -4632,7 +4660,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "8534d7a0-1878-4ff4-913c-066ef9128d57",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -4655,7 +4683,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "03564461-df52-4e65-a055-5799f3788c31",
                   "ChevronLight": {
                     "_type": "component",
@@ -4674,7 +4702,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "b8a57b44-a51f-4e6e-964a-8cf21da81f01",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -4694,7 +4722,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "17bd27be-1408-4c0e-92e4-ddb6ff39147e",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -4717,7 +4745,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "ce5a446b-1174-4f19-a4b3-8c7bfc9d75d2",
                   "ChevronLight": {
                     "_type": "component",
@@ -4736,7 +4764,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "be5be05b-0657-4142-be81-916286ac7ef0",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -4756,7 +4784,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "a2dae2f4-6acd-42bd-95c5-e492aa97e3ac",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -4779,7 +4807,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "f369100b-3dce-484f-972d-beb520b3162f",
                   "ChevronLight": {
                     "_type": "component",
@@ -4798,7 +4826,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "21da2855-a41e-4b8f-9cd0-2f729e0704d3",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -4818,7 +4846,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "d150c2db-d3a1-4fe6-b0bc-a3873e36ab62",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -4841,7 +4869,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "1abddf22-08d5-45e7-9b70-e3064be8edb2",
                   "ChevronLight": {
                     "_type": "component",
@@ -4860,7 +4888,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "09c35c82-4200-4842-bb69-7ca766cbe926",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -4880,7 +4908,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "168bcad3-ac2f-4ab5-bb92-9192886b457d",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -4903,7 +4931,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "e63516e7-5a68-4d7c-9310-0cb08f91e384",
                   "ChevronLight": {
                     "_type": "component",
@@ -4922,7 +4950,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "9b5c1360-a3d1-49f9-9b56-7d92fc62f27b",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -4942,7 +4970,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "3e50ba6e-0847-42c0-8f15-8c12f847fa79",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -4964,7 +4992,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "cbd9824a-4fe7-4319-8e51-013eb5e16160",
                   "ChevronLight": {
                     "_type": "component",
@@ -4983,7 +5011,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "393d18c5-5698-4301-900c-67e607ac97dc",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -5003,7 +5031,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "58440ed3-4706-4deb-8160-7a516472517a",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -5026,7 +5054,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "2e04c099-ea1b-4437-81a3-a6531f51c2fa",
                   "ChevronLight": {
                     "_type": "component",
@@ -5045,7 +5073,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "306bfdc7-d3fb-4edf-8b43-3f3a693ad81c",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -5065,7 +5093,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "5ee471cd-6318-47e1-8d30-26c9e27b4f1b",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -5088,7 +5116,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "3e014dab-983e-475f-aa11-b1132855b506",
                   "ChevronLight": {
                     "_type": "component",
@@ -5107,7 +5135,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "2eee168a-0712-47fe-8a63-c9df58b26521",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -5127,7 +5155,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "e189bab3-7015-46d8-889d-06724b49d1b7",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -5149,7 +5177,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "StargateRingPegasus",
+                  "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
                   "__guid": "b989a6b5-ef78-4131-8804-72ae2a70710e",
                   "Glyphs": [
                     {
@@ -5377,7 +5405,7 @@
                   }
                 },
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "4c9bd5c5-05b0-4339-837b-aa89f80fe14b",
                   "BodyGroups": 18446744073709551615,
                   "MaterialGroup": "complex",
@@ -5842,7 +5870,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "MapInstance",
+              "__type": "Sandbox.MapInstance",
               "__guid": "58563d02-4cc5-40ec-a7cf-f0622b03b3bd",
               "MapName": "facepunch.flatgrass",
               "UseMapFromLaunch": false
@@ -5858,7 +5886,7 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelRenderer",
+              "__type": "Sandbox.ModelRenderer",
               "__guid": "ba56dd96-b03c-4e56-8590-010441737b2d",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
@@ -5866,14 +5894,14 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "ModelCollider",
+              "__type": "Sandbox.ModelCollider",
               "__guid": "39e4d0f4-a3f0-4903-85a7-b321e70aaad3",
               "IsTrigger": false,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
               "Static": false
             },
             {
-              "__type": "StargateMilkyWay",
+              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
               "__guid": "28e381c7-a971-40fc-a826-a0fcc1b12715",
               "AcceleratedDialup": false,
               "AutoClose": true,
@@ -5900,7 +5928,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "ce8e31e3-1259-43a6-834d-ba2f310d9435",
                   "ChevronLight": {
                     "_type": "component",
@@ -5919,7 +5947,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "49272452-8b42-4f4f-94f3-9e47913a0794",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -5939,7 +5967,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "79f3be58-7572-456c-ace7-5df4b7d506e6",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -5962,7 +5990,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "c4a5fd17-e5a2-4d8d-93af-abe4cb1ef50b",
                   "ChevronLight": {
                     "_type": "component",
@@ -5981,7 +6009,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "a5b315f6-a604-4ad2-88bb-0be5204adc36",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6001,7 +6029,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "be7cfcaf-b8a3-48fc-88e1-a4b3fc33c682",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6024,7 +6052,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "0507ac3f-c3ba-436a-857f-9b0d8dd1145c",
                   "ChevronLight": {
                     "_type": "component",
@@ -6043,7 +6071,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "dae0eb05-287d-4c7e-bb22-fb50ab7ee87a",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6063,7 +6091,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "aa6d288a-3c0c-4409-8e67-d2f276babc23",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6086,7 +6114,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "22c17b54-8db9-4c0b-b2d0-dc07c2d8a308",
                   "ChevronLight": {
                     "_type": "component",
@@ -6105,7 +6133,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "cc2f02cb-0e7e-4185-bed4-bd3ac1e81aae",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6125,7 +6153,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "32409cb4-34e5-49f1-8623-2c17ae80c416",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6148,7 +6176,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "8a3392e6-0ea9-45ac-b995-bf039ff951cf",
                   "ChevronLight": {
                     "_type": "component",
@@ -6167,7 +6195,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "fdb9536a-53b3-4e7e-9598-9f2bcd8d70b7",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6187,7 +6215,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "a512974b-104f-4972-8b6e-3f660ce768dd",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6210,7 +6238,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "12d1fbe7-1fa0-4e57-a932-14ae9ca2c21d",
                   "ChevronLight": {
                     "_type": "component",
@@ -6229,7 +6257,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "c4d2cdc3-47cf-4acf-a2ea-4b3c1fdd3c16",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6249,7 +6277,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "fd5dfc75-b24a-4656-9d1f-57ec396772d5",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6271,7 +6299,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "fab34fa0-f098-435e-a37f-926855f9bc17",
                   "ChevronLight": {
                     "_type": "component",
@@ -6290,7 +6318,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "46695804-5c23-498b-92cb-3395dd0e1ff6",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6310,7 +6338,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "0db6a7e1-a399-4724-8920-2a1023f9440c",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6333,7 +6361,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "903e4c8b-a678-4481-b7f3-626610046c80",
                   "ChevronLight": {
                     "_type": "component",
@@ -6352,7 +6380,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "9abc727a-3afa-4e4f-95b1-a1933ffbc513",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6372,7 +6400,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "fd622388-5b3b-4c4c-b03c-f7db96683c4a",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6395,7 +6423,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "Chevron",
+                  "__type": "Sandbox.Components.Stargate.Chevron",
                   "__guid": "2beeb577-4403-4765-95d3-5cca51d7c2e5",
                   "ChevronLight": {
                     "_type": "component",
@@ -6414,7 +6442,7 @@
                   "Open": false
                 },
                 {
-                  "__type": "SkinnedModelRenderer",
+                  "__type": "Sandbox.SkinnedModelRenderer",
                   "__guid": "8545a6b4-6c6c-42a6-a80f-286d53fe7d12",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
@@ -6434,7 +6462,7 @@
                   "NetworkMode": 2,
                   "Components": [
                     {
-                      "__type": "PointLight",
+                      "__type": "Sandbox.PointLight",
                       "__guid": "6a589463-2dee-4759-8820-50d0a09f0d1b",
                       "__enabled": false,
                       "Attenuation": 1,
@@ -6456,7 +6484,7 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "StargateRingMilkyWay",
+                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "8f185275-fc68-4961-b5ca-db49c41507dd",
                   "_ringState": "STOPPED",
                   "CurRingSymbol": "",
@@ -6470,7 +6498,7 @@
                   "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
                 },
                 {
-                  "__type": "ModelRenderer",
+                  "__type": "Sandbox.ModelRenderer",
                   "__guid": "37633fa9-e548-47fa-85a4-10584452caf3",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
@@ -6499,7 +6527,7 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "ScreenPanel",
+          "__type": "Sandbox.ScreenPanel",
           "__guid": "77db7b84-930e-4c97-b917-784d03eed429",
           "AutoScreenScale": true,
           "Opacity": 1,
@@ -6536,7 +6564,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-04-02T21:15:19.6238175\u002B02:00",
+  "LastSaved": "2024-04-28T15:50:24.754181\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
