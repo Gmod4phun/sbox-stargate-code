@@ -23,9 +23,6 @@
 
 		public override float RingRotationStepSize => AcceleratedDialup ? 1f : 0.2f;
 
-		[Sync]
-		public NetList<Chevron> EncodedChevronsOrdered { get; set; } = new();
-
 		public StargateRingMilkyWay Ring => Components.Get<StargateRingMilkyWay>( FindMode.EnabledInSelfAndDescendants );
 
 		[Property, Sync]
@@ -45,13 +42,6 @@
 			{
 				Gizmo.Draw.Model( "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl", new Transform( Vector3.Zero, Rotation.FromRoll( i * 40 ) ) );
 			}
-		}
-
-		public override void ResetGateVariablesToIdle()
-		{
-			base.ResetGateVariablesToIdle();
-
-			EncodedChevronsOrdered.Clear();
 		}
 
 		public async Task<bool> RotateRingToSymbol( char sym, int angOffset = 0 )
@@ -753,7 +743,6 @@
 			base.DoDHDChevronEncode( sym );
 
 			var chev = GetChevronBasedOnAddressLength( DialingAddress.Length, 9 );
-			EncodedChevronsOrdered.Add( chev );
 
 			if ( MovieDialingType )
 			{
@@ -770,7 +759,6 @@
 			base.DoDHDChevronLock( sym );
 
 			var chev = GetTopChevron();
-			EncodedChevronsOrdered.Add( chev );
 
 			var gate = FindDestinationGateByDialingAddress( this, DialingAddress );
 			var valid = (gate != this && gate.IsValid() && gate.IsStargateReadyForInboundDHD() && ChevronLightup);

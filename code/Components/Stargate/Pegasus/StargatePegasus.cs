@@ -29,8 +29,6 @@
 		[Property]
 		public StargateRingPegasus Ring => GameObject.Children.Find( go => go.Components.Get<StargateRingPegasus>().IsValid() ).Components.Get<StargateRingPegasus>();
 
-		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
-
 		public static void DrawGizmos( EditorContext context )
 		{
 			Gizmo.Draw.Model( "models/sbox_stargate/sg_peg/sg_peg_ring.vmdl" );
@@ -39,13 +37,6 @@
 			{
 				Gizmo.Draw.Model( "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl", new Transform( Vector3.Zero, Rotation.FromRoll( i * 40 ) ) );
 			}
-		}
-
-		public override void ResetGateVariablesToIdle()
-		{
-			base.ResetGateVariablesToIdle();
-
-			EncodedChevronsOrdered.Clear();
 		}
 
 		// DIALING
@@ -462,7 +453,6 @@
 			var clampLen = Math.Clamp( DialingAddress.Length + 1, 7, 9 );
 
 			var chev = GetChevronBasedOnAddressLength( DialingAddress.Length, clampLen );
-			EncodedChevronsOrdered.Add( chev );
 
 			Ring.RollSymbolDHDFast( sym, clampLen, () => true, DialingAddress.Length, 0.6f );
 		}
@@ -472,7 +462,6 @@
 			base.DoDHDChevronLock( sym );
 
 			var chev = GetTopChevron();
-			EncodedChevronsOrdered.Add( chev );
 
 			bool validCheck()
 			{

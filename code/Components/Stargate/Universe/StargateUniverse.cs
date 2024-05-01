@@ -28,15 +28,6 @@ namespace Sandbox.Components.Stargate
 
 		public Chevron Chevron => Components.Get<Chevron>( FindMode.EnabledInSelfAndDescendants );
 
-		public List<Chevron> EncodedChevronsOrdered { get; set; } = new();
-
-		public override void ResetGateVariablesToIdle()
-		{
-			base.ResetGateVariablesToIdle();
-
-			EncodedChevronsOrdered.Clear();
-		}
-
 		public async Task<bool> RotateRingToSymbol( char sym, int angOffset = 0 )
 		{
 			return await Ring.RotateToSymbol( sym, angOffset );
