@@ -251,6 +251,15 @@
               "__type": "TeleportScreenoverlay",
               "__guid": "b42f0097-81dd-48d2-be77-4a1ab7e33b08",
               "Visible": false
+            },
+            {
+              "__type": "LensFlareEffect",
+              "__guid": "20d1333b-d139-40a4-a9d7-b01908682dc0",
+              "DrawBar": true,
+              "DrawFlare": true,
+              "DrawIris": true,
+              "DrawRing": true,
+              "Intensity": 1
             }
           ],
           "Children": [
@@ -2843,6 +2852,7 @@
         {
           "__guid": "d7c75a99-fe4f-4b15-98b2-03a89f38b79a",
           "Name": "2D Skybox",
+          "Rotation": "0,-0,-0.8746197,0.4848096",
           "Tags": "skybox",
           "Enabled": true,
           "NetworkMode": 2,
@@ -3107,6 +3117,7 @@
         {
           "__guid": "3d7de4bb-dd25-4c2e-96eb-df3a545f68f1",
           "Name": "2D Skybox",
+          "Rotation": "0,-0,-0.8480481,0.5299193",
           "Tags": "skybox",
           "Enabled": true,
           "NetworkMode": 2,
@@ -6722,7 +6733,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-04-30T17:36:33.2915467\u002B02:00",
+  "LastSaved": "2024-05-01T16:49:10.4722514\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
