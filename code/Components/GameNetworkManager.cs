@@ -12,6 +12,12 @@ public class GameNetworkManager : Component, Component.INetworkListener
     /// </summary>
     [Property] public GameObject PlayerPrefab { get; set; }
 
+
+    /// <summary>
+    /// The prefab to spawn for the player to control in VR.
+    /// </summary>
+    [Property] public GameObject VRPlayerPrefab { get; set; }
+
     /// <summary>
     /// A list of points to choose from randomly to spawn the player in. If not set, we'll spawn at the
     /// location of the NetworkHelper object.
@@ -45,7 +51,12 @@ public class GameNetworkManager : Component, Component.INetworkListener
 
     public void SpawnPlayer( Connection channel )
     {
-        if ( PlayerPrefab is null )
+        var isVr = Game.IsRunningInVR;
+
+        if ( !isVr && PlayerPrefab is null )
+            return;
+
+        if ( isVr && VRPlayerPrefab is null )
             return;
 
         //
@@ -53,8 +64,19 @@ public class GameNetworkManager : Component, Component.INetworkListener
         //
         var startLocation = FindSpawnLocation().WithScale( 1 );
 
-        // Spawn this object and make the client the owner
-        var player = PlayerPrefab.Clone( startLocation, name: $"Player - {channel.DisplayName}" );
+        GameObject player;
+        if ( isVr )
+        {
+            // Spawn this object and make the client the owner
+            player = VRPlayerPrefab.Clone( startLocation, name: $"VR Player - {channel.DisplayName}" );
+            player.NetworkSpawn( channel );
+            return;
+        }
+        else
+        {
+            // Spawn this object and make the client the owner
+            player = PlayerPrefab.Clone( startLocation, name: $"Player - {channel.DisplayName}" );
+        }
 
         // var nameTag = player.Components.Get<NameTagPanel>( FindMode.EverythingInSelfAndDescendants );
         // if ( nameTag is not null )

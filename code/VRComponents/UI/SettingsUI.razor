@@ -1,0 +1,250 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System.Collections.Generic;
+@inherits PanelComponent
+
+
+
+
+<form>
+	<h2>Locomotion Settings</h2>
+        <div>
+            <label for="movementMode">Movement Mode:</label>
+			<label type="button" class="@GetButtonClass("Movement")" >@CurrentMovementOption</label>
+        </div>
+
+        <div>
+            <label for="directionMode">Direction Mode:</label>
+			<label type="button" class="@GetButtonClass("Direction")">@CurrentDirectionOption</label>
+        </div>
+
+        <div>
+            <label for="rotationMode">Rotation Mode:</label>
+			<label type="button" class="@GetButtonClass("Rotation")">@CurrentRotationOption</label>
+        </div>
+</form>
+
+
+@code {
+	private List<string> MovementOptions = Enum.GetNames<VRPlayerMovement.MovementType>().ToList();
+
+	private List<string> DirectionOptions = Enum.GetNames<VRPlayerMovement.DirectionType>().ToList();
+
+	private List<string> RotationOptions = Enum.GetNames<VRPlayerMovement.RotationType>().ToList();
+
+	public int MovementIndex { get; set; } = 0;
+	public int DirectionIndex { get; set; } = 0;
+	public int RotationIndex { get; set; } = 0;
+
+	public string CurrentMovementOption => MovementOptions[MovementIndex];
+	public string CurrentDirectionOption => DirectionOptions[DirectionIndex];
+	public string CurrentRotationOption => RotationOptions[RotationIndex];
+
+	public string SelectedOptionType => VRPlayerMovement.instance.OptionSelections[VRPlayerMovement.instance.SelectedOption];
+
+	private string GetButtonClass(string optionType)
+	{
+		return optionType == SelectedOptionType ? "selected" : string.Empty;
+	}
+
+	protected override void OnStart()
+	{
+		LoadSettings();
+		GameObject.Parent.Enabled = false;
+	}
+
+	private void SetMovementOption( string key, string value )
+	{
+		switch (key)
+		{
+			case "Movement":
+				if (Enum.TryParse(value, out VRPlayerMovement.MovementType movementType))
+				{
+					VRPlayerMovement.instance.movementMethod = movementType;
+				}
+				break;
+			case "Direction":
+				if (Enum.TryParse(value, out VRPlayerMovement.DirectionType directionType))
+				{
+					VRPlayerMovement.instance.movementDirection = directionType;
+				}
+				break;
+			case "Rotation":
+				if (Enum.TryParse(value, out VRPlayerMovement.RotationType rotationType))
+				{
+					VRPlayerMovement.instance.rotationMethod = rotationType;
+				}
+				break;
+			default:
+				break;
+		}
+	}
+
+	public void NextOption()
+	{
+		switch (SelectedOptionType)
+		{
+			case "Movement":
+				CycleOption(MovementOptions, MovementIndex, "Movement");
+				break;
+			case "Direction":
+				CycleOption(DirectionOptions, DirectionIndex, "Direction");
+				break;
+			case "Rotation":
+				CycleOption(RotationOptions, RotationIndex, "Rotation");
+				break;
+			default:
+				break;
+		}
+	}
+
+	public void PrevOption()
+	{
+		switch (SelectedOptionType)
+		{
+			case "Movement":
+				DeCycleOption(MovementOptions, MovementIndex, "Movement");
+				break;
+			case "Direction":
+				DeCycleOption(DirectionOptions, DirectionIndex, "Direction");
+				break;
+			case "Rotation":
+				DeCycleOption(RotationOptions, RotationIndex, "Rotation");
+				break;
+			default:
+				break;
+		}
+	}
+
+	private void CycleOption(List<string> options, int index, string type)
+	{
+		index = (index + 1) % options.Count; // Cycle to the next option
+
+		if(index >= options.Count)
+		{
+			index = 0;
+		}
+
+		// Set the new index
+		if (type == "Movement")
+		{
+			MovementIndex = index;
+			SetMovementOption("Movement", CurrentMovementOption);
+		}
+		else if (type == "Direction")
+		{
+			DirectionIndex = index;
+			SetMovementOption("Direction", CurrentDirectionOption);
+		}
+		else if (type == "Rotation")
+		{
+			RotationIndex = index;
+			SetMovementOption("Rotation", CurrentRotationOption);
+		}
+
+		SaveSettings();
+	}
+
+	private void DeCycleOption(List<string> options, int index, string type)
+	{
+		index = (index - 1) % options.Count; // Cycle to the previous option
+
+		if(index < 0)
+		{
+			index = options.Count-1;
+		}
+
+		// Set the new index
+		if (type == "Movement")
+		{
+			MovementIndex = index;
+			SetMovementOption("Movement", CurrentMovementOption);
+		}
+		else if (type == "Direction")
+		{
+			DirectionIndex = index;
+			SetMovementOption("Direction", CurrentDirectionOption);
+		}
+		else if (type == "Rotation")
+		{
+			RotationIndex = index;
+			SetMovementOption("Rotation", CurrentRotationOption);
+		}
+
+		SaveSettings();
+	}
+
+	public void SaveSettings()
+	{
+		if (!FileSystem.Data.DirectoryExists("vrsettings"))
+		{
+			FileSystem.Data.CreateDirectory("vrsettings");
+		}
+		var settings = new VRSettings(CurrentMovementOption, CurrentDirectionOption, CurrentRotationOption);
+		FileSystem.Data.WriteAllText("vrsettings/vrsettings.txt",settings.ToJson());
+	}
+
+
+	public void LoadSettings()
+	{
+		if (FileSystem.Data.FileExists("vrsettings/vrsettings.txt"))
+		{
+			var settings = FileSystem.Data.ReadJson<VRSettings>("vrsettings/vrsettings.txt");
+
+			MovementIndex = MovementOptions.IndexOf(settings.MovementMode);
+			DirectionIndex = DirectionOptions.IndexOf(settings.DirectionMode);
+			RotationIndex = RotationOptions.IndexOf(settings.RotationMode);
+
+			SetMovementOption("Movement", CurrentMovementOption);
+			SetMovementOption("Direction", CurrentDirectionOption);
+			SetMovementOption("Rotation", CurrentRotationOption);
+		}
+	}
+
+	protected override int BuildHash()
+	{
+		return HashCode.Combine(Time.Now);
+	}
+}
+
+<style>
+    h2 {
+        color: white;
+		font-family: Poppins;
+		font-size: 24px;
+    }
+
+    form {
+		font-family: Poppins;
+		font-size: 24px;
+		flex-direction:column;
+        margin-top: 20px;
+		background-color: rgba(51, 51, 51, 0.5);
+		border: 1px solid #666;
+		padding: 8 px;
+		border-radius: 8px;
+		flex: auto;
+    }
+
+    label {
+		font-family: Poppins;
+		font-size: 24px;
+        margin-bottom: 5px;
+		margin: 5px;
+    }
+
+    select {
+		font-family: Poppins;
+		font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    button {
+		font-family: Poppins;
+		font-size: 24px;
+    }
+
+	.selected {
+		background-color: #e0e0e0; /* Highlight color for selected option */
+	}
+</style>

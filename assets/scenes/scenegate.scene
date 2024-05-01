@@ -21,7 +21,11 @@
               "go": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176"
             }
           ],
-          "StartServer": true
+          "StartServer": true,
+          "VRPlayerPrefab": {
+            "_type": "gameobject",
+            "go": "b20c0c97-bbe7-43a9-884b-4c92714a5ada"
+          }
         }
       ]
     },
@@ -298,6 +302,261 @@
       ]
     },
     {
+      "__guid": "b20c0c97-bbe7-43a9-884b-4c92714a5ada",
+      "Name": "VRPlayer Instance",
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "VRLegs",
+          "__guid": "5f11d2ae-fd0c-417f-89ea-b741c8b41009",
+          "FootBuffer": 5,
+          "Head": {
+            "_type": "gameobject",
+            "go": "01166fb7-e846-453e-94e7-090ea4cd2a8c"
+          },
+          "HeightOffset": 0,
+          "LedgeHopPower": 72,
+          "MaxStandableAngle": 35
+        },
+        {
+          "__type": "VRPlayerMovement",
+          "__guid": "2c40cd38-07f3-4483-ada0-bd7e1c97cc91",
+          "Head": {
+            "_type": "gameobject",
+            "go": "01166fb7-e846-453e-94e7-090ea4cd2a8c"
+          },
+          "JoystickMovementSpeed": 4,
+          "JumpForce": 400,
+          "JumpForwardMult": 0.5,
+          "JumpUpMult": 1,
+          "LeftHand": {
+            "_type": "gameobject",
+            "go": "864261ab-f61d-4b6f-842c-7dd2719b01f3"
+          },
+          "movementDirection": "Head",
+          "movementMethod": "ArmSwinger",
+          "OptionsMenu": {
+            "_type": "gameobject",
+            "go": "9eb6ecf2-96d7-4e5a-9ff0-15258f4e4907"
+          },
+          "RightHand": {
+            "_type": "gameobject",
+            "go": "305e3911-294e-402f-83c8-4aa0ceeafdaf"
+          },
+          "rotationMethod": "Snap",
+          "SmoothRotateSpeed": 60,
+          "SnapRotateIncrements": 30
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "3dc752d8-b732-4cc4-a7fd-f620d5ff8f95",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.VR.VRAnchor",
+          "__guid": "f417ff40-f552-485a-b6cc-a9dbee89f839"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "01166fb7-e846-453e-94e7-090ea4cd2a8c",
+          "Name": "Head",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "cc2ae827-494c-42a2-84e4-11fd2e3ae93e",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 90,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "Both",
+              "Viewport": "0,0,1,1",
+              "ZFar": 5000,
+              "ZNear": 1
+            },
+            {
+              "__type": "Sandbox.VR.VRTrackedObject",
+              "__guid": "dbb11d90-0229-41bb-86fa-1ad43980619f",
+              "PoseSource": "Head",
+              "TrackingType": "All",
+              "UseRelativeTransform": false
+            }
+          ]
+        },
+        {
+          "__guid": "864261ab-f61d-4b6f-842c-7dd2719b01f3",
+          "Name": "Left Hand",
+          "Rotation": "0,0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "VRHandGrabController",
+              "__guid": "87d8ee48-e3c9-4ce5-a237-9efe2b26d014",
+              "HandOffset": {
+                "_type": "gameobject",
+                "go": "98dbe498-692d-4a92-9110-d3e67c4ee6a3"
+              },
+              "HandSide": "Left"
+            },
+            {
+              "__type": "Sandbox.VR.VRTrackedObject",
+              "__guid": "a817b417-76dd-44d9-95a2-f5f052409d46",
+              "PoseSource": "LeftHand",
+              "TrackingType": "All",
+              "UseRelativeTransform": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "f5026b8f-2036-4cd8-9602-e5f77b37e2b7",
+              "Name": "Left Hand Model",
+              "Scale": "0.8,0.8,0.8",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "09002e25-4fa7-4672-bc87-9f11afb79467",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/hands_discgolf/hand_toon_left.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "VRHandAnimationController",
+                  "__guid": "5cfe9f2b-c8b4-423a-a081-73bb08126b56",
+                  "HandSide": "Left"
+                }
+              ]
+            },
+            {
+              "__guid": "98dbe498-692d-4a92-9110-d3e67c4ee6a3",
+              "Name": "grabpos",
+              "Position": "-5,-2,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        },
+        {
+          "__guid": "305e3911-294e-402f-83c8-4aa0ceeafdaf",
+          "Name": "Right Hand",
+          "Rotation": "0,0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "VRHandGrabController",
+              "__guid": "680830ea-86de-488f-b426-2fddbc237aa4",
+              "HandOffset": {
+                "_type": "gameobject",
+                "go": "05ff0bcd-52a4-48ae-aba0-03ba3b7daf1e"
+              },
+              "HandSide": "Right"
+            },
+            {
+              "__type": "Sandbox.VR.VRTrackedObject",
+              "__guid": "59e5ce20-4726-40cf-9a41-ce2810af475a",
+              "PoseSource": "RightHand",
+              "TrackingType": "All",
+              "UseRelativeTransform": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "acd86196-b467-4f61-b196-3ea9eff2e885",
+              "Name": "Right Hand Model",
+              "Scale": "0.8,0.8,0.8",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "43c27ff3-b45a-49e0-b2b3-8fefe4696201",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/hands_discgolf/hand_toon_right.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "VRHandAnimationController",
+                  "__guid": "70849a51-f259-40aa-a1db-bbc4dd1428a3",
+                  "HandSide": "Right"
+                }
+              ]
+            },
+            {
+              "__guid": "05ff0bcd-52a4-48ae-aba0-03ba3b7daf1e",
+              "Name": "grabpos",
+              "Position": "-5,2,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        },
+        {
+          "__guid": "9eb6ecf2-96d7-4e5a-9ff0-15258f4e4907",
+          "Name": "Object",
+          "Rotation": "-0.000000002346994,-0.00000003950341,0.707107,0.7071065",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "f461f5de-048d-4311-80e6-668a82a28f2f",
+              "HorizontalAlign": "Center",
+              "LookAtCamera": false,
+              "PanelSize": "775.5,512",
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "b20466a8-5a8f-45fa-806d-ba90283d9c7a",
+              "Name": "Object",
+              "Rotation": "0,0,1,-0.0000006397578",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "SettingsUI",
+                  "__guid": "179f5825-c736-412d-b440-7c4e29ca27c8"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__guid": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
       "Name": "Spawnpoint",
       "Rotation": "0,0,1,-0.00000004371139",
@@ -378,7 +637,6 @@
           "Name": "Dhd (1)",
           "Position": "-1765.29,3.49012,39.08476",
           "Rotation": "0.00250578,0.1305021,-0.01903339,0.9912621",
-          "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
           "__Prefab": "prefabs/dhdmilkyway.prefab"
@@ -388,7 +646,6 @@
           "Name": "stargatemilkyway",
           "Position": "-2015.39,-38.41121,142.7025",
           "Rotation": "0,0,-0.2495349,0.9683658",
-          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -1040,7 +1297,6 @@
           "Name": "Terrain",
           "Position": "-3000,-1000,0",
           "Tags": "terrain",
-          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -2910,7 +3166,6 @@
     {
       "__guid": "9b071954-2fc0-4d64-80c6-801bf0480777",
       "Name": "World 1",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -3175,7 +3430,6 @@
     {
       "__guid": "805bcd39-3e2c-4d8f-a0c5-fc1429d39f4b",
       "Name": "World 2",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -3267,32 +3521,6 @@
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
                   "Static": false
-                },
-                {
-                  "__type": "Sandbox.Components.Stargate.StargatePegasus",
-                  "__guid": "4d544c6c-cb02-4187-b713-1519350bd418",
-                  "AutoClose": true,
-                  "CanOpenMenu": true,
-                  "EventHorizonMaterialGroup": "pegasus",
-                  "GateAddress": "123456",
-                  "GateGlyphType": "PEGASUS",
-                  "GateGroup": "P@",
-                  "GateLocal": false,
-                  "GateName": "",
-                  "GatePrivate": false,
-                  "Ramp": {
-                    "_type": "component",
-                    "component_id": "ee02eaad-40e8-4ae5-a0f0-e0acbe4ff588",
-                    "go": "9b653830-8bb8-490d-86d8-41a8a1838db1",
-                    "component_type": "GateRamp"
-                  },
-                  "Ring": {
-                    "_type": "component",
-                    "component_id": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
-                    "go": "a0904ea8-eeba-4273-b1aa-632b6e299f14",
-                    "component_type": "StargateRingPegasus"
-                  },
-                  "ShowWormholeCinematic": false
                 }
               ],
               "Children": [
@@ -3882,12 +4110,6 @@
                     {
                       "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
                       "__guid": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
-                      "Gate": {
-                        "_type": "component",
-                        "component_id": "4d544c6c-cb02-4187-b713-1519350bd418",
-                        "go": "45f65a17-f381-4970-8337-d22889c856e4",
-                        "component_type": "StargatePegasus"
-                      },
                       "Glyphs": [
                         {
                           "_type": "component",
@@ -6733,8 +6955,11 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-01T16:49:10.4722514\u002B02:00",
+  "LastSaved": "2024-05-01T18:56:53.6541248\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
-  "__references": []
+  "__references": [
+    "shadb.hand_toon_left",
+    "shadb.hand_toon_right"
+  ]
 }

@@ -1,0 +1,327 @@
+{
+  "__guid": "8a2ff0bd-2ce0-46ff-a34d-62a639a1b035",
+  "GameObjects": [
+    {
+      "__guid": "fab90106-ee1d-4b8e-8327-bc05c0ee1787",
+      "Name": "VRPlayer",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "VRLegs",
+          "__guid": "9caa096f-39d4-45b7-9ee6-2b3dd79e2e9b",
+          "FootBuffer": 5,
+          "Head": {
+            "_type": "gameobject",
+            "go": "f2067218-c4dd-4a5e-8d13-e9d00fdbd1df"
+          },
+          "HeightOffset": 0,
+          "LedgeHopPower": 72,
+          "MaxStandableAngle": 35
+        },
+        {
+          "__type": "VRPlayerMovement",
+          "__guid": "e608e44a-3f90-4633-93ef-212566d5e657",
+          "Head": {
+            "_type": "gameobject",
+            "go": "f2067218-c4dd-4a5e-8d13-e9d00fdbd1df"
+          },
+          "JoystickMovementSpeed": 4,
+          "JumpForce": 400,
+          "JumpForwardMult": 0.5,
+          "JumpUpMult": 1,
+          "LeftHand": {
+            "_type": "gameobject",
+            "go": "46f4bece-9a7e-45e6-81f8-c9253b63add1"
+          },
+          "movementDirection": "Head",
+          "movementMethod": "ArmSwinger",
+          "OptionsMenu": {
+            "_type": "gameobject",
+            "go": "96144226-ca02-4fd8-be2d-b33c14619622"
+          },
+          "RightHand": {
+            "_type": "gameobject",
+            "go": "cdfdb68d-59c0-480c-8097-772b750f1450"
+          },
+          "rotationMethod": "Snap",
+          "SmoothRotateSpeed": 60,
+          "SnapRotateIncrements": 30
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "8765e722-fdb3-455a-b2d6-cbca46b1e27a",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.VR.VRAnchor",
+          "__guid": "627dd87d-28b9-4950-b9c8-9c5161dc0504"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "f2067218-c4dd-4a5e-8d13-e9d00fdbd1df",
+          "Name": "Head",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "f77322f8-2b4f-4d51-b2e1-2e99ce1843c2",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 90,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "Both",
+              "Viewport": "0,0,1,1",
+              "ZFar": 5000,
+              "ZNear": 1
+            },
+            {
+              "__type": "Sandbox.VR.VRTrackedObject",
+              "__guid": "2cb80a38-d0b7-42a6-aac6-d22976195b90",
+              "PoseSource": "Head",
+              "TrackingType": "All",
+              "UseRelativeTransform": false
+            }
+          ]
+        },
+        {
+          "__guid": "46f4bece-9a7e-45e6-81f8-c9253b63add1",
+          "Name": "Left Hand",
+          "Rotation": "0,0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "VRHandGrabController",
+              "__guid": "f695b867-884c-4931-953d-fc8fc648ba2f",
+              "HandOffset": {
+                "_type": "gameobject",
+                "go": "23683d6f-becd-4313-ac74-99d88b6f0bdc"
+              },
+              "HandSide": "Left"
+            },
+            {
+              "__type": "Sandbox.VR.VRTrackedObject",
+              "__guid": "563764d0-4df0-484a-a5dc-a3a552aab3cf",
+              "PoseSource": "LeftHand",
+              "TrackingType": "All",
+              "UseRelativeTransform": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "239b49e5-d58d-4d76-bcb4-f44cca1b3435",
+              "Name": "Left Hand Model",
+              "Scale": "0.8,0.8,0.8",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "3bc05a0a-5f1e-4315-a76a-c3ed3865204a",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/hands_discgolf/hand_toon_left.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "VRHandAnimationController",
+                  "__guid": "95b777d1-f6c6-4db7-9d3a-5c020a8ed541",
+                  "HandSide": "Left"
+                }
+              ]
+            },
+            {
+              "__guid": "23683d6f-becd-4313-ac74-99d88b6f0bdc",
+              "Name": "grabpos",
+              "Position": "-5,-2,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        },
+        {
+          "__guid": "cdfdb68d-59c0-480c-8097-772b750f1450",
+          "Name": "Right Hand",
+          "Rotation": "0,0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "VRHandGrabController",
+              "__guid": "fdfa0914-a7ac-4865-ae66-3029b7bedd8e",
+              "HandOffset": {
+                "_type": "gameobject",
+                "go": "af78d957-6f3d-42e1-a1f0-50414a8802a1"
+              },
+              "HandSide": "Right"
+            },
+            {
+              "__type": "Sandbox.VR.VRTrackedObject",
+              "__guid": "d921cb4c-911b-4f34-8a72-5265a457390f",
+              "PoseSource": "RightHand",
+              "TrackingType": "All",
+              "UseRelativeTransform": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "57c833ff-d0b4-49a7-ba58-29c95615ce37",
+              "Name": "Right Hand Model",
+              "Scale": "0.8,0.8,0.8",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "9ff54b60-425a-4aee-acbe-a5acc3433ed8",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/hands_discgolf/hand_toon_right.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "VRHandAnimationController",
+                  "__guid": "f83e3629-e59f-4c15-aaf9-b7f6242b410e",
+                  "HandSide": "Right"
+                }
+              ]
+            },
+            {
+              "__guid": "af78d957-6f3d-42e1-a1f0-50414a8802a1",
+              "Name": "grabpos",
+              "Position": "-5,2,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        },
+        {
+          "__guid": "96144226-ca02-4fd8-be2d-b33c14619622",
+          "Name": "Object",
+          "Rotation": "-0.000000002346994,-0.00000003950341,0.707107,0.7071065",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "52514a7c-fe57-420a-a4fe-d49c7f60bafd",
+              "HorizontalAlign": "Center",
+              "LookAtCamera": false,
+              "PanelSize": "775.5,512",
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "8732b33b-70ab-4fe1-936d-ee6fede09381",
+              "Name": "Object",
+              "Rotation": "0,0,1,-0.0000006397578",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "SettingsUI",
+                  "__guid": "a598b396-904b-4213-a83e-7091b45b8807"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "a1466bfc-799c-43f0-98a7-cc1e4edfae2e",
+      "Name": "Directional Light",
+      "Rotation": "-0.4003422,-0.3071933,0.5083043,-0.697843",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "747beb2d-e1fe-4fbb-afc4-3c1ad1073b4a",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.90436,0.79208,1",
+          "Shadows": true,
+          "SkyColor": "0.54056,0.71154,0.79703,1"
+        }
+      ]
+    },
+    {
+      "__guid": "d80678fd-d0dd-4ed9-b39e-674d71a661ad",
+      "Name": "SkyBox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "bd3adf91-c07e-406a-b1bd-45d32cfff6ae",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "test_vr_scene",
+  "Description": "",
+  "LastSaved": "2024-05-01T18:39:34.1434021\u002B02:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": [
+    "shadb.hand_toon_left",
+    "shadb.hand_toon_right"
+  ]
+}
