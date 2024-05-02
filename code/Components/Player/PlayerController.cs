@@ -2,7 +2,7 @@ using Sandbox.Citizen;
 using Sandbox.Components.Stargate;
 using Sandbox.Components.Stargate.Ramps;
 
-public class PlayerController : Component
+public class PlayerController : BasePlayer
 {
 	[Property] public Vector3 Gravity { get; set; } = new Vector3( 0, 0, 800 );
 
@@ -11,7 +11,6 @@ public class PlayerController : Component
 	[Property] public GameObject Body { get; set; }
 	[Property] public GameObject Eye { get; set; }
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
-	[Property] public CharacterController Controller => Components.Get<CharacterController>();
 	[Property] public bool FirstPerson { get; set; }
 	[Property] public Collider PlayerCollider { get; set; }
 	[Property] public float PlayerHealth { get; set; } = 100;
@@ -21,17 +20,11 @@ public class PlayerController : Component
 
 	private TimeSince PlayerDeathTime { get; set; }
 
-	[Property, Sync]
-	public int CurrentWorldIndex { get; set; } = 0;
-
 	[Sync]
 	public Angles EyeAngles { get; set; }
 
 	[Sync]
 	public bool IsRunning { get; set; }
-
-	[Property]
-	public CameraComponent Camera { get; set; }
 
 	protected override void OnEnabled()
 	{

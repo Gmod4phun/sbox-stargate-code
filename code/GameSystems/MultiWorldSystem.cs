@@ -106,20 +106,15 @@ public class MultiWorldSystem : GameObjectSystem
         gameObject.Parent = GetWorldByIndex( worldIndex ).GameObject;
 
         // if it's a player, handle that
-        if ( gameObject.Components.TryGet<PlayerController>( out var ply ) )
+        if ( gameObject.Components.TryGet<BasePlayer>( out var ply ) )
         {
             AssignWorldToPlayer( ply, worldIndex );
-        }
-
-        if ( gameObject.Components.TryGet<VRPlayer>( out var vrPly ) )
-        {
-            AssignWorldToPlayerVR( vrPly, worldIndex );
         }
 
         // Log.Info( $"Object {gameObject} has moved to world {worldIndex}" );
     }
 
-    private static void AssignWorldToPlayer( PlayerController player, int worldIndex )
+    private static void AssignWorldToPlayer( BasePlayer player, int worldIndex )
     {
         if ( !player.IsValid() )
             return;
@@ -156,45 +151,6 @@ public class MultiWorldSystem : GameObjectSystem
         camera.RenderExcludeTags.Remove( newWorldTag );
         controller.IgnoreLayers.Remove( newWorldTag );
         player.CurrentWorldIndex = worldIndex;
-    }
-
-    private static void AssignWorldToPlayerVR( VRPlayer player, int worldIndex )
-    {
-        if ( !player.IsValid() )
-            return;
-
-        // Log.Info( $"Assigning player {player} to world {worldIndex}" );
-
-        var camera = player.Camera;
-        // var controller = player.Controller;
-
-        var newWorldTag = GetWorldTag( worldIndex );
-        var excludeTags = AllWorldIndices.Where( i => i != worldIndex ).Select( GetWorldTag ).ToArray();
-
-        if ( !excludeTags.Any() )
-        {
-            Log.Warning( "No other worlds to exclude" );
-            return;
-        }
-        else
-        {
-            // add all other worlds to exclude tags
-            foreach ( var t in excludeTags )
-            {
-                camera.RenderExcludeTags.Add( t );
-                // controller.IgnoreLayers.Add( t );
-                // player.Tags.Remove( t );
-            }
-        }
-
-        // idk why this shit still has a problem, gotta figure out what broke recently
-        player.Tags.Toggle( "_" );
-        player.Tags.Toggle( "_" );
-
-        // remove exluce tag of the world we will be in
-        camera.RenderExcludeTags.Remove( newWorldTag );
-        // controller.IgnoreLayers.Remove( newWorldTag );
-        // player.CurrentWorldIndex = worldIndex;
     }
 
     public static void AddSound( MultiWorldSound sound )
@@ -254,7 +210,7 @@ public class MultiWorldSystem : GameObjectSystem
     {
         if ( Connection.Local.IsHost )
         {
-            foreach ( var player in Scene.GetAllComponents<PlayerController>() )
+            foreach ( var player in Scene.GetAllComponents<BasePlayer>() )
             {
                 if ( player.IsValid() && GetWorldIndexOfObject( player.GameObject ) != player.CurrentWorldIndex )
                 {
@@ -263,7 +219,7 @@ public class MultiWorldSystem : GameObjectSystem
             }
         }
 
-        var localPlayer = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+        var localPlayer = Game.ActiveScene.GetAllComponents<BasePlayer>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
         var playerWorldIndex = GetWorldIndexOfObject( localPlayer );
 
         foreach ( var rigidbody in Scene.GetAllComponents<Rigidbody>() )
@@ -298,18 +254,8 @@ public class MultiWorldSystem : GameObjectSystem
                     }
                 }
 
-                var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+                var player = Game.ActiveScene.GetAllComponents<BasePlayer>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
                 if ( GetWorldIndexOfObject( player ) == (followObjectValid ? GetWorldIndexOfObject( sound.FollowObject ) : sound.WorldIndex) )
-                {
-                    sound.Handle.Volume = sound.Volume;
-                }
-                else
-                {
-                    sound.Handle.Volume = 0;
-                }
-
-                var playerVR = Game.ActiveScene.GetAllComponents<VRPlayer>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
-                if ( GetWorldIndexOfObject( playerVR ) == (followObjectValid ? GetWorldIndexOfObject( sound.FollowObject ) : sound.WorldIndex) )
                 {
                     sound.Handle.Volume = sound.Volume;
                 }

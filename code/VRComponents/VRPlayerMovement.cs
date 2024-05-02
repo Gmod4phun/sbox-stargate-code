@@ -23,9 +23,7 @@ public class VRSettings
 	}
 }
 
-
-
-public sealed class VRPlayerMovement : Component
+public sealed class VRPlayerMovement : BasePlayer
 {
 	public static VRPlayerMovement instance;
 
@@ -104,6 +102,11 @@ public sealed class VRPlayerMovement : Component
 	{
 		if ( !Game.IsRunningInVR )
 			return;
+
+		if ( Input.VR.LeftHand.ButtonA.IsPressed && !Input.VR.LeftHand.ButtonB.WasPressed )
+		{
+			CurrentWorldIndex = (CurrentWorldIndex + 1) % MultiWorldSystem.AllWorldIndices.Count();
+		}
 
 		if ( !Input.VR.LeftHand.ButtonB.IsPressed && JustOpened )
 		{

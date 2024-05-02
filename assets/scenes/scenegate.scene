@@ -1,5 +1,5 @@
 {
-  "__guid": "ca978356-7942-4f84-b86f-95b69f0ba8d8",
+  "__guid": "8923cc1e-7d29-48b8-ae3b-3f22645271b5",
   "GameObjects": [
     {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
@@ -306,7 +306,6 @@
       "Name": "VRPlayer Instance",
       "Position": "0,0,64",
       "Rotation": "-0,0,-1,-0.00000004371139",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -325,6 +324,13 @@
         {
           "__type": "VRPlayerMovement",
           "__guid": "2c40cd38-07f3-4483-ada0-bd7e1c97cc91",
+          "Camera": {
+            "_type": "component",
+            "component_id": "cc2ae827-494c-42a2-84e4-11fd2e3ae93e",
+            "go": "01166fb7-e846-453e-94e7-090ea4cd2a8c",
+            "component_type": "CameraComponent"
+          },
+          "CurrentWorldIndex": 0,
           "Head": {
             "_type": "gameobject",
             "go": "01166fb7-e846-453e-94e7-090ea4cd2a8c"
@@ -366,16 +372,6 @@
         {
           "__type": "Sandbox.VR.VRAnchor",
           "__guid": "f417ff40-f552-485a-b6cc-a9dbee89f839"
-        },
-        {
-          "__type": "VRPlayer",
-          "__guid": "83009b0c-42e4-4752-9f6a-6b47c9481af9",
-          "Camera": {
-            "_type": "component",
-            "component_id": "cc2ae827-494c-42a2-84e4-11fd2e3ae93e",
-            "go": "01166fb7-e846-453e-94e7-090ea4cd2a8c",
-            "component_type": "CameraComponent"
-          }
         }
       ],
       "Children": [
@@ -670,6 +666,7 @@
           "Name": "Dhd (1)",
           "Position": "-1765.29,3.49012,39.08476",
           "Rotation": "0.00250578,0.1305021,-0.01903339,0.9912621",
+          "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
           "__Prefab": "prefabs/dhdmilkyway.prefab"
@@ -679,6 +676,7 @@
           "Name": "stargatemilkyway",
           "Position": "-2015.39,-38.41121,142.7025",
           "Rotation": "0,0,-0.2495349,0.9683658",
+          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -7023,7 +7021,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-02T18:07:23.9762072\u002B02:00",
+  "LastSaved": "2024-05-02T18:28:59.8915249\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
