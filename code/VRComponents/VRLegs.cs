@@ -92,9 +92,10 @@ public sealed class VRLegs : Component
 
 		PositionDelta = Head.Transform.Position - LastPosition;//Keep track of head movement for wall detection.
 
-		var legtr = Scene.Trace.Ray( Head.Transform.Position, Head.Transform.Position.WithZ( Transform.Position.z - HeightOffset ) + Vector3.Down * FootBuffer ).WithoutTags( "player" ).Run();//Ground detection.
+		var curTag = MultiWorldSystem.GetWorldTag( MultiWorldSystem.GetWorldIndexOfObject( Head ) );
+		var legtr = Scene.Trace.Ray( Head.Transform.Position, Head.Transform.Position.WithZ( Transform.Position.z - HeightOffset ) + Vector3.Down * FootBuffer ).WithoutTags( "player" ).WithTag( curTag ).Run();//Ground detection.
 
-		var ledgetr = Scene.Trace.Ray( Head.Transform.Position, Head.Transform.Position.WithZ( Transform.Position.z - HeightOffset ) + Vector3.Down * FootBuffer * 3f ).WithoutTags( "player" ).Run();//Ledge detection.
+		var ledgetr = Scene.Trace.Ray( Head.Transform.Position, Head.Transform.Position.WithZ( Transform.Position.z - HeightOffset ) + Vector3.Down * FootBuffer * 3f ).WithoutTags( "player" ).WithTag( curTag ).Run();//Ledge detection.
 
 		Grounded = legtr.Hit;
 
@@ -102,7 +103,7 @@ public sealed class VRLegs : Component
 
 		clampedPosDelta.z = MathX.Clamp( clampedPosDelta.z, -20f, 20f );//Clamp the height a bit more agressively so the legs actually work when falling from high up.
 
-		facetr = Scene.Trace.Ray( Head.Transform.Position, Head.Transform.Position + clampedPosDelta * 2f ).Radius( 8f ).WithoutTags( "player" ).Run();//Face trace for keeping people from walking through walls.
+		facetr = Scene.Trace.Ray( Head.Transform.Position, Head.Transform.Position + clampedPosDelta * 2f ).Radius( 8f ).WithoutTags( "player" ).WithTag( curTag ).Run();//Face trace for keeping people from walking through walls.
 
 		if ( facetr.Hit )//Bounce player off the walls
 		{
@@ -110,7 +111,7 @@ public sealed class VRLegs : Component
 			Transform.Position += facetr.Normal * PositionDelta.Length;
 		}
 
-		chesttr = Scene.Trace.Ray( Head.Transform.Position - (Vector3.Up * Head.Transform.LocalPosition.z / 2f), Head.Transform.Position - (Vector3.Up * Head.Transform.LocalPosition.z / 2f) + clampedPosDelta * 2f ).Radius( 8f ).WithoutTags( "player" ).Run();//Face trace for keeping people from walking through walls.
+		chesttr = Scene.Trace.Ray( Head.Transform.Position - (Vector3.Up * Head.Transform.LocalPosition.z / 2f), Head.Transform.Position - (Vector3.Up * Head.Transform.LocalPosition.z / 2f) + clampedPosDelta * 2f ).Radius( 8f ).WithoutTags( "player" ).WithTag( curTag ).Run();//Face trace for keeping people from walking through walls.
 
 		if ( chesttr.Hit && !Jumping )//Bounce player off tables if not jumping
 		{

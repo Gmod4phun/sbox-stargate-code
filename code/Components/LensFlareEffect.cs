@@ -47,15 +47,15 @@ public class LensFlareEffect : PostProcess
     public void DrawLensFlare( SceneCamera sceneCamera )
     {
         var camera = Components.Get<CameraComponent>();
-        if ( camera == null || !camera.IsValid() || !camera.Enabled || !this.Enabled )
+        if ( sceneCamera == null || camera == null || !camera.IsValid() || !camera.Enabled || !this.Enabled )
             return;
 
         var sun = Scene.GetAllComponents<DirectionalLight>().Where( sun => MultiWorldSystem.AreObjectsInSameWorld( sun.GameObject, camera.GameObject ) ).FirstOrDefault();
         if ( !sun.IsValid() )
             return;
 
-        var eyepos = camera.Transform.Position;
-        var eyevector = camera.Transform.Rotation.Forward;
+        var eyepos = sceneCamera.Position;
+        var eyevector = sceneCamera.Rotation.Forward;
         var sundirection = sun.Transform.Rotation.Backward.Normal;
         var sunobstruction = 1f;
 
@@ -64,7 +64,7 @@ public class LensFlareEffect : PostProcess
             sunobstruction = 0;
 
         var sunPos3D = eyepos + sundirection * camera.ZFar;
-        var sunPos2D = sunPos3D.ToScreen( Screen.Size );
+        var sunPos2D = sunPos3D.ToScreen( Graphics.Viewport.Size );
         if ( sunPos2D == null )
             return;
 

@@ -138,7 +138,8 @@ public class MultiWorldSystem : GameObjectSystem
             foreach ( var t in excludeTags )
             {
                 camera.RenderExcludeTags.Add( t );
-                controller.IgnoreLayers.Add( t );
+                if ( controller.IsValid() )
+                    controller.IgnoreLayers.Add( t );
                 // player.Tags.Remove( t );
             }
         }
@@ -149,7 +150,8 @@ public class MultiWorldSystem : GameObjectSystem
 
         // remove exluce tag of the world we will be in
         camera.RenderExcludeTags.Remove( newWorldTag );
-        controller.IgnoreLayers.Remove( newWorldTag );
+        if ( controller.IsValid() )
+            controller.IgnoreLayers.Remove( newWorldTag );
         player.CurrentWorldIndex = worldIndex;
     }
 

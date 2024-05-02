@@ -410,6 +410,7 @@
             {
               "__type": "Sandbox.HullCollider",
               "__guid": "5de1ed44-b625-46d9-9689-62a4ad1ecb1b",
+              "__enabled": false,
               "BoxSize": "50,50,50",
               "Center": "0,0,35",
               "Height": 70,
@@ -419,6 +420,15 @@
               "Slices": 16,
               "Static": false,
               "Type": "Cylinder"
+            },
+            {
+              "__type": "LensFlareEffect",
+              "__guid": "a40d6bfe-1a67-46f7-b078-cd46a8528d54",
+              "DrawBar": true,
+              "DrawFlare": true,
+              "DrawIris": true,
+              "DrawRing": true,
+              "Intensity": 1
             }
           ]
         },
@@ -7021,7 +7031,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-02T18:28:59.8915249\u002B02:00",
+  "LastSaved": "2024-05-02T19:20:46.2497313\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [

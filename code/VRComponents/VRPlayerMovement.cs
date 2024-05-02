@@ -77,6 +77,7 @@ public sealed class VRPlayerMovement : BasePlayer
 
 		YawRotation = Transform.Rotation.Yaw();
 
+		Scene.NavMesh.IsEnabled = true;
 		Scene.NavMesh.ExcludedBodies.Add( "terrain" );
 
 		Scene.NavMesh.Generate( Scene.PhysicsWorld );
@@ -98,14 +99,19 @@ public sealed class VRPlayerMovement : BasePlayer
 
 	bool JustOpened;
 
+	TimeSince lastWorldSwitch = 0;
+
 	protected override void OnFixedUpdate()
 	{
 		if ( !Game.IsRunningInVR )
 			return;
 
-		if ( Input.VR.LeftHand.ButtonA.IsPressed && !Input.VR.LeftHand.ButtonB.WasPressed )
+		Head.Transform.ClearInterpolation();
+
+		if ( Input.VR.LeftHand.ButtonA.IsPressed && lastWorldSwitch > 1f )
 		{
 			CurrentWorldIndex = (CurrentWorldIndex + 1) % MultiWorldSystem.AllWorldIndices.Count();
+			lastWorldSwitch = 0;
 		}
 
 		if ( !Input.VR.LeftHand.ButtonB.IsPressed && JustOpened )
@@ -269,19 +275,12 @@ public sealed class VRPlayerMovement : BasePlayer
 	private IUse _lastUseComponent;
 	public void DoButtonUse()
 	{
-		// if ( Input.VR.RightHand.ButtonA.IsPressed )
-		// {
 		var handForward = RightHand.Transform.Rotation.Forward.RotateAround( RightHand.Transform.Rotation.Right, Rotation.FromAxis( RightHand.Transform.Rotation.Right, -50 ) );
-		var startPos = RightHand.Transform.Position + handForward * 4f;
-		var endPos = RightHand.Transform.Position + handForward * 32f;
-
-		// var tr = Scene.Trace.Ray( startPos, endPos ).Run();
-		// }
+		var startPos = RightHand.Transform.Position + handForward * -4f;
+		var endPos = RightHand.Transform.Position + handForward * 50f;
 
 		var curTag = MultiWorldSystem.GetWorldTag( MultiWorldSystem.GetWorldIndexOfObject( Head ) );
-		// Log.Info( curTag );
 		var tr = Scene.Trace.Ray( startPos, endPos ).WithTag( curTag ).Run();
-		// Log.Info( tr.Hit );
 		if ( tr.Hit )
 		{
 			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Head ) )
@@ -408,7 +407,8 @@ public sealed class VRPlayerMovement : BasePlayer
 
 				Vector3 hitpoint = DrawTeleportArc( LeftHand.Transform.Position, LeftHand.Transform.Rotation.Forward * JumpForce / 30f );
 
-				bool CanFit = !Scene.Trace.Ray( hitpoint + hitnormal, hitpoint + hitnormal * Head.Transform.LocalPosition.z ).Run().Hit;
+				var curTag = MultiWorldSystem.GetWorldTag( MultiWorldSystem.GetWorldIndexOfObject( Head ) );
+				bool CanFit = !Scene.Trace.Ray( hitpoint + hitnormal, hitpoint + hitnormal * Head.Transform.LocalPosition.z ).WithTag( curTag ).Run().Hit;
 
 				if ( hitpoint != Vector3.Zero && IsOnNavmesh( hitpoint ) && hitnormal.z > 0.5f && CanFit )
 				{
@@ -426,8 +426,8 @@ public sealed class VRPlayerMovement : BasePlayer
 
 		// draw right hand use gizmo
 		var handForward = RightHand.Transform.Rotation.Forward.RotateAround( RightHand.Transform.Rotation.Right, Rotation.FromAxis( RightHand.Transform.Rotation.Right, -50 ) );
-		var startPos = RightHand.Transform.Position + handForward * 4f;
-		var endPos = RightHand.Transform.Position + handForward * 32f;
+		var startPos = RightHand.Transform.Position + handForward * -4f;
+		var endPos = RightHand.Transform.Position + handForward * 50f;
 
 		Gizmo.Draw.Color = Color.Green;
 		Gizmo.Draw.Line( startPos, endPos );
@@ -479,7 +479,8 @@ public sealed class VRPlayerMovement : BasePlayer
 
 			Gizmo.Draw.Line( currentPosition, nextPosition );
 
-			var tr = Scene.Trace.Ray( currentPosition, nextPosition ).Run();
+			var curTag = MultiWorldSystem.GetWorldTag( MultiWorldSystem.GetWorldIndexOfObject( Head ) );
+			var tr = Scene.Trace.Ray( currentPosition, nextPosition ).WithTag( curTag ).Run();
 			if ( tr.Hit )
 			{
 				hitnormal = tr.Normal;
