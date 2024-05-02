@@ -70,6 +70,8 @@ public class GameNetworkManager : Component, Component.INetworkListener
             // Spawn this object and make the client the owner
             player = VRPlayerPrefab.Clone( startLocation, name: $"VR Player - {channel.DisplayName}" );
             player.NetworkSpawn( channel );
+
+            MultiWorldSystem.AssignWorldToObject( player, 0 );
             return;
         }
         else

@@ -79,7 +79,7 @@ public sealed class VRPlayerMovement : Component
 
 		YawRotation = Transform.Rotation.Yaw();
 
-		Scene.NavMesh.IsEnabled = true;
+		Scene.NavMesh.ExcludedBodies.Add( "terrain" );
 
 		Scene.NavMesh.Generate( Scene.PhysicsWorld );
 		//teleportNodes = mesh.Nodes.Values.ToList();
@@ -102,6 +102,9 @@ public sealed class VRPlayerMovement : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if ( !Game.IsRunningInVR )
+			return;
+
 		if ( !Input.VR.LeftHand.ButtonB.IsPressed && JustOpened )
 		{
 			JustOpened = false;
@@ -166,6 +169,7 @@ public sealed class VRPlayerMovement : Component
 		}
 
 		DoButtonJump();
+		DoButtonUse();
 
 		if ( VRLegs.instance.Grounded )
 		{
@@ -255,6 +259,46 @@ public sealed class VRPlayerMovement : Component
 			VRLegs.instance.HeightOffset = 0f;
 			VRLegs.instance.Jumping = false;
 			TryingToJump = false;
+		}
+	}
+
+	private bool _lastUseState = false;
+	private IUse _lastUseComponent;
+	public void DoButtonUse()
+	{
+		// if ( Input.VR.RightHand.ButtonA.IsPressed )
+		// {
+		var handForward = RightHand.Transform.Rotation.Forward.RotateAround( RightHand.Transform.Rotation.Right, Rotation.FromAxis( RightHand.Transform.Rotation.Right, -50 ) );
+		var startPos = RightHand.Transform.Position + handForward * 4f;
+		var endPos = RightHand.Transform.Position + handForward * 32f;
+
+		// var tr = Scene.Trace.Ray( startPos, endPos ).Run();
+		// }
+
+		var curTag = MultiWorldSystem.GetWorldTag( MultiWorldSystem.GetWorldIndexOfObject( Head ) );
+		// Log.Info( curTag );
+		var tr = Scene.Trace.Ray( startPos, endPos ).WithTag( curTag ).Run();
+		// Log.Info( tr.Hit );
+		if ( tr.Hit )
+		{
+			if ( tr.GameObject.IsValid() && tr.GameObject.Components.Get<IUse>( FindMode.EnabledInSelf ) is IUse usable && usable.IsUsable( Head ) )
+			{
+				if ( Input.VR.RightHand.ButtonA.IsPressed )
+				{
+					if ( !Input.VR.RightHand.ButtonA.WasPressed )
+					{
+						_lastUseState = usable.OnUse( Head );
+						_lastUseComponent = usable;
+					}
+					else
+					{
+						if ( _lastUseState )
+						{
+							_lastUseState = _lastUseComponent == usable ? usable.OnUse( Head ) : false;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -376,6 +420,14 @@ public sealed class VRPlayerMovement : Component
 				}
 			}
 		}
+
+		// draw right hand use gizmo
+		var handForward = RightHand.Transform.Rotation.Forward.RotateAround( RightHand.Transform.Rotation.Right, Rotation.FromAxis( RightHand.Transform.Rotation.Right, -50 ) );
+		var startPos = RightHand.Transform.Position + handForward * 4f;
+		var endPos = RightHand.Transform.Position + handForward * 32f;
+
+		Gizmo.Draw.Color = Color.Green;
+		Gizmo.Draw.Line( startPos, endPos );
 	}
 
 	public void DoTeleportMovement()

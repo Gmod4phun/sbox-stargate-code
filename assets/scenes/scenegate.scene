@@ -304,6 +304,9 @@
     {
       "__guid": "b20c0c97-bbe7-43a9-884b-4c92714a5ada",
       "Name": "VRPlayer Instance",
+      "Position": "0,0,64",
+      "Rotation": "-0,0,-1,-0.00000004371139",
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -363,12 +366,23 @@
         {
           "__type": "Sandbox.VR.VRAnchor",
           "__guid": "f417ff40-f552-485a-b6cc-a9dbee89f839"
+        },
+        {
+          "__type": "VRPlayer",
+          "__guid": "83009b0c-42e4-4752-9f6a-6b47c9481af9",
+          "Camera": {
+            "_type": "component",
+            "component_id": "cc2ae827-494c-42a2-84e4-11fd2e3ae93e",
+            "go": "01166fb7-e846-453e-94e7-090ea4cd2a8c",
+            "component_type": "CameraComponent"
+          }
         }
       ],
       "Children": [
         {
           "__guid": "01166fb7-e846-453e-94e7-090ea4cd2a8c",
           "Name": "Head",
+          "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
@@ -396,12 +410,26 @@
               "PoseSource": "Head",
               "TrackingType": "All",
               "UseRelativeTransform": false
+            },
+            {
+              "__type": "Sandbox.HullCollider",
+              "__guid": "5de1ed44-b625-46d9-9689-62a4ad1ecb1b",
+              "BoxSize": "50,50,50",
+              "Center": "0,0,35",
+              "Height": 70,
+              "IsTrigger": false,
+              "Radius": 12,
+              "Radius2": 0,
+              "Slices": 16,
+              "Static": false,
+              "Type": "Cylinder"
             }
           ]
         },
         {
           "__guid": "864261ab-f61d-4b6f-842c-7dd2719b01f3",
           "Name": "Left Hand",
+          "Position": "0,0,0",
           "Rotation": "0,0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
@@ -428,6 +456,7 @@
             {
               "__guid": "f5026b8f-2036-4cd8-9602-e5f77b37e2b7",
               "Name": "Left Hand Model",
+              "Position": "0,0,0",
               "Scale": "0.8,0.8,0.8",
               "Enabled": true,
               "NetworkMode": 2,
@@ -462,6 +491,7 @@
         {
           "__guid": "305e3911-294e-402f-83c8-4aa0ceeafdaf",
           "Name": "Right Hand",
+          "Position": "0,0,0",
           "Rotation": "0,0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
@@ -488,6 +518,7 @@
             {
               "__guid": "acd86196-b467-4f61-b196-3ea9eff2e885",
               "Name": "Right Hand Model",
+              "Position": "0,0,0",
               "Scale": "0.8,0.8,0.8",
               "Enabled": true,
               "NetworkMode": 2,
@@ -522,6 +553,7 @@
         {
           "__guid": "9eb6ecf2-96d7-4e5a-9ff0-15258f4e4907",
           "Name": "Object",
+          "Position": "0,0,0",
           "Rotation": "-0.000000002346994,-0.00000003950341,0.707107,0.7071065",
           "Enabled": true,
           "NetworkMode": 2,
@@ -541,6 +573,7 @@
             {
               "__guid": "b20466a8-5a8f-45fa-806d-ba90283d9c7a",
               "Name": "Object",
+              "Position": "0,0,0",
               "Rotation": "0,0,1,-0.0000006397578",
               "Enabled": true,
               "NetworkMode": 2,
@@ -1297,6 +1330,7 @@
           "Name": "Terrain",
           "Position": "-3000,-1000,0",
           "Tags": "terrain",
+          "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
@@ -3166,6 +3200,7 @@
     {
       "__guid": "9b071954-2fc0-4d64-80c6-801bf0480777",
       "Name": "World 1",
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -3430,6 +3465,7 @@
     {
       "__guid": "805bcd39-3e2c-4d8f-a0c5-fc1429d39f4b",
       "Name": "World 2",
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -3521,6 +3557,32 @@
                   "IsTrigger": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
                   "Static": false
+                },
+                {
+                  "__type": "Sandbox.Components.Stargate.StargatePegasus",
+                  "__guid": "2a619cc4-cca5-4d49-a136-5fb2ac05cb89",
+                  "AutoClose": true,
+                  "CanOpenMenu": true,
+                  "EventHorizonMaterialGroup": "pegasus",
+                  "GateAddress": "123456",
+                  "GateGlyphType": "PEGASUS",
+                  "GateGroup": "P@",
+                  "GateLocal": false,
+                  "GateName": "",
+                  "GatePrivate": false,
+                  "Ramp": {
+                    "_type": "component",
+                    "component_id": "ee02eaad-40e8-4ae5-a0f0-e0acbe4ff588",
+                    "go": "9b653830-8bb8-490d-86d8-41a8a1838db1",
+                    "component_type": "GateRamp"
+                  },
+                  "Ring": {
+                    "_type": "component",
+                    "component_id": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
+                    "go": "a0904ea8-eeba-4273-b1aa-632b6e299f14",
+                    "component_type": "StargateRingPegasus"
+                  },
+                  "ShowWormholeCinematic": false
                 }
               ],
               "Children": [
@@ -4110,6 +4172,12 @@
                     {
                       "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
                       "__guid": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
+                      "Gate": {
+                        "_type": "component",
+                        "component_id": "2a619cc4-cca5-4d49-a136-5fb2ac05cb89",
+                        "go": "45f65a17-f381-4970-8337-d22889c856e4",
+                        "component_type": "StargatePegasus"
+                      },
                       "Glyphs": [
                         {
                           "_type": "component",
@@ -6955,7 +7023,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-01T18:56:53.6541248\u002B02:00",
+  "LastSaved": "2024-05-02T18:07:23.9762072\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [

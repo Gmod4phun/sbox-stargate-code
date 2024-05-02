@@ -32,7 +32,7 @@ public sealed class VRLegs : Component
 	MapInstance mapInstance;
 	protected override void OnStart()
 	{
-		mapInstance = Scene.GetAllComponents<MapInstance>().First();
+		mapInstance = Scene.GetAllComponents<MapInstance>().FirstOrDefault();
 		if ( mapInstance != null )
 		{
 			mapInstance.OnMapLoaded += RespawnPlayer;

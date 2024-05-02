@@ -56,6 +56,9 @@ public sealed class VRHandAnimationController : Component
 
 	protected override void OnUpdate()
 	{
+		if ( !Game.IsRunningInVR )
+			return;
+
 		anim.Set( "Thumb", ClampedFingerCurl( FingerValue.ThumbCurl ) );
 		anim.Set( "Index", ClampedFingerCurl( FingerValue.IndexCurl ) );
 		anim.Set( "Middle", ClampedFingerCurl( FingerValue.MiddleCurl ) );
