@@ -3,6 +3,7 @@
   "GameObjects": [
     {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
+      "Flags": 0,
       "Name": "Network Helper",
       "Enabled": true,
       "NetworkMode": 2,
@@ -27,6 +28,7 @@
     },
     {
       "__guid": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
+      "Flags": 0,
       "Name": "Citizen Instance",
       "Rotation": "0,0,1,-0.00000004371139",
       "Tags": "player",
@@ -42,7 +44,8 @@
           "Height": 72,
           "IgnoreLayers": "trigger,player",
           "Radius": 10,
-          "StepHeight": 18
+          "StepHeight": 18,
+          "UseCollisionRules": false
         },
         {
           "__type": "PlayerController",
@@ -122,6 +125,7 @@
       "Children": [
         {
           "__guid": "3a78266a-da75-475e-9317-94c71c3418fa",
+          "Flags": 0,
           "Name": "Body",
           "Tags": "player_body",
           "Enabled": true,
@@ -141,6 +145,7 @@
         },
         {
           "__guid": "94717ee8-42f9-408e-aab4-56944a3ff8aa",
+          "Flags": 0,
           "Name": "EyePos",
           "Position": "0,0,64",
           "Enabled": true,
@@ -149,6 +154,7 @@
         },
         {
           "__guid": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
+          "Flags": 0,
           "Name": "Camera",
           "Position": "0.000006461131,-0.000000000008185452,64",
           "Tags": "player_camera",
@@ -265,6 +271,7 @@
           "Children": [
             {
               "__guid": "2456f759-f56d-45fe-aeab-4e4b441a828d",
+              "Flags": 0,
               "Name": "Crosshair",
               "Position": "64,0,0",
               "Scale": "0.01,0.01,0.01",
@@ -299,6 +306,7 @@
     },
     {
       "__guid": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
+      "Flags": 0,
       "Name": "Spawnpoint",
       "Rotation": "0,0,1,-0.00000004371139",
       "Enabled": true,
@@ -314,6 +322,7 @@
     },
     {
       "__guid": "dcf68271-3012-4f0d-a3fe-026f1d88c1a4",
+      "Flags": 0,
       "Name": "World 0",
       "Enabled": true,
       "NetworkMode": 2,
@@ -328,6 +337,7 @@
       "Children": [
         {
           "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+          "Flags": 0,
           "Name": "Ground",
           "Scale": "20,20,1",
           "Enabled": true,
@@ -355,6 +365,7 @@
         },
         {
           "__guid": "ecbc3378-f8a6-4421-93a8-7a90fe5b0077",
+          "Flags": 0,
           "Name": "ringpanelori (1)",
           "Position": "250,-512,78",
           "Tags": "rings_no_teleport",
@@ -365,6 +376,7 @@
         },
         {
           "__guid": "bc89f6f0-55e7-4205-833a-697f576b7731",
+          "Flags": 0,
           "Name": "ringpanelori",
           "Position": "250,512,78",
           "Tags": "rings_no_teleport",
@@ -375,6 +387,7 @@
         },
         {
           "__guid": "702cb8e0-52a3-4c0c-8803-83aba9e264fd",
+          "Flags": 0,
           "Name": "Dhd (1)",
           "Position": "-1765.29,3.49012,39.08476",
           "Rotation": "0.00250578,0.1305021,-0.01903339,0.9912621",
@@ -385,6 +398,7 @@
         },
         {
           "__guid": "2e3dfa28-8708-4f15-aac6-7535b5764034",
+          "Flags": 0,
           "Name": "stargatemilkyway",
           "Position": "-2015.39,-38.41121,142.7025",
           "Rotation": "0,0,-0.2495349,0.9683658",
@@ -428,6 +442,7 @@
           "Children": [
             {
               "__guid": "1b090958-3a2f-45f3-9976-443ce873c3cd",
+              "Flags": 0,
               "Name": "Chevron 1",
               "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
@@ -467,6 +482,7 @@
               "Children": [
                 {
                   "__guid": "ce1289a6-ee2b-4fcd-b07f-df8a02f0d732",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01095581,136.5016",
                   "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
@@ -492,6 +508,7 @@
             },
             {
               "__guid": "9ee38af7-8002-4225-8f5d-b67b83272ff9",
+              "Flags": 0,
               "Name": "Chevron 2",
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
@@ -531,6 +548,7 @@
               "Children": [
                 {
                   "__guid": "330980b2-7bca-43d5-aa18-c57c69189f32",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476437,-0.01095581,136.5016",
                   "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
@@ -556,6 +574,7 @@
             },
             {
               "__guid": "500f7f17-2a1a-41ca-b70a-62dbd9abcec1",
+              "Flags": 0,
               "Name": "Chevron 3",
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
@@ -595,6 +614,7 @@
               "Children": [
                 {
                   "__guid": "f259002f-01ff-42cb-9e8d-e076acdecb98",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01086807,136.5016",
                   "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
@@ -620,6 +640,7 @@
             },
             {
               "__guid": "5aa4e690-0178-4fa2-9096-a5a117c31eb1",
+              "Flags": 0,
               "Name": "Chevron 4",
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
@@ -659,6 +680,7 @@
               "Children": [
                 {
                   "__guid": "f8881b4b-e882-4f1c-baa0-41975e3cd6f2",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476439,-0.01103973,136.5016",
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
@@ -684,6 +706,7 @@
             },
             {
               "__guid": "2ada80a2-b2ed-41b6-8621-f34392d64d40",
+              "Flags": 0,
               "Name": "Chevron 5",
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
@@ -723,6 +746,7 @@
               "Children": [
                 {
                   "__guid": "03b83637-e0e3-4569-8b51-0e10de43b771",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01096344,136.5016",
                   "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
@@ -748,6 +772,7 @@
             },
             {
               "__guid": "3a52c6ae-a4ad-44ec-afa7-01df91ee8d90",
+              "Flags": 0,
               "Name": "Chevron 6",
               "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
@@ -787,6 +812,7 @@
               "Children": [
                 {
                   "__guid": "2c1578aa-064e-43e8-a83d-ed9dddbcc185",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476439,-0.01097107,136.5016",
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
@@ -812,6 +838,7 @@
             },
             {
               "__guid": "df2129ca-1fd1-47a8-9e80-e05dd7d9a973",
+              "Flags": 0,
               "Name": "Chevron 7",
               "Position": "0,0,0",
               "Enabled": true,
@@ -850,6 +877,7 @@
               "Children": [
                 {
                   "__guid": "af6e9413-9a16-42e8-94e0-8a7ca1bddd00",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.0109611,136.5016",
                   "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
@@ -875,6 +903,7 @@
             },
             {
               "__guid": "459fa215-d843-4564-9af1-9ba33149a8be",
+              "Flags": 0,
               "Name": "Chevron 8",
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
@@ -914,6 +943,7 @@
               "Children": [
                 {
                   "__guid": "29b9a55a-50df-4547-85d3-8d5edcc54c8e",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01098251,136.5017",
                   "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
@@ -939,6 +969,7 @@
             },
             {
               "__guid": "b53f0db1-b5b5-4405-9b3e-55d89655b49d",
+              "Flags": 0,
               "Name": "Chevron 9",
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
@@ -978,6 +1009,7 @@
               "Children": [
                 {
                   "__guid": "3b77162f-4db7-49f6-bbf4-8b6ae3ce96ec",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01093292,136.5017",
                   "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
@@ -1003,6 +1035,7 @@
             },
             {
               "__guid": "be788d7c-f9c2-44a7-819a-3aaa5b2c7f7c",
+              "Flags": 0,
               "Name": "Ring",
               "Position": "0,0,0",
               "Enabled": true,
@@ -1037,6 +1070,7 @@
         },
         {
           "__guid": "f4f65695-e655-4e8e-9e08-9540f360d421",
+          "Flags": 0,
           "Name": "Terrain",
           "Position": "-3000,-1000,0",
           "Tags": "terrain",
@@ -1047,12 +1081,14 @@
             {
               "__type": "Sandbox.Terrain",
               "__guid": "30129374-d2d0-4f53-a0c4-82b7904c266c",
+              "__version": 1,
               "ClipMapLodExtentTexels": 128,
               "ClipMapLodLevels": 7,
               "DebugView": "None",
               "RenderType": "Off",
-              "TerrainDataFile": "terrain/terrain_test.terrain",
-              "TerrainMaterial": "materials/core/terrain.vmat"
+              "Storage": "terrain/terrain_test.terrain",
+              "TerrainHeight": 500,
+              "TerrainSize": 2000
             },
             {
               "__type": "Sandbox.TerrainCollider",
@@ -1064,6 +1100,7 @@
         },
         {
           "__guid": "e2895ed9-0246-4760-abf9-08d99f7c21b6",
+          "Flags": 0,
           "Name": "Ring Panel (Goauld)",
           "Position": "250,192,48",
           "Tags": "rings_no_teleport",
@@ -1074,6 +1111,7 @@
         },
         {
           "__guid": "8876044e-22e2-475c-bf9c-a8a8c9eff4e1",
+          "Flags": 0,
           "Name": "Ring Panel (Ancient)",
           "Position": "250,-192,48",
           "Tags": "rings_no_teleport",
@@ -1084,6 +1122,7 @@
         },
         {
           "__guid": "12b9e705-00cb-49fd-be30-0c0e85ec61d7",
+          "Flags": 0,
           "Name": "Dhd (Milky Way)",
           "Position": "-256,-360,-5",
           "Rotation": "0,0.1305262,0,0.9914449",
@@ -1094,6 +1133,7 @@
         },
         {
           "__guid": "9c922115-fc48-45ed-9692-184811e9bc83",
+          "Flags": 0,
           "Name": "Ring Transporter (Ori) (52DB1)",
           "Position": "340,-512,0",
           "Tags": "ringplatform,rings_no_teleport",
@@ -1141,6 +1181,7 @@
         },
         {
           "__guid": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+          "Flags": 0,
           "Name": "Ring Transporter (Ori) (253)",
           "Position": "340,512,0",
           "Tags": "ringplatform,rings_no_teleport",
@@ -1188,6 +1229,7 @@
         },
         {
           "__guid": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
+          "Flags": 0,
           "Name": "Ring Transporter (7241)",
           "Position": "340,192,0",
           "Tags": "ringplatform,rings_no_teleport",
@@ -1235,6 +1277,7 @@
         },
         {
           "__guid": "c3181e88-7d70-4f71-adf1-80886827542a",
+          "Flags": 0,
           "Name": "Ring Transporter (135)",
           "Position": "340,-192,0",
           "Tags": "ringplatform,rings_no_teleport",
@@ -1282,6 +1325,7 @@
         },
         {
           "__guid": "c40b23f8-0c91-4a02-9202-ccae00155373",
+          "Flags": 0,
           "Name": "SGC Ramp",
           "Position": "-512,-512.0007,146",
           "Enabled": true,
@@ -1314,6 +1358,7 @@
           "Children": [
             {
               "__guid": "7fe936ee-ed91-45b6-90c6-583da81ebc83",
+              "Flags": 0,
               "Name": "Smoke",
               "Position": "11.97536,140.4181,-24.12638",
               "Rotation": "-0.00000003449898,0.5787969,-0.000000000000000239536,0.8154721",
@@ -1469,6 +1514,7 @@
             },
             {
               "__guid": "04357ecb-8af8-4a04-8541-ecae3b7f348a",
+              "Flags": 0,
               "Name": "Smoke",
               "Position": "11.97537,-140.3976,-24.12637",
               "Rotation": "-0.1215695,0.6049213,-0.1920873,0.7631474",
@@ -1624,6 +1670,7 @@
             },
             {
               "__guid": "61d8e9ab-7d91-4208-911a-256147b6ef15",
+              "Flags": 0,
               "Name": "Smoke",
               "Position": "10.30719,122.8365,70.87215",
               "Rotation": "0.09442929,0.3684228,0.2296235,0.895892",
@@ -1779,6 +1826,7 @@
             },
             {
               "__guid": "05834e8c-f7c2-4ac8-9772-330cf618e186",
+              "Flags": 0,
               "Name": "Smoke",
               "Position": "10.30721,-123.9674,70.87216",
               "Rotation": "0.09347675,0.553968,-0.09487818,0.8218151",
@@ -1934,6 +1982,7 @@
             },
             {
               "__guid": "f953fdd0-4fb2-40b9-bdc3-39018df158c6",
+              "Flags": 0,
               "Name": "Stargate (Milky Way)",
               "Position": "0,0,0",
               "Enabled": true,
@@ -1982,6 +2031,7 @@
               "Children": [
                 {
                   "__guid": "3e245ca6-dbb9-4697-bd59-0bc1a235a5be",
+                  "Flags": 0,
                   "Name": "Chevron 1",
                   "Position": "0,0,0",
                   "Rotation": "-0.3420201,0,0,0.9396926",
@@ -2021,6 +2071,7 @@
                   "Children": [
                     {
                       "__guid": "c339ee3c-ebce-429b-8c51-e32f3a782faf",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476438,-0.01095581,136.5016",
                       "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
@@ -2046,6 +2097,7 @@
                 },
                 {
                   "__guid": "66c29918-e1c8-4269-badf-18c1c1dc722e",
+                  "Flags": 0,
                   "Name": "Chevron 2",
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,0.7660444",
@@ -2085,6 +2137,7 @@
                   "Children": [
                     {
                       "__guid": "3b77e6ca-6158-4d7e-98e2-8f73ab698bde",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476437,-0.01095581,136.5016",
                       "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
@@ -2110,6 +2163,7 @@
                 },
                 {
                   "__guid": "6b34c53e-a248-41d5-a54c-607bddefc39e",
+                  "Flags": 0,
                   "Name": "Chevron 3",
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,0.5",
@@ -2149,6 +2203,7 @@
                   "Children": [
                     {
                       "__guid": "093d081e-3bc4-4698-9437-4705df7df84c",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476438,-0.01086807,136.5016",
                       "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
@@ -2174,6 +2229,7 @@
                 },
                 {
                   "__guid": "ddaa9745-c0b4-4fcd-8c37-53656df8ddbe",
+                  "Flags": 0,
                   "Name": "Chevron 4",
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,-0.5000001",
@@ -2213,6 +2269,7 @@
                   "Children": [
                     {
                       "__guid": "a453b210-fba6-49b3-b682-a4729f892028",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476439,-0.01103973,136.5016",
                       "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
@@ -2238,6 +2295,7 @@
                 },
                 {
                   "__guid": "778cd67a-f9f7-4b7e-ba4f-647de0a6db1c",
+                  "Flags": 0,
                   "Name": "Chevron 5",
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,-0.7660444",
@@ -2277,6 +2335,7 @@
                   "Children": [
                     {
                       "__guid": "6a6c3cfc-c24c-4b4f-851b-50dd5f1c8db2",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476438,-0.01096344,136.5016",
                       "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
@@ -2302,6 +2361,7 @@
                 },
                 {
                   "__guid": "dfe6a23a-4323-496b-919c-6467d3fd6fed",
+                  "Flags": 0,
                   "Name": "Chevron 6",
                   "Position": "0,0,0",
                   "Rotation": "-0.3420202,0,0,-0.9396926",
@@ -2341,6 +2401,7 @@
                   "Children": [
                     {
                       "__guid": "0dda0b8b-4050-4911-b782-edbaa352ba28",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476439,-0.01097107,136.5016",
                       "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
@@ -2366,6 +2427,7 @@
                 },
                 {
                   "__guid": "e2d39530-db31-4133-ae65-0a56c6183e42",
+                  "Flags": 0,
                   "Name": "Chevron 7",
                   "Position": "0,0,0",
                   "Enabled": true,
@@ -2404,6 +2466,7 @@
                   "Children": [
                     {
                       "__guid": "4141dc5f-849e-4931-85c3-aa9ea4497a8d",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476438,-0.0109611,136.5016",
                       "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
@@ -2429,6 +2492,7 @@
                 },
                 {
                   "__guid": "cd23d863-d467-43c2-bb52-f003d63afd09",
+                  "Flags": 0,
                   "Name": "Chevron 8",
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,0.1736482",
@@ -2468,6 +2532,7 @@
                   "Children": [
                     {
                       "__guid": "7fa1d85b-7c5a-495a-a33d-411e7f40ef19",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476438,-0.01098251,136.5017",
                       "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
@@ -2493,6 +2558,7 @@
                 },
                 {
                   "__guid": "d1bbe14a-349d-4914-9a71-af5f24c6e7ac",
+                  "Flags": 0,
                   "Name": "Chevron 9",
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,-0.1736482",
@@ -2532,6 +2598,7 @@
                   "Children": [
                     {
                       "__guid": "08dae96e-3b9b-4a77-96dc-7e16b95e7566",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.476438,-0.01093292,136.5017",
                       "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
@@ -2557,6 +2624,7 @@
                 },
                 {
                   "__guid": "81f084c2-98ae-4d1f-950f-8997433a1a25",
+                  "Flags": 0,
                   "Name": "Ring",
                   "Position": "0,0,0",
                   "Enabled": true,
@@ -2593,6 +2661,7 @@
         },
         {
           "__guid": "693b4e34-8ac7-4724-8943-92e98e653238",
+          "Flags": 0,
           "Name": "Atlantis Transporter",
           "Position": "-320,220,5.999997",
           "Enabled": true,
@@ -2630,6 +2699,7 @@
           "Children": [
             {
               "__guid": "2c723121-f98b-4d50-923b-f8ebac734dc0",
+              "Flags": 0,
               "Name": "Spot Light",
               "Position": "-32,0,134",
               "Rotation": "0,0.7071068,0,0.7071068",
@@ -2654,6 +2724,7 @@
             },
             {
               "__guid": "28f881ad-afea-4c31-a0a1-3028fab80228",
+              "Flags": 0,
               "Name": "Spot Light",
               "Position": "-32,0,114.6548",
               "Rotation": "0,-0.7071068,0,0.7071068",
@@ -2678,6 +2749,7 @@
             },
             {
               "__guid": "7ca443d2-d037-420a-aa66-6ea0f1589679",
+              "Flags": 0,
               "Name": "Door R",
               "Position": "0,0,0",
               "Scale": "0.5,0.925,0.925",
@@ -2710,6 +2782,7 @@
             },
             {
               "__guid": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
+              "Flags": 0,
               "Name": "Door L",
               "Position": "0,0,0",
               "Rotation": "0,0,1,-0.00000004371139",
@@ -2743,6 +2816,7 @@
             },
             {
               "__guid": "74014b5a-95a1-45cc-bf61-23f832a8ff28",
+              "Flags": 0,
               "Name": "Trigger",
               "Position": "0,0,0",
               "Tags": "trigger",
@@ -2761,6 +2835,7 @@
             },
             {
               "__guid": "90ef44dd-72ef-42f0-bfe4-408d73797f0c",
+              "Flags": 0,
               "Name": "Door Controller",
               "Position": "3.665009,36,60",
               "Rotation": "0,0.7071068,0,0.7071068",
@@ -2805,6 +2880,7 @@
             },
             {
               "__guid": "32dafc39-9377-471f-9755-852852ed8f3e",
+              "Flags": 0,
               "Name": "Door Controller",
               "Position": "-4.5,-36,60",
               "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
@@ -2851,6 +2927,7 @@
         },
         {
           "__guid": "d7c75a99-fe4f-4b15-98b2-03a89f38b79a",
+          "Flags": 0,
           "Name": "2D Skybox",
           "Rotation": "0,-0,-0.8746197,0.4848096",
           "Tags": "skybox",
@@ -2887,6 +2964,7 @@
         },
         {
           "__guid": "13adb902-7f0e-466e-b09e-709b63246df0",
+          "Flags": 0,
           "Name": "Sun",
           "Rotation": "-0.2272705,-0.2294598,0.9183475,-0.2287664",
           "Tags": "light_directional,light",
@@ -2909,6 +2987,7 @@
     },
     {
       "__guid": "9b071954-2fc0-4d64-80c6-801bf0480777",
+      "Flags": 0,
       "Name": "World 1",
       "Enabled": true,
       "NetworkMode": 2,
@@ -2923,6 +3002,7 @@
       "Children": [
         {
           "__guid": "a099a312-fb4d-4471-96d9-be7115d6f2c3",
+          "Flags": 0,
           "Name": "Ground (World 1)",
           "Scale": "20,20,1",
           "Enabled": true,
@@ -2950,6 +3030,7 @@
         },
         {
           "__guid": "ece95783-75b0-4aed-916e-7bd6a740ce1c",
+          "Flags": 0,
           "Name": "Universe Ramp",
           "Position": "-512,0,51.5",
           "Enabled": true,
@@ -2982,6 +3063,7 @@
           "Children": [
             {
               "__guid": "9fe7f306-be4c-4d70-a020-e4b475918eb7",
+              "Flags": 0,
               "Name": "Stargate (Universe)",
               "Position": "0,0,90",
               "Enabled": true,
@@ -3019,6 +3101,7 @@
               "Children": [
                 {
                   "__guid": "f5374d8f-7eb7-46cf-a1f5-0648446cb7f9",
+                  "Flags": 0,
                   "Name": "Ring",
                   "Position": "0,0,0",
                   "Enabled": true,
@@ -3069,6 +3152,7 @@
                   "Children": [
                     {
                       "__guid": "155d7ad6-3ff9-4c48-a44f-9582c9a97bde",
+                      "Flags": 0,
                       "Name": "Chevrons",
                       "Position": "0,0,0",
                       "Enabled": true,
@@ -3107,6 +3191,7 @@
         },
         {
           "__guid": "58bf1323-b94f-48e5-bacd-a14b86580c8e",
+          "Flags": 0,
           "Name": "Dhd (Atlantis)",
           "Position": "-128,0,0",
           "Enabled": true,
@@ -3116,6 +3201,7 @@
         },
         {
           "__guid": "3d7de4bb-dd25-4c2e-96eb-df3a545f68f1",
+          "Flags": 0,
           "Name": "2D Skybox",
           "Rotation": "0,-0,-0.8480481,0.5299193",
           "Tags": "skybox",
@@ -3152,6 +3238,7 @@
         },
         {
           "__guid": "616bd501-fa13-41f8-8075-c7b2f4bf99b8",
+          "Flags": 0,
           "Name": "Sun",
           "Rotation": "0.2220052,0.5063698,-0.738945,0.38505",
           "Tags": "light_directional,light",
@@ -3174,6 +3261,7 @@
     },
     {
       "__guid": "805bcd39-3e2c-4d8f-a0c5-fc1429d39f4b",
+      "Flags": 0,
       "Name": "World 2",
       "Enabled": true,
       "NetworkMode": 2,
@@ -3188,6 +3276,7 @@
       "Children": [
         {
           "__guid": "0121b92a-4f5c-49ba-bed2-15a810934a64",
+          "Flags": 0,
           "Name": "Ground (World 2)",
           "Scale": "20,20,1",
           "Enabled": true,
@@ -3215,6 +3304,7 @@
         },
         {
           "__guid": "9b653830-8bb8-490d-86d8-41a8a1838db1",
+          "Flags": 0,
           "Name": "Brick Ramp",
           "Position": "-512,511.9994,64",
           "Enabled": true,
@@ -3247,6 +3337,7 @@
           "Children": [
             {
               "__guid": "45f65a17-f381-4970-8337-d22889c856e4",
+              "Flags": 0,
               "Name": "Stargate (Pegasus)",
               "Position": "0,0,90",
               "Enabled": true,
@@ -3298,6 +3389,7 @@
               "Children": [
                 {
                   "__guid": "6927e51f-0cef-45af-9cd1-dfe4a345de0d",
+                  "Flags": 0,
                   "Name": "Chevron 1",
                   "Position": "0,0,0",
                   "Rotation": "-0.3420201,0,0,0.9396926",
@@ -3337,6 +3429,7 @@
                   "Children": [
                     {
                       "__guid": "97664c72-e4fa-476c-875b-2f69cc100500",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499863,0.00001525879,136.5",
                       "Rotation": "-0.4999998,-0.4999997,-0.5,-0.5000007",
@@ -3362,6 +3455,7 @@
                 },
                 {
                   "__guid": "578fc857-03eb-41e4-87e4-49a891f757d2",
+                  "Flags": 0,
                   "Name": "Chevron 2",
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,0.7660444",
@@ -3401,6 +3495,7 @@
                   "Children": [
                     {
                       "__guid": "18fe6d93-ec7b-4dcc-bce4-8b6ab3b1ac7a",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499863,0.00001907349,136.5001",
                       "Rotation": "-0.4999998,-0.4999998,-0.5000001,-0.5000006",
@@ -3426,6 +3521,7 @@
                 },
                 {
                   "__guid": "9eabc4a2-dc6e-4514-b19c-860f6e0d2e53",
+                  "Flags": 0,
                   "Name": "Chevron 3",
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,0.5",
@@ -3465,6 +3561,7 @@
                   "Children": [
                     {
                       "__guid": "60321944-c00e-40d1-b81b-86062cd51b64",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499856,0.00005340576,136.5001",
                       "Rotation": "-0.4999998,-0.4999997,-0.5,-0.5000005",
@@ -3490,6 +3587,7 @@
                 },
                 {
                   "__guid": "df9e4eaa-de9e-4452-86b5-5abeebd203b4",
+                  "Flags": 0,
                   "Name": "Chevron 4",
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,-0.5000001",
@@ -3529,6 +3627,7 @@
                   "Children": [
                     {
                       "__guid": "7035d8d8-6a49-4c4d-bfcf-36807014d246",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499859,0.00006103516,136.5",
                       "Rotation": "0.4999998,0.4999998,0.5,0.5000005",
@@ -3554,6 +3653,7 @@
                 },
                 {
                   "__guid": "c3e7acd6-be73-4516-b114-35145fd5b51c",
+                  "Flags": 0,
                   "Name": "Chevron 5",
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,-0.7660444",
@@ -3593,6 +3693,7 @@
                   "Children": [
                     {
                       "__guid": "cf22a747-7c9d-4cb7-af3f-9dab79eb552a",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499858,0.00003623962,136.5",
                       "Rotation": "0.4999999,0.4999997,0.5000001,0.5000005",
@@ -3618,6 +3719,7 @@
                 },
                 {
                   "__guid": "5bb8481a-0907-4e5f-9ddb-4147a886b702",
+                  "Flags": 0,
                   "Name": "Chevron 6",
                   "Position": "0,0,0",
                   "Rotation": "-0.3420202,0,0,-0.9396926",
@@ -3657,6 +3759,7 @@
                   "Children": [
                     {
                       "__guid": "1757f0d2-c4b6-4a6e-ba58-f15300b8b68e",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499869,0.00004577637,136.5",
                       "Rotation": "0.4999998,0.4999998,0.5000001,0.5000005",
@@ -3682,6 +3785,7 @@
                 },
                 {
                   "__guid": "639f982b-53a0-4913-a19a-ba5f17544bac",
+                  "Flags": 0,
                   "Name": "Chevron 7",
                   "Position": "0,0,0",
                   "Enabled": true,
@@ -3720,6 +3824,7 @@
                   "Children": [
                     {
                       "__guid": "0057c945-e589-49e5-b1a7-af838f6493c4",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499853,0.00005328655,136.5",
                       "Rotation": "-0.4999997,-0.4999997,-0.5,-0.5000006",
@@ -3745,6 +3850,7 @@
                 },
                 {
                   "__guid": "c7c05f9e-5994-4979-b491-ead58cf8e31c",
+                  "Flags": 0,
                   "Name": "Chevron 8",
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,0.1736482",
@@ -3784,6 +3890,7 @@
                   "Children": [
                     {
                       "__guid": "85eda158-b8e7-4ef7-abfe-c8345a26d5b1",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499865,0.00002288818,136.5001",
                       "Rotation": "-0.4999998,-0.4999998,-0.5000001,-0.5000006",
@@ -3809,6 +3916,7 @@
                 },
                 {
                   "__guid": "44548aa8-288e-400e-a8ae-ca0cc266d315",
+                  "Flags": 0,
                   "Name": "Chevron 9",
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,-0.1736482",
@@ -3848,6 +3956,7 @@
                   "Children": [
                     {
                       "__guid": "492f2d47-51e1-4dcb-afce-9c5d57f370a7",
+                      "Flags": 0,
                       "Name": "Chevron Light",
                       "Position": "9.499867,0.00006484985,136.5001",
                       "Rotation": "0.4999999,0.4999997,0.5,0.5000006",
@@ -3873,6 +3982,7 @@
                 },
                 {
                   "__guid": "a0904ea8-eeba-4273-b1aa-632b6e299f14",
+                  "Flags": 0,
                   "Name": "Ring",
                   "Position": "0,0,0",
                   "Enabled": true,
@@ -4562,6 +4672,7 @@
         },
         {
           "__guid": "48275147-eb5f-44a9-bc54-9c350e0f4eb3",
+          "Flags": 0,
           "Name": "Dhd (Pegasus)",
           "Position": "-256,360,-5",
           "Rotation": "0,0.1305262,0,0.9914449",
@@ -4572,6 +4683,7 @@
         },
         {
           "__guid": "2bde09ff-444d-4ed6-83b9-9b7357824de7",
+          "Flags": 0,
           "Name": "2D Skybox",
           "Tags": "skybox",
           "Enabled": true,
@@ -4607,6 +4719,7 @@
         },
         {
           "__guid": "5fa992c9-a4b6-400b-b737-e0fcaa5b00fa",
+          "Flags": 0,
           "Name": "Sun",
           "Rotation": "0.2034299,0.9434327,0.1350905,0.22428",
           "Tags": "light_directional,light",
@@ -4629,6 +4742,7 @@
     },
     {
       "__guid": "f0bb4762-9274-449e-8214-6c6c2e58c58d",
+      "Flags": 0,
       "Name": "World 3",
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -4642,6 +4756,7 @@
       "Children": [
         {
           "__guid": "9db298d1-9083-4716-870d-682ea3246393",
+          "Flags": 0,
           "Name": "2D Skybox",
           "Tags": "skybox",
           "Enabled": true,
@@ -4677,6 +4792,7 @@
         },
         {
           "__guid": "b0e52b40-c595-4638-8d29-c328c9a6a76f",
+          "Flags": 0,
           "Name": "space_suit_outfit",
           "Position": "-287.9056,-715.147,0.1455429",
           "Enabled": true,
@@ -4689,12 +4805,14 @@
               "BodyGroups": 18446744073709551615,
               "Health": 0,
               "IsStatic": true,
-              "Model": "models/citizen_clothes/full_outfit/space_suit_outfit/models/space_suit_outfit.vmdl"
+              "Model": "models/citizen_clothes/full_outfit/space_suit_outfit/models/space_suit_outfit.vmdl",
+              "Tint": "1,1,1,1"
             }
           ]
         },
         {
           "__guid": "8bc73b9c-0bf3-4a82-afc0-7097e7d01beb",
+          "Flags": 0,
           "Name": "Sun",
           "Rotation": "0.2034299,0.9434327,0.1350905,0.22428",
           "Tags": "light_directional,light",
@@ -4715,6 +4833,7 @@
         },
         {
           "__guid": "c299a2f4-119c-491e-90ce-801b52fcd92c",
+          "Flags": 0,
           "Name": "Stargate (Pegasus)",
           "Position": "-538.6984,-1201.478,90",
           "Enabled": true,
@@ -4740,6 +4859,7 @@
           "Children": [
             {
               "__guid": "89cd9bfb-eb89-4b1d-82b6-3c581a8c1690",
+              "Flags": 0,
               "Name": "Chevron 1",
               "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
@@ -4779,6 +4899,7 @@
               "Children": [
                 {
                   "__guid": "7234a9d4-d432-455f-8621-e8f03d451d63",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499863,0.00001525879,136.5",
                   "Rotation": "-0.4999998,-0.4999997,-0.5,-0.5000007",
@@ -4804,6 +4925,7 @@
             },
             {
               "__guid": "54f85b0c-1afe-49fa-b6c2-d6f46fa39f19",
+              "Flags": 0,
               "Name": "Chevron 2",
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
@@ -4843,6 +4965,7 @@
               "Children": [
                 {
                   "__guid": "57ed2d00-32a3-42b7-8f4a-7e3eb35b14c3",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499863,0.00001907349,136.5001",
                   "Rotation": "-0.4999998,-0.4999998,-0.5000001,-0.5000006",
@@ -4868,6 +4991,7 @@
             },
             {
               "__guid": "4f74cfc3-261e-4b2e-8082-8d1c1f8f607b",
+              "Flags": 0,
               "Name": "Chevron 3",
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
@@ -4907,6 +5031,7 @@
               "Children": [
                 {
                   "__guid": "e8999010-d937-4528-9624-566446e9084c",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499856,0.00005340576,136.5001",
                   "Rotation": "-0.4999998,-0.4999997,-0.5,-0.5000005",
@@ -4932,6 +5057,7 @@
             },
             {
               "__guid": "7d619232-fba8-47dd-a2d3-8477bf12d6dc",
+              "Flags": 0,
               "Name": "Chevron 4",
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
@@ -4971,6 +5097,7 @@
               "Children": [
                 {
                   "__guid": "357f38e8-7a9c-417c-8686-7475fd939e70",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499859,0.00006103516,136.5",
                   "Rotation": "0.4999998,0.4999998,0.5,0.5000005",
@@ -4996,6 +5123,7 @@
             },
             {
               "__guid": "e4bb2f95-d28c-4982-aca5-06c20dde8e48",
+              "Flags": 0,
               "Name": "Chevron 5",
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
@@ -5035,6 +5163,7 @@
               "Children": [
                 {
                   "__guid": "bd275895-be1b-4139-a76d-2bd54c1e4fae",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499858,0.00003623962,136.5",
                   "Rotation": "0.4999999,0.4999997,0.5000001,0.5000005",
@@ -5060,6 +5189,7 @@
             },
             {
               "__guid": "8f764e22-55cd-4941-8e02-783fc43a0d68",
+              "Flags": 0,
               "Name": "Chevron 6",
               "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
@@ -5099,6 +5229,7 @@
               "Children": [
                 {
                   "__guid": "477a19c7-2df6-4951-9cc8-98ff493c7873",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499869,0.00004577637,136.5",
                   "Rotation": "0.4999998,0.4999998,0.5000001,0.5000005",
@@ -5124,6 +5255,7 @@
             },
             {
               "__guid": "3a915859-62ff-4faa-af00-7f0ea78ef0b0",
+              "Flags": 0,
               "Name": "Chevron 7",
               "Position": "0,0,0",
               "Enabled": true,
@@ -5162,6 +5294,7 @@
               "Children": [
                 {
                   "__guid": "b3628560-7ece-42ca-afbd-c67452163e8e",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499853,0.00005328655,136.5",
                   "Rotation": "-0.4999997,-0.4999997,-0.5,-0.5000006",
@@ -5187,6 +5320,7 @@
             },
             {
               "__guid": "52b55c48-3766-462a-bebe-a124dd834b22",
+              "Flags": 0,
               "Name": "Chevron 8",
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
@@ -5226,6 +5360,7 @@
               "Children": [
                 {
                   "__guid": "7f9bb1bf-7078-4366-85dc-d17bf023484a",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499865,0.00002288818,136.5001",
                   "Rotation": "-0.4999998,-0.4999998,-0.5000001,-0.5000006",
@@ -5251,6 +5386,7 @@
             },
             {
               "__guid": "867079d1-827d-4c91-9f12-7e25bf1b5b01",
+              "Flags": 0,
               "Name": "Chevron 9",
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
@@ -5290,6 +5426,7 @@
               "Children": [
                 {
                   "__guid": "d47a50b7-fc70-48a9-8549-53ca06695520",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.499867,0.00006484985,136.5001",
                   "Rotation": "0.4999999,0.4999997,0.5,0.5000006",
@@ -5315,6 +5452,7 @@
             },
             {
               "__guid": "e5a27aef-5e32-42ac-a735-226e7b64694f",
+              "Flags": 0,
               "Name": "Ring",
               "Position": "0,0,0",
               "Enabled": true,
@@ -5998,6 +6136,7 @@
     },
     {
       "__guid": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
+      "Flags": 0,
       "Name": "World 4",
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -6011,6 +6150,7 @@
       "Children": [
         {
           "__guid": "7e744c8a-11a8-411c-b1b9-2617dda339d9",
+          "Flags": 0,
           "Name": "Map",
           "Enabled": true,
           "NetworkMode": 2,
@@ -6026,6 +6166,7 @@
         },
         {
           "__guid": "295e315a-2c2f-4c07-87df-60fc7885fb18",
+          "Flags": 0,
           "Name": "Stargate",
           "Position": "0,1024,90",
           "Rotation": "0,0,-0.7071067,0.7071068",
@@ -6069,6 +6210,7 @@
           "Children": [
             {
               "__guid": "760dd4ee-9687-4fc9-9483-9cc6ff6c0d47",
+              "Flags": 0,
               "Name": "Chevron 1",
               "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
@@ -6108,6 +6250,7 @@
               "Children": [
                 {
                   "__guid": "c7990567-7fbd-42db-99de-2f0020f22269",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01095581,136.5016",
                   "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
@@ -6133,6 +6276,7 @@
             },
             {
               "__guid": "4d64e5cc-3c74-4519-8036-c99fe55829f7",
+              "Flags": 0,
               "Name": "Chevron 2",
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
@@ -6172,6 +6316,7 @@
               "Children": [
                 {
                   "__guid": "b6132bb9-af80-4959-a566-6f64f2090baf",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476437,-0.01095581,136.5016",
                   "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
@@ -6197,6 +6342,7 @@
             },
             {
               "__guid": "6256162e-afab-4ba0-85b4-ebea85173e35",
+              "Flags": 0,
               "Name": "Chevron 3",
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
@@ -6236,6 +6382,7 @@
               "Children": [
                 {
                   "__guid": "5a0cd26b-8b6c-44b1-9b06-99ff1e16358e",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01086807,136.5016",
                   "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
@@ -6261,6 +6408,7 @@
             },
             {
               "__guid": "0828935c-aa9d-44a5-b3c1-799c95578810",
+              "Flags": 0,
               "Name": "Chevron 4",
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
@@ -6300,6 +6448,7 @@
               "Children": [
                 {
                   "__guid": "979f0173-d6bc-4dbc-9f87-56b513dcc3f9",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476439,-0.01103973,136.5016",
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
@@ -6325,6 +6474,7 @@
             },
             {
               "__guid": "ced1326f-4080-4de9-9504-0ed1268cf3f0",
+              "Flags": 0,
               "Name": "Chevron 5",
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
@@ -6364,6 +6514,7 @@
               "Children": [
                 {
                   "__guid": "c6318029-b694-4dba-9946-9bc13ed32a26",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01096344,136.5016",
                   "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
@@ -6389,6 +6540,7 @@
             },
             {
               "__guid": "90fd6b24-ec05-4521-8fb0-4b3fa354a4e6",
+              "Flags": 0,
               "Name": "Chevron 6",
               "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
@@ -6428,6 +6580,7 @@
               "Children": [
                 {
                   "__guid": "339ba7a6-eb61-4f76-87e1-fbcac2ec1ff6",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476439,-0.01097107,136.5016",
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
@@ -6453,6 +6606,7 @@
             },
             {
               "__guid": "f8132deb-fe72-4c19-ae84-0da00766a0a9",
+              "Flags": 0,
               "Name": "Chevron 7",
               "Position": "0,0,0",
               "Enabled": true,
@@ -6491,6 +6645,7 @@
               "Children": [
                 {
                   "__guid": "21309ec7-e9dc-4486-a7f9-54d4513cc4ea",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.0109611,136.5016",
                   "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
@@ -6516,6 +6671,7 @@
             },
             {
               "__guid": "09ea6a84-a43f-4b82-ad31-42343b7c3439",
+              "Flags": 0,
               "Name": "Chevron 8",
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
@@ -6555,6 +6711,7 @@
               "Children": [
                 {
                   "__guid": "559ef65a-b051-477e-bc95-2dbb987f267d",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01098251,136.5017",
                   "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
@@ -6580,6 +6737,7 @@
             },
             {
               "__guid": "61d37c76-cfba-44d3-beea-b7ee208b3cb6",
+              "Flags": 0,
               "Name": "Chevron 9",
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
@@ -6619,6 +6777,7 @@
               "Children": [
                 {
                   "__guid": "897daf41-95d4-4b48-85a3-b3f325ef55f1",
+                  "Flags": 0,
                   "Name": "Chevron Light",
                   "Position": "9.476438,-0.01093292,136.5017",
                   "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
@@ -6644,6 +6803,7 @@
             },
             {
               "__guid": "e279e301-0f6a-4fd3-89ff-3b7912959133",
+              "Flags": 0,
               "Name": "Ring",
               "Position": "0,0,0",
               "Enabled": true,
@@ -6678,6 +6838,7 @@
         },
         {
           "__guid": "0e26a623-67be-4447-ac38-838176ce79fa",
+          "Flags": 0,
           "Name": "DHD",
           "Position": "164,800,-4.999985",
           "Rotation": "0.09229596,0.09229596,-0.7010574,0.7010574",
@@ -6690,6 +6851,7 @@
     },
     {
       "__guid": "50bd1329-68c3-4a55-9f8a-4f552902afe7",
+      "Flags": 0,
       "Name": "Chat",
       "Enabled": true,
       "NetworkMode": 2,
@@ -6733,8 +6895,8 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-01T16:49:10.4722514\u002B02:00",
+  "LastSaved": "2024-05-30T19:21:47.8801977\u002B02:00",
   "ResourceVersion": 1,
-  "__version": 1,
-  "__references": []
+  "__references": [],
+  "__version": 1
 }
