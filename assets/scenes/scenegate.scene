@@ -139,7 +139,8 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             }
           ]
         },
@@ -372,7 +373,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/ringpanelori.prefab"
+          "__Prefab": "prefabs/ringpanelori.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "bc89f6f0-55e7-4205-833a-697f576b7731",
@@ -383,7 +385,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/ringpanelori.prefab"
+          "__Prefab": "prefabs/ringpanelori.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "702cb8e0-52a3-4c0c-8803-83aba9e264fd",
@@ -394,7 +397,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/dhdmilkyway.prefab"
+          "__Prefab": "prefabs/dhdmilkyway.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "2e3dfa28-8708-4f15-aac6-7535b5764034",
@@ -476,7 +480,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -542,7 +547,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -608,7 +614,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -674,7 +681,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -740,7 +748,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -806,7 +815,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -871,7 +881,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -937,7 +948,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -1003,7 +1015,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -1085,16 +1098,13 @@
               "ClipMapLodExtentTexels": 128,
               "ClipMapLodLevels": 7,
               "DebugView": "None",
+              "EnableCollision": true,
+              "IsTrigger": false,
               "RenderType": "Off",
+              "Static": true,
               "Storage": "terrain/terrain_test.terrain",
               "TerrainHeight": 500,
               "TerrainSize": 2000
-            },
-            {
-              "__type": "Sandbox.TerrainCollider",
-              "__guid": "ad1ee52a-e608-49b5-bf65-77b970120110",
-              "IsTrigger": false,
-              "Static": true
             }
           ]
         },
@@ -1107,7 +1117,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/ringpanelgoauld.prefab"
+          "__Prefab": "prefabs/ringpanelgoauld.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "8876044e-22e2-475c-bf9c-a8a8c9eff4e1",
@@ -1118,7 +1129,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/ringpanelancient.prefab"
+          "__Prefab": "prefabs/ringpanelancient.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "12b9e705-00cb-49fd-be30-0c0e85ec61d7",
@@ -1129,7 +1141,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/dhdmilkyway.prefab"
+          "__Prefab": "prefabs/dhdmilkyway.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "9c922115-fc48-45ed-9692-184811e9bc83",
@@ -1175,7 +1188,8 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             }
           ]
         },
@@ -1223,7 +1237,8 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             }
           ]
         },
@@ -1271,7 +1286,8 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             }
           ]
         },
@@ -1319,7 +1335,8 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             }
           ]
         },
@@ -2065,7 +2082,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2131,7 +2149,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2197,7 +2216,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2263,7 +2283,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2329,7 +2350,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2395,7 +2417,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2460,7 +2483,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2526,7 +2550,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2592,7 +2617,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -2682,7 +2708,8 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             },
             {
               "__type": "AtlantisTransporter",
@@ -3137,7 +3164,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     },
                     {
                       "__type": "Sandbox.SkinnedModelRenderer",
@@ -3146,7 +3174,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3179,7 +3208,8 @@
                           "CreateBoneObjects": false,
                           "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
                           "RenderType": "On",
-                          "Tint": "1,1,1,1"
+                          "Tint": "1,1,1,1",
+                          "UseAnimGraph": true
                         }
                       ]
                     }
@@ -3197,7 +3227,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/dhdatlantis.prefab"
+          "__Prefab": "prefabs/dhdatlantis.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "3d7de4bb-dd25-4c2e-96eb-df3a545f68f1",
@@ -3423,7 +3454,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3489,7 +3521,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3555,7 +3588,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3621,7 +3655,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3687,7 +3722,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3753,7 +3789,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3818,7 +3855,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3884,7 +3922,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -3950,7 +3989,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ],
                   "Children": [
@@ -4679,7 +4719,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/dhdpegasus.prefab"
+          "__Prefab": "prefabs/dhdpegasus.prefab",
+          "__PrefabVariables": {}
         },
         {
           "__guid": "2bde09ff-444d-4ed6-83b9-9b7357824de7",
@@ -4850,7 +4891,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -4916,7 +4958,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -4982,7 +5025,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5048,7 +5092,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5114,7 +5159,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5180,7 +5226,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5245,7 +5292,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5311,7 +5359,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5377,7 +5426,8 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
                 }
               ],
               "Children": [
@@ -5451,7 +5501,8 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkInterpolation": true,
-          "__Prefab": "prefabs/dhdmilkyway.prefab"
+          "__Prefab": "prefabs/dhdmilkyway.prefab",
+          "__PrefabVariables": {}
         }
       ]
     },
@@ -5501,7 +5552,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-30T19:30:02.3497514\u002B02:00",
+  "LastSaved": "2024-06-24T18:32:05.6587698\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

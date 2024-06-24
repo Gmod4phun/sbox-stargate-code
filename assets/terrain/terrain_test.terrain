@@ -7,6 +7,10 @@
   "TerrainSize": 2000,
   "TerrainHeight": 500,
   "Materials": [],
+  "MaterialSettings": {
+    "HeightBlendEnabled": true,
+    "HeightBlendSharpness": 0.87
+  },
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
