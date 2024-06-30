@@ -513,7 +513,7 @@ namespace Sandbox.Components.Stargate
 			}
 
 			ent.Transform.Position = otherPos;
-			ent.Transform.ClearLerp();
+			ent.Transform.ClearInterpolation();
 
 			SetEntLastTeleportTime( ent, 0 );
 

@@ -201,7 +201,7 @@ public class MultiWorldSystem : GameObjectSystem
                     {
                         rules.Pairs.Add( new Sandbox.Physics.CollisionRules.Pair( GetWorldTag( world.WorldIndex ), GetWorldTag( otherWorld.WorldIndex ) ), Sandbox.Physics.CollisionRules.Result.Ignore );
                     }
-                    catch ( Exception e )
+                    catch ( Exception )
                     {
                         // Log.Error( $"Failed to add collision rule for {world.WorldIndex} and {otherWorld.WorldIndex}: {e.Message}" );
                     }
@@ -209,7 +209,7 @@ public class MultiWorldSystem : GameObjectSystem
             }
         }
 
-        Game.ActiveScene.PhysicsWorld.SetCollisionRules( rules );
+        Game.ActiveScene.PhysicsWorld.CollisionRules = rules;
         Log.Info( "MultiWorld: Collision rules initialized" );
     }
 

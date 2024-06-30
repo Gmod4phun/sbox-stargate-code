@@ -160,7 +160,7 @@ namespace Sandbox.Components.Stargate.Rings
 
                 e.Transform.Position = newPos;
                 e.Transform.Rotation = newRot;
-                e.Transform.ClearLerp();
+                e.Transform.ClearInterpolation();
 
                 if ( prevOwner != null )
                     e.Network.AssignOwnership( prevOwner );

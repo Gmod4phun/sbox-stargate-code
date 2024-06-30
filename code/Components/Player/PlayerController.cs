@@ -286,7 +286,7 @@ public class PlayerController : Component
 			AnimationHelper.WithVelocity( cc.Velocity );
 			AnimationHelper.WithWishVelocity( WishVelocity );
 			AnimationHelper.IsGrounded = cc.IsOnGround;
-			AnimationHelper.FootShuffle = rotateDifference;
+			AnimationHelper.MoveRotationSpeed = rotateDifference;
 			AnimationHelper.WithLook( EyeAngles.Forward, 1, 1, 1.0f );
 			AnimationHelper.MoveStyle = IsRunning ? CitizenAnimationHelper.MoveStyles.Run : CitizenAnimationHelper.MoveStyles.Walk;
 		}

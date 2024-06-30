@@ -64,11 +64,9 @@ public class LensFlareEffect : PostProcess
             sunobstruction = 0;
 
         var sunPos3D = eyepos + sundirection * camera.ZFar;
-        var sunPos2D = sunPos3D.ToScreen( Screen.Size );
-        if ( sunPos2D == null )
-            return;
+        var sunPos2D = camera.PointToScreenNormal( sunPos3D, out var _ );
 
-        var sunpos = (Vector2)sunPos2D;
+        var sunpos = sunPos2D * Screen.Size;
 
         var rSz = Screen.Width * 0.1f;
         var aMul = (float)((sundirection.Dot( eyevector ) - 0.4f) * (1 - Math.Pow( 1 - sunobstruction, 2 ))).Clamp( 0f, 1f );
