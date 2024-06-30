@@ -5,7 +5,7 @@ public class MultiWorldSystem : GameObjectSystem
     // public Dictionary<int, MultiWorld> Worlds = new();
     public static IEnumerable<MultiWorld> Worlds => Game.ActiveScene.IsValid() ? Game.ActiveScene.GetAllComponents<MultiWorld>() : null;
     public static IEnumerable<int> AllWorldIndices => Worlds.Select( w => w.WorldIndex );
-    public static List<MultiWorldSound> Sounds = new();
+    public static List<MultiWorldSound> FollowingSounds = new();
 
     public MultiWorldSystem( Scene scene ) : base( scene )
     {
@@ -155,7 +155,20 @@ public class MultiWorldSystem : GameObjectSystem
 
     public static void AddSound( MultiWorldSound sound )
     {
-        Sounds.Add( sound );
+        var world = GetWorldByIndex( sound.WorldIndex );
+        if ( world.IsValid() )
+        {
+            var mixer = world.GetMixer();
+            if ( mixer != null )
+            {
+                sound.Handle.TargetMixer = mixer;
+            }
+        }
+
+        if ( sound.FollowObject.IsValid() )
+        {
+            FollowingSounds.Add( sound );
+        }
     }
 
     public static void Init()
@@ -250,31 +263,36 @@ public class MultiWorldSystem : GameObjectSystem
         if ( !Worlds.Any() )
             return;
 
-        foreach ( var sound in Sounds )
+        var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+
+        // set mixer hearable/unhearable for each player
+        foreach ( var world in Worlds )
+        {
+            var mixer = world.GetMixer();
+            if ( mixer != null )
+            {
+                mixer.Volume = GetWorldIndexOfObject( player ) != world.WorldIndex ? 0 : 1; // change to Mute when implemented
+            }
+        }
+
+        // update target sound mixer for following sounds if needed
+        foreach ( var sound in FollowingSounds )
         {
             if ( sound.Handle.IsValid() )
             {
-                var followObjectValid = sound.FollowObject.IsValid();
-                if ( sound.FollowObject != null )
+                if ( !sound.FollowObject.IsValid() )
                 {
-                    if ( !followObjectValid )
-                    {
-                        sound.Handle.Stop();
-                    }
-                    else
-                    {
-                        sound.Handle.Position = sound.FollowObject.Transform.Position;
-                    }
-                }
-
-                var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
-                if ( GetWorldIndexOfObject( player ) == (followObjectValid ? GetWorldIndexOfObject( sound.FollowObject ) : sound.WorldIndex) )
-                {
-                    sound.Handle.Volume = sound.Volume;
+                    sound.Handle.Stop();
                 }
                 else
                 {
-                    sound.Handle.Volume = 0;
+                    sound.Handle.Position = sound.FollowObject.Transform.Position;
+
+                    var desiredWorldIndex = GetWorldIndexOfObject( sound.FollowObject );
+                    if ( desiredWorldIndex != -1 && desiredWorldIndex != sound.WorldIndex )
+                    {
+                        sound.Handle.TargetMixer = GetWorldByIndex( desiredWorldIndex ).GetMixer();
+                    }
                 }
             }
         }
