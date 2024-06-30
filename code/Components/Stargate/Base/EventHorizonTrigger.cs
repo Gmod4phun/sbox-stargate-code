@@ -34,7 +34,7 @@ namespace Sandbox.Components.Stargate
         }
 
         // Trigger
-        public void OnTriggerEnter( Collider other )
+        public new void OnTriggerEnter( Collider other )
         {
             // only call 'enter' stuff if we entered the first time (aka only one collider is touching us when we started touching)
             if ( EventHorizon.IsValid() )
@@ -54,7 +54,7 @@ namespace Sandbox.Components.Stargate
             }
         }
 
-        public void OnTriggerExit( Collider other )
+        public new void OnTriggerExit( Collider other )
         {
             // only call 'exit' stuff if no colliders are touching us anymore
             if ( EventHorizon.IsValid() )

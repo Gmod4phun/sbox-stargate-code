@@ -15,7 +15,7 @@ public class TriggerDebug : ModelCollider, Component.ITriggerListener
         // }
     }
 
-    public void OnTriggerEnter( Collider other )
+    public new void OnTriggerEnter( Collider other )
     {
         Log.Info( $"something entered the trigger, we are being touched by {Touching.Count()} colliders" );
 
@@ -25,7 +25,7 @@ public class TriggerDebug : ModelCollider, Component.ITriggerListener
         }
     }
 
-    public void OnTriggerExit( Collider other )
+    public new void OnTriggerExit( Collider other )
     {
         Log.Info( $"something exited the trigger, we are being touched by {Touching.Count()} colliders" );
     }
