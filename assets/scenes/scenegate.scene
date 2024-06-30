@@ -1,5 +1,5 @@
 {
-  "__guid": "33a4ef94-f998-4a2a-9d2a-a77c32664b85",
+  "__guid": "03edd410-5e0a-486c-94ed-321310d82fe9",
   "GameObjects": [
     {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
@@ -5525,9 +5525,9 @@
       "IncludedBodies": ""
     }
   },
-  "Title": "minimal",
+  "Title": "scenegate test scene",
   "Description": "",
-  "LastSaved": "2024-06-30T18:39:01.7179082\u002B02:00",
+  "LastSaved": "2024-06-30T19:00:45.5812623\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
