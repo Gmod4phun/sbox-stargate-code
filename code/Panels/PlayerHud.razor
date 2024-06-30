@@ -1,0 +1,16 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+    <div class="hud">
+        <div class="crosshair"></div>
+    </div>
+</root>
+
+@code {
+    [Property]
+    public bool Visible { get; set; } = false;
+
+    protected override int BuildHash() => System.HashCode.Combine(Visible);
+}

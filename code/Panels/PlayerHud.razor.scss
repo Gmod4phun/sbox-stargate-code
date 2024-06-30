@@ -1,0 +1,18 @@
+PlayerHud {
+    .hud {
+        height: 100%;
+        width: 100%;
+    }
+
+    .crosshair {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        aspect-ratio: 1;
+        width: 10px;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+    }
+}

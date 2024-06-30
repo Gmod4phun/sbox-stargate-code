@@ -1,5 +1,5 @@
 {
-  "__guid": "ca978356-7942-4f84-b86f-95b69f0ba8d8",
+  "__guid": "33a4ef94-f998-4a2a-9d2a-a77c32664b85",
   "GameObjects": [
     {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
@@ -267,39 +267,11 @@
               "DrawIris": true,
               "DrawRing": true,
               "Intensity": 1
-            }
-          ],
-          "Children": [
+            },
             {
-              "__guid": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-              "Flags": 0,
-              "Name": "Crosshair",
-              "Position": "64,0,0",
-              "Scale": "0.01,0.01,0.01",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/dev/primary_white_emissive.vmat",
-                  "Model": "models/dev/sphere.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Crosshair",
-                  "__guid": "e4c9f843-f81a-41ce-9d05-ba2ce4095fbf",
-                  "CrosshairModel": {
-                    "_type": "component",
-                    "component_id": "969d2995-0ce9-4af0-bd95-06e50d6f71eb",
-                    "go": "2456f759-f56d-45fe-aeab-4e4b441a828d",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
+              "__type": "PlayerHud",
+              "__guid": "9af0f902-c43c-42b6-8e88-4a9c21e5681e",
+              "Visible": false
             }
           ]
         }
@@ -4784,33 +4756,17 @@
     {
       "__guid": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
       "Flags": 0,
-      "Name": "World 4",
+      "Name": "World 3",
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "MultiWorld",
           "__guid": "d1a29c1c-f5a1-40dd-9446-a973cddb4695",
-          "WorldIndex": 4
+          "WorldIndex": 3
         }
       ],
       "Children": [
-        {
-          "__guid": "7e744c8a-11a8-411c-b1b9-2617dda339d9",
-          "Flags": 0,
-          "Name": "Map",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.MapInstance",
-              "__guid": "58563d02-4cc5-40ec-a7cf-f0622b03b3bd",
-              "MapName": "facepunch.flatgrass",
-              "UseMapFromLaunch": false
-            }
-          ]
-        },
         {
           "__guid": "295e315a-2c2f-4c07-87df-60fc7885fb18",
           "Flags": 0,
@@ -5503,6 +5459,25 @@
           "NetworkInterpolation": true,
           "__Prefab": "prefabs/dhdmilkyway.prefab",
           "__PrefabVariables": {}
+        },
+        {
+          "__guid": "883d4245-2a75-4387-b23b-6e46565ddc58",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,-1600,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.MapInstance",
+              "__guid": "c1b7fd21-dcdf-4809-ba3d-bf71ac30c67d",
+              "__version": 1,
+              "MapName": "facepunch.flatgrass",
+              "NoOrigin": false,
+              "UseMapFromLaunch": false
+            }
+          ]
         }
       ]
     },
@@ -5552,7 +5527,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-24T18:32:05.6587698\u002B02:00",
+  "LastSaved": "2024-06-30T18:39:01.7179082\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
