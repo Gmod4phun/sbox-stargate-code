@@ -31,8 +31,7 @@
         "SrgbRead": true,
         "PrimaryGroup": {
           "Name": ""
-        },
-        "CreateInput": "CreateInputTexture2D"
+        }
       },
       "Identifier": "1",
       "Position": "-3184,-784",

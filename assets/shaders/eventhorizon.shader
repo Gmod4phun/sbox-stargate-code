@@ -47,6 +47,7 @@ struct PixelInput
 	float3 vNormalOs : TEXCOORD15;
 	float4 vTangentUOs_flTangentVSign : TANGENT	< Semantic( TangentU_SignV ); >;
 	float4 vColor : COLOR0;
+	float4 vTintColor : COLOR1;
 };
 
 VS
@@ -58,6 +59,9 @@ VS
 		PixelInput i = ProcessVertex( v );
 		i.vPositionOs = v.vPositionOs.xyz;
 		i.vColor = v.vColor;
+
+		ExtraShaderData_t extraShaderData = GetExtraPerInstanceShaderData( v );
+		i.vTintColor = extraShaderData.vTint;
 
 		VS_DecodeObjectSpaceNormalAndTangent( v, i.vNormalOs, i.vTangentUOs_flTangentVSign );
 
@@ -73,7 +77,7 @@ PS
 	CreateInputTexture2D( Color, Srgb, 8, "None", "_color", ",0/,0/0", Default4( 1.00, 1.00, 1.00, 1.00 ) );
 	Texture2D g_tColor < Channel( RGBA, Box( Color ), Srgb ); OutputFormat( BC7 ); SrgbRead( True ); >;
 	float g_flIllumbrightness < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 1, 10 ); >;
-	bool g_bGrayscale < UiGroup( ",0/,0/0" ); Default( 0 ); >;
+	bool g_bGrayscale < Attribute( "Grayscale" ); >;
 	float g_flInMin < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
 	float g_flInMax < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
 	float g_flOutMin < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
