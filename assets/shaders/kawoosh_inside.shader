@@ -248,8 +248,8 @@ PS
 
             // Blend
             {
-                m.Emission = lerp( vRefractionColor.xyz, 0.0f, vEnvBRDF );
-                m.Emission *= m.Albedo;
+                // m.Emission = lerp( vRefractionColor.xyz, 0.0f, vEnvBRDF );
+                m.Emission = m.Albedo;
                 m.Emission += flEmission;
                 m.Albedo = 0;
             }
