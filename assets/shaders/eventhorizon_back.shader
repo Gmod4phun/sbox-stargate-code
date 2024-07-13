@@ -77,7 +77,7 @@ PS
 	CreateInputTexture2D( Color, Srgb, 8, "None", "_color", ",0/,0/0", Default4( 1.00, 1.00, 1.00, 1.00 ) );
 	Texture2D g_tColor < Channel( RGBA, Box( Color ), Srgb ); OutputFormat( BC7 ); SrgbRead( True ); >;
 	float g_flIllumbrightness < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 1, 10 ); >;
-	bool g_bGrayscale < Attribute( "Grayscale" ); >;
+	bool g_bGrayscale < UiGroup( ",0/,0/0" ); Default( 0 ); >;
 	float g_flInMin < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
 	float g_flInMax < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
 	float g_flOutMin < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
