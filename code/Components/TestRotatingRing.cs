@@ -1,9 +1,9 @@
-enum RingRotationState
+enum RingState
 {
 	STOPPED,
-	SPEEDING,
+	STARTING,
 	FULLSPEED,
-	SLOWING
+	STOPPING
 }
 
 public class TestRotatingRing : Component
@@ -12,9 +12,9 @@ public class TestRotatingRing : Component
 	public ModelRenderer Renderer { get; set; }
 
 	[Property]
-	RingRotationState State = RingRotationState.STOPPED;
+	RingState _ringState = RingState.STOPPED;
 
-	double currentAngle = 0;
+	double RingAngle = 0;
 
 	[Property]
 	float SpeedPerSecond = 2f;
@@ -31,18 +31,18 @@ public class TestRotatingRing : Component
 	[Property]
 	float TargetAngle = 0;
 
-	int currentRingDirection = 1;
+	int _ringDirection = 1;
 
 	[Button("Toggle Rotation")]
 	public void ToggleRotation()
 	{
-		if (State == RingRotationState.STOPPED)
+		if (_ringState == RingState.STOPPED)
 		{
-			State = RingRotationState.SPEEDING;
+			_ringState = RingState.STARTING;
 		}
 		else
 		{
-			State = RingRotationState.SLOWING;
+			_ringState = RingState.STOPPING;
 		}
 	}
 
@@ -61,7 +61,7 @@ public class TestRotatingRing : Component
 		var symAng = desiredAng;
 
 		// clockwise and counterclockwise symbol angles relative to 0 (the top chevron)
-		var D_CW = (float)(-symAng + currentAngle + angOffset); // offset, if we want it to be relative to another chevron (for movie stargate dialing)
+		var D_CW = (float)(-symAng + RingAngle + angOffset); // offset, if we want it to be relative to another chevron (for movie stargate dialing)
 		var D_CCW = 360 - D_CW;
 
 		D_CW = D_CW.UnsignedMod(360);
@@ -69,12 +69,12 @@ public class TestRotatingRing : Component
 
 		// angle differences are setup, choose based on the direction of ring rotation
 		// if the required angle is to too small, spin it around once
-		var angToRotate = (currentRingDirection == 1) ? D_CCW : D_CW;
+		var angToRotate = (_ringDirection == 1) ? D_CCW : D_CW;
 		if (angToRotate < 170)
 			angToRotate += 360f;
 
 		// set the final angle to the current angle + the angle needed to rotate, also considering ring direction
-		var finalAng = currentAngle + (angToRotate * currentRingDirection);
+		var finalAng = RingAngle + (angToRotate * _ringDirection);
 
 		//Log.Info($"Sym = {sym}, RingAng = {RingAngle}, SymPos = {symPos}, D_CCW = {D_CCW}, D_CW = {D_CW}, finalAng = {finalAng}" );
 
@@ -83,15 +83,13 @@ public class TestRotatingRing : Component
 
 	public async Task<bool> RotateToAngle(float angle)
 	{
-		if (State != RingRotationState.STOPPED)
+		if (_ringState != RingState.STOPPED)
 		{
 			return false;
 		}
 
-		TargetAngle = angle;
-
-		var desiredAngle = GetDesiredRingAngle(TargetAngle, 0);
-		var angleToRotate = Math.Abs(desiredAngle - currentAngle);
+		var desiredAngle = GetDesiredRingAngle(angle, 0);
+		var angleToRotate = Math.Abs(desiredAngle - RingAngle);
 
 		var totalAngleSpentSpeeding = SpinUpTime * SpeedPerSecond / 2;
 		var totalAngleSpentSlowing = SpinDownTime * SpeedPerSecond / 2;
@@ -100,22 +98,21 @@ public class TestRotatingRing : Component
 		var angleWhenToStartSlowing =
 			angleToRotate - totalAngleSpentSpeeding - totalAngleSpentFullSpeed;
 
-		State = RingRotationState.SPEEDING;
+		_ringState = RingState.STARTING;
 
-		while (State != RingRotationState.STOPPED)
+		while (_ringState != RingState.STOPPED)
 		{
-			if (State == RingRotationState.FULLSPEED)
+			if (_ringState == RingState.FULLSPEED)
 			{
-				if (Math.Abs(desiredAngle - currentAngle) <= angleWhenToStartSlowing)
+				if (Math.Abs(desiredAngle - RingAngle) <= angleWhenToStartSlowing)
 				{
-					State = RingRotationState.SLOWING;
+					_ringState = RingState.STOPPING;
 				}
 			}
 			await Task.FrameEnd();
 		}
 
-		return Math.Abs(desiredAngle.UnsignedMod(360) - currentAngle)
-			<= Time.Delta * SpeedPerSecond;
+		return Math.Abs(desiredAngle.UnsignedMod(360) - RingAngle) <= Time.Delta * SpeedPerSecond;
 	}
 
 	protected override void OnUpdate()
@@ -125,32 +122,32 @@ public class TestRotatingRing : Component
 		if (!Renderer.IsValid())
 			return;
 
-		if (State != RingRotationState.STOPPED)
+		if (_ringState != RingState.STOPPED)
 		{
-			if (State == RingRotationState.SPEEDING)
+			if (_ringState == RingState.STARTING)
 			{
 				CurSpeedMul += Time.Delta / SpinUpTime;
 				if (CurSpeedMul >= 1)
 				{
-					State = RingRotationState.FULLSPEED;
+					_ringState = RingState.FULLSPEED;
 					CurSpeedMul = 1;
 				}
 			}
-			else if (State == RingRotationState.SLOWING)
+			else if (_ringState == RingState.STOPPING)
 			{
 				CurSpeedMul -= Time.Delta / SpinDownTime;
 				if (CurSpeedMul <= 0)
 				{
-					State = RingRotationState.STOPPED;
+					_ringState = RingState.STOPPED;
 					CurSpeedMul = 0;
-					currentRingDirection = -currentRingDirection;
-					currentAngle = ((float)currentAngle).UnsignedMod(360);
+					_ringDirection = -_ringDirection;
+					RingAngle = ((float)RingAngle).UnsignedMod(360);
 				}
 			}
 
-			currentAngle += SpeedPerSecond * Time.Delta * CurSpeedMul * currentRingDirection;
+			RingAngle += SpeedPerSecond * Time.Delta * CurSpeedMul * _ringDirection;
 		}
 
-		Renderer.Transform.Rotation = Rotation.FromAxis(Vector3.Forward, (float)currentAngle);
+		Renderer.Transform.Rotation = Rotation.FromAxis(Vector3.Forward, (float)RingAngle);
 	}
 }
