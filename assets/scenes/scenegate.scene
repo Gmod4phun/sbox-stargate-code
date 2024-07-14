@@ -6,8 +6,6 @@
       "Flags": 0,
       "Name": "Network Helper",
       "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "GameNetworkManager",
@@ -32,8 +30,6 @@
       "Name": "Citizen Instance",
       "Rotation": "0,0,1,-0.00000004371139",
       "Tags": "player",
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.CharacterController",
@@ -129,8 +125,6 @@
           "Name": "Body",
           "Tags": "player_body",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -149,9 +143,7 @@
           "Flags": 0,
           "Name": "EyePos",
           "Position": "0,0,64",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true
+          "Enabled": true
         },
         {
           "__guid": "5a05d2d3-23f0-4cd1-a55f-45ad8c107738",
@@ -160,8 +152,6 @@
           "Position": "0.000006461131,-0.000000000008185452,64",
           "Tags": "player_camera",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.CameraComponent",
@@ -283,8 +273,6 @@
       "Name": "Spawnpoint",
       "Rotation": "0,0,1,-0.00000004371139",
       "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.SpawnPoint",
@@ -298,8 +286,6 @@
       "Flags": 0,
       "Name": "World 0",
       "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -314,8 +300,6 @@
           "Name": "Ground",
           "Scale": "20,20,1",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -344,7 +328,8 @@
           "Tags": "rings_no_teleport",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/ringpanelori.prefab",
           "__PrefabVariables": {}
         },
@@ -356,7 +341,8 @@
           "Tags": "rings_no_teleport",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/ringpanelori.prefab",
           "__PrefabVariables": {}
         },
@@ -368,7 +354,8 @@
           "Rotation": "0.00250578,0.1305021,-0.01903339,0.9912621",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/dhdmilkyway.prefab",
           "__PrefabVariables": {}
         },
@@ -379,8 +366,6 @@
           "Position": "-2015.39,-38.41121,142.7025",
           "Rotation": "0,0,-0.2495349,0.9683658",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -423,8 +408,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -465,8 +448,6 @@
                   "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -490,8 +471,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -532,8 +511,6 @@
                   "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -557,8 +534,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -599,8 +574,6 @@
                   "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -624,8 +597,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -666,8 +637,6 @@
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -691,8 +660,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -733,8 +700,6 @@
                   "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -758,8 +723,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -800,8 +763,6 @@
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -824,8 +785,6 @@
               "Name": "Chevron 7",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -866,8 +825,6 @@
                   "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -891,8 +848,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -933,8 +888,6 @@
                   "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -958,8 +911,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -1000,8 +951,6 @@
                   "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -1024,8 +973,6 @@
               "Name": "Ring",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
@@ -1060,8 +1007,6 @@
           "Position": "-3000,-1000,0",
           "Tags": "terrain",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.Terrain",
@@ -1088,7 +1033,8 @@
           "Tags": "rings_no_teleport",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/ringpanelgoauld.prefab",
           "__PrefabVariables": {}
         },
@@ -1100,7 +1046,8 @@
           "Tags": "rings_no_teleport",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/ringpanelancient.prefab",
           "__PrefabVariables": {}
         },
@@ -1112,7 +1059,8 @@
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/dhdmilkyway.prefab",
           "__PrefabVariables": {}
         },
@@ -1123,8 +1071,6 @@
           "Position": "340,-512,0",
           "Tags": "ringplatform,rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
@@ -1172,8 +1118,6 @@
           "Position": "340,512,0",
           "Tags": "ringplatform,rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
@@ -1221,8 +1165,6 @@
           "Position": "340,192,0",
           "Tags": "ringplatform,rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
@@ -1270,8 +1212,6 @@
           "Position": "340,-192,0",
           "Tags": "ringplatform,rings_no_teleport",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
@@ -1318,8 +1258,6 @@
           "Name": "SGC Ramp",
           "Position": "-512,-512.0007,146",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -1353,8 +1291,6 @@
               "Rotation": "-0.00000003449898,0.5787969,-0.000000000000000239536,0.8154721",
               "Tags": "particles",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
@@ -1509,8 +1445,6 @@
               "Rotation": "-0.1215695,0.6049213,-0.1920873,0.7631474",
               "Tags": "particles",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
@@ -1665,8 +1599,6 @@
               "Rotation": "0.09442929,0.3684228,0.2296235,0.895892",
               "Tags": "particles",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
@@ -1821,8 +1753,6 @@
               "Rotation": "0.09347675,0.553968,-0.09487818,0.8218151",
               "Tags": "particles",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
@@ -1975,8 +1905,6 @@
               "Name": "Stargate (Milky Way)",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ModelRenderer",
@@ -2025,8 +1953,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.3420201,0,0,0.9396926",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2067,8 +1993,6 @@
                       "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2092,8 +2016,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,0.7660444",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2134,8 +2056,6 @@
                       "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2159,8 +2079,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,0.5",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2201,8 +2119,6 @@
                       "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2226,8 +2142,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,-0.5000001",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2268,8 +2182,6 @@
                       "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2293,8 +2205,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,-0.7660444",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2335,8 +2245,6 @@
                       "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2360,8 +2268,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.3420202,0,0,-0.9396926",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2402,8 +2308,6 @@
                       "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2426,8 +2330,6 @@
                   "Name": "Chevron 7",
                   "Position": "0,0,0",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2468,8 +2370,6 @@
                       "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2493,8 +2393,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,0.1736482",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2535,8 +2433,6 @@
                       "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2560,8 +2456,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,-0.1736482",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -2602,8 +2496,6 @@
                       "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -2626,8 +2518,6 @@
                   "Name": "Ring",
                   "Position": "0,0,0",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
@@ -2663,8 +2553,6 @@
           "Name": "Atlantis Transporter",
           "Position": "-320,220,5.999997",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelCollider",
@@ -2704,8 +2592,6 @@
               "Rotation": "0,0.7071068,0,0.7071068",
               "Tags": "light_spot,light",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.SpotLight",
@@ -2729,8 +2615,6 @@
               "Rotation": "0,-0.7071068,0,0.7071068",
               "Tags": "light_spot,light",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.SpotLight",
@@ -2754,7 +2638,8 @@
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
               "NetworkMode": 1,
-              "NetworkInterpolation": true,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
               "Components": [
                 {
                   "__type": "Sandbox.ModelRenderer",
@@ -2788,7 +2673,8 @@
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
               "NetworkMode": 1,
-              "NetworkInterpolation": true,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
               "Components": [
                 {
                   "__type": "Sandbox.ModelRenderer",
@@ -2820,8 +2706,6 @@
               "Position": "0,0,0",
               "Tags": "trigger",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -2839,8 +2723,6 @@
               "Position": "3.665009,36,60",
               "Rotation": "0,0.7071068,0,0.7071068",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ModelRenderer",
@@ -2884,8 +2766,6 @@
               "Position": "-4.5,-36,60",
               "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ModelRenderer",
@@ -2931,8 +2811,6 @@
           "Rotation": "0,-0,-0.8746197,0.4848096",
           "Tags": "skybox",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkyBox2D",
@@ -2968,8 +2846,6 @@
           "Rotation": "-0.2272705,-0.2294598,0.9183475,-0.2287664",
           "Tags": "light_directional,light",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.DirectionalLight",
@@ -2989,8 +2865,6 @@
       "Flags": 0,
       "Name": "World 1",
       "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -3005,8 +2879,6 @@
           "Name": "Ground (World 1)",
           "Scale": "20,20,1",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -3033,8 +2905,6 @@
           "Name": "Universe Ramp",
           "Position": "-512,0,51.5",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -3066,8 +2936,6 @@
               "Name": "Stargate (Universe)",
               "Position": "0,0,90",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ModelCollider",
@@ -3104,8 +2972,6 @@
                   "Name": "Ring",
                   "Position": "0,0,0",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.StargateRingUniverse",
@@ -3157,8 +3023,6 @@
                       "Name": "Chevrons",
                       "Position": "0,0,0",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3198,7 +3062,8 @@
           "Position": "-128,0,0",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/dhdatlantis.prefab",
           "__PrefabVariables": {}
         },
@@ -3209,8 +3074,6 @@
           "Rotation": "0,-0,-0.8480481,0.5299193",
           "Tags": "skybox",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkyBox2D",
@@ -3246,8 +3109,6 @@
           "Rotation": "0.2220052,0.5063698,-0.738945,0.38505",
           "Tags": "light_directional,light",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.DirectionalLight",
@@ -3267,8 +3128,6 @@
       "Flags": 0,
       "Name": "World 2",
       "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -3283,8 +3142,6 @@
           "Name": "Ground (World 2)",
           "Scale": "20,20,1",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -3311,8 +3168,6 @@
           "Name": "Brick Ramp",
           "Position": "-512,511.9994,64",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -3344,8 +3199,6 @@
               "Name": "Stargate (Pegasus)",
               "Position": "0,0,90",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.ModelRenderer",
@@ -3397,8 +3250,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.3420201,0,0,0.9396926",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3439,8 +3290,6 @@
                       "Rotation": "-0.4999998,-0.4999997,-0.5,-0.5000007",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3464,8 +3313,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,0.7660444",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3506,8 +3353,6 @@
                       "Rotation": "-0.4999998,-0.4999998,-0.5000001,-0.5000006",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3531,8 +3376,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,0.5",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3573,8 +3416,6 @@
                       "Rotation": "-0.4999998,-0.4999997,-0.5,-0.5000005",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3598,8 +3439,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,-0.5000001",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3640,8 +3479,6 @@
                       "Rotation": "0.4999998,0.4999998,0.5,0.5000005",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3665,8 +3502,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,-0.7660444",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3707,8 +3542,6 @@
                       "Rotation": "0.4999999,0.4999997,0.5000001,0.5000005",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3732,8 +3565,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.3420202,0,0,-0.9396926",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3774,8 +3605,6 @@
                       "Rotation": "0.4999998,0.4999998,0.5000001,0.5000005",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3798,8 +3627,6 @@
                   "Name": "Chevron 7",
                   "Position": "0,0,0",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3840,8 +3667,6 @@
                       "Rotation": "-0.4999997,-0.4999997,-0.5,-0.5000006",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3865,8 +3690,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,0.1736482",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3907,8 +3730,6 @@
                       "Rotation": "-0.4999998,-0.4999998,-0.5000001,-0.5000006",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3932,8 +3753,6 @@
                   "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,-0.1736482",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.Chevron",
@@ -3974,8 +3793,6 @@
                       "Rotation": "0.4999999,0.4999997,0.5,0.5000006",
                       "Tags": "light_point,light",
                       "Enabled": true,
-                      "NetworkMode": 2,
-                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.PointLight",
@@ -3998,8 +3815,6 @@
                   "Name": "Ring",
                   "Position": "0,0,0",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
@@ -4690,7 +4505,8 @@
           "Rotation": "0,0.1305262,0,0.9914449",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
           "__Prefab": "prefabs/dhdpegasus.prefab",
           "__PrefabVariables": {}
         },
@@ -4700,8 +4516,6 @@
           "Name": "2D Skybox",
           "Tags": "skybox",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkyBox2D",
@@ -4737,8 +4551,6 @@
           "Rotation": "0.2034299,0.9434327,0.1350905,0.22428",
           "Tags": "light_directional,light",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.DirectionalLight",
@@ -4757,8 +4569,6 @@
       "__guid": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
       "Flags": 0,
       "Name": "World 3",
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -4774,8 +4584,6 @@
           "Position": "0,1024,90",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -4818,8 +4626,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -4860,8 +4666,6 @@
                   "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -4885,8 +4689,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -4927,8 +4729,6 @@
                   "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -4952,8 +4752,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -4994,8 +4792,6 @@
                   "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5019,8 +4815,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -5061,8 +4855,6 @@
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5086,8 +4878,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -5128,8 +4918,6 @@
                   "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5153,8 +4941,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -5195,8 +4981,6 @@
                   "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5219,8 +5003,6 @@
               "Name": "Chevron 7",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -5261,8 +5043,6 @@
                   "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5286,8 +5066,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -5328,8 +5106,6 @@
                   "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5353,8 +5129,6 @@
               "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.Chevron",
@@ -5395,8 +5169,6 @@
                   "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
                   "Tags": "light_point,light",
                   "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -5419,8 +5191,6 @@
               "Name": "Ring",
               "Position": "0,0,0",
               "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
@@ -5456,7 +5226,6 @@
           "Rotation": "0.09229596,0.09229596,-0.7010574,0.7010574",
           "Enabled": true,
           "NetworkMode": 1,
-          "NetworkInterpolation": true,
           "__Prefab": "prefabs/dhdmilkyway.prefab",
           "__PrefabVariables": {}
         },
@@ -5466,8 +5235,6 @@
           "Name": "Object",
           "Position": "0,-1600,0",
           "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.MapInstance",
@@ -5486,8 +5253,6 @@
       "Flags": 0,
       "Name": "Chat",
       "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.ScreenPanel",
@@ -5527,7 +5292,6 @@
   },
   "Title": "scenegate test scene",
   "Description": "",
-  "LastSaved": "2024-06-30T19:00:45.5812623\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
