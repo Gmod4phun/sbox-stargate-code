@@ -8,39 +8,41 @@ namespace Sandbox.Components.Stargate
 
 		public override async void Close()
 		{
-			if ( Busy || Closed ) return;
+			if (Busy || Closed)
+				return;
 
 			Busy = true;
 			Closed = true;
 			IrisModel.SceneModel.RenderingEnabled = true;
 			IrisCollider.Enabled = true;
 
-			Stargate.PlaySound( this, "stargate.iris.atlantis.close" );
+			Stargate.PlaySound(this, "stargate.iris.atlantis.close");
 
-			await Task.DelaySeconds( _openCloseDelay );
+			await Task.DelaySeconds(_openCloseDelay);
 
 			Busy = false;
 
-			await Task.DelaySeconds( 0.5f );
+			await Task.DelaySeconds(0.5f);
 
-			if ( Closed )
+			if (Closed)
 			{
-				IrisLoop?.Stop( 0.1f );
-				IrisLoop = Stargate.PlayFollowingSound( GameObject, "stargate.iris.atlantis.loop" );
+				IrisLoop?.Stop(0.1f);
+				IrisLoop = Stargate.PlayFollowingSound(GameObject, "stargate.iris.atlantis.loop");
 			}
 		}
 
 		public override async void Open()
 		{
-			if ( Busy || !Closed ) return;
-			IrisLoop?.Stop( 0.1f );
+			if (Busy || !Closed)
+				return;
+			IrisLoop?.Stop(0.1f);
 
 			Busy = true;
 			Closed = false;
 			IrisCollider.Enabled = false;
-			Stargate.PlaySound( this, "stargate.iris.atlantis.open" );
+			Stargate.PlaySound(this, "stargate.iris.atlantis.open");
 
-			await Task.DelaySeconds( _openCloseDelay );
+			await Task.DelaySeconds(_openCloseDelay);
 
 			IrisModel.SceneModel.RenderingEnabled = false;
 			Busy = false;
@@ -48,7 +50,7 @@ namespace Sandbox.Components.Stargate
 
 		public override void PlayHitSound()
 		{
-			Stargate.PlaySound( this, "stargate.iris.atlantis.hit" );
+			Stargate.PlaySound(this, "stargate.iris.atlantis.hit");
 		}
 
 		protected override void OnDestroy()
@@ -57,9 +59,9 @@ namespace Sandbox.Components.Stargate
 
 			IrisLoop?.Stop();
 
-			if ( Closed )
+			if (Closed)
 			{
-				Stargate.PlaySound( this, "stargate.iris.atlantis.open" );
+				Stargate.PlaySound(this, "stargate.iris.atlantis.open");
 			}
 		}
 
@@ -67,14 +69,14 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnUpdate();
 
-			_currentAlpha = _currentAlpha.LerpTo( Closed ? 1 : 0, Time.Delta * 6 );
+			_currentAlpha = _currentAlpha.LerpTo(Closed ? 1 : 0, Time.Delta * 6);
 
-			if ( IrisModel.IsValid() && IrisModel.SceneModel.IsValid() )
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
 			{
 				var sm = IrisModel.SceneModel;
 				sm.Flags.IsOpaque = false;
 				sm.Flags.IsTranslucent = true;
-				sm.ColorTint = sm.ColorTint.WithAlpha( _currentAlpha );
+				sm.ColorTint = sm.ColorTint.WithAlpha(_currentAlpha);
 			}
 		}
 	}

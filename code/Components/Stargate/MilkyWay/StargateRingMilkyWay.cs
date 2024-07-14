@@ -19,7 +19,7 @@
 		public virtual void PlayStartSound()
 		{
 			StopStartSound();
-			StartSoundInstance = Stargate.PlayFollowingSound( GameObject, StartSoundName );
+			StartSoundInstance = Stargate.PlayFollowingSound(GameObject, StartSoundName);
 		}
 
 		public virtual void StopStopSound()
@@ -30,7 +30,7 @@
 		public virtual void PlayStopSound()
 		{
 			StopStopSound();
-			StopSoundInstance = Stargate.PlayFollowingSound( GameObject, StopSoundName );
+			StopSoundInstance = Stargate.PlayFollowingSound(GameObject, StopSoundName);
 		}
 
 		protected override void OnDestroy()

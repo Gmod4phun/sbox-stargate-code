@@ -1,32 +1,37 @@
 public class TriggerDebug : ModelCollider, Component.ITriggerListener
 {
-    public List<Collider> UniqueColliders { get; set; } = new();
+	public List<Collider> UniqueColliders { get; set; } = new();
 
-    TimeSince LastUpdate = 0;
-    protected override void OnUpdate()
-    {
-        base.OnUpdate();
+	TimeSince LastUpdate = 0;
 
-        // if ( LastUpdate > 2 )
-        // {
-        // LastUpdate = 0;
-        // Log.Info( $"unique colliders overtime: {UniqueColliders.Count()}" );
-        // Log.Info( $"Currently touching: {Touching.Count()}" );
-        // }
-    }
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
 
-    public new void OnTriggerEnter( Collider other )
-    {
-        Log.Info( $"something entered the trigger, we are being touched by {Touching.Count()} colliders" );
+		// if ( LastUpdate > 2 )
+		// {
+		// LastUpdate = 0;
+		// Log.Info( $"unique colliders overtime: {UniqueColliders.Count()}" );
+		// Log.Info( $"Currently touching: {Touching.Count()}" );
+		// }
+	}
 
-        if ( !UniqueColliders.Contains( other ) )
-        {
-            UniqueColliders.Add( other );
-        }
-    }
+	public new void OnTriggerEnter(Collider other)
+	{
+		Log.Info(
+			$"something entered the trigger, we are being touched by {Touching.Count()} colliders"
+		);
 
-    public new void OnTriggerExit( Collider other )
-    {
-        Log.Info( $"something exited the trigger, we are being touched by {Touching.Count()} colliders" );
-    }
+		if (!UniqueColliders.Contains(other))
+		{
+			UniqueColliders.Add(other);
+		}
+	}
+
+	public new void OnTriggerExit(Collider other)
+	{
+		Log.Info(
+			$"something exited the trigger, we are being touched by {Touching.Count()} colliders"
+		);
+	}
 }

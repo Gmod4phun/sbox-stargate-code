@@ -1,87 +1,93 @@
 namespace Sandbox.Components.Stargate
 {
-    public class DhdButton : Component, Component.ExecuteInEditor, IUse
-    {
-        public ModelRenderer ButtonModel => Components.Get<ModelRenderer>();
-        public ModelCollider ButtonCollider => Components.Get<ModelCollider>();
+	public class DhdButton : Component, Component.ExecuteInEditor, IUse
+	{
+		public ModelRenderer ButtonModel => Components.Get<ModelRenderer>();
+		public ModelCollider ButtonCollider => Components.Get<ModelCollider>();
 
-        [Property]
-        public Dhd DHD => GameObject.Components.Get<Dhd>( FindMode.InParent );
+		[Property]
+		public Dhd DHD => GameObject.Components.Get<Dhd>(FindMode.InParent);
 
-        [Property, Sync]
-        public string Action { get; set; } = "";
+		[Property, Sync]
+		public string Action { get; set; } = "";
 
-        [Property, Sync]
-        public bool Disabled { get; set; } = false;
+		[Property, Sync]
+		public bool Disabled { get; set; } = false;
 
-        [Sync]
-        public bool On { get; set; } = false;
-        private float _glowScale = 0;
+		[Sync]
+		public bool On { get; set; } = false;
+		private float _glowScale = 0;
 
-        public virtual bool OnUse( GameObject user )
-        {
-            if ( Time.Now < DHD.LastPressTime + DHD.PressDelay )
-                return false;
+		public virtual bool OnUse(GameObject user)
+		{
+			if (Time.Now < DHD.LastPressTime + DHD.PressDelay)
+				return false;
 
-            Network.TakeOwnership();
-            DHD.Network.TakeOwnership();
-            DHD.Gate?.Network.TakeOwnership();
+			Network.TakeOwnership();
+			DHD.Network.TakeOwnership();
+			DHD.Gate?.Network.TakeOwnership();
 
-            DHD.LastPressTime = Time.Now;
-            DHD.TriggerAction( Action, user );
+			DHD.LastPressTime = Time.Now;
+			DHD.TriggerAction(Action, user);
 
-            return false;
-        }
+			return false;
+		}
 
-        public bool IsUsable( GameObject user )
-        {
-            return !Disabled;
-        }
+		public bool IsUsable(GameObject user)
+		{
+			return !Disabled;
+		}
 
-        protected override void OnUpdate()
-        {
-            base.OnUpdate();
+		protected override void OnUpdate()
+		{
+			base.OnUpdate();
 
-            if ( ButtonModel.IsValid() && ButtonModel.SceneObject is SceneObject so )
-            {
-                _glowScale = _glowScale.LerpTo( On ? 1 : 0, Time.Delta * (On ? 2f : 20f) );
-                so.Batchable = false;
-                so.Attributes.Set( "selfillumscale", _glowScale );
+			if (ButtonModel.IsValid() && ButtonModel.SceneObject is SceneObject so)
+			{
+				_glowScale = _glowScale.LerpTo(On ? 1 : 0, Time.Delta * (On ? 2f : 20f));
+				so.Batchable = false;
+				so.Attributes.Set("selfillumscale", _glowScale);
 
-                if ( ButtonModel is Superglyph glyph )
-                {
-                    glyph.GlyphEnabled = On;
-                }
+				if (ButtonModel is Superglyph glyph)
+				{
+					glyph.GlyphEnabled = On;
+				}
 
-                DrawSymbol();
-            }
-        }
+				DrawSymbol();
+			}
+		}
 
-        public void DrawSymbol()
-        {
-            if ( Scene.Camera.IsValid() && ButtonCollider.IsValid() )
-            {
-                var pos = ButtonCollider.KeyframeBody.MassCenter;
-                if ( pos.DistanceSquared( Scene.Camera.Transform.Position ) < 4096 )
-                {
-                    var player = Scene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Camera == Scene.Camera );
+		public void DrawSymbol()
+		{
+			if (Scene.Camera.IsValid() && ButtonCollider.IsValid())
+			{
+				var pos = ButtonCollider.KeyframeBody.MassCenter;
+				if (pos.DistanceSquared(Scene.Camera.Transform.Position) < 4096)
+				{
+					var player = Scene
+						.GetAllComponents<PlayerController>()
+						.FirstOrDefault(p => p.Camera == Scene.Camera);
 
-                    if ( !player.IsValid() )
-                        return;
+					if (!player.IsValid())
+						return;
 
-                    if ( !MultiWorldSystem.AreObjectsInSameWorld( player.GameObject, GameObject ) )
-                        return;
+					if (!MultiWorldSystem.AreObjectsInSameWorld(player.GameObject, GameObject))
+						return;
 
-                    using ( Gizmo.Scope( "DhdSymbol", global::Transform.Zero ) )
-                    {
-                        if ( Action != "DIAL" && !Disabled )
-                        {
-                            Gizmo.Draw.Color = Color.White;
-                            Gizmo.Draw.Text( Action, global::Transform.Zero.WithPosition( pos ), size: 32 );
-                        }
-                    }
-                }
-            }
-        }
-    }
+					using (Gizmo.Scope("DhdSymbol", global::Transform.Zero))
+					{
+						if (Action != "DIAL" && !Disabled)
+						{
+							Gizmo.Draw.Color = Color.White;
+							Gizmo.Draw.Text(
+								Action,
+								global::Transform.Zero.WithPosition(pos),
+								size: 32
+							);
+						}
+					}
+				}
+			}
+		}
+	}
 }

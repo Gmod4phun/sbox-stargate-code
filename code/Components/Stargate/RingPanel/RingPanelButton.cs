@@ -1,58 +1,59 @@
 namespace Sandbox.Components.Stargate.Rings
 {
-    public class RingPanelButton : Component, Component.ExecuteInEditor, IUse
-    {
-        public RingPanel RingPanel => Components.Get<RingPanel>( FindMode.InParent );
-        public ModelRenderer Renderer => Components.Get<ModelRenderer>( FindMode.InSelf );
-        public ModelCollider Collider => Components.Get<ModelCollider>( FindMode.InSelf );
+	public class RingPanelButton : Component, Component.ExecuteInEditor, IUse
+	{
+		public RingPanel RingPanel => Components.Get<RingPanel>(FindMode.InParent);
+		public ModelRenderer Renderer => Components.Get<ModelRenderer>(FindMode.InSelf);
+		public ModelCollider Collider => Components.Get<ModelCollider>(FindMode.InSelf);
 
-        [Property]
-        public string Action { get; set; } = "";
-        [Property]
-        public SoundEvent PressSound { get; set; }
+		[Property]
+		public string Action { get; set; } = "";
 
-        [Sync]
-        public bool On { get; set; } = false;
-        private float _glowScale = 0;
+		[Property]
+		public SoundEvent PressSound { get; set; }
 
-        public bool OnUse( GameObject ent )
-        {
-            RingPanel.TriggerAction( Action );
-            return false;
-        }
+		[Sync]
+		public bool On { get; set; } = false;
+		private float _glowScale = 0;
 
-        public bool IsUsable( GameObject ent )
-        {
-            return true;
-        }
+		public bool OnUse(GameObject ent)
+		{
+			RingPanel.TriggerAction(Action);
+			return false;
+		}
 
-        public void ButtonGlowLogic()
-        {
-            if ( !Renderer.IsValid() )
-                return;
+		public bool IsUsable(GameObject ent)
+		{
+			return true;
+		}
 
-            var so = Renderer.SceneObject;
-            if ( !so.IsValid() )
-                return;
+		public void ButtonGlowLogic()
+		{
+			if (!Renderer.IsValid())
+				return;
 
-            _glowScale = _glowScale.LerpTo( On ? 1 : 0, Time.Delta * (On ? 20f : 10f) );
+			var so = Renderer.SceneObject;
+			if (!so.IsValid())
+				return;
 
-            so.Batchable = false;
-            so.Attributes.Set( "selfillumscale", _glowScale );
-        }
+			_glowScale = _glowScale.LerpTo(On ? 1 : 0, Time.Delta * (On ? 20f : 10f));
 
-        protected override void OnUpdate()
-        {
-            base.OnUpdate();
+			so.Batchable = false;
+			so.Attributes.Set("selfillumscale", _glowScale);
+		}
 
-            ButtonGlowLogic();
-            // DrawButtonActions();
-        }
+		protected override void OnUpdate()
+		{
+			base.OnUpdate();
 
-        // private void DrawButtonActions() // doing anything with world panels is fucking trash, cant position stuff properly, keep debugoverlay for now
-        // {
-        //     var pos = Transform.PointToWorld( Model.RenderBounds.Center );
-        //     DebugOverlay.Text( Action, pos, Color.White, 0, 86 );
-        // }
-    }
+			ButtonGlowLogic();
+			// DrawButtonActions();
+		}
+
+		// private void DrawButtonActions() // doing anything with world panels is fucking trash, cant position stuff properly, keep debugoverlay for now
+		// {
+		//     var pos = Transform.PointToWorld( Model.RenderBounds.Center );
+		//     DebugOverlay.Text( Action, pos, Color.White, 0, 86 );
+		// }
+	}
 }

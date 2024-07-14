@@ -2,17 +2,19 @@
 {
 	public partial class StargateRingMovie : StargateRingMilkyWay
 	{
-		public StargateRingMovie() : base()
+		public StargateRingMovie()
+			: base()
 		{
 			StartSoundName = "stargate.movie.ring_roll";
 		}
 
 		public override void StopStopSound() { }
+
 		public override void PlayStopSound() { }
 
 		public override void StopStartSound()
 		{
-			StartSoundInstance?.Stop( 1.2f );
+			StartSoundInstance?.Stop(1.2f);
 		}
 
 		protected override void OnDestroy()
