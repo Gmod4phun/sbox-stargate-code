@@ -9,7 +9,7 @@ namespace Sandbox.Components.Stargate
 		public string EventHorizonMaterialGroup { get; set; } = "default";
 
 		// [Property]
-		public virtual float RingRotationStepSize => 0.4f;
+		public virtual float RingSpeedPerSecond => 40f;
 
 		public GateBearing Bearing =>
 			Components.Get<GateBearing>(FindMode.EnabledInSelfAndDescendants);

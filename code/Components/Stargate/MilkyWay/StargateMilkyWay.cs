@@ -21,7 +21,7 @@
 			GateAddress = GenerateGateAddress(GateGroup);
 		}
 
-		public override float RingRotationStepSize => AcceleratedDialup ? 1f : 0.2f;
+		public override float RingSpeedPerSecond => AcceleratedDialup ? 60f : 25f;
 
 		public StargateRingMilkyWay Ring =>
 			Components.Get<StargateRingMilkyWay>(FindMode.EnabledInSelfAndDescendants);
@@ -245,7 +245,7 @@
 					OtherGate.OtherGate = this;
 				}
 
-				_ = Ring.SpinUp(); // start rotating ring
+				Ring.SpinUp(); // start rotating ring
 
 				var addrLen = address.Length;
 

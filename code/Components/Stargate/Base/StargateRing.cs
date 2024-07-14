@@ -37,10 +37,20 @@ namespace Sandbox.Components.Stargate
 		[Property, OnChange(nameof(OnRingStateChanged)), System.ComponentModel.ReadOnly(true), Sync]
 		public RingState _ringState { get; set; } = RingState.STOPPED;
 
+		public float SpeedPerSecond => Gate.IsValid() ? Gate.RingSpeedPerSecond : 40;
+
+		public float SpinUpTime { get; set; } = 1.25f;
+
+		public float SpinDownTime { get; set; } = 1.25f;
+
+		[Sync]
+		private float _curSpeedMul { get; set; } = 0;
+
 		protected override void OnUpdate()
 		{
 			base.OnUpdate();
 
+			RingAngleThink();
 			RingSymbolThink();
 			// DrawSymbols();
 
@@ -118,6 +128,35 @@ namespace Sandbox.Components.Stargate
 			return finalAng;
 		}
 
+		private void RingAngleThink()
+		{
+			if (_ringState != RingState.STOPPED)
+			{
+				if (_ringState == RingState.STARTING)
+				{
+					_curSpeedMul += Time.Delta / SpinUpTime;
+					if (_curSpeedMul >= 1)
+					{
+						_ringState = RingState.FULLSPEED;
+						_curSpeedMul = 1;
+					}
+				}
+				else if (_ringState == RingState.STOPPING)
+				{
+					_curSpeedMul -= Time.Delta / SpinDownTime;
+					if (_curSpeedMul <= 0)
+					{
+						_ringState = RingState.STOPPED;
+						_curSpeedMul = 0;
+						_ringDirection = -_ringDirection;
+						RingAngle = ((float)RingAngle).UnsignedMod(360);
+					}
+				}
+
+				RingAngle += SpeedPerSecond * Time.Delta * _curSpeedMul * _ringDirection;
+			}
+		}
+
 		public async Task<bool> RotateToSymbol(char sym, float angleOffset = 0)
 		{
 			if (_ringState != RingState.STOPPED)
@@ -128,85 +167,33 @@ namespace Sandbox.Components.Stargate
 			_curRingSymbolOffset = angleOffset;
 
 			var desiredAngle = GetDesiredRingAngleForSymbol(sym, _curRingSymbolOffset);
-			var toTravelTotal = Math.Abs(desiredAngle - RingAngle); // total angle needed to travel
-			var traveledAngle = 0f; // currently traveled angle
-			_currentRotatingToSymbol = sym.ToString();
+			var angleToRotate = Math.Abs(desiredAngle - RingAngle);
+
+			// this assumes that the ring will rotate at least as much to achieve full speed (which it should), otherwise this might get fucked
+			var totalAngleSpentSpeeding = SpinUpTime * SpeedPerSecond / 2;
+			var totalAngleSpentSlowing = SpinDownTime * SpeedPerSecond / 2;
+			var totalAngleSpentFullSpeed =
+				angleToRotate - totalAngleSpentSpeeding - totalAngleSpentSlowing;
+			var angleWhenToStartSlowing =
+				angleToRotate - totalAngleSpentSpeeding - totalAngleSpentFullSpeed;
+
 			_ringState = RingState.STARTING;
 
-			var stepSize = Gate.RingRotationStepSize;
-
-			var multiplier = 0f;
-			var traveledAngleForMaxMultiplier = 0f; // this will be the angle since travel start and fullspeed
-			// that means if we dont use same accel and deccel, its the same angle since fullspeed rotation and stop
-			for (var i = 0; i < 100; i++)
+			while (_ringState != RingState.STOPPED)
 			{
-				multiplier = (multiplier + 0.01f).Clamp(0, 1);
-				traveledAngleForMaxMultiplier += stepSize * multiplier;
-			}
-
-			var toBeginStoppingRing = toTravelTotal - traveledAngleForMaxMultiplier;
-			multiplier = 0f; // reset actual multiplier
-
-			// this will probably never be the case, but in case its neede in the future, its implemented
-			var canReachMaxMulAndStopWithMaxMul =
-				toTravelTotal > traveledAngleForMaxMultiplier * 2f;
-			if (!canReachMaxMulAndStopWithMaxMul)
-			{
-				toBeginStoppingRing = toTravelTotal / 2f;
-			}
-
-			// rotation loop
-			while (true)
-			{
-				if (traveledAngle >= toBeginStoppingRing && _ringState != RingState.STOPPING)
+				if (_ringState == RingState.FULLSPEED)
 				{
-					_ringState = RingState.STOPPING;
-				}
-
-				if (_ringState == RingState.STARTING)
-				{
-					multiplier = (multiplier + 0.01f).Clamp(0, 1);
-					if (multiplier == 1)
+					if (Math.Abs(desiredAngle - RingAngle) <= angleWhenToStartSlowing)
 					{
-						_ringState = RingState.FULLSPEED;
+						_ringState = RingState.STOPPING;
 					}
 				}
-
-				if (_ringState == RingState.STOPPING)
-				{
-					multiplier = (multiplier - 0.01f).Clamp(0, 1);
-					if (multiplier == 0)
-					{
-						_ringState = RingState.STOPPED;
-						RingAngle = RingAngle.UnsignedMod(360f);
-						_ringDirection = -_ringDirection;
-						_currentRotatingToSymbol = "";
-
-						// ring is stopped, now check if it reached what we wanted
-						if (Math.Abs(traveledAngle - toTravelTotal) <= stepSize)
-						{
-							// if we want to rotate the gate upright (sgu) or to the point of origin, force it upright
-							if (desiredAngle % 360 == 0)
-							{
-								RingAngle = 0;
-							}
-
-							return true;
-						}
-						else
-						{
-							return false;
-						}
-					}
-				}
-
-				var toTravelStep = stepSize * multiplier;
-				traveledAngle += toTravelStep;
-				RingAngle += toTravelStep * _ringDirection;
-				RingAngle = RingAngle.UnsignedMod(360f);
-
-				await Task.Delay(5);
+				await Task.FrameEnd();
 			}
+
+			// check if our final position is close enough
+			return Math.Abs(desiredAngle.UnsignedMod(360) - RingAngle)
+				<= Time.Delta * SpeedPerSecond * 2;
 		}
 
 		private void OnRingStateChanged(RingState oldValue, RingState newValue)
@@ -229,48 +216,10 @@ namespace Sandbox.Components.Stargate
 
 		public virtual void OnStopped() { }
 
-		public async Task SpinUp()
+		public void SpinUp()
 		{
-			if (_ringState != RingState.STOPPED)
-			{
-				return;
-			}
-
-			_ringState = RingState.STARTING;
-
-			var stepSize = Gate.RingRotationStepSize;
-			var multiplier = 0f;
-
-			// rotation loop
-			while (true)
-			{
-				if (_ringState == RingState.STARTING)
-				{
-					multiplier = (multiplier + 0.01f).Clamp(0, 1);
-					if (multiplier == 1)
-					{
-						_ringState = RingState.FULLSPEED;
-					}
-				}
-
-				if (_ringState == RingState.STOPPING)
-				{
-					multiplier = (multiplier - 0.01f).Clamp(0, 1);
-					if (multiplier == 0)
-					{
-						_ringState = RingState.STOPPED;
-						RingAngle = RingAngle.UnsignedMod(360f);
-						_ringDirection = -_ringDirection;
-						return;
-					}
-				}
-
-				var toTravelStep = stepSize * multiplier;
-				RingAngle += toTravelStep * _ringDirection;
-				RingAngle = RingAngle.UnsignedMod(360f);
-
-				await Task.Delay(5);
-			}
+			if (_ringState == RingState.STOPPED)
+				_ringState = RingState.STARTING;
 		}
 
 		public void SpinDown()

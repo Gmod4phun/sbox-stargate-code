@@ -5,6 +5,8 @@
 		public StargateRingUniverse()
 			: base()
 		{
+			SpinUpTime = 1f;
+			SpinDownTime = 1f;
 			StartSoundName = "stargate.universe.roll_long";
 			StopSoundName = "stargate.universe.roll_stop";
 			RingSymbols = " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3";

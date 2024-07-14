@@ -22,7 +22,7 @@ namespace Sandbox.Components.Stargate
 			EventHorizonMaterialGroup = "universe";
 		}
 
-		public override float RingRotationStepSize => 0.55f;
+		public override float RingSpeedPerSecond => 40f;
 
 		public StargateRingUniverse Ring =>
 			Components.Get<StargateRingUniverse>(FindMode.EnabledInSelfAndDescendants);

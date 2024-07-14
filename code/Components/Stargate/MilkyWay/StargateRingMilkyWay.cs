@@ -2,6 +2,13 @@
 {
 	public partial class StargateRingMilkyWay : StargateRing
 	{
+		public StargateRingMilkyWay()
+			: base()
+		{
+			SpinUpTime = 1.15f;
+			SpinDownTime = 1.25f;
+		}
+
 		public string StartSoundName { get; set; } = "stargate.milkyway.ring_start_long";
 		public string StopSoundName { get; set; } = "stargate.milkyway.ring_stop";
 
