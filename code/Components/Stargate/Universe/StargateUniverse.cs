@@ -123,11 +123,15 @@ namespace Sandbox.Components.Stargate
 			Bearing?.TurnOff();
 		}
 
-		public async Task DoPreRoll()
+		public void DoPreRoll()
 		{
 			SetChevronsGlowState(true, 0.2f);
 			PlaySound(this, GetSound("gate_activate"));
+		}
 
+		public async Task DoPreRollAsync()
+		{
+			DoPreRoll();
 			await Task.DelaySeconds(1.5f);
 		}
 
@@ -139,7 +143,7 @@ namespace Sandbox.Components.Stargate
 		public void DoResetGateRoll()
 		{
 			if (Idle)
-				Ring.RotateToSymbol(' ');
+				_ = Ring.RotateToSymbol(' ');
 		}
 
 		public void SymbolOn(char sym, bool nosound = false)
@@ -332,7 +336,7 @@ namespace Sandbox.Components.Stargate
 				if (ShouldStopDialing || !Dialing)
 					return;
 
-				await DoPreRoll();
+				await DoPreRollAsync();
 
 				//await Task.DelaySeconds( 1.5f );
 
@@ -616,7 +620,7 @@ namespace Sandbox.Components.Stargate
 
 			if (chevNum == 1)
 			{
-				await DoPreRoll();
+				await DoPreRollAsync();
 			}
 
 			var success = await RotateRingToSymbol(sym); // wait for ring to rotate to the target symbol

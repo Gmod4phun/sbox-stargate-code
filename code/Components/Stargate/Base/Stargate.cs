@@ -875,7 +875,7 @@ namespace Sandbox.Components.Stargate
 			// if we try to encode 9th symbol, do a lock instead
 			if (DialingAddress.Length == 8)
 			{
-				DoManualChevronLock(sym);
+				_ = DoManualChevronLock(sym);
 				return false;
 			}
 
