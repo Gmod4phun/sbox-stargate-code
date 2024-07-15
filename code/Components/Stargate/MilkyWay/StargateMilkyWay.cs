@@ -21,7 +21,7 @@
 			GateAddress = GenerateGateAddress(GateGroup);
 		}
 
-		public override float RingSpeedPerSecond => AcceleratedDialup ? 60f : 25f;
+		public override float RingSpeedPerSecond => AcceleratedDialup ? 100f : 25f;
 
 		public StargateRingMilkyWay Ring =>
 			Components.Get<StargateRingMilkyWay>(FindMode.EnabledInSelfAndDescendants);
@@ -526,7 +526,7 @@
 						return;
 					}
 
-					await Task.DelaySeconds(MovieDialingType ? 0.15f : 0.75f); // wait a bit
+					await Task.DelaySeconds(MovieDialingType ? 0.15f : 0.85f); // wait a bit
 
 					if (isLastChev)
 						target = FindDestinationGateByDialingAddress(this, address); // if its last chevron, try to find the target gate
@@ -548,7 +548,7 @@
 
 							if (ChevronLightup)
 							{
-								chev.PlayOpenSound(0.2f);
+								chev.PlayOpenSound(0.4f);
 								chev.TurnOn(0.5f);
 								topChev.TurnOn(0.5f);
 							}

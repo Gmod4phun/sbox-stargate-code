@@ -179,6 +179,7 @@ namespace Sandbox.Components.Stargate
 
 			_ringState = RingState.STARTING;
 
+			var wasStoppedOnPurpose = false;
 			while (_ringState != RingState.STOPPED)
 			{
 				if (_ringState == RingState.FULLSPEED)
@@ -186,14 +187,13 @@ namespace Sandbox.Components.Stargate
 					if (Math.Abs(desiredAngle - RingAngle) <= angleWhenToStartSlowing)
 					{
 						_ringState = RingState.STOPPING;
+						wasStoppedOnPurpose = true;
 					}
 				}
 				await Task.FrameEnd();
 			}
 
-			// check if our final position is close enough
-			return Math.Abs(desiredAngle.UnsignedMod(360) - RingAngle)
-				<= Time.Delta * SpeedPerSecond * 2;
+			return wasStoppedOnPurpose;
 		}
 
 		private void OnRingStateChanged(RingState oldValue, RingState newValue)

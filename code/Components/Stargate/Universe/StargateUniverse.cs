@@ -22,7 +22,7 @@ namespace Sandbox.Components.Stargate
 			EventHorizonMaterialGroup = "universe";
 		}
 
-		public override float RingSpeedPerSecond => 40f;
+		public override float RingSpeedPerSecond => 50f;
 
 		public StargateRingUniverse Ring =>
 			Components.Get<StargateRingUniverse>(FindMode.EnabledInSelfAndDescendants);
