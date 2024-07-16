@@ -48,9 +48,6 @@ namespace Sandbox.Components.Stargate.Rings
 			if (obj.Tags.Has("rings_no_teleport"))
 				return false;
 
-			if (!MultiWorldSystem.AreObjectsInSameWorld(obj, GameObject))
-				return false;
-
 			if (obj.Tags.Has("player") && obj.Components.Get<PlayerController>().IsValid())
 				return true;
 
@@ -184,6 +181,10 @@ namespace Sandbox.Components.Stargate.Rings
 				e.Transform.Position = newPos;
 				e.Transform.Rotation = newRot;
 				e.Transform.ClearInterpolation();
+
+				// handle multiWorld switching
+				var targetWorldIndex = MultiWorldSystem.GetWorldIndexOfObject(to.GameObject);
+				MultiWorldSystem.AssignWorldToObject(e, targetWorldIndex);
 
 				if (prevOwner != null)
 					e.Network.AssignOwnership(prevOwner);
