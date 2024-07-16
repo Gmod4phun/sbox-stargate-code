@@ -81,6 +81,21 @@ public class MultiWorldSystem : GameObjectSystem
 		return false;
 	}
 
+	public static bool AreObjectsInSameWorld(Component a, Component b)
+	{
+		return AreObjectsInSameWorld(a.GameObject, b.GameObject);
+	}
+
+	public static bool AreObjectsInSameWorld(GameObject a, Component b)
+	{
+		return AreObjectsInSameWorld(a, b.GameObject);
+	}
+
+	public static bool AreObjectsInSameWorld(Component a, GameObject b)
+	{
+		return AreObjectsInSameWorld(a.GameObject, b);
+	}
+
 	public static void AssignWorldToObject(GameObject gameObject, int worldIndex)
 	{
 		AssignBroadcast(gameObject.Id, worldIndex);

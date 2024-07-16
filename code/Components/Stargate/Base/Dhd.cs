@@ -187,7 +187,7 @@ namespace Sandbox.Components.Stargate
 		public virtual async void PostSpawn()
 		{
 			await Task.FixedUpdate();
-			TryAssignGate(Stargate.FindNearestGate(GameObject, 1024));
+			TryAssignGate(Stargate.FindNearestGate(GameObject, 1024, true));
 		}
 
 		/// <summary>

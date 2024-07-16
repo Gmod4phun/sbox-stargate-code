@@ -374,10 +374,18 @@ namespace Sandbox.Components.Stargate
 		/// </summary>
 		/// <param name="ent">The entity that will be the first point of remoteness.</param>
 		/// <param name="maxDistance">The maximum distance. No limit by default.</param>
+		/// <param name="sameWorld">Whether or not the gate should be in the same world as the GameObject.</param>
 		/// <returns>A gate that matches the parameter.</returns>
-		public static Stargate FindNearestGate(GameObject ent, float maxDistance = -1)
+		public static Stargate FindNearestGate(
+			GameObject ent,
+			float maxDistance = -1,
+			bool sameWorld = false
+		)
 		{
-			var allGates = Game.ActiveScene.GetAllComponents<Stargate>().ToList();
+			var allGates = Game
+				.ActiveScene.GetAllComponents<Stargate>()
+				.Where(g => !sameWorld || MultiWorldSystem.AreObjectsInSameWorld(g, ent))
+				.ToList();
 			if (allGates.Count() is 0)
 				return null;
 
@@ -401,7 +409,10 @@ namespace Sandbox.Components.Stargate
 		/// <returns>A gate that matches the parameter.</returns>
 		public static Stargate FindFarthestGate(GameObject ent, float maxDistance = -1)
 		{
-			var allGates = Game.ActiveScene.GetAllComponents<Stargate>().ToList();
+			var allGates = Game
+				.ActiveScene.GetAllComponents<Stargate>()
+				.Where(g => MultiWorldSystem.AreObjectsInSameWorld(g, ent))
+				.ToList();
 			if (allGates.Count() is 0)
 				return null;
 
