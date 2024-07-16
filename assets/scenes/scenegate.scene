@@ -262,6 +262,13 @@
               "__type": "PlayerHud",
               "__guid": "9af0f902-c43c-42b6-8e88-4a9c21e5681e",
               "Visible": false
+            },
+            {
+              "__type": "Sandbox.AmbientOcclusion",
+              "__guid": "3e0d5697-f630-402d-b2b8-00e3089c940c",
+              "Intensity": 6,
+              "Quality": "High",
+              "Radius": 16
             }
           ]
         }
