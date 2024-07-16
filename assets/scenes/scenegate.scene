@@ -334,19 +334,6 @@
           "__PrefabVariables": {}
         },
         {
-          "__guid": "bc89f6f0-55e7-4205-833a-697f576b7731",
-          "Flags": 0,
-          "Name": "ringpanelori",
-          "Position": "250,512,78",
-          "Tags": "rings_no_teleport",
-          "Enabled": true,
-          "NetworkMode": 1,
-          "NetworkOrphaned": 1,
-          "OwnerTransfer": 0,
-          "__Prefab": "prefabs/ringpanelori.prefab",
-          "__PrefabVariables": {}
-        },
-        {
           "__guid": "702cb8e0-52a3-4c0c-8803-83aba9e264fd",
           "Flags": 0,
           "Name": "Dhd (1)",
@@ -1026,19 +1013,6 @@
           ]
         },
         {
-          "__guid": "e2895ed9-0246-4760-abf9-08d99f7c21b6",
-          "Flags": 0,
-          "Name": "Ring Panel (Goauld)",
-          "Position": "250,192,48",
-          "Tags": "rings_no_teleport",
-          "Enabled": true,
-          "NetworkMode": 1,
-          "NetworkOrphaned": 1,
-          "OwnerTransfer": 0,
-          "__Prefab": "prefabs/ringpanelgoauld.prefab",
-          "__PrefabVariables": {}
-        },
-        {
           "__guid": "8876044e-22e2-475c-bf9c-a8a8c9eff4e1",
           "Flags": 0,
           "Name": "Ring Panel (Ancient)",
@@ -1105,100 +1079,6 @@
               "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ]
-        },
-        {
-          "__guid": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
-          "Flags": 0,
-          "Name": "Ring Transporter (Ori) (253)",
-          "Position": "340,512,0",
-          "Tags": "ringplatform,rings_no_teleport",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
-              "__guid": "de7d7dcc-603f-4ee0-b22f-7f40d7b5bccc",
-              "Address": "253",
-              "Collider": {
-                "_type": "component",
-                "component_id": "54aadd1d-a01c-4983-a2a5-e3c786758c29",
-                "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
-                "component_type": "ModelCollider"
-              },
-              "PlatformHeightOffset": 20,
-              "Renderer": {
-                "_type": "component",
-                "component_id": "29df19d0-e25b-4257-845f-c2222c9ea683",
-                "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "RingModel": "models/sbox_stargate/rings_ori/ring_ori.vmdl",
-              "RingsRestingHeightOffset": 12
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "54aadd1d-a01c-4983-a2a5-e3c786758c29",
-              "IsTrigger": false,
-              "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "29df19d0-e25b-4257-845f-c2222c9ea683",
-              "BodyGroups": 18446744073709551615,
-              "CreateBoneObjects": false,
-              "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ]
-        },
-        {
-          "__guid": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
-          "Flags": 0,
-          "Name": "Ring Transporter (7241)",
-          "Position": "340,192,0",
-          "Tags": "ringplatform,rings_no_teleport",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
-              "__guid": "d4c2e446-7499-45ee-b664-80eac5e796d7",
-              "Address": "7241",
-              "Collider": {
-                "_type": "component",
-                "component_id": "0bc53a89-4274-4fe3-bc57-ad2f7a679ef1",
-                "go": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
-                "component_type": "ModelCollider"
-              },
-              "PlatformHeightOffset": 0,
-              "Renderer": {
-                "_type": "component",
-                "component_id": "642460fe-d17f-419d-85ae-fb2fb25fcc68",
-                "go": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
-              "RingsRestingHeightOffset": -8
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "0bc53a89-4274-4fe3-bc57-ad2f7a679ef1",
-              "IsTrigger": false,
-              "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "642460fe-d17f-419d-85ae-fb2fb25fcc68",
-              "BodyGroups": 18446744073709551615,
-              "CreateBoneObjects": false,
-              "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -4562,6 +4442,126 @@
               "SkyColor": "0.05882,0.07451,0.08235,1"
             }
           ]
+        },
+        {
+          "__guid": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
+          "Flags": 0,
+          "Name": "Ring Transporter (7241)",
+          "Position": "340,192,0",
+          "Tags": "ringplatform,rings_no_teleport",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
+              "__guid": "d4c2e446-7499-45ee-b664-80eac5e796d7",
+              "Address": "7241",
+              "Collider": {
+                "_type": "component",
+                "component_id": "0bc53a89-4274-4fe3-bc57-ad2f7a679ef1",
+                "go": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
+                "component_type": "ModelCollider"
+              },
+              "PlatformHeightOffset": 0,
+              "Renderer": {
+                "_type": "component",
+                "component_id": "642460fe-d17f-419d-85ae-fb2fb25fcc68",
+                "go": "1a3ee758-ec4a-4815-b109-44cfe24de3c8",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "RingModel": "models/sbox_stargate/rings_ancient/ring_ancient.vmdl",
+              "RingsRestingHeightOffset": -8
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "0bc53a89-4274-4fe3-bc57-ad2f7a679ef1",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "642460fe-d17f-419d-85ae-fb2fb25fcc68",
+              "BodyGroups": 18446744073709551615,
+              "CreateBoneObjects": false,
+              "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        },
+        {
+          "__guid": "e2895ed9-0246-4760-abf9-08d99f7c21b6",
+          "Flags": 0,
+          "Name": "Ring Panel (Goauld)",
+          "Position": "250,192,48",
+          "Tags": "rings_no_teleport",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
+          "__Prefab": "prefabs/ringpanelgoauld.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+          "Flags": 0,
+          "Name": "Ring Transporter (Ori) (253)",
+          "Position": "340,512,0",
+          "Tags": "ringplatform,rings_no_teleport",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
+              "__guid": "de7d7dcc-603f-4ee0-b22f-7f40d7b5bccc",
+              "Address": "253",
+              "Collider": {
+                "_type": "component",
+                "component_id": "54aadd1d-a01c-4983-a2a5-e3c786758c29",
+                "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+                "component_type": "ModelCollider"
+              },
+              "PlatformHeightOffset": 20,
+              "Renderer": {
+                "_type": "component",
+                "component_id": "29df19d0-e25b-4257-845f-c2222c9ea683",
+                "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "RingModel": "models/sbox_stargate/rings_ori/ring_ori.vmdl",
+              "RingsRestingHeightOffset": 12
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "54aadd1d-a01c-4983-a2a5-e3c786758c29",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "29df19d0-e25b-4257-845f-c2222c9ea683",
+              "BodyGroups": 18446744073709551615,
+              "CreateBoneObjects": false,
+              "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        },
+        {
+          "__guid": "bc89f6f0-55e7-4205-833a-697f576b7731",
+          "Flags": 0,
+          "Name": "ringpanelori",
+          "Position": "250,512,78",
+          "Tags": "rings_no_teleport",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
+          "__Prefab": "prefabs/ringpanelori.prefab",
+          "__PrefabVariables": {}
         }
       ]
     },
