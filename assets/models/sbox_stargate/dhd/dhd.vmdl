@@ -78,11 +78,11 @@
 						[
 							{
 								from = "crystal_yellow.vmat"
-								to = "models/sbox_stargate/dhd/dhd_crystal_yellow.vmat"
+								to = "models/sbox_stargate/dhd/dhd_crystals.vmat"
 							},
 							{
 								from = "crystal_red.vmat"
-								to = "models/sbox_stargate/dhd/dhd_crystal_red.vmat"
+								to = "models/sbox_stargate/dhd/dhd_crystals.vmat"
 							},
 							{
 								from = "crystal_main.vmat"
@@ -90,7 +90,7 @@
 							},
 							{
 								from = "crystal_blue.vmat"
-								to = "models/sbox_stargate/dhd/dhd_crystal_blue.vmat"
+								to = "models/sbox_stargate/dhd/dhd_crystals.vmat"
 							},
 							{
 								from = "dhd.vmat"
@@ -193,6 +193,7 @@
 						ignore_Translation = false
 						ignore_rotation = false
 						do_not_discard = true
+						hidden = false
 					},
 				]
 				bone_cull_type = "None"
