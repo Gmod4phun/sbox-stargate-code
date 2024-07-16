@@ -86,6 +86,17 @@
 		// 	StartSoundInstance?.Stop( 1.2f );
 		// }
 
+		public override void OnStarting()
+		{
+			PlayStartSound();
+		}
+
+		public override void OnStopped()
+		{
+			PlayStopSound();
+			StopStartSound();
+		}
+
 		protected override void OnDestroy()
 		{
 			StartSoundInstance?.Stop();
