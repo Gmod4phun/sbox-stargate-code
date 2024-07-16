@@ -11,8 +11,8 @@ Layer0
 	g_bFogEnabled "1"
 
 	//---- Glass ----
-	g_flBlurAmount "0.000"
-	g_flRefractionStrength "1.005"
+	g_flBlurAmount "0.025"
+	g_flRefractionStrength "1.010"
 
 	//---- Material ----
 	g_flTintColor "[1.000000 1.000000 1.000000 0.000000]"
@@ -32,6 +32,6 @@ Layer0
 	TextureColorB "models/sbox_stargate/dhd_atlantis/src/tex/dhd_atlantis_crystals_trans.tga"
 	TextureMetalnessB "materials/default/default_metal.tga"
 	TextureNormalB "materials/default/default_normal.tga"
-	TextureRoughnessB "[0.979000 0.979000 0.979000 0.000000]"
+	TextureRoughnessB "[0.200000 0.200000 0.200000 0.000000]"
 	TextureTranslucencyB "models/sbox_stargate/dhd_atlantis/src/tex/dhd_atlantis_crystals_trans.tga"
 }

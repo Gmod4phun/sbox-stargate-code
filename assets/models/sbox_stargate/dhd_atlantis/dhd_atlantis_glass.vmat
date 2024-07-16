@@ -8,7 +8,7 @@ Layer0
 	g_bFogEnabled "1"
 
 	//---- Glass ----
-	g_flBlurAmount "0.001"
+	g_flBlurAmount "0.005"
 	g_flRefractionStrength "1.000"
 
 	//---- Material ----
