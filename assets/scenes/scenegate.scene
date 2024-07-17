@@ -7394,6 +7394,83 @@
           "OwnerTransfer": 0,
           "__Prefab": "prefabs/dhdatlantis.prefab",
           "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b5d5ac6f-84e0-4114-8b6b-fb7b891b6af0",
+          "Flags": 0,
+          "Name": "zpm_hub_atlantis",
+          "Position": "430,360,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "0217b1f0-a094-45e8-9278-0622469eacce",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_atlantis/zpm_hub_atlantis.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "93e2ac3f-9091-441f-b7a1-4c7f82077d09",
+              "Flags": 0,
+              "Name": "zpm",
+              "Position": "6,-10.4,41.2",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "2b126b76-b825-4b83-8cc8-a69a1b3345ba",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 0,
+                  "IsStatic": true,
+                  "MaterialGroup": "on",
+                  "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
+              "Flags": 0,
+              "Name": "zpm",
+              "Position": "-12.25,-0,41.2",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "18a90119-c1f5-45bf-b410-4a2c17d85e43",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 0,
+                  "IsStatic": true,
+                  "MaterialGroup": "on",
+                  "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3f1c0721-b4be-4baa-a69c-1dd4cc7d053b",
+              "Flags": 0,
+              "Name": "zpm",
+              "Position": "6,10.4,41.2",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "e284eb6d-cbb4-4d6e-8a62-ff494c250e30",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 0,
+                  "IsStatic": true,
+                  "MaterialGroup": "on",
+                  "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
