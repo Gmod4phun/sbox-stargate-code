@@ -272,43 +272,45 @@ public class PlayerController : Component
 
 			// stuff for testing purposes
 
+			/*
 			if (Input.Pressed("Attack1"))
 			{
-				UtilityFunctions.ShootProp(
-					Eye.Transform.Position + EyeAngles.Forward * 64,
-					EyeAngles.Forward,
-					1000,
-					CurrentWorldIndex
-				);
+			    UtilityFunctions.ShootProp(
+			        Eye.Transform.Position + EyeAngles.Forward * 64,
+			        EyeAngles.Forward,
+			        1000,
+			        CurrentWorldIndex
+			    );
 			}
 
 			if (Input.Pressed("Attack2"))
 			{
-				var tr = Scene
-					.Trace.Ray(
-						cam.Transform.Position,
-						cam.Transform.Position + lookDir.Forward * 500
-					)
-					.WithoutTags("player_collider")
-					.WithTag(MultiWorldSystem.GetWorldTag(CurrentWorldIndex))
-					.Run();
+			    var tr = Scene
+			        .Trace.Ray(
+			            cam.Transform.Position,
+			            cam.Transform.Position + lookDir.Forward * 500
+			        )
+			        .WithoutTags("player_collider")
+			        .WithTag(MultiWorldSystem.GetWorldTag(CurrentWorldIndex))
+			        .Run();
 
-				var pos = tr.HitPosition;
-				var rot = new Angles(0, EyeAngles.yaw + 180, 0).ToRotation();
+			    var pos = tr.HitPosition;
+			    var rot = new Angles(0, EyeAngles.yaw + 180, 0).ToRotation();
 
-				if (tr.Hit)
-				{
-					_ = UtilityFunctions.SpawnProp(
-						pos,
-						rot,
-						"facepunch.oildrumexplosive",
-						CurrentWorldIndex
-					);
-				}
+			    if (tr.Hit)
+			    {
+			        _ = UtilityFunctions.SpawnProp(
+			            pos,
+			            rot,
+			            "facepunch.oildrumexplosive",
+			            CurrentWorldIndex
+			        );
+			    }
 
-				// UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
-				// ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
+			    // UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
+			    // ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
+			*/
 		}
 
 		var cc = Controller;

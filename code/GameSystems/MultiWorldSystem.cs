@@ -392,3 +392,13 @@ public class MultiWorldSystem : GameObjectSystem
 		}
 	}
 }
+
+public static class MultiWorldSystemExtensions
+{
+	public static SceneTrace WithWorld(this SceneTrace trace, GameObject go)
+	{
+		return trace.WithTag(
+			MultiWorldSystem.GetWorldTag(MultiWorldSystem.GetWorldIndexOfObject(go))
+		);
+	}
+}
