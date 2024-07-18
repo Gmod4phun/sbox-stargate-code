@@ -401,4 +401,17 @@ public static class MultiWorldSystemExtensions
 			MultiWorldSystem.GetWorldTag(MultiWorldSystem.GetWorldIndexOfObject(go))
 		);
 	}
+
+	public static void ClearParent(this GameObject go)
+	{
+		var worldIndex = MultiWorldSystem.GetWorldIndexOfObject(go);
+		if (MultiWorldSystem.WorldExists(worldIndex))
+		{
+			go.SetParent(MultiWorldSystem.GetWorldByIndex(worldIndex).GameObject, true);
+		}
+		else
+		{
+			go.SetParent(null, true);
+		}
+	}
 }

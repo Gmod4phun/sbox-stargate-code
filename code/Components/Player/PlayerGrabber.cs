@@ -18,7 +18,7 @@ public class PlayerGrabber : Component
 	[Property, Range(1, 16)]
 	public float MovementSmoothness { get; set; } = 3.0f;
 
-	PhysicsBody grabbedBody;
+	Rigidbody grabbedBody;
 	Transform grabbedOffset;
 	Vector3 localOffset;
 
@@ -31,12 +31,10 @@ public class PlayerGrabber : Component
 
 		Transform aimTransform = Scene.Camera.Transform.World;
 
-		if (waitForUp && Input.Down("attack1"))
+		if (waitForUp)
 		{
 			return;
 		}
-
-		waitForUp = false;
 
 		if (grabbedBody.IsValid())
 		{
@@ -54,7 +52,9 @@ public class PlayerGrabber : Component
 
 			var targetTx = aimTransform.ToWorld(grabbedOffset);
 
-			var worldStart = grabbedBody.GetLerpedTransform(Time.Now).PointToWorld(localOffset);
+			var worldStart = grabbedBody
+				.PhysicsBody.GetLerpedTransform(Time.Now)
+				.PointToWorld(localOffset);
 			var worldEnd = targetTx.PointToWorld(localOffset);
 
 			//var delta = Scene.Camera.Transform.World.PointToWorld( new Vector3( 0, -10, -5 ) ) - worldStart;
@@ -76,6 +76,12 @@ public class PlayerGrabber : Component
 			}
 			else
 			{
+				if (grabbedBody.IsAttached())
+				{
+					grabbedOffset = default;
+					grabbedBody = default;
+				}
+
 				return;
 			}
 		}
@@ -94,12 +100,18 @@ public class PlayerGrabber : Component
 			.WithWorld(GameObject)
 			.Run();
 
-		if (!tr.Hit || tr.Body is null || tr.Body.BodyType != PhysicsBodyType.Dynamic)
+		if (!tr.Hit || tr.Body is null)
+			return;
+
+		if (tr.Body.GetComponent() is not Rigidbody body)
+			return;
+
+		if (body.IsAttached())
 			return;
 
 		if (Input.Down("attack1"))
 		{
-			grabbedBody = tr.Body;
+			grabbedBody = body;
 			localOffset = tr.Body.Transform.PointToLocal(tr.HitPosition);
 			grabbedOffset = aimTransform.ToLocal(tr.Body.Transform);
 			grabbedBody.MotionEnabled = true;
@@ -113,19 +125,26 @@ public class PlayerGrabber : Component
 
 		Transform aimTransform = Scene.Camera.Transform.World;
 
-		if (waitForUp && Input.Down("attack1"))
+		if (waitForUp)
 		{
-			return;
+			if (Input.Down("attack1") || Input.Down("attack2"))
+			{
+				return;
+			}
 		}
 
 		waitForUp = false;
 
-		if (grabbedBody.IsValid())
+		if (grabbedBody is not null)
 		{
 			if (Input.Down("attack1"))
 			{
 				var targetTx = aimTransform.ToWorld(grabbedOffset);
-				grabbedBody.SmoothMove(targetTx, Time.Delta * MovementSmoothness, Time.Delta);
+				grabbedBody.PhysicsBody.SmoothMove(
+					targetTx,
+					Time.Delta * MovementSmoothness,
+					Time.Delta
+				);
 				return;
 			}
 		}
