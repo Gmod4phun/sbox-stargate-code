@@ -7447,7 +7447,7 @@
                   "__type": "AttachPoint",
                   "__guid": "47cebe2b-479d-4469-a612-392e32344b79",
                   "TimeSinceLastDetach": {
-                    "Relative": 15412.369
+                    "Relative": 15472.297
                   },
                   "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
@@ -7486,7 +7486,7 @@
                   "__type": "AttachPoint",
                   "__guid": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
                   "TimeSinceLastDetach": {
-                    "Relative": 15412.369
+                    "Relative": 15472.297
                   },
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
                   "IsAttached": false,
@@ -7524,7 +7524,7 @@
                   "__type": "AttachPoint",
                   "__guid": "403b7767-a194-417c-8a5a-0f999b4c6209",
                   "TimeSinceLastDetach": {
-                    "Relative": 15412.369
+                    "Relative": 15472.297
                   },
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
                   "IsAttached": false,
