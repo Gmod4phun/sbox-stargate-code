@@ -38,4 +38,20 @@ public class ZPM : Component
 			return false;
 		};
 	}
+
+	public void TurnOn()
+	{
+		if (Components.TryGet<ModelRenderer>(out var modelRenderer))
+		{
+			modelRenderer.MaterialGroup = "glowing";
+		}
+	}
+
+	public void TurnOff()
+	{
+		if (Components.TryGet<ModelRenderer>(out var modelRenderer))
+		{
+			modelRenderer.MaterialGroup = "default";
+		}
+	}
 }

@@ -21,6 +21,8 @@ public class ZPMSlot : Component
 		if (IsMoving)
 			return;
 
+		MultiWorldSound.Play(IsUp ? "zpm.hub.in" : "zpm.hub.out", GameObject);
+
 		var moveTime = 1f;
 		var totalMovedDistance = 0f;
 
@@ -43,5 +45,27 @@ public class ZPMSlot : Component
 	{
 		base.OnStart();
 		IsUp = StartsUp;
+
+		if (StartsUp)
+		{
+			Transform.Position += Transform.Rotation.Up * MoveDistance;
+		}
+	}
+
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		if (ZPM.IsValid())
+		{
+			if (IsMoving || IsUp)
+			{
+				ZPM.TurnOff();
+			}
+			else
+			{
+				ZPM.TurnOn();
+			}
+		}
 	}
 }

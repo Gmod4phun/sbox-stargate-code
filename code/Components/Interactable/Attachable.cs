@@ -19,12 +19,12 @@ public class Attachable : Component, IUse
 	[Property]
 	public bool ContinuousUse { get; set; } = false;
 
-	public void AttachTo(AttachPoint attachPoint)
+	public void AttachTo(AttachPoint attachPoint, bool force = false)
 	{
 		if (IsAttached || !Body.IsValid())
 			return;
 
-		if (TryAttachAction != null && !TryAttachAction.Invoke(attachPoint))
+		if (!force && TryAttachAction != null && !TryAttachAction.Invoke(attachPoint))
 			return;
 
 		Body.MotionEnabled = false;

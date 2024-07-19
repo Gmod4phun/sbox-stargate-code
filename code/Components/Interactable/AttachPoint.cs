@@ -15,6 +15,9 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 	[Property]
 	public TimeSince TimeSinceLastDetach = 0;
 
+	[Property]
+	public PrefabFile DefaultPrefab { get; set; }
+
 	Material GuideMaterial { get; set; } =
 		Material.Load("materials/dev/primary_white_emissive.vmat");
 	Color GuideColor { get; set; } = Color.Orange.WithAlpha(0.4f);
@@ -42,6 +45,17 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 		using (Gizmo.Scope("AttachPointGuideModelScope", Transform.World))
 		{
 			DrawGizmos();
+		}
+	}
+
+	protected override void OnStart()
+	{
+		base.OnStart();
+
+		if (DefaultPrefab != null)
+		{
+			var go = SceneUtility.GetPrefabScene(DefaultPrefab).Clone();
+			TryAttachGameObject(go);
 		}
 	}
 
