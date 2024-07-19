@@ -7420,42 +7420,34 @@
             {
               "__type": "ZPMHub",
               "__guid": "1a9522ee-063d-4450-b4ef-dfe93af23a01",
-              "AttachPointCount": 3,
-              "AttachPoints": [
-                {
-                  "_type": "component",
-                  "component_id": "f381be1a-86fe-4860-bc87-0a6f3545f07e",
-                  "go": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
-                  "component_type": "AttachPoint"
-                },
-                {
-                  "_type": "component",
-                  "component_id": "8f8c18d6-c994-43e2-863d-e0864fc50e93",
-                  "go": "5b6a399f-bf01-42c6-8ee2-227927a7aeba",
-                  "component_type": "AttachPoint"
-                },
-                {
-                  "_type": "component",
-                  "component_id": "1ac24463-51f2-4eec-b2e2-590ca0096bdd",
-                  "go": "c9f9c492-5f1b-461c-a1b9-3ab985e76d5e",
-                  "component_type": "AttachPoint"
-                }
-              ]
+              "ActiveZPMs": 0
             }
           ],
           "Children": [
             {
               "__guid": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
               "Flags": 0,
-              "Name": "ZPM Attach Point",
-              "Position": "-12.25,0,41",
+              "Name": "ZPM Slot",
+              "Position": "-12.25,0,49",
               "Enabled": true,
               "Components": [
                 {
+                  "__type": "ZPMSlot",
+                  "__guid": "e4fbd724-c43e-400f-93d0-78362c4516b3",
+                  "StartsUp": true,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "47cebe2b-479d-4469-a612-392e32344b79",
+                    "go": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
+                    "component_type": "AttachPoint"
+                  },
+                  "MoveDistance": 8
+                },
+                {
                   "__type": "AttachPoint",
-                  "__guid": "f381be1a-86fe-4860-bc87-0a6f3545f07e",
+                  "__guid": "47cebe2b-479d-4469-a612-392e32344b79",
                   "TimeSinceLastDetach": {
-                    "Relative": 6737.1206
+                    "Relative": 11311.841
                   },
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
                   "IsAttached": false,
@@ -7463,7 +7455,7 @@
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
-                  "__guid": "89c20110-103f-4932-9cb9-5772c0645764",
+                  "__guid": "22489682-2940-40f8-910f-fe37945532d4",
                   "IsTrigger": true,
                   "Model": "models/sbox_stargate/zpm/zpm.vmdl",
                   "Static": false
@@ -7471,17 +7463,29 @@
               ]
             },
             {
-              "__guid": "5b6a399f-bf01-42c6-8ee2-227927a7aeba",
+              "__guid": "f1d2bc28-9d2e-43ec-b6d8-75387d2218e4",
               "Flags": 0,
-              "Name": "ZPM Attach Point",
-              "Position": "6.1,10.4,41",
+              "Name": "ZPM Slot",
+              "Position": "6,-10.4,49",
               "Enabled": true,
               "Components": [
                 {
+                  "__type": "ZPMSlot",
+                  "__guid": "efeece8c-a358-4d1b-8dad-8d765ce8d602",
+                  "StartsUp": true,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
+                    "go": "f1d2bc28-9d2e-43ec-b6d8-75387d2218e4",
+                    "component_type": "AttachPoint"
+                  },
+                  "MoveDistance": 8
+                },
+                {
                   "__type": "AttachPoint",
-                  "__guid": "8f8c18d6-c994-43e2-863d-e0864fc50e93",
+                  "__guid": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
                   "TimeSinceLastDetach": {
-                    "Relative": 6737.1206
+                    "Relative": 11311.841
                   },
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
                   "IsAttached": false,
@@ -7489,7 +7493,7 @@
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
-                  "__guid": "597f30d0-6e25-4625-a55c-efffc8714fb7",
+                  "__guid": "f58bb75b-4ac8-4ee4-9a0d-15598a02309d",
                   "IsTrigger": true,
                   "Model": "models/sbox_stargate/zpm/zpm.vmdl",
                   "Static": false
@@ -7497,17 +7501,29 @@
               ]
             },
             {
-              "__guid": "c9f9c492-5f1b-461c-a1b9-3ab985e76d5e",
+              "__guid": "22fa9845-e092-441d-8987-e47f03196ea8",
               "Flags": 0,
-              "Name": "ZPM Attach Point",
-              "Position": "6.100006,-10.4,41",
+              "Name": "ZPM Slot",
+              "Position": "6,10.4,49",
               "Enabled": true,
               "Components": [
                 {
+                  "__type": "ZPMSlot",
+                  "__guid": "617044ce-e9fa-4cb6-807c-dccc20e456f8",
+                  "StartsUp": true,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "403b7767-a194-417c-8a5a-0f999b4c6209",
+                    "go": "22fa9845-e092-441d-8987-e47f03196ea8",
+                    "component_type": "AttachPoint"
+                  },
+                  "MoveDistance": 8
+                },
+                {
                   "__type": "AttachPoint",
-                  "__guid": "1ac24463-51f2-4eec-b2e2-590ca0096bdd",
+                  "__guid": "403b7767-a194-417c-8a5a-0f999b4c6209",
                   "TimeSinceLastDetach": {
-                    "Relative": 6737.1206
+                    "Relative": 11311.841
                   },
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
                   "IsAttached": false,
@@ -7515,116 +7531,12 @@
                 },
                 {
                   "__type": "Sandbox.ModelCollider",
-                  "__guid": "0b703ed0-9005-479d-a8e9-677a2a04bbdf",
+                  "__guid": "1c0d511e-8032-47ce-a2e2-22df743eac5c",
                   "IsTrigger": true,
                   "Model": "models/sbox_stargate/zpm/zpm.vmdl",
                   "Static": false
                 }
               ]
-            }
-          ]
-        },
-        {
-          "__guid": "93e2ac3f-9091-441f-b7a1-4c7f82077d09",
-          "Flags": 0,
-          "Name": "ZPM",
-          "Position": "436,349.6,56",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "8f6e4a94-cf84-464a-a11f-25ed4a82e4f5",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "9174396b-c604-49b6-a2dd-c61dae2a0845",
-              "IsTrigger": false,
-              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "126635d9-3b86-4d77-b37f-b91696556f58",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {},
-              "MassOverride": 0,
-              "MotionEnabled": true,
-              "RigidbodyFlags": "DisableCollisionSounds",
-              "StartAsleep": false
-            },
-            {
-              "__type": "Attachable",
-              "__guid": "7b2201b2-25f5-4a81-95d5-1a2b773ecfa8",
-              "AttachableType": "ZPM",
-              "Body": {
-                "_type": "component",
-                "component_id": "126635d9-3b86-4d77-b37f-b91696556f58",
-                "go": "93e2ac3f-9091-441f-b7a1-4c7f82077d09",
-                "component_type": "Rigidbody"
-              },
-              "IsAttached": false
-            },
-            {
-              "__type": "ZPM",
-              "__guid": "30da4892-8c3a-4f0d-8271-c75bd30c49b5"
-            }
-          ]
-        },
-        {
-          "__guid": "1eede131-1725-4817-abce-85bcab7eb4b8",
-          "Flags": 0,
-          "Name": "ZPM",
-          "Position": "436,370.5,56",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "a5cfe8e7-3672-4e65-bb56-fb9fe0cb0e90",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "ab21ab62-fb70-445e-b8e7-2b72da29dc8a",
-              "IsTrigger": false,
-              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "4034def5-322b-4c8a-96cf-1942181290da",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {},
-              "MassOverride": 0,
-              "MotionEnabled": true,
-              "RigidbodyFlags": "DisableCollisionSounds",
-              "StartAsleep": false
-            },
-            {
-              "__type": "Attachable",
-              "__guid": "c6f1320a-e1ac-4963-95cf-98ae037badd4",
-              "AttachableType": "ZPM",
-              "Body": {
-                "_type": "component",
-                "component_id": "4034def5-322b-4c8a-96cf-1942181290da",
-                "go": "1eede131-1725-4817-abce-85bcab7eb4b8",
-                "component_type": "Rigidbody"
-              },
-              "IsAttached": false
-            },
-            {
-              "__type": "ZPM",
-              "__guid": "b2ed0c92-5aef-4ee8-981d-6c769d75382c"
             }
           ]
         },
@@ -7632,7 +7544,7 @@
           "__guid": "2a935461-721f-49bb-8b66-a449b0655413",
           "Flags": 0,
           "Name": "ZPM",
-          "Position": "417.5,360,56",
+          "Position": "417.5,360.5,64.5",
           "Enabled": true,
           "Components": [
             {
@@ -7672,11 +7584,136 @@
                 "go": "2a935461-721f-49bb-8b66-a449b0655413",
                 "component_type": "Rigidbody"
               },
+              "ContinuousUse": false,
               "IsAttached": false
             },
             {
               "__type": "ZPM",
-              "__guid": "72787502-964e-4685-bfa9-32f91e152c2d"
+              "__guid": "72787502-964e-4685-bfa9-32f91e152c2d",
+              "Attachable": {
+                "_type": "component",
+                "component_id": "9f06a0a0-d030-41f5-a0f8-a3c68ed60de8",
+                "go": "2a935461-721f-49bb-8b66-a449b0655413",
+                "component_type": "Attachable"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "479c4ca8-82ab-47c7-949a-53ab9a5c2841",
+          "Flags": 0,
+          "Name": "ZPM",
+          "Position": "436,370.5,64.5",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "ca4bfb63-7355-444b-8b73-02185568e26f",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "1f284fa4-9d92-4e79-849b-f8ef68ffd7d9",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "198552b3-acba-4560-901f-e43e2234eb6f",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": "DisableCollisionSounds",
+              "StartAsleep": false
+            },
+            {
+              "__type": "Attachable",
+              "__guid": "371f0cd1-5012-44a3-91f3-b667f5a409cd",
+              "AttachableType": "ZPM",
+              "Body": {
+                "_type": "component",
+                "component_id": "198552b3-acba-4560-901f-e43e2234eb6f",
+                "go": "479c4ca8-82ab-47c7-949a-53ab9a5c2841",
+                "component_type": "Rigidbody"
+              },
+              "ContinuousUse": false,
+              "IsAttached": false
+            },
+            {
+              "__type": "ZPM",
+              "__guid": "693c88a4-8d15-40be-8f59-6a207949bb9a",
+              "Attachable": {
+                "_type": "component",
+                "component_id": "371f0cd1-5012-44a3-91f3-b667f5a409cd",
+                "go": "479c4ca8-82ab-47c7-949a-53ab9a5c2841",
+                "component_type": "Attachable"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "df60684c-1415-4668-9086-083a389b8676",
+          "Flags": 0,
+          "Name": "ZPM",
+          "Position": "436,349.5,64.5",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "1e4aaad6-993a-4438-be27-848413752734",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "64ca2ad4-4c8e-4487-8687-5f3d8a8bc889",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "ca2766c4-3be8-4d90-9f1c-705654536985",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": "DisableCollisionSounds",
+              "StartAsleep": false
+            },
+            {
+              "__type": "Attachable",
+              "__guid": "7ed50015-f053-4e10-b8a8-0b8138fc4d44",
+              "AttachableType": "ZPM",
+              "Body": {
+                "_type": "component",
+                "component_id": "ca2766c4-3be8-4d90-9f1c-705654536985",
+                "go": "df60684c-1415-4668-9086-083a389b8676",
+                "component_type": "Rigidbody"
+              },
+              "ContinuousUse": false,
+              "IsAttached": false
+            },
+            {
+              "__type": "ZPM",
+              "__guid": "5395507f-b6be-46cf-add7-33b71466a372",
+              "Attachable": {
+                "_type": "component",
+                "component_id": "7ed50015-f053-4e10-b8a8-0b8138fc4d44",
+                "go": "df60684c-1415-4668-9086-083a389b8676",
+                "component_type": "Attachable"
+              }
             }
           ]
         }

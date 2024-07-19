@@ -7,7 +7,7 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 	public Type TargetType { get; set; }
 
 	[Property]
-	public Attachable CurrentAttachable;
+	public Attachable CurrentAttachable { get; set; }
 
 	[Property]
 	public bool IsAttached => CurrentAttachable.IsValid();
@@ -48,7 +48,9 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
-		// DrawGuideModel();
+
+		// if (!Scene.IsEditor)
+		// 	DrawGuideModel();
 	}
 
 	float GetRotationDifference(Rotation a, Rotation b)

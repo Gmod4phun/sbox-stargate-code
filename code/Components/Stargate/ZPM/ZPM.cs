@@ -1,1 +1,41 @@
-public class ZPM : Component { }
+public class ZPM : Component
+{
+	[Property]
+	public Attachable Attachable => Components.Get<Attachable>();
+
+	protected override void OnStart()
+	{
+		base.OnStart();
+
+		Attachable.UseAction = () =>
+		{
+			if (Attachable.IsAttached)
+			{
+				if (Components.TryGet<ZPMSlot>(out var slot, FindMode.EverythingInSelfAndAncestors))
+				{
+					if (Input.Down("Run"))
+					{
+						if (!slot.IsMoving && slot.IsUp)
+						{
+							Attachable.Detach();
+						}
+					}
+					else
+					{
+						_ = slot.MoveSlot();
+					}
+				}
+			}
+		};
+
+		Attachable.TryAttachAction = (attachPoint) =>
+		{
+			if (attachPoint.Components.TryGet<ZPMSlot>(out var slot, FindMode.EverythingInSelf))
+			{
+				return !slot.IsMoving && slot.IsUp;
+			}
+
+			return false;
+		};
+	}
+}

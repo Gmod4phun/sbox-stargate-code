@@ -12,9 +12,19 @@ public class Attachable : Component, IUse
 	[Property]
 	public Type AttachableType { get; set; }
 
+	public Action UseAction { get; set; }
+
+	public Func<AttachPoint, bool> TryAttachAction { get; set; }
+
+	[Property]
+	public bool ContinuousUse { get; set; } = false;
+
 	public void AttachTo(AttachPoint attachPoint)
 	{
 		if (IsAttached || !Body.IsValid())
+			return;
+
+		if (TryAttachAction != null && !TryAttachAction.Invoke(attachPoint))
 			return;
 
 		Body.MotionEnabled = false;
@@ -42,8 +52,11 @@ public class Attachable : Component, IUse
 
 	public bool OnUse(GameObject user)
 	{
-		Detach();
-		return true;
+		// Detach();
+
+		UseAction?.Invoke();
+
+		return ContinuousUse;
 	}
 
 	public bool IsUsable(GameObject user)
