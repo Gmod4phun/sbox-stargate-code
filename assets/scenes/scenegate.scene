@@ -7633,6 +7633,68 @@
           ]
         },
         {
+          "__guid": "fb8ec989-df6e-4e32-9656-29771ae41de6",
+          "Flags": 0,
+          "Name": "ZPM Hub (SGC)",
+          "Position": "430,248,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "c338b7e4-5cb9-4059-9229-f065a03326db",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_sgc/zpm_hub_sgc.vmdl",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ZPMHub",
+              "__guid": "0f7b3561-9a39-49a6-a926-b568910f9c3b",
+              "ActiveZPMs": 0
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5fbfc3c9-0264-40b0-be63-ac9fc9c943f4",
+              "Flags": 0,
+              "Name": "ZPM Slot",
+              "Position": "0,0,28.75",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "ZPMSlot",
+                  "__guid": "ef48f887-2b77-4447-89ea-a2d56e7d6b4c",
+                  "StartsUp": false,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "62c1ea37-7adf-4c8f-a5ed-eb1faeaec160",
+                    "go": "5fbfc3c9-0264-40b0-be63-ac9fc9c943f4",
+                    "component_type": "AttachPoint"
+                  },
+                  "MoveDistance": 2,
+                  "MoveTime": 0.5
+                },
+                {
+                  "__type": "AttachPoint",
+                  "__guid": "62c1ea37-7adf-4c8f-a5ed-eb1faeaec160",
+                  "DebugGuideModel": false,
+                  "DefaultPrefab": "prefabs/zpm.prefab",
+                  "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "TargetType": "ZPM"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "8021372d-fabc-4028-b717-cad45fc1fad2",
+                  "IsTrigger": true,
+                  "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "Static": false
+                }
+              ]
+            }
+          ]
+        },
+        {
           "__guid": "2752f5c0-9334-4301-8a36-d98cfe44c20f",
           "Flags": 0,
           "Name": "zpm",
