@@ -17,7 +17,7 @@ Layer0
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/src/tex/asuran_hub_color.tga"
+	TextureColor "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/src/tex/asuran_hub_color.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -26,14 +26,14 @@ Layer0
 	g_bFogEnabled "1"
 
 	//---- Metalness ----
-	TextureMetalness "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/src/tex/asuran_hub_metal.tga"
+	TextureMetalness "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/src/tex/asuran_hub_metal.tga"
 
 	//---- Normal ----
-	TextureNormal "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/src/tex/asuran_hub_normal.tga"
+	TextureNormal "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/src/tex/asuran_hub_normal.tga"
 
 	//---- Roughness ----
 	g_flRoughnessScaleFactor "1.400"
-	TextureRoughness "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/src/tex/asuran_hub_rough.tga"
+	TextureRoughness "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/src/tex/asuran_hub_rough.tga"
 
 	//---- Self Illum ----
 	g_flSelfIllumAlbedoFactor "1.000"
@@ -41,7 +41,7 @@ Layer0
 	g_flSelfIllumScale "1.000"
 	g_vSelfIllumScrollSpeed "[0.000 0.000]"
 	g_vSelfIllumTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureSelfIllumMask "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/src/tex/asuran_hub_selfillum.tga"
+	TextureSelfIllumMask "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/src/tex/asuran_hub_selfillum.tga"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"

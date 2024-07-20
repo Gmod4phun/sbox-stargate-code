@@ -7557,7 +7557,7 @@
               "BodyGroups": 18446744073709551615,
               "Health": 0,
               "IsStatic": true,
-              "Model": "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/zpm_hub_asuran.vmdl",
+              "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/zpm_hub_asuran.vmdl",
               "Tint": "1,1,1,1"
             },
             {
@@ -7615,7 +7615,7 @@
                       "__type": "Sandbox.ModelRenderer",
                       "__guid": "dfa64167-bd0b-4fcb-bafd-0b2740d91941",
                       "BodyGroups": 18446744073709551615,
-                      "Model": "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/zpm_hub_asuran_slot.vmdl",
+                      "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/zpm_hub_asuran_slot.vmdl",
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -7623,7 +7623,7 @@
                       "__type": "Sandbox.ModelCollider",
                       "__guid": "44aec67d-4909-48eb-a0d5-e17b650d5e68",
                       "IsTrigger": false,
-                      "Model": "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/zpm_hub_asuran_slot.vmdl",
+                      "Model": "models/dev/error.vmdl",
                       "Static": false
                     }
                   ]
