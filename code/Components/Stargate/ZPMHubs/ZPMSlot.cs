@@ -13,6 +13,9 @@ public class ZPMSlot : Component
 	[Property]
 	public float MoveDistance { get; set; } = 8f;
 
+	[Property]
+	public float MoveTime { get; set; } = 1f;
+
 	public bool IsUp = false;
 	public bool IsMoving = false;
 
@@ -23,13 +26,12 @@ public class ZPMSlot : Component
 
 		MultiWorldSound.Play(IsUp ? "zpm.hub.in" : "zpm.hub.out", GameObject);
 
-		var moveTime = 1f;
 		var totalMovedDistance = 0f;
 
 		IsMoving = true;
 		while (totalMovedDistance < MoveDistance)
 		{
-			var step = Time.Delta / moveTime * MoveDistance;
+			var step = Time.Delta / MoveTime * MoveDistance;
 			var dir = IsUp ? Transform.Rotation.Down : Transform.Rotation.Up;
 			totalMovedDistance += step;
 			Transform.Position += dir * step;

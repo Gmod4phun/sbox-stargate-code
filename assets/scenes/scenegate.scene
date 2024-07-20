@@ -7449,7 +7449,8 @@
                     "go": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
                     "component_type": "AttachPoint"
                   },
-                  "MoveDistance": 8
+                  "MoveDistance": 8,
+                  "MoveTime": 1.5
                 },
                 {
                   "__type": "AttachPoint",
@@ -7485,7 +7486,8 @@
                     "go": "f1d2bc28-9d2e-43ec-b6d8-75387d2218e4",
                     "component_type": "AttachPoint"
                   },
-                  "MoveDistance": 8
+                  "MoveDistance": 8,
+                  "MoveTime": 1.5
                 },
                 {
                   "__type": "AttachPoint",
@@ -7521,7 +7523,8 @@
                     "go": "22fa9845-e092-441d-8987-e47f03196ea8",
                     "component_type": "AttachPoint"
                   },
-                  "MoveDistance": 8
+                  "MoveDistance": 8,
+                  "MoveTime": 1.5
                 },
                 {
                   "__type": "AttachPoint",
@@ -7536,6 +7539,94 @@
                   "IsTrigger": true,
                   "Model": "models/sbox_stargate/zpm/zpm.vmdl",
                   "Static": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "433e64a7-19d7-4092-bfb7-dfd4130f78e1",
+          "Flags": 0,
+          "Name": "ZPM Hub (Asuran)",
+          "Position": "430,296,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "c347c442-99d9-4adf-8c4a-019abf3eb0ee",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/zpm_hub_asuran.vmdl",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ZPMHub",
+              "__guid": "ea4c0371-cd06-4a01-815b-04820be3447d",
+              "ActiveZPMs": 0
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "090f73e4-19ae-4847-9128-494f8c0b2584",
+              "Flags": 0,
+              "Name": "ZPM Slot",
+              "Position": "0,0,36.7",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "ZPMSlot",
+                  "__guid": "d7da6255-a719-4eee-b769-6c8935e4918f",
+                  "StartsUp": false,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "9b1e8f48-9e52-4e31-b714-6f2fe632259d",
+                    "go": "090f73e4-19ae-4847-9128-494f8c0b2584",
+                    "component_type": "AttachPoint"
+                  },
+                  "MoveDistance": 16,
+                  "MoveTime": 2.2
+                },
+                {
+                  "__type": "AttachPoint",
+                  "__guid": "9b1e8f48-9e52-4e31-b714-6f2fe632259d",
+                  "DebugGuideModel": false,
+                  "DefaultPrefab": "prefabs/zpm.prefab",
+                  "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "TargetType": "ZPM"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "7bcfd120-a8ab-449e-8e86-bdc0b83ead9a",
+                  "IsTrigger": true,
+                  "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "Static": false
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "df8d4441-dd49-4e59-9805-ef8e0795b03e",
+                  "Flags": 0,
+                  "Name": "Slot Model",
+                  "Position": "0,0,-16",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.ModelRenderer",
+                      "__guid": "dfa64167-bd0b-4fcb-bafd-0b2740d91941",
+                      "BodyGroups": 18446744073709551615,
+                      "Model": "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/zpm_hub_asuran_slot.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    },
+                    {
+                      "__type": "Sandbox.ModelCollider",
+                      "__guid": "44aec67d-4909-48eb-a0d5-e17b650d5e68",
+                      "IsTrigger": false,
+                      "Model": "models/sbox_stargate/zpm_hubs/zpb_hub_asuran/zpm_hub_asuran_slot.vmdl",
+                      "Static": false
+                    }
+                  ]
                 }
               ]
             }
