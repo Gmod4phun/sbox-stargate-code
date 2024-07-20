@@ -7455,9 +7455,14 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "47cebe2b-479d-4469-a612-392e32344b79",
+                  "AngThreshold": 11.25,
+                  "PosThreshold": 2,
                   "DebugGuideModel": false,
                   "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "IgnorePitch": false,
+                  "IgnoreRoll": false,
+                  "IgnoreYaw": true,
                   "TargetType": "ZPM"
                 },
                 {
@@ -7492,9 +7497,14 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
+                  "AngThreshold": 11.25,
+                  "PosThreshold": 2,
                   "DebugGuideModel": false,
                   "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "IgnorePitch": false,
+                  "IgnoreRoll": false,
+                  "IgnoreYaw": true,
                   "TargetType": "ZPM"
                 },
                 {
@@ -7529,8 +7539,13 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "403b7767-a194-417c-8a5a-0f999b4c6209",
+                  "AngThreshold": 11.25,
+                  "PosThreshold": 2,
                   "DebugGuideModel": false,
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "IgnorePitch": false,
+                  "IgnoreRoll": false,
+                  "IgnoreYaw": true,
                   "TargetType": "ZPM"
                 },
                 {
@@ -7590,9 +7605,14 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "9b1e8f48-9e52-4e31-b714-6f2fe632259d",
+                  "AngThreshold": 11.25,
+                  "PosThreshold": 2,
                   "DebugGuideModel": false,
                   "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "IgnorePitch": false,
+                  "IgnoreRoll": false,
+                  "IgnoreYaw": true,
                   "TargetType": "ZPM"
                 },
                 {
@@ -7678,9 +7698,14 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "62c1ea37-7adf-4c8f-a5ed-eb1faeaec160",
+                  "AngThreshold": 11.25,
+                  "PosThreshold": 2,
                   "DebugGuideModel": false,
                   "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
+                  "IgnorePitch": false,
+                  "IgnoreRoll": false,
+                  "IgnoreYaw": true,
                   "TargetType": "ZPM"
                 },
                 {
