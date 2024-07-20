@@ -7623,7 +7623,7 @@
                       "__type": "Sandbox.ModelCollider",
                       "__guid": "44aec67d-4909-48eb-a0d5-e17b650d5e68",
                       "IsTrigger": false,
-                      "Model": "models/dev/error.vmdl",
+                      "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/zpm_hub_asuran_slot.vmdl",
                       "Static": false
                     }
                   ]
