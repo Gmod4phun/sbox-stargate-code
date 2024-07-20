@@ -1260,6 +1260,7 @@
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
+                  "Pitch": {},
                   "PreWarm": 0,
                   "PushStrength": {},
                   "Roll": {
@@ -1291,7 +1292,8 @@
                   },
                   "Stretch": {},
                   "TimeScale": 1,
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "Yaw": {}
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
@@ -1414,6 +1416,7 @@
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
+                  "Pitch": {},
                   "PreWarm": 0,
                   "PushStrength": {},
                   "Roll": {
@@ -1445,7 +1448,8 @@
                   },
                   "Stretch": {},
                   "TimeScale": 1,
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "Yaw": {}
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
@@ -1568,6 +1572,7 @@
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
+                  "Pitch": {},
                   "PreWarm": 0,
                   "PushStrength": {},
                   "Roll": {
@@ -1599,7 +1604,8 @@
                   },
                   "Stretch": {},
                   "TimeScale": 1,
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "Yaw": {}
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
@@ -1722,6 +1728,7 @@
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
+                  "Pitch": {},
                   "PreWarm": 0,
                   "PushStrength": {},
                   "Roll": {
@@ -1753,7 +1760,8 @@
                   },
                   "Stretch": {},
                   "TimeScale": 1,
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "Yaw": {}
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
@@ -7446,12 +7454,9 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "47cebe2b-479d-4469-a612-392e32344b79",
-                  "TimeSinceLastDetach": {
-                    "Relative": 15472.297
-                  },
+                  "DebugGuideModel": false,
                   "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
-                  "IsAttached": false,
                   "TargetType": "ZPM"
                 },
                 {
@@ -7485,11 +7490,9 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
-                  "TimeSinceLastDetach": {
-                    "Relative": 15472.297
-                  },
+                  "DebugGuideModel": false,
+                  "DefaultPrefab": "prefabs/zpm.prefab",
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
-                  "IsAttached": false,
                   "TargetType": "ZPM"
                 },
                 {
@@ -7523,11 +7526,8 @@
                 {
                   "__type": "AttachPoint",
                   "__guid": "403b7767-a194-417c-8a5a-0f999b4c6209",
-                  "TimeSinceLastDetach": {
-                    "Relative": 15472.297
-                  },
+                  "DebugGuideModel": false,
                   "GuideModel": "models/sbox_stargate/zpm/zpm.vmdl",
-                  "IsAttached": false,
                   "TargetType": "ZPM"
                 },
                 {

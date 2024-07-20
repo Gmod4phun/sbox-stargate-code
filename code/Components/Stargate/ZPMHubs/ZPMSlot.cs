@@ -7,16 +7,16 @@ public class ZPMSlot : Component
 	[Property]
 	public ZPM ZPM => AttachPoint?.CurrentAttachable?.Components.Get<ZPM>();
 
-	public bool IsUp = false;
-	public bool IsMoving = false;
-
 	[Property]
 	public bool StartsUp = false;
 
 	[Property]
 	public float MoveDistance { get; set; } = 8f;
 
-	public async Task MoveSlot()
+	public bool IsUp = false;
+	public bool IsMoving = false;
+
+	public async void MoveSlot()
 	{
 		if (IsMoving)
 			return;

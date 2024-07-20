@@ -10,17 +10,19 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 	public Attachable CurrentAttachable { get; set; }
 
 	[Property]
+	public PrefabFile DefaultPrefab { get; set; }
+
+	[Property]
+	public bool DebugGuideModel { get; set; }
+
 	public bool IsAttached => CurrentAttachable.IsValid();
 
-	[Property]
 	public TimeSince TimeSinceLastDetach = 0;
-
-	[Property]
-	public PrefabFile DefaultPrefab { get; set; }
 
 	Material GuideMaterial { get; set; } =
 		Material.Load("materials/dev/primary_white_emissive.vmat");
-	Color GuideColor { get; set; } = Color.Orange.WithAlpha(0.4f);
+
+	Color GuideColor => Color.Cyan.WithAlpha(0.2f);
 
 	protected override void DrawGizmos()
 	{
@@ -52,7 +54,7 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 	{
 		base.OnStart();
 
-		if (DefaultPrefab != null)
+		if (DefaultPrefab != null && !Scene.IsEditor)
 		{
 			var go = SceneUtility.GetPrefabScene(DefaultPrefab).Clone();
 			TryAttachGameObject(go);
@@ -63,8 +65,8 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 	{
 		base.OnUpdate();
 
-		// if (!Scene.IsEditor)
-		// 	DrawGuideModel();
+		if (!Scene.IsEditor && DebugGuideModel)
+			DrawGuideModel();
 	}
 
 	float GetRotationDifference(Rotation a, Rotation b)

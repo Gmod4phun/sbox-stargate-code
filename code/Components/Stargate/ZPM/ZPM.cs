@@ -9,21 +9,18 @@ public class ZPM : Component
 
 		Attachable.UseAction = () =>
 		{
-			if (Attachable.IsAttached)
+			if (
+				Attachable.IsAttached
+				&& Components.TryGet<ZPMSlot>(out var slot, FindMode.EverythingInSelfAndAncestors)
+			)
 			{
-				if (Components.TryGet<ZPMSlot>(out var slot, FindMode.EverythingInSelfAndAncestors))
+				if (Input.Down("Run") && !slot.IsMoving && slot.IsUp)
 				{
-					if (Input.Down("Run"))
-					{
-						if (!slot.IsMoving && slot.IsUp)
-						{
-							Attachable.Detach();
-						}
-					}
-					else
-					{
-						_ = slot.MoveSlot();
-					}
+					Attachable.Detach();
+				}
+				else
+				{
+					slot.MoveSlot();
 				}
 			}
 		};

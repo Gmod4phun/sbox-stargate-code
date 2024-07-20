@@ -7,17 +7,16 @@ public class Attachable : Component, IUse
 	public AttachPoint AttachedTo { get; private set; }
 
 	[Property]
-	public bool IsAttached => AttachedTo.IsValid();
+	public Type AttachableType { get; set; }
 
 	[Property]
-	public Type AttachableType { get; set; }
+	public bool ContinuousUse { get; set; } = false;
+
+	public bool IsAttached => AttachedTo.IsValid();
 
 	public Action UseAction { get; set; }
 
 	public Func<AttachPoint, bool> TryAttachAction { get; set; }
-
-	[Property]
-	public bool ContinuousUse { get; set; } = false;
 
 	public void AttachTo(AttachPoint attachPoint, bool force = false)
 	{
@@ -52,10 +51,7 @@ public class Attachable : Component, IUse
 
 	public bool OnUse(GameObject user)
 	{
-		// Detach();
-
 		UseAction?.Invoke();
-
 		return ContinuousUse;
 	}
 
