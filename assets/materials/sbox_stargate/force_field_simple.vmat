@@ -1,0 +1,13 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/force_field.shader"
+
+	//---- Rendering ----
+	F_DO_NOT_CAST_SHADOWS 1
+	F_RENDER_BACKFACES 1
+
+	g_flIntersectionSharpness "0.200"
+	g_vShieldColor "[0.000000 0.196078 1.000000 0.000000]"
+}
