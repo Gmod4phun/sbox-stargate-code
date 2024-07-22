@@ -8418,6 +8418,7 @@
       "Flags": 0,
       "Name": "Chat",
       "Enabled": true,
+      "NetworkMode": 1,
       "Components": [
         {
           "__type": "Sandbox.ScreenPanel",
