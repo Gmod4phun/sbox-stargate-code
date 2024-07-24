@@ -833,7 +833,7 @@ namespace Sandbox.Components.Stargate
 			if (!Stargate.IsAllowedForGateTeleport(other))
 				return;
 
-			if (other == CurrentTeleportingEntity)
+			if (other == CurrentTeleportingEntity && Gate.Inbound)
 			{
 				CurrentTeleportingEntity = null;
 				Gate.OtherGate.EventHorizon.CurrentTeleportingEntity = null;
