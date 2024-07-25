@@ -1,4 +1,5 @@
-﻿using Sandbox.Components.Stargate.Ramps;
+﻿using System.Text.Json.Serialization;
+using Sandbox.Components.Stargate.Ramps;
 
 namespace Sandbox.Components.Stargate
 {
@@ -43,17 +44,17 @@ namespace Sandbox.Components.Stargate
 				.Select(go => go.Components.Get<Chevron>())
 				.ToList();
 
-		[Property]
+		[Property, JsonIgnore]
 		public EventHorizon EventHorizon { get; private set; } = null;
 
-		[Property]
+		[Property, JsonIgnore]
 		public StargateIris Iris =>
 			GameObject.Components.Get<StargateIris>(FindMode.EnabledInSelfAndDescendants);
 
-		[Property]
+		[Property, JsonIgnore]
 		public GateRamp Ramp => GameObject.Components.Get<GateRamp>(FindMode.InParent);
 
-		[Property]
+		[Property, JsonIgnore]
 		public Stargate OtherGate { get; set; } = null;
 
 		[Property]

@@ -1,4 +1,4 @@
-using System.Reflection.Metadata;
+using System.Text.Json.Serialization;
 
 namespace Sandbox.Components.Stargate
 {
@@ -55,6 +55,7 @@ namespace Sandbox.Components.Stargate
 
 		private Kawoosh Kawoosh { get; set; }
 
+		[JsonIgnore]
 		public Stargate Gate =>
 			GameObject.Parent.Components.Get<Stargate>(FindMode.EnabledInSelfAndDescendants);
 
