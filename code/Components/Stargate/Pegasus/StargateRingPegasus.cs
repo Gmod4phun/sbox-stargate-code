@@ -1,10 +1,12 @@
+using System.Text.Json.Serialization;
+
 namespace Sandbox.Components.Stargate
 {
 	public class StargateRingPegasus : Component
 	{
 		// ring variables
 
-		[Property]
+		[Property, JsonIgnore]
 		public StargatePegasus Gate => GameObject.Parent.Components.Get<StargatePegasus>();
 
 		public static string RingSymbols => "@E2LMQYB3OIWT8UG967KVZNR0#F1JSHXPDCA";

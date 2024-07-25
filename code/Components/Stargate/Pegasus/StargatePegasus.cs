@@ -1,4 +1,6 @@
-﻿namespace Sandbox.Components.Stargate
+﻿using System.Text.Json.Serialization;
+
+namespace Sandbox.Components.Stargate
 {
 	public class StargatePegasus : Stargate
 	{
@@ -26,7 +28,7 @@
 			EventHorizonMaterialGroup = "pegasus";
 		}
 
-		[Property]
+		[Property, JsonIgnore]
 		public StargateRingPegasus Ring =>
 			GameObject
 				.Children.Find(go => go.Components.Get<StargateRingPegasus>().IsValid())
