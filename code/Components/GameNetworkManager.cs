@@ -89,7 +89,7 @@ public class GameNetworkManager : Component, Component.INetworkListener
 			)
 		)
 		{
-			controller.CurrentWorldIndex = 0;
+			controller.CurrentWorldIndex = MultiWorldSystem.Worlds.First().WorldIndex;
 		}
 	}
 
