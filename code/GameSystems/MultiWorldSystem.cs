@@ -42,6 +42,25 @@ public class MultiWorldSystem : GameObjectSystem
 		return AllWorldIndices.Contains(worldIndex);
 	}
 
+	public static int GetNextWorldIndex(int previousWorldIndex)
+	{
+		if (!AllWorldIndices.Any())
+			return -1;
+
+		if (AllWorldIndices.Count() == 1)
+			return previousWorldIndex;
+
+		var curWorldPos = AllWorldIndices.ToList().IndexOf(previousWorldIndex);
+		var nextWorldIndex = AllWorldIndices.ElementAtOrDefault(curWorldPos + 1);
+
+		if (curWorldPos == AllWorldIndices.Count() - 1)
+		{
+			nextWorldIndex = AllWorldIndices.First();
+		}
+
+		return nextWorldIndex;
+	}
+
 	public static MultiWorld GetWorldByIndex(int worldIndex)
 	{
 		return Worlds.FirstOrDefault(w => w.WorldIndex == worldIndex);

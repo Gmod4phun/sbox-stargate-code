@@ -264,8 +264,11 @@ public class PlayerController : Component
 
 			if (Input.Pressed("Score"))
 			{
-				CurrentWorldIndex =
-					(CurrentWorldIndex + 1) % MultiWorldSystem.AllWorldIndices.Count();
+				var nextWorldIndex = MultiWorldSystem.GetNextWorldIndex(CurrentWorldIndex);
+				if (nextWorldIndex != -1)
+				{
+					CurrentWorldIndex = nextWorldIndex;
+				}
 			}
 
 			UseLogic();
