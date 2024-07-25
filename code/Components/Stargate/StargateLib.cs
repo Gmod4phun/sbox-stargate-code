@@ -430,7 +430,10 @@ namespace Sandbox.Components.Stargate
 		/// Adds an Iris or Atlantis Gate Shield to the target Stargate if it does not have one yet.
 		/// </summary>
 		/// <returns>The just created, or already existing Iris.</returns>
-		public static StargateIris AddIris(Stargate gate, bool atlantis = false)
+		public static StargateIris AddIris(
+			Stargate gate,
+			StargateIris.IrisType irisType = StargateIris.IrisType.Standard
+		)
 		{
 			if (!gate.HasIris())
 			{
@@ -441,6 +444,7 @@ namespace Sandbox.Components.Stargate
 				iris_object.Transform.Scale = gate.Transform.Scale;
 				iris_object.SetParent(gate.GameObject);
 
+				var atlantis = irisType == StargateIris.IrisType.Atlantis;
 				var iris_component = atlantis
 					? iris_object.Components.Create<StargateIrisAtlantis>()
 					: iris_object.Components.Create<StargateIris>();

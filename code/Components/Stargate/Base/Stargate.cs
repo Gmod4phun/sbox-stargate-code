@@ -47,6 +47,9 @@ namespace Sandbox.Components.Stargate
 		[Property, JsonIgnore]
 		public EventHorizon EventHorizon { get; private set; } = null;
 
+		[Property]
+		public StargateIris.IrisType? IrisType { get; set; }
+
 		[Property, JsonIgnore]
 		public StargateIris Iris =>
 			GameObject.Components.Get<StargateIris>(FindMode.EnabledInSelfAndDescendants);
@@ -155,6 +158,14 @@ namespace Sandbox.Components.Stargate
 		protected override void OnStart()
 		{
 			GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
+
+			if (!Scene.IsEditor)
+			{
+				if (IrisType.HasValue)
+				{
+					AddIris(this, IrisType.Value);
+				}
+			}
 		}
 
 		/*

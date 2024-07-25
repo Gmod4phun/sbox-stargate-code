@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate
 {
-	public class StargateIrisAtlantis : StargateIris
+	public class StargateIrisAtlantis : StargateIris, Component.IDamageable
 	{
 		protected override float _openCloseDelay => 1f;
 		private MultiWorldSound IrisLoop;
@@ -77,6 +77,14 @@ namespace Sandbox.Components.Stargate
 				sm.Flags.IsOpaque = false;
 				sm.Flags.IsTranslucent = true;
 				sm.ColorTint = sm.ColorTint.WithAlpha(_currentAlpha);
+			}
+		}
+
+		public void OnDamage(in DamageInfo damage)
+		{
+			if (damage.Damage > 0 && damage.Shape?.Body?.GetGameObject() == GameObject)
+			{
+				PlayHitSound();
 			}
 		}
 	}

@@ -2,6 +2,12 @@ namespace Sandbox.Components.Stargate
 {
 	public class StargateIris : Component, Component.ExecuteInEditor
 	{
+		public enum IrisType
+		{
+			Standard,
+			Atlantis
+		}
+
 		protected virtual float _openCloseDelay => 3f;
 		public bool Busy { get; set; } = false;
 
