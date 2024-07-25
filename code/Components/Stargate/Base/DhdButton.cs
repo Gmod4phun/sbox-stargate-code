@@ -62,6 +62,15 @@ namespace Sandbox.Components.Stargate
 			if (Scene.Camera.IsValid() && ButtonCollider.IsValid())
 			{
 				var pos = ButtonCollider.KeyframeBody.MassCenter;
+				var screenPos = Scene.Camera.PointToScreenPixels(pos);
+				if (
+					screenPos.x < 1
+					|| screenPos.x > Screen.Width - 1
+					|| screenPos.y < 1
+					|| screenPos.y > Screen.Height - 1
+				)
+					return;
+
 				if (pos.DistanceSquared(Scene.Camera.Transform.Position) < 4096)
 				{
 					var player = Scene
