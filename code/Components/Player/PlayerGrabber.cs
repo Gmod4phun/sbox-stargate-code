@@ -100,7 +100,7 @@ public class PlayerGrabber : Component
 			.WithWorld(GameObject)
 			.Run();
 
-		if (!tr.Hit || tr.Body is null)
+		if (!tr.Hit || !tr.Body.IsValid())
 			return;
 
 		if (tr.Body.GetComponent() is not Rigidbody body)
@@ -135,7 +135,7 @@ public class PlayerGrabber : Component
 
 		waitForUp = false;
 
-		if (grabbedBody is not null)
+		if (grabbedBody.IsValid())
 		{
 			if (Input.Down("attack1"))
 			{
@@ -154,7 +154,7 @@ public class PlayerGrabber : Component
 	{
 		base.OnPreRender();
 
-		if (grabbedBody is null)
+		if (!grabbedBody.IsValid())
 		{
 			var tr = Scene
 				.Trace.Ray(Scene.Camera.ScreenNormalToRay(0.5f), 1000.0f)
@@ -187,17 +187,17 @@ public class PlayerGrabber : Component
 
 		var tr = Scene.Trace.Ray(ray, 3000.0f).WithWorld(GameObject).Run();
 
-		if (!tr.Hit || tr.GameObject is null)
+		if (!tr.Hit || !tr.GameObject.IsValid())
 			return;
 
-		if (ImpactEffect is not null)
+		if (ImpactEffect.IsValid())
 		{
 			ImpactEffect.Clone(
 				new Transform(tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt(tr.Normal))
 			);
 		}
 
-		if (DecalEffect is not null)
+		if (DecalEffect.IsValid())
 		{
 			var decal = DecalEffect.Clone(
 				new Transform(
@@ -209,7 +209,7 @@ public class PlayerGrabber : Component
 			decal.SetParent(tr.GameObject);
 		}
 
-		if (tr.Body is not null)
+		if (tr.Body.IsValid())
 		{
 			tr.Body.ApplyImpulseAt(
 				tr.HitPosition,
