@@ -443,6 +443,7 @@ namespace Sandbox.Components.Stargate
 				iris_object.Transform.Rotation = gate.Transform.Rotation;
 				iris_object.Transform.Scale = gate.Transform.Scale;
 				iris_object.SetParent(gate.GameObject);
+				iris_object.Tags.Add("no_decal");
 
 				var atlantis = irisType == StargateIris.IrisType.Atlantis;
 				var iris_component = atlantis

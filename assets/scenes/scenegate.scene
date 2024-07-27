@@ -145,6 +145,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/decal_bullet_default.prefab"
           },
+          "GrabIgnoreTags": "shield",
           "MovementSmoothness": 3,
           "ShootDamage": 9
         }
@@ -7726,7 +7727,7 @@
           "Name": "Shield Test",
           "Position": "270,-1,61",
           "Scale": "4,4,4",
-          "Tags": "no_decal,shield,ignore_trace",
+          "Tags": "no_decal,shield",
           "Enabled": true,
           "Components": [
             {
