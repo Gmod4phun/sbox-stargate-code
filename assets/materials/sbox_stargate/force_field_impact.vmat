@@ -1,0 +1,29 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/force_field_impact.shader"
+
+	//---- Rendering ----
+	F_RENDER_BACKFACES 1
+
+	g_flHardness "-20.000"
+	g_flImpactColorMul "1.000"
+	g_flRadius "4.000"
+	g_vImpactCenter "[0.000 0.000 32.000]"
+	g_vImpactColor "[1.000000 1.000000 1.000000 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flOpacityScale "1.000"
+
+	DynamicParams
+	{
+		g_flImpactColorMul "impactColorMul"
+		g_flRadius "impactRadius"
+		g_vImpactCenter "impactCenter"
+		g_vImpactColor "impactColor"
+	}
+}

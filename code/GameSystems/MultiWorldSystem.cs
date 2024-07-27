@@ -296,26 +296,34 @@ public class MultiWorldSystem : GameObjectSystem
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
+		rules.Pairs.Add(
+			new Sandbox.Physics.CollisionRules.Pair("shield", "passesshield"),
+			Sandbox.Physics.CollisionRules.Result.Ignore
+		);
+
 		// world exclude rules
-		foreach (var world in Worlds)
+		if (Worlds != null)
 		{
-			foreach (var otherWorld in Worlds)
+			foreach (var world in Worlds)
 			{
-				if (world.WorldIndex != otherWorld.WorldIndex)
+				foreach (var otherWorld in Worlds)
 				{
-					try
+					if (world.WorldIndex != otherWorld.WorldIndex)
 					{
-						rules.Pairs.Add(
-							new Sandbox.Physics.CollisionRules.Pair(
-								GetWorldTag(world.WorldIndex),
-								GetWorldTag(otherWorld.WorldIndex)
-							),
-							Sandbox.Physics.CollisionRules.Result.Ignore
-						);
-					}
-					catch (Exception)
-					{
-						// Log.Error( $"Failed to add collision rule for {world.WorldIndex} and {otherWorld.WorldIndex}: {e.Message}" );
+						try
+						{
+							rules.Pairs.Add(
+								new Sandbox.Physics.CollisionRules.Pair(
+									GetWorldTag(world.WorldIndex),
+									GetWorldTag(otherWorld.WorldIndex)
+								),
+								Sandbox.Physics.CollisionRules.Result.Ignore
+							);
+						}
+						catch (Exception)
+						{
+							// Log.Error( $"Failed to add collision rule for {world.WorldIndex} and {otherWorld.WorldIndex}: {e.Message}" );
+						}
 					}
 				}
 			}

@@ -98,6 +98,7 @@ public class PlayerGrabber : Component
 				Scene.Camera.Transform.Position + Scene.Camera.Transform.Rotation.Forward * 1000
 			)
 			.WithWorld(GameObject)
+			.WithoutTags("ignore_trace")
 			.Run();
 
 		if (!tr.Hit || !tr.Body.IsValid())
@@ -159,6 +160,7 @@ public class PlayerGrabber : Component
 			var tr = Scene
 				.Trace.Ray(Scene.Camera.ScreenNormalToRay(0.5f), 1000.0f)
 				.WithWorld(GameObject)
+				.WithoutTags("ignore_trace")
 				.Run();
 
 			if (tr.Hit)
@@ -197,7 +199,7 @@ public class PlayerGrabber : Component
 			);
 		}
 
-		if (DecalEffect.IsValid())
+		if (DecalEffect.IsValid() && !tr.Tags.AsEnumerable().Contains("no_decal"))
 		{
 			var decal = DecalEffect.Clone(
 				new Transform(

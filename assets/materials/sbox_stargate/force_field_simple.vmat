@@ -9,5 +9,10 @@ Layer0
 	F_RENDER_BACKFACES 1
 
 	g_flIntersectionSharpness "0.200"
-	g_vShieldColor "[0.000000 0.196078 1.000000 0.000000]"
+	g_vShieldColor "[1.000000 1.000000 1.000000 0.000000]"
+
+	DynamicParams
+	{
+		g_vShieldColor "shieldColor"
+	}
 }

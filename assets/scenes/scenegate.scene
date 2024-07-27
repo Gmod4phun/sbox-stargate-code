@@ -2,6 +2,27 @@
   "__guid": "03edd410-5e0a-486c-94ed-321310d82fe9",
   "GameObjects": [
     {
+      "__guid": "50bd1329-68c3-4a55-9f8a-4f552902afe7",
+      "Flags": 0,
+      "Name": "Chat",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "77db7b84-930e-4c97-b917-784d03eed429",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Chat",
+          "__guid": "839b39a4-0cb0-4749-9617-a9bfa5e1688f"
+        }
+      ]
+    },
+    {
       "__guid": "93a2dd22-e05b-4f37-9f16-c442faf55143",
       "Flags": 0,
       "Name": "Network Helper",
@@ -41,7 +62,7 @@
           "IgnoreLayers": "trigger,player",
           "Radius": 10,
           "StepHeight": 18,
-          "UseCollisionRules": false
+          "UseCollisionRules": true
         },
         {
           "__type": "PlayerController",
@@ -120,6 +141,10 @@
         {
           "__type": "PlayerGrabber",
           "__guid": "0f06ccef-aa6e-4742-af2a-bea0c9aff54d",
+          "DecalEffect": {
+            "_type": "gameobject",
+            "prefab": "prefabs/decal_bullet_default.prefab"
+          },
           "MovementSmoothness": 3,
           "ShootDamage": 9
         }
@@ -258,6 +283,7 @@
             {
               "__type": "LensFlareEffect",
               "__guid": "20d1333b-d139-40a4-a9d7-b01908682dc0",
+              "__enabled": false,
               "DrawBar": true,
               "DrawFlare": true,
               "DrawIris": true,
@@ -272,6 +298,7 @@
             {
               "__type": "Sandbox.AmbientOcclusion",
               "__guid": "3e0d5697-f630-402d-b2b8-00e3089c940c",
+              "FalloffDistance": 1,
               "Intensity": 6,
               "Quality": "High",
               "Radius": 16
@@ -298,7 +325,6 @@
       "__guid": "dcf68271-3012-4f0d-a3fe-026f1d88c1a4",
       "Flags": 0,
       "Name": "World 0",
-      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -1299,6 +1325,7 @@
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "8ee9a6f5-e48e-4957-9941-e66460fcadf9",
                   "Additive": false,
+                  "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
                   "BlurOpacity": 0.91,
                   "BlurSpacing": 0.73,
@@ -1328,7 +1355,8 @@
                   "InVolume": false,
                   "Loop": true,
                   "OnEdge": true,
-                  "Rate": 20
+                  "Rate": 20,
+                  "RateOverDistance": 0
                 }
               ]
             },
@@ -1455,6 +1483,7 @@
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "88206627-c9e3-4080-87a9-e1efb5e27add",
                   "Additive": false,
+                  "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
                   "BlurOpacity": 0.91,
                   "BlurSpacing": 0.73,
@@ -1484,7 +1513,8 @@
                   "InVolume": false,
                   "Loop": true,
                   "OnEdge": true,
-                  "Rate": 20
+                  "Rate": 20,
+                  "RateOverDistance": 0
                 }
               ]
             },
@@ -1611,6 +1641,7 @@
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "0ec71c70-2ec8-44ee-96e3-ae060d6cdd36",
                   "Additive": false,
+                  "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
                   "BlurOpacity": 0.91,
                   "BlurSpacing": 0.73,
@@ -1640,7 +1671,8 @@
                   "InVolume": false,
                   "Loop": true,
                   "OnEdge": true,
-                  "Rate": 20
+                  "Rate": 20,
+                  "RateOverDistance": 0
                 }
               ]
             },
@@ -1767,6 +1799,7 @@
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "263afc9a-0298-40ec-b760-b0d4707c30fa",
                   "Additive": false,
+                  "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
                   "BlurOpacity": 0.91,
                   "BlurSpacing": 0.73,
@@ -1796,7 +1829,8 @@
                   "InVolume": false,
                   "Loop": true,
                   "OnEdge": true,
-                  "Rate": 20
+                  "Rate": 20,
+                  "RateOverDistance": 0
                 }
               ]
             },
@@ -1837,12 +1871,6 @@
                   "GateName": "",
                   "GatePrivate": false,
                   "MovieDialingType": false,
-                  "Ramp": {
-                    "_type": "component",
-                    "component_id": "4917510c-21a3-4735-aefe-af033e4d5f82",
-                    "go": "c40b23f8-0c91-4a02-9202-ccae00155373",
-                    "component_type": "GateRamp"
-                  },
                   "ShowWormholeCinematic": false
                 }
               ],
@@ -2765,7 +2793,6 @@
       "__guid": "9b071954-2fc0-4d64-80c6-801bf0480777",
       "Flags": 0,
       "Name": "World 1",
-      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -2857,12 +2884,6 @@
                   "GateLocal": false,
                   "GateName": "",
                   "GatePrivate": false,
-                  "Ramp": {
-                    "_type": "component",
-                    "component_id": "e93ad140-cc63-476e-a523-d58bc3aede0a",
-                    "go": "ece95783-75b0-4aed-916e-7bd6a740ce1c",
-                    "component_type": "GateRamp"
-                  },
                   "ShowWormholeCinematic": false
                 }
               ],
@@ -3028,7 +3049,6 @@
       "__guid": "805bcd39-3e2c-4d8f-a0c5-fc1429d39f4b",
       "Flags": 0,
       "Name": "World 2",
-      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -3128,18 +3148,6 @@
                   "GateLocal": false,
                   "GateName": "",
                   "GatePrivate": false,
-                  "Ramp": {
-                    "_type": "component",
-                    "component_id": "ee02eaad-40e8-4ae5-a0f0-e0acbe4ff588",
-                    "go": "9b653830-8bb8-490d-86d8-41a8a1838db1",
-                    "component_type": "GateRamp"
-                  },
-                  "Ring": {
-                    "_type": "component",
-                    "component_id": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
-                    "go": "a0904ea8-eeba-4273-b1aa-632b6e299f14",
-                    "component_type": "StargateRingPegasus"
-                  },
                   "ShowWormholeCinematic": false
                 }
               ],
@@ -3720,12 +3728,6 @@
                     {
                       "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
                       "__guid": "ef20ec5b-11a2-41d7-a7b1-b4587a18f93d",
-                      "Gate": {
-                        "_type": "component",
-                        "component_id": "4d544c6c-cb02-4187-b713-1519350bd418",
-                        "go": "45f65a17-f381-4970-8337-d22889c856e4",
-                        "component_type": "StargatePegasus"
-                      },
                       "Glyphs": [
                         {
                           "_type": "component",
@@ -4715,6 +4717,7 @@
               "GateLocal": false,
               "GateName": "",
               "GatePrivate": false,
+              "IrisType": "Standard",
               "MovieDialingType": false,
               "ShowWormholeCinematic": false
             }
@@ -5345,12 +5348,7 @@
               "GateLocal": false,
               "GateName": "",
               "GatePrivate": false,
-              "Ring": {
-                "_type": "component",
-                "component_id": "9e7322bb-36c2-41f2-9c36-4b4e12ca98f5",
-                "go": "bb921ef4-be72-41dd-b57f-20951de40d9d",
-                "component_type": "StargateRingPegasus"
-              },
+              "IrisType": "Atlantis",
               "ShowWormholeCinematic": false
             }
           ],
@@ -5931,12 +5929,6 @@
                 {
                   "__type": "Sandbox.Components.Stargate.StargateRingPegasus",
                   "__guid": "9e7322bb-36c2-41f2-9c36-4b4e12ca98f5",
-                  "Gate": {
-                    "_type": "component",
-                    "component_id": "d8bbf9ae-ee71-4ad3-aa41-3cfb902303f3",
-                    "go": "850d117d-633d-4c6a-8954-95859e8ebe81",
-                    "component_type": "StargatePegasus"
-                  },
                   "Glyphs": [
                     {
                       "_type": "component",
@@ -7727,710 +7719,169 @@
           "Enabled": true,
           "__Prefab": "prefabs/zpm.prefab",
           "__PrefabVariables": {}
-        }
-      ]
-    },
-    {
-      "__guid": "6a89f27a-9e26-4cdf-8822-54c62798f1e2",
-      "Flags": 0,
-      "Name": "World 4 (Flatgrass)",
-      "Components": [
+        },
         {
-          "__type": "MultiWorld",
-          "__guid": "d1a29c1c-f5a1-40dd-9446-a973cddb4695",
-          "WorldIndex": 4
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "295e315a-2c2f-4c07-87df-60fc7885fb18",
+          "__guid": "87c5555a-b714-41ec-b702-ae34f568cac8",
           "Flags": 0,
-          "Name": "Stargate",
-          "Position": "0,1024,90",
-          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Name": "Shield Test",
+          "Position": "270,-1,61",
+          "Scale": "4,4,4",
+          "Tags": "no_decal,shield,ignore_trace",
           "Enabled": true,
           "Components": [
             {
+              "__type": "Shield",
+              "__guid": "84d73ff0-6535-40ef-8c8c-962e9c0e0d32",
+              "CanPassThrough": false,
+              "Collider": {
+                "_type": "component",
+                "component_id": "8610e929-dc5b-415b-97d8-3fffab25cb7b",
+                "go": "87c5555a-b714-41ec-b702-ae34f568cac8",
+                "component_type": "SphereCollider"
+              },
+              "ImpactMaterial": "materials/sbox_stargate/force_field_impact.vmat",
+              "Radius": 128,
+              "Renderer": {
+                "_type": "component",
+                "component_id": "ac491be8-370f-4ca7-bc38-ce4758d32209",
+                "go": "87c5555a-b714-41ec-b702-ae34f568cac8",
+                "component_type": "ModelRenderer"
+              },
+              "ShieldColor": "1,0.36512,0.02326,1"
+            },
+            {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "ba56dd96-b03c-4e56-8590-010441737b2d",
+              "__guid": "ac491be8-370f-4ca7-bc38-ce4758d32209",
               "BodyGroups": 18446744073709551615,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "MaterialOverride": "materials/sbox_stargate/force_field_simple.vmat",
+              "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "39e4d0f4-a3f0-4903-85a7-b321e70aaad3",
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "8610e929-dc5b-415b-97d8-3fffab25cb7b",
+              "Center": "0,0,0",
               "IsTrigger": false,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
-              "__guid": "28e381c7-a971-40fc-a826-a0fcc1b12715",
-              "AcceleratedDialup": false,
-              "AutoClose": true,
-              "CanOpenMenu": true,
-              "ChevronLightup": true,
-              "EventHorizonMaterialGroup": "default",
-              "GateAddress": "FLATGR",
-              "GateGlyphType": "MILKYWAY",
-              "GateGroup": "M@",
-              "GateLocal": false,
-              "GateName": "",
-              "GatePrivate": false,
-              "MovieDialingType": false,
-              "ShowWormholeCinematic": false
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "760dd4ee-9687-4fc9-9483-9cc6ff6c0d47",
-              "Flags": 0,
-              "Name": "Chevron 1",
-              "Position": "0,0,0",
-              "Rotation": "-0.3420201,0,0,0.9396926",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "ce8e31e3-1259-43a6-834d-ba2f310d9435",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "79f3be58-7572-456c-ace7-5df4b7d506e6",
-                    "go": "c7990567-7fbd-42db-99de-2f0020f22269",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "49272452-8b42-4f4f-94f3-9e47913a0794",
-                    "go": "760dd4ee-9687-4fc9-9483-9cc6ff6c0d47",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 1,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "49272452-8b42-4f4f-94f3-9e47913a0794",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "c7990567-7fbd-42db-99de-2f0020f22269",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01095581,136.5016",
-                  "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "79f3be58-7572-456c-ace7-5df4b7d506e6",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "4d64e5cc-3c74-4519-8036-c99fe55829f7",
-              "Flags": 0,
-              "Name": "Chevron 2",
-              "Position": "0,0,0",
-              "Rotation": "-0.6427876,0,0,0.7660444",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "c4a5fd17-e5a2-4d8d-93af-abe4cb1ef50b",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "be7cfcaf-b8a3-48fc-88e1-a4b3fc33c682",
-                    "go": "b6132bb9-af80-4959-a566-6f64f2090baf",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "a5b315f6-a604-4ad2-88bb-0be5204adc36",
-                    "go": "4d64e5cc-3c74-4519-8036-c99fe55829f7",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 2,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "a5b315f6-a604-4ad2-88bb-0be5204adc36",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "b6132bb9-af80-4959-a566-6f64f2090baf",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476437,-0.01095581,136.5016",
-                  "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "be7cfcaf-b8a3-48fc-88e1-a4b3fc33c682",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "6256162e-afab-4ba0-85b4-ebea85173e35",
-              "Flags": 0,
-              "Name": "Chevron 3",
-              "Position": "0,0,0",
-              "Rotation": "-0.8660254,0,0,0.5",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "0507ac3f-c3ba-436a-857f-9b0d8dd1145c",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "aa6d288a-3c0c-4409-8e67-d2f276babc23",
-                    "go": "5a0cd26b-8b6c-44b1-9b06-99ff1e16358e",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "dae0eb05-287d-4c7e-bb22-fb50ab7ee87a",
-                    "go": "6256162e-afab-4ba0-85b4-ebea85173e35",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 3,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "dae0eb05-287d-4c7e-bb22-fb50ab7ee87a",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "5a0cd26b-8b6c-44b1-9b06-99ff1e16358e",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01086807,136.5016",
-                  "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "aa6d288a-3c0c-4409-8e67-d2f276babc23",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "0828935c-aa9d-44a5-b3c1-799c95578810",
-              "Flags": 0,
-              "Name": "Chevron 4",
-              "Position": "0,0,0",
-              "Rotation": "-0.8660254,0,0,-0.5000001",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "22c17b54-8db9-4c0b-b2d0-dc07c2d8a308",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "32409cb4-34e5-49f1-8623-2c17ae80c416",
-                    "go": "979f0173-d6bc-4dbc-9f87-56b513dcc3f9",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "cc2f02cb-0e7e-4185-bed4-bd3ac1e81aae",
-                    "go": "0828935c-aa9d-44a5-b3c1-799c95578810",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 4,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "cc2f02cb-0e7e-4185-bed4-bd3ac1e81aae",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "979f0173-d6bc-4dbc-9f87-56b513dcc3f9",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476439,-0.01103973,136.5016",
-                  "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "32409cb4-34e5-49f1-8623-2c17ae80c416",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "ced1326f-4080-4de9-9504-0ed1268cf3f0",
-              "Flags": 0,
-              "Name": "Chevron 5",
-              "Position": "0,0,0",
-              "Rotation": "-0.6427876,0,0,-0.7660444",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "8a3392e6-0ea9-45ac-b995-bf039ff951cf",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "a512974b-104f-4972-8b6e-3f660ce768dd",
-                    "go": "c6318029-b694-4dba-9946-9bc13ed32a26",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "fdb9536a-53b3-4e7e-9598-9f2bcd8d70b7",
-                    "go": "ced1326f-4080-4de9-9504-0ed1268cf3f0",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 5,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "fdb9536a-53b3-4e7e-9598-9f2bcd8d70b7",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "c6318029-b694-4dba-9946-9bc13ed32a26",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01096344,136.5016",
-                  "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "a512974b-104f-4972-8b6e-3f660ce768dd",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "90fd6b24-ec05-4521-8fb0-4b3fa354a4e6",
-              "Flags": 0,
-              "Name": "Chevron 6",
-              "Position": "0,0,0",
-              "Rotation": "-0.3420202,0,0,-0.9396926",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "12d1fbe7-1fa0-4e57-a932-14ae9ca2c21d",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "fd5dfc75-b24a-4656-9d1f-57ec396772d5",
-                    "go": "339ba7a6-eb61-4f76-87e1-fbcac2ec1ff6",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "c4d2cdc3-47cf-4acf-a2ea-4b3c1fdd3c16",
-                    "go": "90fd6b24-ec05-4521-8fb0-4b3fa354a4e6",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 6,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "c4d2cdc3-47cf-4acf-a2ea-4b3c1fdd3c16",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "339ba7a6-eb61-4f76-87e1-fbcac2ec1ff6",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476439,-0.01097107,136.5016",
-                  "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "fd5dfc75-b24a-4656-9d1f-57ec396772d5",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "f8132deb-fe72-4c19-ae84-0da00766a0a9",
-              "Flags": 0,
-              "Name": "Chevron 7",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "fab34fa0-f098-435e-a37f-926855f9bc17",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "0db6a7e1-a399-4724-8920-2a1023f9440c",
-                    "go": "21309ec7-e9dc-4486-a7f9-54d4513cc4ea",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "46695804-5c23-498b-92cb-3395dd0e1ff6",
-                    "go": "f8132deb-fe72-4c19-ae84-0da00766a0a9",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 7,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "46695804-5c23-498b-92cb-3395dd0e1ff6",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "21309ec7-e9dc-4486-a7f9-54d4513cc4ea",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.0109611,136.5016",
-                  "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "0db6a7e1-a399-4724-8920-2a1023f9440c",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "09ea6a84-a43f-4b82-ad31-42343b7c3439",
-              "Flags": 0,
-              "Name": "Chevron 8",
-              "Position": "0,0,0",
-              "Rotation": "-0.9848077,0,0,0.1736482",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "903e4c8b-a678-4481-b7f3-626610046c80",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "fd622388-5b3b-4c4c-b03c-f7db96683c4a",
-                    "go": "559ef65a-b051-477e-bc95-2dbb987f267d",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "9abc727a-3afa-4e4f-95b1-a1933ffbc513",
-                    "go": "09ea6a84-a43f-4b82-ad31-42343b7c3439",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 8,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "9abc727a-3afa-4e4f-95b1-a1933ffbc513",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "559ef65a-b051-477e-bc95-2dbb987f267d",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01098251,136.5017",
-                  "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "fd622388-5b3b-4c4c-b03c-f7db96683c4a",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "61d37c76-cfba-44d3-beea-b7ee208b3cb6",
-              "Flags": 0,
-              "Name": "Chevron 9",
-              "Position": "0,0,0",
-              "Rotation": "-0.9848077,0,0,-0.1736482",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "2beeb577-4403-4765-95d3-5cca51d7c2e5",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "6a589463-2dee-4759-8820-50d0a09f0d1b",
-                    "go": "897daf41-95d4-4b48-85a3-b3f325ef55f1",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "8545a6b4-6c6c-42a6-a80f-286d53fe7d12",
-                    "go": "61d37c76-cfba-44d3-beea-b7ee208b3cb6",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 9,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "8545a6b4-6c6c-42a6-a80f-286d53fe7d12",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "897daf41-95d4-4b48-85a3-b3f325ef55f1",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01093292,136.5017",
-                  "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
-                  "Tags": "light_point,light",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "6a589463-2dee-4759-8820-50d0a09f0d1b",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "e279e301-0f6a-4fd3-89ff-3b7912959133",
-              "Flags": 0,
-              "Name": "Ring",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
-                  "__guid": "8f185275-fc68-4961-b5ca-db49c41507dd",
-                  "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
-                  "RingAngle": 0,
-                  "RingModel": {
-                    "_type": "component",
-                    "component_id": "37633fa9-e548-47fa-85a4-10584452caf3",
-                    "go": "e279e301-0f6a-4fd3-89ff-3b7912959133",
-                    "component_type": "ModelRenderer"
-                  },
-                  "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
-                },
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "37633fa9-e548-47fa-85a4-10584452caf3",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
+              "Radius": 32,
+              "Static": true
             }
           ]
         },
         {
-          "__guid": "0e26a623-67be-4447-ac38-838176ce79fa",
+          "__guid": "a0648f07-84dd-4941-8237-bd8ccff7e36f",
           "Flags": 0,
-          "Name": "DHD",
-          "Position": "164,800,-4.999985",
-          "Rotation": "0.09229596,0.09229596,-0.7010574,0.7010574",
-          "Enabled": true,
-          "NetworkMode": 1,
-          "__Prefab": "prefabs/dhdmilkyway.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "883d4245-2a75-4387-b23b-6e46565ddc58",
-          "Flags": 0,
-          "Name": "Object",
-          "Position": "0,-1600,0",
+          "Name": "Sphere",
+          "Position": "187,206.5,49.5",
+          "Scale": "0.2,0.2,0.2",
+          "Tags": "passesshield",
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.MapInstance",
-              "__guid": "c1b7fd21-dcdf-4809-ba3d-bf71ac30c67d",
-              "__version": 1,
-              "MapName": "facepunch.flatgrass",
-              "NoOrigin": false,
-              "UseMapFromLaunch": false
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "6f974b83-eb9a-4fc2-bec9-3fad70a5dd43",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "0.06698,0.50233,0,1"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "4ddc8f94-d7e0-4fe1-8a33-3e0bd0f83f18",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": "DisableCollisionSounds",
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "38a7efce-dd4e-474e-a163-dd06155e69ab",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 32,
+              "Static": false
             }
           ]
-        }
-      ]
-    },
-    {
-      "__guid": "50bd1329-68c3-4a55-9f8a-4f552902afe7",
-      "Flags": 0,
-      "Name": "Chat",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "77db7b84-930e-4c97-b917-784d03eed429",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
         },
         {
-          "__type": "Chat",
-          "__guid": "839b39a4-0cb0-4749-9617-a9bfa5e1688f"
+          "__guid": "39014861-fb08-48a2-9383-99235c1037ae",
+          "Flags": 0,
+          "Name": "Sphere",
+          "Position": "187,220,49.5",
+          "Scale": "0.2,0.2,0.2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "beba4b8f-b57a-4fb1-b2eb-7d60691c1a95",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "0.47907,0.02674,0.02674,1"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "bf552a9c-f2ab-450d-9280-de4224d84f69",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": "DisableCollisionSounds",
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "87c566b3-1d3e-44cf-b595-79db384153e7",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 32,
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "da700b90-c364-402d-88c0-93a1eadf1875",
+          "Flags": 0,
+          "Name": "Sphere",
+          "Position": "187,234,49.5",
+          "Scale": "0.2,0.2,0.2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "11814502-5453-4e78-a7e7-2c68d8512945",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "0.03245,0.27042,0.46512,1"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "b8f9ea33-712a-41cd-bb3e-a346dcc9a2c3",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": "DisableCollisionSounds",
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "d963d8c5-f8b3-46e2-9838-b1100f9c5184",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 32,
+              "Static": false
+            }
+          ]
         }
       ]
     }

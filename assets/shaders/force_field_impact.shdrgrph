@@ -1,0 +1,177 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Translucent",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 0,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "-1440,304",
+      "Albedo": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "0,68.91501,295.35,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "1",
+      "Position": "-960,-688"
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Impact Color",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "2",
+      "Position": "-1968,-96"
+    },
+    {
+      "_class": "Float3",
+      "Min": "0,0,0",
+      "Max": "0,0,0",
+      "Value": "0,0,-32",
+      "Name": "Impact Center",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "3",
+      "Position": "-2608,224"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 0,
+      "Value": 8,
+      "Name": "Radius",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "4",
+      "Position": "-2384,464"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 0,
+      "Value": 0,
+      "Name": "Hardness",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "5",
+      "Position": "-2384,544"
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "6",
+      "Position": "-2688,64"
+    },
+    {
+      "_class": "SphereMask",
+      "Identifier": "7",
+      "Position": "-1952,448",
+      "Center": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Radius": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "Hardness": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "8",
+      "Position": "-2320,144",
+      "A": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 0,
+      "Value": 1,
+      "Name": "ImpactColorMul",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "9",
+      "Position": "-2112,176"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "10",
+      "Position": "-1600,96",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Saturate",
+      "Identifier": "11",
+      "Position": "-1872,304",
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "12",
+      "Position": "-1696,320",
+      "A": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Out"
+      }
+    },
+    {
+      "_class": "Max",
+      "DefaultA": 0,
+      "DefaultB": 4,
+      "Identifier": "13",
+      "Position": "-1856,128",
+      "InputA": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    }
+  ]
+}
