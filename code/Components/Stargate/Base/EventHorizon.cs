@@ -706,7 +706,7 @@ namespace Sandbox.Components.Stargate
 				InTriggerFront.Add(ent);
 				ent.Tags.Add(StargateTags.BeforeGate);
 			}
-			else if (trigger == Kawoosh.Trigger)
+			else if (Kawoosh.IsValid() && trigger == Kawoosh.Trigger)
 			{
 				DissolveEntity(ent);
 			}
