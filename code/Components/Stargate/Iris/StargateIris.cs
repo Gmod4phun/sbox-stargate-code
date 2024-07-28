@@ -28,13 +28,19 @@ namespace Sandbox.Components.Stargate
 			if (Busy || Closed)
 				return;
 
-			IrisModel.SceneModel.RenderingEnabled = true;
-			IrisCollider.Enabled = true;
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
+			{
+				IrisModel.SceneModel.RenderingEnabled = true;
+				IrisModel.SceneModel.SetAnimParameter("Open", false);
+			}
+
+			if (IrisCollider.IsValid())
+			{
+				IrisCollider.Enabled = true;
+			}
 
 			Busy = true;
 			Closed = true;
-
-			IrisModel.SceneModel.SetAnimParameter("Open", false);
 
 			Stargate.PlaySound(this, "stargate.iris.close");
 
@@ -51,15 +57,24 @@ namespace Sandbox.Components.Stargate
 			Busy = true;
 			Closed = false;
 
-			IrisCollider.Enabled = false;
+			if (IrisCollider.IsValid())
+			{
+				IrisCollider.Enabled = false;
+			}
 
-			IrisModel.SceneModel.SetAnimParameter("Open", true);
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
+			{
+				IrisModel.SceneModel.SetAnimParameter("Open", true);
+			}
 
 			Stargate.PlaySound(this, "stargate.iris.open");
 
 			await Task.DelaySeconds(_openCloseDelay);
 
-			IrisModel.SceneModel.RenderingEnabled = false;
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
+			{
+				IrisModel.SceneModel.RenderingEnabled = false;
+			}
 
 			Busy = false;
 		}

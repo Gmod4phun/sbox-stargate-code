@@ -16,7 +16,7 @@ namespace Sandbox.Components.Stargate
 
 			Busy = true;
 			Closed = true;
-			if (IrisModel.IsValid())
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
 			{
 				IrisModel.SceneModel.RenderingEnabled = true;
 			}
@@ -58,7 +58,7 @@ namespace Sandbox.Components.Stargate
 
 			await Task.DelaySeconds(_openCloseDelay);
 
-			if (IrisModel.IsValid())
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
 			{
 				IrisModel.SceneModel.RenderingEnabled = false;
 			}
