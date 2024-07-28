@@ -583,6 +583,26 @@ namespace Sandbox.Components.Stargate
 			// handle multiWorld switching
 			var targetWorldIndex = MultiWorldSystem.GetWorldIndexOfObject(otherEH.GameObject);
 			MultiWorldSystem.AssignWorldToObject(ent, targetWorldIndex);
+
+			HackyForceExitAfterTp(ent);
+		}
+
+		async void HackyForceExitAfterTp(GameObject go)
+		{
+			await Task.FixedUpdate();
+			await Task.FixedUpdate();
+
+			if (!go.IsValid())
+				return;
+
+			var collider = go.Components.Get<Collider>();
+			if (!collider.IsValid())
+				return;
+
+			if (!EventHorizonTrigger.Touching.Contains(collider))
+			{
+				OnEntityExited(go);
+			}
 		}
 
 		public void DissolveEntity(GameObject ent)
