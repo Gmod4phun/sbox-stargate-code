@@ -139,7 +139,7 @@ public class MultiWorldSystem : GameObjectSystem
 		}
 
 		// add to new world
-		gameObject.Parent = GetWorldByIndex(worldIndex).GameObject;
+		gameObject.SetParent(GetWorldByIndex(worldIndex).GameObject, true);
 
 		// if it's a player, handle that
 		if (gameObject.Components.TryGet<PlayerController>(out var ply))
