@@ -329,8 +329,11 @@ public class MultiWorldSystem : GameObjectSystem
 			}
 		}
 
-		Game.ActiveScene.PhysicsWorld.CollisionRules = rules;
-		Log.Info("MultiWorld: Collision rules initialized");
+		if (Game.ActiveScene.IsValid() && Game.ActiveScene.PhysicsWorld.IsValid())
+		{
+			Game.ActiveScene.PhysicsWorld.CollisionRules = rules;
+			Log.Info("MultiWorld: Collision rules initialized");
+		}
 	}
 
 	void ProcessWorlds()
