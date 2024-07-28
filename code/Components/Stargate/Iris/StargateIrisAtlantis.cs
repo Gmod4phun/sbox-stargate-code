@@ -6,6 +6,9 @@ namespace Sandbox.Components.Stargate
 		private MultiWorldSound IrisLoop;
 		private float _currentAlpha = 0;
 
+		[Property]
+		public float Alpha => _currentAlpha;
+
 		public override async void Close()
 		{
 			if (Busy || Closed)
@@ -13,8 +16,15 @@ namespace Sandbox.Components.Stargate
 
 			Busy = true;
 			Closed = true;
-			IrisModel.SceneModel.RenderingEnabled = true;
-			IrisCollider.Enabled = true;
+			if (IrisModel.IsValid())
+			{
+				IrisModel.SceneModel.RenderingEnabled = true;
+			}
+
+			if (IrisCollider.IsValid())
+			{
+				IrisCollider.Enabled = true;
+			}
 
 			Stargate.PlaySound(this, "stargate.iris.atlantis.close");
 
@@ -39,12 +49,20 @@ namespace Sandbox.Components.Stargate
 
 			Busy = true;
 			Closed = false;
-			IrisCollider.Enabled = false;
+			if (IrisCollider.IsValid())
+			{
+				IrisCollider.Enabled = false;
+			}
+
 			Stargate.PlaySound(this, "stargate.iris.atlantis.open");
 
 			await Task.DelaySeconds(_openCloseDelay);
 
-			IrisModel.SceneModel.RenderingEnabled = false;
+			if (IrisModel.IsValid())
+			{
+				IrisModel.SceneModel.RenderingEnabled = false;
+			}
+
 			Busy = false;
 		}
 

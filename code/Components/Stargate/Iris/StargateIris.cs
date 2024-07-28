@@ -5,7 +5,8 @@ namespace Sandbox.Components.Stargate
 		public enum IrisType
 		{
 			Standard,
-			Atlantis
+			Atlantis,
+			Goauld
 		}
 
 		protected virtual float _openCloseDelay => 3f;

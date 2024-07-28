@@ -146,6 +146,10 @@
             "prefab": "prefabs/decal_bullet_default.prefab"
           },
           "GrabIgnoreTags": "shield",
+          "ImpactEffect": {
+            "_type": "gameobject",
+            "prefab": "prefabs/impact_default.prefab"
+          },
           "MovementSmoothness": 3,
           "ShootDamage": 9
         }
@@ -1284,6 +1288,8 @@
                     "Constants": "5,6,0,0"
                   },
                   "MaxParticles": 1000,
+                  "OrbitalForce": {},
+                  "OrbitalPull": {},
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
@@ -1442,6 +1448,8 @@
                     "Constants": "5,6,0,0"
                   },
                   "MaxParticles": 1000,
+                  "OrbitalForce": {},
+                  "OrbitalPull": {},
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
@@ -1600,6 +1608,8 @@
                     "Constants": "5,6,0,0"
                   },
                   "MaxParticles": 1000,
+                  "OrbitalForce": {},
+                  "OrbitalPull": {},
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
@@ -1758,6 +1768,8 @@
                     "Constants": "5,6,0,0"
                   },
                   "MaxParticles": 1000,
+                  "OrbitalForce": {},
+                  "OrbitalPull": {},
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
@@ -6627,6 +6639,7 @@
               "GateLocal": false,
               "GateName": "",
               "GatePrivate": false,
+              "IrisType": "Goauld",
               "ShowWormholeCinematic": false
             }
           ],
@@ -6755,6 +6768,7 @@
               "GateLocal": false,
               "GateName": "",
               "GatePrivate": false,
+              "IrisType": "Goauld",
               "MovieDialingType": true,
               "ShowWormholeCinematic": false
             }
@@ -7726,14 +7740,14 @@
           "Flags": 0,
           "Name": "Shield Test",
           "Position": "270,-1,61",
-          "Scale": "4,4,4",
+          "Scale": "4.375,4.375,4.375",
           "Tags": "no_decal,shield",
           "Enabled": true,
           "Components": [
             {
               "__type": "Shield",
               "__guid": "84d73ff0-6535-40ef-8c8c-962e9c0e0d32",
-              "CanPassThrough": false,
+              "AlphaMul": 1,
               "Collider": {
                 "_type": "component",
                 "component_id": "8610e929-dc5b-415b-97d8-3fffab25cb7b",
@@ -7741,23 +7755,25 @@
                 "component_type": "SphereCollider"
               },
               "ImpactMaterial": "materials/sbox_stargate/force_field_impact.vmat",
-              "Radius": 128,
+              "Radius": 140,
               "Renderer": {
                 "_type": "component",
-                "component_id": "ac491be8-370f-4ca7-bc38-ce4758d32209",
+                "component_id": "48c1a4d4-1a09-445c-9682-cc61e674b87e",
                 "go": "87c5555a-b714-41ec-b702-ae34f568cac8",
-                "component_type": "ModelRenderer"
+                "component_type": "SkinnedModelRenderer"
               },
               "ShieldColor": "1,0.36512,0.02326,1"
             },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "ac491be8-370f-4ca7-bc38-ce4758d32209",
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "48c1a4d4-1a09-445c-9682-cc61e674b87e",
               "BodyGroups": 18446744073709551615,
+              "CreateBoneObjects": false,
               "MaterialOverride": "materials/sbox_stargate/force_field_simple.vmat",
               "Model": "models/dev/sphere.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "RenderType": "Off",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
             },
             {
               "__type": "Sandbox.SphereCollider",

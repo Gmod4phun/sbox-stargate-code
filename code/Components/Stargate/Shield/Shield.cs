@@ -6,22 +6,23 @@ public class Shield
 		Component.IDamageable
 {
 	[Property]
-	public bool CanPassThrough = false;
-
-	[Property]
-	public float Radius { get; set; } = 64;
+	public float? Radius { get; set; } = 64;
 
 	[Property]
 	public Color ShieldColor { get; set; } = Color.White;
 
 	[Property]
-	public ModelRenderer Renderer => Components.Get<ModelRenderer>(FindMode.EverythingInSelf);
+	public float AlphaMul { get; set; } = 1f;
 
 	[Property]
-	public SphereCollider Collider => Components.Get<SphereCollider>(FindMode.EverythingInSelf);
+	public SkinnedModelRenderer Renderer =>
+		Components.Get<SkinnedModelRenderer>(FindMode.EverythingInSelf);
 
 	[Property]
-	Material ImpactMaterial { get; set; }
+	public Collider Collider => Components.Get<Collider>(FindMode.EverythingInSelf);
+
+	[Property]
+	public Material ImpactMaterial { get; set; }
 
 	protected override void OnUpdate()
 	{
@@ -30,9 +31,9 @@ public class Shield
 		if (!Collider.IsValid() || !Renderer.IsValid())
 			return;
 
-		GameObject.Transform.Scale = Vector3.One * Radius / 32f;
-
-		Collider.Enabled = !CanPassThrough;
+		GameObject.Transform.Scale = Radius.HasValue
+			? (Vector3.One * Radius.Value / 32f)
+			: Vector3.One;
 
 		var so = Renderer.SceneObject;
 		if (!so.IsValid())
@@ -40,6 +41,7 @@ public class Shield
 
 		so.Batchable = false;
 		so.Attributes.Set("shieldColor", ShieldColor);
+		so.Attributes.Set("masterAlphaMul", AlphaMul);
 	}
 
 	public async void DrawHit(Vector3 position)
@@ -59,7 +61,7 @@ public class Shield
 		}
 	}
 
-	async void AddHitEffect(Vector3 position)
+	void CreateHitEffect(Vector3 position)
 	{
 		if (ImpactMaterial == null)
 			return;
@@ -82,9 +84,7 @@ public class Shield
 
 		var impact = effect.Components.Create<ShieldImpact>();
 		impact.DestroyOnAlmostZeroMul = true;
-		impact.ImpactDirFromCenter = Transform.World.NormalToLocal(
-			(position - Transform.Position).Normal
-		);
+		impact.ImpactCenter = position;
 		impact.ImpactColor = ShieldColor;
 	}
 
@@ -93,13 +93,8 @@ public class Shield
 	private void ReflectObject(Collision collision)
 	{
 		var obj = collision.Other.Body;
-		var vel = obj.Velocity;
-		var reflected = Vector3.Reflect(vel, collision.Contact.Normal);
-		var len = vel.Length;
-
-		var newLen = (len * 2).Clamp(len, 2000);
-		reflected = reflected.Normal * newLen;
-		obj.Velocity = reflected;
+		var normal = (obj.Position - Transform.Position).Normal;
+		obj.ApplyForceAt(obj.MassCenter, normal * obj.Mass * 20000f);
 	}
 
 	public void OnCollisionStart(Collision collision)
@@ -113,11 +108,14 @@ public class Shield
 		LastCollision = 0;
 
 		ReflectObject(collision);
-		AddHitEffect(collision.Contact.Point);
+		CreateHitEffect(collision.Contact.Point);
 	}
 
 	public void OnDamage(in DamageInfo damage)
 	{
-		AddHitEffect(damage.Position);
+		if (damage.Shape?.Body?.GetGameObject() != GameObject)
+			return;
+
+		CreateHitEffect(damage.Position);
 	}
 }

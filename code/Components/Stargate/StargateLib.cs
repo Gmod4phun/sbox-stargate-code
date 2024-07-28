@@ -445,19 +445,44 @@ namespace Sandbox.Components.Stargate
 				iris_object.SetParent(gate.GameObject);
 				iris_object.Tags.Add("no_decal");
 
-				var atlantis = irisType == StargateIris.IrisType.Atlantis;
-				var iris_component = atlantis
-					? iris_object.Components.Create<StargateIrisAtlantis>()
-					: iris_object.Components.Create<StargateIris>();
+				var iris_component = irisType switch
+				{
+					StargateIris.IrisType.Atlantis
+						=> iris_object.Components.Create<StargateIrisAtlantis>(),
+					StargateIris.IrisType.Goauld
+						=> iris_object.Components.Create<StargateIrisGoauld>(),
+					_ => iris_object.Components.Create<StargateIris>()
+				};
+
 				iris_component.IrisModel = iris_object.Components.Create<SkinnedModelRenderer>();
 				iris_component.IrisModel.Model = Model.Load(
-					atlantis
-						? "models/sbox_stargate/iris_atlantis/iris_atlantis.vmdl"
-						: "models/sbox_stargate/iris/iris.vmdl"
+					irisType switch
+					{
+						StargateIris.IrisType.Atlantis
+							=> "models/sbox_stargate/iris_atlantis/iris_atlantis.vmdl",
+						StargateIris.IrisType.Goauld
+							=> "models/sbox_stargate/iris_goauld/iris_goauld.vmdl",
+						_ => "models/sbox_stargate/iris/iris.vmdl"
+					}
 				);
 
 				iris_component.IrisCollider = iris_object.Components.Create<ModelCollider>();
 				iris_component.IrisCollider.Model = iris_component.IrisModel.Model;
+				iris_component.IrisCollider.Enabled = false;
+
+				if (irisType == StargateIris.IrisType.Goauld)
+				{
+					iris_component.IrisModel = null;
+					var shield = iris_object.Components.Create<Shield>();
+					shield.Radius = 32;
+					shield.ShieldColor = Color.FromBytes(255, 100, 0);
+					shield.Renderer.MaterialOverride = Material.Load(
+						"materials/sbox_stargate/force_field_simple.vmat"
+					);
+					shield.ImpactMaterial = Material.Load(
+						"materials/sbox_stargate/force_field_impact.vmat"
+					);
+				}
 
 				iris_component.Close();
 			}

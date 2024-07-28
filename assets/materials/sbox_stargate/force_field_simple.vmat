@@ -8,11 +8,16 @@ Layer0
 	F_DO_NOT_CAST_SHADOWS 1
 	F_RENDER_BACKFACES 1
 
-	g_flIntersectionSharpness "0.200"
+	g_flIntersectionSharpness "0.800"
+	g_flMasterAlphaMul "1.000"
 	g_vShieldColor "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Basic ----
+	TextureTintMask "materials/sbox_stargate/effects/ripples_mask.tga"
 
 	DynamicParams
 	{
+		g_flMasterAlphaMul "masterAlphaMul"
 		g_vShieldColor "shieldColor"
 	}
 }
