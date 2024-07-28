@@ -24,6 +24,12 @@ public class Shield
 	[Property]
 	public Material ImpactMaterial { get; set; }
 
+	protected override void OnStart()
+	{
+		base.OnStart();
+		Tags.Add("shield");
+	}
+
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
