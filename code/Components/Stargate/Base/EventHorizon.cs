@@ -456,13 +456,15 @@ namespace Sandbox.Components.Stargate
 			if (!other.IsValid())
 				return Tuple.Create(entryPoint, entryDir);
 
+			var otherLocal = Scene.Transform.World.ToLocal(other.Transform.World);
+
 			var newPos = Transform.World.PointToLocal(entryPoint);
 			newPos = newPos.WithY(-newPos.y);
-			newPos = other.Transform.Local.PointToWorld(newPos);
+			newPos = otherLocal.PointToWorld(newPos);
 
 			var newDir = Transform.World.PointToLocal(Transform.Position + entryDir);
 			newDir = newDir.WithX(-newDir.x).WithY(-newDir.y);
-			newDir = other.Transform.Position - other.Transform.Local.PointToWorld(newDir);
+			newDir = other.Transform.Position - otherLocal.PointToWorld(newDir);
 			newDir = -newDir;
 
 			return Tuple.Create(newPos, newDir);

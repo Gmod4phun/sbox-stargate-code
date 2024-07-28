@@ -1,5 +1,4 @@
-using System;
-using Sandbox;
+using Sandbox.Components.Stargate;
 
 public class PlayerGrabber : Component
 {
@@ -178,22 +177,47 @@ public class PlayerGrabber : Component
 
 	TimeSince timeSinceShoot;
 
-	public void Shoot()
+	void DoShoot(Vector3 pos, Vector3 dir)
 	{
-		if (timeSinceShoot < 0.1f)
-			return;
-
-		timeSinceShoot = 0;
-
-		Sound.Play(shootSound, Transform.Position);
-
-		var ray = Scene.Camera.ScreenNormalToRay(0.5f);
-		ray.Forward += Vector3.Random * 0.03f;
-
-		var tr = Scene.Trace.Ray(ray, 3000.0f).WithWorld(GameObject).Run();
+		var tr = Scene
+			.Trace.Ray(pos, pos + dir * 3000.0f)
+			.WithWorld(GameObject)
+			.HitTriggers()
+			.WithoutTags("ehtrigger")
+			.Run();
 
 		if (!tr.Hit || !tr.GameObject.IsValid())
 			return;
+
+		if (tr.GameObject.Components.TryGet<EventHorizon>(out var eh))
+		{
+			eh.PlayTeleportSound();
+
+			if (!eh.IsFullyFormed)
+				return;
+
+			var isInbound = eh.Gate.Inbound;
+			var otherEH = eh.GetOther();
+			var otherIrisClosed = otherEH.Gate.IsIrisClosed();
+			var fromBehind = eh.IsPointBehindEventHorizon(tr.HitPosition);
+
+			if (!isInbound && !fromBehind && otherIrisClosed)
+				otherEH.Gate.Iris.PlayHitSound();
+
+			if (isInbound || fromBehind || otherIrisClosed)
+				return;
+
+			var newCoords = eh.CalcExitPointAndDir(tr.HitPosition, tr.Direction);
+			var newPos = newCoords.Item1;
+			var newDir = newCoords.Item2;
+
+			// shoot a bullet from the other EH, new pos will be offset forward to avoid hitting itself
+			var offset = newDir * 0.5f;
+			DoShoot(newPos + offset, newDir.Normal);
+			eh.GetOther().PlayTeleportSound();
+
+			return;
+		}
 
 		if (ImpactEffect.IsValid())
 		{
@@ -230,5 +254,20 @@ public class PlayerGrabber : Component
 		{
 			damageable.OnDamage(damage);
 		}
+	}
+
+	public void Shoot()
+	{
+		if (timeSinceShoot < 0.1f)
+			return;
+
+		timeSinceShoot = 0;
+
+		Sound.Play(shootSound, Transform.Position);
+
+		var ray = Scene.Camera.ScreenNormalToRay(0.5f);
+		// ray.Forward += Vector3.Random * 0.03f;
+
+		DoShoot(ray.Position, ray.Forward.Normal);
 	}
 }
