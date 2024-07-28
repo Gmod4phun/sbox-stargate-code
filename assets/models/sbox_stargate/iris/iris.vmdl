@@ -108,6 +108,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/iris/src/iris_anims/iris_closed_idle.smd"
 						start_frame = -1
@@ -130,6 +131,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/iris/src/iris_anims/iris_open_idle.smd"
 						start_frame = -1
@@ -152,6 +154,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/iris/src/iris_anims/iris_close.smd"
 						start_frame = -1
@@ -174,6 +177,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/iris/src/iris_anims/iris_open.smd"
 						start_frame = -1

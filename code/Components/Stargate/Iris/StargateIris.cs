@@ -90,6 +90,24 @@ namespace Sandbox.Components.Stargate
 				Close();
 		}
 
+		protected override void OnStart()
+		{
+			base.OnStart();
+
+			Busy = false;
+			Closed = false;
+
+			if (IrisCollider.IsValid())
+			{
+				IrisCollider.Enabled = false;
+			}
+			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
+			{
+				IrisModel.SceneModel.SetAnimParameter("Open", true);
+				IrisModel.SceneModel.RenderingEnabled = false;
+			}
+		}
+
 		public virtual void PlayHitSound()
 		{
 			Stargate.PlaySound(this, "stargate.iris.hit");

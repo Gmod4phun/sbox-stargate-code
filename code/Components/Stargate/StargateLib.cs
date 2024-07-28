@@ -483,8 +483,6 @@ namespace Sandbox.Components.Stargate
 						"materials/sbox_stargate/force_field_impact.vmat"
 					);
 				}
-
-				iris_component.Close();
 			}
 			return gate.Iris;
 		}
