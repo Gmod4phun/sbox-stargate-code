@@ -4,15 +4,17 @@ public class MultiWorldSystem : GameObjectSystem
 
 	// public Dictionary<int, MultiWorld> Worlds = new();
 	public static IEnumerable<MultiWorld> Worlds =>
-		Game.ActiveScene.IsValid() ? Game.ActiveScene.GetAllComponents<MultiWorld>() : null;
+		Game.ActiveScene.IsValid()
+			? Game.ActiveScene.GetAllComponents<MultiWorld>()
+			: new List<MultiWorld>();
 	public static IEnumerable<int> AllWorldIndices => Worlds.Select(w => w.WorldIndex);
 	public static List<MultiWorldSound> FollowingSounds = new();
 
 	public MultiWorldSystem(Scene scene)
 		: base(scene)
 	{
-		Listen(Stage.FinishUpdate, 2, ProcessWorlds, "MultiWorld_ProcessWorlds");
-		Listen(Stage.FinishUpdate, 1, ProcessSounds, "MultiWorld_ProcessSounds");
+		Listen(Stage.FinishUpdate, 1, ProcessWorlds, "MultiWorld_ProcessWorlds");
+		Listen(Stage.FinishUpdate, 2, ProcessSounds, "MultiWorld_ProcessSounds");
 
 		Init();
 	}
@@ -187,6 +189,8 @@ public class MultiWorldSystem : GameObjectSystem
 		camera.RenderExcludeTags.Remove(newWorldTag);
 		controller.IgnoreLayers.Remove(newWorldTag);
 		player.CurrentWorldIndex = worldIndex;
+
+		ProcessFog();
 	}
 
 	public static void AddSound(MultiWorldSound sound)
@@ -210,6 +214,7 @@ public class MultiWorldSystem : GameObjectSystem
 	public static void Init()
 	{
 		InitializeCollisionRules();
+		// ProcessFog();
 	}
 
 	private static async void InitializeCollisionRules()
@@ -334,6 +339,8 @@ public class MultiWorldSystem : GameObjectSystem
 			Game.ActiveScene.PhysicsWorld.CollisionRules = rules;
 			Log.Info("MultiWorld: Collision rules initialized");
 		}
+
+		ProcessFog();
 	}
 
 	void ProcessWorlds()
@@ -420,6 +427,47 @@ public class MultiWorldSystem : GameObjectSystem
 				}
 			}
 		}
+	}
+
+	static void AdjustComponentEnabledState<T>(PlayerController player)
+		where T : Component
+	{
+		foreach (var c in Game.ActiveScene.GetAllComponents<T>())
+		{
+			c.Enabled = false;
+		}
+
+		foreach (
+			var c in GetWorldByIndex(GetWorldIndexOfObject(player))
+				.Components.GetAll<T>(FindMode.DisabledInSelfAndDescendants)
+		)
+		{
+			if (c.IsValid())
+			{
+				c.Enabled = true;
+			}
+		}
+	}
+
+	public static void ProcessFog()
+	{
+		if (!Worlds.Any())
+			return;
+
+		var player = Game
+			.ActiveScene.GetAllComponents<PlayerController>()
+			.FirstOrDefault(p =>
+				p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local
+			);
+
+		if (!player.IsValid())
+			return;
+
+		AdjustComponentEnabledState<CubemapFog>(player);
+		AdjustComponentEnabledState<GradientFog>(player);
+		AdjustComponentEnabledState<VolumetricFogVolume>(player);
+		AdjustComponentEnabledState<DirectionalLight>(player);
+		AdjustComponentEnabledState<SkyBox2D>(player);
 	}
 }
 

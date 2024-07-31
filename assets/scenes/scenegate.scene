@@ -330,6 +330,7 @@
       "__guid": "dcf68271-3012-4f0d-a3fe-026f1d88c1a4",
       "Flags": 0,
       "Name": "World 0",
+      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -1318,6 +1319,7 @@
                   },
                   "SheetSequence": true,
                   "Space": "World",
+                  "StartDelay": {},
                   "StartVelocity": {
                     "Type": "Range",
                     "Evaluation": "Particle",
@@ -1478,6 +1480,7 @@
                   },
                   "SheetSequence": true,
                   "Space": "World",
+                  "StartDelay": {},
                   "StartVelocity": {
                     "Type": "Range",
                     "Evaluation": "Particle",
@@ -1638,6 +1641,7 @@
                   },
                   "SheetSequence": true,
                   "Space": "World",
+                  "StartDelay": {},
                   "StartVelocity": {
                     "Type": "Range",
                     "Evaluation": "Particle",
@@ -1798,6 +1802,7 @@
                   },
                   "SheetSequence": true,
                   "Space": "World",
+                  "StartDelay": {},
                   "StartVelocity": {
                     "Type": "Range",
                     "Evaluation": "Particle",
@@ -4605,7 +4610,7 @@
       "__guid": "e5c877fc-a880-4d17-8644-4240137019c1",
       "Flags": 0,
       "Name": "World 3 (Gates Test)",
-      "Enabled": true,
+      "Position": "0,2000,0",
       "Components": [
         {
           "__type": "MultiWorld",
@@ -4618,6 +4623,7 @@
           "__guid": "3042b752-896f-4811-a970-260a052ec28e",
           "Flags": 0,
           "Name": "Ground",
+          "Position": "0,0,0",
           "Scale": "20,20,1",
           "Enabled": true,
           "Components": [
@@ -4644,6 +4650,7 @@
           "__guid": "b9016576-f1be-4b1a-82d1-355144096fab",
           "Flags": 0,
           "Name": "2D Skybox",
+          "Position": "0,0,0",
           "Tags": "skybox",
           "Enabled": true,
           "Components": [
@@ -4678,6 +4685,7 @@
           "__guid": "c34832dd-8af3-45a3-8eee-02167e84819d",
           "Flags": 0,
           "Name": "Sun",
+          "Position": "0,0,0",
           "Rotation": "0.3593683,0.158559,-0.371178,0.8413919",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -7450,12 +7458,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "e4fbd724-c43e-400f-93d0-78362c4516b3",
                   "StartsUp": false,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "47cebe2b-479d-4469-a612-392e32344b79",
-                    "go": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -7492,12 +7494,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "efeece8c-a358-4d1b-8dad-8d765ce8d602",
                   "StartsUp": true,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
-                    "go": "f1d2bc28-9d2e-43ec-b6d8-75387d2218e4",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -7534,12 +7530,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "617044ce-e9fa-4cb6-807c-dccc20e456f8",
                   "StartsUp": true,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "403b7767-a194-417c-8a5a-0f999b4c6209",
-                    "go": "22fa9845-e092-441d-8987-e47f03196ea8",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -7600,12 +7590,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "d7da6255-a719-4eee-b769-6c8935e4918f",
                   "StartsUp": false,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "9b1e8f48-9e52-4e31-b714-6f2fe632259d",
-                    "go": "090f73e4-19ae-4847-9128-494f8c0b2584",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 16,
                   "MoveTime": 2.2
                 },
@@ -7693,12 +7677,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "ef48f887-2b77-4447-89ea-a2d56e7d6b4c",
                   "StartsUp": false,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "62c1ea37-7adf-4c8f-a5ed-eb1faeaec160",
-                    "go": "5fbfc3c9-0264-40b0-be63-ac9fc9c943f4",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 2,
                   "MoveTime": 0.5
                 },
@@ -7901,6 +7879,3155 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "a595d310-0527-4b39-b6f0-17465e8f3d50",
+      "Flags": 0,
+      "Name": "World 4 (Snow)",
+      "Position": "0,-2000,0",
+      "Components": [
+        {
+          "__type": "MultiWorld",
+          "__guid": "84fb8fa3-7fe8-4d40-8659-e4d6b35e74f2",
+          "WorldIndex": 4
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "525d6089-8e86-4271-b407-d2a3d2fa5f7f",
+          "Flags": 0,
+          "Name": "Ground",
+          "Position": "0,0,0",
+          "Scale": "20,20,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "d8d2de18-52b8-4b5b-8572-615cd23d95fe",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/sbox_stargate/sg_white.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "ca71dc7e-632c-4ac7-a182-ce6917eb29f2",
+              "Center": "0,0,-1",
+              "IsTrigger": false,
+              "Scale": "100,100,2",
+              "Static": true
+            }
+          ]
+        },
+        {
+          "__guid": "447d9577-b0c2-432d-bace-2eca153721d6",
+          "Flags": 0,
+          "Name": "Sun",
+          "Position": "0,0,0",
+          "Rotation": "-0.2272705,-0.2294598,0.9183475,-0.2287664",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "5febf0e6-5c4b-4be8-8e96-a6bb1983c3bc",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "1,0.96473,0.83721,1",
+              "Shadows": true,
+              "SkyColor": "0.05882,0.07451,0.08235,1"
+            }
+          ]
+        },
+        {
+          "__guid": "9fcc02af-218c-4878-a3b6-00d872699659",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Position": "0,0,0",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "bf6d1f1a-f8fe-4297-a156-d5e610cb4094",
+              "SkyMaterial": "materials/skybox/skybox_overcast_01.vmat",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "5ceee0b0-9d93-4ecb-ae84-4973fdc18441",
+              "__enabled": false,
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-1600,-1600,0",
+                "Maxs": "1600,1600,1024"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "d43c2c7d-631c-40be-99f4-ae82750c07fe",
+          "Flags": 0,
+          "Name": "Gradient Fog",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "fb5e8e24-188e-4804-bf63-a40afef96adb",
+              "Color": "0.73953,0.89581,1,1",
+              "EndDistance": 512,
+              "FalloffExponent": 0.49999866,
+              "Height": 64,
+              "StartDistance": 0,
+              "VerticalFalloffExponent": 4
+            }
+          ]
+        },
+        {
+          "__guid": "9316bb88-4ab5-42c7-a401-24ccfb60e0aa",
+          "Flags": 0,
+          "Name": "Cubemap Fog",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CubemapFog",
+              "__guid": "48983428-351c-4347-b9c5-b61567eb5b69",
+              "Blur": 0.5,
+              "EndDistance": 1024,
+              "FalloffExponent": 2,
+              "HeightExponent": 2,
+              "HeightStart": 2000,
+              "HeightWidth": 0,
+              "Sky": "materials/skybox/skybox_overcast_01.vmat",
+              "StartDistance": 0
+            }
+          ]
+        },
+        {
+          "__guid": "bb3d5337-4564-4594-8050-e1e9e272e77b",
+          "Flags": 0,
+          "Name": "stargatemilkyway",
+          "Position": "-580,0,90",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "dcb8df9f-a64b-4292-86c1-01d831485eb5",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "1d078967-4f36-4a02-b0ca-a7e30961f442",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
+              "__guid": "914f66e0-5694-4002-b0f6-c57f9446d663",
+              "AcceleratedDialup": false,
+              "AutoClose": true,
+              "CanOpenMenu": false,
+              "ChevronLightup": true,
+              "EventHorizonMaterialGroup": "default",
+              "GateAddress": "SNOW01",
+              "GateGlyphType": "MILKYWAY",
+              "GateGroup": "M@",
+              "GateLocal": false,
+              "GateName": "",
+              "GatePrivate": false,
+              "MovieDialingType": false,
+              "ShowWormholeCinematic": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5d1123e5-8eb8-46d2-ae4b-20a30ad67451",
+              "Flags": 0,
+              "Name": "Chevron 1",
+              "Position": "0,0,0",
+              "Rotation": "-0.3420201,0,0,0.9396926",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "7814fbf6-ab56-4181-a386-4cc15d0c8fb9",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "434108da-a280-43ee-8b51-6ad3544526df",
+                    "go": "4e59ab21-e492-4ea6-b092-bf08e6704223",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "b1245d6b-160c-4907-8c87-fa2289f622cc",
+                    "go": "5d1123e5-8eb8-46d2-ae4b-20a30ad67451",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 1,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "b1245d6b-160c-4907-8c87-fa2289f622cc",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "4e59ab21-e492-4ea6-b092-bf08e6704223",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01095581,136.5016",
+                  "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "434108da-a280-43ee-8b51-6ad3544526df",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "379d10ea-1244-44cb-946d-efba44fba12f",
+              "Flags": 0,
+              "Name": "Chevron 2",
+              "Position": "0,0,0",
+              "Rotation": "-0.6427876,0,0,0.7660444",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "159e8a13-128f-4bf5-b5e1-fc0b2c699834",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "8ba78e7c-d888-4bf9-97fd-8b2100953952",
+                    "go": "38e78ec5-5dc8-498d-adce-c91a8464c689",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "8c4ce310-9bc0-4a10-a870-fb3c3b609cb1",
+                    "go": "379d10ea-1244-44cb-946d-efba44fba12f",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 2,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "8c4ce310-9bc0-4a10-a870-fb3c3b609cb1",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "38e78ec5-5dc8-498d-adce-c91a8464c689",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476437,-0.01095581,136.5016",
+                  "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "8ba78e7c-d888-4bf9-97fd-8b2100953952",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "b973a10b-145f-49c3-aeb1-786bf1780472",
+              "Flags": 0,
+              "Name": "Chevron 3",
+              "Position": "0,0,0",
+              "Rotation": "-0.8660254,0,0,0.5",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "ce2318bb-b76c-439e-bf58-f030bf7c148f",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "7432689c-4e4f-4550-a703-77191782f67e",
+                    "go": "42e5a27d-79b7-4293-9483-69ae4c4277a1",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "aa8e37c2-3eae-45eb-9e14-9772cb0f4f89",
+                    "go": "b973a10b-145f-49c3-aeb1-786bf1780472",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 3,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "aa8e37c2-3eae-45eb-9e14-9772cb0f4f89",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "42e5a27d-79b7-4293-9483-69ae4c4277a1",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01086807,136.5016",
+                  "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "7432689c-4e4f-4550-a703-77191782f67e",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "b7f8d173-13ed-442d-9d3a-b2f2e7a94ff2",
+              "Flags": 0,
+              "Name": "Chevron 4",
+              "Position": "0,0,0",
+              "Rotation": "-0.8660254,0,0,-0.5000001",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "1e5542f5-04b6-4386-b3f1-823f1529405a",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "a68824ab-0ae9-413e-9ab7-5630a8b50732",
+                    "go": "72fda803-a65d-4c3f-a022-847292c62305",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "63c1b7a0-9737-463b-b295-0b15e1f8c022",
+                    "go": "b7f8d173-13ed-442d-9d3a-b2f2e7a94ff2",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 4,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "63c1b7a0-9737-463b-b295-0b15e1f8c022",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "72fda803-a65d-4c3f-a022-847292c62305",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476439,-0.01103973,136.5016",
+                  "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "a68824ab-0ae9-413e-9ab7-5630a8b50732",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "ca175132-0963-4a7d-a089-4edd151027fe",
+              "Flags": 0,
+              "Name": "Chevron 5",
+              "Position": "0,0,0",
+              "Rotation": "-0.6427876,0,0,-0.7660444",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "0054a5ac-2d48-4ec9-8048-5915ab9fa09b",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "6ca790a5-1e60-4db7-a0b6-9954be9ff97f",
+                    "go": "99267dc9-82d5-48eb-83ab-331c61ac5f1b",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "864dc9b3-34f5-4ae6-b743-8f9c5d9bac3a",
+                    "go": "ca175132-0963-4a7d-a089-4edd151027fe",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 5,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "864dc9b3-34f5-4ae6-b743-8f9c5d9bac3a",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "99267dc9-82d5-48eb-83ab-331c61ac5f1b",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01096344,136.5016",
+                  "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "6ca790a5-1e60-4db7-a0b6-9954be9ff97f",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "3797e60e-a3e9-4220-8c2b-b715754e3da4",
+              "Flags": 0,
+              "Name": "Chevron 6",
+              "Position": "0,0,0",
+              "Rotation": "-0.3420202,0,0,-0.9396926",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "5de9574f-6f42-4a1d-8c47-b02f89d87b06",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "913be236-200d-4522-a0ca-000375f932e5",
+                    "go": "1f932f1e-ae6a-450c-85dd-0410ff59a9fd",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "5aa92222-07d5-46d9-8425-54675d2055e1",
+                    "go": "3797e60e-a3e9-4220-8c2b-b715754e3da4",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 6,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "5aa92222-07d5-46d9-8425-54675d2055e1",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "1f932f1e-ae6a-450c-85dd-0410ff59a9fd",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476439,-0.01097107,136.5016",
+                  "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "913be236-200d-4522-a0ca-000375f932e5",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "31b6029e-45ee-4cb6-8a0a-f4c1a2b565eb",
+              "Flags": 0,
+              "Name": "Chevron 7",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "1c14a1fe-f587-4b75-a4aa-2afb74304723",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "5540835e-efa8-4b9a-8e69-cdc7566b6507",
+                    "go": "0fe2e580-b0ca-4e92-aed5-5a0e6b569ea7",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "5347e454-e2cf-4506-bc74-ef6331149254",
+                    "go": "31b6029e-45ee-4cb6-8a0a-f4c1a2b565eb",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 7,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "5347e454-e2cf-4506-bc74-ef6331149254",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "0fe2e580-b0ca-4e92-aed5-5a0e6b569ea7",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.0109611,136.5016",
+                  "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "5540835e-efa8-4b9a-8e69-cdc7566b6507",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "788e77cd-4cab-4c71-b938-b898c02b3e25",
+              "Flags": 0,
+              "Name": "Chevron 8",
+              "Position": "0,0,0",
+              "Rotation": "-0.9848077,0,0,0.1736482",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "b7d54c05-7aac-4649-a318-364d0341d0ab",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "c04317bf-ce27-40fd-bf00-1423831c7e26",
+                    "go": "47190744-3fc0-4cf6-acad-1c62574a33ad",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "fa8d5672-e6b2-46d4-8939-ebfdd9702ace",
+                    "go": "788e77cd-4cab-4c71-b938-b898c02b3e25",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 8,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "fa8d5672-e6b2-46d4-8939-ebfdd9702ace",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "47190744-3fc0-4cf6-acad-1c62574a33ad",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01098251,136.5017",
+                  "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "c04317bf-ce27-40fd-bf00-1423831c7e26",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "0db55fc8-9859-42d3-820a-3a3230c609dc",
+              "Flags": 0,
+              "Name": "Chevron 9",
+              "Position": "0,0,0",
+              "Rotation": "-0.9848077,0,0,-0.1736482",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "a504b0bc-cc25-4331-96c2-71da066e5ecf",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "c8771bdc-aeea-410d-8f66-722c44fe68bb",
+                    "go": "51eb6ae5-5a12-4303-adb3-47c8d87efe23",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "e10323a2-5c4f-465d-b5a9-eb82be2ca27b",
+                    "go": "0db55fc8-9859-42d3-820a-3a3230c609dc",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 9,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "e10323a2-5c4f-465d-b5a9-eb82be2ca27b",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "51eb6ae5-5a12-4303-adb3-47c8d87efe23",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01093292,136.5017",
+                  "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "c8771bdc-aeea-410d-8f66-722c44fe68bb",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "9df89095-ad2a-41e8-9286-0da0e624f714",
+              "Flags": 0,
+              "Name": "Ring",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
+                  "__guid": "e6c75334-9879-4b78-a240-d3b60f416187",
+                  "_ringState": "STOPPED",
+                  "CurRingSymbol": "#",
+                  "RingAngle": 0,
+                  "RingModel": {
+                    "_type": "component",
+                    "component_id": "288686b2-be24-4bd0-8782-e312e2a5f0d3",
+                    "go": "9df89095-ad2a-41e8-9286-0da0e624f714",
+                    "component_type": "ModelRenderer"
+                  },
+                  "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
+                },
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "288686b2-be24-4bd0-8782-e312e2a5f0d3",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1c628f97-f6c0-40de-8477-3d0ba0f2bace",
+              "Flags": 0,
+              "Name": "Decal",
+              "Position": "-43.5,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.DecalRenderer",
+                  "__guid": "6306d7aa-6f71-40cc-99d2-2ff2cda1d6bf",
+                  "CutoffAngle": 80.06,
+                  "CutoffAngleSoftness": 23.34,
+                  "Material": "materials/decals/foam_projection.vmat",
+                  "Mod2XBlending": false,
+                  "Size": "400,400,64",
+                  "TintColor": "1,1,1,0.2",
+                  "TriPlanar": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "c498d864-783d-466c-8d37-3bd3360a5971",
+          "Flags": 0,
+          "Name": "Dhd (Milky Way)",
+          "Position": "-144,0,-4.999998",
+          "Rotation": "0,0.1305262,0,0.9914449",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "NetworkOrphaned": 1,
+          "OwnerTransfer": 0,
+          "__Prefab": "prefabs/dhdmilkyway.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "dd01e12e-7437-4983-8240-79bc61e10743",
+          "Flags": 0,
+          "Name": "Decal",
+          "Position": "-138,0,65.83487",
+          "Rotation": "0,0.9355707,0,0.3531396",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DecalRenderer",
+              "__guid": "53fc9769-2c88-4572-8d55-e893008d7209",
+              "CutoffAngle": 80.06,
+              "CutoffAngleSoftness": 23.34,
+              "Material": "materials/decals/foam_projection.vmat",
+              "Mod2XBlending": false,
+              "Size": "400,400,64",
+              "TintColor": "1,1,1,0.07",
+              "TriPlanar": true
+            }
+          ]
+        },
+        {
+          "__guid": "b39a1141-0346-4a97-842b-358f43bf5507",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-433,-613,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "97c11bc6-3961-4c52-b876-b87bac6a7e2b",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "6544101a-67c5-42e1-b9b5-2d2d854f225b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d21de5bf-1a63-4574-8ed5-60c720027d9e",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "4a1f92b9-7516-409e-b7ac-c8afc3295df6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "83804bfb-cd97-4772-9d52-7df2c96c96c0",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a0e85118-93db-4a53-905b-11daadee7718",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "0be2fba7-9bbd-4cb8-8eb7-6beb454fb357",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "57e7a434-160e-4ddd-8fbc-2f0ea43816bf",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "a1d9ebd6-607a-41a0-98a1-94af854aa782",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2ef16c65-e79e-4678-bd68-cbe5673e9563",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3c7681c0-ee48-4e18-bfea-5313de1f5d44",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8883d85e-426c-47b8-a718-4d0fc566f103",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3b8860ad-be59-42a5-aa75-a7f010e4ccd3",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "92631d14-c59d-4f8a-9922-937c6c7c849b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ef5a7bf6-95d6-4a1e-80ed-2df2d01a8187",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5959f782-0f91-4efe-8d0c-6439e05cce59",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "cc071438-dcaf-4e57-b99a-e278430bb8b8",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "11ceb417-8dc8-40a6-addc-156bff7b613e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d0f1dc78-3733-4355-bebf-4c295cb8b442",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "557b8005-546d-4fc0-8e0d-23010b461c5a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "730ff652-744a-4b2f-9a66-cb1e419a13fd",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "c68ffc04-ddb2-4c92-9739-fab3381f16b2",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "fbfb4543-6c2c-4778-bbfb-0219890e8463",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-433,613.5,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "860a507e-9530-4920-8179-a8437f4a9bff",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "3f33cb5a-1275-41f6-b884-ac0466dfa35b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "86c703cb-8c98-4600-a52e-d835022b0523",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a19d1531-efbe-42a7-9270-63129b407211",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "57b93be0-1076-44db-81f8-162961b53457",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "dd574e3a-5a7d-4612-86e7-e2b384c60479",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "36f9efda-5edb-47fe-b083-f17dc61517e3",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "79f8d472-b18b-4e88-b5fc-199ad9c7edc8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "df9b0a1b-da31-414d-8117-64d877962e08",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "4758aae4-26f0-46b2-92c4-c61d5f57301e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "b50b6af6-1676-426b-8090-8f8c088434ee",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a5334140-102c-41c2-855e-3e5c2df3d9a6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6a3f374c-584a-4009-8eaa-2c39bc9311da",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "4606c6dd-fab0-4090-bad9-1bdc83f3ba50",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "f7e0c5d6-20ea-4172-a298-d0f49f1808cd",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7a7a59a7-6b48-4416-9354-dd6efd7b705c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "2a3baa45-8314-4365-a6be-f2abbdaabf57",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "313b8ec4-45d0-42fb-a136-0a20a5e53895",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3a0b7287-952a-443e-9320-467b6665af71",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "19652313-f434-4b2f-9dc6-670994437d7c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "44943bd8-4f94-404a-a148-ea9032c0a410",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "b4073a32-fccd-47d5-8f04-1ad843d77074",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "c3e419f6-fdfa-49e7-a9a8-339561e992a2",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-50.5,613.5,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "94bed371-39b5-4f16-a3bf-59ca4d3344c0",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2df3123b-ea5c-4f79-aa46-a0701a098781",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "80fd475b-0a29-4fa7-99b0-4c537c4d2f57",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "ea138f88-58dc-4011-a68d-8e7fa8709b2f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "11b7f7d5-c645-466f-b849-b051c6d17a8c",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "fd236b84-563a-4f1f-9be2-294fa2aba568",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "4a730f0d-697e-4fed-90d0-a8f3f19dcfeb",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5c43e0bb-8cba-43d7-afc9-96f8ece5b584",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "7fbcf2c3-f627-47eb-a9ff-254f8933a5f5",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "e9b9bc02-193c-458a-95d6-02e71f70ba20",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "fe5ebba0-b77d-44ae-949b-34273d62389d",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "0c52f7a7-79cf-4e0d-9c27-3b59bf96c1d8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e6b320ae-a8c3-4b0c-8da4-197ac13ad373",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "f7ebe57d-7a00-44d5-b19b-53be813dddb1",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "2ecb3b1e-7269-402b-a543-893df8d5ecb5",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "59dd8cbf-8b3b-47bb-a0d2-085273991ea8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "12b76046-5821-46e8-9f59-eaf6f5690e62",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "aa2b4ed7-74bd-445c-8b97-3d398655eca7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ac0fb9fa-82a4-4e33-845c-754d98dd7008",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1130b4cb-2f83-4a96-ba06-75461f620951",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "598d1ca4-b201-4b37-9931-0d474afe99f3",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "79f19642-6998-4ee8-b77d-c3120f4945a5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "eba53f58-1939-4434-86db-931254266b62",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "340,613.5,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "56af48f8-e465-4770-b0ed-602e296a99bc",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "d2d03a7e-77df-4a17-8daf-729ba261445b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "07176d11-f9c2-42c4-86a7-4f812c0f48c1",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7aa71d0e-e58a-4953-8cf4-197db96ced30",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "29936d98-41b9-404c-a1ef-5195e2b35e08",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "e3faf588-4194-4af2-8d06-b137c8c15826",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "264902b7-a991-40a3-a4f4-8fece1c96424",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2bcd502b-e198-4f0b-948b-7a8b89989702",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "a4306682-1351-41eb-ad6a-f0b5058d3055",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "099850a7-f3aa-48a5-87d7-c5bd9b46f8e3",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "25b56053-4860-493b-ad60-a68ff8bc2e31",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "d5b0e968-4ebf-4eca-81cf-2d6282896243",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "18959f4e-4ab8-4c0b-8ff7-6307e7732c6a",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "48c80eec-e59c-4978-9f63-8b2ad00d5636",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d507d0c4-03b7-4c27-9488-6f4aa152431a",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "32767fe5-18a9-4d13-a4fc-081c6ea6356e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "727406c8-b39d-4a2e-a2bc-dd390f69c967",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "41659b0c-d167-4f42-9828-b0c44175ca66",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "2e45c678-9d2e-40d4-a666-d7028c95cf5b",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "e823b557-7f51-45f3-ab28-a8b0dad51b73",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "81ac853f-f86a-4086-9a51-c8336dd4b92f",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "9a3065a8-6735-4fcf-8669-0cea0f6f316f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "23186183-3552-4aaf-a3bd-400dc651f789",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "693,613.5,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "a9400f68-e032-4dfc-b386-b7647e7822ca",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5a1cba28-fdbc-4dcc-9f03-995bcd939d7d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "578e9e5e-4dab-4794-a126-5a5236ebdde3",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7048a372-1f93-4d6e-910a-a3fb37691323",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "922e13fc-8acf-4399-9cb2-ec84622a4402",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "ed8e2112-23d5-4b79-b01b-49bb02a974f4",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "9a7b8bf4-fb40-46dc-9d2f-87b82b8b5180",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "c94ccb94-15c0-4ca3-86e9-b8df491cc4e2",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e4779955-3af2-454e-93d4-3dd0d1712ba2",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "3cb3ffc6-2e54-45ad-a2f3-7e821bb019ca",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ccab2c4f-8ce3-4e71-b3b8-8f6420099392",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1f9a5dc7-e406-4b7e-9148-ce9c1b6255fb",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "751858dd-f3f6-4f43-ae03-bcf60ffc6411",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "66cbc40e-1763-4f37-9b01-faffd60793fa",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "78db212e-d831-4188-b3ff-ff6329025268",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a4b998f6-99f9-490d-89f8-d4412794cfc0",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "f4f85bca-cc8d-4e39-8157-68f9cfa73b3e",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "18e820df-23ef-4cf9-a759-16d9e6397342",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "732c0728-2ffb-452b-b033-91e82c66e80a",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "842fed97-26a1-4f3e-939b-cf1ab5a5d4e5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "92603c2f-1169-4d31-80fb-da2edb9cb8f1",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "d794ff16-a429-4bc8-bfdf-ad05ce298716",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "3d5c26a8-9f2e-477f-8fb1-e69953bc6b1a",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-380.5,346,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "0d979f0a-05c3-4701-89cb-20a1267f9b1d",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7a21f17d-14c4-4bd0-ae84-720d7dc68908",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ca57e756-6ce9-4100-ae91-932ff72cca87",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "dbcb9efc-e982-4b82-bd52-8369d16cdaf6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "95b2ee8d-41f0-4e64-8c94-d62c6bc11a1f",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "df69ac73-a919-4a27-80fc-cadfaa9e523a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "775ab09a-7e11-45a6-aba7-a961ebd78fc9",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "18c6acac-3e98-43ac-a435-e3c8c5573f2f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "486098e3-5ef7-4000-bf0e-cf10bdfff652",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7b785d2c-9ed8-49d1-b7d0-634d372e61d7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "256f8e0b-a800-4d62-857c-9994c264224e",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "87b0cceb-ce63-4854-a4d7-e1ccb0530ac6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "357eee04-5530-441c-a3e3-810226068695",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "153390d4-a770-4e3c-b0b2-20b7f563a780",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "23a8583b-35ea-4bb4-a05c-233f1658e642",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5b94440b-ed09-44d3-957d-341eb0ecbe58",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6b84e053-25be-4ab5-bb2b-a4d25ab516ec",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "cc1f2e14-6488-49de-a397-e363eea50f0b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d8d618ce-9f77-4de5-981a-e411e3e77556",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2416a78e-4b01-4da3-a366-8ae1d2672ab7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6067c0e8-a081-4d2b-aaf1-836385fda838",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "14552245-c519-4f06-9750-7e4d66120407",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "4a55f5d0-f2ef-4c0d-abb6-4a82bb05b1b4",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-936,291,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "135608ac-2a21-40de-a18c-d905312270b0",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "aa447a05-e859-4a22-b883-2ab1e43a7854",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "957dd6c1-271a-4e9b-a491-bd03530e830a",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "fc9d5414-1d2c-4e16-a1cb-1674f691ade2",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "b3007b25-b8c3-475f-a2fe-74623aceb500",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "58fa49b8-edbe-43e4-adb7-ac11e29742fc",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "927c31b1-967b-4bfa-a782-2fea3ff6f631",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2e81f7bd-fc72-464b-964b-8e17aa79ebd0",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "71135b37-e687-4106-9af2-aa971ddde5b1",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "4a33831c-fe9a-498d-a461-4b46bd8556bd",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "aa418cd6-5ac3-4914-8ec9-fa920f606eac",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1123820e-10f2-481a-a388-e36e2d227162",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "0c4abdce-6ad7-4812-bee1-3890a584cd8c",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2540b906-0e4a-4be3-a058-71d123db26ae",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "929bbf48-59e0-4638-bb77-9aa39dc67308",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "b1749f95-078f-44cc-b615-e89a5b10d768",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "06e4a695-e752-41d1-9f0b-b89e96dbfa77",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "fc0a76e3-1ab6-49d3-82d1-881936e8f491",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e56f4315-46b2-40ac-91ac-9b95d5478c7b",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a26b7d61-467f-4041-becd-ee99e3888698",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "67df2102-586a-4d11-9a58-ed3be0ea7d19",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7c13bb9f-de5d-41c3-b271-177e38081efb",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "0fe9ce23-994f-489b-a6dc-1f1d78082432",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-936,-36,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "a1567558-9fa9-4048-960b-dad585436cf1",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "e3511ad9-0877-4eeb-9a3f-532dafc1a2ec",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8d278412-4b73-41d2-b73a-a18b2684ea3d",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "fb082651-e7c5-4850-8646-5e8f0d92ba5d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "36cf3920-0150-459e-9e6a-2abfff189149",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "82cc09fb-78b8-442b-8683-8412716aeb6e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6330b22c-1362-4a22-821a-4c16f6f24613",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "b18d4782-9724-4090-b04c-ac88576f0516",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e95c3428-6273-48a4-ad1c-fd254d4bea00",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8b9ee34f-3a90-4879-b08b-50ec25575c91",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "67d95976-ddee-4c9c-ae49-ebf814d7b031",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7f0b173e-b8bb-4606-aea2-3447e1dbb6cd",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "2d5b99ca-5dfc-4e86-8159-4f481f27cbc9",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "791dd6f0-1751-47d9-b4f1-455ba2ad8d09",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "71de7d41-8a39-4240-831a-019d1fd3238b",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "88087c00-248f-4e04-b380-538f97a66ca2",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e7958588-04c5-45fb-b344-c2569a4f0d6c",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a7e16d41-856b-4bd8-87c2-2072d80bf4bb",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "488a5c43-0fed-4350-8971-e277092ecf69",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1d1ad576-7484-4039-9aa8-48f4587494cf",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "b3ac2ed9-c790-4a31-a8ff-3753255986dd",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8fef2b97-93d7-4aaf-937f-e9058d87fdff",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "0a648fd6-50a1-48b2-8184-0bfbed8d0087",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "-936,-482,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "c0e53ae4-0890-4458-8aa1-c49e4ba9d2fc",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "591e9f99-ca4f-4f50-ada6-4c74cafab865",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "7796eac4-1988-47ea-9b89-626e654f3fee",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1bc7dd1a-2ba1-479d-b816-ef4f4a331b5c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "5be3fa2e-551c-4353-8777-f614d8b74cde",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "404af073-4c11-416b-8351-afbb2e07764e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "a415ffc2-263b-457f-81a3-a881741dc150",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "06a563f2-36c2-4629-99a3-f34fa8aae211",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1e7788bd-2b04-4451-aafd-a6952f027c4e",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "77468888-b4ef-42eb-9a81-1708f2d3a0f7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "c739937c-ba07-4e2d-b267-0dc65f90631f",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "f351294e-99c8-4574-9bba-0ff946995b3d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ff86e649-f4e3-43e0-902d-e71eeecdd5fd",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8e76cbd1-caf4-47ba-b0f6-0c08085f307a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3fdea5f2-a4bf-42f2-a493-49e737169b8d",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "c0ceac6c-d7ff-4a33-81bc-eb29d6cf4bfa",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "c8b2a7fd-360b-40bf-a7f7-b56ba604531f",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7630a780-a823-462a-90b5-0474524d3f67",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "c397bf0d-c62e-4ba3-8e39-afffed7a6205",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8ac34d47-cf00-4aea-89d2-5778d49ad31d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "682ec4fb-a1a5-46eb-9dd4-7007ff9e5025",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "b29b4582-b293-42b9-83aa-38e184e1adf4",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "93febdf5-2883-4a93-bfc6-4b4ff4ad9908",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "113,-893.5,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "441e4d25-1d1a-4fb0-81dc-6f52ec2032a2",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "38b03a40-10ac-4034-ae59-ad8c772c8b44",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6a53db38-2810-430c-b108-72bc2175fc10",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "f7a7af77-2ed7-4cb9-9799-5b1f9b03b6fa",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "7cdea237-b078-4165-94b5-3cb8c7d939a1",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "669dfe17-032d-41d5-a058-17320c03775a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "92152e99-0533-44e1-977f-372e05e45f36",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "421022fb-c3ba-4cd6-bca7-af5de484d18a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "f4db54c0-c2c9-4246-9655-361752683d01",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "10f59c1b-9242-48ae-8aed-1d3b68092c47",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6bf879ce-1ea1-4116-8621-a4fa8140da99",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "edc7012e-298e-42f3-99b7-96919bc2bcd8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e5357a41-ba7e-46ee-8113-678126296899",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "e8ba31fe-c157-48bb-aebb-4a466e972553",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "938b33d5-04cf-44e8-811a-ff632bd3a641",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "21f3ec7c-a0cc-4c8c-be60-328f066b08c0",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ff788e9e-6bcf-4c2c-b04e-2f7ca6df1189",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5f05f850-445c-4f27-af46-be48f47cd3c5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "affeb50f-7957-49dc-a8ed-9ddc23965bf2",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5e2b5b50-4f1a-42ca-ba21-3b32befb5f26",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "5a9fc5a3-30f5-4803-a02b-1031e7649ca5",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "9b709601-8e63-4b53-8b2b-388a9c888d29",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "2bce39ad-cbb9-463e-a94a-5ef5efec7f83",
+          "Flags": 0,
+          "Name": "Tree Group",
+          "Position": "692.5,-893.5,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "4cda483e-ffba-4f09-97fa-8dcc82f92f78",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (6)",
+              "Position": "-67.75,112.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "87670f6f-0c01-4440-b2ca-d865d8322f23",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "9c2b1b1c-2efa-4c8c-89d9-3aba20869630",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (7)",
+              "Position": "-359.75,-21.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "0e1c6ee9-07d1-417c-9c99-1666a45f2c18",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "fd7e5ed1-7a9c-41e2-bc83-f5337da3d985",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (8)",
+              "Position": "-305.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "56d5603e-d0a1-4715-844a-7be0ed59f53d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "17afd866-9111-4ea8-914b-6c395e306f87",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (9)",
+              "Position": "-62.25,-186.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "f1427b51-18ed-46f2-a7ca-ac613a11bfe8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "45524fe3-c074-45b1-81a8-f7494c77235c",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (10)",
+              "Position": "171.25,-143,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1fbed79f-322a-4d9d-a00c-e0eef1c69065",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8d765e1f-fd50-4c41-ab86-336675e2ecab",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (11)",
+              "Position": "17.25,-29.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "3d4d7ec0-a924-4389-9f65-f32be3d925dd",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e664a752-ff63-4810-8821-8780c02e844c",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (12)",
+              "Position": "123.75,163,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "572c2771-b307-46c2-8dd4-7349e134a286",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "dd0a8f08-80d1-4bae-9573-f33a2f602533",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (13)",
+              "Position": "259.75,53.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "95497445-5a97-430e-93a7-db7d9f3c091f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3bc882ff-bc0a-424a-978f-c223c2f045cb",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (14)",
+              "Position": "-194.75,225.5,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "12e1b761-194c-4736-9b53-670155939f38",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "cc04139b-86e5-4190-bb33-e3d6cd01c429",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (15)",
+              "Position": "-286.25,91,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "20ee5427-bfa8-4d6e-9d6b-745c0886ebf8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3c4dc44d-a40a-4277-89c2-4ef6a816f98b",
+              "Flags": 0,
+              "Name": "shitty_pine_tree2 (16)",
+              "Position": "-164.75,-38,0.7661163",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "ee417d57-4ee0-447d-9ff2-98396f3bf574",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "ce6d818e-aa77-4fb4-87e9-8c66aa73d2df",
+          "Flags": 0,
+          "Name": "Volumetric Fog",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.VolumetricFogVolume",
+              "__guid": "c22e2156-d978-4177-a4cf-1a4643610dc9",
+              "Bounds": {
+                "Mins": "-1500,-1500,-1500",
+                "Maxs": "1500,1500,1500"
+              },
+              "FalloffExponent": 1,
+              "Strength": 1
+            }
+          ]
+        },
+        {
+          "__guid": "265d591b-5782-4289-ab57-d9b01e613b2b",
+          "Flags": 0,
+          "Name": "Smoke",
+          "Position": "984.5,0,2",
+          "Tags": "particles",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ParticleEffect",
+              "__guid": "645f042c-5330-4bb5-b88b-12e6ec78bdcb",
+              "Alpha": {
+                "CurveA": [
+                  {
+                    "in": -4.0000024,
+                    "out": 4.0000024
+                  },
+                  {
+                    "x": 0.20812808,
+                    "y": 0.475
+                  },
+                  {
+                    "x": 1
+                  }
+                ],
+                "Constants": "0.1,0,0,0"
+              },
+              "ApplyColor": true,
+              "ApplyRotation": true,
+              "ApplyShape": true,
+              "Bounce": {
+                "Constants": "1,0,0,0"
+              },
+              "Brightness": {
+                "Constants": "1,0,0,0"
+              },
+              "Bumpiness": {},
+              "Collision": false,
+              "CollisionRadius": 1,
+              "Damping": {},
+              "DieOnCollisionChance": {},
+              "Force": true,
+              "ForceDirection": "-1.2,0.35,0",
+              "ForceScale": {
+                "Constants": "1,0,0,0"
+              },
+              "Friction": {
+                "Constants": "1,0,0,0"
+              },
+              "Gradient": {
+                "GradientA": {
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "1,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "GradientB": {
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "1,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "ConstantA": "4,4,4,1",
+                "ConstantB": "1,1,1,1"
+              },
+              "Lifetime": {
+                "Constants": "60,8,0,0"
+              },
+              "MaxParticles": 5000,
+              "OrbitalForce": {},
+              "OrbitalPull": {},
+              "PerParticleTimeScale": {
+                "Constants": "1,0.4,0,0"
+              },
+              "Pitch": {
+                "Type": "Range",
+                "Evaluation": "Particle",
+                "Constants": "0,160,0,0"
+              },
+              "PreWarm": 0,
+              "PushStrength": {},
+              "Roll": {
+                "Constants": "0,360,0,0"
+              },
+              "Scale": {
+                "CurveA": [
+                  {}
+                ],
+                "Constants": "185.2,60,0,0"
+              },
+              "SequenceId": {},
+              "SequenceSpeed": {
+                "Constants": "0.05,0,0,0"
+              },
+              "SequenceTime": {
+                "Constants": "1,0,0,0"
+              },
+              "SheetSequence": true,
+              "Space": "World",
+              "StartDelay": {},
+              "StartVelocity": {
+                "Constants": "0,70,0,0"
+              },
+              "Stretch": {},
+              "TimeScale": 1,
+              "Tint": "1,1,1,1",
+              "Yaw": {
+                "Constants": "90,0,0,0"
+              }
+            },
+            {
+              "__type": "Sandbox.ParticleSpriteRenderer",
+              "__guid": "8143cb8e-e14b-4dbf-8999-9c37437e53b3",
+              "Additive": true,
+              "Alignment": "Particle",
+              "BlurAmount": 0.5,
+              "BlurOpacity": 0.91,
+              "BlurSpacing": 0.73,
+              "DepthFeather": 0,
+              "FaceVelocity": false,
+              "FogStrength": 1,
+              "LeadingTrail": true,
+              "MotionBlur": false,
+              "Opaque": false,
+              "RotationOffset": 0,
+              "Scale": 1,
+              "Shadows": false,
+              "SortMode": "ByDistance",
+              "Texture": "materials/particles/smoke/render/smokeloop_g_1.vtex"
+            },
+            {
+              "__type": "Sandbox.ParticleBoxEmitter",
+              "__guid": "e35ddc7d-b918-4f54-8c46-175201773dc2",
+              "Burst": 0,
+              "Delay": 0,
+              "DestroyOnEnd": false,
+              "Duration": 5,
+              "Loop": true,
+              "OnEdge": false,
+              "Rate": 25,
+              "RateOverDistance": 0,
+              "Size": "20,2000,4"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -7927,6 +11054,8 @@
   "Title": "scenegate test scene",
   "Description": "",
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "fish.gt_shitty_pine_tree2"
+  ],
   "__version": 1
 }
