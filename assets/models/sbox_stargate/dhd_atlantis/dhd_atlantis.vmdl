@@ -117,7 +117,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "body"
-						filename = "models/sbox_stargate/dhd_atlantis/src/dhd_atlantis.smd"
+						filename = "models/sbox_stargate/dhd_atlantis/src/dhd_atlantis_patched.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
