@@ -2,20 +2,19 @@
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
-      "Title": "sg_sgc",
+      "Title": "sgc_roundhall_arch_8",
       "Type": "map",
       "Org": "local",
-      "Ident": "sg_sgc",
+      "Ident": "sgc_roundhall_arch_8",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "facepunch.concrete_simple#18632",
-        "facepunch.metal_brushed#18749"
+        "facepunch.concrete_simple#18632"
       ],
       "Metadata": {
-        "SingleAssetSource": "maps/sg_sgc.vmap"
+        "SingleAssetSource": "maps/prefabs/sgc_roundhall_arch_8.vmap"
       }
     }
   }

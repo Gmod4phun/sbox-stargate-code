@@ -2,20 +2,17 @@
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
-      "Title": "sg_sgc",
+      "Title": "sgc_gateroom_pillar",
       "Type": "map",
       "Org": "local",
-      "Ident": "sg_sgc",
+      "Ident": "sgc_gateroom_pillar",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
-      "EditorReferences": [
-        "facepunch.concrete_simple#18632",
-        "facepunch.metal_brushed#18749"
-      ],
+      "EditorReferences": [],
       "Metadata": {
-        "SingleAssetSource": "maps/sg_sgc.vmap"
+        "SingleAssetSource": "maps/prefabs/sgc_gateroom_pillar.vmap"
       }
     }
   }
