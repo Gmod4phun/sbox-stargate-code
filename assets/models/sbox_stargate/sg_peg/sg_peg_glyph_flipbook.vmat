@@ -4,10 +4,6 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
-	//---- Animation ----
-	F_TEXTURE_ANIMATION 1
-	F_TEXTURE_ANIMATION_MODE 2 // Scripted
-
 	//---- PBR ----
 	F_SELF_ILLUM 1
 	F_SPECULAR 1
@@ -49,27 +45,22 @@ Layer0
 	g_vSelfIllumTint "[0.901961 1.000000 0.992157 0.000000]"
 	TextureSelfIllumMask "models/sbox_stargate/sg_peg/src/tex/sg_peg_glyphs_trans.tga"
 
-	//---- Texture Animation ----
-	g_flAnimationFrame "0.000"
-	g_flAnimationTimeOffset "0.000"
-	g_flAnimationTimePerFrame "0.100"
-	g_nNumAnimationCells "36"
-	g_vAnimationGrid "[6 6]"
-
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
 	g_nScaleTexCoordVByModelScaleAxis "0"
 	g_vTexCoordOffset "[0.000 0.000]"
 	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
 
 	//---- Translucent ----
-	g_flAlphaTestReference "0.050"
-	g_flAntiAliasedEdgeStrength "0.350"
+	g_flAlphaTestReference "0.100"
+	g_flAntiAliasedEdgeStrength "0.250"
 	TextureTranslucency "models/sbox_stargate/sg_peg/src/tex/sg_peg_glyphs_trans.tga"
 
 	DynamicParams
 	{
 		g_flSelfIllumBrightness "selfillumbrightness"
-		g_flAnimationFrame "frame"
+		g_vTexCoordOffset "texCoordOffset"
+		g_vTexCoordScale "texCoordScale"
 	}
 }

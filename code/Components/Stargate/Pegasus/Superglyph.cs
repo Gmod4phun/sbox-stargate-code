@@ -14,6 +14,17 @@ public class Superglyph : ModelRenderer, Component.ExecuteInEditor
 
 	private float _selfIllumBrightness = 0;
 
+	private Vector2 texCoordScale = new Vector2(1 / 6f, 1 / 6f);
+	private Vector2 texCoordOffset = new Vector2(0, 0);
+
+	void ApplyTextCoordAdjustments(SceneObject so, int glyphNumber)
+	{
+		so.Attributes.Set("texCoordScale", texCoordScale);
+		texCoordOffset.x = glyphNumber % 6 * texCoordScale.x;
+		texCoordOffset.y = glyphNumber / 6 * texCoordScale.y;
+		so.Attributes.Set("texCoordOffset", texCoordOffset);
+	}
+
 	protected override void OnPreRender()
 	{
 		RenderType = ShadowRenderType.Off;
@@ -26,7 +37,7 @@ public class Superglyph : ModelRenderer, Component.ExecuteInEditor
 			SceneObject.Batchable = false;
 			SceneObject.Flags.IsTranslucent = true;
 			SceneObject.Flags.IsOpaque = true;
-			SceneObject.Attributes.Set("frame", GlyphNumber.UnsignedMod(36));
+			ApplyTextCoordAdjustments(SceneObject, GlyphNumber.UnsignedMod(36));
 			SceneObject.Transform = GameObject.Transform.World.WithRotation(
 				GameObject.Transform.World.Rotation.RotateAroundAxis(
 					Vector3.Forward,

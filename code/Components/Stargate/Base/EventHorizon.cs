@@ -321,6 +321,24 @@ namespace Sandbox.Components.Stargate
 			SkinEventHorizon();
 		}
 
+		private Vector2 texCoordScale = new Vector2(1 / 8f, 1 / 4f);
+		private Vector2 texCoordOffset = new Vector2(0, 0);
+
+		void ApplyTextCoordAdjustments(SceneObject so, int frameNumber)
+		{
+			frameNumber = frameNumber.UnsignedMod(19);
+			so.Attributes.Set("texCoordScale", texCoordScale);
+			texCoordOffset.x = frameNumber % 8 * texCoordScale.x;
+			texCoordOffset.y = frameNumber / 8 * texCoordScale.y;
+			so.Attributes.Set("texCoordOffset", texCoordOffset);
+		}
+
+		void ResetTexCoordAdjustments(SceneObject so)
+		{
+			so.Attributes.Set("texCoordScale", new Vector2(1, 1));
+			so.Attributes.Set("texCoordOffset", new Vector2(0, 0));
+		}
+
 		public void ClientAnimLogic()
 		{
 			if (!EventHorizonModel.IsValid() || !EventHorizonModel.SceneObject.IsValid())
@@ -334,12 +352,14 @@ namespace Sandbox.Components.Stargate
 			{
 				_curFrame = MathX.Approach(_curFrame, _maxFrame, Time.Delta * 30);
 				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt()); // TODO check this
+				ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, _curFrame.FloorToInt());
 
 				if (_curFrame == _maxFrame)
 				{
 					_isOn = true;
 					_shouldEstablish = true;
 					_curBrightness = _maxBrightness;
+					ResetTexCoordAdjustments(EventHorizonModel.SceneObject);
 					SkinEventHorizon();
 
 					/*
@@ -372,6 +392,8 @@ namespace Sandbox.Components.Stargate
 			{
 				_curFrame = MathX.Approach(_curFrame, _minFrame, Time.Delta * 30);
 				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt());
+				ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, _curFrame.FloorToInt());
+
 				if (_curFrame == _minFrame)
 					_isOff = true;
 			}
@@ -394,6 +416,7 @@ namespace Sandbox.Components.Stargate
 					_isCollapsed = true;
 					_shouldBeOff = true;
 					_curBrightness = _minBrightness;
+					ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, 18);
 					SkinEstablish();
 					// _frontLight?.Delete();
 					// _backLight?.Delete();
