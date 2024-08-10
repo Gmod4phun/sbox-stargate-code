@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "sgc_briefingroom_ceiling_beams",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "sgc_briefingroom_ceiling_beams",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/sgc_briefingroom_ceiling_beams.vmap"
+      }
+    }
+  }
+}

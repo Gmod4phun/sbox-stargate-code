@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "sgc_briefingroom_window_frame",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "sgc_briefingroom_window_frame",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/sgc_briefingroom_window_frame.vmap"
+      }
+    }
+  }
+}
