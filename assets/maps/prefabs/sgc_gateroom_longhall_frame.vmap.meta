@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "sgc_gateroom_longhall_frame",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "sgc_gateroom_longhall_frame",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/sgc_gateroom_longhall_frame.vmap"
+      }
+    }
+  }
+}

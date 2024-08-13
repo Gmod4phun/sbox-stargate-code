@@ -14,6 +14,15 @@ public class Door : Component, Component.ExecuteInEditor
 	[Property]
 	public float DoorMoveDistance { get; set; } = 32;
 
+	[Property]
+	public float DoorMoveTime { get; set; } = 1;
+
+	[Property]
+	public Curve DoorMoveCurve { get; set; } = new Curve();
+
+	[Property]
+	public Vector3 LocalMoveDirection { get; set; } = Vector3.Left;
+
 	private float currentMoveDistance = 0;
 
 	protected override void OnStart()
@@ -30,11 +39,11 @@ public class Door : Component, Component.ExecuteInEditor
 
 	private void HandleMovement()
 	{
+		var moveDir = LocalMoveDirection.Normal;
 		if (CurrentDoorState == DoorState.Open || CurrentDoorState == DoorState.Closed)
 		{
 			Transform.Local = Transform.Local.WithPosition(
-				Transform.Rotation.Left
-					* (CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0)
+				moveDir * (CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0)
 			);
 			return;
 		}
@@ -42,7 +51,7 @@ public class Door : Component, Component.ExecuteInEditor
 		var isOpening = CurrentDoorState == DoorState.Opening;
 		var targetMoveDistance = isOpening ? DoorMoveDistance : 0;
 
-		var delta = Time.Delta * 20f;
+		var delta = Time.Delta * DoorMoveDistance / DoorMoveTime;
 		currentMoveDistance = currentMoveDistance.Approach(targetMoveDistance, delta);
 
 		var difference = Math.Abs(currentMoveDistance - targetMoveDistance);
@@ -53,9 +62,9 @@ public class Door : Component, Component.ExecuteInEditor
 			return;
 		}
 
-		Transform.Local = Transform.Local.WithPosition(
-			Transform.Rotation.Left * currentMoveDistance
-		);
+		var percentMoved = currentMoveDistance / DoorMoveDistance;
+		var curveValue = DoorMoveCurve.Evaluate(percentMoved) * DoorMoveDistance;
+		Transform.Local = Transform.Local.WithPosition(moveDir * curveValue);
 	}
 
 	public void ToggleDoor()

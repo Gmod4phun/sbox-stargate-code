@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "sgc_controlroom_spiral_hole_base",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "sgc_controlroom_spiral_hole_base",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/sgc/controlroom/sgc_controlroom_spiral_hole_base.vmap"
+      }
+    }
+  }
+}

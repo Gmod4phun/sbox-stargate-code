@@ -2611,7 +2611,15 @@
                   "__type": "Door",
                   "__guid": "097afeaa-feb6-45f8-a9fb-d709b0f63b17",
                   "CurrentDoorState": "Closed",
-                  "DoorMoveDistance": 32
+                  "DoorMoveCurve": [
+                    {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  ],
+                  "DoorMoveDistance": 32,
+                  "DoorMoveTime": 1,
+                  "LocalMoveDirection": "0,1,0"
                 }
               ]
             },
@@ -2646,7 +2654,15 @@
                   "__type": "Door",
                   "__guid": "facd5976-35b0-4914-9841-493c1c1d1514",
                   "CurrentDoorState": "Closed",
-                  "DoorMoveDistance": 32
+                  "DoorMoveCurve": [
+                    {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  ],
+                  "DoorMoveDistance": 32,
+                  "DoorMoveTime": 1,
+                  "LocalMoveDirection": "0,1,0"
                 }
               ]
             },
@@ -11770,6 +11786,355 @@
           "OwnerTransfer": 0,
           "__Prefab": "prefabs/dhdatlantis.prefab",
           "__PrefabVariables": {}
+        },
+        {
+          "__guid": "fa1178e2-d201-4ba1-a9ae-2d39b3dd09a5",
+          "Flags": 0,
+          "Name": "Blastdoor C1",
+          "Position": "-232,-224,0",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "6b889840-c24a-44a1-9f10-0a56ce1cd682",
+              "Flags": 0,
+              "Name": "door",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 1,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8e89936b-e0a7-4064-bd01-3b8a6c3267ec",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c1.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Door",
+                  "__guid": "f22f18b4-a817-4fd7-a763-93f90e61da93",
+                  "CurrentDoorState": "Closed",
+                  "DoorMoveCurve": [
+                    {
+                      "in": 1.5918369,
+                      "out": 0.77966106,
+                      "mode": "Flat"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "mode": "Flat"
+                    }
+                  ],
+                  "DoorMoveDistance": 102,
+                  "DoorMoveTime": 5,
+                  "LocalMoveDirection": "0,-1,0"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "4e7c610e-6c6d-4a9b-bc25-5d52e1f09ce1",
+                  "Center": "-1,0,62",
+                  "IsTrigger": false,
+                  "Scale": "10,104,124",
+                  "Static": false
+                },
+                {
+                  "__type": "DoorController",
+                  "__guid": "e2527b70-8c64-4112-918f-063ce3838285",
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "f22f18b4-a817-4fd7-a763-93f90e61da93",
+                      "go": "6b889840-c24a-44a1-9f10-0a56ce1cd682",
+                      "component_type": "Door"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "2f436333-f7e9-4450-a863-c7319774de00",
+          "Flags": 0,
+          "Name": "Blastdoor B2",
+          "Position": "-347,-800,0",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "ae97fab3-3894-4dac-a7f6-c23a602357cd",
+              "Flags": 0,
+              "Name": "door",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 1,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8da5b194-6671-46c0-b197-92fa7507e562",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_b2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Door",
+                  "__guid": "b11d6d2a-1f5c-4bd6-bb36-1d607e7a4f54",
+                  "CurrentDoorState": "Closed",
+                  "DoorMoveCurve": [
+                    {
+                      "in": 1.5918369,
+                      "out": 0.77966106,
+                      "mode": "Flat"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "mode": "Flat"
+                    }
+                  ],
+                  "DoorMoveDistance": 84,
+                  "DoorMoveTime": 5,
+                  "LocalMoveDirection": "0,1,0"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "41b9ff1e-915f-45cb-9b03-6644f6316839",
+                  "Center": "0,0,54",
+                  "IsTrigger": false,
+                  "Scale": "10,84,108",
+                  "Static": false
+                },
+                {
+                  "__type": "DoorController",
+                  "__guid": "4aa10dd3-7caa-4c7d-b156-8c374fa5ae77",
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "b11d6d2a-1f5c-4bd6-bb36-1d607e7a4f54",
+                      "go": "ae97fab3-3894-4dac-a7f6-c23a602357cd",
+                      "component_type": "Door"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "24de614c-bea5-494f-b5a8-fd934ddda58b",
+          "Flags": 0,
+          "Name": "Blastdoor C2",
+          "Position": "242,-320,0.00001412115",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "bf2b394d-f2bb-4d71-9399-89d3e3397528",
+              "Flags": 0,
+              "Name": "door",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 1,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "bf4f3ab3-c3cc-4c57-bded-e63749517720",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c2.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Door",
+                  "__guid": "20c0535d-a4dc-4ac5-becd-0af986e5a8d0",
+                  "CurrentDoorState": "Closed",
+                  "DoorMoveCurve": [
+                    {
+                      "in": 1.5918369,
+                      "out": 0.77966106,
+                      "mode": "Flat"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "mode": "Flat"
+                    }
+                  ],
+                  "DoorMoveDistance": 102,
+                  "DoorMoveTime": 5,
+                  "LocalMoveDirection": "0,1,0"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "f01cd434-deb3-4ab9-80ee-2c12abb0c557",
+                  "Center": "-1,0,62",
+                  "IsTrigger": false,
+                  "Scale": "10,104,124",
+                  "Static": false
+                },
+                {
+                  "__type": "DoorController",
+                  "__guid": "cd72772a-244a-4394-86fe-240deddf6178",
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "20c0535d-a4dc-4ac5-becd-0af986e5a8d0",
+                      "go": "bf2b394d-f2bb-4d71-9399-89d3e3397528",
+                      "component_type": "Door"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "907cb229-35c8-4539-8304-3d3962e2a660",
+          "Flags": 0,
+          "Name": "Blastdoor C3L",
+          "Position": "0,-439,0.00001412115",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "9d90cda6-dcf3-4e85-b8bb-dad3dbb08aeb",
+              "Flags": 0,
+              "Name": "door",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 1,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "9d597f62-670a-4bbd-bed3-57dc20728696",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c3l.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Door",
+                  "__guid": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
+                  "CurrentDoorState": "Closed",
+                  "DoorMoveCurve": [
+                    {
+                      "in": 1.5918369,
+                      "out": 0.77966106,
+                      "mode": "Flat"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "mode": "Flat"
+                    }
+                  ],
+                  "DoorMoveDistance": 388,
+                  "DoorMoveTime": 8,
+                  "LocalMoveDirection": "0,0,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "b17b4570-0bf6-4584-83e7-f705f0acc08c",
+                  "Center": "0,0,215",
+                  "IsTrigger": false,
+                  "Scale": "324,10,430",
+                  "Static": false
+                },
+                {
+                  "__type": "DoorController",
+                  "__guid": "f96105c2-d374-4e73-ae55-c4ca5a348184",
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
+                      "go": "9d90cda6-dcf3-4e85-b8bb-dad3dbb08aeb",
+                      "component_type": "Door"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "cc63fafa-e2f7-4fec-a504-3a73f9e8a4f5",
+          "Flags": 0,
+          "Name": "Blastdoor C3U",
+          "Position": "0,-450,304",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "ceca9914-ccb3-49df-a133-9649b4c47b6a",
+              "Flags": 0,
+              "Name": "door",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 1,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8589d6c7-7716-406b-84c4-da974f66f102",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c3u.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Door",
+                  "__guid": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
+                  "CurrentDoorState": "Closed",
+                  "DoorMoveCurve": [
+                    {
+                      "in": 1.5918369,
+                      "out": 0.77966106,
+                      "mode": "Flat"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "mode": "Flat"
+                    }
+                  ],
+                  "DoorMoveDistance": 84,
+                  "DoorMoveTime": 5,
+                  "LocalMoveDirection": "0,0,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "bcd8f626-1367-4da1-ab7a-38611f89f8f3",
+                  "Center": "0,0,58",
+                  "IsTrigger": false,
+                  "Scale": "232,8,116",
+                  "Static": false
+                },
+                {
+                  "__type": "DoorController",
+                  "__guid": "0cf51209-a4f4-4cab-bb0d-422debe2217b",
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
+                      "go": "ceca9914-ccb3-49df-a133-9649b4c47b6a",
+                      "component_type": "Door"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }

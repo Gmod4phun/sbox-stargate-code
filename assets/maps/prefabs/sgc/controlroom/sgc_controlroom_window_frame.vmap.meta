@@ -2,23 +2,20 @@
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
-      "Title": "sg_sgc",
+      "Title": "sgc_controlroom_window_frame",
       "Type": "map",
       "Org": "local",
-      "Ident": "sg_sgc",
+      "Ident": "sgc_controlroom_window_frame",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "facepunch.concrete_simple#18632",
-        "facepunch.metal_brushed#18749",
         "facepunch.metal_brushed_a_hs#28945",
-        "facepunch.glass_a#19946",
-        "facepunch.metal_painted_grey_a_hs#28954"
+        "facepunch.glass_a#19946"
       ],
       "Metadata": {
-        "SingleAssetSource": "maps/sg_sgc.vmap"
+        "SingleAssetSource": "maps/prefabs/sgc/controlroom/sgc_controlroom_window_frame.vmap"
       }
     }
   }
