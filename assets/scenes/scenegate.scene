@@ -11778,7 +11778,7 @@
           "__guid": "6098929b-fc8e-4ff8-b941-d7fb7283dd1e",
           "Flags": 0,
           "Name": "Dhd (Atlantis)",
-          "Position": "138,-132,0",
+          "Position": "0,-550,60",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
           "NetworkMode": 1,
@@ -11829,7 +11829,7 @@
                       "mode": "Flat"
                     }
                   ],
-                  "DoorMoveDistance": 102,
+                  "DoorMoveDistance": 101,
                   "DoorMoveTime": 5,
                   "LocalMoveDirection": "0,-1,0"
                 },
@@ -11849,6 +11849,76 @@
                       "_type": "component",
                       "component_id": "f22f18b4-a817-4fd7-a763-93f90e61da93",
                       "go": "6b889840-c24a-44a1-9f10-0a56ce1cd682",
+                      "component_type": "Door"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "2acba090-250b-402a-8778-40f711f848f4",
+          "Flags": 0,
+          "Name": "Blastdoor C4",
+          "Position": "-509,-232,0",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "c6e573cc-be8c-4d8b-a87c-d5e684030fc1",
+              "Flags": 0,
+              "Name": "door",
+              "Position": "0,-0,0",
+              "Enabled": true,
+              "NetworkMode": 1,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "2f68393d-fea6-4cad-84ac-6d63bfd79c8c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c4.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Door",
+                  "__guid": "c9df4cee-1c57-4fd4-9565-32f775c13337",
+                  "CurrentDoorState": "Closed",
+                  "DoorMoveCurve": [
+                    {
+                      "in": 1.5918369,
+                      "out": 0.77966106,
+                      "mode": "Flat"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "mode": "Flat"
+                    }
+                  ],
+                  "DoorMoveDistance": 141,
+                  "DoorMoveTime": 5,
+                  "LocalMoveDirection": "0,0,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "ea4c0fae-99f8-428d-b95d-6f6e751ba477",
+                  "Center": "0,0,71",
+                  "IsTrigger": false,
+                  "Scale": "10,172,142",
+                  "Static": false
+                },
+                {
+                  "__type": "DoorController",
+                  "__guid": "f829d1bd-b082-4f7d-8ed2-f7bb4dff9473",
+                  "Doors": [
+                    {
+                      "_type": "component",
+                      "component_id": "c9df4cee-1c57-4fd4-9565-32f775c13337",
+                      "go": "c6e573cc-be8c-4d8b-a87c-d5e684030fc1",
                       "component_type": "Door"
                     }
                   ]
@@ -11899,7 +11969,7 @@
                       "mode": "Flat"
                     }
                   ],
-                  "DoorMoveDistance": 84,
+                  "DoorMoveDistance": 83,
                   "DoorMoveTime": 5,
                   "LocalMoveDirection": "0,1,0"
                 },
@@ -11968,7 +12038,7 @@
                       "mode": "Flat"
                     }
                   ],
-                  "DoorMoveDistance": 102,
+                  "DoorMoveDistance": 101,
                   "DoorMoveTime": 5,
                   "LocalMoveDirection": "0,1,0"
                 },
