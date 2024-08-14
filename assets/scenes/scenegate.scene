@@ -2622,7 +2622,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 }
               ]
             },
@@ -2668,7 +2669,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 }
               ]
             },
@@ -11840,7 +11842,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,-1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -11913,7 +11916,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": true
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -11986,7 +11990,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12058,7 +12063,8 @@
                   "DoorType": "Rotating",
                   "FlipDirection": true,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": true
+                  "Locked": true,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12130,7 +12136,8 @@
                   "DoorType": "Rotating",
                   "FlipDirection": true,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": true
+                  "Locked": true,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12202,7 +12209,8 @@
                   "DoorType": "Rotating",
                   "FlipDirection": true,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12275,7 +12283,8 @@
                   "DoorType": "Rotating",
                   "FlipDirection": true,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12347,7 +12356,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": false
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12420,7 +12430,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": true
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -12493,7 +12504,8 @@
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
-                  "Locked": false
+                  "Locked": false,
+                  "StartsOpen": true
                 },
                 {
                   "__type": "Sandbox.BoxCollider",

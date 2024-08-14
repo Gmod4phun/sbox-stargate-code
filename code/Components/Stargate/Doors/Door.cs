@@ -30,6 +30,9 @@ public class Door : Component, Component.ExecuteInEditor
 	public float DoorMoveTime { get; set; } = 1;
 
 	[Property]
+	public bool StartsOpen { get; set; } = false;
+
+	[Property]
 	public bool Locked { get; set; } = false;
 
 	[Property]
@@ -43,6 +46,13 @@ public class Door : Component, Component.ExecuteInEditor
 	protected override void OnStart()
 	{
 		GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
+
+		if (StartsOpen)
+			CurrentDoorState = DoorState.Open;
+		else
+			CurrentDoorState = DoorState.Closed;
+
+		currentMoveDistance = CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0;
 	}
 
 	protected override void OnUpdate()
