@@ -17,7 +17,9 @@
         "facepunch.glass_a#19946",
         "facepunch.metal_painted_grey_a_hs#28954",
         "facepunch.industrial_stair_step_a#38437",
-        "facepunch.metal_beam_stairs_a_64#33743"
+        "facepunch.metal_beam_stairs_a_64#33743",
+        "gkaf.door_frame#27898",
+        "facepunch.glass_a_hs#33634"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/sg_sgc.vmap"

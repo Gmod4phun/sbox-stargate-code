@@ -8,6 +8,15 @@ public class Door : Component, Component.ExecuteInEditor
 		Opening
 	}
 
+	public enum DoorMoveType
+	{
+		Sliding,
+		Rotating
+	}
+
+	[Property, Sync]
+	public DoorMoveType DoorType { get; set; } = DoorMoveType.Sliding;
+
 	[Property, Sync]
 	public DoorState CurrentDoorState { get; set; } = DoorState.Closed;
 
@@ -15,7 +24,13 @@ public class Door : Component, Component.ExecuteInEditor
 	public float DoorMoveDistance { get; set; } = 32;
 
 	[Property]
+	public bool FlipDirection { get; set; } = false;
+
+	[Property]
 	public float DoorMoveTime { get; set; } = 1;
+
+	[Property]
+	public bool Locked { get; set; } = false;
 
 	[Property]
 	public Curve DoorMoveCurve { get; set; } = new Curve();
@@ -42,9 +57,23 @@ public class Door : Component, Component.ExecuteInEditor
 		var moveDir = LocalMoveDirection.Normal;
 		if (CurrentDoorState == DoorState.Open || CurrentDoorState == DoorState.Closed)
 		{
-			Transform.Local = Transform.Local.WithPosition(
-				moveDir * (CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0)
-			);
+			if (DoorType == DoorMoveType.Rotating)
+			{
+				var angle = CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0;
+				angle *= FlipDirection ? -1 : 1;
+				Transform.Local = Transform.Local.WithRotation(
+					Rotation.FromAxis(Vector3.Up, angle)
+				);
+			}
+			else
+			{
+				Transform.Local = Transform.Local.WithPosition(
+					moveDir
+						* (CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0)
+						* (FlipDirection ? -1 : 1)
+				);
+			}
+
 			return;
 		}
 
@@ -64,11 +93,25 @@ public class Door : Component, Component.ExecuteInEditor
 
 		var percentMoved = currentMoveDistance / DoorMoveDistance;
 		var curveValue = DoorMoveCurve.Evaluate(percentMoved) * DoorMoveDistance;
-		Transform.Local = Transform.Local.WithPosition(moveDir * curveValue);
+		curveValue *= FlipDirection ? -1 : 1;
+
+		if (DoorType == DoorMoveType.Rotating)
+		{
+			Transform.Local = Transform.Local.WithRotation(
+				Rotation.FromAxis(Vector3.Up, curveValue)
+			);
+		}
+		else
+		{
+			Transform.Local = Transform.Local.WithPosition(moveDir * curveValue);
+		}
 	}
 
 	public void ToggleDoor()
 	{
+		if (Locked)
+			return;
+
 		Network.TakeOwnership();
 		if (CurrentDoorState == DoorState.Open)
 			CurrentDoorState = DoorState.Closing;
