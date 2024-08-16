@@ -265,8 +265,11 @@ public class PlayerGrabber : Component
 
 		Sound.Play(shootSound, Transform.Position);
 
-		var ray = Scene.Camera.ScreenNormalToRay(0.5f);
-		// ray.Forward += Vector3.Random * 0.03f;
+		var player = Components.Get<PlayerController>();
+		if (!player.IsValid())
+			return;
+
+		var ray = player.GetAimRay();
 
 		DoShoot(ray.Position, ray.Forward.Normal);
 	}

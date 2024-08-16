@@ -127,6 +127,11 @@ public class PlayerController : Component
 		phys.PhysicsGroup.Velocity = Controller.Velocity;
 	}
 
+	public Ray GetAimRay()
+	{
+		return new Ray(Eye.Transform.Position, EyeAngles.Forward);
+	}
+
 	private void UseLogic()
 	{
 		var cam = Camera;
@@ -135,12 +140,10 @@ public class PlayerController : Component
 			return;
 		}
 
+		var ray = GetAimRay();
 		var curTag = MultiWorldSystem.GetWorldTag(CurrentWorldIndex);
 		var tr = Scene
-			.Trace.Ray(
-				cam.Transform.Position,
-				cam.Transform.Position + EyeAngles.ToRotation().Forward * 90
-			)
+			.Trace.Ray(ray.Position, ray.Position + ray.Forward * 90)
 			.WithTag(curTag)
 			.Run();
 		if (tr.Hit)
@@ -221,8 +224,20 @@ public class PlayerController : Component
 				}
 				else
 				{
+					var tr = Scene
+						.Trace.Ray(
+							Eye.Transform.Position,
+							Eye.Transform.Position + lookDir.Backward * 2048
+						)
+						.WithTag(MultiWorldSystem.GetWorldTag(CurrentWorldIndex))
+						.Run();
+
+					var lookDistance = tr.Hit ? tr.Distance : 300;
+					lookDistance = Math.Min(lookDistance, 300) - 16;
+					lookDistance = Math.Max(lookDistance, 16);
+
 					cam.Transform.Position =
-						Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f;
+						Eye.Transform.Position + lookDir.Backward * lookDistance;
 				}
 			}
 
