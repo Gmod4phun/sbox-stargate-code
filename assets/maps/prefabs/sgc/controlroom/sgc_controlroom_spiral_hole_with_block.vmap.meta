@@ -1,0 +1,21 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "sgc_controlroom_spiral_hole_with_block",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "sgc_controlroom_spiral_hole_with",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.glass_a_hs#33634"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/sgc/controlroom/sgc_controlroom_spiral_hole_with_block.vmap"
+      }
+    }
+  }
+}
