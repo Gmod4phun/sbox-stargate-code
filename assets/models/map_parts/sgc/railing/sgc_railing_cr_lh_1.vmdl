@@ -23,7 +23,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/map_parts/sgc/railing/sgc_controlroom_railing_roundhall_1.fbx"
+						filename = "models/map_parts/sgc/railing/sgc_railing_cr_lh_1.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -36,7 +36,9 @@
 							exclude_by_default = true
 							exception_list = 
 							[
-								"Railing_1",
+								"Railing_CR_RH_1_Curve",
+								"sgc_railing_cr_rh_1",
+								"sgc_railing_cr_lh_1",
 							]
 						}
 					},
