@@ -15,6 +15,5 @@ code/Properties/*
 *.generated.*
 *.*_c
 *.los
-*.vpk
 
 *.sln
