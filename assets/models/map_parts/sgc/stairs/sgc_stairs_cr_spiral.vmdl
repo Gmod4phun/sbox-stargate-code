@@ -37,7 +37,7 @@
 						[
 							{
 								from = "default.vmat"
-								to = "materials/default.vmat"
+								to = "materials/generic/metal_brushed.vmat"
 							},
 						]
 						use_global_default = false
