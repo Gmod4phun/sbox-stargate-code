@@ -316,7 +316,7 @@
       "__guid": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "0,0,160",
+      "Position": "0,-649,120",
       "Rotation": "0,0,1,-0.00000004371139",
       "Enabled": true,
       "Components": [

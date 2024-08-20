@@ -11,8 +11,22 @@
 				[
 					{
 						_class = "DefaultMaterialGroup"
-						remaps = [  ]
-						use_global_default = true
+						remaps = 
+						[
+							{
+								from = "sgc_stairs_step_diamond.vmat"
+								to = "materials/generic/floor_steel_diamond_plate_a.vmat"
+							},
+							{
+								from = "sgc_stairs_step.vmat"
+								to = "materials/generic/metal_brushed.vmat"
+							},
+							{
+								from = "sgc_stairs_frame.vmat"
+								to = "materials/generic/metal_painted_c.vmat"
+							},
+						]
+						use_global_default = false
 						global_default_material = "materials/default.vmat"
 					},
 				]

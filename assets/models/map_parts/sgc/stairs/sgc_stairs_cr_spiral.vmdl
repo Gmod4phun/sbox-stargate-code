@@ -36,8 +36,20 @@
 						remaps = 
 						[
 							{
-								from = "default.vmat"
+								from = "sgc_railing.vmat"
 								to = "materials/generic/metal_brushed.vmat"
+							},
+							{
+								from = "sgc_stairs_step_diamond.vmat"
+								to = "materials/generic/floor_steel_diamond_plate_a.vmat"
+							},
+							{
+								from = "sgc_stairs_spiral_metal.vmat"
+								to = "materials/generic/metal_galvanized.vmat"
+							},
+							{
+								from = "sgc_stairs_spiral_bottom.vmat"
+								to = "materials/generic/metal_painted_c.vmat"
 							},
 						]
 						use_global_default = false
