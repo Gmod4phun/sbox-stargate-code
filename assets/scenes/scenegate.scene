@@ -12751,6 +12751,24 @@
               ]
             }
           ]
+        },
+        {
+          "__guid": "9ffc5d59-a800-4c42-bd54-3c1f86050a11",
+          "Flags": 0,
+          "Name": "balloonregular01",
+          "Position": "-19,-672,60.06746",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "eedd5f46-7cf4-41c0-acc8-7056f1538e2b",
+              "BodyGroups": 18446744073709551615,
+              "Health": 1,
+              "IsStatic": false,
+              "Model": "models/citizen_props/balloonregular01.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     }

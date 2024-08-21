@@ -183,7 +183,7 @@ public class PlayerGrabber : Component
 			.Trace.Ray(pos, pos + dir * 3000.0f)
 			.WithWorld(GameObject)
 			.HitTriggers()
-			.WithoutTags("ehtrigger")
+			.WithoutTags("ehtrigger", "playerclip")
 			.Run();
 
 		if (!tr.Hit || !tr.GameObject.IsValid())
