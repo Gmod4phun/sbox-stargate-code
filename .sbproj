@@ -8,6 +8,7 @@
   "Resources": "\nvideos/*\nfonts/*\nmaterials/sbox_stargate/glyphs/*\nmaterials/sbox_stargate/programs/*\nshaders/*\ncode\nPanels/*\nProjectSettings/*\n",
   "PackageReferences": [],
   "EditorReferences": null,
+  "IsWhitelistDisabled": false,
   "Metadata": {
     "MaxPlayers": 64,
     "MinPlayers": 1,

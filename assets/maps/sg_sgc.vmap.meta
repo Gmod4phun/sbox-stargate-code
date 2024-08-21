@@ -25,6 +25,7 @@
         "facepunch.metal_galvanized#18748",
         "facepunch.carpet_a#18621"
       ],
+      "IsWhitelistDisabled": false,
       "Metadata": {
         "SingleAssetSource": "maps/sg_sgc.vmap"
       }
