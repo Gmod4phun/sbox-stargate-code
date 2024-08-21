@@ -11101,7 +11101,6 @@
           "Flags": 0,
           "Name": "2D Skybox",
           "Tags": "skybox",
-          "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.SkyBox2D",
@@ -12661,18 +12660,37 @@
                   "IsTrigger": false,
                   "Scale": "324,10,430",
                   "Static": false
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8ac2eea1-c4af-4449-8a9d-d109ddb78875",
+          "Flags": 0,
+          "Name": "Button C3L",
+          "Position": "101.9997,-518.0002,102.9996",
+          "Rotation": "-0.5,0.5000005,-0.4999997,-0.4999998",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "05dd34ef-7594-45ca-ae2d-0d75a4c661ca",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/props/big_button/big_button.vmdl",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "DoorController",
+              "__guid": "a30bcb01-8c11-49ff-99a4-f0004220b6b6",
+              "Doors": [
                 {
-                  "__type": "DoorController",
-                  "__guid": "f96105c2-d374-4e73-ae55-c4ca5a348184",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
-                      "go": "9d90cda6-dcf3-4e85-b8bb-dad3dbb08aeb",
-                      "component_type": "Door"
-                    }
-                  ]
+                  "_type": "component",
+                  "component_id": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
+                  "go": "9d90cda6-dcf3-4e85-b8bb-dad3dbb08aeb",
+                  "component_type": "Door"
                 }
               ]
             }
@@ -12721,7 +12739,7 @@
                     }
                   ],
                   "DoorMoveDistance": 84,
-                  "DoorMoveTime": 5,
+                  "DoorMoveTime": 4,
                   "DoorType": "Sliding",
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
@@ -12735,18 +12753,37 @@
                   "IsTrigger": false,
                   "Scale": "232,8,116",
                   "Static": false
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "496d73fc-f0f2-4de8-99a4-c4482e9be798",
+          "Flags": 0,
+          "Name": "Button C3U",
+          "Position": "127.9994,-462.0002,335.9996",
+          "Rotation": "-0.5,0.5000005,-0.4999997,-0.4999998",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "4f480da7-92c0-417d-8b98-89ee625d099b",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/props/big_button/big_button.vmdl",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "DoorController",
+              "__guid": "759740be-8bc8-4ca4-9869-9175796a1148",
+              "Doors": [
                 {
-                  "__type": "DoorController",
-                  "__guid": "0cf51209-a4f4-4cab-bb0d-422debe2217b",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
-                      "go": "ceca9914-ccb3-49df-a133-9649b4c47b6a",
-                      "component_type": "Door"
-                    }
-                  ]
+                  "_type": "component",
+                  "component_id": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
+                  "go": "ceca9914-ccb3-49df-a133-9649b4c47b6a",
+                  "component_type": "Door"
                 }
               ]
             }
@@ -12767,6 +12804,106 @@
               "IsStatic": false,
               "Model": "models/citizen_props/balloonregular01.vmdl",
               "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "62140b12-70a1-499e-bcfe-20131421de2f",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "0,-618,210",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "fe2d35fa-0747-4ddc-9c7e-7b36333a8617",
+              "Attenuation": 2.63,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 400,
+              "Shadows": false
+            }
+          ]
+        },
+        {
+          "__guid": "34db70d4-241f-4083-b3c3-39891cc04e26",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "0,-235,197",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "b40e8718-b3b3-44e7-8fa4-b1211a8d66ae",
+              "Attenuation": 1.25,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 800.50024,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "79c233da-2289-4622-8889-a173ac9c5cdf",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "0,121,196",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "1cd69432-7b50-4f75-9ba8-6b7d638946ca",
+              "Attenuation": 1.25,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 800.50024,
+              "Shadows": false
+            }
+          ]
+        },
+        {
+          "__guid": "10720217-403b-4735-bcfd-4693192daa28",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "0,-739,210",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "750b92ce-c4d1-45b0-833f-e9d80069ce0e",
+              "Attenuation": 2.63,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 400,
+              "Shadows": false
+            }
+          ]
+        },
+        {
+          "__guid": "c3848892-e755-486b-b448-bf2af24b06da",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "0,-682,378",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "5cdaa344-4cc6-4c58-bc8a-c89cbe4b50f7",
+              "Attenuation": 0.78,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 400,
+              "Shadows": false
             }
           ]
         }
@@ -12798,6 +12935,7 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [
+    "facepunch.big_button",
     "fish.gt_shitty_pine_tree2"
   ],
   "__version": 1
