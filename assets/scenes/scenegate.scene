@@ -12761,7 +12761,7 @@
           "__guid": "496d73fc-f0f2-4de8-99a4-c4482e9be798",
           "Flags": 0,
           "Name": "Button C3U",
-          "Position": "127.9994,-462.0002,335.9996",
+          "Position": "127.9995,-459.0004,335.9995",
           "Rotation": "-0.5,0.5000005,-0.4999997,-0.4999998",
           "Enabled": true,
           "Components": [
@@ -12877,6 +12877,26 @@
             {
               "__type": "Sandbox.PointLight",
               "__guid": "750b92ce-c4d1-45b0-833f-e9d80069ce0e",
+              "Attenuation": 2.63,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 400,
+              "Shadows": false
+            }
+          ]
+        },
+        {
+          "__guid": "e6f64a64-999a-49c5-a746-8f6d4c4cdbc3",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "231,-782,143",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "90f61574-8b52-4078-81c0-0ad5411a733e",
               "Attenuation": 2.63,
               "FogMode": "Enabled",
               "FogStrength": 1,
