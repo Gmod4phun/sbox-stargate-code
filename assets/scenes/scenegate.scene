@@ -11083,7 +11083,6 @@
           "Name": "Sun",
           "Rotation": "0.3211343,0.7255905,-0.1164775,0.5973477",
           "Tags": "light_directional,light",
-          "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.DirectionalLight",
@@ -11785,7 +11784,7 @@
           "__guid": "6098929b-fc8e-4ff8-b941-d7fb7283dd1e",
           "Flags": 0,
           "Name": "Dhd (Atlantis)",
-          "Position": "0,-550,60",
+          "Position": "-0.00002664327,-400.9999,0",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
           "NetworkMode": 1,
@@ -12669,8 +12668,8 @@
           "__guid": "8ac2eea1-c4af-4449-8a9d-d109ddb78875",
           "Flags": 0,
           "Name": "Button C3L",
-          "Position": "101.9997,-518.0002,102.9996",
-          "Rotation": "-0.5,0.5000005,-0.4999997,-0.4999998",
+          "Position": "30.99967,-544.9998,94.9994",
+          "Rotation": "-0.0000002607702,0.0000005364418,-0.7071066,-0.7071069",
           "Enabled": true,
           "Components": [
             {
