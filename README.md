@@ -8,3 +8,4 @@ Stargates and various things from the whole Stargate universe for S&Box
 * Lukáš Pavelka - Various Stargate library functions, kawoosh model
 * Doctor BLUe - kawoosh model
 * A1steaksa - Some Stargate sounds
+* Amal Kumar - Painted Plaster Wall Textures
