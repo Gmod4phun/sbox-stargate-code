@@ -12849,7 +12849,7 @@
               "FogStrength": 1,
               "LightColor": "0.91373,0.98039,1,1",
               "Radius": 400,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -12889,7 +12889,7 @@
               "FogStrength": 1,
               "LightColor": "0.91373,0.98039,1,1",
               "Radius": 800.50024,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -12909,7 +12909,7 @@
               "FogStrength": 1,
               "LightColor": "0.91373,0.98039,1,1",
               "Radius": 400,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -12929,7 +12929,7 @@
               "FogStrength": 1,
               "LightColor": "0.91373,0.98039,1,1",
               "Radius": 400,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -12949,7 +12949,7 @@
               "FogStrength": 1,
               "LightColor": "0.91373,0.98039,1,1",
               "Radius": 400,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         }

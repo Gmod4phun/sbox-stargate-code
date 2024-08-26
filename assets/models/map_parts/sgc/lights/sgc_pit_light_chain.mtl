@@ -1,0 +1,24 @@
+# Blender 4.2.1 LTS MTL File: 'sgc_lights.blend'
+# www.blender.org
+
+newmtl chain
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Ns C:/Users/Gmod4/Documents/S&box Projects/sbox-stargate-code/assets/materials/chain/chain_link_rough.tga
+map_d C:/Users/Gmod4/Documents/S&box Projects/sbox-stargate-code/assets/materials/chain/chain_link_trans.tga
+map_Bump -bm 1.000000 C:/Users/Gmod4/Documents/S&box Projects/sbox-stargate-code/assets/materials/chain/chain_link_normal.tga
+
+newmtl pit_light_frame
+Ns 292.582611
+Ka 1.000000 1.000000 1.000000
+Kd 0.090211 0.324841 0.046970
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Bump -bm 1.000000 C:/Users/Gmod4/Documents/S&box Projects/sbox-stargate-code/assets/materials/sgc/lights/pit_light_normal.tga
