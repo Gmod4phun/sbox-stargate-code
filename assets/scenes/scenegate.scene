@@ -14,6 +14,7 @@
           "AutoScreenScale": true,
           "Opacity": 1,
           "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
           "ZIndex": 100
         },
         {
@@ -278,6 +279,7 @@
               "AutoScreenScale": true,
               "Opacity": 1,
               "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
               "ZIndex": 100
             },
             {
@@ -12834,30 +12836,10 @@
           ]
         },
         {
-          "__guid": "62140b12-70a1-499e-bcfe-20131421de2f",
-          "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,-618,210",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "fe2d35fa-0747-4ddc-9c7e-7b36333a8617",
-              "Attenuation": 2.63,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 400,
-              "Shadows": true
-            }
-          ]
-        },
-        {
           "__guid": "34db70d4-241f-4083-b3c3-39891cc04e26",
           "Flags": 0,
           "Name": "Point Light",
-          "Position": "0,-235,197",
+          "Position": "0,-132,196",
           "Tags": "light_point,light",
           "Enabled": true,
           "Components": [
@@ -12874,84 +12856,106 @@
           ]
         },
         {
-          "__guid": "79c233da-2289-4622-8889-a173ac9c5cdf",
+          "__guid": "dbc7df65-a78f-415a-bed1-aaea253706ff",
           "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,121,196",
-          "Tags": "light_point,light",
+          "Name": "Pit Light",
+          "Position": "212,-746,256",
           "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "1cd69432-7b50-4f75-9ba8-6b7d638946ca",
-              "Attenuation": 1.25,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 800.50024,
-              "Shadows": true
-            }
-          ]
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
         },
         {
-          "__guid": "10720217-403b-4735-bcfd-4693192daa28",
+          "__guid": "295dc414-1b69-4b70-9a04-4ea026ee69c2",
           "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,-739,210",
-          "Tags": "light_point,light",
+          "Name": "Pit Light",
+          "Position": "-196,-746,256",
           "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "750b92ce-c4d1-45b0-833f-e9d80069ce0e",
-              "Attenuation": 2.63,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 400,
-              "Shadows": true
-            }
-          ]
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": false
+          }
         },
         {
-          "__guid": "e6f64a64-999a-49c5-a746-8f6d4c4cdbc3",
+          "__guid": "0a83d5dc-96c2-453d-8a9e-a52cdfd722fc",
           "Flags": 0,
-          "Name": "Point Light",
-          "Position": "231,-782,143",
-          "Tags": "light_point,light",
+          "Name": "Pit Light",
+          "Position": "-196,-556,256",
           "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "90f61574-8b52-4078-81c0-0ad5411a733e",
-              "Attenuation": 2.63,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 400,
-              "Shadows": true
-            }
-          ]
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": false
+          }
         },
         {
-          "__guid": "c3848892-e755-486b-b448-bf2af24b06da",
+          "__guid": "b9ddea6e-9056-4372-a051-fab9ce92fb77",
           "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,-682,378",
-          "Tags": "light_point,light",
+          "Name": "Pit Light",
+          "Position": "212,-818,256",
           "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "5cdaa344-4cc6-4c58-bc8a-c89cbe4b50f7",
-              "Attenuation": 0.78,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 400,
-              "Shadows": true
-            }
-          ]
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": false
+          }
+        },
+        {
+          "__guid": "fdfe67e9-3111-46b1-911b-58c9cc24d595",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-196,-818,256",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "8579d371-7c2b-4437-99ca-91894380830a",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-196,-628,256",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": false
+          }
+        },
+        {
+          "__guid": "3b654c2f-74a1-4de4-9825-06a3fe67042b",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-0.0001100302,-613.9999,256",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "6e83f6b6-c09e-449a-bc7c-3d860653dd34",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-72,-613.9998,256",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": false
+          }
+        },
+        {
+          "__guid": "18761627-0111-4240-bdb8-1e70100cf5cf",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "71.99989,-613.9997,256",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": false
+          }
         }
       ]
     }

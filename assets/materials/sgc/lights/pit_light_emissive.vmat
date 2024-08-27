@@ -14,8 +14,8 @@ Layer0
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
-	g_vColorTint "[0.894118 0.905882 0.701961 0.000000]"
-	TextureColor "[1.000000 1.000000 1.000000 0.000000]"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "materials/sgc/lights/pit_light_emissive.png"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -35,8 +35,8 @@ Layer0
 
 	//---- Self Illum ----
 	g_flSelfIllumAlbedoFactor "1.000"
-	g_flSelfIllumBrightness "3.000"
-	g_flSelfIllumScale "1.000"
+	g_flSelfIllumBrightness "6.000"
+	g_flSelfIllumScale "0.000"
 	g_vSelfIllumScrollSpeed "[0.000 0.000]"
 	g_vSelfIllumTint "[1.000000 1.000000 1.000000 0.000000]"
 	TextureSelfIllumMask "materials/sgc/lights/pit_light_emissive.png"
@@ -47,4 +47,10 @@ Layer0
 	g_vTexCoordOffset "[0.000 0.000]"
 	g_vTexCoordScale "[1.000 1.000]"
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
+
+	DynamicParams
+	{
+		g_vColorTint "colortint"
+		g_flSelfIllumScale "selfillumscale"
+	}
 }
