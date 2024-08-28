@@ -325,7 +325,7 @@
         {
           "__type": "Sandbox.SpawnPoint",
           "__guid": "364e8fb0-7e9b-4567-9feb-f38163f01aa3",
-          "Color": "0.8902,0.31765,0.05098,1"
+          "Color": "0.8902,0.31673,0.05098,1"
         }
       ]
     },
@@ -12934,6 +12934,18 @@
           }
         },
         {
+          "__guid": "e0ba88f3-5815-4493-80e1-ae3b991abd56",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-0.00009608283,-535.9999,468",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
           "__guid": "6e83f6b6-c09e-449a-bc7c-3d860653dd34",
           "Flags": 0,
           "Name": "Pit Light",
@@ -12956,6 +12968,62 @@
           "__PrefabVariables": {
             "IsOn": false
           }
+        },
+        {
+          "__guid": "cf91012c-8818-45d4-baa4-a5ff5e564fea",
+          "Flags": 0,
+          "Name": "Envmap Probe",
+          "Position": "0,-672,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "d80f8fd9-63f1-44df-bb02-d28c899502de",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-255.9996,-288,0",
+                "Maxs": "288,232,236.0004"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.05,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "FrameInterval",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "de42bb27-37e5-4267-b1ab-3c4fb11bdb9d",
+          "Flags": 0,
+          "Name": "Envmap Probe",
+          "Position": "0,-672,212",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "426fc56f-9a71-4c1c-aacb-e334bc98c75c",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-255.9996,-288,-42",
+                "Maxs": "288,232,256"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.05,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "FrameInterval",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
         }
       ]
     }
