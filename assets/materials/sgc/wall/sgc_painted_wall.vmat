@@ -21,12 +21,12 @@ Layer0
 	TextureColor "materials/sgc/wall/painted_plaster_wall_color.png"
 
 	//---- Detail Texture ----
-	g_flDetailBlendFactor "1.000"
+	g_flDetailBlendFactor "0.075"
 	g_flDetailBlendToFull "0.000"
-	g_flDetailNormalStrength "0.200"
+	g_flDetailNormalStrength "0.500"
 	g_flDetailTexCoordRotation "0.000"
 	g_vDetailTexCoordOffset "[0.000 0.000]"
-	g_vDetailTexCoordScale "[1.000 1.000]"
+	g_vDetailTexCoordScale "[0.200 0.200]"
 	TextureDetailMask "materials/default/default_detailmask.tga"
 	TextureNormalDetail "materials/sgc/wall/painted_plaster_wall_detail.png"
 

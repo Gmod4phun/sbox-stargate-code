@@ -2,14 +2,14 @@
   "RootObject": {
     "__guid": "dbc7df65-a78f-415a-bed1-aaea253706ff",
     "Flags": 0,
-    "Name": "pit_light",
+    "Name": "gateroom_light",
     "Enabled": true,
     "Children": [
       {
         "__guid": "a1ea1f55-edab-4fc0-88fc-85cc2b016bb2",
         "Flags": 0,
         "Name": "Light Model",
-        "Position": "0,0,-30",
+        "Position": "0,0,2",
         "Enabled": true,
         "Components": [
           {
@@ -18,19 +18,19 @@
             "BodyGroups": 18446744073709551615,
             "Health": 0,
             "IsStatic": true,
-            "Model": "models/map_parts/sgc/lights/sgc_pit_light.vmdl",
+            "Model": "models/map_parts/sgc/lights/sgc_gateroom_light.vmdl",
             "Tint": "1,1,1,1"
           },
           {
             "__type": "ToggleableLight",
             "__guid": "ccdac9e5-9e7b-453d-bb55-c76849da87f3",
             "IsOn": false,
-            "LightColor": "0.9907,0.98839,0.85246,1",
+            "LightColor": "1,0.88411,0.46512,1",
             "LightComponent": {
               "_type": "component",
-              "component_id": "dd3581e9-9a4d-4e0b-bf54-72a67b8393bb",
+              "component_id": "2743e662-c1e0-45d1-bca7-a98263bb8731",
               "go": "36a60d4a-c5c6-472f-8034-a6b5156f2ba8",
-              "component_type": "SpotLight"
+              "component_type": "PointLight"
             }
           }
         ],
@@ -38,22 +38,20 @@
           {
             "__guid": "36a60d4a-c5c6-472f-8034-a6b5156f2ba8",
             "Flags": 0,
-            "Name": "Spot Light",
-            "Position": "0,0,-6",
+            "Name": "Light",
+            "Position": "8,0,-4.998603",
             "Rotation": "0,0.7071067,0,0.7071068",
-            "Tags": "light_spot,light",
+            "Tags": "light_spot,light,light_point",
             "Enabled": true,
             "Components": [
               {
-                "__type": "Sandbox.SpotLight",
-                "__guid": "dd3581e9-9a4d-4e0b-bf54-72a67b8393bb",
-                "Attenuation": 1.25,
-                "ConeInner": 64,
-                "ConeOuter": 86,
+                "__type": "Sandbox.PointLight",
+                "__guid": "2743e662-c1e0-45d1-bca7-a98263bb8731",
+                "Attenuation": 2,
                 "FogMode": "Enabled",
                 "FogStrength": 1,
                 "LightColor": "0,0,0,0",
-                "Radius": 720,
+                "Radius": 400,
                 "Shadows": true
               }
             ]

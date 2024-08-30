@@ -1,0 +1,57 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/complex.shader"
+
+	//---- PBR ----
+	F_METALNESS_TEXTURE 1
+	F_SELF_ILLUM 1
+	F_SPECULAR 1
+
+	//---- Ambient Occlusion ----
+	g_flAmbientOcclusionDirectDiffuse "0.000"
+	g_flAmbientOcclusionDirectSpecular "0.000"
+	TextureAmbientOcclusion "materials/sgc/lights/gateroom_light_ao.tga"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "materials/sgc/lights/gateroom_light_color.tga"
+
+	//---- Fade ----
+	g_flFadeExponent "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Metalness ----
+	TextureMetalness "materials/sgc/lights/gateroom_light_metal.tga"
+
+	//---- Normal ----
+	TextureNormal "materials/sgc/lights/gateroom_light_normal.tga"
+
+	//---- Roughness ----
+	g_flRoughnessScaleFactor "1.000"
+	TextureRoughness "materials/sgc/lights/gateroom_light_rough.tga"
+
+	//---- Self Illum ----
+	g_flSelfIllumAlbedoFactor "1.000"
+	g_flSelfIllumBrightness "4.000"
+	g_flSelfIllumScale "0.000"
+	g_vSelfIllumScrollSpeed "[0.000 0.000]"
+	g_vSelfIllumTint "[1.000000 0.831373 0.541176 0.000000]"
+	TextureSelfIllumMask "materials/sgc/lights/gateroom_light_selfillum.tga"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+
+	DynamicParams
+	{
+		g_flSelfIllumScale "selfillumscale"
+	}
+}
