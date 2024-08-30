@@ -47,7 +47,6 @@
 							exception_list = 
 							[
 								"sgc_briefingroom_light",
-								"sgc_briefingroom_light1",
 							]
 						}
 					},

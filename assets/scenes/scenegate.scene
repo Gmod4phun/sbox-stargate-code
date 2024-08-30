@@ -11801,7 +11801,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158347,3443.997,14",
+              "Position": "0.0006158344,3443.995,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -13708,18 +13708,6 @@
           }
         },
         {
-          "__guid": "e0ba88f3-5815-4493-80e1-ae3b991abd56",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-0.00009608283,-535.9999,468",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
           "__guid": "6e83f6b6-c09e-449a-bc7c-3d860653dd34",
           "Flags": 0,
           "Name": "Pit Light",
@@ -13904,7 +13892,7 @@
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
-              "UpdateStrategy": "FrameInterval",
+              "UpdateStrategy": "OnEnabled",
               "ZFar": 4096,
               "ZNear": 16
             }
@@ -14117,25 +14105,92 @@
           ]
         },
         {
-          "__guid": "64192cd1-17ee-42c0-811f-7eebfe8eca32",
+          "__guid": "4d60a335-c402-4c8f-af9e-f569f467eeaa",
           "Flags": 0,
-          "Name": "Spot Light",
-          "Position": "-198,-812,344",
-          "Rotation": "0,0.7071067,0,0.7071068",
-          "Tags": "light_spot,light,light_point",
+          "Name": "Briefingroom Light",
+          "Position": "-196,-812,468",
           "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "5d44fd12-879a-49ab-88e7-c3a4c58d1202",
-              "Attenuation": 1,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 400,
-              "Shadows": true
-            }
-          ]
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "fc360c52-cea9-47ea-8fbc-8daa5860b817",
+          "Flags": 0,
+          "Name": "Briefingroom Light (4)",
+          "Position": "-196,-672,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "f06b78d0-d41a-42f7-b127-ea2f5f60bbe0",
+          "Flags": 0,
+          "Name": "Briefingroom Light (5)",
+          "Position": "-196,-536,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "8473a59a-c9a4-41be-85df-13c0f5b16caa",
+          "Flags": 0,
+          "Name": "Briefingroom Light (6)",
+          "Position": "-64,-536,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "a9dec505-566a-436d-ac13-e2741a1b6342",
+          "Flags": 0,
+          "Name": "Briefingroom Light (7)",
+          "Position": "64,-536,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "a4b52ba1-5862-4458-905d-a11e4dd423e5",
+          "Flags": 0,
+          "Name": "Briefingroom Light (1)",
+          "Position": "-64,-812,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "6f8c311c-e3a8-4c1a-a33b-42111c369a62",
+          "Flags": 0,
+          "Name": "Briefingroom Light (2)",
+          "Position": "64,-812,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "4dfc12a5-1aff-47e8-9608-0696fd5bb8ef",
+          "Flags": 0,
+          "Name": "Briefingroom Light (3)",
+          "Position": "212,-812,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
         }
       ]
     }

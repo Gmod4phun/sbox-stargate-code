@@ -40,7 +40,7 @@ Layer0
 	g_flSelfIllumBrightness "5.000"
 	g_flSelfIllumScale "1.000"
 	g_vSelfIllumScrollSpeed "[0.000 0.000]"
-	g_vSelfIllumTint "[0.823529 0.929412 1.000000 0.000000]"
+	g_vSelfIllumTint "[1.000000 0.984314 0.831373 0.000000]"
 	TextureSelfIllumMask "materials/sgc/lights/light_grid_selfillum.png"
 
 	//---- Texture Coordinates ----
