@@ -14191,6 +14191,18 @@
           "__PrefabVariables": {
             "IsOn": true
           }
+        },
+        {
+          "__guid": "79fe3ac8-be0d-486c-a7b5-31e933dbd3b0",
+          "Flags": 0,
+          "Name": "briefingroom_center_light",
+          "Position": "0,-672,464",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_center_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
         }
       ]
     }
