@@ -11,12 +11,12 @@ Layer0
 	//---- Ambient Occlusion ----
 	g_flAmbientOcclusionDirectDiffuse "0.000"
 	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "[1.000000 1.000000 1.000000 0.000000]"
+	TextureAmbientOcclusion "materials/sgc/lights/briefingroom_center_light_ao.tga"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "[0.011765 0.011765 0.011765 0.000000]"
+	TextureColor "materials/sgc/lights/briefingroom_center_light_color.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -25,14 +25,14 @@ Layer0
 	g_bFogEnabled "1"
 
 	//---- Metalness ----
-	TextureMetalness "[0.000000 0.000000 0.000000 0.000000]"
+	TextureMetalness "materials/sgc/lights/briefingroom_center_light_metal.tga"
 
 	//---- Normal ----
 	TextureNormal "materials/sgc/lights/briefingroom_center_light_normal.tga"
 
 	//---- Roughness ----
 	g_flRoughnessScaleFactor "1.000"
-	TextureRoughness "[0.500000 0.500000 0.500000 0.000000]"
+	TextureRoughness "materials/sgc/lights/briefingroom_center_light_rough.tga"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"

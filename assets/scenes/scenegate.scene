@@ -11801,7 +11801,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158344,3443.995,14",
+              "Position": "0.0006158342,3443.994,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -14186,6 +14186,17 @@
           "Flags": 0,
           "Name": "Briefingroom Light (3)",
           "Position": "212,-812,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "0ff05561-8ba3-4f9c-b8eb-e9808b058f5a",
+          "Flags": 0,
+          "Name": "Briefingroom Light (3)",
+          "Position": "212,-672,468",
           "Enabled": true,
           "__Prefab": "prefabs/lights/briefingroom_light.prefab",
           "__PrefabVariables": {
