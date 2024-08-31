@@ -15,7 +15,7 @@
 						[
 							{
 								from = "sgc_stairs_step_diamond.vmat"
-								to = "materials/generic/floor_steel_diamond_plate_a.vmat"
+								to = "materials/generic/floor_steel_diamond_plate_painted_a.vmat"
 							},
 							{
 								from = "sgc_stairs_step.vmat"

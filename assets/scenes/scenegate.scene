@@ -13461,24 +13461,6 @@
           ]
         },
         {
-          "__guid": "9ffc5d59-a800-4c42-bd54-3c1f86050a11",
-          "Flags": 0,
-          "Name": "balloonregular01",
-          "Position": "-19,-672,60.06746",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "eedd5f46-7cf4-41c0-acc8-7056f1538e2b",
-              "BodyGroups": 18446744073709551615,
-              "Health": 1,
-              "IsStatic": false,
-              "Model": "models/citizen_props/balloonregular01.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
           "__guid": "34db70d4-241f-4083-b3c3-39891cc04e26",
           "Flags": 0,
           "Name": "Point Light",
@@ -14233,6 +14215,158 @@
               "Tint": "1,1,1,1"
             }
           ]
+        },
+        {
+          "__guid": "16524003-5ea2-448e-8898-1fd9712a0762",
+          "Flags": 0,
+          "Name": "office_chair",
+          "Position": "94.71688,-671.9295,297.338",
+          "Rotation": "0,0,0.05498262,0.9984873",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "3d2041ca-088d-4100-a318-4248f4172a4a",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "9340db97-2c71-48c2-9c2e-800b6a9fa637",
+          "Flags": 0,
+          "Name": "office_chair (1)",
+          "Position": "-94,-672,297.338",
+          "Rotation": "0,0,0.9981887,0.06016004",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "116deede-62e0-4d74-ab2c-177716aa3b57",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "8b206fa1-4ae9-43cb-b621-4218c9088752",
+          "Flags": 0,
+          "Name": "office_chair (2)",
+          "Position": "-38.75993,-633.1718,297.338",
+          "Rotation": "0,0,0.720903,0.693036",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "48e12531-1c77-4a2e-bab3-2b1cf17b553c",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "c91493f4-1c38-4279-b0a9-300a67e0d6a7",
+          "Flags": 0,
+          "Name": "office_chair (5)",
+          "Position": "46.46539,-710.934,297.338",
+          "Rotation": "0,0,-0.6312252,0.7755997",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "f7e72cae-acb0-4d3b-a394-39880c76ada5",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "db6a286f-ec79-4290-af0b-da2e2b2ddf30",
+          "Flags": 0,
+          "Name": "office_chair (3)",
+          "Position": "5.795679,-632.9527,297.338",
+          "Rotation": "0,0,0.6929709,0.7209657",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "8b122b6f-ab2c-40a5-8d89-5eeecf50d4b5",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "8d81efa6-9265-4bba-b8cb-55e1e99f6d38",
+          "Flags": 0,
+          "Name": "office_chair (6)",
+          "Position": "0.7031205,-709.7489,297.338",
+          "Rotation": "0,0,-0.7311738,0.6821915",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "1a6fff6d-b0c9-4d33-9db4-093f3ea51c2b",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "abfb11d9-cd00-4b25-b0e3-0c0b03293f3f",
+          "Flags": 0,
+          "Name": "office_chair (4)",
+          "Position": "44.74294,-631.3723,297.338",
+          "Rotation": "0,0,0.5976837,0.801732",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "839a8a47-27ef-4fa3-a0a6-8a74cadc14e7",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
+        },
+        {
+          "__guid": "577b9219-29b3-4242-af04-6d7db753edfb",
+          "Flags": 0,
+          "Name": "office_chair (7)",
+          "Position": "-48.1818,-709.9248,297.338",
+          "Rotation": "0,0,-0.6723353,0.7402467",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "ca284952-8e25-4e0e-abb0-070dc85dce2a",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/furniture/office_chair.vmdl",
+              "Tint": "0.28372,0.28372,0.28372,1"
+            }
+          ]
         }
       ]
     }
@@ -14265,6 +14399,7 @@
     "facepunch.big_button",
     "facepunch.industrial_strip_light",
     "fish.gt_shitty_pine_tree2",
+    "moman.officechair",
     "saandy.caged_light01_wall"
   ],
   "__version": 1
