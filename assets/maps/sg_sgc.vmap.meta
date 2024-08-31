@@ -39,7 +39,10 @@
         "facepunch.glass_a#70686",
         "facepunch.glass_c#70691",
         "facepunch.concrete_glossy#18629",
-        "facepunch.ceiling_halogen#29025"
+        "facepunch.ceiling_halogen#29025",
+        "facepunch.floor_steel_dia_plate_painted_a#18690",
+        "facepunch.metal_painted_black_b_hs#28948",
+        "stardrive.rope_barrier_a#26473"
       ],
       "IsWhitelistDisabled": false,
       "Metadata": {
