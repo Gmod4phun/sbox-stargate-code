@@ -14,6 +14,9 @@ public class ToggleableLight : Component, IUse, Component.ExecuteInEditor
 	[Property, JsonIgnore]
 	public ModelRenderer ModelRenderer => Components.Get<ModelRenderer>(FindMode.EnabledInSelf);
 
+	[Property]
+	public string OnSkin { get; set; } = "";
+
 	private float _lightIntensity;
 
 	public void ToggleLight()
@@ -38,6 +41,11 @@ public class ToggleableLight : Component, IUse, Component.ExecuteInEditor
 		ModelRenderer.SceneObject.Batchable = false;
 		ModelRenderer.SceneObject.Attributes.Set("selfillumscale", _lightIntensity);
 		ModelRenderer.SceneObject.Attributes.Set("colortint", IsOn ? LightColor : Color.White);
+
+		if (!string.IsNullOrEmpty(OnSkin))
+		{
+			ModelRenderer.MaterialGroup = IsOn ? OnSkin : "default";
+		}
 	}
 
 	public bool IsUsable(GameObject user)

@@ -1,0 +1,85 @@
+{
+  "RootObject": {
+    "__guid": "dbc7df65-a78f-415a-bed1-aaea253706ff",
+    "Flags": 0,
+    "Name": "industrial_light",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "a1ea1f55-edab-4fc0-88fc-85cc2b016bb2",
+        "Flags": 0,
+        "Name": "Light Model",
+        "Rotation": "1,0,0,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "fd294dde-684e-4b42-b88d-8528c3c2f13b",
+            "BodyGroups": 18446744073709551615,
+            "Health": 10,
+            "IsStatic": true,
+            "MaterialGroup": "default",
+            "Model": "models/sbox_props/industrial_strip_light/industrial_strip_light.vmdl",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ToggleableLight",
+            "__guid": "ccdac9e5-9e7b-453d-bb55-c76849da87f3",
+            "IsOn": false,
+            "LightColor": "0.9907,0.98839,0.85246,1",
+            "LightComponent": {
+              "_type": "component",
+              "component_id": "dd3581e9-9a4d-4e0b-bf54-72a67b8393bb",
+              "go": "36a60d4a-c5c6-472f-8034-a6b5156f2ba8",
+              "component_type": "SpotLight"
+            },
+            "OnSkin": "on"
+          }
+        ]
+      },
+      {
+        "__guid": "36a60d4a-c5c6-472f-8034-a6b5156f2ba8",
+        "Flags": 0,
+        "Name": "Spot Light",
+        "Position": "0,-0.0000005245366,-6",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "dd3581e9-9a4d-4e0b-bf54-72a67b8393bb",
+            "Attenuation": 1.25,
+            "ConeInner": 64,
+            "ConeOuter": 86,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "0,0,0,0",
+            "Radius": 720,
+            "Shadows": true
+          }
+        ]
+      }
+    ],
+    "__variables": [
+      {
+        "Id": "IsOn",
+        "Title": "IsOn",
+        "Targets": [
+          {
+            "Id": "ccdac9e5-9e7b-453d-bb55-c76849da87f3",
+            "Property": "IsOn"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.industrial_strip_light"
+  ],
+  "__version": 1
+}
