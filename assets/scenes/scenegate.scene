@@ -11801,7 +11801,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158334,3443.99,14",
+              "Position": "0.0006158333,3443.989,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -14036,6 +14036,75 @@
           }
         },
         {
+          "__guid": "250f8a2a-8f6e-4bca-90c8-f98f91ca8540",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-392,-816,468",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "09af1672-837e-42e5-8271-b3ed2d2f36ba",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-566,-816,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "2b24225f-e269-4222-ba2c-7bee44a94bd0",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-566,-672,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "a74ffaff-4517-47f5-a6c2-39337b2bf955",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-566,-544,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "0585535d-2c4d-4abd-a01c-3b943da33f82",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-686,-544,468",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "c7948740-d3a5-4fc9-b089-9226036032b9",
+          "Flags": 0,
+          "Name": "Pit Light",
+          "Position": "-816,-544,468",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/pit_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
           "__guid": "8579d371-7c2b-4437-99ca-91894380830a",
           "Flags": 0,
           "Name": "Pit Light",
@@ -14563,10 +14632,32 @@
           }
         },
         {
+          "__guid": "d2b16e73-e66a-490c-9277-6ee79ce635d6",
+          "Flags": 0,
+          "Name": "Briefingroom Light (4)",
+          "Position": "-384,-672,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
           "__guid": "f06b78d0-d41a-42f7-b127-ea2f5f60bbe0",
           "Flags": 0,
           "Name": "Briefingroom Light (5)",
           "Position": "-196,-536,468",
+          "Enabled": true,
+          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
+          "__PrefabVariables": {
+            "IsOn": true
+          }
+        },
+        {
+          "__guid": "a1ee58b7-3b37-412d-981b-56385334726b",
+          "Flags": 0,
+          "Name": "Briefingroom Light (5)",
+          "Position": "-384,-536,468",
           "Enabled": true,
           "__Prefab": "prefabs/lights/briefingroom_light.prefab",
           "__PrefabVariables": {
@@ -14823,84 +14914,22 @@
           ]
         },
         {
-          "__guid": "7c7bd7c4-06d5-4f22-a0a6-5de494482d45",
+          "__guid": "6fd4b12d-b2b6-4cb1-b875-e50705517ff3",
           "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-324,-812,468",
+          "Name": "mug_01",
+          "Position": "-230,-646,308.034",
           "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "0118dd43-6dfd-410d-bda5-ece386c6aa7d",
-          "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-434,-812,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "c3d7d8e5-30ed-49b1-b8c3-a5c215a52a11",
-          "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-566,-812,468",
-          "Rotation": "0,0,0.9238795,0.3826836",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "0971101b-747a-48a8-8eee-9a0d7d12ae13",
-          "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-566,-668,468",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "75de727e-52b8-4dd6-bdb9-2cf559083325",
-          "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-566,-542,468",
-          "Rotation": "0,0,-0.3826834,0.9238796",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "8b5fce0e-5d36-4254-bd66-b094ad1b55bf",
-          "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-684,-542,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "c3281d9a-d924-47d4-9ec9-4fa0a759441e",
-          "Flags": 0,
-          "Name": "industrial_light",
-          "Position": "-814,-542,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/industrial_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "1fff6c1c-8a35-4f8e-9755-f524d5473f2d",
+              "BodyGroups": 18446744073709551615,
+              "Health": 1,
+              "IsStatic": false,
+              "Model": "models/props/mugs/mug_01.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     }
@@ -14932,6 +14961,7 @@
   "__references": [
     "facepunch.big_button",
     "facepunch.industrial_strip_light",
+    "facepunch.mug_01",
     "fish.gt_shitty_pine_tree2",
     "moman.officechair",
     "saandy.caged_light01_wall"
