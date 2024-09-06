@@ -2633,6 +2633,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": false
                 }
               ]
@@ -2680,6 +2681,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": false
                 }
               ]
@@ -2815,6 +2817,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Sphere",
               "RenderDynamically": false,
               "TintColor": "1,1,1,1",
@@ -3071,6 +3074,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Sphere",
               "RenderDynamically": false,
               "TintColor": "1,1,1,1",
@@ -4494,6 +4498,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Sphere",
               "RenderDynamically": false,
               "TintColor": "1,1,1,1",
@@ -4710,6 +4715,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Sphere",
               "RenderDynamically": false,
               "TintColor": "1,1,1,1",
@@ -8011,6 +8017,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -11134,6 +11141,8 @@
               "EnableCollision": true,
               "MapName": "maps/sg_sgc.vmap",
               "NoOrigin": false,
+              "OnMapLoaded": null,
+              "OnMapUnloaded": null,
               "UseMapFromLaunch": false
             }
           ],
@@ -11801,7 +11810,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158331,3443.988,14",
+              "Position": "0.0006158326,3443.985,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -12513,6 +12522,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,-1,0",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": false
                 },
                 {
@@ -12587,6 +12597,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": true
                 },
                 {
@@ -12661,6 +12672,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": false
                 },
                 {
@@ -12679,889 +12691,6 @@
                       "_type": "component",
                       "component_id": "b11d6d2a-1f5c-4bd6-bb36-1d607e7a4f54",
                       "go": "ae97fab3-3894-4dac-a7f6-c23a602357cd",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "706bef1b-475c-42b7-bc16-3f1ca0f3f349",
-          "Flags": 0,
-          "Name": "Door Toilet Men",
-          "Position": "-258,-966.5,0.000006851637",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "cf3c4f99-517f-42d5-8f4e-588bccadfeea",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "069f1bb9-3a38-428c-b8bb-10f2bf397819",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "45e05d22-1ddf-44f1-890e-cd543ffb825a",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 120,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": true,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "90f87508-3130-4bca-a3c2-4c02e5e52105",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "7c05acce-f026-457f-bc82-1ad447172b0e",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "45e05d22-1ddf-44f1-890e-cd543ffb825a",
-                      "go": "cf3c4f99-517f-42d5-8f4e-588bccadfeea",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "562cf8cf-9efd-4a68-85cc-c2f29939017d",
-          "Flags": 0,
-          "Name": "Door Toilet Women",
-          "Position": "-414,-966.5,0.000006851637",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "7335d1f3-c254-4363-82e0-ababc55a93cd",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "07290c85-542e-4b28-a18b-29454870617a",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "65425729-e50b-4827-9aff-ad1dee64fd11",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 120,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": true,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "d466700f-7bd9-4d68-a0ce-47820c88c654",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "e8d350fb-9ec5-4200-bdf4-57df57f4752e",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "65425729-e50b-4827-9aff-ad1dee64fd11",
-                      "go": "7335d1f3-c254-4363-82e0-ababc55a93cd",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "3ceb2533-c6af-41dd-8657-8c1b854e5ed5",
-          "Flags": 0,
-          "Name": "Door Control Room",
-          "Position": "30,-966.5,0.000006851637",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "72fdf056-9c14-49e5-887b-294b8dcc8cee",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "266fbe25-03d0-4c82-8c47-5279233d09fb",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 120,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "ef67a7e2-485e-4fbb-b323-d1442acdf561",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "fca8f12d-9c84-451c-aacb-10a44cb0b77c",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
-                      "go": "72fdf056-9c14-49e5-887b-294b8dcc8cee",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "9dea79e4-e200-4a0e-9bd6-7504006b5c84",
-          "Flags": 0,
-          "Name": "Door Observation Room",
-          "Position": "-830,502,60",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "6f5cdfa2-5228-42ea-b91c-519201ba6f22",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "2253f8fa-724a-4a0d-98e2-a6feea2f0c01",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "7d72256d-1ee4-431a-97ec-d7c9402dd55f",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 90,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "02673a85-5652-41ee-bee4-4d3458ae826d",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "dd2aed27-63f1-456f-ad09-06f5e8a75d20",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "7d72256d-1ee4-431a-97ec-d7c9402dd55f",
-                      "go": "6f5cdfa2-5228-42ea-b91c-519201ba6f22",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "995e63fe-6208-4aac-9959-c6680ba3f5cb",
-          "Flags": 0,
-          "Name": "Door BR Corridors",
-          "Position": "-264,-782,272",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "e7d3090e-34b3-409a-b55b-d269d92d791c",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "44663f5a-89f4-426a-9438-b1301a0c96bd",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "ef3d0d0d-99ee-4b85-8c86-47d88be71209",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 90,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "29bb916e-64a2-49f2-ba70-dce5aa5b55b1",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "4de415af-d04e-4b36-bd04-2de51754d13a",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "ef3d0d0d-99ee-4b85-8c86-47d88be71209",
-                      "go": "e7d3090e-34b3-409a-b55b-d269d92d791c",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "a09747f7-ebd1-42fc-a9d7-b33c32ccacc5",
-          "Flags": 0,
-          "Name": "Door Corridors 1",
-          "Position": "-628,-782,272",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "bd1876ea-4e1e-4de6-889c-d98750caefdb",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "f3018cd0-0aa4-4291-860c-1438d47921b6",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "d20c12e3-8f27-408e-b430-4a85ce99c728",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 90,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "905b52ac-9290-4ccf-9510-d4680773cf64",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "5f00b292-8b7c-41d9-8a50-e16fcb8012c0",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "d20c12e3-8f27-408e-b430-4a85ce99c728",
-                      "go": "bd1876ea-4e1e-4de6-889c-d98750caefdb",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "a6be82b6-e20a-4c84-808b-4abe66782dd4",
-          "Flags": 0,
-          "Name": "Door Corridors 2",
-          "Position": "-628,-646,272",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "684faca4-62c1-450f-b4ef-165f75b1b066",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "a8f9cdc3-8d41-49f4-bb36-20a55374ee7b",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "11dc1b74-d9f3-4948-b334-cda484d2c035",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 90,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "10ccf03e-168a-44ee-ad01-c4c7aff435ae",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "9acdd19c-6a39-4d20-a657-a7a14363c2b2",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "11dc1b74-d9f3-4948-b334-cda484d2c035",
-                      "go": "684faca4-62c1-450f-b4ef-165f75b1b066",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "ed1b69b4-6809-4151-82e9-e3249c7d400e",
-          "Flags": 0,
-          "Name": "Door BR General Office",
-          "Position": "-264,-510,272",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "1a6e11c8-4010-4d41-8738-9a95d6759957",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "2d80cd66-b5ad-46bf-b83b-fd1725ce3fce",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "4fb83685-07df-4da2-8f47-1eabc31a4240",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 90,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "e03d9733-ac71-4eb2-819e-91e47c0f5c9f",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "a6a6846d-48f8-4458-8270-b6c4d3e9eb29",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "4fb83685-07df-4da2-8f47-1eabc31a4240",
-                      "go": "1a6e11c8-4010-4d41-8738-9a95d6759957",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "9886984c-6e90-410b-8e1c-1435027a2e59",
-          "Flags": 0,
-          "Name": "Door Corridors General Office",
-          "Position": "-446,-746,272",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "5eadd6dc-0a5b-448b-96a5-a0d0be8c1df4",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "cc93592c-1272-48e3-81b8-82266b6d52a9",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "66cc7aab-cba5-49c6-8ebb-7f2da9966b48",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 90,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "862a09dc-6291-4de5-b025-689b3e593fb9",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "b8bed79d-b67c-4ada-8d9f-27be0c77e846",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "66cc7aab-cba5-49c6-8ebb-7f2da9966b48",
-                      "go": "5eadd6dc-0a5b-448b-96a5-a0d0be8c1df4",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "bfe10daf-7a6c-4923-a5d0-10f5bea01946",
-          "Flags": 0,
-          "Name": "Door Mess Hall 1",
-          "Position": "-640,250,0.000006851637",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "adfb4132-4628-493b-83d3-32a87dcd9143",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "21ac56d0-e844-4783-9644-b7bb4f2a79e9",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "19e905df-41e9-4c08-88df-7fe1a7082f79",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 120,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "d7fd454e-4677-4ae5-834c-7bde24ca3c7e",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "5b14e7a2-ae69-457a-ac36-34e8afc91184",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "19e905df-41e9-4c08-88df-7fe1a7082f79",
-                      "go": "adfb4132-4628-493b-83d3-32a87dcd9143",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "7ad5998b-32e2-48eb-9345-1ac8af5c7d21",
-          "Flags": 0,
-          "Name": "Door Mess Hall 1",
-          "Position": "-544,254,0.000006851637",
-          "Rotation": "0,0,-1,0.0000001947072",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "a388a694-6a0c-45df-b006-f4ef829f2e60",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "2be37ab5-2dfa-4138-a67c-f861bfdce801",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "d9737faf-5aca-4e6e-8f24-3e56e71a877c",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 120,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "76b9aa8f-3a11-4bb3-a09e-f9faa463e24a",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "a131fcc2-81d8-4805-bb4c-0a43775367aa",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "d9737faf-5aca-4e6e-8f24-3e56e71a877c",
-                      "go": "a388a694-6a0c-45df-b006-f4ef829f2e60",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "16071489-6110-4bae-b996-242958741e95",
-          "Flags": 0,
-          "Name": "Door DHD Systems",
-          "Position": "-286,-734,0.000006851637",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "a0ef5dc0-4279-4eb4-af9a-c653ec3a7e49",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "02c091a3-d347-40c6-97f5-b883af21194d",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/doors/sgc_door_single_52x104.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "b58e7799-4299-4400-9405-64862d91944b",
-                  "CurrentDoorState": "Closed",
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 120,
-                  "DoorMoveTime": 1.2,
-                  "DoorType": "Rotating",
-                  "FlipDirection": true,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "652f1b5d-79a1-4c80-b400-31321c1631ae",
-                  "Center": "24,2,51",
-                  "IsTrigger": false,
-                  "Scale": "48,4,102",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "a80b5ad9-0b74-4709-b23b-704a65b2a641",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "b58e7799-4299-4400-9405-64862d91944b",
-                      "go": "a0ef5dc0-4279-4eb4-af9a-c653ec3a7e49",
                       "component_type": "Door"
                     }
                   ]
@@ -13617,6 +12746,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,1,0",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": true
                 },
                 {
@@ -13691,6 +12821,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": true
                 },
                 {
@@ -13784,6 +12915,7 @@
                   "FlipDirection": false,
                   "LocalMoveDirection": "0,0,1",
                   "Locked": false,
+                  "RotationOrigin": "0,0,0",
                   "StartsOpen": true
                 },
                 {
@@ -14169,6 +13301,7 @@
               "Feathering": 0.05,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14197,6 +13330,7 @@
               "Feathering": 0.05,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14225,6 +13359,7 @@
               "Feathering": 0.05,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14253,6 +13388,7 @@
               "Feathering": 0.05,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14281,6 +13417,7 @@
               "Feathering": 0.05,
               "FrameInterval": 10,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14309,6 +13446,7 @@
               "Feathering": 0.05,
               "FrameInterval": 10,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14337,6 +13475,7 @@
               "Feathering": 0.05,
               "FrameInterval": 10,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14366,6 +13505,7 @@
               "Feathering": 0.05,
               "FrameInterval": 10,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14394,6 +13534,7 @@
               "Feathering": 0.05,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -14930,6 +14071,141 @@
               "Tint": "1,1,1,1"
             }
           ]
+        },
+        {
+          "__guid": "86b40757-af8d-471c-b80a-80b9de8cca70",
+          "Flags": 0,
+          "Name": "Door Control Room",
+          "Position": "53.99982,-963.9999,0",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "a00a783c-8112-4aff-ad5d-afe4c8f80cce",
+          "Flags": 0,
+          "Name": "Door BR GO",
+          "Position": "-262,-534,272",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "48aad338-758f-4442-a98f-e67f9939a39b",
+          "Flags": 0,
+          "Name": "Door Corridor GO",
+          "Position": "-421.9998,-743.9999,272",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "cc256179-2072-4b2b-92be-81d19919fdb6",
+          "Flags": 0,
+          "Name": "Door CR DHD",
+          "Position": "-309.9998,-736,0",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "0d3c3bb8-c963-4702-bc69-c3a4a6e4d64c",
+          "Flags": 0,
+          "Name": "Door BR GO",
+          "Position": "-828,478,60",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 86
+          }
+        },
+        {
+          "__guid": "ab268ca4-5f5a-479a-8653-b4a1e3ed85f3",
+          "Flags": 0,
+          "Name": "Door BR Corridor",
+          "Position": "-262,-806,272",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "b7b84ea8-86fa-42cc-bd4f-b1957ea6e44e",
+          "Flags": 0,
+          "Name": "Door Corridor 1",
+          "Position": "-626,-806,272",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "17f65f63-c78e-4ad0-a714-db35b1d7f1f3",
+          "Flags": 0,
+          "Name": "Door Corridor 2",
+          "Position": "-626,-670,272",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": false,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "e7e8f046-7464-41ba-a77e-cc5e5de53bac",
+          "Flags": 0,
+          "Name": "Door Toilets Men",
+          "Position": "-234.0002,-963.9996,0",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": true,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
+        },
+        {
+          "__guid": "460348bd-6ad3-4f4e-820b-07f5ea32ff06",
+          "Flags": 0,
+          "Name": "Door Toilets Women",
+          "Position": "-390.0002,-963.9993,0",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__PrefabVariables": {
+            "Locked": true,
+            "Starts Open": false,
+            "Door Move Distance": 120
+          }
         }
       ]
     }

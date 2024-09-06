@@ -17,6 +17,9 @@ public class Door : Component, Component.ExecuteInEditor
 	[Property, Sync]
 	public DoorMoveType DoorType { get; set; } = DoorMoveType.Sliding;
 
+	[Property, ShowIf("DoorType", DoorMoveType.Rotating)]
+	public Vector3 RotationOrigin { get; set; } = Vector3.Zero;
+
 	[Property, Sync]
 	public DoorState CurrentDoorState { get; set; } = DoorState.Closed;
 
@@ -55,6 +58,24 @@ public class Door : Component, Component.ExecuteInEditor
 		currentMoveDistance = CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0;
 	}
 
+	protected override void DrawGizmos()
+	{
+		base.DrawGizmos();
+
+		if (DoorType == DoorMoveType.Rotating)
+		{
+			var start = RotationOrigin;
+			var end = start + Vector3.Up * 16;
+			using ( Gizmo.Scope( "DoorRotationOrigin") )
+			{
+				Gizmo.Draw.IgnoreDepth = true;
+				Gizmo.Draw.Color = Color.Orange;
+				Gizmo.Draw.Arrow( start, end, 4f, 1 );
+				Gizmo.Draw.Arrow( end, start, 4f, 1 );
+			}
+		}
+	}
+
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
@@ -71,9 +92,10 @@ public class Door : Component, Component.ExecuteInEditor
 			{
 				var angle = CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0;
 				angle *= FlipDirection ? -1 : 1;
-				Transform.Local = Transform.Local.WithRotation(
-					Rotation.FromAxis(Vector3.Up, angle)
-				);
+				// Transform.Local = Transform.Local.WithRotation(
+				// 	Rotation.FromAxis(Vector3.Up, angle)
+				// );
+				Transform.Local = global::Transform.Zero.RotateAround(RotationOrigin, Rotation.FromAxis(Vector3.Up, angle));
 			}
 			else
 			{
@@ -107,9 +129,11 @@ public class Door : Component, Component.ExecuteInEditor
 
 		if (DoorType == DoorMoveType.Rotating)
 		{
-			Transform.Local = Transform.Local.WithRotation(
-				Rotation.FromAxis(Vector3.Up, curveValue)
-			);
+			// Transform.Local = Transform.Local.WithRotation(
+			// 	Rotation.FromAxis(Vector3.Up, curveValue)
+			// );
+
+			Transform.Local = global::Transform.Zero.RotateAround(RotationOrigin, Rotation.FromAxis(Vector3.Up, curveValue));
 		}
 		else
 		{
