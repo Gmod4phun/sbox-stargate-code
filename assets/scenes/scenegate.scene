@@ -11810,7 +11810,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158326,3443.985,14",
+              "Position": "0.0006158324,3443.984,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -13341,6 +13341,35 @@
           ]
         },
         {
+          "__guid": "7656da6d-66cf-482c-9270-8d28f45e3172",
+          "Flags": 0,
+          "Name": "Probe Round Hallway",
+          "Position": "-674,-520,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "1b99929d-efab-48d4-82c1-66c225498d4c",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-300,-426.8007,-0.1",
+                "Maxs": "158,388.5001,164"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.05,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": false,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
           "__guid": "618514d0-de60-44a0-a362-e5b769bd720a",
           "Flags": 0,
           "Name": "Probe Longhall",
@@ -14208,6 +14237,28 @@
           }
         }
       ]
+    },
+    {
+      "__guid": "dad6e9c2-835d-4ee5-9f24-d33354aea0a5",
+      "Flags": 0,
+      "Name": "industrial_light",
+      "Position": "-823.9999,-548.0006,131.9995",
+      "Enabled": true,
+      "__Prefab": "prefabs/lights/industrial_light.prefab",
+      "__PrefabVariables": {
+        "IsOn": true
+      }
+    },
+    {
+      "__guid": "4cda273d-e9b4-4170-92c5-355ed7ce1c89",
+      "Flags": 0,
+      "Name": "industrial_light (1)",
+      "Position": "-726,-548.0006,131.9995",
+      "Enabled": true,
+      "__Prefab": "prefabs/lights/industrial_light.prefab",
+      "__PrefabVariables": {
+        "IsOn": true
+      }
     }
   ],
   "SceneProperties": {
