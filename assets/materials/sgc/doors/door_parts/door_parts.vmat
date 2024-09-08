@@ -4,8 +4,10 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
+	//---- Detail Texture ----
+	F_DETAIL_TEXTURE 3 // Normals
+
 	//---- PBR ----
-	F_ANISOTROPIC_GLOSS 1
 	F_SPECULAR 1
 
 	//---- Ambient Occlusion ----
@@ -17,6 +19,16 @@ Layer0
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
 	TextureColor "[0.901961 0.901961 0.901961 0.000000]"
+
+	//---- Detail Texture ----
+	g_flDetailBlendFactor "1.000"
+	g_flDetailBlendToFull "0.000"
+	g_flDetailNormalStrength "0.100"
+	g_flDetailTexCoordRotation "90.000"
+	g_vDetailTexCoordOffset "[0.000 0.000]"
+	g_vDetailTexCoordScale "[16.000 16.000]"
+	TextureDetailMask "materials/default/default_detailmask.tga"
+	TextureNormalDetail "materials/detail/rough_brushed_metal_detail_normal.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"

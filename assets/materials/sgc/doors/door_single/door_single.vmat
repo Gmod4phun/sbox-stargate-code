@@ -4,18 +4,31 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
+	//---- Detail Texture ----
+	F_DETAIL_TEXTURE 3 // Normals
+
 	//---- PBR ----
 	F_SPECULAR 1
 
 	//---- Ambient Occlusion ----
-	g_flAmbientOcclusionDirectDiffuse "0.000"
-	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	g_flAmbientOcclusionDirectDiffuse "1.000"
+	g_flAmbientOcclusionDirectSpecular "1.000"
+	TextureAmbientOcclusion "materials/sgc/doors/door_single/door_single_bake_ao.tga"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
 	TextureColor "[0.321569 0.337255 0.368627 0.000000]"
+
+	//---- Detail Texture ----
+	g_flDetailBlendFactor "1.000"
+	g_flDetailBlendToFull "0.000"
+	g_flDetailNormalStrength "0.150"
+	g_flDetailTexCoordRotation "0.000"
+	g_vDetailTexCoordOffset "[0.000 0.000]"
+	g_vDetailTexCoordScale "[64.000 32.000]"
+	TextureDetailMask "materials/default/default_detailmask.tga"
+	TextureNormalDetail "materials/detail/rough_brushed_metal_detail_normal.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -27,7 +40,7 @@ Layer0
 	g_flMetalness "0.000"
 
 	//---- Normal ----
-	TextureNormal "materials/sgc/doors/door_single/door_single_normal.tga"
+	TextureNormal "materials/sgc/doors/door_single/door_single_bake_normal.tga"
 
 	//---- Roughness ----
 	g_flRoughnessScaleFactor "1.000"

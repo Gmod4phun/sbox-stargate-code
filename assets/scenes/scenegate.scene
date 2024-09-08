@@ -1,5 +1,5 @@
 {
-  "__guid": "03edd410-5e0a-486c-94ed-321310d82fe9",
+  "__guid": "314157e8-1a56-4a08-b99f-8c9e25e2ea6c",
   "GameObjects": [
     {
       "__guid": "50bd1329-68c3-4a55-9f8a-4f552902afe7",
@@ -11810,7 +11810,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158324,3443.984,14",
+              "Position": "0.0006158318,3443.981,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
