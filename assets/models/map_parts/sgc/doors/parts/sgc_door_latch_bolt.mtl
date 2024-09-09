@@ -1,0 +1,13 @@
+# Blender 4.2.1 LTS MTL File: 'sgc_doors.blend'
+# www.blender.org
+
+newmtl door_parts
+Ns 496.384338
+Ka 1.000000 1.000000 1.000000
+Kd 0.720645 0.720645 0.720645
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Bump -bm 1.000000 C:/Users/Gmod4/Documents/S&box Projects/sbox-stargate-code/assets/materials/sgc/doors/door_parts/door_parts_normal.tga

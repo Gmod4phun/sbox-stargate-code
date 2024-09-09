@@ -14,12 +14,8 @@
 						remaps = 
 						[
 							{
-								from = "door_parts.vmat"
-								to = "materials/sgc/doors/door_parts/door_parts.vmat"
-							},
-							{
-								from = "door_single.vmat"
-								to = "materials/sgc/doors/door_single/door_single.vmat"
+								from = "door_main.vmat"
+								to = "materials/sgc/doors/sgc_doors_door_main.vmat"
 							},
 						]
 						use_global_default = false
@@ -33,14 +29,42 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/map_parts/sgc/doors/door_single/sgc_door_frame_single_a.obj"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_frame_single.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 3.28
+						import_scale = 39.369999
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
 						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsMeshFile"
+						name = "sgc_door_frame_single"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_frame_single.obj"
+						import_scale = 39.369999
+						maxMeshVertices = 0
+						qemError = 0.0
 						import_filter = 
 						{
 							exclude_by_default = false

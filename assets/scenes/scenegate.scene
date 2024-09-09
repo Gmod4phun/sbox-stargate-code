@@ -7482,6 +7482,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_atlantis/zpm_hub_atlantis.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             },
             {
@@ -7614,6 +7615,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/zpm_hub_asuran.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             },
             {
@@ -7701,6 +7703,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_sgc/zpm_hub_sgc.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             },
             {
@@ -11810,7 +11813,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158318,3443.981,14",
+              "Position": "0.0006158313,3443.978,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -12455,6 +12458,7 @@
                   "IsStatic": true,
                   "MaterialGroup": "on",
                   "Model": "models/sbox_props/industrial_strip_light/industrial_strip_light.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -12851,6 +12855,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/props/big_button/big_button.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             },
             {
@@ -12945,6 +12950,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/props/big_button/big_button.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             },
             {
@@ -13588,6 +13594,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/caged_lights01/caged_light01_wall.vmdl",
+              "StartAsleep": false,
               "Tint": "1,0.79767,0.1907,1"
             }
           ],
@@ -13927,6 +13934,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/map_parts/sgc/tables/briefing_room/briefingroom_table.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -13946,6 +13954,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -13965,6 +13974,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -13984,6 +13994,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -14003,6 +14014,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -14022,6 +14034,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -14041,6 +14054,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -14060,6 +14074,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -14079,6 +14094,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/furniture/office_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "0.28372,0.28372,0.28372,1"
             }
           ]
@@ -14097,6 +14113,7 @@
               "Health": 1,
               "IsStatic": false,
               "Model": "models/props/mugs/mug_01.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]

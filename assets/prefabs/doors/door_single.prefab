@@ -4,17 +4,60 @@
     "Flags": 0,
     "Name": "door_single",
     "Enabled": true,
-    "Components": [
-      {
-        "__type": "Sandbox.ModelRenderer",
-        "__guid": "06a68fba-fda8-4906-9f41-2b31632d0aee",
-        "BodyGroups": 18446744073709551615,
-        "Model": "models/map_parts/sgc/doors/door_single/sgc_door_frame_single.vmdl",
-        "RenderType": "On",
-        "Tint": "1,1,1,1"
-      }
-    ],
     "Children": [
+      {
+        "__guid": "bf4632c2-693f-42d0-90fa-3f0452614ca5",
+        "Flags": 0,
+        "Name": "frame model",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "06a68fba-fda8-4906-9f41-2b31632d0aee",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/map_parts/sgc/doors/door_single/sgc_door_frame_single.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "f7ac56c6-5f46-498c-9780-6da5022a8c91",
+            "Flags": 0,
+            "Name": "frame hinge",
+            "Position": "-4.65,23.5,51",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "9ea5c51b-3772-4f39-b08f-89e6dce7ea71",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/map_parts/sgc/doors/parts/sgc_door_hinge_frame.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          },
+          {
+            "__guid": "536c9fb8-7ac6-4a3b-bab7-b7664d519b0f",
+            "Flags": 0,
+            "Name": "latch hole",
+            "Position": "-2.75,-23.54,48",
+            "Rotation": "1,0,0,-0.00000004371139",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "acf0f82a-ba47-4209-af56-9f5775a057fa",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/map_parts/sgc/doors/parts/sgc_door_latch_hole.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      },
       {
         "__guid": "72fdf056-9c14-49e5-887b-294b8dcc8cee",
         "Flags": 0,
@@ -24,22 +67,6 @@
         "NetworkOrphaned": 1,
         "OwnerTransfer": 0,
         "Components": [
-          {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "266fbe25-03d0-4c82-8c47-5279233d09fb",
-            "BodyGroups": 18446744073709551615,
-            "Model": "models/map_parts/sgc/doors/door_single/sgc_door_single.vmdl",
-            "RenderType": "On",
-            "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "ef67a7e2-485e-4fbb-b323-d1442acdf561",
-            "Center": "-2.5,0,51",
-            "IsTrigger": false,
-            "Scale": "3.5,46.5,102",
-            "Static": false
-          },
           {
             "__type": "Door",
             "__guid": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
@@ -64,16 +91,132 @@
             "Locked": false,
             "RotationOrigin": "-4.65,23.5,0",
             "StartsOpen": false
-          },
+          }
+        ],
+        "Children": [
           {
-            "__type": "DoorController",
-            "__guid": "fca8f12d-9c84-451c-aacb-10a44cb0b77c",
-            "Doors": [
+            "__guid": "2ea1cab8-f962-4cd6-9a99-4bbc0842116f",
+            "Flags": 0,
+            "Name": "door model",
+            "Position": "-2.75,0,0",
+            "Enabled": true,
+            "Components": [
               {
-                "_type": "component",
-                "component_id": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
-                "go": "72fdf056-9c14-49e5-887b-294b8dcc8cee",
-                "component_type": "Door"
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "a8955046-27aa-4ce0-b1af-f0a5fd0dbded",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/map_parts/sgc/doors/door_single/sgc_door_single.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "Sandbox.ModelCollider",
+                "__guid": "5299f012-c088-438d-9fba-7958de35dabc",
+                "IsTrigger": false,
+                "Model": "models/map_parts/sgc/doors/door_single/sgc_door_single.vmdl",
+                "Static": false
+              },
+              {
+                "__type": "DoorController",
+                "__guid": "fca8f12d-9c84-451c-aacb-10a44cb0b77c",
+                "Doors": [
+                  {
+                    "_type": "component",
+                    "component_id": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
+                    "go": "72fdf056-9c14-49e5-887b-294b8dcc8cee",
+                    "component_type": "Door"
+                  }
+                ]
+              }
+            ],
+            "Children": [
+              {
+                "__guid": "bba608f7-2631-41a4-85df-168ab4c7eeef",
+                "Flags": 0,
+                "Name": "door hinge",
+                "Position": "-1.9,23.5,51",
+                "Enabled": true,
+                "Components": [
+                  {
+                    "__type": "Sandbox.ModelRenderer",
+                    "__guid": "eed5b98e-130a-4cab-bc5d-92d842465644",
+                    "BodyGroups": 18446744073709551615,
+                    "Model": "models/map_parts/sgc/doors/parts/sgc_door_hinge_door.vmdl",
+                    "RenderType": "On",
+                    "Tint": "1,1,1,1"
+                  }
+                ]
+              },
+              {
+                "__guid": "9b22227b-7f24-4d83-a13d-127e715d00b9",
+                "Flags": 0,
+                "Name": "latch hole",
+                "Position": "0,-23.26,48",
+                "Enabled": true,
+                "Components": [
+                  {
+                    "__type": "Sandbox.ModelRenderer",
+                    "__guid": "c1e3a85d-9e9a-4cef-b12d-075a8cd8a438",
+                    "BodyGroups": 18446744073709551615,
+                    "Model": "models/map_parts/sgc/doors/parts/sgc_door_latch_hole.vmdl",
+                    "RenderType": "On",
+                    "Tint": "1,1,1,1"
+                  }
+                ],
+                "Children": [
+                  {
+                    "__guid": "4f908b22-fd55-4da9-8578-bda5ce77db57",
+                    "Flags": 0,
+                    "Name": "latch bolt",
+                    "Position": "0,0,0",
+                    "Enabled": true,
+                    "Components": [
+                      {
+                        "__type": "Sandbox.ModelRenderer",
+                        "__guid": "bf439c37-6a40-4f08-b9bd-04d25f33d688",
+                        "BodyGroups": 18446744073709551615,
+                        "Model": "models/map_parts/sgc/doors/parts/sgc_door_latch_bolt.vmdl",
+                        "RenderType": "On",
+                        "Tint": "1,1,1,1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "__guid": "4f8c94ed-fa8f-464b-b7cf-d82cb4b0ef19",
+                "Flags": 0,
+                "Name": "knob",
+                "Position": "-1.75,-18,48",
+                "Enabled": true,
+                "Components": [
+                  {
+                    "__type": "Sandbox.ModelRenderer",
+                    "__guid": "d041af76-f09b-43eb-9c5c-abf577e8db55",
+                    "BodyGroups": 18446744073709551615,
+                    "Model": "models/map_parts/sgc/doors/knobs/sgc_door_knob_cylinder.vmdl",
+                    "RenderType": "On",
+                    "Tint": "1,1,1,1"
+                  }
+                ]
+              },
+              {
+                "__guid": "6ddd4057-edfe-4262-9013-cf984943aa53",
+                "Flags": 0,
+                "Name": "knob",
+                "Position": "1.75,-18,48",
+                "Rotation": "0,0,-1,0.0000001947072",
+                "Enabled": true,
+                "Components": [
+                  {
+                    "__type": "Sandbox.ModelRenderer",
+                    "__guid": "b0eebbb9-7737-491d-ba70-af8c11531128",
+                    "BodyGroups": 18446744073709551615,
+                    "Model": "models/map_parts/sgc/doors/knobs/sgc_door_knob_cylinder.vmdl",
+                    "RenderType": "On",
+                    "Tint": "1,1,1,1"
+                  }
+                ]
               }
             ]
           }
