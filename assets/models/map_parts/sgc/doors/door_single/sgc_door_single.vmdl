@@ -29,19 +29,38 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single.obj"
+						name = "door"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 39.369999
+						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
 						parent_bone = ""
 						import_filter = 
 						{
-							exclude_by_default = false
-							exception_list = [  ]
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Plane_027",
+							]
 						}
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 39.369999
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
 					},
 				]
 			},
@@ -51,7 +70,7 @@
 				[
 					{
 						_class = "PhysicsHullFile"
-						name = "sgc_door_single"
+						name = "sgc_door_single_meshes"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
@@ -61,8 +80,8 @@
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single.obj"
-						import_scale = 39.369999
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_scale = 1.0
 						faceMergeAngle = 10.0
 						maxHullVertices = 0
 						import_mode = "SingleHull"
@@ -70,7 +89,19 @@
 						import_filter = 
 						{
 							exclude_by_default = false
-							exception_list = [  ]
+							exception_list = 
+							[
+								"Plane_027",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_025",
+								"Circle_026",
+								"Circle_027",
+								"Circle_024",
+								"Circle_028",
+							]
 						}
 					},
 				]

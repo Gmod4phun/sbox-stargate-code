@@ -14,7 +14,7 @@ Layer0
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
-	g_vColorTint "[0.215686 0.235294 0.254902 0.000000]"
+	g_vColorTint "[0.352941 0.411765 0.470588 0.000000]"
 	TextureColor "materials/sgc/doors/sgc_doors_door_main_ao.tga"
 
 	//---- Fade ----

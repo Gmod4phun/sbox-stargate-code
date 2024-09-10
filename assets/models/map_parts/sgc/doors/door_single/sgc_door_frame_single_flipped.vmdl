@@ -114,6 +114,21 @@
 				]
 			},
 			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 39.369999
+						mirror_x = false
+						mirror_y = true
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
 				_class = "BodyGroupList"
 				children = 
 				[
@@ -135,21 +150,6 @@
 							},
 						]
 						hidden_in_tools = false
-					},
-				]
-			},
-			{
-				_class = "ModelModifierList"
-				children = 
-				[
-					{
-						_class = "ModelModifier_ScaleAndMirror"
-						scale = 39.369999
-						mirror_x = false
-						mirror_y = false
-						mirror_z = false
-						flip_bone_forward = false
-						swap_left_and_right_bones = false
 					},
 				]
 			},

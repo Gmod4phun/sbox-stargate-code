@@ -29,7 +29,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/map_parts/sgc/doors/parts/sgc_door_deadbolt_bolt.obj"
+						filename = "models/map_parts/sgc/doors/parts/sgc_door_knob_round.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 39.369999
@@ -42,7 +42,7 @@
 							exclude_by_default = true
 							exception_list = 
 							[
-								"sgc_door_deadbolt_bolt",
+								"sgc_door_knob_round",
 							]
 						}
 					},

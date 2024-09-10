@@ -1012,7 +1012,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "e8f76788-1383-46b5-9bea-18306162be63",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
+                  "CurRingSymbol": "",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -2484,7 +2484,7 @@
                       "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                       "__guid": "074f77f0-e65b-42bd-9962-7f8d05881e93",
                       "_ringState": "STOPPED",
-                      "CurRingSymbol": "#",
+                      "CurRingSymbol": "",
                       "RingAngle": 0,
                       "RingModel": {
                         "_type": "component",
@@ -2621,6 +2621,7 @@
                   "__type": "Door",
                   "__guid": "097afeaa-feb6-45f8-a9fb-d709b0f63b17",
                   "CurrentDoorState": "Closed",
+                  "CurrentMoveDistance": 0,
                   "DoorMoveCurve": [
                     {
                       "x": 0.5,
@@ -2669,6 +2670,7 @@
                   "__type": "Door",
                   "__guid": "facd5976-35b0-4914-9841-493c1c1d1514",
                   "CurrentDoorState": "Closed",
+                  "CurrentMoveDistance": 0,
                   "DoorMoveCurve": [
                     {
                       "x": 0.5,
@@ -2958,7 +2960,7 @@
                       "__type": "Sandbox.Components.Stargate.StargateRingUniverse",
                       "__guid": "be22e2d8-b2b5-4c44-b7e6-859da42dcd22",
                       "_ringState": "STOPPED",
-                      "CurRingSymbol": " ",
+                      "CurRingSymbol": "",
                       "RingAngle": 0,
                       "RingModel": {
                         "_type": "component",
@@ -5356,7 +5358,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "1e8fe67d-2827-4d98-a7b5-aeb0f2301e08",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
+                  "CurRingSymbol": "",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -6707,7 +6709,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingUniverse",
                   "__guid": "80859bc8-e72d-451c-b2ea-a1eed09418bb",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": " ",
+                  "CurRingSymbol": "",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -7402,7 +7404,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingMovie",
                   "__guid": "2f910a81-783c-4d6c-ab9b-38f44c5848d6",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
+                  "CurRingSymbol": "",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -8680,7 +8682,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "e6c75334-9879-4b78-a240-d3b60f416187",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
+                  "CurRingSymbol": "",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -11813,7 +11815,7 @@
               "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
               "Flags": 0,
               "Name": "stargatemilkyway",
-              "Position": "0.0006158313,3443.978,14",
+              "Position": "0.0006158302,3443.972,14",
               "Scale": "1.1,1.1,1.1",
               "Enabled": true,
               "Components": [
@@ -12508,6 +12510,7 @@
                   "__type": "Door",
                   "__guid": "f22f18b4-a817-4fd7-a763-93f90e61da93",
                   "CurrentDoorState": "Closed",
+                  "CurrentMoveDistance": 0,
                   "DoorMoveCurve": [
                     {
                       "in": 1.5918369,
@@ -12583,6 +12586,7 @@
                   "__type": "Door",
                   "__guid": "c9df4cee-1c57-4fd4-9565-32f775c13337",
                   "CurrentDoorState": "Open",
+                  "CurrentMoveDistance": 141,
                   "DoorMoveCurve": [
                     {
                       "in": 1.5918369,
@@ -12658,6 +12662,7 @@
                   "__type": "Door",
                   "__guid": "b11d6d2a-1f5c-4bd6-bb36-1d607e7a4f54",
                   "CurrentDoorState": "Closed",
+                  "CurrentMoveDistance": 0,
                   "DoorMoveCurve": [
                     {
                       "in": 1.5918369,
@@ -12732,6 +12737,7 @@
                   "__type": "Door",
                   "__guid": "20c0535d-a4dc-4ac5-becd-0af986e5a8d0",
                   "CurrentDoorState": "Open",
+                  "CurrentMoveDistance": 101,
                   "DoorMoveCurve": [
                     {
                       "in": 1.5918369,
@@ -12807,6 +12813,7 @@
                   "__type": "Door",
                   "__guid": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
                   "CurrentDoorState": "Open",
+                  "CurrentMoveDistance": 388,
                   "DoorMoveCurve": [
                     {
                       "in": 1.5918369,
@@ -12902,6 +12909,7 @@
                   "__type": "Door",
                   "__guid": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
                   "CurrentDoorState": "Open",
+                  "CurrentMoveDistance": 84,
                   "DoorMoveCurve": [
                     {
                       "in": 1.5918369,
@@ -14125,11 +14133,16 @@
           "Position": "53.99982,-963.9999,0",
           "Rotation": "0,0,0.7071067,0.7071068",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14138,11 +14151,16 @@
           "Name": "Door BR GO",
           "Position": "-262,-534,272",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14152,11 +14170,16 @@
           "Position": "-421.9998,-743.9999,272",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": true,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14166,11 +14189,16 @@
           "Position": "-309.9998,-736,0",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14179,11 +14207,16 @@
           "Name": "Door BR GO",
           "Position": "-828,478,60",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 86
+            "Door Move Distance": 92,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14192,11 +14225,16 @@
           "Name": "Door BR Corridor",
           "Position": "-262,-806,272",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": true,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14205,11 +14243,16 @@
           "Name": "Door Corridor 1",
           "Position": "-626,-806,272",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14218,11 +14261,16 @@
           "Name": "Door Corridor 2",
           "Position": "-626,-670,272",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": false,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Cylinder",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14232,11 +14280,16 @@
           "Position": "-234.0002,-963.9996,0",
           "Rotation": "0,0,0.7071067,0.7071068",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": true,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Round",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         },
         {
@@ -14246,11 +14299,16 @@
           "Position": "-390.0002,-963.9993,0",
           "Rotation": "0,0,0.7071067,0.7071068",
           "Enabled": true,
-          "__Prefab": "prefabs/doors/door_single.prefab",
+          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
           "__PrefabVariables": {
             "Locked": true,
             "Starts Open": false,
-            "Door Move Distance": 120
+            "Door Move Distance": 120,
+            "Door Handle Type": "Round",
+            "Has Keyway": false,
+            "Flip Keyway": false,
+            "Flip Door Side": false,
+            "Door Variant": "Standard"
           }
         }
       ]

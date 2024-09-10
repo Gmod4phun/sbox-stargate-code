@@ -1,0 +1,279 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "door_parts.vmat"
+								to = "materials/sgc/doors/sgc_doors_door_parts.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/default.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "hinges"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Plane_039",
+								"Circle_025",
+								"Circle_026",
+								"Circle_028",
+								"Circle_027",
+								"Circle_024",
+								"Circle_023",
+								"Plane_013",
+								"Plane_027",
+								"Plane_034",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "latch_bolt"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Circle_025",
+								"Circle_026",
+								"Circle_028",
+								"Circle_027",
+								"Plane_013",
+								"Plane_027",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_024",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "deadbolt_bolt"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Circle_026",
+								"Circle_028",
+								"Circle_027",
+								"Plane_013",
+								"Plane_027",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_024",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "deadbolt_plate"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Circle_028",
+								"Plane_013",
+								"Plane_027",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_024",
+								"Circle_025",
+								"Circle_026",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "deadbolt_plate_copy"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Circle_028",
+								"Plane_013",
+								"Plane_027",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_024",
+								"Circle_025",
+								"Circle_026",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "latch_plate"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Plane_013",
+								"Plane_027",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_024",
+								"Circle_025",
+								"Circle_026",
+								"Circle_027",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 39.369999
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "latch"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"latch_bolt",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "deadbolt"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"deadbolt_plate",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"deadbolt_bolt",
+									"deadbolt_plate_copy",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

@@ -46,6 +46,9 @@ public class Door : Component, Component.ExecuteInEditor
 
 	private float currentMoveDistance = 0;
 
+	[Property]
+	public float CurrentMoveDistance => currentMoveDistance;
+
 	protected override void OnStart()
 	{
 		GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
@@ -64,14 +67,14 @@ public class Door : Component, Component.ExecuteInEditor
 
 		if (DoorType == DoorMoveType.Rotating)
 		{
-			var start = RotationOrigin;
-			var end = start + Vector3.Up * 16;
-			using ( Gizmo.Scope( "DoorRotationOrigin") )
+			var start = RotationOrigin - Vector3.Up * 16;
+			var end = RotationOrigin + Vector3.Up * 16;
+			using (Gizmo.Scope("DoorRotationOrigin"))
 			{
 				Gizmo.Draw.IgnoreDepth = true;
-				Gizmo.Draw.Color = Color.Orange;
-				Gizmo.Draw.Arrow( start, end, 4f, 1 );
-				Gizmo.Draw.Arrow( end, start, 4f, 1 );
+				Gizmo.Draw.Color = Color.Orange.WithAlpha(0.2f);
+				Gizmo.Draw.Arrow(start, end, 4f, 1);
+				Gizmo.Draw.Arrow(end, start, 4f, 1);
 			}
 		}
 	}
@@ -92,10 +95,10 @@ public class Door : Component, Component.ExecuteInEditor
 			{
 				var angle = CurrentDoorState == DoorState.Open ? DoorMoveDistance : 0;
 				angle *= FlipDirection ? -1 : 1;
-				// Transform.Local = Transform.Local.WithRotation(
-				// 	Rotation.FromAxis(Vector3.Up, angle)
-				// );
-				Transform.Local = global::Transform.Zero.RotateAround(RotationOrigin, Rotation.FromAxis(Vector3.Up, angle));
+				Transform.Local = global::Transform.Zero.RotateAround(
+					RotationOrigin,
+					Rotation.FromAxis(Vector3.Up, angle)
+				);
 			}
 			else
 			{
@@ -120,6 +123,7 @@ public class Door : Component, Component.ExecuteInEditor
 		if (difference.AlmostEqual(0, delta * 2))
 		{
 			CurrentDoorState = isOpening ? DoorState.Open : DoorState.Closed;
+			currentMoveDistance = targetMoveDistance;
 			return;
 		}
 
@@ -129,11 +133,10 @@ public class Door : Component, Component.ExecuteInEditor
 
 		if (DoorType == DoorMoveType.Rotating)
 		{
-			// Transform.Local = Transform.Local.WithRotation(
-			// 	Rotation.FromAxis(Vector3.Up, curveValue)
-			// );
-
-			Transform.Local = global::Transform.Zero.RotateAround(RotationOrigin, Rotation.FromAxis(Vector3.Up, curveValue));
+			Transform.Local = global::Transform.Zero.RotateAround(
+				RotationOrigin,
+				Rotation.FromAxis(Vector3.Up, curveValue)
+			);
 		}
 		else
 		{
