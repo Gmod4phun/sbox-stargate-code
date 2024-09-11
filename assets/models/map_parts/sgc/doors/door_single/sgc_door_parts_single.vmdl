@@ -263,6 +263,21 @@
 							]
 						}
 					},
+					{
+						_class = "RenderPrimitiveBox"
+						name = "glass"
+						parent_bone = ""
+						material_name = "materials/glass/glass_a.vmat"
+						origin = [ -0.07, 0.0, 2.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						dimensions = [ 0.01, 0.3, 0.8 ]
+						segments_x = 1
+						segments_y = 1
+						segments_z = 1
+						invert = false
+					},
 				]
 			},
 			{
@@ -301,6 +316,7 @@
 								meshes = 
 								[
 									"door_windowed",
+									"glass",
 								]
 							},
 						]
@@ -351,6 +367,21 @@
 							},
 						]
 						hidden_in_tools = false
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ -0.07, 0.0, 1.29 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.09, 1.185, 2.56 ]
 					},
 				]
 			},

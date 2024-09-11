@@ -38,6 +38,9 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 	public ModelRenderer DoorRenderer { get; set; }
 
 	[Property]
+	public ModelCollider DoorCollider { get; set; }
+
+	[Property]
 	public GameObject DoorModelObject { get; set; }
 
 	[Property]
@@ -47,6 +50,9 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 	public HandleType DoorHandleType { get; set; } = HandleType.Cylinder;
 
 	[Property]
+	public Color DoorColor { get; set; } = Color.White;
+
+	[Property]
 	public bool HasWindow { get; set; } = false;
 
 	[Property]
@@ -54,6 +60,12 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 
 	[Property]
 	public bool FlipKeyway { get; set; } = false;
+
+	[Property]
+	public bool HasStripe { get; set; } = false;
+
+	[Property]
+	public Color StripeColor { get; set; } = Color.White;
 
 	Vector3 doorRotationOrigin = new Vector3(-4.65f, 23.5f, 0);
 
@@ -72,11 +84,31 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 				"latch",
 				CurrentMoveDistance <= 0.05f || CurrentMoveDistance >= 3.0f ? 1 : 0
 			);
+
+			var so = DoorRenderer.SceneObject;
+			if (so.IsValid())
+			{
+				so.Batchable = false;
+				so.Attributes.Set("detail", Color.Red);
+				so.Attributes.Set("doorcolor", DoorColor);
+				so.Attributes.Set("stripe", HasStripe);
+				so.Attributes.Set("stripecolor", StripeColor);
+			}
+
+			if (DoorCollider.IsValid())
+			{
+				DoorCollider.Model = DoorRenderer.Model;
+			}
 		}
 
 		if (FrameRenderer.IsValid())
 		{
 			FrameRenderer.Model = FlipDoorSide ? FrameModelFlipped : FrameModel;
+			var so = FrameRenderer.SceneObject;
+			if (so.IsValid())
+			{
+				so.Attributes.Set("doorcolor", DoorColor);
+			}
 		}
 
 		if (!DoorModelObject.IsValid())

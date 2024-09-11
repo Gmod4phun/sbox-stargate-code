@@ -170,6 +170,12 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -355,6 +361,12 @@
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
               "Model": "models/dev/plane.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -407,6 +419,12 @@
               "__guid": "5fe7ff45-251a-4033-9beb-a9aa39ec20e3",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -470,6 +488,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -534,6 +558,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -598,6 +628,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -662,6 +698,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -726,6 +768,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -790,6 +838,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -853,6 +907,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -917,6 +977,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -981,6 +1047,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -1037,6 +1109,12 @@
                   "__guid": "b37b850b-fb74-4684-8276-db8b3a074729",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -1137,6 +1215,12 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -1185,6 +1269,12 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -1203,6 +1293,12 @@
               "__guid": "60d0fa68-74a2-438a-ba3d-ca691a8d841d",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/ramps/sgc_ramp/sgc_ramp.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -1361,6 +1457,12 @@
                   "Lighting": false,
                   "MotionBlur": false,
                   "Opaque": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RotationOffset": 0,
                   "Scale": 1.25,
                   "Shadows": false,
@@ -1525,6 +1627,12 @@
                   "Lighting": false,
                   "MotionBlur": false,
                   "Opaque": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RotationOffset": 0,
                   "Scale": 1.25,
                   "Shadows": false,
@@ -1689,6 +1797,12 @@
                   "Lighting": false,
                   "MotionBlur": false,
                   "Opaque": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RotationOffset": 0,
                   "Scale": 1.25,
                   "Shadows": false,
@@ -1853,6 +1967,12 @@
                   "Lighting": false,
                   "MotionBlur": false,
                   "Opaque": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RotationOffset": 0,
                   "Scale": 1.25,
                   "Shadows": false,
@@ -1890,6 +2010,12 @@
                   "__guid": "010fb795-a3d2-4f2d-adb8-c14c80d78078",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1953,6 +2079,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2017,6 +2149,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2081,6 +2219,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2145,6 +2289,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2209,6 +2359,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2273,6 +2429,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2336,6 +2498,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2400,6 +2568,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2464,6 +2638,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -2520,6 +2700,12 @@
                       "__guid": "d36e423c-eb83-47ea-9e81-654ab58e3222",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     }
@@ -2550,6 +2736,12 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -2629,6 +2821,12 @@
                   "__guid": "0c9a3963-fc52-451a-9116-ce8e5e4d60c1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -2678,6 +2876,12 @@
                   "__guid": "abc0363f-14cc-4a19-a023-5845486ebb7a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/doors/atl_door2/atl_door2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -2740,6 +2944,12 @@
                   "__guid": "5d305080-65ca-49b0-8ec2-4fdc194a91b1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -2783,6 +2993,12 @@
                   "__guid": "110066c4-ffa8-43b6-ad73-4046640b7c14",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/atlantis_door_controller/atlantis_door_controller.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -2897,6 +3113,12 @@
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/dev_measuregeneric01.vmat",
               "Model": "models/dev/plane.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -2922,6 +3144,12 @@
               "__guid": "152b7f9c-bc53-4718-bea3-fbc307f093ba",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/ramps/sgu_ramp/sgu_ramp.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -2997,6 +3225,12 @@
                       "__guid": "38a03966-4864-494f-bd7b-84edce40c1ca",
                       "BodyGroups": 1,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -3007,6 +3241,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3018,6 +3258,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3051,6 +3297,12 @@
                           "CreateBoneObjects": false,
                           "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
                           "Morphs": {},
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
                           "RenderType": "On",
                           "Tint": "1,1,1,1",
                           "UseAnimGraph": true
@@ -3157,6 +3409,12 @@
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/gray_grid_8.vmat",
               "Model": "models/dev/plane.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -3182,6 +3440,12 @@
               "__guid": "467c2b61-0723-475a-bbb7-651caadfcb38",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/ramps/brick/brick.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -3213,6 +3477,12 @@
                   "__guid": "c44972a7-b3cc-4f16-b708-9aad92428430",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -3273,6 +3543,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3337,6 +3613,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3401,6 +3683,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3465,6 +3753,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3529,6 +3823,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3593,6 +3893,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3656,6 +3962,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3720,6 +4032,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -3784,6 +4102,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -4055,6 +4379,12 @@
                       "BodyGroups": 18446744073709551615,
                       "MaterialGroup": "complex",
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_ring.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -4067,6 +4397,12 @@
                       "GlyphNumber": 35,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 0,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4079,6 +4415,12 @@
                       "GlyphNumber": 0,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 1,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4091,6 +4433,12 @@
                       "GlyphNumber": 1,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 2,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4103,6 +4451,12 @@
                       "GlyphNumber": 2,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 3,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4115,6 +4469,12 @@
                       "GlyphNumber": 3,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 4,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4127,6 +4487,12 @@
                       "GlyphNumber": 4,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 5,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4139,6 +4505,12 @@
                       "GlyphNumber": 5,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 6,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4151,6 +4523,12 @@
                       "GlyphNumber": 6,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 7,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4163,6 +4541,12 @@
                       "GlyphNumber": 7,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 8,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4175,6 +4559,12 @@
                       "GlyphNumber": 8,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 9,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4187,6 +4577,12 @@
                       "GlyphNumber": 9,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 10,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4199,6 +4595,12 @@
                       "GlyphNumber": 10,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 11,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4211,6 +4613,12 @@
                       "GlyphNumber": 11,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 12,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4223,6 +4631,12 @@
                       "GlyphNumber": 12,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 13,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4235,6 +4649,12 @@
                       "GlyphNumber": 13,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 14,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4247,6 +4667,12 @@
                       "GlyphNumber": 14,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 15,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4259,6 +4685,12 @@
                       "GlyphNumber": 15,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 16,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4271,6 +4703,12 @@
                       "GlyphNumber": 16,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 17,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4283,6 +4721,12 @@
                       "GlyphNumber": 17,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 18,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4295,6 +4739,12 @@
                       "GlyphNumber": 18,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 19,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4307,6 +4757,12 @@
                       "GlyphNumber": 19,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 20,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4319,6 +4775,12 @@
                       "GlyphNumber": 20,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 21,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4331,6 +4793,12 @@
                       "GlyphNumber": 21,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 22,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4343,6 +4811,12 @@
                       "GlyphNumber": 22,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 23,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4355,6 +4829,12 @@
                       "GlyphNumber": 23,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 24,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4367,6 +4847,12 @@
                       "GlyphNumber": 24,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 25,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4379,6 +4865,12 @@
                       "GlyphNumber": 25,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 26,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4391,6 +4883,12 @@
                       "GlyphNumber": 26,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 27,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4403,6 +4901,12 @@
                       "GlyphNumber": 27,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 28,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4415,6 +4919,12 @@
                       "GlyphNumber": 28,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 29,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4427,6 +4937,12 @@
                       "GlyphNumber": 29,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 30,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4439,6 +4955,12 @@
                       "GlyphNumber": 30,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 31,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4451,6 +4973,12 @@
                       "GlyphNumber": 31,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 32,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4463,6 +4991,12 @@
                       "GlyphNumber": 32,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 33,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4475,6 +5009,12 @@
                       "GlyphNumber": 33,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 34,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     },
@@ -4487,6 +5027,12 @@
                       "GlyphNumber": 34,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                       "PositionOnRing": 35,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "Off",
                       "Tint": "1,1,1,1"
                     }
@@ -4605,6 +5151,12 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -4666,6 +5218,12 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -4714,6 +5272,12 @@
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/dev/gray_grid_8.vmat",
               "Model": "models/dev/plane.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -4796,6 +5360,12 @@
               "__guid": "c2177d4a-edb0-4c40-a93f-e56409ee8421",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -4860,6 +5430,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -4923,6 +5499,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -4986,6 +5568,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5049,6 +5637,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5112,6 +5706,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5175,6 +5775,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5237,6 +5843,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5300,6 +5912,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5363,6 +5981,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5418,6 +6042,12 @@
                   "__guid": "f9fde324-2c5e-49f3-8535-5ebac9dab3e6",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -5438,6 +6068,12 @@
               "__guid": "ec023f3c-7863-4f39-8373-4949913042c4",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_peg/sg_peg_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -5499,6 +6135,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5563,6 +6205,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5627,6 +6275,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5691,6 +6345,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5755,6 +6415,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5819,6 +6485,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5882,6 +6554,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -5946,6 +6624,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -6010,6 +6694,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -6281,6 +6971,12 @@
                   "BodyGroups": 18446744073709551615,
                   "MaterialGroup": "complex",
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -6293,6 +6989,12 @@
                   "GlyphNumber": 35,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 0,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6305,6 +7007,12 @@
                   "GlyphNumber": 0,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 1,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6317,6 +7025,12 @@
                   "GlyphNumber": 1,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 2,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6329,6 +7043,12 @@
                   "GlyphNumber": 2,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 3,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6341,6 +7061,12 @@
                   "GlyphNumber": 3,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 4,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6353,6 +7079,12 @@
                   "GlyphNumber": 4,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 5,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6365,6 +7097,12 @@
                   "GlyphNumber": 5,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 6,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6377,6 +7115,12 @@
                   "GlyphNumber": 6,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 7,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6389,6 +7133,12 @@
                   "GlyphNumber": 7,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 8,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6401,6 +7151,12 @@
                   "GlyphNumber": 8,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 9,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6413,6 +7169,12 @@
                   "GlyphNumber": 9,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 10,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6425,6 +7187,12 @@
                   "GlyphNumber": 10,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 11,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6437,6 +7205,12 @@
                   "GlyphNumber": 11,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 12,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6449,6 +7223,12 @@
                   "GlyphNumber": 12,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 13,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6461,6 +7241,12 @@
                   "GlyphNumber": 13,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 14,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6473,6 +7259,12 @@
                   "GlyphNumber": 14,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 15,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6485,6 +7277,12 @@
                   "GlyphNumber": 15,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 16,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6497,6 +7295,12 @@
                   "GlyphNumber": 16,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 17,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6509,6 +7313,12 @@
                   "GlyphNumber": 17,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 18,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6521,6 +7331,12 @@
                   "GlyphNumber": 18,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 19,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6533,6 +7349,12 @@
                   "GlyphNumber": 19,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 20,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6545,6 +7367,12 @@
                   "GlyphNumber": 20,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 21,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6557,6 +7385,12 @@
                   "GlyphNumber": 21,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 22,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6569,6 +7403,12 @@
                   "GlyphNumber": 22,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 23,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6581,6 +7421,12 @@
                   "GlyphNumber": 23,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 24,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6593,6 +7439,12 @@
                   "GlyphNumber": 24,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 25,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6605,6 +7457,12 @@
                   "GlyphNumber": 25,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 26,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6617,6 +7475,12 @@
                   "GlyphNumber": 26,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 27,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6629,6 +7493,12 @@
                   "GlyphNumber": 27,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 28,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6641,6 +7511,12 @@
                   "GlyphNumber": 28,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 29,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6653,6 +7529,12 @@
                   "GlyphNumber": 29,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 30,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6665,6 +7547,12 @@
                   "GlyphNumber": 30,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 31,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6677,6 +7565,12 @@
                   "GlyphNumber": 31,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 32,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6689,6 +7583,12 @@
                   "GlyphNumber": 32,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 33,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6701,6 +7601,12 @@
                   "GlyphNumber": 33,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 34,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 },
@@ -6713,6 +7619,12 @@
                   "GlyphNumber": 34,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_glyph_flipbook.vmdl",
                   "PositionOnRing": 35,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "Off",
                   "Tint": "1,1,1,1"
                 }
@@ -6778,6 +7690,12 @@
                   "__guid": "d3750797-03f0-4c27-abbb-32e4c62d379c",
                   "BodyGroups": 1,
                   "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -6788,6 +7706,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -6799,6 +7723,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -6832,6 +7762,12 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
                       "Morphs": {},
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1",
                       "UseAnimGraph": true
@@ -6855,6 +7791,12 @@
               "__guid": "1a5647c8-298b-40b6-9d53-89359da7cf48",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -6919,6 +7861,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -6982,6 +7930,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7045,6 +7999,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7108,6 +8068,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7171,6 +8137,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7234,6 +8206,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7296,6 +8274,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7359,6 +8343,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7422,6 +8412,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -7463,6 +8459,12 @@
                   "__guid": "a51b2e87-794c-47ae-a817-a5c54f3bce28",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -7741,6 +8743,12 @@
                       "__guid": "dfa64167-bd0b-4fcb-bafd-0b2740d91941",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/sbox_stargate/zpm_hubs/zpm_hub_asuran/zpm_hub_asuran_slot.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -7865,6 +8873,12 @@
               "MaterialOverride": "materials/sbox_stargate/force_field_simple.vmat",
               "Model": "models/dev/sphere.vmdl",
               "Morphs": {},
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "Off",
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
@@ -7893,6 +8907,12 @@
               "__guid": "6f974b83-eb9a-4fc2-bec9-3fad70a5dd43",
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/sphere.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "0.06698,0.50233,0,1"
             },
@@ -7933,6 +8953,12 @@
               "__guid": "beba4b8f-b57a-4fb1-b2eb-7d60691c1a95",
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/sphere.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "0.47907,0.02674,0.02674,1"
             },
@@ -7973,6 +8999,12 @@
               "__guid": "11814502-5453-4e78-a7e7-2c68d8512945",
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/sphere.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "0.03245,0.27042,0.46512,1"
             },
@@ -8029,6 +9061,12 @@
               "BodyGroups": 18446744073709551615,
               "MaterialOverride": "materials/sbox_stargate/sg_white.vmat",
               "Model": "models/dev/plane.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -8152,6 +9190,12 @@
               "__guid": "dcb8df9f-a64b-4292-86c1-01d831485eb5",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -8215,6 +9259,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8278,6 +9328,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8341,6 +9397,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8404,6 +9466,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8467,6 +9535,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8530,6 +9604,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8592,6 +9672,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8655,6 +9741,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8718,6 +9810,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -8773,6 +9871,12 @@
                   "__guid": "288686b2-be24-4bd0-8782-e312e2a5f0d3",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8792,6 +9896,12 @@
                   "CutoffAngleSoftness": 23.34,
                   "Material": "materials/decals/foam_projection.vmat",
                   "Mod2XBlending": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "Size": "400,400,64",
                   "TintColor": "1,1,1,0.2",
                   "TriPlanar": true
@@ -8828,6 +9938,12 @@
               "CutoffAngleSoftness": 23.34,
               "Material": "materials/decals/foam_projection.vmat",
               "Mod2XBlending": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "Size": "400,400,64",
               "TintColor": "1,1,1,0.07",
               "TriPlanar": true
@@ -8853,6 +9969,12 @@
                   "__guid": "6544101a-67c5-42e1-b9b5-2d2d854f225b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8870,6 +9992,12 @@
                   "__guid": "4a1f92b9-7516-409e-b7ac-c8afc3295df6",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8887,6 +10015,12 @@
                   "__guid": "a0e85118-93db-4a53-905b-11daadee7718",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8904,6 +10038,12 @@
                   "__guid": "57e7a434-160e-4ddd-8fbc-2f0ea43816bf",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8921,6 +10061,12 @@
                   "__guid": "2ef16c65-e79e-4678-bd68-cbe5673e9563",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8938,6 +10084,12 @@
                   "__guid": "8883d85e-426c-47b8-a718-4d0fc566f103",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8955,6 +10107,12 @@
                   "__guid": "92631d14-c59d-4f8a-9922-937c6c7c849b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8972,6 +10130,12 @@
                   "__guid": "5959f782-0f91-4efe-8d0c-6439e05cce59",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -8989,6 +10153,12 @@
                   "__guid": "11ceb417-8dc8-40a6-addc-156bff7b613e",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9006,6 +10176,12 @@
                   "__guid": "557b8005-546d-4fc0-8e0d-23010b461c5a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9023,6 +10199,12 @@
                   "__guid": "c68ffc04-ddb2-4c92-9739-fab3381f16b2",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9049,6 +10231,12 @@
                   "__guid": "3f33cb5a-1275-41f6-b884-ac0466dfa35b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9066,6 +10254,12 @@
                   "__guid": "a19d1531-efbe-42a7-9270-63129b407211",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9083,6 +10277,12 @@
                   "__guid": "dd574e3a-5a7d-4612-86e7-e2b384c60479",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9100,6 +10300,12 @@
                   "__guid": "79f8d472-b18b-4e88-b5fc-199ad9c7edc8",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9117,6 +10323,12 @@
                   "__guid": "4758aae4-26f0-46b2-92c4-c61d5f57301e",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9134,6 +10346,12 @@
                   "__guid": "a5334140-102c-41c2-855e-3e5c2df3d9a6",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9151,6 +10369,12 @@
                   "__guid": "4606c6dd-fab0-4090-bad9-1bdc83f3ba50",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9168,6 +10392,12 @@
                   "__guid": "7a7a59a7-6b48-4416-9354-dd6efd7b705c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9185,6 +10415,12 @@
                   "__guid": "313b8ec4-45d0-42fb-a136-0a20a5e53895",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9202,6 +10438,12 @@
                   "__guid": "19652313-f434-4b2f-9dc6-670994437d7c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9219,6 +10461,12 @@
                   "__guid": "b4073a32-fccd-47d5-8f04-1ad843d77074",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9245,6 +10493,12 @@
                   "__guid": "2df3123b-ea5c-4f79-aa46-a0701a098781",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9262,6 +10516,12 @@
                   "__guid": "ea138f88-58dc-4011-a68d-8e7fa8709b2f",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9279,6 +10539,12 @@
                   "__guid": "fd236b84-563a-4f1f-9be2-294fa2aba568",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9296,6 +10562,12 @@
                   "__guid": "5c43e0bb-8cba-43d7-afc9-96f8ece5b584",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9313,6 +10585,12 @@
                   "__guid": "e9b9bc02-193c-458a-95d6-02e71f70ba20",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9330,6 +10608,12 @@
                   "__guid": "0c52f7a7-79cf-4e0d-9c27-3b59bf96c1d8",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9347,6 +10631,12 @@
                   "__guid": "f7ebe57d-7a00-44d5-b19b-53be813dddb1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9364,6 +10654,12 @@
                   "__guid": "59dd8cbf-8b3b-47bb-a0d2-085273991ea8",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9381,6 +10677,12 @@
                   "__guid": "aa2b4ed7-74bd-445c-8b97-3d398655eca7",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9398,6 +10700,12 @@
                   "__guid": "1130b4cb-2f83-4a96-ba06-75461f620951",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9415,6 +10723,12 @@
                   "__guid": "79f19642-6998-4ee8-b77d-c3120f4945a5",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9441,6 +10755,12 @@
                   "__guid": "d2d03a7e-77df-4a17-8daf-729ba261445b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9458,6 +10778,12 @@
                   "__guid": "7aa71d0e-e58a-4953-8cf4-197db96ced30",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9475,6 +10801,12 @@
                   "__guid": "e3faf588-4194-4af2-8d06-b137c8c15826",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9492,6 +10824,12 @@
                   "__guid": "2bcd502b-e198-4f0b-948b-7a8b89989702",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9509,6 +10847,12 @@
                   "__guid": "099850a7-f3aa-48a5-87d7-c5bd9b46f8e3",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9526,6 +10870,12 @@
                   "__guid": "d5b0e968-4ebf-4eca-81cf-2d6282896243",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9543,6 +10893,12 @@
                   "__guid": "48c80eec-e59c-4978-9f63-8b2ad00d5636",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9560,6 +10916,12 @@
                   "__guid": "32767fe5-18a9-4d13-a4fc-081c6ea6356e",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9577,6 +10939,12 @@
                   "__guid": "41659b0c-d167-4f42-9828-b0c44175ca66",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9594,6 +10962,12 @@
                   "__guid": "e823b557-7f51-45f3-ab28-a8b0dad51b73",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9611,6 +10985,12 @@
                   "__guid": "9a3065a8-6735-4fcf-8669-0cea0f6f316f",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9637,6 +11017,12 @@
                   "__guid": "5a1cba28-fdbc-4dcc-9f03-995bcd939d7d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9654,6 +11040,12 @@
                   "__guid": "7048a372-1f93-4d6e-910a-a3fb37691323",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9671,6 +11063,12 @@
                   "__guid": "ed8e2112-23d5-4b79-b01b-49bb02a974f4",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9688,6 +11086,12 @@
                   "__guid": "c94ccb94-15c0-4ca3-86e9-b8df491cc4e2",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9705,6 +11109,12 @@
                   "__guid": "3cb3ffc6-2e54-45ad-a2f3-7e821bb019ca",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9722,6 +11132,12 @@
                   "__guid": "1f9a5dc7-e406-4b7e-9148-ce9c1b6255fb",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9739,6 +11155,12 @@
                   "__guid": "66cbc40e-1763-4f37-9b01-faffd60793fa",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9756,6 +11178,12 @@
                   "__guid": "a4b998f6-99f9-490d-89f8-d4412794cfc0",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9773,6 +11201,12 @@
                   "__guid": "18e820df-23ef-4cf9-a759-16d9e6397342",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9790,6 +11224,12 @@
                   "__guid": "842fed97-26a1-4f3e-939b-cf1ab5a5d4e5",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9807,6 +11247,12 @@
                   "__guid": "d794ff16-a429-4bc8-bfdf-ad05ce298716",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9833,6 +11279,12 @@
                   "__guid": "7a21f17d-14c4-4bd0-ae84-720d7dc68908",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9850,6 +11302,12 @@
                   "__guid": "dbcb9efc-e982-4b82-bd52-8369d16cdaf6",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9867,6 +11325,12 @@
                   "__guid": "df69ac73-a919-4a27-80fc-cadfaa9e523a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9884,6 +11348,12 @@
                   "__guid": "18c6acac-3e98-43ac-a435-e3c8c5573f2f",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9901,6 +11371,12 @@
                   "__guid": "7b785d2c-9ed8-49d1-b7d0-634d372e61d7",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9918,6 +11394,12 @@
                   "__guid": "87b0cceb-ce63-4854-a4d7-e1ccb0530ac6",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9935,6 +11417,12 @@
                   "__guid": "153390d4-a770-4e3c-b0b2-20b7f563a780",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9952,6 +11440,12 @@
                   "__guid": "5b94440b-ed09-44d3-957d-341eb0ecbe58",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9969,6 +11463,12 @@
                   "__guid": "cc1f2e14-6488-49de-a397-e363eea50f0b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -9986,6 +11486,12 @@
                   "__guid": "2416a78e-4b01-4da3-a366-8ae1d2672ab7",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10003,6 +11509,12 @@
                   "__guid": "14552245-c519-4f06-9750-7e4d66120407",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10029,6 +11541,12 @@
                   "__guid": "aa447a05-e859-4a22-b883-2ab1e43a7854",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10046,6 +11564,12 @@
                   "__guid": "fc9d5414-1d2c-4e16-a1cb-1674f691ade2",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10063,6 +11587,12 @@
                   "__guid": "58fa49b8-edbe-43e4-adb7-ac11e29742fc",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10080,6 +11610,12 @@
                   "__guid": "2e81f7bd-fc72-464b-964b-8e17aa79ebd0",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10097,6 +11633,12 @@
                   "__guid": "4a33831c-fe9a-498d-a461-4b46bd8556bd",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10114,6 +11656,12 @@
                   "__guid": "1123820e-10f2-481a-a388-e36e2d227162",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10131,6 +11679,12 @@
                   "__guid": "2540b906-0e4a-4be3-a058-71d123db26ae",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10148,6 +11702,12 @@
                   "__guid": "b1749f95-078f-44cc-b615-e89a5b10d768",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10165,6 +11725,12 @@
                   "__guid": "fc0a76e3-1ab6-49d3-82d1-881936e8f491",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10182,6 +11748,12 @@
                   "__guid": "a26b7d61-467f-4041-becd-ee99e3888698",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10199,6 +11771,12 @@
                   "__guid": "7c13bb9f-de5d-41c3-b271-177e38081efb",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10225,6 +11803,12 @@
                   "__guid": "e3511ad9-0877-4eeb-9a3f-532dafc1a2ec",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10242,6 +11826,12 @@
                   "__guid": "fb082651-e7c5-4850-8646-5e8f0d92ba5d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10259,6 +11849,12 @@
                   "__guid": "82cc09fb-78b8-442b-8683-8412716aeb6e",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10276,6 +11872,12 @@
                   "__guid": "b18d4782-9724-4090-b04c-ac88576f0516",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10293,6 +11895,12 @@
                   "__guid": "8b9ee34f-3a90-4879-b08b-50ec25575c91",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10310,6 +11918,12 @@
                   "__guid": "7f0b173e-b8bb-4606-aea2-3447e1dbb6cd",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10327,6 +11941,12 @@
                   "__guid": "791dd6f0-1751-47d9-b4f1-455ba2ad8d09",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10344,6 +11964,12 @@
                   "__guid": "88087c00-248f-4e04-b380-538f97a66ca2",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10361,6 +11987,12 @@
                   "__guid": "a7e16d41-856b-4bd8-87c2-2072d80bf4bb",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10378,6 +12010,12 @@
                   "__guid": "1d1ad576-7484-4039-9aa8-48f4587494cf",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10395,6 +12033,12 @@
                   "__guid": "8fef2b97-93d7-4aaf-937f-e9058d87fdff",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10421,6 +12065,12 @@
                   "__guid": "591e9f99-ca4f-4f50-ada6-4c74cafab865",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10438,6 +12088,12 @@
                   "__guid": "1bc7dd1a-2ba1-479d-b816-ef4f4a331b5c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10455,6 +12111,12 @@
                   "__guid": "404af073-4c11-416b-8351-afbb2e07764e",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10472,6 +12134,12 @@
                   "__guid": "06a563f2-36c2-4629-99a3-f34fa8aae211",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10489,6 +12157,12 @@
                   "__guid": "77468888-b4ef-42eb-9a81-1708f2d3a0f7",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10506,6 +12180,12 @@
                   "__guid": "f351294e-99c8-4574-9bba-0ff946995b3d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10523,6 +12203,12 @@
                   "__guid": "8e76cbd1-caf4-47ba-b0f6-0c08085f307a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10540,6 +12226,12 @@
                   "__guid": "c0ceac6c-d7ff-4a33-81bc-eb29d6cf4bfa",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10557,6 +12249,12 @@
                   "__guid": "7630a780-a823-462a-90b5-0474524d3f67",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10574,6 +12272,12 @@
                   "__guid": "8ac34d47-cf00-4aea-89d2-5778d49ad31d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10591,6 +12295,12 @@
                   "__guid": "b29b4582-b293-42b9-83aa-38e184e1adf4",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10617,6 +12327,12 @@
                   "__guid": "38b03a40-10ac-4034-ae59-ad8c772c8b44",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10634,6 +12350,12 @@
                   "__guid": "f7a7af77-2ed7-4cb9-9799-5b1f9b03b6fa",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10651,6 +12373,12 @@
                   "__guid": "669dfe17-032d-41d5-a058-17320c03775a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10668,6 +12396,12 @@
                   "__guid": "421022fb-c3ba-4cd6-bca7-af5de484d18a",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10685,6 +12419,12 @@
                   "__guid": "10f59c1b-9242-48ae-8aed-1d3b68092c47",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10702,6 +12442,12 @@
                   "__guid": "edc7012e-298e-42f3-99b7-96919bc2bcd8",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10719,6 +12465,12 @@
                   "__guid": "e8ba31fe-c157-48bb-aebb-4a466e972553",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10736,6 +12488,12 @@
                   "__guid": "21f3ec7c-a0cc-4c8c-be60-328f066b08c0",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10753,6 +12511,12 @@
                   "__guid": "5f05f850-445c-4f27-af46-be48f47cd3c5",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10770,6 +12534,12 @@
                   "__guid": "5e2b5b50-4f1a-42ca-ba21-3b32befb5f26",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10787,6 +12557,12 @@
                   "__guid": "9b709601-8e63-4b53-8b2b-388a9c888d29",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10813,6 +12589,12 @@
                   "__guid": "87670f6f-0c01-4440-b2ca-d865d8322f23",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10830,6 +12612,12 @@
                   "__guid": "0e1c6ee9-07d1-417c-9c99-1666a45f2c18",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10847,6 +12635,12 @@
                   "__guid": "56d5603e-d0a1-4715-844a-7be0ed59f53d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10864,6 +12658,12 @@
                   "__guid": "f1427b51-18ed-46f2-a7ca-ac613a11bfe8",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10881,6 +12681,12 @@
                   "__guid": "1fbed79f-322a-4d9d-a00c-e0eef1c69065",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10898,6 +12704,12 @@
                   "__guid": "3d4d7ec0-a924-4389-9f65-f32be3d925dd",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10915,6 +12727,12 @@
                   "__guid": "572c2771-b307-46c2-8dd4-7349e134a286",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10932,6 +12750,12 @@
                   "__guid": "95497445-5a97-430e-93a7-db7d9f3c091f",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10949,6 +12773,12 @@
                   "__guid": "12e1b761-194c-4736-9b53-670155939f38",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10966,6 +12796,12 @@
                   "__guid": "20ee5427-bfa8-4d6e-9d6b-745c0886ebf8",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -10983,6 +12819,12 @@
                   "__guid": "ee417d57-4ee0-447d-9ff2-98396f3bf574",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/trees/shitty_pine_tree2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -11141,6 +12983,12 @@
               "Lighting": false,
               "MotionBlur": false,
               "Opaque": false,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RotationOffset": 0,
               "Scale": 1,
               "Shadows": false,
@@ -11265,6 +13113,12 @@
                   "__guid": "8e89936b-e0a7-4064-bd01-3b8a6c3267ec",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c1.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -11341,6 +13195,12 @@
                   "__guid": "2f68393d-fea6-4cad-84ac-6d63bfd79c8c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c4.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -11417,6 +13277,12 @@
                   "__guid": "8da5b194-6671-46c0-b197-92fa7507e562",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_b2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -11492,6 +13358,12 @@
                   "__guid": "bf4f3ab3-c3cc-4c57-bded-e63749517720",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c2.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -11568,6 +13440,12 @@
                   "__guid": "9d597f62-670a-4bbd-bed3-57dc20728696",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c3l.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -11664,6 +13542,12 @@
                   "__guid": "8589d6c7-7716-406b-84c4-da974f66f102",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c3u.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -12904,7 +14788,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -12922,7 +14809,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09449,0.14324,0.19535,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -12941,7 +14831,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": true,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -12960,7 +14853,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -12978,7 +14874,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -12996,7 +14895,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": true,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -13014,7 +14916,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -13032,7 +14937,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -13051,7 +14959,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -13070,7 +14981,10 @@
             "Has Keyway": false,
             "Flip Keyway": false,
             "Flip Door Side": false,
-            "Has Window": false
+            "Has Window": false,
+            "Door Color": "0.09412,0.14118,0.19608,1",
+            "Stripe Color": "1,1,1,1",
+            "Has Stripe": false
           }
         },
         {
@@ -13087,6 +15001,12 @@
               "__guid": "489a5416-fc58-454a-ac8e-e5b09335e08c",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -13151,6 +15071,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13214,6 +15140,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13277,6 +15209,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13340,6 +15278,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13403,6 +15347,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13466,6 +15416,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13528,6 +15484,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13591,6 +15553,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13654,6 +15622,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13709,6 +15683,12 @@
                   "__guid": "2085402f-a7f8-4e47-bc57-0d797c9e5832",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -13730,6 +15710,12 @@
               "__guid": "cf85336d-060f-43d4-bd2a-769d0b35adcd",
               "BodyGroups": 18446744073709551615,
               "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -13794,6 +15780,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13857,6 +15849,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13920,6 +15918,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -13983,6 +15987,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -14046,6 +16056,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -14109,6 +16125,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -14171,6 +16193,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -14234,6 +16262,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -14297,6 +16331,12 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1",
                   "UseAnimGraph": true
@@ -14352,6 +16392,12 @@
                   "__guid": "e54e14cf-3d4d-41e0-96c5-f5d67abe0719",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }

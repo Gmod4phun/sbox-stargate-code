@@ -1,0 +1,211 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Metalness",
+        "Default": "1,1,1,1",
+        "Extension": "Metal",
+        "ShowExtension": true,
+        "SrgbRead": true
+      },
+      "Identifier": "0",
+      "Position": "-240,368"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Roughness",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "ShowExtension": true,
+        "SrgbRead": true
+      },
+      "Identifier": "1",
+      "Position": "-240,112"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/sgc/doors/sgc_doors_door_main_ao.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Color",
+        "Default": "1,1,1,1",
+        "ShowExtension": true,
+        "SrgbRead": true
+      },
+      "Identifier": "2",
+      "Position": "-144,-1152"
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 0.71973556,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 0,
+      "Identifier": "3",
+      "Position": "1168,-400",
+      "Albedo": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/sgc/doors/sgc_doors_door_main_normal.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "SrgbRead": true
+      },
+      "Identifier": "4",
+      "Position": "-240,-144"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Ambient Occlusion",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "ShowExtension": true,
+        "SrgbRead": true
+      },
+      "Identifier": "5",
+      "Position": "-240,624"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/sgc/doors/sgc_doors_door_main_stripe_diagonal_detailmask.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Stripe Mask",
+        "Default": "1,1,1,1",
+        "Extension": "Mask",
+        "ShowExtension": true,
+        "SrgbRead": true
+      },
+      "Identifier": "6",
+      "Position": "-64,-416"
+    },
+    {
+      "_class": "Branch",
+      "Name": "Stripe",
+      "IsAttribute": false,
+      "Operator": "Equal",
+      "Enabled": false,
+      "UI": {},
+      "Identifier": "7",
+      "Position": "880,-832",
+      "True": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "False": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Stripe Color",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "8",
+      "Position": "-64,-624"
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "9",
+      "Position": "352,-672",
+      "A": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Door Color",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "10",
+      "Position": "-144,-912"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "11",
+      "Position": "144,-1024",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ObjectSpaceNormal",
+      "Identifier": "12",
+      "Position": "320,-288"
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "Tangent",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": true,
+      "Identifier": "13",
+      "Position": "240,-80",
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    }
+  ]
+}
