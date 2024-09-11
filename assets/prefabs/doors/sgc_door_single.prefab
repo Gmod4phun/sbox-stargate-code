@@ -36,6 +36,10 @@
             "CurrentDoorState": "Closed",
             "CurrentMoveDistance": 0,
             "DoorHandleType": "Cylinder",
+            "DoorModelObject": {
+              "_type": "gameobject",
+              "go": "3f64baf5-5344-47d5-aa4a-5f3804eb6e88"
+            },
             "DoorMoveCurve": [
               {
                 "in": 1.5918369,
@@ -50,20 +54,13 @@
             ],
             "DoorMoveDistance": 120,
             "DoorMoveTime": 1.2,
-            "DoorPartsRenderer": {
+            "DoorRenderer": {
               "_type": "component",
               "component_id": "b898bfd5-7d24-4739-98e1-b2870457e720",
               "go": "3f64baf5-5344-47d5-aa4a-5f3804eb6e88",
               "component_type": "ModelRenderer"
             },
-            "DoorRenderer": {
-              "_type": "component",
-              "component_id": "a8955046-27aa-4ce0-b1af-f0a5fd0dbded",
-              "go": "2ea1cab8-f962-4cd6-9a99-4bbc0842116f",
-              "component_type": "ModelRenderer"
-            },
             "DoorType": "Rotating",
-            "DoorVariant": "Standard",
             "FlipDirection": true,
             "FlipDoorSide": false,
             "FlipKeyway": false,
@@ -74,114 +71,78 @@
               "component_type": "ModelRenderer"
             },
             "HasKeyway": false,
+            "HasWindow": false,
             "LocalMoveDirection": "0,1,0",
             "Locked": false,
             "RotationOrigin": "-4.65,23.5,0",
             "StartsOpen": false
           }
+        ]
+      },
+      {
+        "__guid": "3f64baf5-5344-47d5-aa4a-5f3804eb6e88",
+        "Flags": 0,
+        "Name": "door model",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "b898bfd5-7d24-4739-98e1-b2870457e720",
+            "BodyGroups": 157,
+            "Model": "models/map_parts/sgc/doors/door_single/sgc_door_parts_single.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
         ],
         "Children": [
           {
-            "__guid": "2ea1cab8-f962-4cd6-9a99-4bbc0842116f",
+            "__guid": "6ddd4057-edfe-4262-9013-cf984943aa53",
             "Flags": 0,
-            "Name": "door model",
+            "Name": "knob",
+            "Position": "-1,-18,50",
+            "Rotation": "0,0,-1,0.0000001947072",
             "Enabled": true,
             "Components": [
               {
                 "__type": "Sandbox.ModelRenderer",
-                "__guid": "a8955046-27aa-4ce0-b1af-f0a5fd0dbded",
+                "__guid": "b0eebbb9-7737-491d-ba70-af8c11531128",
                 "BodyGroups": 18446744073709551615,
-                "Model": "models/map_parts/sgc/doors/door_single/sgc_door_single.vmdl",
+                "Model": "models/map_parts/sgc/doors/parts/sgc_door_knob_cylinder.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
-              },
-              {
-                "__type": "Sandbox.ModelCollider",
-                "__guid": "5299f012-c088-438d-9fba-7958de35dabc",
-                "IsTrigger": false,
-                "Model": "models/map_parts/sgc/doors/door_single/sgc_door_single.vmdl",
-                "Static": false
-              },
-              {
-                "__type": "DoorController",
-                "__guid": "fca8f12d-9c84-451c-aacb-10a44cb0b77c",
-                "Doors": [
-                  {
-                    "_type": "component",
-                    "component_id": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
-                    "go": "72fdf056-9c14-49e5-887b-294b8dcc8cee",
-                    "component_type": "SGCDoor"
-                  }
-                ]
               }
-            ],
-            "Children": [
+            ]
+          },
+          {
+            "__guid": "4f8c94ed-fa8f-464b-b7cf-d82cb4b0ef19",
+            "Flags": 0,
+            "Name": "knob",
+            "Position": "-4.5,-18,50",
+            "Enabled": true,
+            "Components": [
               {
-                "__guid": "4f8c94ed-fa8f-464b-b7cf-d82cb4b0ef19",
-                "Flags": 0,
-                "Name": "knob",
-                "Position": "-4.5,-18,48",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "Sandbox.ModelRenderer",
-                    "__guid": "d041af76-f09b-43eb-9c5c-abf577e8db55",
-                    "BodyGroups": 18446744073709551615,
-                    "Model": "models/map_parts/sgc/doors/knobs/sgc_door_knob_cylinder.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              },
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "d041af76-f09b-43eb-9c5c-abf577e8db55",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/map_parts/sgc/doors/parts/sgc_door_knob_cylinder.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          },
+          {
+            "__guid": "d644ea53-c953-4516-85af-09a39cb6894e",
+            "Flags": 0,
+            "Name": "keyway",
+            "Position": "-2.75,-18,60",
+            "Components": [
               {
-                "__guid": "6ddd4057-edfe-4262-9013-cf984943aa53",
-                "Flags": 0,
-                "Name": "knob",
-                "Position": "-1,-18,48",
-                "Rotation": "0,0,-1,0.0000001947072",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "Sandbox.ModelRenderer",
-                    "__guid": "b0eebbb9-7737-491d-ba70-af8c11531128",
-                    "BodyGroups": 18446744073709551615,
-                    "Model": "models/map_parts/sgc/doors/knobs/sgc_door_knob_cylinder.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              },
-              {
-                "__guid": "3f64baf5-5344-47d5-aa4a-5f3804eb6e88",
-                "Flags": 0,
-                "Name": "door parts",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "Sandbox.ModelRenderer",
-                    "__guid": "b898bfd5-7d24-4739-98e1-b2870457e720",
-                    "BodyGroups": 39,
-                    "Model": "models/map_parts/sgc/doors/door_single/sgc_door_parts_single.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              },
-              {
-                "__guid": "d644ea53-c953-4516-85af-09a39cb6894e",
-                "Flags": 0,
-                "Name": "keyway",
-                "Position": "-2.75,-18,58",
-                "Components": [
-                  {
-                    "__type": "Sandbox.ModelRenderer",
-                    "__guid": "f2a45ed2-28bf-49f8-a48f-b556561dadd8",
-                    "BodyGroups": 18446744073709551615,
-                    "Model": "models/map_parts/sgc/doors/parts/sgc_door_keyway.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "f2a45ed2-28bf-49f8-a48f-b556561dadd8",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/map_parts/sgc/doors/parts/sgc_door_keyway.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
               }
             ]
           }
@@ -260,12 +221,12 @@
         ]
       },
       {
-        "Id": "Door Variant",
-        "Title": "Door Variant",
+        "Id": "Has Window",
+        "Title": "Has Window",
         "Targets": [
           {
             "Id": "38984d66-1bf4-4cf9-ba2e-9472eaff2914",
-            "Property": "DoorVariant"
+            "Property": "HasWindow"
           }
         ]
       }

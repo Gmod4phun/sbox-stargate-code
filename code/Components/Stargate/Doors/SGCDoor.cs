@@ -6,12 +6,6 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 		Round
 	}
 
-	public enum Variant
-	{
-		Standard,
-		Windowed
-	}
-
 	public Dictionary<HandleType, Model> HandleModels = new Dictionary<HandleType, Model>
 	{
 		{
@@ -21,18 +15,6 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 		{
 			HandleType.Round,
 			Model.Load("models/map_parts/sgc/doors/parts/sgc_door_knob_round.vmdl")
-		}
-	};
-
-	public Dictionary<Variant, Model> DoorModels = new Dictionary<Variant, Model>
-	{
-		{
-			Variant.Standard,
-			Model.Load("models/map_parts/sgc/doors/door_single/sgc_door_single.vmdl")
-		},
-		{
-			Variant.Windowed,
-			Model.Load("models/map_parts/sgc/doors/door_single/sgc_door_single_windowed.vmdl")
 		}
 	};
 
@@ -56,7 +38,7 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 	public ModelRenderer DoorRenderer { get; set; }
 
 	[Property]
-	public ModelRenderer DoorPartsRenderer { get; set; }
+	public GameObject DoorModelObject { get; set; }
 
 	[Property]
 	public bool FlipDoorSide { get; set; } = false;
@@ -65,7 +47,7 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 	public HandleType DoorHandleType { get; set; } = HandleType.Cylinder;
 
 	[Property]
-	public Variant DoorVariant { get; set; } = Variant.Standard;
+	public bool HasWindow { get; set; } = false;
 
 	[Property]
 	public bool HasKeyway { get; set; } = false;
@@ -84,22 +66,37 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 
 		if (DoorRenderer.IsValid())
 		{
-			DoorRenderer.Model = DoorModels[DoorVariant];
+			DoorRenderer.Model = FlipDoorSide ? DoorPartsModelFlipped : DoorPartsModel;
+			DoorRenderer.SetBodyGroup("window", HasWindow ? 1 : 0);
+			DoorRenderer.SetBodyGroup(
+				"latch",
+				CurrentMoveDistance <= 0.05f || CurrentMoveDistance >= 3.0f ? 1 : 0
+			);
 		}
 
-		var knobs = GameObject.GetAllObjects(false).Where(x => x.Name == "knob");
+		if (FrameRenderer.IsValid())
+		{
+			FrameRenderer.Model = FlipDoorSide ? FrameModelFlipped : FrameModel;
+		}
+
+		if (!DoorModelObject.IsValid())
+		{
+			return;
+		}
+
+		var knobs = DoorModelObject.GetAllObjects(false).Where(x => x.Name == "knob");
 		foreach (var knob in knobs)
 		{
 			knob.Transform.LocalPosition = knob.Transform.LocalPosition.WithY(
-				-18 * (FlipDoorSide ? -1 : 1)
+				-19 * (FlipDoorSide ? -1 : 1)
 			);
-			if (knob.Components.TryGet<ModelRenderer>(out var modelRenderer))
+			if (knob.Components.TryGet<ModelRenderer>(out var knobRenderer))
 			{
-				modelRenderer.Model = HandleModels[DoorHandleType];
+				knobRenderer.Model = HandleModels[DoorHandleType];
 			}
 		}
 
-		var keyway = GameObject
+		var keyway = DoorModelObject
 			.GetAllObjects(false)
 			.Where(x => x.Name == "keyway")
 			.FirstOrDefault();
@@ -108,26 +105,20 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 		{
 			keyway.Enabled = HasKeyway;
 			keyway.Transform.LocalPosition = keyway.Transform.LocalPosition.WithY(
-				-18 * (FlipDoorSide ? -1 : 1)
+				-19 * (FlipDoorSide ? -1 : 1)
 			);
 			keyway.Transform.LocalRotation = FlipKeyway
 				? Rotation.From(0, 180, 0)
 				: Rotation.From(0, 0, 0);
 
-			if (FrameRenderer.IsValid())
+			if (DoorRenderer.IsValid())
 			{
-				FrameRenderer.Model = FlipDoorSide ? FrameModelFlipped : FrameModel;
-				FrameRenderer.SetBodyGroup("deadbolt_plate", HasKeyway ? 1 : 0);
+				DoorRenderer.SetBodyGroup("deadbolt", HasKeyway ? (Locked ? 2 : 1) : 0);
 			}
 
-			if (DoorPartsRenderer.IsValid())
+			if (FrameRenderer.IsValid())
 			{
-				DoorPartsRenderer.Model = FlipDoorSide ? DoorPartsModelFlipped : DoorPartsModel;
-				DoorPartsRenderer.SetBodyGroup(
-					"latch",
-					CurrentMoveDistance <= 0.05f || CurrentMoveDistance >= 3.0f ? 1 : 0
-				);
-				DoorPartsRenderer.SetBodyGroup("deadbolt", HasKeyway ? (Locked ? 2 : 1) : 0);
+				FrameRenderer.SetBodyGroup("deadbolt_plate", HasKeyway ? 1 : 0);
 			}
 		}
 	}

@@ -17,6 +17,10 @@
 								from = "door_parts.vmat"
 								to = "materials/sgc/doors/sgc_doors_door_parts.vmat"
 							},
+							{
+								from = "door_main.vmat"
+								to = "materials/sgc/doors/sgc_doors_door_main.vmat"
+							},
 						]
 						use_global_default = false
 						global_default_material = "materials/default.vmat"
@@ -27,6 +31,64 @@
 				_class = "RenderMeshList"
 				children = 
 				[
+					{
+						_class = "RenderMeshFile"
+						name = "door"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Plane_013",
+								"Plane_034",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_024",
+								"Circle_025",
+								"Circle_026",
+								"Circle_027",
+								"Circle_028",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "door_windowed"
+						filename = "models/map_parts/sgc/doors/door_single/sgc_door_single_meshes.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Plane_013",
+								"Plane_038",
+								"Plane_039",
+								"Circle_023",
+								"Circle_024",
+								"Circle_025",
+								"Circle_026",
+								"Circle_027",
+								"Circle_028",
+								"Plane_027",
+							]
+						}
+					},
 					{
 						_class = "RenderMeshFile"
 						name = "hinges"
@@ -222,6 +284,28 @@
 				_class = "BodyGroupList"
 				children = 
 				[
+					{
+						_class = "BodyGroup"
+						name = "window"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"door",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"door_windowed",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
 					{
 						_class = "BodyGroup"
 						name = "latch"

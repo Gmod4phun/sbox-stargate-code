@@ -4,6 +4,9 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
+	//---- Detail Texture ----
+	F_DETAIL_TEXTURE 4 // Overlay and Normals
+
 	//---- PBR ----
 	F_SPECULAR 1
 
@@ -16,6 +19,17 @@ Layer0
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[0.352941 0.411765 0.470588 0.000000]"
 	TextureColor "materials/sgc/doors/sgc_doors_door_main_ao.tga"
+
+	//---- Detail Texture ----
+	g_flDetailBlendFactor "1.000"
+	g_flDetailBlendToFull "0.000"
+	g_flDetailNormalStrength "0.400"
+	g_flDetailTexCoordRotation "0.000"
+	g_vDetailTexCoordOffset "[0.000 0.000]"
+	g_vDetailTexCoordScale "[1.000 1.000]"
+	TextureDetail "materials/sgc/doors/sgc_doors_door_main_mask_diagonal.tga"
+	TextureDetailMask "[1.000000 1.000000 1.000000 0.000000]"
+	TextureNormalDetail "materials/sgc/doors/sgc_doors_door_main_mask_diagonal_normal.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
