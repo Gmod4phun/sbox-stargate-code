@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "round_hall_arch_half",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "round_hall_arch_half",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/sgc/round_hall/round_hall_arch_half.vmap"
+      }
+    }
+  }
+}

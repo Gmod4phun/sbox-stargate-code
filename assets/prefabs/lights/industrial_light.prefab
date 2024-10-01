@@ -79,7 +79,7 @@
   "MenuIcon": null,
   "ResourceVersion": 1,
   "__references": [
-    "facepunch.industrial_strip_light"
+    "facepunch.industrial_strip_light#27425"
   ],
   "__version": 1
 }

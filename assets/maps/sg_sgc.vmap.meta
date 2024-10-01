@@ -11,23 +11,17 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "facepunch.metal_trim_02#47037",
-        "facepunch.metal_brushed#18749",
-        "facepunch.metal_painted_black_b_hs#28948",
-        "eurorp.door01_right_01#12553",
-        "randkassets.r_k_monitor#26746",
+        "facepunch.cable_tray_a#27417",
+        "facepunch.cable_tray_support_a#47244",
         "facepunch.concrete_glossy#18629",
-        "gkaf.door_frame#27898",
-        "luke.office_keyboard#22877",
-        "luke.office_chair#22939",
-        "facepunch.floor_steel_dia_plate_painted_a#18690",
-        "facepunch.metal_painted_c#33732",
-        "facepunch.decal_asphalt_cut_line#33850",
+        "facepunch.floor_painted_asphalt#18668",
+        "facepunch.metal_painted_black_b_hs#28948",
         "stardrive.rope_barrier_a#26473"
       ],
       "IsWhitelistDisabled": false,
       "Metadata": {
-        "SingleAssetSource": "maps/sg_sgc.vmap"
+        "SingleAssetSource": "maps/sg_sgc.vmap",
+        "ParentPackage": "katka.scenegate"
       }
     }
   }

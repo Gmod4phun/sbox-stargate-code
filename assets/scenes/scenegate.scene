@@ -325,8 +325,8 @@
       "__guid": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "0,-649,120",
-      "Rotation": "0,0,1,-0.00000004371139",
+      "Position": "46.44046,2221.938,120",
+      "Rotation": "0,0,0.7071069,0.7071066",
       "Enabled": true,
       "Components": [
         {
@@ -458,7 +458,6 @@
               "__guid": "1b090958-3a2f-45f3-9976-443ce873c3cd",
               "Flags": 0,
               "Name": "Chevron 1",
-              "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
               "Components": [
@@ -528,7 +527,6 @@
               "__guid": "9ee38af7-8002-4225-8f5d-b67b83272ff9",
               "Flags": 0,
               "Name": "Chevron 2",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
               "Components": [
@@ -598,7 +596,6 @@
               "__guid": "500f7f17-2a1a-41ca-b70a-62dbd9abcec1",
               "Flags": 0,
               "Name": "Chevron 3",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
               "Components": [
@@ -668,7 +665,6 @@
               "__guid": "5aa4e690-0178-4fa2-9096-a5a117c31eb1",
               "Flags": 0,
               "Name": "Chevron 4",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
               "Components": [
@@ -738,7 +734,6 @@
               "__guid": "2ada80a2-b2ed-41b6-8621-f34392d64d40",
               "Flags": 0,
               "Name": "Chevron 5",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
               "Components": [
@@ -808,7 +803,6 @@
               "__guid": "3a52c6ae-a4ad-44ec-afa7-01df91ee8d90",
               "Flags": 0,
               "Name": "Chevron 6",
-              "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
               "Components": [
@@ -878,7 +872,6 @@
               "__guid": "df2129ca-1fd1-47a8-9e80-e05dd7d9a973",
               "Flags": 0,
               "Name": "Chevron 7",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -947,7 +940,6 @@
               "__guid": "459fa215-d843-4564-9af1-9ba33149a8be",
               "Flags": 0,
               "Name": "Chevron 8",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
               "Components": [
@@ -1017,7 +1009,6 @@
               "__guid": "b53f0db1-b5b5-4405-9b3e-55d89655b49d",
               "Flags": 0,
               "Name": "Chevron 9",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
               "Components": [
@@ -1087,7 +1078,6 @@
               "__guid": "be788d7c-f9c2-44a7-819a-3aaa5b2c7f7c",
               "Flags": 0,
               "Name": "Ring",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -2002,7 +1992,6 @@
               "__guid": "f953fdd0-4fb2-40b9-bdc3-39018df158c6",
               "Flags": 0,
               "Name": "Stargate (Milky Way)",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -2049,7 +2038,6 @@
                   "__guid": "3e245ca6-dbb9-4697-bd59-0bc1a235a5be",
                   "Flags": 0,
                   "Name": "Chevron 1",
-                  "Position": "0,0,0",
                   "Rotation": "-0.3420201,0,0,0.9396926",
                   "Enabled": true,
                   "Components": [
@@ -2119,7 +2107,6 @@
                   "__guid": "66c29918-e1c8-4269-badf-18c1c1dc722e",
                   "Flags": 0,
                   "Name": "Chevron 2",
-                  "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,0.7660444",
                   "Enabled": true,
                   "Components": [
@@ -2189,7 +2176,6 @@
                   "__guid": "6b34c53e-a248-41d5-a54c-607bddefc39e",
                   "Flags": 0,
                   "Name": "Chevron 3",
-                  "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,0.5",
                   "Enabled": true,
                   "Components": [
@@ -2259,7 +2245,6 @@
                   "__guid": "ddaa9745-c0b4-4fcd-8c37-53656df8ddbe",
                   "Flags": 0,
                   "Name": "Chevron 4",
-                  "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,-0.5000001",
                   "Enabled": true,
                   "Components": [
@@ -2329,7 +2314,6 @@
                   "__guid": "778cd67a-f9f7-4b7e-ba4f-647de0a6db1c",
                   "Flags": 0,
                   "Name": "Chevron 5",
-                  "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,-0.7660444",
                   "Enabled": true,
                   "Components": [
@@ -2399,7 +2383,6 @@
                   "__guid": "dfe6a23a-4323-496b-919c-6467d3fd6fed",
                   "Flags": 0,
                   "Name": "Chevron 6",
-                  "Position": "0,0,0",
                   "Rotation": "-0.3420202,0,0,-0.9396926",
                   "Enabled": true,
                   "Components": [
@@ -2469,7 +2452,6 @@
                   "__guid": "e2d39530-db31-4133-ae65-0a56c6183e42",
                   "Flags": 0,
                   "Name": "Chevron 7",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -2538,7 +2520,6 @@
                   "__guid": "cd23d863-d467-43c2-bb52-f003d63afd09",
                   "Flags": 0,
                   "Name": "Chevron 8",
-                  "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,0.1736482",
                   "Enabled": true,
                   "Components": [
@@ -2608,7 +2589,6 @@
                   "__guid": "d1bbe14a-349d-4914-9a71-af5f24c6e7ac",
                   "Flags": 0,
                   "Name": "Chevron 9",
-                  "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,-0.1736482",
                   "Enabled": true,
                   "Components": [
@@ -2678,7 +2658,6 @@
                   "__guid": "81f084c2-98ae-4d1f-950f-8997433a1a25",
                   "Flags": 0,
                   "Name": "Ring",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -2809,7 +2788,6 @@
               "__guid": "7ca443d2-d037-420a-aa66-6ea0f1589679",
               "Flags": 0,
               "Name": "Door R",
-              "Position": "0,0,0",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
               "NetworkMode": 1,
@@ -2863,7 +2841,6 @@
               "__guid": "c9ae7a89-2f6a-44a0-8091-271add41ce0d",
               "Flags": 0,
               "Name": "Door L",
-              "Position": "0,0,0",
               "Rotation": "0,0,1,-0.00000004371139",
               "Scale": "0.5,0.925,0.925",
               "Enabled": true,
@@ -2918,7 +2895,6 @@
               "__guid": "74014b5a-95a1-45cc-bf61-23f832a8ff28",
               "Flags": 0,
               "Name": "Trigger",
-              "Position": "0,0,0",
               "Tags": "trigger",
               "Enabled": true,
               "Components": [
@@ -3203,7 +3179,6 @@
                   "__guid": "f5374d8f-7eb7-46cf-a1f5-0648446cb7f9",
                   "Flags": 0,
                   "Name": "Ring",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -3274,7 +3249,6 @@
                       "__guid": "155d7ad6-3ff9-4c48-a44f-9582c9a97bde",
                       "Flags": 0,
                       "Name": "Chevrons",
-                      "Position": "0,0,0",
                       "Enabled": true,
                       "Components": [
                         {
@@ -3513,7 +3487,6 @@
                   "__guid": "6927e51f-0cef-45af-9cd1-dfe4a345de0d",
                   "Flags": 0,
                   "Name": "Chevron 1",
-                  "Position": "0,0,0",
                   "Rotation": "-0.3420201,0,0,0.9396926",
                   "Enabled": true,
                   "Components": [
@@ -3583,7 +3556,6 @@
                   "__guid": "578fc857-03eb-41e4-87e4-49a891f757d2",
                   "Flags": 0,
                   "Name": "Chevron 2",
-                  "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,0.7660444",
                   "Enabled": true,
                   "Components": [
@@ -3653,7 +3625,6 @@
                   "__guid": "9eabc4a2-dc6e-4514-b19c-860f6e0d2e53",
                   "Flags": 0,
                   "Name": "Chevron 3",
-                  "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,0.5",
                   "Enabled": true,
                   "Components": [
@@ -3723,7 +3694,6 @@
                   "__guid": "df9e4eaa-de9e-4452-86b5-5abeebd203b4",
                   "Flags": 0,
                   "Name": "Chevron 4",
-                  "Position": "0,0,0",
                   "Rotation": "-0.8660254,0,0,-0.5000001",
                   "Enabled": true,
                   "Components": [
@@ -3793,7 +3763,6 @@
                   "__guid": "c3e7acd6-be73-4516-b114-35145fd5b51c",
                   "Flags": 0,
                   "Name": "Chevron 5",
-                  "Position": "0,0,0",
                   "Rotation": "-0.6427876,0,0,-0.7660444",
                   "Enabled": true,
                   "Components": [
@@ -3863,7 +3832,6 @@
                   "__guid": "5bb8481a-0907-4e5f-9ddb-4147a886b702",
                   "Flags": 0,
                   "Name": "Chevron 6",
-                  "Position": "0,0,0",
                   "Rotation": "-0.3420202,0,0,-0.9396926",
                   "Enabled": true,
                   "Components": [
@@ -3933,7 +3901,6 @@
                   "__guid": "639f982b-53a0-4913-a19a-ba5f17544bac",
                   "Flags": 0,
                   "Name": "Chevron 7",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4002,7 +3969,6 @@
                   "__guid": "c7c05f9e-5994-4979-b491-ead58cf8e31c",
                   "Flags": 0,
                   "Name": "Chevron 8",
-                  "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,0.1736482",
                   "Enabled": true,
                   "Components": [
@@ -4072,7 +4038,6 @@
                   "__guid": "44548aa8-288e-400e-a8ae-ca0cc266d315",
                   "Flags": 0,
                   "Name": "Chevron 9",
-                  "Position": "0,0,0",
                   "Rotation": "-0.9848077,0,0,-0.1736482",
                   "Enabled": true,
                   "Components": [
@@ -4142,7 +4107,6 @@
                   "__guid": "a0904ea8-eeba-4273-b1aa-632b6e299f14",
                   "Flags": 0,
                   "Name": "Ring",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -5250,6 +5214,7 @@
       "Flags": 0,
       "Name": "World 3 (Gates Test)",
       "Position": "0,2000,0",
+      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -5262,7 +5227,6 @@
           "__guid": "3042b752-896f-4811-a970-260a052ec28e",
           "Flags": 0,
           "Name": "Ground",
-          "Position": "0,0,0",
           "Scale": "20,20,1",
           "Enabled": true,
           "Components": [
@@ -5295,7 +5259,6 @@
           "__guid": "b9016576-f1be-4b1a-82d1-355144096fab",
           "Flags": 0,
           "Name": "2D Skybox",
-          "Position": "0,0,0",
           "Tags": "skybox",
           "Enabled": true,
           "Components": [
@@ -5331,7 +5294,6 @@
           "__guid": "c34832dd-8af3-45a3-8eee-02167e84819d",
           "Flags": 0,
           "Name": "Sun",
-          "Position": "0,0,0",
           "Rotation": "0.3593683,0.158559,-0.371178,0.8413919",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -5400,7 +5362,6 @@
               "__guid": "d3a4a344-ab4a-42e1-a9e8-6acd54b281c8",
               "Flags": 0,
               "Name": "Chevron 1",
-              "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
               "Components": [
@@ -5469,7 +5430,6 @@
               "__guid": "1d8ae474-cd89-41b7-87ec-6f1b8237dc6b",
               "Flags": 0,
               "Name": "Chevron 2",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
               "Components": [
@@ -5538,7 +5498,6 @@
               "__guid": "e71f5da8-3cb9-4a1a-a580-eb68d020292a",
               "Flags": 0,
               "Name": "Chevron 3",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
               "Components": [
@@ -5607,7 +5566,6 @@
               "__guid": "773fcf4b-2731-4ec9-ab3e-0b9986471c5f",
               "Flags": 0,
               "Name": "Chevron 4",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
               "Components": [
@@ -5676,7 +5634,6 @@
               "__guid": "821fe5e7-611c-41f4-8916-0bd3d19c9046",
               "Flags": 0,
               "Name": "Chevron 5",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
               "Components": [
@@ -5745,7 +5702,6 @@
               "__guid": "c4a089ab-e419-4003-b388-d5cad80ad63c",
               "Flags": 0,
               "Name": "Chevron 6",
-              "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
               "Components": [
@@ -5814,7 +5770,6 @@
               "__guid": "aa5fc06e-c429-4472-9e18-dd7e8d4da477",
               "Flags": 0,
               "Name": "Chevron 7",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -5882,7 +5837,6 @@
               "__guid": "b405486c-f57a-4e22-ae5c-1645aa2f6583",
               "Flags": 0,
               "Name": "Chevron 8",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
               "Components": [
@@ -5951,7 +5905,6 @@
               "__guid": "e0eee93a-e693-4b13-826c-49056dc969bf",
               "Flags": 0,
               "Name": "Chevron 9",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
               "Components": [
@@ -6020,14 +5973,13 @@
               "__guid": "8865db5b-59ff-4cb3-94a3-3e6472da1264",
               "Flags": 0,
               "Name": "Ring",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "1e8fe67d-2827-4d98-a7b5-aeb0f2301e08",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "",
+                  "CurRingSymbol": "#",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -6105,7 +6057,6 @@
               "__guid": "a3712a68-8aea-467d-9696-e8c5d92e491b",
               "Flags": 0,
               "Name": "Chevron 1",
-              "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
               "Components": [
@@ -6175,7 +6126,6 @@
               "__guid": "b33d6953-059b-4ffb-bd08-d4bd16980fec",
               "Flags": 0,
               "Name": "Chevron 2",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
               "Components": [
@@ -6245,7 +6195,6 @@
               "__guid": "065107ef-99e8-467c-bdaa-a0ff7dd4640f",
               "Flags": 0,
               "Name": "Chevron 3",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
               "Components": [
@@ -6315,7 +6264,6 @@
               "__guid": "cf90da2d-0bfa-4aaf-8724-d113969ade71",
               "Flags": 0,
               "Name": "Chevron 4",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
               "Components": [
@@ -6385,7 +6333,6 @@
               "__guid": "a502a7a6-468b-4eac-8aa2-661db6598637",
               "Flags": 0,
               "Name": "Chevron 5",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
               "Components": [
@@ -6455,7 +6402,6 @@
               "__guid": "14220213-dee4-4bd3-9821-ff8de86efbd3",
               "Flags": 0,
               "Name": "Chevron 6",
-              "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
               "Components": [
@@ -6525,7 +6471,6 @@
               "__guid": "756d75ef-2784-418c-b7f3-afacc58ecf23",
               "Flags": 0,
               "Name": "Chevron 7",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -6594,7 +6539,6 @@
               "__guid": "6c76f16e-4e7f-4f86-84a6-a08c077d6ed2",
               "Flags": 0,
               "Name": "Chevron 8",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
               "Components": [
@@ -6664,7 +6608,6 @@
               "__guid": "60366a9c-6f36-4ef1-a097-c62bd0e7b497",
               "Flags": 0,
               "Name": "Chevron 9",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
               "Components": [
@@ -6734,7 +6677,6 @@
               "__guid": "bb921ef4-be72-41dd-b57f-20951de40d9d",
               "Flags": 0,
               "Name": "Ring",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -7668,14 +7610,13 @@
               "__guid": "37bbc37c-87bc-4600-8f72-b854822f4a86",
               "Flags": 0,
               "Name": "Ring",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.Components.Stargate.StargateRingUniverse",
                   "__guid": "80859bc8-e72d-451c-b2ea-a1eed09418bb",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "",
+                  "CurRingSymbol": " ",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -7739,7 +7680,6 @@
                   "__guid": "560cc7a5-3606-4def-806d-af5daefc3bbb",
                   "Flags": 0,
                   "Name": "Chevrons",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -7831,7 +7771,6 @@
               "__guid": "6be0bc3d-ad4a-4f6d-bdc9-6205dc1c51ca",
               "Flags": 0,
               "Name": "Chevron 1",
-              "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
               "Components": [
@@ -7900,7 +7839,6 @@
               "__guid": "6ee64ae3-5759-4764-a695-51c866c9f2ee",
               "Flags": 0,
               "Name": "Chevron 2",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
               "Components": [
@@ -7969,7 +7907,6 @@
               "__guid": "887308d0-0acb-4c38-942c-74b29cc5d2fd",
               "Flags": 0,
               "Name": "Chevron 3",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
               "Components": [
@@ -8038,7 +7975,6 @@
               "__guid": "40097165-c82b-4952-8002-0ea27c5c36b5",
               "Flags": 0,
               "Name": "Chevron 4",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
               "Components": [
@@ -8107,7 +8043,6 @@
               "__guid": "54817251-c5c7-4ed5-84a8-65f1f78a6fa7",
               "Flags": 0,
               "Name": "Chevron 5",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
               "Components": [
@@ -8176,7 +8111,6 @@
               "__guid": "5c04c700-60ae-4e95-9780-19561974d41a",
               "Flags": 0,
               "Name": "Chevron 6",
-              "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
               "Components": [
@@ -8245,7 +8179,6 @@
               "__guid": "f9f4a45e-80ff-47ce-9cc6-ffbeec34b46a",
               "Flags": 0,
               "Name": "Chevron 7",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -8313,7 +8246,6 @@
               "__guid": "5674cbe2-048a-41ad-bb97-08b1ab9b7963",
               "Flags": 0,
               "Name": "Chevron 8",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
               "Components": [
@@ -8382,7 +8314,6 @@
               "__guid": "6143823e-cfc1-454d-b76f-87e2fc7695a9",
               "Flags": 0,
               "Name": "Chevron 9",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
               "Components": [
@@ -8451,7 +8382,6 @@
               "__guid": "12a708de-1f45-4ca6-b97e-fda562c6c052",
               "Flags": 0,
               "Name": "Ring",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -8472,7 +8402,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingMovie",
                   "__guid": "2f910a81-783c-4d6c-ab9b-38f44c5848d6",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "",
+                  "CurRingSymbol": "#",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -8573,6 +8503,12 @@
                   "__type": "ZPMSlot",
                   "__guid": "e4fbd724-c43e-400f-93d0-78362c4516b3",
                   "StartsUp": false,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "47cebe2b-479d-4469-a612-392e32344b79",
+                    "go": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
+                    "component_type": "AttachPoint"
+                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -8609,6 +8545,12 @@
                   "__type": "ZPMSlot",
                   "__guid": "efeece8c-a358-4d1b-8dad-8d765ce8d602",
                   "StartsUp": true,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
+                    "go": "f1d2bc28-9d2e-43ec-b6d8-75387d2218e4",
+                    "component_type": "AttachPoint"
+                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -8645,6 +8587,12 @@
                   "__type": "ZPMSlot",
                   "__guid": "617044ce-e9fa-4cb6-807c-dccc20e456f8",
                   "StartsUp": true,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "403b7767-a194-417c-8a5a-0f999b4c6209",
+                    "go": "22fa9845-e092-441d-8987-e47f03196ea8",
+                    "component_type": "AttachPoint"
+                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -8706,6 +8654,12 @@
                   "__type": "ZPMSlot",
                   "__guid": "d7da6255-a719-4eee-b769-6c8935e4918f",
                   "StartsUp": false,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "9b1e8f48-9e52-4e31-b714-6f2fe632259d",
+                    "go": "090f73e4-19ae-4847-9128-494f8c0b2584",
+                    "component_type": "AttachPoint"
+                  },
                   "MoveDistance": 16,
                   "MoveTime": 2.2
                 },
@@ -8800,6 +8754,12 @@
                   "__type": "ZPMSlot",
                   "__guid": "ef48f887-2b77-4447-89ea-a2d56e7d6b4c",
                   "StartsUp": false,
+                  "AttachPoint": {
+                    "_type": "component",
+                    "component_id": "62c1ea37-7adf-4c8f-a5ed-eb1faeaec160",
+                    "go": "5fbfc3c9-0264-40b0-be63-ac9fc9c943f4",
+                    "component_type": "AttachPoint"
+                  },
                   "MoveDistance": 2,
                   "MoveTime": 0.5
                 },
@@ -9051,7 +9011,6 @@
           "__guid": "525d6089-8e86-4271-b407-d2a3d2fa5f7f",
           "Flags": 0,
           "Name": "Ground",
-          "Position": "0,0,0",
           "Scale": "20,20,1",
           "Enabled": true,
           "Components": [
@@ -9084,7 +9043,6 @@
           "__guid": "447d9577-b0c2-432d-bace-2eca153721d6",
           "Flags": 0,
           "Name": "Sun",
-          "Position": "0,0,0",
           "Rotation": "-0.2272705,-0.2294598,0.9183475,-0.2287664",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -9104,7 +9062,6 @@
           "__guid": "9fcc02af-218c-4878-a3b6-00d872699659",
           "Flags": 0,
           "Name": "2D Skybox",
-          "Position": "0,0,0",
           "Tags": "skybox",
           "Enabled": true,
           "Components": [
@@ -9141,7 +9098,6 @@
           "__guid": "d43c2c7d-631c-40be-99f4-ae82750c07fe",
           "Flags": 0,
           "Name": "Gradient Fog",
-          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -9160,7 +9116,6 @@
           "__guid": "9316bb88-4ab5-42c7-a401-24ccfb60e0aa",
           "Flags": 0,
           "Name": "Cubemap Fog",
-          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -9229,7 +9184,6 @@
               "__guid": "5d1123e5-8eb8-46d2-ae4b-20a30ad67451",
               "Flags": 0,
               "Name": "Chevron 1",
-              "Position": "0,0,0",
               "Rotation": "-0.3420201,0,0,0.9396926",
               "Enabled": true,
               "Components": [
@@ -9298,7 +9252,6 @@
               "__guid": "379d10ea-1244-44cb-946d-efba44fba12f",
               "Flags": 0,
               "Name": "Chevron 2",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,0.7660444",
               "Enabled": true,
               "Components": [
@@ -9367,7 +9320,6 @@
               "__guid": "b973a10b-145f-49c3-aeb1-786bf1780472",
               "Flags": 0,
               "Name": "Chevron 3",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,0.5",
               "Enabled": true,
               "Components": [
@@ -9436,7 +9388,6 @@
               "__guid": "b7f8d173-13ed-442d-9d3a-b2f2e7a94ff2",
               "Flags": 0,
               "Name": "Chevron 4",
-              "Position": "0,0,0",
               "Rotation": "-0.8660254,0,0,-0.5000001",
               "Enabled": true,
               "Components": [
@@ -9505,7 +9456,6 @@
               "__guid": "ca175132-0963-4a7d-a089-4edd151027fe",
               "Flags": 0,
               "Name": "Chevron 5",
-              "Position": "0,0,0",
               "Rotation": "-0.6427876,0,0,-0.7660444",
               "Enabled": true,
               "Components": [
@@ -9574,7 +9524,6 @@
               "__guid": "3797e60e-a3e9-4220-8c2b-b715754e3da4",
               "Flags": 0,
               "Name": "Chevron 6",
-              "Position": "0,0,0",
               "Rotation": "-0.3420202,0,0,-0.9396926",
               "Enabled": true,
               "Components": [
@@ -9643,7 +9592,6 @@
               "__guid": "31b6029e-45ee-4cb6-8a0a-f4c1a2b565eb",
               "Flags": 0,
               "Name": "Chevron 7",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -9711,7 +9659,6 @@
               "__guid": "788e77cd-4cab-4c71-b938-b898c02b3e25",
               "Flags": 0,
               "Name": "Chevron 8",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,0.1736482",
               "Enabled": true,
               "Components": [
@@ -9780,7 +9727,6 @@
               "__guid": "0db55fc8-9859-42d3-820a-3a3230c609dc",
               "Flags": 0,
               "Name": "Chevron 9",
-              "Position": "0,0,0",
               "Rotation": "-0.9848077,0,0,-0.1736482",
               "Enabled": true,
               "Components": [
@@ -9849,7 +9795,6 @@
               "__guid": "9df89095-ad2a-41e8-9286-0da0e624f714",
               "Flags": 0,
               "Name": "Ring",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -12836,7 +12781,6 @@
           "__guid": "ce6d818e-aa77-4fb4-87e9-8c66aa73d2df",
           "Flags": 0,
           "Name": "Volumetric Fog",
-          "Position": "0,0,0",
           "Components": [
             {
               "__type": "Sandbox.VolumetricFogVolume",
@@ -13013,59 +12957,28 @@
       ]
     },
     {
-      "__guid": "e82f5e3b-6fdd-4d0c-8ffc-88f50e3786a0",
+      "__guid": "dbc66218-4bbc-4d4c-bd60-7620ceb0ddd2",
       "Flags": 0,
-      "Name": "World 5 (SGC)",
+      "Name": "World 5 (SGC",
       "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
-          "__guid": "44dcbbca-0af7-4338-8a17-4d51640b8851",
+          "__guid": "31bea3dd-3cb7-4247-956b-a63cd5fed0f9",
           "WorldIndex": 5
         }
       ],
       "Children": [
         {
-          "__guid": "41ab9f87-3edf-4057-9623-a7b585c7806c",
-          "Flags": 0,
-          "Name": "Sun",
-          "Rotation": "0.3211343,0.7255905,-0.1164775,0.5973477",
-          "Tags": "light_directional,light",
-          "Components": [
-            {
-              "__type": "Sandbox.DirectionalLight",
-              "__guid": "5587f94f-fe6a-4889-98b9-33056228019f",
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Shadows": true,
-              "SkyColor": "0,0,0,0"
-            }
-          ]
-        },
-        {
-          "__guid": "772092b7-768c-4333-8dfd-534c301dcaee",
-          "Flags": 0,
-          "Name": "2D Skybox",
-          "Tags": "skybox",
-          "Components": [
-            {
-              "__type": "Sandbox.SkyBox2D",
-              "__guid": "535ac3b8-3e1e-4f18-a6f8-4901a6119a3b",
-              "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "f69d20a2-2584-4b40-aa37-aaf295392008",
+          "__guid": "4f66f59e-acb6-4df4-b31f-fd8e2fa11fc7",
           "Flags": 0,
           "Name": "Map",
+          "Position": "0,522,0",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.MapInstance",
-              "__guid": "089899d4-b10c-4c6a-b52a-095b29d95bc1",
+              "__guid": "04e12adf-6e12-4470-952d-c85bed2a59ad",
               "__version": 1,
               "EnableCollision": true,
               "MapName": "maps/sg_sgc.vmap",
@@ -13078,3356 +12991,21 @@
           "Children": []
         },
         {
-          "__guid": "6098929b-fc8e-4ff8-b941-d7fb7283dd1e",
+          "__guid": "b827959d-f93c-4dcf-80c0-90abc2a7636d",
           "Flags": 0,
-          "Name": "Dhd (Atlantis)",
-          "Position": "-0.00002664327,-400.9999,0",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "NetworkMode": 1,
-          "NetworkOrphaned": 1,
-          "OwnerTransfer": 0,
-          "__Prefab": "prefabs/dhdatlantis.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "fa1178e2-d201-4ba1-a9ae-2d39b3dd09a5",
-          "Flags": 0,
-          "Name": "Blastdoor C1",
-          "Position": "-232,-224,0",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "6b889840-c24a-44a1-9f10-0a56ce1cd682",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "8e89936b-e0a7-4064-bd01-3b8a6c3267ec",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c1.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "f22f18b4-a817-4fd7-a763-93f90e61da93",
-                  "CurrentDoorState": "Closed",
-                  "CurrentMoveDistance": 0,
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 101,
-                  "DoorMoveTime": 5,
-                  "DoorType": "Sliding",
-                  "FlipDirection": false,
-                  "LocalMoveDirection": "0,-1,0",
-                  "Locked": false,
-                  "RotationOrigin": "0,0,0",
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "4e7c610e-6c6d-4a9b-bc25-5d52e1f09ce1",
-                  "Center": "-1,0,62",
-                  "IsTrigger": false,
-                  "Scale": "10,104,124",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "e2527b70-8c64-4112-918f-063ce3838285",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "f22f18b4-a817-4fd7-a763-93f90e61da93",
-                      "go": "6b889840-c24a-44a1-9f10-0a56ce1cd682",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "2acba090-250b-402a-8778-40f711f848f4",
-          "Flags": 0,
-          "Name": "Blastdoor C4",
-          "Position": "-509,-232,0",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "c6e573cc-be8c-4d8b-a87c-d5e684030fc1",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,141",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "2f68393d-fea6-4cad-84ac-6d63bfd79c8c",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c4.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "c9df4cee-1c57-4fd4-9565-32f775c13337",
-                  "CurrentDoorState": "Open",
-                  "CurrentMoveDistance": 141,
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 141,
-                  "DoorMoveTime": 5,
-                  "DoorType": "Sliding",
-                  "FlipDirection": false,
-                  "LocalMoveDirection": "0,0,1",
-                  "Locked": false,
-                  "RotationOrigin": "0,0,0",
-                  "StartsOpen": true
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "ea4c0fae-99f8-428d-b95d-6f6e751ba477",
-                  "Center": "0,0,71",
-                  "IsTrigger": false,
-                  "Scale": "10,172,142",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "f829d1bd-b082-4f7d-8ed2-f7bb4dff9473",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "c9df4cee-1c57-4fd4-9565-32f775c13337",
-                      "go": "c6e573cc-be8c-4d8b-a87c-d5e684030fc1",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "2f436333-f7e9-4450-a863-c7319774de00",
-          "Flags": 0,
-          "Name": "Blastdoor B2",
-          "Position": "-347,-800,0",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "ae97fab3-3894-4dac-a7f6-c23a602357cd",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "8da5b194-6671-46c0-b197-92fa7507e562",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_b2.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "b11d6d2a-1f5c-4bd6-bb36-1d607e7a4f54",
-                  "CurrentDoorState": "Closed",
-                  "CurrentMoveDistance": 0,
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 83,
-                  "DoorMoveTime": 5,
-                  "DoorType": "Sliding",
-                  "FlipDirection": false,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "RotationOrigin": "0,0,0",
-                  "StartsOpen": false
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "41b9ff1e-915f-45cb-9b03-6644f6316839",
-                  "Center": "0,0,54",
-                  "IsTrigger": false,
-                  "Scale": "10,84,108",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "4aa10dd3-7caa-4c7d-b156-8c374fa5ae77",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "b11d6d2a-1f5c-4bd6-bb36-1d607e7a4f54",
-                      "go": "ae97fab3-3894-4dac-a7f6-c23a602357cd",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "24de614c-bea5-494f-b5a8-fd934ddda58b",
-          "Flags": 0,
-          "Name": "Blastdoor C2",
-          "Position": "242,-320,0.00001412115",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "bf2b394d-f2bb-4d71-9399-89d3e3397528",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,101,0",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "bf4f3ab3-c3cc-4c57-bded-e63749517720",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c2.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "20c0535d-a4dc-4ac5-becd-0af986e5a8d0",
-                  "CurrentDoorState": "Open",
-                  "CurrentMoveDistance": 101,
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 101,
-                  "DoorMoveTime": 5,
-                  "DoorType": "Sliding",
-                  "FlipDirection": false,
-                  "LocalMoveDirection": "0,1,0",
-                  "Locked": false,
-                  "RotationOrigin": "0,0,0",
-                  "StartsOpen": true
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "f01cd434-deb3-4ab9-80ee-2c12abb0c557",
-                  "Center": "-1,0,62",
-                  "IsTrigger": false,
-                  "Scale": "10,104,124",
-                  "Static": false
-                },
-                {
-                  "__type": "DoorController",
-                  "__guid": "cd72772a-244a-4394-86fe-240deddf6178",
-                  "Doors": [
-                    {
-                      "_type": "component",
-                      "component_id": "20c0535d-a4dc-4ac5-becd-0af986e5a8d0",
-                      "go": "bf2b394d-f2bb-4d71-9399-89d3e3397528",
-                      "component_type": "Door"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "907cb229-35c8-4539-8304-3d3962e2a660",
-          "Flags": 0,
-          "Name": "Blastdoor C3L",
-          "Position": "0,-439,0.00001412115",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "9d90cda6-dcf3-4e85-b8bb-dad3dbb08aeb",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,388",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "9d597f62-670a-4bbd-bed3-57dc20728696",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c3l.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
-                  "CurrentDoorState": "Open",
-                  "CurrentMoveDistance": 388,
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 388,
-                  "DoorMoveTime": 8,
-                  "DoorType": "Sliding",
-                  "FlipDirection": false,
-                  "LocalMoveDirection": "0,0,1",
-                  "Locked": false,
-                  "RotationOrigin": "0,0,0",
-                  "StartsOpen": true
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "b17b4570-0bf6-4584-83e7-f705f0acc08c",
-                  "Center": "0,0,215",
-                  "IsTrigger": false,
-                  "Scale": "324,10,430",
-                  "Static": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "8ac2eea1-c4af-4449-8a9d-d109ddb78875",
-          "Flags": 0,
-          "Name": "Button C3L",
-          "Position": "30.99967,-544.9998,94.9994",
-          "Rotation": "-0.0000002607702,0.0000005364418,-0.7071066,-0.7071069",
+          "Name": "2D Skybox",
+          "Tags": "skybox",
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.Prop",
-              "__guid": "05dd34ef-7594-45ca-ae2d-0d75a4c661ca",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/props/big_button/big_button.vmdl",
-              "StartAsleep": false,
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "aedb8997-1a28-417d-94bf-98d1c90be28a",
+              "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
               "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "DoorController",
-              "__guid": "a30bcb01-8c11-49ff-99a4-f0004220b6b6",
-              "Doors": [
-                {
-                  "_type": "component",
-                  "component_id": "81cc41c3-c514-475b-80f6-e956e5d02ec3",
-                  "go": "9d90cda6-dcf3-4e85-b8bb-dad3dbb08aeb",
-                  "component_type": "Door"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "cc63fafa-e2f7-4fec-a504-3a73f9e8a4f5",
-          "Flags": 0,
-          "Name": "Blastdoor C3U",
-          "Position": "0,-450,304",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Enabled": true,
-          "Children": [
-            {
-              "__guid": "ceca9914-ccb3-49df-a133-9649b4c47b6a",
-              "Flags": 0,
-              "Name": "door",
-              "Position": "0,0,84",
-              "Enabled": true,
-              "NetworkMode": 1,
-              "NetworkOrphaned": 1,
-              "OwnerTransfer": 0,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "8589d6c7-7716-406b-84c4-da974f66f102",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/map_parts/sgc/blastdoors/sgc_blastdoor_c3u.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
-                  "CurrentDoorState": "Open",
-                  "CurrentMoveDistance": 84,
-                  "DoorMoveCurve": [
-                    {
-                      "in": 1.5918369,
-                      "out": 0.77966106,
-                      "mode": "Flat"
-                    },
-                    {
-                      "x": 1,
-                      "y": 1,
-                      "mode": "Flat"
-                    }
-                  ],
-                  "DoorMoveDistance": 84,
-                  "DoorMoveTime": 4,
-                  "DoorType": "Sliding",
-                  "FlipDirection": false,
-                  "LocalMoveDirection": "0,0,1",
-                  "Locked": false,
-                  "RotationOrigin": "0,0,0",
-                  "StartsOpen": true
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "bcd8f626-1367-4da1-ab7a-38611f89f8f3",
-                  "Center": "0,0,58",
-                  "IsTrigger": false,
-                  "Scale": "232,8,116",
-                  "Static": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "496d73fc-f0f2-4de8-99a4-c4482e9be798",
-          "Flags": 0,
-          "Name": "Button C3U",
-          "Position": "127.9995,-459.0004,335.9995",
-          "Rotation": "-0.5,0.5000005,-0.4999997,-0.4999998",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "4f480da7-92c0-417d-8b98-89ee625d099b",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/props/big_button/big_button.vmdl",
-              "StartAsleep": false,
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "DoorController",
-              "__guid": "759740be-8bc8-4ca4-9869-9175796a1148",
-              "Doors": [
-                {
-                  "_type": "component",
-                  "component_id": "f1ca5857-d55b-4287-b371-8ee8c0d26d68",
-                  "go": "ceca9914-ccb3-49df-a133-9649b4c47b6a",
-                  "component_type": "Door"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "34db70d4-241f-4083-b3c3-39891cc04e26",
-          "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,-132,196",
-          "Tags": "light_point,light",
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "b40e8718-b3b3-44e7-8fa4-b1211a8d66ae",
-              "Attenuation": 1.25,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "Radius": 800.50024,
-              "Shadows": true
-            }
-          ]
-        },
-        {
-          "__guid": "dbc7df65-a78f-415a-bed1-aaea253706ff",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "212,-746,256",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "a23f430a-f3eb-4bbd-b2de-f7d45b210804",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "348,-748,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "7beeb8e5-94e2-492f-8faf-933d311f06d6",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "348,-524,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "cf4966f5-12a6-47d9-8bec-b5ec26e3f14c",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,-300,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "62699abf-a342-497e-bf6f-ba22aa953558",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,-76,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "3f9d1143-7983-4113-98e3-67de5f742e8e",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,140,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "c6a78667-3207-4ade-859b-fd03651d0ddd",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,356,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "295dc414-1b69-4b70-9a04-4ea026ee69c2",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-196,-746,256",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "0a83d5dc-96c2-453d-8a9e-a52cdfd722fc",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-196,-556,256",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "b9ddea6e-9056-4372-a051-fab9ce92fb77",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "212,-818,256",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "9de3ab66-6bfe-4bbf-9682-d6d43476958c",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "348,-820,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "9fbc2cf4-6c95-475e-b5e6-fb52fca7b8ca",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "348,-596,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "10e56a3f-369f-4f7a-a09b-ad4b084ad428",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,-372,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "a091b675-8c40-4fe4-a5ed-81457fcc4554",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,-148,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "9830baa2-1473-4676-9b50-fffa79855106",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,68,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "826e173a-80a8-4645-8df6-d67bf22c350f",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "320,284,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "fdfe67e9-3111-46b1-911b-58c9cc24d595",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-196,-818,256",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "250f8a2a-8f6e-4bca-90c8-f98f91ca8540",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-392,-816,468",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "09af1672-837e-42e5-8271-b3ed2d2f36ba",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-566,-816,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "2b24225f-e269-4222-ba2c-7bee44a94bd0",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-566,-672,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "a74ffaff-4517-47f5-a6c2-39337b2bf955",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-566,-544,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "0585535d-2c4d-4abd-a01c-3b943da33f82",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-686,-544,468",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "c7948740-d3a5-4fc9-b089-9226036032b9",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-816,-544,468",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "8579d371-7c2b-4437-99ca-91894380830a",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-196,-628,256",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "3b654c2f-74a1-4de4-9825-06a3fe67042b",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-0.0001100302,-613.9999,256",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "6e83f6b6-c09e-449a-bc7c-3d860653dd34",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "-72,-613.9998,256",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "18761627-0111-4240-bdb8-1e70100cf5cf",
-          "Flags": 0,
-          "Name": "Pit Light",
-          "Position": "71.99989,-613.9997,256",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/pit_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": false
-          }
-        },
-        {
-          "__guid": "9f4e7650-f919-48d7-82e2-bf82dbf95dd0",
-          "Flags": 0,
-          "Name": "Probe Gateroom",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "e17e5543-df11-4cd3-8ed8-eef4d990a67f",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-228,-458.7006,-0.1",
-                "Maxs": "238,424,560"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 5,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "b4d612d1-6681-4e15-8e66-4cc89108bbca",
-          "Flags": 0,
-          "Name": "Probe Longhall",
-          "Position": "320,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "07c82109-e879-459b-b5ca-3515c7b5b4b0",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-64.00004,-458.7006,-0.1",
-                "Maxs": "64,448,164"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 5,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "7656da6d-66cf-482c-9270-8d28f45e3172",
-          "Flags": 0,
-          "Name": "Probe Round Hallway",
-          "Position": "-674,-520,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "1b99929d-efab-48d4-82c1-66c225498d4c",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-300,-426.8007,-0.1",
-                "Maxs": "158,388.5001,164"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 5,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "618514d0-de60-44a0-a362-e5b769bd720a",
-          "Flags": 0,
-          "Name": "Probe Longhall",
-          "Position": "348,-736,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "150ef6ca-cc3e-48ec-9e1e-6d6acd99783a",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-36,-240,-0.1",
-                "Maxs": "36,288,164"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 5,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "59f61d47-e3ab-4aa2-b5f4-fa11f8dff197",
-          "Flags": 0,
-          "Name": "Probe Longhall",
-          "Position": "276,-646,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "1d2aa017-fc4c-4e5e-a28e-c005803ca553",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-38,-26,-0.1",
-                "Maxs": "36,26,146"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 5,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "cf91012c-8818-45d4-baa4-a5ff5e564fea",
-          "Flags": 0,
-          "Name": "Probe CR",
-          "Position": "0,-672,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "d80f8fd9-63f1-44df-bb02-d28c899502de",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-255.9996,-288,-0.1",
-                "Maxs": "288,238,236.0004"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 10,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "bb8673d9-32a9-46fd-a2d6-5c607056d1cf",
-          "Flags": 0,
-          "Name": "Probe General Office",
-          "Position": "-392,-564,272",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "7d741567-995d-4263-b825-45fe2e0b06f8",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-104,-316,-0.1",
-                "Maxs": "136,100,196"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 10,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "be512cb5-7650-4999-b63e-f33df8faf41b",
-          "Flags": 0,
-          "Name": "Probe Level 27 Corridors",
-          "Position": "-560,-564,272",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "0161f1e9-710f-49be-afbd-f302c5570764",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-72,-316,-0.1",
-                "Maxs": "64,76,196"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 10,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "10bc169c-7c1b-47eb-a81d-40264c758832",
-          "Flags": 0,
-          "Name": "Probe Level 27 Corridors",
-          "Position": "-822,-540,272",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "0a92f99f-0026-4a31-9953-c872dbc4fc85",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-72,-316,-0.1",
-                "Maxs": "64,76,196"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 10,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "de42bb27-37e5-4267-b1ab-3c4fb11bdb9d",
-          "Flags": 0,
-          "Name": "Probe BR",
-          "Position": "0,-672,212",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "426fc56f-9a71-4c1c-aacb-e334bc98c75c",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-255.9996,-288,-42",
-                "Maxs": "288,232,256"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.05,
-              "FrameInterval": 5,
-              "MaxDistance": 512,
-              "MultiBounce": false,
-              "Projection": "Box",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 4096,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "d0776d01-4fdb-4298-9dd1-2c037f6002c2",
-          "Flags": 0,
-          "Name": "caged_light01_wall",
-          "Position": "259.1375,-484.2021,218",
-          "Rotation": "0,-0,0.9537169,0.3007058",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "9a0bb659-9195-46cb-b0a4-bba226277dd9",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/caged_lights01/caged_light01_wall.vmdl",
-              "StartAsleep": false,
-              "Tint": "1,0.79767,0.1907,1"
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "4ea95d16-d985-4957-96a5-b54236348efc",
-              "Flags": 0,
-              "Name": "Point Light",
-              "Position": "0,10,-16",
-              "Tags": "light_point,light",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.PointLight",
-                  "__guid": "6bf40085-a0f9-4b21-93de-3af390c37b08",
-                  "Attenuation": 6.98,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "1,0.89217,0.50233,1",
-                  "Radius": 200,
-                  "Shadows": false
-                }
-              ]
-            },
-            {
-              "__guid": "57dcf107-15ee-4854-9371-34af82b5fc51",
-              "Flags": 0,
-              "Name": "Point Light",
-              "Position": "0,8,-8",
-              "Tags": "light_point,light",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.PointLight",
-                  "__guid": "644b1317-e599-4872-b0bb-b1226184c50c",
-                  "Attenuation": 8.64,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "0.35349,0.31732,0.13646,1",
-                  "Radius": 25.89998,
-                  "Shadows": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "5d974a42-79b6-4f6d-9432-1bfa2cbdbff4",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "208,-313.9995,164",
-          "Rotation": "0,0,-1,0.000001029172",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "2e672b42-a924-4ece-bbf5-5170254f6b5e",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "208,-148,164",
-          "Rotation": "0,0,-1,0.000001029172",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "95195461-3772-45e3-8f5c-cc746b7213fa",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "208,128,164",
-          "Rotation": "0,0,-1,0.000001029172",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "e517e278-f306-4f33-b253-e47c38d263e5",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "-208,128,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "6e859f94-4114-4ec0-ba69-d25ae095e360",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "208,304,164",
-          "Rotation": "0,0,-1,0.000001029172",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "b72d96da-d7e8-4554-820f-6309e34c14c4",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "-208,304,164",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "fce3bd91-854a-452d-a593-84a63b5b0188",
-          "Flags": 0,
-          "Name": "Gateroom Light",
-          "Position": "-0.00007534027,424,164",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/gateroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "d2e70b04-040a-415f-b414-66dc21d3556e",
-          "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,-198,320",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "4f5815ae-a3f2-453f-8998-fcd311b52e85",
-              "Attenuation": 4,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.96705,0.88372,1",
-              "Radius": 1024,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "8a651ad5-6ffd-4af6-befa-addcc60cfcaf",
-          "Flags": 0,
-          "Name": "Point Light",
-          "Position": "0,108,320",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "f5622d1d-2779-492f-8951-8a801b08dacf",
-              "Attenuation": 4,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.96705,0.88372,1",
-              "Radius": 1024,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "5c03530f-09cf-4866-896e-62c1ab28ce5a",
-          "Flags": 0,
-          "Name": "Spot Light",
-          "Position": "0,-418,404",
-          "Rotation": "-0.1202328,0.1202328,0.6968098,0.6968099",
-          "Tags": "light_spot,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "9100786a-4de6-4634-a23b-358a154ec091",
-              "Attenuation": 4,
-              "ConeInner": 40,
-              "ConeOuter": 80,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "3.65492,3.91948,4,1",
-              "Radius": 1240,
-              "Shadows": true
-            }
-          ]
-        },
-        {
-          "__guid": "4d60a335-c402-4c8f-af9e-f569f467eeaa",
-          "Flags": 0,
-          "Name": "Briefingroom Light",
-          "Position": "-196,-812,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "fc360c52-cea9-47ea-8fbc-8daa5860b817",
-          "Flags": 0,
-          "Name": "Briefingroom Light (4)",
-          "Position": "-196,-672,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "d2b16e73-e66a-490c-9277-6ee79ce635d6",
-          "Flags": 0,
-          "Name": "Briefingroom Light (4)",
-          "Position": "-384,-672,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "f06b78d0-d41a-42f7-b127-ea2f5f60bbe0",
-          "Flags": 0,
-          "Name": "Briefingroom Light (5)",
-          "Position": "-196,-536,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "a1ee58b7-3b37-412d-981b-56385334726b",
-          "Flags": 0,
-          "Name": "Briefingroom Light (5)",
-          "Position": "-384,-536,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "8473a59a-c9a4-41be-85df-13c0f5b16caa",
-          "Flags": 0,
-          "Name": "Briefingroom Light (6)",
-          "Position": "-64,-536,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "a9dec505-566a-436d-ac13-e2741a1b6342",
-          "Flags": 0,
-          "Name": "Briefingroom Light (7)",
-          "Position": "64,-536,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "a4b52ba1-5862-4458-905d-a11e4dd423e5",
-          "Flags": 0,
-          "Name": "Briefingroom Light (1)",
-          "Position": "-64,-812,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "6f8c311c-e3a8-4c1a-a33b-42111c369a62",
-          "Flags": 0,
-          "Name": "Briefingroom Light (2)",
-          "Position": "64,-812,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "4dfc12a5-1aff-47e8-9608-0696fd5bb8ef",
-          "Flags": 0,
-          "Name": "Briefingroom Light (3)",
-          "Position": "212,-812,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "0ff05561-8ba3-4f9c-b8eb-e9808b058f5a",
-          "Flags": 0,
-          "Name": "Briefingroom Light (3)",
-          "Position": "212,-672,468",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "79fe3ac8-be0d-486c-a7b5-31e933dbd3b0",
-          "Flags": 0,
-          "Name": "briefingroom_center_light",
-          "Position": "0,-672,464",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/lights/briefingroom_center_light.prefab",
-          "__PrefabVariables": {
-            "IsOn": true
-          }
-        },
-        {
-          "__guid": "3b195074-cf99-47f0-a333-b714a14f5532",
-          "Flags": 0,
-          "Name": "Briefingroom Table",
-          "Position": "0,-672,272",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "849418d6-2767-4104-8a6e-d4d16fd9a9ee",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/map_parts/sgc/tables/briefing_room/briefingroom_table.vmdl",
-              "StartAsleep": false,
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "16524003-5ea2-448e-8898-1fd9712a0762",
-          "Flags": 0,
-          "Name": "office_chair",
-          "Position": "94.71688,-671.9295,297.338",
-          "Rotation": "0,0,0.05498262,0.9984873",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "3d2041ca-088d-4100-a318-4248f4172a4a",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "9340db97-2c71-48c2-9c2e-800b6a9fa637",
-          "Flags": 0,
-          "Name": "office_chair (1)",
-          "Position": "-94,-672,297.338",
-          "Rotation": "0,0,0.9981887,0.06016004",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "116deede-62e0-4d74-ab2c-177716aa3b57",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "8b206fa1-4ae9-43cb-b621-4218c9088752",
-          "Flags": 0,
-          "Name": "office_chair (2)",
-          "Position": "-38.75993,-633.1718,297.338",
-          "Rotation": "0,0,0.720903,0.693036",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "48e12531-1c77-4a2e-bab3-2b1cf17b553c",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "c91493f4-1c38-4279-b0a9-300a67e0d6a7",
-          "Flags": 0,
-          "Name": "office_chair (5)",
-          "Position": "46.46539,-710.934,297.338",
-          "Rotation": "0,0,-0.6312252,0.7755997",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "f7e72cae-acb0-4d3b-a394-39880c76ada5",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "db6a286f-ec79-4290-af0b-da2e2b2ddf30",
-          "Flags": 0,
-          "Name": "office_chair (3)",
-          "Position": "5.795679,-632.9527,297.338",
-          "Rotation": "0,0,0.6929709,0.7209657",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "8b122b6f-ab2c-40a5-8d89-5eeecf50d4b5",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "8d81efa6-9265-4bba-b8cb-55e1e99f6d38",
-          "Flags": 0,
-          "Name": "office_chair (6)",
-          "Position": "0.7031205,-709.7489,297.338",
-          "Rotation": "0,0,-0.7311738,0.6821915",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "1a6fff6d-b0c9-4d33-9db4-093f3ea51c2b",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "abfb11d9-cd00-4b25-b0e3-0c0b03293f3f",
-          "Flags": 0,
-          "Name": "office_chair (4)",
-          "Position": "44.74294,-631.3723,297.338",
-          "Rotation": "0,0,0.5976837,0.801732",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "839a8a47-27ef-4fa3-a0a6-8a74cadc14e7",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "577b9219-29b3-4242-af04-6d7db753edfb",
-          "Flags": 0,
-          "Name": "office_chair (7)",
-          "Position": "-48.1818,-709.9248,297.338",
-          "Rotation": "0,0,-0.6723353,0.7402467",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "ca284952-8e25-4e0e-abb0-070dc85dce2a",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "Model": "models/furniture/office_chair.vmdl",
-              "StartAsleep": false,
-              "Tint": "0.28372,0.28372,0.28372,1"
-            }
-          ]
-        },
-        {
-          "__guid": "6fd4b12d-b2b6-4cb1-b875-e50705517ff3",
-          "Flags": 0,
-          "Name": "mug_01",
-          "Position": "-230,-646,308.034",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "1fff6c1c-8a35-4f8e-9755-f524d5473f2d",
-              "BodyGroups": 18446744073709551615,
-              "Health": 1,
-              "IsStatic": false,
-              "Model": "models/props/mugs/mug_01.vmdl",
-              "StartAsleep": false,
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "86b40757-af8d-471c-b80a-80b9de8cca70",
-          "Flags": 0,
-          "Name": "Door Control Room",
-          "Position": "53.99982,-963.9999,0",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "a00a783c-8112-4aff-ad5d-afe4c8f80cce",
-          "Flags": 0,
-          "Name": "Door BR GO",
-          "Position": "-262,-534,272",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09449,0.14324,0.19535,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "48aad338-758f-4442-a98f-e67f9939a39b",
-          "Flags": 0,
-          "Name": "Door Corridor GO",
-          "Position": "-421.9998,-743.9999,272",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": true,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "cc256179-2072-4b2b-92be-81d19919fdb6",
-          "Flags": 0,
-          "Name": "Door CR DHD",
-          "Position": "-309.9998,-736,0",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "0d3c3bb8-c963-4702-bc69-c3a4a6e4d64c",
-          "Flags": 0,
-          "Name": "Door BR GO",
-          "Position": "-828,478,60",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 92,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "ab268ca4-5f5a-479a-8653-b4a1e3ed85f3",
-          "Flags": 0,
-          "Name": "Door BR Corridor",
-          "Position": "-262,-806,272",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": true,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "b7b84ea8-86fa-42cc-bd4f-b1957ea6e44e",
-          "Flags": 0,
-          "Name": "Door Corridor 1",
-          "Position": "-626,-806,272",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "17f65f63-c78e-4ad0-a714-db35b1d7f1f3",
-          "Flags": 0,
-          "Name": "Door Corridor 2",
-          "Position": "-626,-670,272",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": false,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Cylinder",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "e7e8f046-7464-41ba-a77e-cc5e5de53bac",
-          "Flags": 0,
-          "Name": "Door Toilets Men",
-          "Position": "-234.0002,-963.9996,0",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": true,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Round",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "460348bd-6ad3-4f4e-820b-07f5ea32ff06",
-          "Flags": 0,
-          "Name": "Door Toilets Women",
-          "Position": "-390.0002,-963.9993,0",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "__Prefab": "prefabs/doors/sgc_door_single.prefab",
-          "__PrefabVariables": {
-            "Locked": true,
-            "Starts Open": false,
-            "Door Move Distance": 120,
-            "Door Handle Type": "Round",
-            "Has Keyway": false,
-            "Flip Keyway": false,
-            "Flip Door Side": false,
-            "Has Window": false,
-            "Door Color": "0.09412,0.14118,0.19608,1",
-            "Stripe Color": "1,1,1,1",
-            "Has Stripe": false
-          }
-        },
-        {
-          "__guid": "a709cf63-225f-44ec-a9e0-9e396ba8ab2b",
-          "Flags": 0,
-          "Name": "stargatemilkyway",
-          "Position": "0,216,160",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Scale": "1.1,1.1,1.1",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "489a5416-fc58-454a-ac8e-e5b09335e08c",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "30f15714-8993-4fc0-93cc-59164a4bd649",
-              "IsTrigger": false,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
-              "__guid": "42c4d746-30bc-4434-b250-43b9ecd63580",
-              "AcceleratedDialup": false,
-              "AutoClose": true,
-              "CanOpenMenu": false,
-              "ChevronLightup": true,
-              "EventHorizonMaterialGroup": "default",
-              "GateAddress": "TAURIS",
-              "GateGlyphType": "MILKYWAY",
-              "GateGroup": "M@",
-              "GateLocal": false,
-              "GateName": "",
-              "GatePrivate": false,
-              "IrisType": "Standard",
-              "MovieDialingType": false,
-              "ShowWormholeCinematic": false
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "b0bc307b-8515-468e-a401-278318676b02",
-              "Flags": 0,
-              "Name": "Chevron 1",
-              "Position": "0,0,0",
-              "Rotation": "-0.3420201,0,0,0.9396926",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "3bdc52fa-ba0a-4ae6-aff9-62e3413f5364",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "57ccaa11-6687-4a56-b430-792401e83145",
-                    "go": "8aa066c0-9545-463e-bc9b-c66e2996dba9",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "93af626c-2abd-4d8a-b6e5-aa23306c9189",
-                    "go": "b0bc307b-8515-468e-a401-278318676b02",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 1,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "93af626c-2abd-4d8a-b6e5-aa23306c9189",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "8aa066c0-9545-463e-bc9b-c66e2996dba9",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01095581,136.5016",
-                  "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "57ccaa11-6687-4a56-b430-792401e83145",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "6c0453c5-5f4f-455f-a460-a9fc08ed1f43",
-              "Flags": 0,
-              "Name": "Chevron 2",
-              "Position": "0,0,0",
-              "Rotation": "-0.6427876,0,0,0.7660444",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "ef649acf-bc62-4a58-9206-aa5e7f6e9742",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "1e49d36f-d629-4a80-a6d0-acfc50f907ef",
-                    "go": "680a0ec8-0637-4140-a469-0227f7237b8d",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "c4361a77-c2fe-49e5-92ac-a60d930dfcea",
-                    "go": "6c0453c5-5f4f-455f-a460-a9fc08ed1f43",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 2,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "c4361a77-c2fe-49e5-92ac-a60d930dfcea",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "680a0ec8-0637-4140-a469-0227f7237b8d",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476437,-0.01095581,136.5016",
-                  "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "1e49d36f-d629-4a80-a6d0-acfc50f907ef",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "74be1228-fb07-4bce-b2a8-8bcdef148384",
-              "Flags": 0,
-              "Name": "Chevron 3",
-              "Position": "0,0,0",
-              "Rotation": "-0.8660254,0,0,0.5",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "311febc2-03fd-4931-ba12-b1a8812094f7",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "f42cdae4-80ae-4a82-ae60-d231d4c2a35e",
-                    "go": "9333d1bb-109a-460b-9484-79ed053a800a",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "41d9f3d2-5561-4523-8ce2-3410f9059a17",
-                    "go": "74be1228-fb07-4bce-b2a8-8bcdef148384",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 3,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "41d9f3d2-5561-4523-8ce2-3410f9059a17",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "9333d1bb-109a-460b-9484-79ed053a800a",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01086807,136.5016",
-                  "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "f42cdae4-80ae-4a82-ae60-d231d4c2a35e",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "5dc43ae5-d297-4efd-b770-d9386b438ba8",
-              "Flags": 0,
-              "Name": "Chevron 4",
-              "Position": "0,0,0",
-              "Rotation": "-0.8660254,0,0,-0.5000001",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "86db6bc0-4d73-4e23-9f76-c99547f249d9",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "6d32b205-3c75-4c28-b39f-0acf127c8875",
-                    "go": "2fd394a8-f4c6-43bc-85a0-1721b16bb421",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "72308cde-8e84-4500-9919-079151c66f4a",
-                    "go": "5dc43ae5-d297-4efd-b770-d9386b438ba8",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 4,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "72308cde-8e84-4500-9919-079151c66f4a",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "2fd394a8-f4c6-43bc-85a0-1721b16bb421",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476439,-0.01103973,136.5016",
-                  "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "6d32b205-3c75-4c28-b39f-0acf127c8875",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "d6683a6a-5200-4d6e-a1a2-84eb148b4a89",
-              "Flags": 0,
-              "Name": "Chevron 5",
-              "Position": "0,0,0",
-              "Rotation": "-0.6427876,0,0,-0.7660444",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "c43e550d-1efc-4768-a467-3ad3325b697e",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "4bb492ff-b2d0-4c88-9fc4-660aaa2fa24d",
-                    "go": "59930e0a-638e-4651-82e7-0b9028a0e115",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "b30996c4-fc15-4695-8d1d-a40d3fe92877",
-                    "go": "d6683a6a-5200-4d6e-a1a2-84eb148b4a89",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 5,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "b30996c4-fc15-4695-8d1d-a40d3fe92877",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "59930e0a-638e-4651-82e7-0b9028a0e115",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01096344,136.5016",
-                  "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "4bb492ff-b2d0-4c88-9fc4-660aaa2fa24d",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "b59b1522-126b-4116-8fe2-817d6befe742",
-              "Flags": 0,
-              "Name": "Chevron 6",
-              "Position": "0,0,0",
-              "Rotation": "-0.3420202,0,0,-0.9396926",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "bfec6d3d-786a-487b-a41f-d66e75ef9f39",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "a8f6e926-905c-4e7f-93c0-efed18c3d9e1",
-                    "go": "19cda92e-b141-4f3a-8f6b-f651fabe09b5",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "ac6bdc11-cb1c-447f-8eab-0018594ff3ae",
-                    "go": "b59b1522-126b-4116-8fe2-817d6befe742",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 6,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "ac6bdc11-cb1c-447f-8eab-0018594ff3ae",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "19cda92e-b141-4f3a-8f6b-f651fabe09b5",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476439,-0.01097107,136.5016",
-                  "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "a8f6e926-905c-4e7f-93c0-efed18c3d9e1",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "1b109985-efa6-45bf-85d8-7c3329fc9cb0",
-              "Flags": 0,
-              "Name": "Chevron 7",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "f5f4d29a-1e83-4732-9799-df68ebd98a78",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "90170fcd-aca2-4d42-8e28-19fd081f25f9",
-                    "go": "1d1a1f95-211b-4eba-932d-efeb8a36141b",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "9353c793-1df0-439e-8d92-dc3fd6a0b125",
-                    "go": "1b109985-efa6-45bf-85d8-7c3329fc9cb0",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 7,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "9353c793-1df0-439e-8d92-dc3fd6a0b125",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "1d1a1f95-211b-4eba-932d-efeb8a36141b",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.0109611,136.5016",
-                  "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "90170fcd-aca2-4d42-8e28-19fd081f25f9",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "d7bd7a68-9f76-4449-a842-2b81cb64e7cb",
-              "Flags": 0,
-              "Name": "Chevron 8",
-              "Position": "0,0,0",
-              "Rotation": "-0.9848077,0,0,0.1736482",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "0cd42b88-efc5-43ae-946d-d7e87c2c0af3",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "1f74ae71-26a8-4d84-a567-6ca36d3619cd",
-                    "go": "e57697ac-a270-4e48-b2b1-38e40e89ef20",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "45be10b8-953e-4456-ae20-bf2f8c8733cf",
-                    "go": "d7bd7a68-9f76-4449-a842-2b81cb64e7cb",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 8,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "45be10b8-953e-4456-ae20-bf2f8c8733cf",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "e57697ac-a270-4e48-b2b1-38e40e89ef20",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01098251,136.5017",
-                  "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "1f74ae71-26a8-4d84-a567-6ca36d3619cd",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "aac06cdf-3a1a-4177-a625-e61d6574b4db",
-              "Flags": 0,
-              "Name": "Chevron 9",
-              "Position": "0,0,0",
-              "Rotation": "-0.9848077,0,0,-0.1736482",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "aed398e3-9fe6-4993-bc9a-31eaa8bdd22e",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "59484b2a-c8c2-4511-9b0a-edbc2fe2b122",
-                    "go": "d0de70c2-3ede-405f-a2bd-1308da244518",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "632fb805-f9f2-4895-a1bf-794eb29f1e29",
-                    "go": "aac06cdf-3a1a-4177-a625-e61d6574b4db",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 9,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "632fb805-f9f2-4895-a1bf-794eb29f1e29",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "d0de70c2-3ede-405f-a2bd-1308da244518",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01093292,136.5017",
-                  "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "59484b2a-c8c2-4511-9b0a-edbc2fe2b122",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "3a2b6558-0580-419c-b405-6ef900f5a265",
-              "Flags": 0,
-              "Name": "Ring",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
-                  "__guid": "92156f21-1af6-4ab0-8094-05e22a04efc5",
-                  "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
-                  "RingAngle": 0,
-                  "RingModel": {
-                    "_type": "component",
-                    "component_id": "2085402f-a7f8-4e47-bc57-0d797c9e5832",
-                    "go": "3a2b6558-0580-419c-b405-6ef900f5a265",
-                    "component_type": "ModelRenderer"
-                  },
-                  "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
-                },
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "2085402f-a7f8-4e47-bc57-0d797c9e5832",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "992c1caa-70dd-405d-a2c5-88293600440d",
-          "Flags": 0,
-          "Name": "stargatemilkyway",
-          "Position": "3443.968,216,160",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Scale": "1.1,1.1,1.1",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "cf85336d-060f-43d4-bd2a-769d0b35adcd",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "c5acf0c7-4c7c-4603-9eb7-719c17cb0dab",
-              "IsTrigger": false,
-              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
-              "__guid": "89827ae8-d9b7-40f2-9e14-618d670cf5e1",
-              "AcceleratedDialup": false,
-              "AutoClose": true,
-              "CanOpenMenu": false,
-              "ChevronLightup": true,
-              "EventHorizonMaterialGroup": "default",
-              "GateAddress": "123456",
-              "GateGlyphType": "MILKYWAY",
-              "GateGroup": "M@",
-              "GateLocal": false,
-              "GateName": "",
-              "GatePrivate": false,
-              "IrisType": "Standard",
-              "MovieDialingType": false,
-              "ShowWormholeCinematic": false
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "607f41a4-17d7-4efd-927c-72a866b807a0",
-              "Flags": 0,
-              "Name": "Chevron 1",
-              "Position": "0,0,0",
-              "Rotation": "-0.3420201,0,0,0.9396926",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "03a34832-5787-43ee-8023-b4923b08485f",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "dc57f3b8-fabd-4ee7-904c-4c4e72655e81",
-                    "go": "0c2ac7be-ffc0-4b8c-86af-b978366d08f5",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "8beaf4f9-6cca-46c1-b128-f820813f30ea",
-                    "go": "607f41a4-17d7-4efd-927c-72a866b807a0",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 1,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "8beaf4f9-6cca-46c1-b128-f820813f30ea",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "0c2ac7be-ffc0-4b8c-86af-b978366d08f5",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01095581,136.5016",
-                  "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "dc57f3b8-fabd-4ee7-904c-4c4e72655e81",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "56e213ba-313a-45a1-8e0c-6293b783933c",
-              "Flags": 0,
-              "Name": "Chevron 2",
-              "Position": "0,0,0",
-              "Rotation": "-0.6427876,0,0,0.7660444",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "d66759c0-8222-4a62-a1bd-ff23b194ef85",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "6f310de2-08f5-4046-a29b-3008ea6974e0",
-                    "go": "23871fb2-4e45-4e62-8191-37477cd58065",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "a5cecacf-c7fc-47d7-9cb9-901b7d428058",
-                    "go": "56e213ba-313a-45a1-8e0c-6293b783933c",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 2,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "a5cecacf-c7fc-47d7-9cb9-901b7d428058",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "23871fb2-4e45-4e62-8191-37477cd58065",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476437,-0.01095581,136.5016",
-                  "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "6f310de2-08f5-4046-a29b-3008ea6974e0",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "44a93aab-f081-49ff-9447-633e0720caca",
-              "Flags": 0,
-              "Name": "Chevron 3",
-              "Position": "0,0,0",
-              "Rotation": "-0.8660254,0,0,0.5",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "6eb14c17-77d9-42f0-ba33-5c706db41c17",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "8d815927-e87c-4894-94ed-cfac1ffe72ef",
-                    "go": "4f054196-fed3-4710-8f65-6264eaa7e529",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "de687442-8d24-4e0d-945d-388aab8451c4",
-                    "go": "44a93aab-f081-49ff-9447-633e0720caca",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 3,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "de687442-8d24-4e0d-945d-388aab8451c4",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "4f054196-fed3-4710-8f65-6264eaa7e529",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01086807,136.5016",
-                  "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "8d815927-e87c-4894-94ed-cfac1ffe72ef",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "860abda8-7316-4f82-ba42-260ab399bb1b",
-              "Flags": 0,
-              "Name": "Chevron 4",
-              "Position": "0,0,0",
-              "Rotation": "-0.8660254,0,0,-0.5000001",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "dbe66acb-1ffa-4e64-b892-1f65f5482ff6",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "ff98e307-cee5-41be-bfc6-0c5178679300",
-                    "go": "6e12693a-a9a1-4042-b19c-1c8a32175c2f",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "69954695-60d0-4ffb-b9a8-32dc63a5ead1",
-                    "go": "860abda8-7316-4f82-ba42-260ab399bb1b",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 4,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "69954695-60d0-4ffb-b9a8-32dc63a5ead1",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "6e12693a-a9a1-4042-b19c-1c8a32175c2f",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476439,-0.01103973,136.5016",
-                  "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "ff98e307-cee5-41be-bfc6-0c5178679300",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "a6851425-723d-457b-a449-e92285b61182",
-              "Flags": 0,
-              "Name": "Chevron 5",
-              "Position": "0,0,0",
-              "Rotation": "-0.6427876,0,0,-0.7660444",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "bf7a63fc-b3c9-41e8-966c-a07c154ec41b",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "23c73f1a-f8f2-41f1-8b8b-fcb5891c9ac4",
-                    "go": "93bfeca5-f45d-48e1-bd56-45a04c8671eb",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "d52da86a-cf6f-412c-96d3-a74e8d8aeb3a",
-                    "go": "a6851425-723d-457b-a449-e92285b61182",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 5,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "d52da86a-cf6f-412c-96d3-a74e8d8aeb3a",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "93bfeca5-f45d-48e1-bd56-45a04c8671eb",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01096344,136.5016",
-                  "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "23c73f1a-f8f2-41f1-8b8b-fcb5891c9ac4",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "45b10c98-4a09-49fb-9d67-024246f06f4d",
-              "Flags": 0,
-              "Name": "Chevron 6",
-              "Position": "0,0,0",
-              "Rotation": "-0.3420202,0,0,-0.9396926",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "300b543f-8164-4124-a254-b349b61c3da8",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "7ffb8ae3-3848-4001-8f4f-8b726ccf3e63",
-                    "go": "91247812-1d09-469f-abc1-56b3ccd9eaf4",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "e4859026-22fc-430e-8628-dc89509c5454",
-                    "go": "45b10c98-4a09-49fb-9d67-024246f06f4d",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 6,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "e4859026-22fc-430e-8628-dc89509c5454",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "91247812-1d09-469f-abc1-56b3ccd9eaf4",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476439,-0.01097107,136.5016",
-                  "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "7ffb8ae3-3848-4001-8f4f-8b726ccf3e63",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "99cec1d6-8fc4-4d34-8c44-f3f9a26a3d73",
-              "Flags": 0,
-              "Name": "Chevron 7",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "5e00bf08-0236-4275-bd6b-7886e5ec13b2",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "cbfc0685-ac09-4c35-95d4-09f46ff76209",
-                    "go": "281f3109-e13f-443f-8ed9-3fde9d8dae46",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "35f3fb1e-f044-47dc-9d27-24b02edebdf1",
-                    "go": "99cec1d6-8fc4-4d34-8c44-f3f9a26a3d73",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 7,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "35f3fb1e-f044-47dc-9d27-24b02edebdf1",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "281f3109-e13f-443f-8ed9-3fde9d8dae46",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.0109611,136.5016",
-                  "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "cbfc0685-ac09-4c35-95d4-09f46ff76209",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "d92a858e-d04b-41d0-beff-ff8a4528df73",
-              "Flags": 0,
-              "Name": "Chevron 8",
-              "Position": "0,0,0",
-              "Rotation": "-0.9848077,0,0,0.1736482",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "da3344dc-dfb1-4b3a-bde5-38c80ca69164",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "abf3382a-77ed-4a1c-9b5b-78d59ded7e65",
-                    "go": "f73422e1-ecd4-41fb-a2e6-6931cad49a89",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "fddd9cd3-69ed-4711-9056-0adfa466ac89",
-                    "go": "d92a858e-d04b-41d0-beff-ff8a4528df73",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 8,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "fddd9cd3-69ed-4711-9056-0adfa466ac89",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "f73422e1-ecd4-41fb-a2e6-6931cad49a89",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01098251,136.5017",
-                  "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "abf3382a-77ed-4a1c-9b5b-78d59ded7e65",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "5cde3ad5-bf4d-4cba-8f22-6e54da969e6e",
-              "Flags": 0,
-              "Name": "Chevron 9",
-              "Position": "0,0,0",
-              "Rotation": "-0.9848077,0,0,-0.1736482",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.Chevron",
-                  "__guid": "1fb5e7ee-999f-4e21-a20c-3e5a68e111c8",
-                  "ChevronLight": {
-                    "_type": "component",
-                    "component_id": "099eac9b-4378-4f27-9070-117b60c0f491",
-                    "go": "1dd63f44-3d23-4e45-8158-9ba79a209747",
-                    "component_type": "PointLight"
-                  },
-                  "ChevronModel": {
-                    "_type": "component",
-                    "component_id": "c21fdf94-d4c7-4dbf-852f-a872bdd18274",
-                    "go": "5cde3ad5-bf4d-4cba-8f22-6e54da969e6e",
-                    "component_type": "SkinnedModelRenderer"
-                  },
-                  "Number": 9,
-                  "On": false,
-                  "Open": false
-                },
-                {
-                  "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "c21fdf94-d4c7-4dbf-852f-a872bdd18274",
-                  "BodyGroups": 18446744073709551615,
-                  "CreateBoneObjects": false,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-                  "Morphs": {},
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1",
-                  "UseAnimGraph": true
-                }
-              ],
-              "Children": [
-                {
-                  "__guid": "1dd63f44-3d23-4e45-8158-9ba79a209747",
-                  "Flags": 0,
-                  "Name": "Chevron Light",
-                  "Position": "9.476438,-0.01093292,136.5017",
-                  "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.PointLight",
-                      "__guid": "099eac9b-4378-4f27-9070-117b60c0f491",
-                      "__enabled": false,
-                      "Attenuation": 1,
-                      "FogMode": "Enabled",
-                      "FogStrength": 1,
-                      "LightColor": "1,0.41569,0,1",
-                      "Radius": 12,
-                      "Shadows": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "7150303f-06fc-44eb-8717-44c53af6045c",
-              "Flags": 0,
-              "Name": "Ring",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
-                  "__guid": "7a8a0488-21f3-4813-815c-d6ff3a0879b2",
-                  "_ringState": "STOPPED",
-                  "CurRingSymbol": "#",
-                  "RingAngle": 0,
-                  "RingModel": {
-                    "_type": "component",
-                    "component_id": "e54e14cf-3d4d-41e0-96c5-f5d67abe0719",
-                    "go": "7150303f-06fc-44eb-8717-44c53af6045c",
-                    "component_type": "ModelRenderer"
-                  },
-                  "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
-                },
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "e54e14cf-3d4d-41e0-96c5-f5d67abe0719",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": false,
-                    "AfterUILayer": false
-                  },
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
             }
           ]
         }
       ]
-    },
-    {
-      "__guid": "dad6e9c2-835d-4ee5-9f24-d33354aea0a5",
-      "Flags": 0,
-      "Name": "industrial_light",
-      "Position": "-823.9999,-548.0006,131.9995",
-      "Enabled": true,
-      "__Prefab": "prefabs/lights/industrial_light.prefab",
-      "__PrefabVariables": {
-        "IsOn": true
-      }
-    },
-    {
-      "__guid": "4cda273d-e9b4-4170-92c5-355ed7ce1c89",
-      "Flags": 0,
-      "Name": "industrial_light (1)",
-      "Position": "-726,-548.0006,131.9995",
-      "Enabled": true,
-      "__Prefab": "prefabs/lights/industrial_light.prefab",
-      "__PrefabVariables": {
-        "IsOn": true
-      }
     }
   ],
   "SceneProperties": {
@@ -16435,6 +13013,7 @@
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
     "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -16455,11 +13034,8 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [
-    "facepunch.big_button",
-    "facepunch.mug_01",
-    "fish.gt_shitty_pine_tree2",
-    "moman.officechair",
-    "saandy.caged_light01_wall"
+    "fish.gt_shitty_pine_tree2#23038"
   ],
+  "IsValid": true,
   "__version": 1
 }

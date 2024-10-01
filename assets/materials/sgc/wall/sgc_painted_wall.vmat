@@ -17,7 +17,7 @@ Layer0
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
-	g_vColorTint "[0.764706 0.752941 0.701961 0.000000]"
+	g_vColorTint "[0.576471 0.568627 0.517647 0.000000]"
 	TextureColor "materials/sgc/wall/painted_plaster_wall_color.png"
 
 	//---- Detail Texture ----

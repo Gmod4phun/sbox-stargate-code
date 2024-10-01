@@ -13,8 +13,10 @@
       "EditorReferences": [
         "facepunch.metal_painted_grey_a_hs#28954"
       ],
+      "IsWhitelistDisabled": false,
       "Metadata": {
-        "SingleAssetSource": "maps/prefabs/sgc/blastdoors/sgc_blastdoor_c3u.vmap"
+        "SingleAssetSource": "maps/prefabs/sgc/blastdoors/sgc_blastdoor_c3u.vmap",
+        "ParentPackage": "katka.scenegate"
       }
     }
   }
