@@ -170,6 +170,13 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -325,7 +332,7 @@
       "__guid": "59da95cc-6f09-42f5-aa76-b2ad2ce5c176",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "46.44046,2221.938,120",
+      "Position": "0,112,224",
       "Rotation": "0,0,0.7071069,0.7071066",
       "Enabled": true,
       "Components": [
@@ -487,6 +494,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -556,6 +570,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -625,6 +646,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -694,6 +722,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -763,6 +798,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -832,6 +874,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -900,6 +949,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -969,6 +1025,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -1038,6 +1101,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -1084,7 +1154,7 @@
                   "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                   "__guid": "e8f76788-1383-46b5-9bea-18306162be63",
                   "_ringState": "STOPPED",
-                  "CurRingSymbol": "",
+                  "CurRingSymbol": "#",
                   "RingAngle": 0,
                   "RingModel": {
                     "_type": "component",
@@ -1126,7 +1196,6 @@
               "__version": 1,
               "ClipMapLodExtentTexels": 128,
               "ClipMapLodLevels": 7,
-              "DebugView": "None",
               "EnableCollision": true,
               "IsTrigger": false,
               "RenderType": "Off",
@@ -1205,6 +1274,13 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -1259,6 +1335,13 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -2067,6 +2150,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2136,6 +2226,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2205,6 +2302,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2274,6 +2378,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2343,6 +2454,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2412,6 +2530,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2480,6 +2605,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2549,6 +2681,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2618,6 +2757,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -2664,7 +2810,7 @@
                       "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
                       "__guid": "074f77f0-e65b-42bd-9962-7f8d05881e93",
                       "_ringState": "STOPPED",
-                      "CurRingSymbol": "",
+                      "CurRingSymbol": "#",
                       "RingAngle": 0,
                       "RingModel": {
                         "_type": "component",
@@ -2715,6 +2861,13 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/atlantis_transporter/atlantis_transporter.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -3018,6 +3171,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "0a75bc84-f3ea-4fbc-8e80-9cf0f11050dc",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
               "Tint": "1,1,1,1"
             },
@@ -3216,6 +3370,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3233,6 +3394,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3271,6 +3439,13 @@
                           "CreateBoneObjects": false,
                           "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
                           "Morphs": {},
+                          "Parameters": {
+                            "bools": {},
+                            "ints": {},
+                            "floats": {},
+                            "vectors": {},
+                            "rotations": {}
+                          },
                           "RenderOptions": {
                             "GameLayer": true,
                             "OverlayLayer": false,
@@ -3312,6 +3487,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "4cd5e878-0b20-457b-95aa-31c550ae4666",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/skybox/skybox_dark_01.vmat",
               "Tint": "1,1,1,1"
             },
@@ -3516,6 +3692,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3585,6 +3768,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3654,6 +3844,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3723,6 +3920,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3792,6 +3996,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3861,6 +4072,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3929,6 +4147,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -3998,6 +4223,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -4067,6 +4299,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -5029,6 +5268,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "ae7c643c-989a-4d2a-82bc-cde0ab3a3c6f",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/skybox/skybox_overcast_02.vmat",
               "Tint": "1,1,1,1"
             },
@@ -5115,6 +5355,13 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ancient/ring_ancient_cover.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -5182,6 +5429,13 @@
               "CreateBoneObjects": false,
               "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -5214,7 +5468,6 @@
       "Flags": 0,
       "Name": "World 3 (Gates Test)",
       "Position": "0,2000,0",
-      "Enabled": true,
       "Components": [
         {
           "__type": "MultiWorld",
@@ -5265,6 +5518,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "f60c367b-cb72-4fe6-967f-2fc97d0061fa",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
               "Tint": "1,1,1,1"
             },
@@ -5391,6 +5645,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5459,6 +5720,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5527,6 +5795,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5595,6 +5870,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5663,6 +5945,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5731,6 +6020,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5798,6 +6094,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5866,6 +6169,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -5934,6 +6244,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6086,6 +6403,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6155,6 +6479,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6224,6 +6555,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6293,6 +6631,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6362,6 +6707,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6431,6 +6783,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6499,6 +6858,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6568,6 +6934,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -6637,6 +7010,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -7647,6 +8027,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -7664,6 +8051,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -7702,6 +8096,13 @@
                       "CreateBoneObjects": false,
                       "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
                       "Morphs": {},
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
                       "RenderOptions": {
                         "GameLayer": true,
                         "OverlayLayer": false,
@@ -7800,6 +8201,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -7868,6 +8276,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -7936,6 +8351,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8004,6 +8426,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8072,6 +8501,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8140,6 +8576,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8207,6 +8650,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8275,6 +8725,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8343,6 +8800,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -8503,12 +8967,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "e4fbd724-c43e-400f-93d0-78362c4516b3",
                   "StartsUp": false,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "47cebe2b-479d-4469-a612-392e32344b79",
-                    "go": "fbef18d1-1bdf-472b-9160-1e9a1b2c0df1",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -8545,12 +9003,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "efeece8c-a358-4d1b-8dad-8d765ce8d602",
                   "StartsUp": true,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "7dc8b6d5-d54f-4186-a80c-4e2ecb5aad7d",
-                    "go": "f1d2bc28-9d2e-43ec-b6d8-75387d2218e4",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -8587,12 +9039,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "617044ce-e9fa-4cb6-807c-dccc20e456f8",
                   "StartsUp": true,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "403b7767-a194-417c-8a5a-0f999b4c6209",
-                    "go": "22fa9845-e092-441d-8987-e47f03196ea8",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 8,
                   "MoveTime": 1.5
                 },
@@ -8654,12 +9100,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "d7da6255-a719-4eee-b769-6c8935e4918f",
                   "StartsUp": false,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "9b1e8f48-9e52-4e31-b714-6f2fe632259d",
-                    "go": "090f73e4-19ae-4847-9128-494f8c0b2584",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 16,
                   "MoveTime": 2.2
                 },
@@ -8754,12 +9194,6 @@
                   "__type": "ZPMSlot",
                   "__guid": "ef48f887-2b77-4447-89ea-a2d56e7d6b4c",
                   "StartsUp": false,
-                  "AttachPoint": {
-                    "_type": "component",
-                    "component_id": "62c1ea37-7adf-4c8f-a5ed-eb1faeaec160",
-                    "go": "5fbfc3c9-0264-40b0-be63-ac9fc9c943f4",
-                    "component_type": "AttachPoint"
-                  },
                   "MoveDistance": 2,
                   "MoveTime": 0.5
                 },
@@ -8833,6 +9267,13 @@
               "MaterialOverride": "materials/sbox_stargate/force_field_simple.vmat",
               "Model": "models/dev/sphere.vmdl",
               "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
@@ -9068,6 +9509,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "bf6d1f1a-f8fe-4297-a156-d5e610cb4094",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/skybox/skybox_overcast_01.vmat",
               "Tint": "1,1,1,1"
             },
@@ -9213,6 +9655,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9281,6 +9730,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9349,6 +9805,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9417,6 +9880,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9485,6 +9955,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9553,6 +10030,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9620,6 +10104,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9688,6 +10179,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -9756,6 +10254,13 @@
                   "CreateBoneObjects": false,
                   "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
                   "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -13000,8 +13505,769 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "aedb8997-1a28-417d-94bf-98d1c90be28a",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
               "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "2db298e3-5dfc-458f-8cf2-d1583aab6c99",
+          "Flags": 0,
+          "Name": "stargatemilkyway",
+          "Position": "0,700,144",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "9561c78e-8cab-4463-a74e-e850243605ea",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "f6cd3eeb-203c-4558-970e-65c5b235e39c",
+              "IsTrigger": false,
+              "Model": "models/sbox_stargate/sg_mw/sg_mw_gate.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.Components.Stargate.StargateMilkyWay",
+              "__guid": "53bd0496-6ad0-4a0c-ae2c-4fb92932cf5a",
+              "AcceleratedDialup": false,
+              "AutoClose": false,
+              "CanOpenMenu": false,
+              "ChevronLightup": true,
+              "EventHorizonMaterialGroup": "default",
+              "GateAddress": "TAURIS",
+              "GateGlyphType": "MILKYWAY",
+              "GateGroup": "M@",
+              "GateLocal": false,
+              "GateName": "",
+              "GatePrivate": false,
+              "MovieDialingType": false,
+              "ShowWormholeCinematic": false
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5d708871-7e25-4773-a273-7e27712d5c13",
+              "Flags": 0,
+              "Name": "Chevron 1",
+              "Rotation": "-0.3420201,0,0,0.9396926",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "a5d8e0b9-c9d8-45ee-9fb7-2326bda65fdb",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "f3a68e68-81f7-4cbe-8e6d-0f8484386eb3",
+                    "go": "88a37486-314d-4c0a-806b-d37fab6100d4",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "0ddb6ca5-093e-4623-a581-8338bc1d7412",
+                    "go": "5d708871-7e25-4773-a273-7e27712d5c13",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 1,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "0ddb6ca5-093e-4623-a581-8338bc1d7412",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "88a37486-314d-4c0a-806b-d37fab6100d4",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01095581,136.5016",
+                  "Rotation": "-0.4999568,-0.4999568,-0.5000863,-0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "f3a68e68-81f7-4cbe-8e6d-0f8484386eb3",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "6ac6e21f-9604-4d43-8611-a57216e17e81",
+              "Flags": 0,
+              "Name": "Chevron 2",
+              "Rotation": "-0.6427876,0,0,0.7660444",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "6811ea20-5d11-411b-b329-ea3f81c49c70",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "f40d9d29-d498-4817-acfe-c55d3c6e7a7e",
+                    "go": "a499d695-ad4a-4dd9-a5d9-c2d60c76d1bc",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "5ee75619-887c-4336-9ecc-b8965e25f8e0",
+                    "go": "6ac6e21f-9604-4d43-8611-a57216e17e81",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 2,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "5ee75619-887c-4336-9ecc-b8965e25f8e0",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "a499d695-ad4a-4dd9-a5d9-c2d60c76d1bc",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476437,-0.01095581,136.5016",
+                  "Rotation": "-0.4999568,-0.4999568,-0.5000864,-0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "f40d9d29-d498-4817-acfe-c55d3c6e7a7e",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "cf0ba14f-f1c1-449b-ae4a-d0e74d928f92",
+              "Flags": 0,
+              "Name": "Chevron 3",
+              "Rotation": "-0.8660254,0,0,0.5",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "ca3d11c8-229f-40c3-b7a2-4345f0d9889d",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "bec864e5-88f5-49cd-b8bd-6a874686b6c9",
+                    "go": "09753be8-b17e-4094-8201-f69c56cd084b",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "964b18e0-95d2-4480-a7c8-c4b2435c8652",
+                    "go": "cf0ba14f-f1c1-449b-ae4a-d0e74d928f92",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 3,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "964b18e0-95d2-4480-a7c8-c4b2435c8652",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "09753be8-b17e-4094-8201-f69c56cd084b",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01086807,136.5016",
+                  "Rotation": "-0.4999567,-0.4999569,-0.5000862,-0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "bec864e5-88f5-49cd-b8bd-6a874686b6c9",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "11a927d2-8c69-4174-bfa1-0856bb3c1f5c",
+              "Flags": 0,
+              "Name": "Chevron 4",
+              "Rotation": "-0.8660254,0,0,-0.5000001",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "71e03402-24e1-4a6e-b587-220fa4864dd5",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "bd52f2a6-74b0-44aa-9715-3475bb151f46",
+                    "go": "67c64924-0b8d-479d-b94a-dfa459de2591",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "06efe503-885c-4824-a91f-721c1d8e0f43",
+                    "go": "11a927d2-8c69-4174-bfa1-0856bb3c1f5c",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 4,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "06efe503-885c-4824-a91f-721c1d8e0f43",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "67c64924-0b8d-479d-b94a-dfa459de2591",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476439,-0.01103973,136.5016",
+                  "Rotation": "0.4999568,0.4999568,0.5000863,0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "bd52f2a6-74b0-44aa-9715-3475bb151f46",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "e3dd31dd-7456-4b15-b12f-a0083011f94a",
+              "Flags": 0,
+              "Name": "Chevron 5",
+              "Rotation": "-0.6427876,0,0,-0.7660444",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "82e48c68-439f-4dd4-a342-fd4c6c3853c7",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "529c16df-bdcf-45fe-aed1-44b2d6d9c033",
+                    "go": "1a0a5115-d4b7-40f2-a320-4fc72dbd394e",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "e4696191-891e-4218-8aff-d6d80f61e0af",
+                    "go": "e3dd31dd-7456-4b15-b12f-a0083011f94a",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 5,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "e4696191-891e-4218-8aff-d6d80f61e0af",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "1a0a5115-d4b7-40f2-a320-4fc72dbd394e",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01096344,136.5016",
+                  "Rotation": "0.4999568,0.4999569,0.5000864,0.5",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "529c16df-bdcf-45fe-aed1-44b2d6d9c033",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "0fec82f0-50ff-4b96-b1c8-4bace4f1d6bd",
+              "Flags": 0,
+              "Name": "Chevron 6",
+              "Rotation": "-0.3420202,0,0,-0.9396926",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "cd954e35-2899-4225-83b0-266c71d9bc3a",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "6821540a-bebf-4d17-b275-205214681181",
+                    "go": "aee0052d-91aa-40af-b6e3-5d9fd9295a70",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "c48a2901-259b-408c-8da6-a559200fe472",
+                    "go": "0fec82f0-50ff-4b96-b1c8-4bace4f1d6bd",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 6,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "c48a2901-259b-408c-8da6-a559200fe472",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "aee0052d-91aa-40af-b6e3-5d9fd9295a70",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476439,-0.01097107,136.5016",
+                  "Rotation": "0.4999568,0.4999568,0.5000863,0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "6821540a-bebf-4d17-b275-205214681181",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "164bf03e-fa9a-44e3-bb6e-5fb196f8b174",
+              "Flags": 0,
+              "Name": "Chevron 7",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "851c8fa0-7e79-4b34-b684-def82fd78924",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "074d09f3-5ad0-42a5-bd67-608cad321bea",
+                    "go": "21e4b500-b629-4639-b507-a8710f213728",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "3573967c-e3d4-48f7-81e7-d66b43df86bf",
+                    "go": "164bf03e-fa9a-44e3-bb6e-5fb196f8b174",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 7,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "3573967c-e3d4-48f7-81e7-d66b43df86bf",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "21e4b500-b629-4639-b507-a8710f213728",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.0109611,136.5016",
+                  "Rotation": "-0.4999569,-0.499957,-0.5000864,-0.4999999",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "074d09f3-5ad0-42a5-bd67-608cad321bea",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "fb9f3615-2eee-480e-b6ac-3962aed240c1",
+              "Flags": 0,
+              "Name": "Chevron 8",
+              "Rotation": "-0.9848077,0,0,0.1736482",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "d7ed11de-976e-4042-af8d-b3dc2b26d9b0",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "df4e15a4-8931-400b-8d93-2993fd6ee360",
+                    "go": "acd0e738-dbe4-4c55-9742-f232a982dc06",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "a250c5cd-d48c-4e62-a53a-7977d604730c",
+                    "go": "fb9f3615-2eee-480e-b6ac-3962aed240c1",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 8,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "a250c5cd-d48c-4e62-a53a-7977d604730c",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "acd0e738-dbe4-4c55-9742-f232a982dc06",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01098251,136.5017",
+                  "Rotation": "-0.4999568,-0.499957,-0.5000865,-0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "df4e15a4-8931-400b-8d93-2993fd6ee360",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "c3eb6669-fe14-4961-b826-bf200df9e4c0",
+              "Flags": 0,
+              "Name": "Chevron 9",
+              "Rotation": "-0.9848077,0,0,-0.1736482",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.Chevron",
+                  "__guid": "cb2b79df-83b4-4f2c-8266-8d11d94ce42a",
+                  "ChevronLight": {
+                    "_type": "component",
+                    "component_id": "ea5a11df-7703-4b34-be78-04e6f9ed7380",
+                    "go": "c05150d6-559a-486e-b0cf-df957d38ab38",
+                    "component_type": "PointLight"
+                  },
+                  "ChevronModel": {
+                    "_type": "component",
+                    "component_id": "61153741-e470-4184-98dc-7318e83dde0a",
+                    "go": "c3eb6669-fe14-4961-b826-bf200df9e4c0",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "Number": 9,
+                  "On": false,
+                  "Open": false
+                },
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "61153741-e470-4184-98dc-7318e83dde0a",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
+                  "Morphs": {},
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "c05150d6-559a-486e-b0cf-df957d38ab38",
+                  "Flags": 0,
+                  "Name": "Chevron Light",
+                  "Position": "9.476438,-0.01093292,136.5017",
+                  "Rotation": "0.4999569,0.499957,0.5000864,0.5000001",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "ea5a11df-7703-4b34-be78-04e6f9ed7380",
+                      "__enabled": false,
+                      "Attenuation": 1,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.41569,0,1",
+                      "Radius": 12,
+                      "Shadows": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "ea623ec1-0a50-42f6-a3e8-bd980e07accc",
+              "Flags": 0,
+              "Name": "Ring",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Components.Stargate.StargateRingMilkyWay",
+                  "__guid": "d5dbc278-c791-4b43-bdec-25e12a2b1aef",
+                  "_ringState": "STOPPED",
+                  "CurRingSymbol": "#",
+                  "RingAngle": 0,
+                  "RingModel": {
+                    "_type": "component",
+                    "component_id": "50aad931-b470-466f-b245-b29180e336a3",
+                    "go": "ea623ec1-0a50-42f6-a3e8-bd980e07accc",
+                    "component_type": "ModelRenderer"
+                  },
+                  "RingSymbols": "#0JKNTR3MBZX*H69IGPL@QFS1E4AU85OCW72YVD"
+                },
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "50aad931-b470-466f-b245-b29180e336a3",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/sbox_stargate/sg_mw/sg_mw_ring.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
             }
           ]
         }
