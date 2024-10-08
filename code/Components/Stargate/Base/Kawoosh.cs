@@ -22,10 +22,8 @@ namespace Sandbox.Components.Stargate
 
 		private Plane KawooshClipPlane =>
 			new(
-				Transform.Position
-					- Scene.Camera.Transform.Position
-					+ Transform.Rotation.Forward * 10f,
-				Transform.Rotation.Forward.Normal
+				WorldPosition - Scene.Camera.WorldPosition + WorldRotation.Forward * 10f,
+				WorldRotation.Forward.Normal
 			);
 
 		protected override void OnStart()
@@ -107,7 +105,7 @@ namespace Sandbox.Components.Stargate
 			var morphValue = CalculateAnimationValue(_maxProgress - _currentProgress);
 			KawooshModel.SceneModel.Morphs.Set("Shrinkwrap", morphValue);
 			KawooshModelInside.SceneModel.Morphs.Set("Shrinkwrap", morphValue);
-			GameObject.Transform.LocalScale = GameObject.Transform.LocalScale.WithX(1 - morphValue); // scale the kawoosh along the X axis, too
+			GameObject.LocalScale = GameObject.LocalScale.WithX(1 - morphValue); // scale the kawoosh along the X axis, too
 
 			if (morphValue < 0.98)
 			{

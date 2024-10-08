@@ -119,9 +119,7 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 		var knobs = DoorModelObject.GetAllObjects(false).Where(x => x.Name == "knob");
 		foreach (var knob in knobs)
 		{
-			knob.Transform.LocalPosition = knob.Transform.LocalPosition.WithY(
-				-19 * (FlipDoorSide ? -1 : 1)
-			);
+			knob.LocalPosition = knob.LocalPosition.WithY(-19 * (FlipDoorSide ? -1 : 1));
 			if (knob.Components.TryGet<ModelRenderer>(out var knobRenderer))
 			{
 				knobRenderer.Model = HandleModels[DoorHandleType];
@@ -136,12 +134,8 @@ public class SGCDoor : Door, Component.ExecuteInEditor
 		if (keyway.IsValid())
 		{
 			keyway.Enabled = HasKeyway;
-			keyway.Transform.LocalPosition = keyway.Transform.LocalPosition.WithY(
-				-19 * (FlipDoorSide ? -1 : 1)
-			);
-			keyway.Transform.LocalRotation = FlipKeyway
-				? Rotation.From(0, 180, 0)
-				: Rotation.From(0, 0, 0);
+			keyway.LocalPosition = keyway.LocalPosition.WithY(-19 * (FlipDoorSide ? -1 : 1));
+			keyway.LocalRotation = FlipKeyway ? Rotation.From(0, 180, 0) : Rotation.From(0, 0, 0);
 
 			if (DoorRenderer.IsValid())
 			{

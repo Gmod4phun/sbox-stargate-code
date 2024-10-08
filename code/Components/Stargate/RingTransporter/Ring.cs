@@ -35,17 +35,17 @@ namespace Sandbox.Components.Stargate.Rings
 
 		[Property, ReadOnly]
 		public bool IsInDesiredPosition =>
-			Transform.Position.AlmostEqual(DesiredPosition.Position, _equalThreshold)
-			&& Transform
-				.Rotation.Angles()
+			WorldPosition.AlmostEqual(DesiredPosition.Position, _equalThreshold)
+			&& WorldRotation
+				.Angles()
 				.AsVector3()
 				.AlmostEqual(DesiredPosition.Rotation.Angles().AsVector3(), _equalThreshold);
 
 		[Property, ReadOnly]
 		public bool IsInRestingPosition =>
-			Transform.Position.AlmostEqual(RestingPosition.Position, _equalThreshold)
-			&& Transform
-				.Rotation.Angles()
+			WorldPosition.AlmostEqual(RestingPosition.Position, _equalThreshold)
+			&& WorldRotation
+				.Angles()
 				.AsVector3()
 				.AlmostEqual(RestingPosition.Rotation.Angles().AsVector3(), _equalThreshold);
 
@@ -56,12 +56,11 @@ namespace Sandbox.Components.Stargate.Rings
 			if (Body.IsValid() && !IsProxy)
 			{
 				DesiredPosition = Transporter.Transform.World.WithPosition(
-					Transporter.Transform.Position
-						+ Transporter.Transform.Rotation.Up * _desiredOffset
+					Transporter.WorldPosition + Transporter.WorldRotation.Up * _desiredOffset
 				);
 				RestingPosition = Transporter.Transform.World.WithPosition(
-					Transporter.Transform.Position
-						+ Transporter.Transform.Rotation.Up * Transporter.RingsRestingHeightOffset
+					Transporter.WorldPosition
+						+ Transporter.WorldRotation.Up * Transporter.RingsRestingHeightOffset
 				);
 
 				if (Body.PhysicsBody.IsValid())

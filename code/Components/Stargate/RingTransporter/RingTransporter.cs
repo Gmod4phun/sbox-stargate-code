@@ -39,7 +39,7 @@ namespace Sandbox.Components.Stargate.Rings
 			return Scene
 				.GetAllComponents<RingTransporter>()
 				.Where(x => x != this)
-				.OrderBy(x => x.Transform.Position.DistanceSquared(Transform.Position))
+				.OrderBy(x => x.WorldPosition.DistanceSquared(WorldPosition))
 				.FirstOrDefault();
 		}
 
@@ -64,8 +64,7 @@ namespace Sandbox.Components.Stargate.Rings
 		{
 			var ring_object = new GameObject();
 			ring_object.Transform.World = Transform.World;
-			ring_object.Transform.Position +=
-				ring_object.Transform.Rotation.Up * RingsRestingHeightOffset;
+			ring_object.WorldPosition += ring_object.WorldRotation.Up * RingsRestingHeightOffset;
 			ring_object.SetParent(GameObject);
 
 			var ring_component = ring_object.Components.Create<Ring>();
@@ -156,12 +155,12 @@ namespace Sandbox.Components.Stargate.Rings
 			{
 				var platformHeightOffsetDiff = to.PlatformHeightOffset - from.PlatformHeightOffset;
 
-				var localPos = from.Transform.World.PointToLocal(e.Transform.Position);
+				var localPos = from.Transform.World.PointToLocal(e.WorldPosition);
 				var newPos = to.Transform.Local.PointToWorld(
 					localPos + Vector3.Up * platformHeightOffsetDiff
 				);
 
-				var localRot = from.Transform.World.RotationToLocal(e.Transform.Rotation);
+				var localRot = from.Transform.World.RotationToLocal(e.WorldRotation);
 				var newRot = to.Transform.Local.RotationToWorld(
 					localRot.RotateAroundAxis(Vector3.Up, 180)
 				);
@@ -170,16 +169,15 @@ namespace Sandbox.Components.Stargate.Rings
 				{
 					ply.ActivateTeleportScreenOverlay(0.2f);
 
-					var DeltaAngleEH =
-						to.Transform.Rotation.Angles() - from.Transform.Rotation.Angles();
+					var DeltaAngleEH = to.WorldRotation.Angles() - from.WorldRotation.Angles();
 					ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw, 0));
 				}
 
-				var prevOwner = e.Network.OwnerConnection;
+				var prevOwner = e.Network.Owner;
 				e.Network.TakeOwnership();
 
-				e.Transform.Position = newPos;
-				e.Transform.Rotation = newRot;
+				e.WorldPosition = newPos;
+				e.WorldRotation = newRot;
 				e.Transform.ClearInterpolation();
 
 				// handle multiWorld switching
@@ -203,15 +201,14 @@ namespace Sandbox.Components.Stargate.Rings
 				.GetAllObjects(true)
 				.Where(x =>
 					IsObjectAllowedToTeleport(x)
-					&& x.Transform.Position.DistanceSquared(Transform.Position) <= 80 * 80
+					&& x.WorldPosition.DistanceSquared(WorldPosition) <= 80 * 80
 				)
 				.ToList();
 			var otherObjects = Scene
 				.GetAllObjects(true)
 				.Where(x =>
 					IsObjectAllowedToTeleport(x)
-					&& x.Transform.Position.DistanceSquared(OtherTransporter.Transform.Position)
-						<= 80 * 80
+					&& x.WorldPosition.DistanceSquared(OtherTransporter.WorldPosition) <= 80 * 80
 				)
 				.ToList();
 
@@ -302,14 +299,14 @@ namespace Sandbox.Components.Stargate.Rings
 				"particles/sbox_stargate/rings_transporter.vpcf"
 			);
 
-			var angles = Transform.Rotation.Angles();
+			var angles = WorldRotation.Angles();
 			particle.ControlPoints = new()
 			{
 				new ParticleControlPoint()
 				{
 					StringCP = "1",
 					Value = ParticleControlPoint.ControlPointValueInput.Vector3,
-					VectorValue = Transform.Rotation.Up * 80
+					VectorValue = WorldRotation.Up * 80
 				},
 				new ParticleControlPoint()
 				{
@@ -321,7 +318,7 @@ namespace Sandbox.Components.Stargate.Rings
 				{
 					StringCP = "3",
 					Value = ParticleControlPoint.ControlPointValueInput.Vector3,
-					VectorValue = new Vector3(Transform.Scale.x, 0, 0)
+					VectorValue = new Vector3(WorldScale.x, 0, 0)
 				}
 			};
 
@@ -360,7 +357,7 @@ namespace Sandbox.Components.Stargate.Rings
 			while (lightDistance <= targetDistance)
 			{
 				light_object.Transform.World = Transform.World.WithPosition(
-					Transform.Position + Transform.Rotation.Up * lightDistance
+					WorldPosition + WorldRotation.Up * lightDistance
 				);
 				lightDistance += lightDistanceStep;
 				await GameTask.Delay(delayMs);

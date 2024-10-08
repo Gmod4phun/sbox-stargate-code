@@ -28,12 +28,12 @@ namespace Sandbox.Components.Stargate.Ramps
 			}
 
 			var firstRamp = ramps.First();
-			var closestDistance = position.DistanceSquared(firstRamp.Transform.Position);
+			var closestDistance = position.DistanceSquared(firstRamp.WorldPosition);
 			GateRamp closestRamp = firstRamp;
 
 			foreach (GateRamp ramp in ramps)
 			{
-				var curRampDistance = position.DistanceSquared(ramp.Transform.Position);
+				var curRampDistance = position.DistanceSquared(ramp.WorldPosition);
 				if (curRampDistance < closestDistance)
 				{
 					closestDistance = curRampDistance;

@@ -11,8 +11,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Milky Way)";
-			gate.Transform.Position = pos + Vector3.Up * 90;
-			gate.Transform.Rotation = rot;
+			gate.WorldPosition = pos + Vector3.Up * 90;
+			gate.WorldRotation = rot;
 
 			var mdl = gate.Components.Create<ModelRenderer>();
 			mdl.Model = Model.Load("models/sbox_stargate/sg_mw/sg_mw_gate.vmdl");
@@ -27,10 +27,10 @@ namespace Sandbox.Components.Stargate
 				var chev = new GameObject();
 				chev.Name = $"Chevron {i + 1}";
 				chev.SetParent(gate);
-				chev.Transform.Position = gate.Transform.Position;
-				chev.Transform.Rotation = gate.Transform.Rotation;
-				chev.Transform.LocalRotation = chev.Transform.LocalRotation.RotateAroundAxis(
-					chev.Transform.LocalRotation.Forward,
+				chev.WorldPosition = gate.WorldPosition;
+				chev.WorldRotation = gate.WorldRotation;
+				chev.LocalRotation = chev.LocalRotation.RotateAroundAxis(
+					chev.LocalRotation.Forward,
 					-ChevronAngles[i]
 				);
 
@@ -48,8 +48,8 @@ namespace Sandbox.Components.Stargate
 					var chev_light = new GameObject();
 					chev_light.Name = "Chevron Light";
 					chev_light.SetParent(chev);
-					chev_light.Transform.Position = t.Position;
-					chev_light.Transform.Rotation = t.Rotation;
+					chev_light.WorldPosition = t.Position;
+					chev_light.WorldRotation = t.Rotation;
 
 					chev_component.ChevronLight = chev_light.Components.Create<PointLight>();
 					chev_component.ChevronLight.LightColor = Color
@@ -77,8 +77,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Movie)";
-			gate.Transform.Position = pos + Vector3.Up * 90;
-			gate.Transform.Rotation = rot;
+			gate.WorldPosition = pos + Vector3.Up * 90;
+			gate.WorldRotation = rot;
 
 			var mdl = gate.Components.Create<ModelRenderer>();
 			mdl.Model = Model.Load("models/sbox_stargate/sg_mw/sg_mw_gate.vmdl");
@@ -93,10 +93,10 @@ namespace Sandbox.Components.Stargate
 				var chev = new GameObject();
 				chev.Name = $"Chevron {i + 1}";
 				chev.SetParent(gate);
-				chev.Transform.Position = gate.Transform.Position;
-				chev.Transform.Rotation = gate.Transform.Rotation;
-				chev.Transform.LocalRotation = chev.Transform.LocalRotation.RotateAroundAxis(
-					chev.Transform.LocalRotation.Forward,
+				chev.WorldPosition = gate.WorldPosition;
+				chev.WorldRotation = gate.WorldRotation;
+				chev.LocalRotation = chev.LocalRotation.RotateAroundAxis(
+					chev.LocalRotation.Forward,
 					-ChevronAngles[i]
 				);
 
@@ -114,8 +114,8 @@ namespace Sandbox.Components.Stargate
 					var chev_light = new GameObject();
 					chev_light.Name = "Chevron Light";
 					chev_light.SetParent(chev);
-					chev_light.Transform.Position = t.Position;
-					chev_light.Transform.Rotation = t.Rotation;
+					chev_light.WorldPosition = t.Position;
+					chev_light.WorldRotation = t.Rotation;
 
 					chev_component.ChevronLight = chev_light.Components.Create<PointLight>();
 					chev_component.ChevronLight.LightColor = Color
@@ -143,8 +143,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Pegasus)";
-			gate.Transform.Position = pos + Vector3.Up * 90;
-			gate.Transform.Rotation = rot;
+			gate.WorldPosition = pos + Vector3.Up * 90;
+			gate.WorldRotation = rot;
 
 			var mdl = gate.Components.Create<ModelRenderer>();
 			mdl.Model = Model.Load("models/sbox_stargate/sg_peg/sg_peg_gate.vmdl");
@@ -159,10 +159,10 @@ namespace Sandbox.Components.Stargate
 				var chev = new GameObject();
 				chev.Name = $"Chevron {i + 1}";
 				chev.SetParent(gate);
-				chev.Transform.Position = gate.Transform.Position;
-				chev.Transform.Rotation = gate.Transform.Rotation;
-				chev.Transform.LocalRotation = chev.Transform.LocalRotation.RotateAroundAxis(
-					chev.Transform.LocalRotation.Forward,
+				chev.WorldPosition = gate.WorldPosition;
+				chev.WorldRotation = gate.WorldRotation;
+				chev.LocalRotation = chev.LocalRotation.RotateAroundAxis(
+					chev.LocalRotation.Forward,
 					-ChevronAngles[i]
 				);
 
@@ -182,8 +182,8 @@ namespace Sandbox.Components.Stargate
 					var chev_light = new GameObject();
 					chev_light.Name = "Chevron Light";
 					chev_light.SetParent(chev);
-					chev_light.Transform.Position = t.Position;
-					chev_light.Transform.Rotation = t.Rotation;
+					chev_light.WorldPosition = t.Position;
+					chev_light.WorldRotation = t.Rotation;
 
 					chev_component.ChevronLight = chev_light.Components.Create<PointLight>();
 					chev_component.ChevronLight.LightColor = Color
@@ -225,8 +225,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var gate = new GameObject();
 			gate.Name = "Stargate (Universe)";
-			gate.Transform.Position = pos + Vector3.Up * 90;
-			gate.Transform.Rotation = rot;
+			gate.WorldPosition = pos + Vector3.Up * 90;
+			gate.WorldRotation = rot;
 
 			var phy = gate.Components.Create<ModelCollider>();
 			phy.Model = Model.Load("models/sbox_stargate/gate_universe/gate_universe.vmdl");
@@ -260,8 +260,8 @@ namespace Sandbox.Components.Stargate
 			var chev = new GameObject();
 			chev.Name = "Chevrons";
 			chev.SetParent(ring);
-			chev.Transform.Position = ring.Transform.Position;
-			chev.Transform.Rotation = ring.Transform.Rotation;
+			chev.WorldPosition = ring.WorldPosition;
+			chev.WorldRotation = ring.WorldRotation;
 
 			var chev_component = chev.Components.Create<Chevron>();
 			chev_component.Number = 1;
@@ -300,8 +300,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var dhd_object = new GameObject();
 			dhd_object.Name = "Dhd (Milky Way)";
-			dhd_object.Transform.Position = pos + new Vector3(0, 0, -3);
-			dhd_object.Transform.Rotation = rot.RotateAroundAxis(Vector3.Right, -15);
+			dhd_object.WorldPosition = pos + new Vector3(0, 0, -3);
+			dhd_object.WorldRotation = rot.RotateAroundAxis(Vector3.Right, -15);
 
 			var dhd_component = dhd_object.Components.Create<DhdMilkyWay>();
 			var renderer = dhd_component.Components.Create<SkinnedModelRenderer>();
@@ -316,8 +316,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var dhd_object = new GameObject();
 			dhd_object.Name = "Dhd (Pegasus)";
-			dhd_object.Transform.Position = pos + new Vector3(0, 0, -3);
-			dhd_object.Transform.Rotation = rot.RotateAroundAxis(Vector3.Right, -15);
+			dhd_object.WorldPosition = pos + new Vector3(0, 0, -3);
+			dhd_object.WorldRotation = rot.RotateAroundAxis(Vector3.Right, -15);
 
 			var dhd_component = dhd_object.Components.Create<DhdPegasus>();
 			var renderer = dhd_component.Components.Create<SkinnedModelRenderer>();
@@ -333,8 +333,8 @@ namespace Sandbox.Components.Stargate
 		{
 			var dhd_object = new GameObject();
 			dhd_object.Name = "Dhd (Atlantis)";
-			dhd_object.Transform.Position = pos;
-			dhd_object.Transform.Rotation = rot;
+			dhd_object.WorldPosition = pos;
+			dhd_object.WorldRotation = rot;
 
 			var dhd_component = dhd_object.Components.Create<DhdAtlantis>();
 			var renderer = dhd_component.Components.Create<SkinnedModelRenderer>(false);

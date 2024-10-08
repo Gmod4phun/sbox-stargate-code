@@ -54,10 +54,7 @@ namespace Sandbox.Components.Stargate
 			RingSymbolThink();
 			// DrawSymbols();
 
-			Transform.LocalRotation = Transform
-				.LocalRotation.Angles()
-				.WithRoll(RingAngle)
-				.ToRotation();
+			LocalRotation = LocalRotation.Angles().WithRoll(RingAngle).ToRotation();
 		}
 
 		// symbol pos/ang
@@ -237,7 +234,7 @@ namespace Sandbox.Components.Stargate
 			{
 				var rotAng = ang.WithRoll(-ang.roll + (RingSymbols.IndexOf(sym) * deg));
 				var newRot = rotAng.ToRotation();
-				var pos = Transform.Position + newRot.Forward * 4 + newRot.Up * 117.5f;
+				var pos = WorldPosition + newRot.Forward * 4 + newRot.Up * 117.5f;
 
 				Gizmo.Draw.Color = _currentRotatingToSymbol.Contains(sym)
 					? Color.Yellow
@@ -250,7 +247,7 @@ namespace Sandbox.Components.Stargate
 				Gizmo.Draw.Color = Color.Magenta;
 				Gizmo.Draw.ScreenText(
 					CurRingSymbol,
-					Gizmo.Camera.ToScreen(Transform.Position),
+					Gizmo.Camera.ToScreen(WorldPosition),
 					size: 24
 				);
 			}

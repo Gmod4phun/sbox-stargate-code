@@ -9,8 +9,8 @@ public static class UtilityFunctions
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
-		prop_object.Transform.Position = pos;
-		prop_object.Transform.Rotation = rot;
+		prop_object.WorldPosition = pos;
+		prop_object.WorldRotation = rot;
 
 		var package = await Package.FetchAsync(ident, false);
 		await package.MountAsync();
@@ -34,8 +34,8 @@ public static class UtilityFunctions
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
-		prop_object.Transform.Position = pos;
-		prop_object.Transform.Rotation = rot;
+		prop_object.WorldPosition = pos;
+		prop_object.WorldRotation = rot;
 
 		var model = Model.Load("models/citizen/citizen.vmdl");
 
@@ -56,8 +56,8 @@ public static class UtilityFunctions
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
-		prop_object.Transform.Position = pos;
-		prop_object.Transform.Rotation = Rotation.LookAt(dir);
+		prop_object.WorldPosition = pos;
+		prop_object.WorldRotation = Rotation.LookAt(dir);
 
 		var worldobject = Game
 			.ActiveScene.GetAllObjects(true)

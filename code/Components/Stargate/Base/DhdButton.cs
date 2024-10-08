@@ -71,7 +71,7 @@ namespace Sandbox.Components.Stargate
 				)
 					return;
 
-				if (pos.DistanceSquared(Scene.Camera.Transform.Position) < 4096)
+				if (pos.DistanceSquared(Scene.Camera.WorldPosition) < 4096)
 				{
 					var player = Scene
 						.GetAllComponents<PlayerController>()

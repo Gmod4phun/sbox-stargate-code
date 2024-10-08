@@ -8,6 +8,6 @@ public class SpinComponent : Component
 		if (IsProxy)
 			return;
 
-		Transform.LocalRotation *= (SpinAngles * Time.Delta).ToRotation();
+		LocalRotation *= (SpinAngles * Time.Delta).ToRotation();
 	}
 }

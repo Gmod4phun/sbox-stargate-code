@@ -617,12 +617,12 @@ namespace Sandbox.Components.Stargate
 		public void DrawSymbols()
 		{
 			var deg = 10;
-			var ang = Transform.Rotation.Angles();
+			var ang = WorldRotation.Angles();
 			for (int i = 0; i < 36; i++)
 			{
 				var rotAng = ang.WithRoll(ang.roll - (i * deg) - deg);
 				var newRot = rotAng.ToRotation();
-				var pos = Transform.Position + newRot.Forward * 4 + newRot.Up * 117.5f;
+				var pos = WorldPosition + newRot.Forward * 4 + newRot.Up * 117.5f;
 				// DebugOverlay.Text( i.ToString(), pos, Color.Yellow );
 			}
 		}

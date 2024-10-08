@@ -392,7 +392,7 @@ namespace Sandbox.Components.Stargate
 			var distances = new float[allGates.Count()];
 			for (int i = 0; i < allGates.Count(); i++)
 			{
-				distances[i] = ent.Transform.Position.Distance(allGates[i].Transform.Position);
+				distances[i] = ent.WorldPosition.Distance(allGates[i].WorldPosition);
 			}
 
 			if (maxDistance > 0 && distances.Min() > maxDistance)
@@ -418,7 +418,7 @@ namespace Sandbox.Components.Stargate
 
 			var distances = new float[allGates.Count()];
 			for (int i = 0; i < allGates.Count(); i++)
-				distances[i] = ent.Transform.Position.Distance(allGates[i].Transform.Position);
+				distances[i] = ent.WorldPosition.Distance(allGates[i].WorldPosition);
 
 			if (maxDistance > 0 && distances.Min() > maxDistance)
 				return null;
@@ -439,9 +439,9 @@ namespace Sandbox.Components.Stargate
 			{
 				var iris_object = new GameObject();
 				iris_object.Name = "Iris";
-				iris_object.Transform.Position = gate.Transform.Position;
-				iris_object.Transform.Rotation = gate.Transform.Rotation;
-				iris_object.Transform.Scale = gate.Transform.Scale;
+				iris_object.WorldPosition = gate.WorldPosition;
+				iris_object.WorldRotation = gate.WorldRotation;
+				iris_object.WorldScale = gate.WorldScale;
 				iris_object.SetParent(gate.GameObject);
 				iris_object.Tags.Add("no_decal");
 
@@ -511,10 +511,9 @@ namespace Sandbox.Components.Stargate
 			{
 				var bearing_object = new GameObject();
 				bearing_object.Name = "Bearing";
-				bearing_object.Transform.Position =
-					gate.Transform.Position + gate.Transform.Rotation.Up * 135.5f;
-				bearing_object.Transform.Rotation = gate.Transform.Rotation;
-				bearing_object.Transform.Scale = gate.Transform.Scale;
+				bearing_object.WorldPosition = gate.WorldPosition + gate.WorldRotation.Up * 135.5f;
+				bearing_object.WorldRotation = gate.WorldRotation;
+				bearing_object.WorldScale = gate.WorldScale;
 				bearing_object.SetParent(gate.GameObject);
 
 				var bearing_component = bearing_object.Components.Create<GateBearing>();
@@ -567,7 +566,7 @@ namespace Sandbox.Components.Stargate
 			}
 
 			var worldIndex = MultiWorldSystem.GetWorldIndexOfObject(gameObject);
-			MultiWorldSound.Play(name, gameObject.Transform.Position, worldIndex);
+			MultiWorldSound.Play(name, gameObject.WorldPosition, worldIndex);
 		}
 
 		public static async void PlaySound(
@@ -600,10 +599,10 @@ namespace Sandbox.Components.Stargate
 			{
 				if (ramp.HasFreeSlot())
 				{
-					gate.Transform.Position = ramp.Transform.World.PointToWorld(
+					gate.WorldPosition = ramp.Transform.World.PointToWorld(
 						ramp.StargatePositionOffset
 					);
-					gate.Transform.Rotation = ramp.Transform.World.RotationToWorld(
+					gate.WorldRotation = ramp.Transform.World.RotationToWorld(
 						ramp.StargateRotationOffset.ToRotation()
 					);
 					gate.GameObject.SetParent(ramp.GameObject);
@@ -652,7 +651,7 @@ namespace Sandbox.Components.Stargate
 			if (!eh.IsValid())
 				return false;
 
-			return (point - eh.Transform.Position).Dot(eh.Transform.Rotation.Forward) < 0;
+			return (point - eh.WorldPosition).Dot(eh.WorldRotation.Forward) < 0;
 		}
 
 		public static bool IsAllowedForGateTeleport(GameObject e)

@@ -37,9 +37,7 @@ public class Shield
 		if (!Collider.IsValid() || !Renderer.IsValid())
 			return;
 
-		GameObject.Transform.Scale = Radius.HasValue
-			? (Vector3.One * Radius.Value / 32f)
-			: Vector3.One;
+		GameObject.WorldScale = Radius.HasValue ? (Vector3.One * Radius.Value / 32f) : Vector3.One;
 
 		var so = Renderer.SceneObject;
 		if (!so.IsValid())
@@ -80,9 +78,9 @@ public class Shield
 
 		var effect = new GameObject();
 		effect.SetParent(GameObject, true);
-		effect.Transform.Position = Transform.Position;
-		effect.Transform.Rotation = Transform.Rotation;
-		effect.Transform.Scale = Transform.Scale;
+		effect.WorldPosition = WorldPosition;
+		effect.WorldRotation = WorldRotation;
+		effect.WorldScale = WorldScale;
 
 		var model = effect.Components.Create<ModelRenderer>();
 		model.Model = Renderer.Model;
@@ -99,7 +97,7 @@ public class Shield
 	private void ReflectObject(Collision collision)
 	{
 		var obj = collision.Other.Body;
-		var normal = (obj.Position - Transform.Position).Normal;
+		var normal = (obj.Position - WorldPosition).Normal;
 		obj.ApplyForceAt(obj.MassCenter, normal * obj.Mass * 20000f);
 	}
 

@@ -86,12 +86,10 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 
 	bool IsObjectCloseEnough(GameObject gameObject)
 	{
-		var pitchDiff = Math.Abs(
-			gameObject.Transform.Rotation.Pitch() - Transform.Rotation.Pitch()
-		);
-		var yawDiff = Math.Abs(gameObject.Transform.Rotation.Yaw() - Transform.Rotation.Yaw());
-		var rollDiff = Math.Abs(gameObject.Transform.Rotation.Roll() - Transform.Rotation.Roll());
-		var posDiff = (gameObject.Transform.Position - Transform.Position).Length;
+		var pitchDiff = Math.Abs(gameObject.WorldRotation.Pitch() - WorldRotation.Pitch());
+		var yawDiff = Math.Abs(gameObject.WorldRotation.Yaw() - WorldRotation.Yaw());
+		var rollDiff = Math.Abs(gameObject.WorldRotation.Roll() - WorldRotation.Roll());
+		var posDiff = (gameObject.WorldPosition - WorldPosition).Length;
 
 		if (!IgnorePitch && pitchDiff > AngThreshold)
 			return false;

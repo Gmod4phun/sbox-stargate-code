@@ -148,6 +148,6 @@ public class TestRotatingRing : Component
 			RingAngle += SpeedPerSecond * Time.Delta * CurSpeedMul * _ringDirection;
 		}
 
-		Renderer.Transform.Rotation = Rotation.FromAxis(Vector3.Forward, (float)RingAngle);
+		Renderer.WorldRotation = Rotation.FromAxis(Vector3.Forward, (float)RingAngle);
 	}
 }

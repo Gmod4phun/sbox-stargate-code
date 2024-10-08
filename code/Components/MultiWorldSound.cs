@@ -35,7 +35,7 @@ public class MultiWorldSound
 		var sound = new MultiWorldSound
 		{
 			WorldIndex = MultiWorldSystem.GetWorldIndexOfObject(gameObject),
-			Handle = Sound.Play(name, gameObject.Transform.Position)
+			Handle = Sound.Play(name, gameObject.WorldPosition)
 		};
 
 		// sound.Handle.Volume = 0;
@@ -50,7 +50,7 @@ public class MultiWorldSound
 		var sound = new MultiWorldSound
 		{
 			FollowObject = followObject,
-			Handle = Sound.Play(name, followObject.Transform.Position)
+			Handle = Sound.Play(name, followObject.WorldPosition)
 		};
 
 		// sound.Handle.Volume = 0;

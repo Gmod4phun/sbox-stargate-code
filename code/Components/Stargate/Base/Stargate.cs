@@ -344,7 +344,7 @@ namespace Sandbox.Components.Stargate
 				if (exclude != null && exclude.Contains(gate))
 					continue;
 
-				float currDist = gate.Transform.Position.Distance(postition);
+				float currDist = gate.WorldPosition.Distance(postition);
 				if (distance > currDist)
 				{
 					if (max_distance > 0 && currDist > max_distance)
@@ -412,9 +412,9 @@ namespace Sandbox.Components.Stargate
 		{
 			var eh = new GameObject();
 			eh.Name = "Event Horizon";
-			eh.Transform.Position = Transform.Position;
-			eh.Transform.Rotation = Transform.Rotation;
-			eh.Transform.Scale = Transform.Scale;
+			eh.WorldPosition = WorldPosition;
+			eh.WorldRotation = WorldRotation;
+			eh.WorldScale = WorldScale;
 			eh.SetParent(GameObject);
 			eh.Tags.Add(StargateTags.EventHorizon, "trigger");
 
@@ -1044,7 +1044,7 @@ namespace Sandbox.Components.Stargate
 
 		public Stargate FindClosestGate()
 		{
-			return FindClosestGate(this.Transform.Position, 0, new Stargate[] { this });
+			return FindClosestGate(this.WorldPosition, 0, new Stargate[] { this });
 		}
 
 		protected override void OnDestroy()

@@ -96,8 +96,8 @@ public class PlayerGrabber : Component
 
 		var tr = Scene
 			.Trace.Ray(
-				Scene.Camera.Transform.Position,
-				Scene.Camera.Transform.Position + Scene.Camera.Transform.Rotation.Forward * 1000
+				Scene.Camera.WorldPosition,
+				Scene.Camera.WorldPosition + Scene.Camera.WorldRotation.Forward * 1000
 			)
 			.WithWorld(GameObject)
 			.WithoutTags(GrabIgnoreTags)
@@ -263,7 +263,7 @@ public class PlayerGrabber : Component
 
 		timeSinceShoot = 0;
 
-		Sound.Play(shootSound, Transform.Position);
+		Sound.Play(shootSound, WorldPosition);
 
 		var player = Components.Get<PlayerController>();
 		if (!player.IsValid())

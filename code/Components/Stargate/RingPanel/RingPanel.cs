@@ -50,7 +50,7 @@ namespace Sandbox.Components.Stargate.Rings
 		{
 			return Scene
 				.GetAllComponents<RingTransporter>()
-				.OrderBy(x => x.Transform.Position.DistanceSquared(Transform.Position))
+				.OrderBy(x => x.WorldPosition.DistanceSquared(WorldPosition))
 				.FirstOrDefault();
 		}
 

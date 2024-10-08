@@ -29,8 +29,8 @@ public class Attachable : Component, IUse
 		Body.MotionEnabled = false;
 
 		GameObject.SetParent(attachPoint.GameObject, true);
-		GameObject.Transform.Position = attachPoint.Transform.Position;
-		GameObject.Transform.Rotation = attachPoint.Transform.Rotation;
+		GameObject.WorldPosition = attachPoint.WorldPosition;
+		GameObject.WorldRotation = attachPoint.WorldRotation;
 		GameObject.Transform.ClearInterpolation();
 
 		AttachedTo = attachPoint;

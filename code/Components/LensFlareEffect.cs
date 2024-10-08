@@ -57,9 +57,9 @@ public class LensFlareEffect : PostProcess
 		if (!sun.IsValid())
 			return;
 
-		var eyepos = camera.Transform.Position;
-		var eyevector = camera.Transform.Rotation.Forward;
-		var sundirection = sun.Transform.Rotation.Backward.Normal;
+		var eyepos = camera.WorldPosition;
+		var eyevector = camera.WorldRotation.Forward;
+		var sundirection = sun.WorldRotation.Backward.Normal;
 		var sunobstruction = 1f;
 
 		var tr = Scene

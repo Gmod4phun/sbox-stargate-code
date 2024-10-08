@@ -32,9 +32,9 @@ public class ZPMSlot : Component
 		while (totalMovedDistance < MoveDistance)
 		{
 			var step = Time.Delta / MoveTime * MoveDistance;
-			var dir = IsUp ? Transform.Rotation.Down : Transform.Rotation.Up;
+			var dir = IsUp ? WorldRotation.Down : WorldRotation.Up;
 			totalMovedDistance += step;
-			Transform.Position += dir * step;
+			WorldPosition += dir * step;
 			Transform.ClearInterpolation();
 			await Task.Frame();
 		}
@@ -50,7 +50,7 @@ public class ZPMSlot : Component
 
 		if (StartsUp)
 		{
-			Transform.Position += Transform.Rotation.Up * MoveDistance;
+			WorldPosition += WorldRotation.Up * MoveDistance;
 		}
 	}
 

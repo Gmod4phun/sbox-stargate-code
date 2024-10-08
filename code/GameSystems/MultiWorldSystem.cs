@@ -364,9 +364,7 @@ public class MultiWorldSystem : GameObjectSystem
 
 		var localPlayer = Game
 			.ActiveScene.GetAllComponents<PlayerController>()
-			.FirstOrDefault(p =>
-				p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local
-			);
+			.FirstOrDefault(p => p.Network.Owner != null && p.Network.Owner == Connection.Local);
 		var playerWorldIndex = GetWorldIndexOfObject(localPlayer);
 
 		foreach (var rigidbody in Scene.GetAllComponents<Rigidbody>())
@@ -392,9 +390,7 @@ public class MultiWorldSystem : GameObjectSystem
 
 		var player = Game
 			.ActiveScene.GetAllComponents<PlayerController>()
-			.FirstOrDefault(p =>
-				p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local
-			);
+			.FirstOrDefault(p => p.Network.Owner != null && p.Network.Owner == Connection.Local);
 
 		// set mixer hearable/unhearable for each player
 		foreach (var world in Worlds)
@@ -417,7 +413,7 @@ public class MultiWorldSystem : GameObjectSystem
 				}
 				else
 				{
-					sound.Handle.Position = sound.FollowObject.Transform.Position;
+					sound.Handle.Position = sound.FollowObject.WorldPosition;
 
 					var desiredWorldIndex = GetWorldIndexOfObject(sound.FollowObject);
 					if (desiredWorldIndex != -1 && desiredWorldIndex != sound.WorldIndex)
@@ -456,9 +452,7 @@ public class MultiWorldSystem : GameObjectSystem
 
 		var player = Game
 			.ActiveScene.GetAllComponents<PlayerController>()
-			.FirstOrDefault(p =>
-				p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local
-			);
+			.FirstOrDefault(p => p.Network.Owner != null && p.Network.Owner == Connection.Local);
 
 		if (!player.IsValid())
 			return;

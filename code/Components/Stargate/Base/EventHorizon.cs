@@ -92,18 +92,18 @@ namespace Sandbox.Components.Stargate
 		private NetList<GameObject> InTriggerBack { get; } = new();
 
 		public Vector3 CameraPosition =>
-			Scene.Camera.IsValid() ? Scene.Camera.Transform.Position : Vector3.Zero;
+			Scene.Camera.IsValid() ? Scene.Camera.WorldPosition : Vector3.Zero;
 
 		public Plane ClipPlaneFront =>
 			new(
-				Transform.Position - CameraPosition + Transform.Rotation.Forward * 0.75f,
-				Transform.Rotation.Forward.Normal
+				WorldPosition - CameraPosition + WorldRotation.Forward * 0.75f,
+				WorldRotation.Forward.Normal
 			);
 
 		public Plane ClipPlaneBack =>
 			new(
-				Transform.Position - CameraPosition - Transform.Rotation.Forward * 0.75f,
-				-Transform.Rotation.Forward.Normal
+				WorldPosition - CameraPosition - WorldRotation.Forward * 0.75f,
+				-WorldRotation.Forward.Normal
 			);
 
 		public EventHorizon()
@@ -120,9 +120,9 @@ namespace Sandbox.Components.Stargate
 
 			var kawoosh_object = new GameObject();
 			kawoosh_object.Name = "Kawoosh";
-			kawoosh_object.Transform.Position = Transform.Position;
-			kawoosh_object.Transform.Rotation = Transform.Rotation;
-			kawoosh_object.Transform.Scale = Transform.Scale;
+			kawoosh_object.WorldPosition = WorldPosition;
+			kawoosh_object.WorldRotation = WorldRotation;
+			kawoosh_object.WorldScale = WorldScale;
 			kawoosh_object.SetParent(GameObject);
 
 			Kawoosh = kawoosh_object.Components.Create<Kawoosh>();
@@ -131,9 +131,9 @@ namespace Sandbox.Components.Stargate
 
 			var kawoosh_inside_object = new GameObject();
 			kawoosh_inside_object.Name = "Kawoosh Inside";
-			kawoosh_inside_object.Transform.Position = Transform.Position;
-			kawoosh_inside_object.Transform.Rotation = Transform.Rotation;
-			kawoosh_inside_object.Transform.Scale = Transform.Scale * 0.96f;
+			kawoosh_inside_object.WorldPosition = WorldPosition;
+			kawoosh_inside_object.WorldRotation = WorldRotation;
+			kawoosh_inside_object.WorldScale = WorldScale * 0.96f;
 			kawoosh_inside_object.SetParent(kawoosh_object);
 			Kawoosh.KawooshModelInside =
 				kawoosh_inside_object.Components.Create<SkinnedModelRenderer>();
@@ -233,7 +233,7 @@ namespace Sandbox.Components.Stargate
 		{
 			if (!this.IsValid())
 				return false;
-			return (point - Transform.Position).Dot(Transform.Rotation.Forward) < 0;
+			return (point - WorldPosition).Dot(WorldRotation.Forward) < 0;
 		}
 
 		public bool IsEntityBehindEventHorizon(GameObject ent)
@@ -249,7 +249,7 @@ namespace Sandbox.Components.Stargate
 			// if ( !model.PhysicsBody.IsValid() ) return false;
 			// return IsPointBehindEventHorizon( model.PhysicsBody.MassCenter ); // check masscenter instead
 
-			return IsPointBehindEventHorizon(ent.Transform.Position);
+			return IsPointBehindEventHorizon(ent.WorldPosition);
 		}
 
 		// velocity based checking if entity was just behind the EH or not
@@ -272,8 +272,8 @@ namespace Sandbox.Components.Stargate
 			{
 				var ply = ent.Components.Get<PlayerController>();
 				vel = ply.GetPlayerVelocity();
-				start = ply.Transform.Position - vel.Normal * 1024;
-				end = ply.Transform.Position + vel.Normal * 1024;
+				start = ply.WorldPosition - vel.Normal * 1024;
+				end = ply.WorldPosition + vel.Normal * 1024;
 			}
 			else
 			{
@@ -290,9 +290,7 @@ namespace Sandbox.Components.Stargate
 			if (!this.IsValid() || !Scene.Camera.IsValid())
 				return false;
 
-			return (Scene.Camera.Transform.Position - Transform.Position).Dot(
-					Transform.Rotation.Forward
-				) < 0;
+			return (Scene.Camera.WorldPosition - WorldPosition).Dot(WorldRotation.Forward) < 0;
 		}
 
 		// CLIENT ANIM CONTROL
@@ -485,9 +483,9 @@ namespace Sandbox.Components.Stargate
 			newPos = newPos.WithY(-newPos.y);
 			newPos = otherLocal.PointToWorld(newPos);
 
-			var newDir = Transform.World.PointToLocal(Transform.Position + entryDir);
+			var newDir = Transform.World.PointToLocal(WorldPosition + entryDir);
 			newDir = newDir.WithX(-newDir.x).WithY(-newDir.y);
-			newDir = other.Transform.Position - otherLocal.PointToWorld(newDir);
+			newDir = other.WorldPosition - otherLocal.PointToWorld(newDir);
 			newDir = -newDir;
 
 			return Tuple.Create(newPos, newDir);
@@ -531,10 +529,10 @@ namespace Sandbox.Components.Stargate
 				localVelNormAngular.WithX(-localVelNormAngular.x).WithY(-localVelNormAngular.y)
 			);
 
-			var center = body.IsValid() ? body.PhysicsBody.MassCenter : ent.Transform.Position;
+			var center = body.IsValid() ? body.PhysicsBody.MassCenter : ent.WorldPosition;
 			var otherTransformRotated = otherEH.Transform.World.RotateAround(
-				otherEH.Transform.Position,
-				Rotation.FromAxis(otherEH.Transform.Rotation.Up, 180)
+				otherEH.WorldPosition,
+				Rotation.FromAxis(otherEH.WorldRotation.Up, 180)
 			);
 
 			var localCenter = Transform.World.PointToLocal(center);
@@ -542,11 +540,11 @@ namespace Sandbox.Components.Stargate
 				localCenter.WithX(-localCenter.x - (isPlayer ? 2 : 0))
 			); // move player forward 2 units (try to prevent triggering enter upon exit)
 
-			var localRot = Transform.World.RotationToLocal(ent.Transform.Rotation);
+			var localRot = Transform.World.RotationToLocal(ent.WorldRotation);
 			var otherRot = otherTransformRotated.RotationToWorld(localRot);
 
 			var entPosCenterDiff =
-				Transform.World.PointToLocal(ent.Transform.Position)
+				Transform.World.PointToLocal(ent.WorldPosition)
 				- Transform.World.PointToLocal(center);
 			var otherPos =
 				otherCenter
@@ -558,8 +556,7 @@ namespace Sandbox.Components.Stargate
 			{
 				ply.ActivateTeleportScreenOverlay(0.05f);
 
-				var DeltaAngleEH =
-					otherEH.Transform.Rotation.Angles() - Transform.Rotation.Angles();
+				var DeltaAngleEH = otherEH.WorldRotation.Angles() - WorldRotation.Angles();
 				ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw + 180, 0));
 
 				var localVelNormPlayer = Transform.World.NormalToLocal(
@@ -580,7 +577,7 @@ namespace Sandbox.Components.Stargate
 			}
 			else
 			{
-				ent.Transform.Rotation = otherRot;
+				ent.WorldRotation = otherRot;
 			}
 
 			if (body.IsValid())
@@ -591,7 +588,7 @@ namespace Sandbox.Components.Stargate
 				body.AngularVelocity = newVelAngular;
 			}
 
-			ent.Transform.Position = otherPos;
+			ent.WorldPosition = otherPos;
 			ent.Transform.ClearInterpolation();
 
 			SetEntLastTeleportTime(ent, 0);
@@ -916,8 +913,8 @@ namespace Sandbox.Components.Stargate
 		// [GameEvent.Tick.Server]
 		public void EventHorizonTick()
 		{
-			if (Gate.IsValid() && Transform.Scale != Gate.Transform.Scale)
-				Transform.Scale = Gate.Transform.Scale; // always keep the same scale as gate
+			if (Gate.IsValid() && WorldScale != Gate.WorldScale)
+				WorldScale = Gate.WorldScale; // always keep the same scale as gate
 
 			BufferCleanupLogic(BufferFront);
 			BufferCleanupLogic(BufferBack);
@@ -930,7 +927,7 @@ namespace Sandbox.Components.Stargate
 			/*
 			if ( WormholeLoop.IsValid() )
 			{
-			    WormholeLoop.Position = Transform.Position;
+			    WormholeLoop.Position = WorldPosition;
 
 			    var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
 
@@ -1115,9 +1112,7 @@ namespace Sandbox.Components.Stargate
 						shouldTeleport = false;
 
 					var oldPos = EntityPositionsPrevious[ent];
-					var newPos = body.IsValid()
-						? body.PhysicsBody.MassCenter
-						: ent.Transform.Position;
+					var newPos = body.IsValid() ? body.PhysicsBody.MassCenter : ent.WorldPosition;
 
 					// dont do nothing if we arent moving or if we shouldnt teleport
 					if (shouldTeleport && (oldPos != newPos))
@@ -1177,9 +1172,7 @@ namespace Sandbox.Components.Stargate
 				}
 
 				var body2 = ent.Components.Get<Rigidbody>();
-				var prevPos = body2.IsValid()
-					? body2.PhysicsBody.MassCenter
-					: ent.Transform.Position;
+				var prevPos = body2.IsValid() ? body2.PhysicsBody.MassCenter : ent.WorldPosition;
 				if (EntityPositionsPrevious.ContainsKey(ent))
 					EntityPositionsPrevious[ent] = prevPos;
 				else
@@ -1193,8 +1186,8 @@ namespace Sandbox.Components.Stargate
 
 			// _frontTrigger = new(this) { Position = Position + Rotation.Forward * 2, Rotation = Rotation, Parent = Gate };
 			var trigger_object = new GameObject();
-			trigger_object.Transform.Position = Transform.Position + Transform.Rotation.Forward * 2;
-			trigger_object.Transform.Rotation = Transform.Rotation;
+			trigger_object.WorldPosition = WorldPosition + WorldRotation.Forward * 2;
+			trigger_object.WorldRotation = WorldRotation;
 			trigger_object.SetParent(GameObject);
 
 			_frontTrigger = trigger_object.Components.Create<EventHorizonTrigger>();
@@ -1206,11 +1199,8 @@ namespace Sandbox.Components.Stargate
 
 			// _backTrigger = new(this) { Position = Position - Rotation.Forward * 2, Rotation = Rotation.RotateAroundAxis( Vector3.Up, 180 ), Parent = Gate };
 			trigger_object = new GameObject();
-			trigger_object.Transform.Position = Transform.Position - Transform.Rotation.Forward * 2;
-			trigger_object.Transform.Rotation = Transform.Rotation.RotateAroundAxis(
-				Vector3.Up,
-				180
-			);
+			trigger_object.WorldPosition = WorldPosition - WorldRotation.Forward * 2;
+			trigger_object.WorldRotation = WorldRotation.RotateAroundAxis(Vector3.Up, 180);
 			trigger_object.SetParent(GameObject);
 
 			_backTrigger = trigger_object.Components.Create<EventHorizonTrigger>();

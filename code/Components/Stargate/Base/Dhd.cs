@@ -445,7 +445,7 @@ namespace Sandbox.Components.Stargate
 					{
 						Stargate.PlaySound(
 							MultiWorldSystem.GetWorldIndexOfObject(GameObject),
-							Transform.Position + Transform.Rotation.Up * 16,
+							WorldPosition + WorldRotation.Up * 16,
 							Data.DialPressSound
 						);
 
@@ -500,7 +500,7 @@ namespace Sandbox.Components.Stargate
 
 					Stargate.PlaySound(
 						MultiWorldSystem.GetWorldIndexOfObject(GameObject),
-						Transform.Position + Transform.Rotation.Up * 16,
+						WorldPosition + WorldRotation.Up * 16,
 						Data.ButtonPressSound
 					);
 				}

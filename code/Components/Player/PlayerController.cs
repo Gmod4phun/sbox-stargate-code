@@ -59,7 +59,7 @@ public class PlayerController : Component
 		var cam = Camera;
 		if (cam is not null)
 		{
-			var ee = cam.Transform.Rotation.Angles();
+			var ee = cam.WorldRotation.Angles();
 			ee.roll = 0;
 			EyeAngles = ee;
 		}
@@ -129,7 +129,7 @@ public class PlayerController : Component
 
 	public Ray GetAimRay()
 	{
-		return new Ray(Eye.Transform.Position, EyeAngles.Forward);
+		return new Ray(Eye.WorldPosition, EyeAngles.Forward);
 	}
 
 	private void UseLogic()
@@ -213,22 +213,19 @@ public class PlayerController : Component
 
 			if (!PlayerAlive)
 			{
-				var camPos = Body.IsValid() ? Body.Transform.Position : Transform.Position;
-				cam.Transform.Position = camPos + lookDir.Backward * 300 + Vector3.Up * 75.0f;
+				var camPos = Body.IsValid() ? Body.WorldPosition : WorldPosition;
+				cam.WorldPosition = camPos + lookDir.Backward * 300 + Vector3.Up * 75.0f;
 			}
 			else
 			{
 				if (FirstPerson)
 				{
-					cam.Transform.Position = Eye.Transform.Position;
+					cam.WorldPosition = Eye.WorldPosition;
 				}
 				else
 				{
 					var tr = Scene
-						.Trace.Ray(
-							Eye.Transform.Position,
-							Eye.Transform.Position + lookDir.Backward * 2048
-						)
+						.Trace.Ray(Eye.WorldPosition, Eye.WorldPosition + lookDir.Backward * 2048)
 						.WithTag(MultiWorldSystem.GetWorldTag(CurrentWorldIndex))
 						.Run();
 
@@ -236,12 +233,11 @@ public class PlayerController : Component
 					lookDistance = Math.Min(lookDistance, 300) - 16;
 					lookDistance = Math.Max(lookDistance, 16);
 
-					cam.Transform.Position =
-						Eye.Transform.Position + lookDir.Backward * lookDistance;
+					cam.WorldPosition = Eye.WorldPosition + lookDir.Backward * lookDistance;
 				}
 			}
 
-			cam.Transform.Rotation = lookDir;
+			cam.WorldRotation = lookDir;
 
 			if (cam is not null)
 			{
@@ -263,7 +259,7 @@ public class PlayerController : Component
 				if (Input.Pressed("Attack1") && PlayerDeathTime > 3f)
 				{
 					// respawn
-					GameNetworkManager.Current.SpawnPlayer(Network.OwnerConnection);
+					GameNetworkManager.Current.SpawnPlayer(Network.Owner);
 					GameObject.Destroy();
 				}
 
@@ -294,7 +290,7 @@ public class PlayerController : Component
 			if (Input.Pressed("Attack1"))
 			{
 			    UtilityFunctions.ShootProp(
-			        Eye.Transform.Position + EyeAngles.Forward * 64,
+			        Eye.WorldPosition + EyeAngles.Forward * 64,
 			        EyeAngles.Forward,
 			        1000,
 			        CurrentWorldIndex
@@ -305,8 +301,8 @@ public class PlayerController : Component
 			{
 			    var tr = Scene
 			        .Trace.Ray(
-			            cam.Transform.Position,
-			            cam.Transform.Position + lookDir.Forward * 500
+			            cam.WorldPosition,
+			            cam.WorldPosition + lookDir.Forward * 500
 			        )
 			        .WithoutTags("player_collider")
 			        .WithTag(MultiWorldSystem.GetWorldTag(CurrentWorldIndex))
@@ -326,7 +322,7 @@ public class PlayerController : Component
 			    }
 
 			    // UtilityFunctions.SpawnCitizenRagdoll( pos, rot, CurrentWorldIndex );
-			    // ShootProp( Eye.Transform.Position + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
+			    // ShootProp( Eye.WorldPosition + EyeAngles.Forward * 64, EyeAngles.Forward, 1000 );
 			}
 			*/
 		}
@@ -349,12 +345,12 @@ public class PlayerController : Component
 				targetAngle = Rotation.LookAt(v, Vector3.Up);
 			}
 
-			rotateDifference = Body.Transform.Rotation.Distance(targetAngle);
+			rotateDifference = Body.WorldRotation.Distance(targetAngle);
 
 			if (rotateDifference > 50.0f || cc.Velocity.Length > 10.0f)
 			{
-				Body.Transform.Rotation = Rotation.Lerp(
-					Body.Transform.Rotation,
+				Body.WorldRotation = Rotation.Lerp(
+					Body.WorldRotation,
 					targetAngle,
 					Time.Delta * 2.0f
 				);
@@ -416,7 +412,7 @@ public class PlayerController : Component
 			if (Input.Down("Run"))
 				dirVector *= 5;
 
-			Transform.Position += dirVector * 250 * Time.Delta;
+			WorldPosition += dirVector * 250 * Time.Delta;
 
 			return;
 		}
@@ -435,7 +431,7 @@ public class PlayerController : Component
 			cc.Punch(Vector3.Up * flMul * flGroundFactor);
 			//	cc.IsOnGround = false;
 
-			OnJump(Transform.Position);
+			OnJump(WorldPosition);
 		}
 
 		if (cc.IsOnGround)
@@ -447,7 +443,7 @@ public class PlayerController : Component
 			if (!wasOnGround)
 			{
 				wasOnGround = true;
-				OnLand(Transform.Position);
+				OnLand(WorldPosition);
 			}
 		}
 		else
