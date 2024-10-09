@@ -37,6 +37,7 @@
 							exception_list = 
 							[
 								"ceiling_trim_br",
+								"ceiling_trim_br_v2",
 							]
 						}
 					},
