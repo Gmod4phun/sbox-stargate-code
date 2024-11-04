@@ -1,3 +1,5 @@
+using PlayerController = Scenegate.PlayerController;
+
 public class MultiWorldSystem : GameObjectSystem
 {
 	// public static MultiWorldSystem Current => Game.ActiveScene.GetSystem<MultiWorldSystem>();

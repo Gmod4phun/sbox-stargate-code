@@ -1,4 +1,5 @@
 using Sandbox.Components.Stargate;
+using PlayerController = Scenegate.PlayerController;
 
 public class PlayerGrabber : Component
 {

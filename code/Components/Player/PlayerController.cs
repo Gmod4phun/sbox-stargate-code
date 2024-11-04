@@ -2,6 +2,8 @@ using Sandbox.Citizen;
 using Sandbox.Components.Stargate;
 using Sandbox.Components.Stargate.Ramps;
 
+namespace Scenegate;
+
 public class PlayerController : Component
 {
 	[Property]

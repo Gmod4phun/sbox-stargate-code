@@ -1,5 +1,7 @@
 namespace Sandbox.Components.Stargate.Rings
 {
+	using PlayerController = Scenegate.PlayerController;
+
 	public class RingTransporter : Component
 	{
 		[Property]

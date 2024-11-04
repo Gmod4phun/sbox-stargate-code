@@ -1,4 +1,5 @@
 using Sandbox.Network;
+using PlayerController = Scenegate.PlayerController;
 
 public class GameNetworkManager : Component, Component.INetworkListener
 {

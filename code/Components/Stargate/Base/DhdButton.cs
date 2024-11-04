@@ -1,5 +1,7 @@
 namespace Sandbox.Components.Stargate
 {
+	using PlayerController = Scenegate.PlayerController;
+
 	public class DhdButton : Component, Component.ExecuteInEditor, IUse
 	{
 		public ModelRenderer ButtonModel => Components.Get<ModelRenderer>();

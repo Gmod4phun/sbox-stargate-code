@@ -2,6 +2,8 @@ using System.Text.Json.Serialization;
 
 namespace Sandbox.Components.Stargate
 {
+	using PlayerController = Scenegate.PlayerController;
+
 	public partial class EventHorizon : Component
 	{
 		private const float FastMovingVelocityThresholdSqr = 400 * 400; // entities with velocity lower than 400 shouldn't be handled

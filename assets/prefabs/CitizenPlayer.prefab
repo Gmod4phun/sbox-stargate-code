@@ -16,7 +16,7 @@
         "StepHeight": 18
       },
       {
-        "__type": "PlayerController",
+        "__type": "Scenegate.PlayerController",
         "__enabled": true,
         "AnimationHelper": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
         "Body": "3a78266a-da75-475e-9317-94c71c3418fa",

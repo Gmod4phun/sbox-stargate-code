@@ -1,3 +1,5 @@
+using PlayerController = Scenegate.PlayerController;
+
 public sealed class FootstepEvent : Component
 {
 	[Property]

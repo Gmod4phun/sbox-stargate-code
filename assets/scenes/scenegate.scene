@@ -66,7 +66,7 @@
           "UseCollisionRules": true
         },
         {
-          "__type": "PlayerController",
+          "__type": "Scenegate.PlayerController",
           "__guid": "6a07ea5a-a6ca-41ec-8804-cee66ba0c6aa",
           "AnimationHelper": {
             "_type": "component",
@@ -122,7 +122,7 @@
             "_type": "component",
             "component_id": "6a07ea5a-a6ca-41ec-8804-cee66ba0c6aa",
             "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
-            "component_type": "PlayerController"
+            "component_type": "Scenegate.PlayerController"
           },
           "Source": {
             "_type": "component",
@@ -9461,6 +9461,33 @@
               "IsTrigger": false,
               "Radius": 32,
               "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "98d30f81-303f-4ade-b8cb-be14f9577993",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "-121.0255,0,103.2131",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TriggerDebug",
+              "__guid": "55ebe9ff-0a01-4fce-80bd-1af4d6af5a3e",
+              "TargetCollider": {
+                "_type": "component",
+                "component_id": "7f01f90a-55b8-4bd6-b5cf-a4b1655105bf",
+                "go": "98d30f81-303f-4ade-b8cb-be14f9577993",
+                "component_type": "BoxCollider"
+              }
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "7f01f90a-55b8-4bd6-b5cf-a4b1655105bf",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "189.3,217.8,201.4",
+              "Static": true
             }
           ]
         }
