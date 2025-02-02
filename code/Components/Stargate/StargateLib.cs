@@ -543,7 +543,7 @@ namespace Sandbox.Components.Stargate
 
 		// sounds
 
-		[Broadcast]
+		[Rpc.Broadcast]
 		public static void PlaySoundBroadcast(Guid gameObjectId, string name, float delay = 0)
 		{
 			var go = Game.ActiveScene.GetAllObjects(true).FirstOrDefault(x => x.Id == gameObjectId);

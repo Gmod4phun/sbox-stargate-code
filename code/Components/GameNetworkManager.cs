@@ -34,7 +34,10 @@ public class GameNetworkManager : Component, Component.INetworkListener
 		{
 			LoadingScreen.Title = "Creating Lobby";
 			await Task.DelayRealtimeSeconds(0.1f);
-			Networking.CreateLobby();
+
+			LobbyConfig config = new LobbyConfig();
+			config.MaxPlayers = 32;
+			Networking.CreateLobby(config);
 		}
 	}
 

@@ -124,7 +124,7 @@ public class MultiWorldSystem : GameObjectSystem
 		AssignBroadcast(gameObject.Id, worldIndex);
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public static void AssignBroadcast(Guid objectId, int worldIndex)
 	{
 		var obj = Game.ActiveScene.GetAllObjects(false).FirstOrDefault(o => o.Id == objectId);

@@ -170,7 +170,7 @@ namespace Sandbox.Components.Stargate
 
 		// SERVER CONTROL
 
-		[Broadcast]
+		[Rpc.Broadcast]
 		public void Establish(bool doKawoosh = true)
 		{
 			EstablishBroadcast(doKawoosh);
@@ -195,7 +195,7 @@ namespace Sandbox.Components.Stargate
 			WormholeLoop = Stargate.PlayFollowingSound(GameObject, "stargate.event_horizon.loop");
 		}
 
-		[Broadcast]
+		[Rpc.Broadcast]
 		public void Collapse()
 		{
 			CollapseBroadcast();

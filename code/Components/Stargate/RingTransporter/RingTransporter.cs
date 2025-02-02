@@ -329,7 +329,7 @@ namespace Sandbox.Components.Stargate.Rings
 			particle.Destroy();
 		}
 
-		[Broadcast]
+		[Rpc.Broadcast]
 		private void DoLightEffect()
 		{
 			DoLightEffectClient();
@@ -377,7 +377,7 @@ namespace Sandbox.Components.Stargate.Rings
 			}
 		}
 
-		[Broadcast]
+		[Rpc.Broadcast]
 		private void DoAnimation(bool open)
 		{
 			Renderer?.SceneModel?.SetAnimParameter("Open", open);

@@ -148,6 +148,6 @@ public class LensFlareEffect : PostProcess
 		if (!camera.IsValid())
 			return;
 
-		camera.AddHookAfterUI("DrawLensFlareEffect", 1, DrawLensFlare);
+		camera.AddHookBeforeOverlay("DrawLensFlareEffect", 1, DrawLensFlare);
 	}
 }

@@ -372,14 +372,14 @@ public class PlayerController : Component
 		}
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public void OnJump(Vector3 position)
 	{
 		AnimationHelper?.TriggerJump();
 		FootstepEvent.PlayJumpLandSound(this, position, false);
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public void OnLand(Vector3 position)
 	{
 		FootstepEvent.PlayJumpLandSound(this, position, true);
