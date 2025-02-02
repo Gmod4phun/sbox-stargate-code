@@ -13344,52 +13344,6 @@
               "SurfaceVelocity": "0,0,0"
             }
           ]
-        },
-        {
-          "__guid": "98d30f81-303f-4ade-b8cb-be14f9577993",
-          "Flags": 0,
-          "Name": "Object",
-          "Position": "-121.0255,0,103.2131",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "TriggerDebug",
-              "__guid": "55ebe9ff-0a01-4fce-80bd-1af4d6af5a3e",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "TargetCollider": {
-                "_type": "component",
-                "component_id": "7f01f90a-55b8-4bd6-b5cf-a4b1655105bf",
-                "go": "98d30f81-303f-4ade-b8cb-be14f9577993",
-                "component_type": "BoxCollider"
-              }
-            },
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "7f01f90a-55b8-4bd6-b5cf-a4b1655105bf",
-              "Center": "0,0,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "189.3,217.8,201.4",
-              "Static": true,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ]
         }
       ]
     },
