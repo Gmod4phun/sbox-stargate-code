@@ -2,7 +2,7 @@
 
 Layer0
 {
-	shader "shaders/eventhorizon.shader_c"
+	shader "shaders/eventhorizon.shader"
 
 	//---- Rendering ----
 	F_DO_NOT_CAST_SHADOWS 1
@@ -14,7 +14,7 @@ Layer0
 	g_flInMin "0.460"
 	g_flOutMax "0.534"
 	g_flOutMin "0.075"
-	g_vSaturation "[0.294118 0.298039 0.341176 1.000000]"
+	g_vSaturation "[0.058824 0.082353 0.156863 1.000000]"
 
 	//---- Fog ----
 	g_bFogEnabled "1"

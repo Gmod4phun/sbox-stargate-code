@@ -24,10 +24,14 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
       "Identifier": "0",
-      "Position": "2928,-576",
+      "Position": "3024,-540",
       "HandleOffsets": {},
       "Albedo": {
-        "Identifier": "30",
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "Emission": {
+        "Identifier": "51",
         "Output": "Result"
       }
     },
@@ -50,7 +54,7 @@
       "Position": "-3180,-780",
       "HandleOffsets": {},
       "Coords": {
-        "Identifier": "26",
+        "Identifier": "25",
         "Output": "Result"
       }
     },
@@ -62,11 +66,11 @@
       "Position": "1044,-576",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "17",
+        "Identifier": "16",
         "Output": "X"
       },
       "B": {
-        "Identifier": "8",
+        "Identifier": "7",
         "Output": "R"
       }
     },
@@ -82,7 +86,7 @@
         "Output": "XYZW"
       },
       "B": {
-        "Identifier": "21",
+        "Identifier": "20",
         "Output": "Result"
       }
     },
@@ -116,11 +120,11 @@
       "Position": "1044,-444",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "17",
+        "Identifier": "16",
         "Output": "Y"
       },
       "B": {
-        "Identifier": "8",
+        "Identifier": "7",
         "Output": "G"
       }
     },
@@ -132,24 +136,12 @@
       "Position": "1044,-324",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "17",
+        "Identifier": "16",
         "Output": "Z"
       },
       "B": {
-        "Identifier": "8",
+        "Identifier": "7",
         "Output": "B"
-      }
-    },
-    {
-      "_class": "Divide",
-      "DefaultA": 0,
-      "DefaultB": 2,
-      "Identifier": "7",
-      "Position": "2676,-288",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "30",
-        "Output": "Result"
       }
     },
     {
@@ -160,7 +152,7 @@
       "UI": {
         "Type": "Color"
       },
-      "Identifier": "8",
+      "Identifier": "7",
       "Position": "732,-468",
       "HandleOffsets": {}
     },
@@ -168,11 +160,11 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 0.299,
-      "Identifier": "9",
+      "Identifier": "8",
       "Position": "-2676,-624",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "12",
+        "Identifier": "11",
         "Output": "X"
       }
     },
@@ -180,11 +172,11 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 0.587,
-      "Identifier": "10",
+      "Identifier": "9",
       "Position": "-2676,-480",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "12",
+        "Identifier": "11",
         "Output": "Y"
       }
     },
@@ -192,17 +184,17 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 0.114,
-      "Identifier": "11",
+      "Identifier": "10",
       "Position": "-2676,-348",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "12",
+        "Identifier": "11",
         "Output": "Z"
       }
     },
     {
       "_class": "SplitVector",
-      "Identifier": "12",
+      "Identifier": "11",
       "Position": "-2916,-492",
       "HandleOffsets": {},
       "Input": {
@@ -214,15 +206,15 @@
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "13",
+      "Identifier": "12",
       "Position": "-2544,-540",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "9",
+        "Identifier": "8",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "10",
+        "Identifier": "9",
         "Output": "Result"
       }
     },
@@ -230,15 +222,15 @@
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "14",
+      "Identifier": "13",
       "Position": "-2436,-480",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "13",
+        "Identifier": "12",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "11",
+        "Identifier": "10",
         "Output": "Result"
       }
     },
@@ -249,11 +241,11 @@
       "Operator": "LessThanOrEqual",
       "Enabled": false,
       "UI": {},
-      "Identifier": "15",
+      "Identifier": "14",
       "Position": "-2004,-1092",
       "HandleOffsets": {},
       "True": {
-        "Identifier": "16",
+        "Identifier": "15",
         "Output": "XYZW"
       },
       "False": {
@@ -267,29 +259,29 @@
       "DefaultY": 0,
       "DefaultZ": 0,
       "DefaultW": 0,
-      "Identifier": "16",
+      "Identifier": "15",
       "Position": "-2292,-576",
       "HandleOffsets": {},
       "X": {
-        "Identifier": "14",
+        "Identifier": "13",
         "Output": "Result"
       },
       "Y": {
-        "Identifier": "14",
+        "Identifier": "13",
         "Output": "Result"
       },
       "Z": {
-        "Identifier": "14",
+        "Identifier": "13",
         "Output": "Result"
       }
     },
     {
       "_class": "SplitVector",
-      "Identifier": "17",
+      "Identifier": "16",
       "Position": "708,-804",
       "HandleOffsets": {},
       "Input": {
-        "Identifier": "46",
+        "Identifier": "45",
         "Output": "Result"
       }
     },
@@ -298,11 +290,11 @@
       "AngleOffset": 3.14,
       "CellDensity": 15,
       "Worley": false,
-      "Identifier": "18",
+      "Identifier": "17",
       "Position": "-3840,-780",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "23",
+        "Identifier": "22",
         "Output": "Result"
       }
     },
@@ -314,7 +306,7 @@
       "Name": "Illumbrightness",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "19",
+      "Identifier": "18",
       "Position": "1344,-252",
       "HandleOffsets": {}
     },
@@ -326,11 +318,11 @@
       "OutMin": 0,
       "OutMax": 2,
       "Clamp": true,
-      "Identifier": "20",
+      "Identifier": "19",
       "Position": "1620,-180",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "19",
+        "Identifier": "18",
         "Output": "Result"
       }
     },
@@ -338,21 +330,21 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "21",
+      "Identifier": "20",
       "Position": "1920,-384",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "51",
+        "Identifier": "50",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "20",
+        "Identifier": "19",
         "Output": "Result"
       }
     },
     {
       "_class": "Time",
-      "Identifier": "22",
+      "Identifier": "21",
       "Position": "-4212,-816",
       "HandleOffsets": {}
     },
@@ -360,15 +352,15 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "23",
+      "Identifier": "22",
       "Position": "-3948,-864",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "22",
+        "Identifier": "21",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "24",
+        "Identifier": "23",
         "Output": "Result"
       }
     },
@@ -380,7 +372,7 @@
       "Name": "",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "24",
+      "Identifier": "23",
       "Position": "-4188,-720",
       "HandleOffsets": {}
     },
@@ -392,11 +384,11 @@
       "OutMin": 0.5,
       "OutMax": 0.525,
       "Clamp": true,
-      "Identifier": "25",
+      "Identifier": "24",
       "Position": "-3660,-708",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "18",
+        "Identifier": "17",
         "Output": "Result"
       }
     },
@@ -404,15 +396,15 @@
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "26",
+      "Identifier": "25",
       "Position": "-3348,-636",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "29",
+        "Identifier": "28",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "28",
+        "Identifier": "27",
         "Output": "Result"
       }
     },
@@ -420,7 +412,7 @@
       "_class": "TextureCoord",
       "UseSecondaryCoord": false,
       "Tiling": "1,1",
-      "Identifier": "27",
+      "Identifier": "26",
       "Position": "-3660,-924",
       "HandleOffsets": {}
     },
@@ -432,7 +424,7 @@
       "Name": "",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "28",
+      "Identifier": "27",
       "Position": "-3648,-432",
       "HandleOffsets": {}
     },
@@ -440,22 +432,22 @@
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "29",
+      "Identifier": "28",
       "Position": "-3420,-852",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "27",
+        "Identifier": "26",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "25",
+        "Identifier": "24",
         "Output": "Result"
       }
     },
     {
       "_class": "Saturate",
-      "Identifier": "30",
-      "Position": "2412,-336",
+      "Identifier": "29",
+      "Position": "2484,-480",
       "HandleOffsets": {},
       "Input": {
         "Identifier": "3",
@@ -470,37 +462,37 @@
       "OutMin": 0,
       "OutMax": 1,
       "Clamp": true,
-      "Identifier": "31",
+      "Identifier": "30",
       "Position": "-852,-816",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "38",
+        "Identifier": "37",
         "Output": "XYZW"
       },
       "B": {
-        "Identifier": "47",
+        "Identifier": "46",
         "Output": "Result"
       },
       "C": {
-        "Identifier": "48",
+        "Identifier": "47",
         "Output": "Result"
       },
       "D": {
-        "Identifier": "49",
+        "Identifier": "48",
         "Output": "Result"
       },
       "E": {
-        "Identifier": "50",
+        "Identifier": "49",
         "Output": "Result"
       }
     },
     {
       "_class": "SplitVector",
-      "Identifier": "32",
+      "Identifier": "31",
       "Position": "-660,-912",
       "HandleOffsets": {},
       "Input": {
-        "Identifier": "31",
+        "Identifier": "30",
         "Output": "Result"
       }
     },
@@ -508,11 +500,11 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 4.6,
-      "Identifier": "33",
+      "Identifier": "32",
       "Position": "-372,-720",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "32",
+        "Identifier": "31",
         "Output": "Z"
       }
     },
@@ -520,11 +512,11 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "34",
+      "Identifier": "33",
       "Position": "-372,-852",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "32",
+        "Identifier": "31",
         "Output": "Y"
       }
     },
@@ -532,11 +524,11 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "35",
+      "Identifier": "34",
       "Position": "-372,-972",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "32",
+        "Identifier": "31",
         "Output": "X"
       }
     },
@@ -544,11 +536,149 @@
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "36",
+      "Identifier": "35",
       "Position": "-84,-816",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "45",
+        "Identifier": "44",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "32",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 0.299,
+      "Identifier": "36",
+      "Position": "-1440,-1008",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "42",
+        "Output": "X"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "37",
+      "Position": "-1044,-912",
+      "HandleOffsets": {},
+      "X": {
+        "Identifier": "41",
+        "Output": "Result"
+      },
+      "Y": {
+        "Identifier": "41",
+        "Output": "Result"
+      },
+      "Z": {
+        "Identifier": "41",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "38",
+      "Position": "-1296,-996",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "36",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "40",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 0.114,
+      "Identifier": "39",
+      "Position": "-1440,-756",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "42",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 0.587,
+      "Identifier": "40",
+      "Position": "-1440,-876",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "42",
+        "Output": "Y"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "41",
+      "Position": "-1200,-900",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "38",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "39",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "42",
+      "Position": "-1692,-924",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "43",
+      "Position": "96,-852",
+      "HandleOffsets": {},
+      "X": {
+        "Identifier": "35",
+        "Output": "Result"
+      },
+      "Y": {
+        "Identifier": "35",
+        "Output": "Result"
+      },
+      "Z": {
+        "Identifier": "35",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "44",
+      "Position": "-204,-912",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "34",
         "Output": "Result"
       },
       "B": {
@@ -559,154 +689,16 @@
     {
       "_class": "Multiply",
       "DefaultA": 0,
-      "DefaultB": 0.299,
-      "Identifier": "37",
-      "Position": "-1440,-1008",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "43",
-        "Output": "X"
-      }
-    },
-    {
-      "_class": "CombineVector",
-      "DefaultX": 0,
-      "DefaultY": 0,
-      "DefaultZ": 0,
-      "DefaultW": 0,
-      "Identifier": "38",
-      "Position": "-1044,-912",
-      "HandleOffsets": {},
-      "X": {
-        "Identifier": "42",
-        "Output": "Result"
-      },
-      "Y": {
-        "Identifier": "42",
-        "Output": "Result"
-      },
-      "Z": {
-        "Identifier": "42",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "Add",
-      "DefaultA": 0,
-      "DefaultB": 1,
-      "Identifier": "39",
-      "Position": "-1296,-996",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "37",
-        "Output": "Result"
-      },
-      "B": {
-        "Identifier": "41",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "Multiply",
-      "DefaultA": 0,
-      "DefaultB": 0.114,
-      "Identifier": "40",
-      "Position": "-1440,-756",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "43",
-        "Output": "Z"
-      }
-    },
-    {
-      "_class": "Multiply",
-      "DefaultA": 0,
-      "DefaultB": 0.587,
-      "Identifier": "41",
-      "Position": "-1440,-876",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "43",
-        "Output": "Y"
-      }
-    },
-    {
-      "_class": "Add",
-      "DefaultA": 0,
-      "DefaultB": 1,
-      "Identifier": "42",
-      "Position": "-1200,-900",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "39",
-        "Output": "Result"
-      },
-      "B": {
-        "Identifier": "40",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "SplitVector",
-      "Identifier": "43",
-      "Position": "-1692,-924",
-      "HandleOffsets": {},
-      "Input": {
-        "Identifier": "15",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "CombineVector",
-      "DefaultX": 0,
-      "DefaultY": 0,
-      "DefaultZ": 0,
-      "DefaultW": 0,
-      "Identifier": "44",
-      "Position": "96,-852",
-      "HandleOffsets": {},
-      "X": {
-        "Identifier": "36",
-        "Output": "Result"
-      },
-      "Y": {
-        "Identifier": "36",
-        "Output": "Result"
-      },
-      "Z": {
-        "Identifier": "36",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "Add",
-      "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "45",
-      "Position": "-204,-912",
-      "HandleOffsets": {},
-      "A": {
-        "Identifier": "35",
-        "Output": "Result"
-      },
-      "B": {
-        "Identifier": "34",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "Multiply",
-      "DefaultA": 0,
-      "DefaultB": 1,
-      "Identifier": "46",
       "Position": "564,-1056",
       "HandleOffsets": {},
       "A": {
-        "Identifier": "15",
+        "Identifier": "14",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "44",
+        "Identifier": "43",
         "Output": "XYZW"
       }
     },
@@ -718,7 +710,7 @@
       "Name": "InMin",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "47",
+      "Identifier": "46",
       "Position": "-1164,-732",
       "HandleOffsets": {}
     },
@@ -730,7 +722,7 @@
       "Name": "InMax",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "48",
+      "Identifier": "47",
       "Position": "-1164,-672",
       "HandleOffsets": {}
     },
@@ -742,7 +734,7 @@
       "Name": "OutMin",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "49",
+      "Identifier": "48",
       "Position": "-1164,-612",
       "HandleOffsets": {}
     },
@@ -754,7 +746,7 @@
       "Name": "OutMax",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "50",
+      "Identifier": "49",
       "Position": "-1164,-540",
       "HandleOffsets": {}
     },
@@ -766,9 +758,21 @@
       "UI": {
         "Type": "Color"
       },
-      "Identifier": "51",
+      "Identifier": "50",
       "Position": "1572,-468",
       "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 16,
+      "Identifier": "51",
+      "Position": "2808,-396",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "29",
+        "Output": "Result"
+      }
     }
   ]
 }

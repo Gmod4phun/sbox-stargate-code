@@ -2,7 +2,7 @@
 
 Layer0
 {
-	shader "shaders/eventhorizon.shader_c"
+	shader "shaders/eventhorizon.shader"
 
 	//---- Rendering ----
 	F_DO_NOT_CAST_SHADOWS 1
@@ -10,17 +10,14 @@ Layer0
 	Color "materials/default/default_color.tga"
 	g_bGrayscale "1"
 	g_flIllumbrightness "1.000"
-	g_flInMax "0.652"
-	g_flInMin "0.012"
-	g_flOutMax "0.304"
+	g_flInMax "1.000"
+	g_flInMin "0.000"
+	g_flOutMax "0.102"
 	g_flOutMin "0.000"
-	g_vSaturation "[0.447059 0.545098 0.650980 1.000000]"
+	g_vSaturation "[0.211765 0.243137 0.294118 1.000000]"
 
 	//---- Fog ----
 	g_bFogEnabled "1"
-
-	//---- Translucent ----
-	g_flOpacityScale "1.000"
 
 	Attributes
 	{
