@@ -22,10 +22,8 @@ FEATURES
 //=========================================================================================================================
 MODES
 {
-    VrForward();                                               // Indicates this shader will be used for main rendering
-    ToolsVis( S_MODE_TOOLS_VIS );                                // Ability to see in the editor
-    ToolsWireframe("vr_tools_wireframe.shader");               // Allows for mat_wireframe to work
-    ToolsShadingComplexity("tools_shading_complexity.shader"); // Shows how expensive drawing is in debug view
+    Forward();                                               // Indicates this shader will be used for main rendering
+    ToolsShadingComplexity("tools_shading_complexity.shader");
     Depth( S_MODE_DEPTH );
 }
 

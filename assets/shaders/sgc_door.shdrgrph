@@ -1,7 +1,21 @@
 {
+  "IsSubgraph": false,
+  "Path": "shaders/sgc_door.shdrgrph",
   "Model": null,
+  "Title": null,
   "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
   "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "EnableShadows": true,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
   "nodes": [
     {
       "_class": "TextureSampler",
@@ -15,7 +29,8 @@
         "SrgbRead": true
       },
       "Identifier": "0",
-      "Position": "-240,368"
+      "Position": "-240,372",
+      "HandleOffsets": {}
     },
     {
       "_class": "TextureSampler",
@@ -29,7 +44,8 @@
         "SrgbRead": true
       },
       "Identifier": "1",
-      "Position": "-240,112"
+      "Position": "-240,108",
+      "HandleOffsets": {}
     },
     {
       "_class": "TextureSampler",
@@ -42,7 +58,8 @@
         "SrgbRead": true
       },
       "Identifier": "2",
-      "Position": "-144,-1152"
+      "Position": "-144,-1152",
+      "HandleOffsets": {}
     },
     {
       "_class": "Result",
@@ -51,7 +68,8 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 0,
       "Identifier": "3",
-      "Position": "1168,-400",
+      "Position": "1164,-396",
+      "HandleOffsets": {},
       "Albedo": {
         "Identifier": "7",
         "Output": "Result"
@@ -87,7 +105,8 @@
         "SrgbRead": true
       },
       "Identifier": "4",
-      "Position": "-240,-144"
+      "Position": "-240,-144",
+      "HandleOffsets": {}
     },
     {
       "_class": "TextureSampler",
@@ -101,7 +120,8 @@
         "SrgbRead": true
       },
       "Identifier": "5",
-      "Position": "-240,624"
+      "Position": "-240,624",
+      "HandleOffsets": {}
     },
     {
       "_class": "TextureSampler",
@@ -115,7 +135,8 @@
         "SrgbRead": true
       },
       "Identifier": "6",
-      "Position": "-64,-416"
+      "Position": "-60,-420",
+      "HandleOffsets": {}
     },
     {
       "_class": "Branch",
@@ -125,7 +146,8 @@
       "Enabled": false,
       "UI": {},
       "Identifier": "7",
-      "Position": "880,-832",
+      "Position": "876,-828",
+      "HandleOffsets": {},
       "True": {
         "Identifier": "9",
         "Output": "Result"
@@ -144,13 +166,17 @@
         "Type": "Color"
       },
       "Identifier": "8",
-      "Position": "-64,-624"
+      "Position": "-60,-624",
+      "HandleOffsets": {}
     },
     {
       "_class": "Lerp",
+      "DefaultA": 0,
+      "DefaultB": 1,
       "Fraction": 0.5,
       "Identifier": "9",
-      "Position": "352,-672",
+      "Position": "348,-672",
+      "HandleOffsets": {},
       "A": {
         "Identifier": "11",
         "Output": "Result"
@@ -173,14 +199,16 @@
         "Type": "Color"
       },
       "Identifier": "10",
-      "Position": "-144,-912"
+      "Position": "-144,-912",
+      "HandleOffsets": {}
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "11",
-      "Position": "144,-1024",
+      "Position": "144,-1020",
+      "HandleOffsets": {},
       "A": {
         "Identifier": "2",
         "Output": "Result"
@@ -193,7 +221,8 @@
     {
       "_class": "ObjectSpaceNormal",
       "Identifier": "12",
-      "Position": "320,-288"
+      "Position": "324,-288",
+      "HandleOffsets": {}
     },
     {
       "_class": "TransformNormal",
@@ -201,7 +230,8 @@
       "OutputSpace": "Tangent",
       "DecodeNormal": true,
       "Identifier": "13",
-      "Position": "240,-80",
+      "Position": "240,-84",
+      "HandleOffsets": {},
       "Input": {
         "Identifier": "4",
         "Output": "Result"
