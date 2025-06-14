@@ -39,6 +39,6 @@ public class MultiWorld : Component
 			CreateMixer();
 		}
 
-		MultiWorldSystem.Init();
+		// MultiWorldSystem.Init();
 	}
 }
