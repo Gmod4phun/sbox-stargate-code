@@ -35,19 +35,6 @@
 		[Property, Sync]
 		public bool AcceleratedDialup { get; set; } = false;
 
-		public static void DrawGizmos(EditorContext context)
-		{
-			Gizmo.Draw.Model("models/sbox_stargate/sg_mw/sg_mw_ring.vmdl");
-
-			for (var i = 0; i < 9; i++)
-			{
-				Gizmo.Draw.Model(
-					"models/sbox_stargate/sg_mw/sg_mw_chevron.vmdl",
-					new Transform(Vector3.Zero, Rotation.FromRoll(i * 40))
-				);
-			}
-		}
-
 		public async Task<bool> RotateRingToSymbol(char sym, int angOffset = 0)
 		{
 			return await Ring.RotateToSymbol(sym, angOffset);

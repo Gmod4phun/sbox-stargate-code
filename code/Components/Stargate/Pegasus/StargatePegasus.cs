@@ -34,19 +34,6 @@ namespace Sandbox.Components.Stargate
 				.Children.Find(go => go.Components.Get<StargateRingPegasus>().IsValid())
 				.Components.Get<StargateRingPegasus>();
 
-		public static void DrawGizmos(EditorContext context)
-		{
-			Gizmo.Draw.Model("models/sbox_stargate/sg_peg/sg_peg_ring.vmdl");
-
-			for (var i = 0; i < 9; i++)
-			{
-				Gizmo.Draw.Model(
-					"models/sbox_stargate/sg_peg/sg_peg_chevron.vmdl",
-					new Transform(Vector3.Zero, Rotation.FromRoll(i * 40))
-				);
-			}
-		}
-
 		// DIALING
 
 		public override void OnStopDialingBegin()

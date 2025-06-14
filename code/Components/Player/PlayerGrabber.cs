@@ -107,7 +107,7 @@ public class PlayerGrabber : Component
 		if (!tr.Hit || !tr.Body.IsValid())
 			return;
 
-		if (tr.Body.GetComponent() is not Rigidbody body)
+		if (tr.Body.Component is not Rigidbody body)
 			return;
 
 		if (body.IsAttached())
