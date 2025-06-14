@@ -29,10 +29,6 @@
       "Albedo": {
         "Identifier": "30",
         "Output": "Result"
-      },
-      "Emission": {
-        "Identifier": "7",
-        "Output": "Result"
       }
     },
     {

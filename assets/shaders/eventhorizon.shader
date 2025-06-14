@@ -157,10 +157,8 @@ PS
 		float4 l_52 = l_49 * float4( l_51, l_51, l_51, l_51 );
 		float4 l_53 = l_48 + l_52;
 		float4 l_54 = saturate( l_53 );
-		float4 l_55 = l_54 / float4( 2, 2, 2, 2 );
 		
 		m.Albedo = l_54.xyz;
-		m.Emission = l_55.xyz;
 		m.Opacity = 0.5034327;
 		m.Roughness = 1;
 		m.Metalness = 0;
