@@ -1,5 +1,3 @@
-using System.Text.Json.Nodes;
-
 public class MultiWorldSceneLoader : Component
 {
 	[Property]
@@ -14,8 +12,6 @@ public class MultiWorldSceneLoader : Component
 		}
 
 		var go = sceneFile.GameObjects.First();
-
-		Log.Info(go.ToJsonString());
 		go["Name"] = "MultiWorld " + worldIndex;
 
 		var comps = go["Components"];
@@ -26,6 +22,8 @@ public class MultiWorldSceneLoader : Component
 		load.SetScene(sceneFile);
 		load.IsAdditive = true;
 		Scene.Load(load);
+
+		Log.Info($"Loaded scene '{sceneFile}' into world index {worldIndex}.");
 	}
 
 	protected override Task OnLoad()
