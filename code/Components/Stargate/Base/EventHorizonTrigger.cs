@@ -40,7 +40,7 @@ namespace Sandbox.Components.Stargate
 		}
 
 		// Trigger
-		public new void OnTriggerEnter(Collider other)
+		public new void OnTriggerEnter(GameObject other)
 		{
 			if (!other.IsValid())
 				return;
@@ -53,16 +53,17 @@ namespace Sandbox.Components.Stargate
 					// if ( GetNumberOfObjectCollidersTouchingTrigger( other.GameObject, this ) == 0 )
 					// {
 					// Log.Info( "entered EH trigger" );
-					EventHorizon.StartTouch(other.GameObject);
+					EventHorizon.StartTouch(other);
 					// }
 				}
 				else
-					EventHorizon.OnEntityTriggerStartTouch(this, other.GameObject);
+					EventHorizon.OnEntityTriggerStartTouch(this, other);
 			}
 		}
 
-		public new void OnTriggerExit(Collider other)
+		public new void OnTriggerExit(GameObject other)
 		{
+			Log.Info($"Called OnTriggerExit on trigger {this}");
 			if (!other.IsValid())
 				return;
 
@@ -74,12 +75,26 @@ namespace Sandbox.Components.Stargate
 					// if ( GetNumberOfObjectCollidersTouchingTrigger( other.GameObject, this ) == 0 )
 					// {
 					// Log.Info( "exited EH trigger" );
-					EventHorizon.EndTouch(other.GameObject);
+					EventHorizon.EndTouch(other);
 					// }
 				}
 				else
-					EventHorizon.OnEntityTriggerEndTouch(this, other.GameObject);
+					EventHorizon.OnEntityTriggerEndTouch(this, other);
 			}
+		}
+
+		// TODO: debug triggers, check why Touching is not working as expected
+
+		protected override void OnDestroy()
+		{
+			var gameObjects = Touching.Select(t => t.GameObject).ToHashSet();
+			foreach (var other in gameObjects)
+			{
+				OnTriggerExit(other);
+				Log.Info($"OnDestroy called on {this}, calling OnTriggerExit for {other}");
+			}
+
+			base.OnDestroy();
 		}
 	}
 }

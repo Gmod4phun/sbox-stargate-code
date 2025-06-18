@@ -106,6 +106,8 @@ namespace Sandbox.Components.Stargate.Rings
 			TryToReachRestingPosition = false;
 			TryToReachDesiredPosition = true;
 
+			// TODO: check what changed in the physics system, this is needed to avoid issues with collisions
+			await Task.DelaySeconds(0.1f);
 			Body.PhysicsBody.EnableSolidCollisions = true;
 		}
 

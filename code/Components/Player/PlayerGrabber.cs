@@ -185,6 +185,7 @@ public class PlayerGrabber : Component
 			.WithWorld(GameObject)
 			.HitTriggers()
 			.WithoutTags("ehtrigger", "playerclip")
+			.IgnoreGameObjectHierarchy(GameObject)
 			.Run();
 
 		if (!tr.Hit || !tr.GameObject.IsValid())
@@ -264,11 +265,11 @@ public class PlayerGrabber : Component
 
 		timeSinceShoot = 0;
 
-		Sound.Play(shootSound, WorldPosition);
-
 		var player = Components.Get<PlayerController>();
 		if (!player.IsValid())
 			return;
+
+		Sound.Play(shootSound, player.Eye.WorldPosition);
 
 		var ray = player.GetAimRay();
 
