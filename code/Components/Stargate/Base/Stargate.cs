@@ -428,6 +428,7 @@ namespace Sandbox.Components.Stargate
 
 			EventHorizon.EventHorizonTrigger = eh.Components.Create<EventHorizonTrigger>();
 			EventHorizon.EventHorizonTrigger.Model = EventHorizon.EventHorizonModel.Model;
+			EventHorizon.EventHorizonTrigger.EventHorizon = EventHorizon;
 			EventHorizon.EventHorizonTrigger.IsTrigger = true;
 			EventHorizon.EventHorizonTrigger.IsMainTrigger = true;
 
