@@ -11,12 +11,19 @@ public class MultiWorldSceneLoader : Component
 			return;
 		}
 
-		var go = sceneFile.GameObjects.First();
-		go["Name"] = "MultiWorld " + worldIndex;
+		try
+		{
+			var go = sceneFile.GameObjects.First();
+			go["Name"] = "MultiWorld " + worldIndex;
 
-		var comps = go["Components"];
-		var world = comps[0];
-		world["WorldIndex"] = worldIndex;
+			var comps = go["Components"];
+			var world = comps[0];
+			world["WorldIndex"] = worldIndex;
+		}
+		catch (Exception e)
+		{
+			Log.Warning($"Error setting world index for scene {sceneFile}: {e.Message}");
+		}
 
 		var load = new SceneLoadOptions();
 		load.SetScene(sceneFile);

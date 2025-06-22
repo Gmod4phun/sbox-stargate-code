@@ -220,12 +220,7 @@
             "go": "c4f3afdf-78a6-4792-9ebf-c6b24d5c2e7f",
             "component_type": "BoxCollider"
           },
-          "PlayerHealth": 100,
-          "TestVec1": "1,0,0,0",
-          "TestVec2": "0,2,0,0",
-          "TestVec3": "0,0,-1,-1",
-          "TestVec4": "0,0,-1,0",
-          "UserMatrix": null
+          "PlayerHealth": 100
         },
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
@@ -283,6 +278,7 @@
           "__guid": "15c0358c-8678-4bf4-ba97-038f22d47704",
           "__enabled": true,
           "Center": "0,0,36",
+          "Elasticity": null,
           "Friction": null,
           "IsTrigger": true,
           "OnComponentDestroy": null,
@@ -295,6 +291,7 @@
           "OnObjectTriggerExit": null,
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
+          "RollingResistance": null,
           "Scale": "20,20,72",
           "Static": false,
           "Surface": null,
