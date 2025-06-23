@@ -1042,10 +1042,16 @@ namespace Sandbox.Components.Stargate
 			WormholeLoop.Stop();
 
 			if (_frontTrigger.IsValid())
+			{
+				_frontTrigger.PreDestroyCleanup();
 				_frontTrigger?.Destroy();
+			}
 
 			if (_backTrigger.IsValid())
+			{
+				_backTrigger.PreDestroyCleanup();
 				_backTrigger?.Destroy();
+			}
 
 			if (_colliderFloor.IsValid())
 				_colliderFloor?.Destroy();
@@ -1196,6 +1202,7 @@ namespace Sandbox.Components.Stargate
 			_frontTrigger.Model = Model.Load(
 				"models/sbox_stargate/event_horizon/event_horizon_trigger.vmdl"
 			);
+			_frontTrigger.EventHorizon = this;
 			_frontTrigger.IsTrigger = true;
 			_frontTrigger.Tags.Add("ehtrigger");
 
@@ -1209,6 +1216,7 @@ namespace Sandbox.Components.Stargate
 			_backTrigger.Model = Model.Load(
 				"models/sbox_stargate/event_horizon/event_horizon_trigger.vmdl"
 			);
+			_backTrigger.EventHorizon = this;
 			_backTrigger.IsTrigger = true;
 			_backTrigger.Tags.Add("ehtrigger");
 

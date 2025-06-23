@@ -3,44 +3,13 @@ namespace Sandbox.Components.Stargate
 	public class EventHorizonTrigger : ModelCollider, Component.ITriggerListener
 	{
 		[Property]
-		public EventHorizon EventHorizon =>
-			GameObject.Components.Get<EventHorizon>(
-				IsMainTrigger ? FindMode.InSelf : FindMode.InParent
-			);
+		public EventHorizon EventHorizon { get; set; }
 
 		[Property]
 		public bool IsMainTrigger = false;
 
-		public static int GetNumberOfObjectCollidersTouchingTrigger(
-			GameObject obj,
-			Collider trigger
-		)
-		{
-			var body = obj.Components.Get<Rigidbody>();
-			if (!body.IsValid() || !body.PhysicsBody.IsValid())
-				return 0;
-
-			var shapes = body.PhysicsBody.Shapes;
-			// Log.Info( $"this body has {shapes.Count()} shapes" );
-			var numTouching = 0;
-			foreach (var shape in shapes)
-			{
-				var collider = shape.Collider as Collider;
-				if (collider.IsValid())
-				{
-					if (trigger.Touching.Contains(collider))
-					{
-						numTouching++;
-					}
-				}
-			}
-
-			// Log.Info( $"{numTouching} shapes are touching EH trigger" );
-			return numTouching;
-		}
-
 		// Trigger
-		public new void OnTriggerEnter(Collider other)
+		public new void OnTriggerEnter(GameObject other)
 		{
 			if (!other.IsValid())
 				return;
@@ -50,18 +19,14 @@ namespace Sandbox.Components.Stargate
 			{
 				if (IsMainTrigger)
 				{
-					// if ( GetNumberOfObjectCollidersTouchingTrigger( other.GameObject, this ) == 0 )
-					// {
-					// Log.Info( "entered EH trigger" );
-					EventHorizon.StartTouch(other.GameObject);
-					// }
+					EventHorizon.StartTouch(other);
 				}
 				else
-					EventHorizon.OnEntityTriggerStartTouch(this, other.GameObject);
+					EventHorizon.OnEntityTriggerStartTouch(this, other);
 			}
 		}
 
-		public new void OnTriggerExit(Collider other)
+		public new void OnTriggerExit(GameObject other)
 		{
 			if (!other.IsValid())
 				return;
@@ -71,15 +36,24 @@ namespace Sandbox.Components.Stargate
 			{
 				if (IsMainTrigger)
 				{
-					// if ( GetNumberOfObjectCollidersTouchingTrigger( other.GameObject, this ) == 0 )
-					// {
-					// Log.Info( "exited EH trigger" );
-					EventHorizon.EndTouch(other.GameObject);
-					// }
+					EventHorizon.EndTouch(other);
 				}
 				else
-					EventHorizon.OnEntityTriggerEndTouch(this, other.GameObject);
+				{
+					EventHorizon.OnEntityTriggerEndTouch(this, other);
+				}
 			}
+		}
+
+		public void PreDestroyCleanup()
+		{
+			var gameObjects = Touching.Select(t => t.GameObject).ToHashSet();
+			foreach (var other in gameObjects)
+			{
+				OnTriggerExit(other);
+			}
+
+			base.OnDestroy();
 		}
 	}
 }

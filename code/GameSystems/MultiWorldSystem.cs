@@ -224,17 +224,18 @@ public class MultiWorldSystem : GameObjectSystem
 		await Task.Delay(10);
 
 		// default rules, will need to get them from the project when thats implemented
-		var rules = new Sandbox.Physics.CollisionRules();
+		// var rules = new Sandbox.Physics.CollisionRules();
+		var rules = ProjectSettings.Collision;
 
 		// setup rules for Stargate shit
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.BehindGate,
 				StargateTags.InBufferFront
 			),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.BehindGate,
 				StargateTags.BeforeGate
@@ -242,7 +243,7 @@ public class MultiWorldSystem : GameObjectSystem
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.BeforeGate,
 				StargateTags.InBufferBack
@@ -250,19 +251,19 @@ public class MultiWorldSystem : GameObjectSystem
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.InBufferFront,
 				StargateTags.FakeWorld
 			),
 			Sandbox.Physics.CollisionRules.Result.Collide
 		);
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(StargateTags.InBufferFront, "world"),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.InBufferFront,
 				StargateTags.InBufferBack
@@ -270,66 +271,79 @@ public class MultiWorldSystem : GameObjectSystem
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.InBufferBack,
 				StargateTags.FakeWorld
 			),
 			Sandbox.Physics.CollisionRules.Result.Collide
 		);
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(StargateTags.InBufferBack, "world"),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(
 				StargateTags.Ringsring,
 				StargateTags.Ringplatform
 			),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair(StargateTags.Ringsring, StargateTags.Ringsring),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair("world", "ignoreworld"),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair("terrain", StargateTags.EHTrigger),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
-		rules.Pairs.Add(
+		rules.Pairs.TryAdd(
 			new Sandbox.Physics.CollisionRules.Pair("shield", "passesshield"),
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
+
+		Log.Info($"MultiWorld: Initializing collision rules for {Worlds.Count()} worlds");
 
 		// world exclude rules
 		if (Worlds != null)
 		{
 			foreach (var world in Worlds)
 			{
+				// rules.Defaults.TryAdd(
+				// 	GetWorldTag(world.WorldIndex),
+				// 	Sandbox.Physics.CollisionRules.Result.Collide
+				// );
+
 				foreach (var otherWorld in Worlds)
 				{
 					if (world.WorldIndex != otherWorld.WorldIndex)
 					{
-						try
+						var result = rules.Pairs.TryAdd(
+							new Sandbox.Physics.CollisionRules.Pair(
+								GetWorldTag(world.WorldIndex),
+								GetWorldTag(otherWorld.WorldIndex)
+							),
+							Sandbox.Physics.CollisionRules.Result.Ignore
+						);
+
+						if (result)
 						{
-							rules.Pairs.Add(
-								new Sandbox.Physics.CollisionRules.Pair(
-									GetWorldTag(world.WorldIndex),
-									GetWorldTag(otherWorld.WorldIndex)
-								),
-								Sandbox.Physics.CollisionRules.Result.Ignore
+							Log.Info(
+								$"MultiWorld: Added ignore collision rule for {world.WorldIndex} and {otherWorld.WorldIndex}"
 							);
 						}
-						catch (Exception)
+						else
 						{
-							// Log.Error( $"Failed to add collision rule for {world.WorldIndex} and {otherWorld.WorldIndex}: {e.Message}" );
+							Log.Warning(
+								$"MultiWorld: Ignore collision rule already exists for {world.WorldIndex} and {otherWorld.WorldIndex}"
+							);
 						}
 					}
 				}
@@ -435,9 +449,12 @@ public class MultiWorldSystem : GameObjectSystem
 			c.Enabled = false;
 		}
 
+		var worldComponent = GetWorldByIndex(GetWorldIndexOfObject(player));
+		if (!worldComponent.IsValid())
+			return;
+
 		foreach (
-			var c in GetWorldByIndex(GetWorldIndexOfObject(player))
-				.Components.GetAll<T>(FindMode.DisabledInSelfAndDescendants)
+			var c in worldComponent.Components.GetAll<T>(FindMode.DisabledInSelfAndDescendants)
 		)
 		{
 			if (c.IsValid())
