@@ -154,26 +154,6 @@ public class PlayerGrabber : Component
 		}
 	}
 
-	protected override void OnPreRender()
-	{
-		base.OnPreRender();
-
-		if (!grabbedBody.IsValid())
-		{
-			var tr = Scene
-				.Trace.Ray(Scene.Camera.ScreenNormalToRay(0.5f), 1000.0f)
-				.WithWorld(GameObject)
-				.WithoutTags(GrabIgnoreTags)
-				.Run();
-
-			if (tr.Hit)
-			{
-				Gizmo.Draw.Color = Color.Cyan;
-				Gizmo.Draw.SolidSphere(tr.HitPosition, 1);
-			}
-		}
-	}
-
 	SoundEvent shootSound = Cloud.SoundEvent("mdlresrc.toolgunshoot");
 
 	TimeSince timeSinceShoot;
