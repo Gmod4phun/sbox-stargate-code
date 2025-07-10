@@ -63,6 +63,9 @@ namespace Sandbox.Components.Stargate
 		{
 			if (Scene.Camera.IsValid() && ButtonCollider.IsValid())
 			{
+				if (!ButtonCollider.KeyframeBody.IsValid())
+					return;
+
 				var pos = ButtonCollider.KeyframeBody.MassCenter;
 				var screenPos = Scene.Camera.PointToScreenPixels(pos);
 				if (
