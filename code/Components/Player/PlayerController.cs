@@ -151,8 +151,8 @@ public class PlayerController : Component
 		if (tr.Hit)
 		{
 			if (
-				tr.GameObject.IsValid()
-				&& tr.GameObject.Components.Get<IUse>(FindMode.EnabledInSelf) is IUse usable
+				tr.Collider.IsValid()
+				&& tr.Collider.Components.Get<IUse>(FindMode.EnabledInSelf) is IUse usable
 				&& usable.IsUsable(Body)
 			)
 			{
