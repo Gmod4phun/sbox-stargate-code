@@ -52,12 +52,15 @@ public sealed class FootstepEvent : Component
 
 		timeSinceStep = 0;
 
-		var sound = e.FootId == 0 ? tr.Surface.Sounds.FootLeft : tr.Surface.Sounds.FootRight;
+		var sound =
+			e.FootId == 0
+				? tr.Surface.SoundCollection.FootLeft
+				: tr.Surface.SoundCollection.FootRight;
 		if (sound is null)
 			return;
 
 		var multiWorldSound = MultiWorldSound.Play(
-			sound,
+			sound.ResourceName,
 			tr.HitPosition + tr.Normal * 5,
 			Player.CurrentWorldIndex
 		);
@@ -86,12 +89,14 @@ public sealed class FootstepEvent : Component
 		if (tr.Surface is null)
 			return;
 
-		var sound = landSound ? tr.Surface.Sounds.FootLand : tr.Surface.Sounds.FootLaunch;
+		var sound = landSound
+			? tr.Surface.SoundCollection.FootLand
+			: tr.Surface.SoundCollection.FootLaunch;
 		if (sound is null)
 			return;
 
 		var multiWorldSound = MultiWorldSound.Play(
-			sound,
+			sound.ResourceName,
 			tr.HitPosition + tr.Normal * 5,
 			player.CurrentWorldIndex
 		);
