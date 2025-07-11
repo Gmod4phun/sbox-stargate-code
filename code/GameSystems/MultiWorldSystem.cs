@@ -1,5 +1,3 @@
-using PlayerController = Scenegate.PlayerController;
-
 public class MultiWorldSystem : GameObjectSystem
 {
 	// public static MultiWorldSystem Current => Game.ActiveScene.GetSystem<MultiWorldSystem>();
@@ -39,6 +37,11 @@ public class MultiWorldSystem : GameObjectSystem
 	public static string GetWorldTag(int worldIndex)
 	{
 		return $"world_{worldIndex}";
+	}
+
+	public static string GetWorldTag(MultiWorld world)
+	{
+		return GetWorldTag(world.WorldIndex);
 	}
 
 	public static bool WorldExists(int worldIndex)
@@ -148,6 +151,7 @@ public class MultiWorldSystem : GameObjectSystem
 		// if it's a player, handle that
 		if (gameObject.Components.TryGet<PlayerController>(out var ply))
 		{
+			Log.Info($"Assigning player {ply} to world {worldIndex}");
 			AssignWorldToPlayer(ply, worldIndex);
 		}
 
@@ -161,9 +165,7 @@ public class MultiWorldSystem : GameObjectSystem
 
 		// Log.Info( $"Assigning player {player} to world {worldIndex}" );
 
-		var camera = player.Camera;
-		var controller = player.Controller;
-
+		var camera = player.GetCamera();
 		var newWorldTag = GetWorldTag(worldIndex);
 		var excludeTags = AllWorldIndices.Where(i => i != worldIndex).Select(GetWorldTag).ToArray();
 
@@ -178,7 +180,6 @@ public class MultiWorldSystem : GameObjectSystem
 			foreach (var t in excludeTags)
 			{
 				camera.RenderExcludeTags.Add(t);
-				controller.IgnoreLayers.Add(t);
 				// player.Tags.Remove( t );
 			}
 		}
@@ -189,8 +190,6 @@ public class MultiWorldSystem : GameObjectSystem
 
 		// remove exluce tag of the world we will be in
 		camera.RenderExcludeTags.Remove(newWorldTag);
-		controller.IgnoreLayers.Remove(newWorldTag);
-		player.CurrentWorldIndex = worldIndex;
 
 		ProcessFog();
 	}
@@ -364,19 +363,19 @@ public class MultiWorldSystem : GameObjectSystem
 		if (!Worlds.Any())
 			return;
 
-		if (Connection.Local.IsHost)
-		{
-			foreach (var player in Scene.GetAllComponents<PlayerController>())
-			{
-				if (
-					player.IsValid()
-					&& GetWorldIndexOfObject(player.GameObject) != player.CurrentWorldIndex
-				)
-				{
-					AssignWorldToObject(player.GameObject, player.CurrentWorldIndex);
-				}
-			}
-		}
+		// if (Connection.Local.IsHost)
+		// {
+		// 	foreach (var player in Scene.GetAllComponents<PlayerController>())
+		// 	{
+		// 		if (
+		// 			player.IsValid()
+		// 			&& GetWorldIndexOfObject(player.GameObject) != player.GetMultiWorld()
+		// 		)
+		// 		{
+		// 			AssignWorldToObject(player.GameObject, player.CurrentWorldIndex);
+		// 		}
+		// 	}
+		// }
 
 		var localPlayer = Game
 			.ActiveScene.GetAllComponents<PlayerController>()
@@ -491,6 +490,11 @@ public static class MultiWorldSystemExtensions
 		return trace.WithTag(
 			MultiWorldSystem.GetWorldTag(MultiWorldSystem.GetWorldIndexOfObject(go))
 		);
+	}
+
+	public static SceneTrace WithWorld(this SceneTrace trace, MultiWorld world)
+	{
+		return trace.WithTag(MultiWorldSystem.GetWorldTag(world));
 	}
 
 	public static void ClearParent(this GameObject go)

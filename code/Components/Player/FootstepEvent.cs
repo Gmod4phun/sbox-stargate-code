@@ -1,5 +1,3 @@
-using PlayerController = Scenegate.PlayerController;
-
 public sealed class FootstepEvent : Component
 {
 	[Property]
@@ -28,13 +26,11 @@ public sealed class FootstepEvent : Component
 
 	private void OnEvent(SceneModel.FootstepEvent e)
 	{
-		if (!Player.PlayerAlive)
-			return;
-
 		if (timeSinceStep < 0.2f)
 			return;
 
-		var currentWorldTag = MultiWorldSystem.GetWorldTag(Player.CurrentWorldIndex);
+		var playerWorld = Player.GetMultiWorld();
+		var currentWorldTag = MultiWorldSystem.GetWorldTag(playerWorld);
 
 		var tr = Scene
 			.Trace.Ray(
@@ -62,7 +58,7 @@ public sealed class FootstepEvent : Component
 		var multiWorldSound = MultiWorldSound.Play(
 			sound.ResourceName,
 			tr.HitPosition + tr.Normal * 5,
-			Player.CurrentWorldIndex
+			playerWorld.WorldIndex
 		);
 		multiWorldSound.Volume = 0.5f;
 	}
@@ -73,10 +69,8 @@ public sealed class FootstepEvent : Component
 		bool landSound = false
 	)
 	{
-		if (!player.PlayerAlive)
-			return;
-
-		var currentWorldTag = MultiWorldSystem.GetWorldTag(player.CurrentWorldIndex);
+		var playerWorld = player.GetMultiWorld();
+		var currentWorldTag = MultiWorldSystem.GetWorldTag(playerWorld);
 
 		var tr = player
 			.Scene.Trace.Ray(position + Vector3.Up * 20, position + Vector3.Up * -20)
@@ -98,7 +92,7 @@ public sealed class FootstepEvent : Component
 		var multiWorldSound = MultiWorldSound.Play(
 			sound.ResourceName,
 			tr.HitPosition + tr.Normal * 5,
-			player.CurrentWorldIndex
+			playerWorld.WorldIndex
 		);
 		multiWorldSound.Volume = 1;
 	}

@@ -1,7 +1,5 @@
 namespace Sandbox.Components.Stargate.Rings
 {
-	using PlayerController = Scenegate.PlayerController;
-
 	public class RingTransporter : Component
 	{
 		[Property]
@@ -171,8 +169,8 @@ namespace Sandbox.Components.Stargate.Rings
 				{
 					ply.ActivateTeleportScreenOverlay(0.2f);
 
-					var DeltaAngleEH = to.WorldRotation.Angles() - from.WorldRotation.Angles();
-					ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw, 0));
+					// var DeltaAngleEH = to.WorldRotation.Angles() - from.WorldRotation.Angles();
+					// ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw, 0));
 				}
 
 				var prevOwner = e.Network.Owner;

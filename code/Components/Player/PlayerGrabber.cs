@@ -1,5 +1,4 @@
 using Sandbox.Components.Stargate;
-using PlayerController = Scenegate.PlayerController;
 
 public class PlayerGrabber : Component
 {
@@ -249,9 +248,9 @@ public class PlayerGrabber : Component
 		if (!player.IsValid())
 			return;
 
-		Sound.Play(shootSound, player.Eye.WorldPosition);
+		Sound.Play(shootSound, player.EyePosition);
 
-		var ray = player.GetAimRay();
+		var ray = player.EyeTransform;
 
 		DoShoot(ray.Position, ray.Forward.Normal);
 	}

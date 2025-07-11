@@ -1,7 +1,5 @@
 namespace Sandbox.Components.Stargate
 {
-	using PlayerController = Scenegate.PlayerController;
-
 	public class DhdButton : Component, Component.ExecuteInEditor, IUse
 	{
 		public ModelRenderer ButtonModel => Components.Get<ModelRenderer>();
@@ -80,7 +78,7 @@ namespace Sandbox.Components.Stargate
 				{
 					var player = Scene
 						.GetAllComponents<PlayerController>()
-						.FirstOrDefault(p => p.Camera == Scene.Camera);
+						.FirstOrDefault(p => p.GetCamera() == Scene.Camera);
 
 					if (!player.IsValid())
 						return;

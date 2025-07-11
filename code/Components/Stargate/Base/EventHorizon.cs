@@ -2,8 +2,6 @@ using System.Text.Json.Serialization;
 
 namespace Sandbox.Components.Stargate
 {
-	using PlayerController = Scenegate.PlayerController;
-
 	public partial class EventHorizon : Component
 	{
 		private const float FastMovingVelocityThresholdSqr = 400 * 400; // entities with velocity lower than 400 shouldn't be handled
@@ -273,7 +271,7 @@ namespace Sandbox.Components.Stargate
 			if (isPlayer)
 			{
 				var ply = ent.Components.Get<PlayerController>();
-				vel = ply.GetPlayerVelocity();
+				vel = ply.Velocity;
 				start = ply.WorldPosition - vel.Normal * 1024;
 				end = ply.WorldPosition + vel.Normal * 1024;
 			}
@@ -559,17 +557,16 @@ namespace Sandbox.Components.Stargate
 				ply.ActivateTeleportScreenOverlay(0.05f);
 
 				var DeltaAngleEH = otherEH.WorldRotation.Angles() - WorldRotation.Angles();
-				ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw + 180, 0));
+				// ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw + 180, 0));
+				ply.EyeAngles += new Angles(0, DeltaAngleEH.yaw + 180, 0);
 
-				var localVelNormPlayer = Transform.World.NormalToLocal(
-					ply.GetPlayerVelocity().Normal
-				);
+				var localVelNormPlayer = Transform.World.NormalToLocal(ply.Velocity.Normal);
 				var otherVelNormPlayer = otherLocal.NormalToWorld(
 					localVelNormPlayer.WithX(-localVelNormPlayer.x).WithY(-localVelNormPlayer.y)
 				);
 
-				var newPlayerVel = otherVelNormPlayer * ply.GetPlayerVelocity().Length;
-				ply.SetPlayerVelocity(newPlayerVel);
+				var newPlayerVel = otherVelNormPlayer * ply.Velocity.Length;
+				ply.WishVelocity = newPlayerVel; // TODO: somehow set velocity without wish velocity
 
 				// if ( Gate.ShowWormholeCinematic )
 				// {
@@ -640,7 +637,8 @@ namespace Sandbox.Components.Stargate
 
 			if (ent.Components.TryGet<PlayerController>(out var ply))
 			{
-				ply.OnDeath(false);
+				// ply.OnDeath(false);
+				ply.DestroyGameObject();
 			}
 			else
 			{
