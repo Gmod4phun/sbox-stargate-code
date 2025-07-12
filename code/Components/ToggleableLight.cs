@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-public class ToggleableLight : Component, IUse, Component.ExecuteInEditor
+public class ToggleableLight : Component, Component.IPressable, Component.ExecuteInEditor
 {
 	[Property]
 	public Light LightComponent { get; set; }
@@ -48,14 +48,9 @@ public class ToggleableLight : Component, IUse, Component.ExecuteInEditor
 		}
 	}
 
-	public bool IsUsable(GameObject user)
-	{
-		return true;
-	}
-
-	public bool OnUse(GameObject user)
+	public bool Press(IPressable.Event e)
 	{
 		ToggleLight();
-		return false;
+		return true;
 	}
 }

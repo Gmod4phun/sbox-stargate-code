@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate
 {
-	public class DhdButton : Component, Component.ExecuteInEditor, IUse
+	public class DhdButton : Component, Component.ExecuteInEditor, Component.IPressable
 	{
 		public ModelRenderer ButtonModel => Components.Get<ModelRenderer>();
 		public ModelCollider ButtonCollider => Components.Get<ModelCollider>();
@@ -18,10 +18,28 @@ namespace Sandbox.Components.Stargate
 		public bool On { get; set; } = false;
 		private float _glowScale = 0;
 
-		public virtual bool OnUse(GameObject user)
+		HighlightOutline _outline;
+
+		protected override void OnEnabled()
+		{
+			CreateOutline();
+		}
+
+		void CreateOutline()
+		{
+			_outline?.Destroy();
+			_outline = GameObject.Components.GetOrCreate<HighlightOutline>();
+			_outline.Color = new Color(640, 300, 50, 0.5f);
+			_outline.ObscuredColor = _outline.Color;
+			_outline.Enabled = false;
+		}
+
+		public bool Press(IPressable.Event e)
 		{
 			if (Time.Now < DHD.LastPressTime + DHD.PressDelay)
 				return false;
+
+			var user = e.Source.GameObject;
 
 			Network.TakeOwnership();
 			DHD.Network.TakeOwnership();
@@ -30,12 +48,22 @@ namespace Sandbox.Components.Stargate
 			DHD.LastPressTime = Time.Now;
 			DHD.TriggerAction(Action, user);
 
-			return false;
+			return true;
 		}
 
-		public bool IsUsable(GameObject user)
+		public bool CanPress(IPressable.Event e)
 		{
 			return !Disabled;
+		}
+
+		public void Hover(IPressable.Event e)
+		{
+			_outline.Enabled = true;
+		}
+
+		public void Blur(IPressable.Event e)
+		{
+			_outline.Enabled = false;
 		}
 
 		protected override void OnUpdate()

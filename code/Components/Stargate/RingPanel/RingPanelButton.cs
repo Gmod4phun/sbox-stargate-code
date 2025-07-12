@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate.Rings
 {
-	public class RingPanelButton : Component, Component.ExecuteInEditor, IUse
+	public class RingPanelButton : Component, Component.ExecuteInEditor, Component.IPressable
 	{
 		public RingPanel RingPanel => Components.Get<RingPanel>(FindMode.InParent);
 		public ModelRenderer Renderer => Components.Get<ModelRenderer>(FindMode.InSelf);
@@ -16,14 +16,9 @@ namespace Sandbox.Components.Stargate.Rings
 		public bool On { get; set; } = false;
 		private float _glowScale = 0;
 
-		public bool OnUse(GameObject ent)
+		public bool Press(IPressable.Event e)
 		{
 			RingPanel.TriggerAction(Action);
-			return false;
-		}
-
-		public bool IsUsable(GameObject ent)
-		{
 			return true;
 		}
 

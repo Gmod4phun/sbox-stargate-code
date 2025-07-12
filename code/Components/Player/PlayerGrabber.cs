@@ -101,6 +101,7 @@ public class PlayerGrabber : Component
 			)
 			.WithWorld(GameObject)
 			.WithoutTags(GrabIgnoreTags)
+			.IgnoreGameObjectHierarchy(GameObject)
 			.Run();
 
 		if (!tr.Hit || !tr.Body.IsValid())

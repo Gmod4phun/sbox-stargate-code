@@ -43,12 +43,15 @@ public class PlayerCameraController : Component
 		)
 		{
 			ThirdPerson = !ThirdPerson;
+			PlayerController.ThirdPerson = ThirdPerson;
 			_cameraDistance = 20f;
 		}
 
 		Rotation worldRotation = PlayerController.EyeAngles.ToRotation();
 		cam.WorldRotation = worldRotation;
-		Vector3 from = base.WorldPosition + Vector3.Up * PlayerController.BodyHeight;
+		var from =
+			WorldPosition
+			+ Vector3.Up * (PlayerController.BodyHeight - PlayerController.EyeDistanceFromTop);
 		if (PlayerController.IsOnGround && _eyez != 0f)
 		{
 			from.z = _eyez.LerpTo(from.z, Time.Delta * 50f);
@@ -98,12 +101,12 @@ public class PlayerCameraController : Component
 			cam.FieldOfView = Preferences.FieldOfView;
 		}
 
-		// ISceneEvent<IEvents>.PostToGameObject(
-		// 	base.GameObject,
-		// 	delegate(IEvents x)
-		// 	{
-		// 		x.PostCameraSetup(cam);
-		// 	}
-		// );
+		ISceneEvent<PlayerController.IEvents>.PostToGameObject(
+			GameObject,
+			delegate(PlayerController.IEvents x)
+			{
+				x.PostCameraSetup(cam);
+			}
+		);
 	}
 }

@@ -108,7 +108,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "glyph"
-						filename = "models/sbox_stargate/dhd_atlantis/src/dhd_atlantis_button_dynamic_superglyph.smd"
+						filename = "models/sbox_stargate/dhd_atlantis/src/dhd_atlantis_button_dynamic_superglyph_exact.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -125,7 +125,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "glyph_rotated"
-						filename = "models/sbox_stargate/dhd_atlantis/src/dhd_atlantis_button_dynamic_superglyph_rotated.smd"
+						filename = "models/sbox_stargate/dhd_atlantis/src/dhd_atlantis_button_dynamic_superglyph_exact_rotated.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -159,6 +159,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						frame_count = 1
 						frame_rate = 30
