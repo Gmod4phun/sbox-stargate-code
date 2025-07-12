@@ -158,7 +158,13 @@ public class PlayerPressController : Component
 			return foundComponent;
 		}
 
-		foreach (var component in eyeTrace.GameObject.GetComponents<IPressable>())
+		var collider = eyeTrace.Collider;
+		if (!collider.IsValid())
+		{
+			return null;
+		}
+
+		foreach (var component in collider.GetComponents<IPressable>())
 		{
 			if (
 				component.CanPress(
