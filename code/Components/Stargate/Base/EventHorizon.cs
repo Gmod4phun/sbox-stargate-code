@@ -492,7 +492,7 @@ namespace Sandbox.Components.Stargate
 		}
 
 		// TELEPORT
-		public async void TeleportEntity(GameObject ent)
+		public void TeleportEntity(GameObject ent)
 		{
 			if (!Gate.IsValid() || !Gate.OtherGate.IsValid())
 				return;
@@ -966,31 +966,14 @@ namespace Sandbox.Components.Stargate
 			}
 		}
 
-		public void SetModelClippingForEntity(GameObject ent, bool enabled, Plane p)
-		{
-			if (
-				ent.IsValid()
-				&& ent.Components.Get<ModelRenderer>() is ModelRenderer mdl
-				&& mdl.SceneObject is SceneObject obj
-			)
-			{
-				obj.Batchable = false;
-				obj.ClipPlane = p;
-				obj.ClipPlaneEnabled = enabled;
-			}
-		}
+		// TODO: implement model clipping again at some point (lets hope we get per object clip planes in engine again)
+		public void SetModelClippingForEntity(GameObject ent, bool enabled, Plane p) { }
 
-		public void UpdateClipPlaneForEntity(GameObject ent, Plane p) // only update plane, not the enabled state
-		{
-			if (
-				ent.IsValid()
-				&& ent.Components.Get<ModelRenderer>() is ModelRenderer mdl
-				&& mdl.SceneObject is SceneObject obj
-			)
-			{
-				obj.ClipPlane = p;
-			}
-		}
+		public void UpdateClipPlaneForEntity(
+			GameObject ent,
+			Plane p
+		) // only update plane, not the enabled state
+		{ }
 
 		public void UseVideoAsTexture()
 		{

@@ -1,6 +1,6 @@
 public class PlayerCameraController : Component
 {
-	PlayerController PlayerController => Components.Get<PlayerController>(FindMode.InSelf);
+	public PlayerController PlayerController => Components.Get<PlayerController>(FindMode.InSelf);
 
 	[Property]
 	public bool ThirdPerson { get; set; } = false;

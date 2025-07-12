@@ -83,7 +83,6 @@ namespace Sandbox.Components.Stargate
 			}
 		}
 
-		// [GameEvent.Client.Frame]
 		protected override void OnUpdate()
 		{
 			base.OnUpdate();
@@ -129,14 +128,10 @@ namespace Sandbox.Components.Stargate
 			KawooshModel.SceneObject.Flags.IsOpaque = false;
 			KawooshModel.SceneObject.Flags.IsTranslucent = true;
 			KawooshModel.SceneObject.Batchable = false;
-			KawooshModel.SceneObject.ClipPlaneEnabled = true;
-			KawooshModel.SceneObject.ClipPlane = KawooshClipPlane;
 
 			KawooshModelInside.SceneObject.Flags.IsOpaque = true;
 			KawooshModelInside.SceneObject.Flags.IsTranslucent = true;
 			KawooshModelInside.SceneObject.Batchable = false;
-			KawooshModelInside.SceneObject.ClipPlaneEnabled = true;
-			KawooshModelInside.SceneObject.ClipPlane = KawooshClipPlane;
 			KawooshModelInside.SceneObject.Attributes.Set("emission", 6);
 		}
 

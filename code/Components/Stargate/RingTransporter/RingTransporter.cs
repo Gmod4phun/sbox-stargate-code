@@ -249,8 +249,9 @@ namespace Sandbox.Components.Stargate.Rings
 
 			// await Task.WhenAll( DeployRings(), OtherTransporter.DeployRings() );
 
-			DoParticleEffect();
-			OtherTransporter.DoParticleEffect();
+			// TODO: reimplement ring particles
+			// DoParticleEffect();
+			// OtherTransporter.DoParticleEffect();
 
 			DoLightEffect();
 			OtherTransporter.DoLightEffect();
@@ -292,40 +293,42 @@ namespace Sandbox.Components.Stargate.Rings
 			OtherTransporter = null;
 		}
 
+		/*
 		private async void DoParticleEffect()
 		{
-			var particle = Components.Create<LegacyParticleSystem>();
-			particle.Particles = ParticleSystem.Load(
-				"particles/sbox_stargate/rings_transporter.vpcf"
-			);
+		    var particle = Components.Create<LegacyParticleSystem>();
+		    particle.Particles = ParticleSystem.Load(
+		        "particles/sbox_stargate/rings_transporter.vpcf"
+		    );
 
-			var angles = WorldRotation.Angles();
-			particle.ControlPoints = new()
-			{
-				new ParticleControlPoint()
-				{
-					StringCP = "1",
-					Value = ParticleControlPoint.ControlPointValueInput.Vector3,
-					VectorValue = WorldRotation.Up * 80
-				},
-				new ParticleControlPoint()
-				{
-					StringCP = "2",
-					Value = ParticleControlPoint.ControlPointValueInput.Vector3,
-					VectorValue = new Vector3(angles.roll, angles.pitch, angles.yaw)
-				},
-				new ParticleControlPoint()
-				{
-					StringCP = "3",
-					Value = ParticleControlPoint.ControlPointValueInput.Vector3,
-					VectorValue = new Vector3(WorldScale.x, 0, 0)
-				}
-			};
+		    var angles = WorldRotation.Angles();
+		    particle.ControlPoints = new()
+		    {
+		        new ParticleControlPoint()
+		        {
+		            StringCP = "1",
+		            Value = ParticleControlPoint.ControlPointValueInput.Vector3,
+		            VectorValue = WorldRotation.Up * 80
+		        },
+		        new ParticleControlPoint()
+		        {
+		            StringCP = "2",
+		            Value = ParticleControlPoint.ControlPointValueInput.Vector3,
+		            VectorValue = new Vector3(angles.roll, angles.pitch, angles.yaw)
+		        },
+		        new ParticleControlPoint()
+		        {
+		            StringCP = "3",
+		            Value = ParticleControlPoint.ControlPointValueInput.Vector3,
+		            VectorValue = new Vector3(WorldScale.x, 0, 0)
+		        }
+		    };
 
-			await Task.DelaySeconds(2f);
+		    await Task.DelaySeconds( 2f );
 
-			particle.Destroy();
+		    particle.Destroy();
 		}
+		*/
 
 		[Rpc.Broadcast]
 		private void DoLightEffect()

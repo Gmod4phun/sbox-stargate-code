@@ -81,53 +81,55 @@ namespace Sandbox.Components.Stargate
 					glyph.GlyphEnabled = On;
 				}
 
-				DrawSymbol();
+				// DrawSymbol();
 			}
 		}
 
+		/*
 		public void DrawSymbol()
 		{
-			if (Scene.Camera.IsValid() && ButtonCollider.IsValid())
-			{
-				if (!ButtonCollider.KeyframeBody.IsValid())
-					return;
+		    if ( Scene.Camera.IsValid() && ButtonCollider.IsValid() )
+		    {
+		        if ( !ButtonCollider.KeyframeBody.IsValid() )
+		            return;
 
-				var pos = ButtonCollider.KeyframeBody.MassCenter;
-				var screenPos = Scene.Camera.PointToScreenPixels(pos);
-				if (
-					screenPos.x < 1
-					|| screenPos.x > Screen.Width - 1
-					|| screenPos.y < 1
-					|| screenPos.y > Screen.Height - 1
-				)
-					return;
+		        var pos = ButtonCollider.KeyframeBody.MassCenter;
+		        var screenPos = Scene.Camera.PointToScreenPixels( pos );
+		        if (
+		            screenPos.x < 1
+		            || screenPos.x > Screen.Width - 1
+		            || screenPos.y < 1
+		            || screenPos.y > Screen.Height - 1
+		        )
+		            return;
 
-				if (pos.DistanceSquared(Scene.Camera.WorldPosition) < 4096)
-				{
-					var player = Scene
-						.GetAllComponents<PlayerController>()
-						.FirstOrDefault(p => p.GetCamera() == Scene.Camera);
+		        if ( pos.DistanceSquared( Scene.Camera.WorldPosition ) < 4096 )
+		        {
+		            var player = Scene
+		                .GetAllComponents<PlayerController>()
+		                .FirstOrDefault( p => p.GetCamera() == Scene.Camera );
 
-					if (!player.IsValid())
-						return;
+		            if ( !player.IsValid() )
+		                return;
 
-					if (!MultiWorldSystem.AreObjectsInSameWorld(player.GameObject, GameObject))
-						return;
+		            if ( !MultiWorldSystem.AreObjectsInSameWorld( player.GameObject, GameObject ) )
+		                return;
 
-					using (Gizmo.Scope("DhdSymbol", global::Transform.Zero))
-					{
-						if (Action != "DIAL" && !Disabled)
-						{
-							Gizmo.Draw.Color = Color.White;
-							Gizmo.Draw.Text(
-								Action,
-								global::Transform.Zero.WithPosition(pos),
-								size: 32
-							);
-						}
-					}
-				}
-			}
+		            using ( Gizmo.Scope( "DhdSymbol", global::Transform.Zero ) )
+		            {
+		                if ( Action != "DIAL" && !Disabled )
+		                {
+		                    Gizmo.Draw.Color = Color.White;
+		                    Gizmo.Draw.Text(
+		                        Action,
+		                        global::Transform.Zero.WithPosition( pos ),
+		                        size: 32
+		                    );
+		                }
+		            }
+		        }
+		    }
 		}
+		*/
 	}
 }

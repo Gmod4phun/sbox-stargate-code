@@ -880,7 +880,9 @@ namespace Sandbox.Components.Stargate
 		}
 
 		// Manual/Slow Chevron Encode/Lock
+#pragma warning disable CS1998
 		public virtual async Task<bool> DoManualChevronEncode(char sym)
+#pragma warning restore CS1998
 		{
 			if (!Symbols.Contains(sym))
 				return false;
@@ -918,7 +920,9 @@ namespace Sandbox.Components.Stargate
 			return true;
 		}
 
+#pragma warning disable CS1998
 		public virtual async Task<bool> DoManualChevronLock(char sym)
+#pragma warning restore CS1998
 		{
 			if (!Symbols.Contains(sym))
 				return false;

@@ -117,7 +117,7 @@ public class Shield
 
 	public void OnDamage(in DamageInfo damage)
 	{
-		if (damage.Shape?.Body?.GetGameObject() != GameObject)
+		if (damage.Shape?.Body?.GameObject != GameObject)
 			return;
 
 		CreateHitEffect(damage.Position);

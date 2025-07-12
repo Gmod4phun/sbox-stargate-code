@@ -233,7 +233,7 @@
         },
         {
           "__type": "PlayerCameraController",
-          "__guid": "772480e7-e8d8-403e-95a3-5a1de6d3cf44",
+          "__guid": "5d7cf382-5582-479e-a7f8-81cf572e967e",
           "__enabled": true,
           "CameraOffset": "100,0,0",
           "OnComponentDestroy": null,
@@ -247,7 +247,7 @@
         },
         {
           "__type": "PlayerPressController",
-          "__guid": "780e32c8-be6c-4042-9aac-b353a6438978",
+          "__guid": "df9605a3-d4fc-4878-b7d7-97d52077016e",
           "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -258,7 +258,7 @@
         },
         {
           "__type": "PlayerFootstepEvent",
-          "__guid": "8c31aad0-3497-47d2-9f6e-995cfe44d4da",
+          "__guid": "c791c15e-7394-4ef5-851e-8a245feb7130",
           "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -550,7 +550,7 @@
             {
               "__type": "LensFlareEffect",
               "__guid": "20d1333b-d139-40a4-a9d7-b01908682dc0",
-              "__enabled": false,
+              "__enabled": true,
               "DrawBar": true,
               "DrawFlare": true,
               "DrawIris": true,

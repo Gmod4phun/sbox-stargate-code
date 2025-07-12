@@ -6,6 +6,8 @@ public class LensFlareEffect : PostProcess
 	 * original from GMod, adapted for S&Box by Gmod4phun
 	*/
 
+	// protected override Sandbox.Rendering.Stage RenderStage => Sandbox.Rendering.Stage.AfterUI;
+
 	[Property, Range(0f, 1f)]
 	public float Intensity { get; set; } = 1f;
 
@@ -21,12 +23,12 @@ public class LensFlareEffect : PostProcess
 	[Property]
 	public bool DrawIris { get; set; } = true;
 
-	RenderAttributes attributes = new RenderAttributes();
+	// RenderAttributes attributes = new RenderAttributes();
 	Material mat = Material.FromShader("ui_additive");
-	Texture texIris = Texture.Load(FileSystem.Mounted, "materials/lensflare/iris.png");
-	Texture texFlare = Texture.Load(FileSystem.Mounted, "materials/lensflare/flare.png");
-	Texture texRing = Texture.Load(FileSystem.Mounted, "materials/lensflare/color_ring.png");
-	Texture texBar = Texture.Load(FileSystem.Mounted, "materials/lensflare/bar.png");
+	Texture texIris = Texture.Load("materials/lensflare/iris.png");
+	Texture texFlare = Texture.Load("materials/lensflare/flare.png");
+	Texture texRing = Texture.Load("materials/lensflare/color_ring.png");
+	Texture texBar = Texture.Load("materials/lensflare/bar.png");
 
 	private float mulW(float x, float f)
 	{
@@ -41,10 +43,10 @@ public class LensFlareEffect : PostProcess
 	private void CenteredSprite(float x, float y, float sz, Color col)
 	{
 		var r = new Rect(x - sz / 2, y - sz / 2, sz, sz);
-		Graphics.DrawQuad(r, mat, col, attributes);
+		CommandList.DrawQuad(r, mat, col);
 	}
 
-	public void DrawLensFlare(SceneCamera sceneCamera)
+	public void DrawLensFlare()
 	{
 		var camera = Components.Get<CameraComponent>();
 		if (camera == null || !camera.IsValid() || !camera.Enabled || !this.Enabled)
@@ -62,12 +64,20 @@ public class LensFlareEffect : PostProcess
 		var sundirection = sun.WorldRotation.Backward.Normal;
 		var sunobstruction = 1f;
 
-		var tr = Scene
+		var trace = Scene
 			.Trace.Ray(eyepos, eyepos + sundirection * 128000)
-			.WithTag(
-				MultiWorldSystem.GetWorldTag(MultiWorldSystem.GetWorldIndexOfObject(GameObject))
-			)
-			.Run();
+			.WithWorld(camera.GetMultiWorld());
+
+		var plyCameraController = camera.GameObject.Parent.Components.Get<PlayerCameraController>();
+		if (plyCameraController.IsValid() && !plyCameraController.ThirdPerson)
+		{
+			trace = trace.IgnoreGameObjectHierarchy(
+				plyCameraController.PlayerController.GameObject
+			);
+		}
+
+		var tr = trace.Run();
+
 		if (tr.Hit)
 			sunobstruction = 0;
 
@@ -92,7 +102,7 @@ public class LensFlareEffect : PostProcess
 
 		if (DrawRing)
 		{
-			attributes.Set("Texture", texRing);
+			CommandList.Attributes.Set("Texture", texRing);
 			CenteredSprite(
 				mulW(sunpos.x, 0.5f),
 				mulH(sunpos.y, 0.5f),
@@ -103,14 +113,14 @@ public class LensFlareEffect : PostProcess
 
 		if (DrawFlare)
 		{
-			attributes.Set("Texture", texFlare);
+			CommandList.Attributes.Set("Texture", texFlare);
 			var colorFlare = sun.LightColor;
 			CenteredSprite(sunpos.x, sunpos.y, rSz * 10, colorFlare.WithAlpha(80 * aMulPow3));
 		}
 
 		if (DrawBar)
 		{
-			attributes.Set("Texture", texBar);
+			CommandList.Attributes.Set("Texture", texBar);
 			CenteredSprite(
 				mulW(sunpos.x, 1),
 				mulH(sunpos.y, 1),
@@ -121,7 +131,7 @@ public class LensFlareEffect : PostProcess
 
 		if (DrawIris)
 		{
-			attributes.Set("Texture", texIris);
+			CommandList.Attributes.Set("Texture", texIris);
 			var colorIris = Color.FromBytes(255, 230, 180, (int)(255 * aMulPow3));
 			CenteredSprite(mulW(sunpos.x, 1.8f), mulH(sunpos.y, 1.8f), rSz * 0.15f, colorIris);
 			CenteredSprite(mulW(sunpos.x, 1.82f), mulH(sunpos.y, 1.82f), rSz * 0.1f, colorIris);
@@ -140,14 +150,19 @@ public class LensFlareEffect : PostProcess
 		}
 	}
 
-	protected override void OnStart()
+	// protected override void OnStart()
+	// {
+	// 	base.OnStart();
+
+	// 	var camera = Components.Get<CameraComponent>();
+	// 	if ( !camera.IsValid() )
+	// 		return;
+
+	// 	camera.AddHookBeforeOverlay( "DrawLensFlareEffect", 1, DrawLensFlare );
+	// }
+
+	protected override void UpdateCommandList()
 	{
-		base.OnStart();
-
-		var camera = Components.Get<CameraComponent>();
-		if (!camera.IsValid())
-			return;
-
-		camera.AddHookBeforeOverlay("DrawLensFlareEffect", 1, DrawLensFlare);
+		DrawLensFlare();
 	}
 }

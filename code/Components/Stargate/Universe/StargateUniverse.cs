@@ -561,7 +561,9 @@ namespace Sandbox.Components.Stargate
 			}
 		}
 
+#pragma warning disable CS1998
 		public override async void BeginInboundDHD(int numChevs)
+#pragma warning restore CS1998
 		{
 			base.BeginInboundDHD(numChevs);
 

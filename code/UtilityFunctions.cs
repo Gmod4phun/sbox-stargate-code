@@ -26,11 +26,7 @@ public static class UtilityFunctions
 		return prop_object;
 	}
 
-	public static async Task<GameObject> SpawnCitizenRagdoll(
-		Vector3 pos,
-		Rotation rot,
-		int worldIndex
-	)
+	public static GameObject SpawnCitizenRagdoll(Vector3 pos, Rotation rot, int worldIndex)
 	{
 		var prop_object = new GameObject();
 		prop_object.Name = "Prop";
