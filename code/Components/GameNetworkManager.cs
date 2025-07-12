@@ -1,5 +1,6 @@
 using Sandbox.Network;
-using PlayerController = Scenegate.PlayerController;
+
+// using PlayerController = Scenegate.PlayerController;
 
 public class GameNetworkManager : Component, Component.INetworkListener
 {
@@ -86,15 +87,17 @@ public class GameNetworkManager : Component, Component.INetworkListener
 
 		player.NetworkSpawn(channel);
 
-		if (
-			player.Components.TryGet<PlayerController>(
-				out var controller,
-				FindMode.EverythingInSelfAndDescendants
-			)
-		)
-		{
-			controller.CurrentWorldIndex = MultiWorldSystem.Worlds.First().WorldIndex;
-		}
+		// if (
+		// 	player.Components.TryGet<PlayerController>(
+		// 		out var controller,
+		// 		FindMode.EverythingInSelfAndDescendants
+		// 	)
+		// )
+		// {
+		// 	controller.CurrentWorldIndex = MultiWorldSystem.Worlds.First().WorldIndex;
+		// }
+		// player.SetParent(MultiWorldSystem.Worlds.First().GameObject, true);
+		MultiWorldSystem.AssignWorldToObject(player, MultiWorldSystem.Worlds.First().WorldIndex);
 	}
 
 	/// <summary>

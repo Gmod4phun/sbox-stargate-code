@@ -1,4 +1,4 @@
-public class Attachable : Component, IUse
+public class Attachable : Component, Component.IPressable
 {
 	[Property]
 	public Rigidbody Body => Components.Get<Rigidbody>();
@@ -49,14 +49,9 @@ public class Attachable : Component, IUse
 		AttachedTo = null;
 	}
 
-	public bool OnUse(GameObject user)
+	public bool Press(IPressable.Event e)
 	{
 		UseAction?.Invoke();
-		return ContinuousUse;
-	}
-
-	public bool IsUsable(GameObject user)
-	{
 		return true;
 	}
 }

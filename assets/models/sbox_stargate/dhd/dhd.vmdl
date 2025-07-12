@@ -118,12 +118,28 @@
 				children = 
 				[
 					{
-						_class = "PhysicsHullFromRender"
+						_class = "PhysicsHullFile"
+						name = "dhd_physics"
 						parent_bone = ""
 						surface_prop = "metal"
 						collision_tags = "solid"
-						faceMergeAngle = 25.639999
-						maxHullVertices = 30
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/sbox_stargate/dhd/src/dhd_physics.smd"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "HullPerElement"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
 					},
 				]
 			},
@@ -193,7 +209,6 @@
 						ignore_Translation = false
 						ignore_rotation = false
 						do_not_discard = true
-						hidden = false
 					},
 				]
 				bone_cull_type = "None"

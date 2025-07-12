@@ -1,20 +1,15 @@
-public class DoorController : Component, Component.ExecuteInEditor, IUse
+public class DoorController : Component, Component.ExecuteInEditor, Component.IPressable
 {
 	[Property]
 	public List<Door> Doors { get; set; } = new List<Door>();
 
-	public bool IsUsable(GameObject user)
-	{
-		return true;
-	}
-
-	public bool OnUse(GameObject user)
+	public bool Press(IPressable.Event e)
 	{
 		foreach (var door in Doors)
 		{
 			door.ToggleDoor();
 		}
 
-		return false;
+		return true;
 	}
 }
