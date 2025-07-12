@@ -118,6 +118,10 @@ namespace Sandbox.Components.Stargate
 
 			using (Gizmo.Scope("DhdSymbols", global::Transform.Zero))
 			{
+				var cam = Gizmo.Camera;
+				if (cam is null)
+					return;
+
 				foreach (var entry in ButtonPositions)
 				{
 					var name = entry.Key;
@@ -131,6 +135,11 @@ namespace Sandbox.Components.Stargate
 						+ dhdRot.Forward * _symbolPosition.x
 						+ dhdRot.Left * _symbolPosition.y
 						+ dhdRot.Up * _symbolPosition.z;
+
+					var distance = cam.Position.DistanceSquared(finalPos);
+					if (distance > 4096)
+						return;
+
 					var finalRot = dhdRot.RotateAroundAxis(Vector3.Up, 90);
 
 					var t1 = global::Transform
