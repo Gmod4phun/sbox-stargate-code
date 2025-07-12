@@ -384,6 +384,9 @@ public class MultiWorldSystem : GameObjectSystem
 
 		foreach (var rigidbody in Scene.GetAllComponents<Rigidbody>())
 		{
+			if (rigidbody.Tags.Has("player"))
+				continue;
+
 			if (
 				rigidbody.IsValid()
 				&& GetWorldIndexOfObject(rigidbody.GameObject) != playerWorldIndex

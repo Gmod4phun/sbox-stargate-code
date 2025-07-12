@@ -1,4 +1,4 @@
-public sealed class FootstepEvent : Component
+public sealed class PlayerFootstepEvent : Component
 {
 	[Property]
 	SkinnedModelRenderer Source { get; set; }
@@ -30,14 +30,13 @@ public sealed class FootstepEvent : Component
 			return;
 
 		var playerWorld = Player.GetMultiWorld();
-		var currentWorldTag = MultiWorldSystem.GetWorldTag(playerWorld);
 
 		var tr = Scene
 			.Trace.Ray(
 				e.Transform.Position + Vector3.Up * 20,
 				e.Transform.Position + Vector3.Up * -20
 			)
-			.WithTag(currentWorldTag)
+			.WithWorld(playerWorld)
 			.Run();
 
 		if (!tr.Hit)
