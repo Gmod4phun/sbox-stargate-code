@@ -21,9 +21,6 @@ namespace Sandbox.Components.Stargate
 		[Property, Sync]
 		public NetList<string> PressedActions { get; set; } = new();
 
-		[Property]
-		public string PressedActionsString => GetJoinedPressedActions();
-
 		[Sync]
 		protected bool DialIsLock { get; set; } = false;
 
@@ -93,16 +90,6 @@ namespace Sandbox.Components.Stargate
 		internal float LastPressTime { get; set; } = 0;
 		internal float PressDelay { get; set; } = 0.5f;
 
-		public string GetJoinedPressedActions()
-		{
-			var retVal = "";
-			foreach (var action in PressedActions)
-			{
-				retVal += action;
-			}
-			return retVal;
-		}
-
 		protected override void OnStart()
 		{
 			GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
@@ -114,11 +101,21 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnUpdate();
 
-			// DrawSymbols();
+			DrawSymbols();
 		}
 
 		public void DrawSymbols()
 		{
+			var player = Scene
+				.GetAllComponents<PlayerController>()
+				.FirstOrDefault(p => p.GetCamera() == Scene.Camera);
+
+			if (!player.IsValid())
+				return;
+
+			if (!MultiWorldSystem.AreObjectsInSameWorld(player.GameObject, GameObject))
+				return;
+
 			using (Gizmo.Scope("DhdSymbols", global::Transform.Zero))
 			{
 				foreach (var entry in ButtonPositions)
@@ -145,10 +142,8 @@ namespace Sandbox.Components.Stargate
 						.WithRotation(finalRot)
 						.WithScale(0.02f);
 
-					Gizmo.Draw.Color = Color.Black;
-					Gizmo.Draw.WorldText(name, t1, size: 128);
-
-					Gizmo.Draw.Color = Color.White;
+					Gizmo.Draw.IgnoreDepth = true;
+					Gizmo.Draw.Color = Color.White.WithAlpha(0.75f);
 					Gizmo.Draw.WorldText(name, t2, size: 128);
 				}
 			}
