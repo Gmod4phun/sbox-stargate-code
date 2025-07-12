@@ -22,7 +22,7 @@ namespace Sandbox.Components.Stargate
 		public NetList<string> PressedActions { get; set; } = new();
 
 		[Sync]
-		protected bool DialIsLock { get; set; } = false;
+		public bool DialIsLock { get; protected set; } = false;
 
 		[Sync]
 		protected bool IsDialLocking { get; set; } = false;
@@ -33,6 +33,8 @@ namespace Sandbox.Components.Stargate
 		public Stargate Gate { get; set; }
 
 		public IEnumerable<DhdButton> Buttons => Components.GetAll<DhdButton>(FindMode.InChildren);
+
+		public HighlightOutline ButtonGlowOutline { get; private set; }
 
 		protected virtual string ButtonSymbols => "ABCDEFGHI0123456789STUVWXYZ@JKLMNO#PQR";
 
@@ -81,7 +83,7 @@ namespace Sandbox.Components.Stargate
 				["Z"] = new Vector3(-3.0627f, 7.6676f, 50.3809f),
 				["@"] = new Vector3(-0.8726f, 3.1943f, 49.9209f),
 				// Engage
-				// ["DIAL"] = new Vector3( -15.0280f, -1.5217f, 55.1249f ),
+				["DIAL"] = new Vector3(-15.0280f, -1.5217f, 55.1249f),
 			};
 
 		protected virtual Vector3 ButtonPositionsOffset => new(-14.8088f, -1.75652f, 8f);
@@ -100,8 +102,41 @@ namespace Sandbox.Components.Stargate
 		protected override void OnUpdate()
 		{
 			base.OnUpdate();
-
 			DrawSymbols();
+			OutlineBreath();
+		}
+
+		void OutlineBreath()
+		{
+			if (!ButtonGlowOutline.IsValid())
+				return;
+
+			var time = Time.Now;
+			var breath = MathF.Sin(time * 5f) * 0.5f + 0.5f; // Breath effect from 0 to 1
+			breath = MathX.Remap(breath, 0, 1, 0.33f, 1f);
+			ButtonGlowOutline.Color = ButtonGlowOutline.Color.WithAlpha(breath);
+			ButtonGlowOutline.ObscuredColor = ButtonGlowOutline.Color;
+		}
+
+		public Vector3 GetSymbolPosition(string name)
+		{
+			if (ButtonPositions.TryGetValue(name, out var coord))
+			{
+				var _symbolPosition = coord - ButtonPositionsOffset;
+
+				var dhdPos = Transform.World.Position;
+				var dhdRot = Transform.World.Rotation;
+
+				var finalPos =
+					dhdPos
+					+ dhdRot.Forward * _symbolPosition.x
+					+ dhdRot.Left * _symbolPosition.y
+					+ dhdRot.Up * _symbolPosition.z;
+
+				return finalPos;
+			}
+
+			return Transform.World.Position;
 		}
 
 		public void DrawSymbols()
@@ -125,16 +160,12 @@ namespace Sandbox.Components.Stargate
 				foreach (var entry in ButtonPositions)
 				{
 					var name = entry.Key;
-					var _symbolPosition = entry.Value - ButtonPositionsOffset;
+					if (name == "DIAL")
+						continue; // Skip drawing the DIAL button for now
 
-					var dhdPos = Transform.World.Position;
 					var dhdRot = Transform.World.Rotation;
 
-					var finalPos =
-						dhdPos
-						+ dhdRot.Forward * _symbolPosition.x
-						+ dhdRot.Left * _symbolPosition.y
-						+ dhdRot.Up * _symbolPosition.z;
+					var finalPos = GetSymbolPosition(name);
 
 					var distance = cam.Position.DistanceSquared(finalPos);
 					if (distance > 4096)
@@ -192,6 +223,13 @@ namespace Sandbox.Components.Stargate
 		{
 			await Task.FixedUpdate();
 			TryAssignGate(Stargate.FindNearestGate(GameObject, 1024, true));
+
+			ButtonGlowOutline?.Destroy();
+			ButtonGlowOutline = GameObject.Components.Create<HighlightOutline>();
+			ButtonGlowOutline.Color = new Color(70, 400, 64, 0);
+			ButtonGlowOutline.ObscuredColor = ButtonGlowOutline.Color;
+			ButtonGlowOutline.OverrideTargets = true;
+			ButtonGlowOutline.Targets = [];
 		}
 
 		/// <summary>
