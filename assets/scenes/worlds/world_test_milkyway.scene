@@ -288,6 +288,41 @@
                   "Targets": [],
                   "Width": 0.25
                 }
+              },
+              {
+                "Id": {
+                  "Type": "Component",
+                  "IdValue": "febfcaa7-09ed-4ed2-90dc-f5b32c3829f4"
+                },
+                "Parent": {
+                  "Type": "GameObject",
+                  "IdValue": "d16f44a5-354e-4ad0-8f27-6595e7550533"
+                },
+                "PreviousElement": {
+                  "Type": "Component",
+                  "IdValue": "bff47f4e-576a-4288-ad88-101a86f51895"
+                },
+                "ContainerProperty": "Components",
+                "IsContainerArray": true,
+                "Data": {
+                  "__type": "Sandbox.HighlightOutline",
+                  "__guid": "febfcaa7-09ed-4ed2-90dc-f5b32c3829f4",
+                  "__enabled": true,
+                  "Color": "70,400,64,0.38515",
+                  "InsideColor": "0,0,0,0",
+                  "InsideObscuredColor": "0,0,0,0",
+                  "Material": null,
+                  "ObscuredColor": "70,400,64,0.38515",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OverrideTargets": true,
+                  "Targets": [],
+                  "Width": 0.25
+                }
               }
             ],
             "RemovedObjects": [],
@@ -1984,6 +2019,41 @@
                   "InsideObscuredColor": "0,0,0,0",
                   "Material": null,
                   "ObscuredColor": "70,400,64,0.34178",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OverrideTargets": true,
+                  "Targets": [],
+                  "Width": 0.25
+                }
+              },
+              {
+                "Id": {
+                  "Type": "Component",
+                  "IdValue": "b0676317-e3c6-42e3-a91f-cb71e11e5626"
+                },
+                "Parent": {
+                  "Type": "GameObject",
+                  "IdValue": "d16f44a5-354e-4ad0-8f27-6595e7550533"
+                },
+                "PreviousElement": {
+                  "Type": "Component",
+                  "IdValue": "a9287046-e31e-4d09-a2a5-63caaf0f4d2a"
+                },
+                "ContainerProperty": "Components",
+                "IsContainerArray": true,
+                "Data": {
+                  "__type": "Sandbox.HighlightOutline",
+                  "__guid": "b0676317-e3c6-42e3-a91f-cb71e11e5626",
+                  "__enabled": true,
+                  "Color": "70,400,64,0.38515",
+                  "InsideColor": "0,0,0,0",
+                  "InsideObscuredColor": "0,0,0,0",
+                  "Material": null,
+                  "ObscuredColor": "70,400,64,0.38515",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4977,10 +5047,17 @@
                   "CurrentMoveDistance": 0,
                   "DoorMoveCurve": [
                     {
-                      "x": 0.5,
-                      "y": 0.5,
-                      "in": 0,
-                      "out": 0,
+                      "x": 0,
+                      "y": 0,
+                      "in": -1,
+                      "out": 1,
+                      "mode": "Mirrored"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "in": -1,
+                      "out": 1,
                       "mode": "Mirrored"
                     }
                   ],
@@ -5073,10 +5150,17 @@
                   "CurrentMoveDistance": 0,
                   "DoorMoveCurve": [
                     {
-                      "x": 0.5,
-                      "y": 0.5,
-                      "in": 0,
-                      "out": 0,
+                      "x": 0,
+                      "y": 0,
+                      "in": -1,
+                      "out": 1,
+                      "mode": "Mirrored"
+                    },
+                    {
+                      "x": 1,
+                      "y": 1,
+                      "in": -1,
+                      "out": 1,
                       "mode": "Mirrored"
                     }
                   ],
@@ -5084,7 +5168,7 @@
                   "DoorMoveTime": 1,
                   "DoorType": "Sliding",
                   "FlipDirection": false,
-                  "LocalMoveDirection": "0,1,0",
+                  "LocalMoveDirection": "0,-1,0",
                   "Locked": false,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
