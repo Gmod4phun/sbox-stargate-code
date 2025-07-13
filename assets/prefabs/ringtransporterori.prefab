@@ -1,22 +1,41 @@
 {
   "RootObject": {
-    "Id": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+    "__guid": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
+    "__version": 1,
+    "Flags": 0,
     "Name": "ringtransporterori",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
     "Tags": "rings_no_teleport,ringplatform",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "RingTransporter",
-        "OtherTransporter": null,
+        "__type": "Sandbox.Components.Stargate.Rings.RingTransporter",
+        "__guid": "8e2905d3-92f0-45aa-afd2-5075680b9848",
+        "__enabled": true,
         "Address": "",
         "Collider": {
           "_type": "component",
+          "component_id": "6b64d47d-1b09-4122-b9f0-8cb8baa57c47",
           "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
           "component_type": "ModelCollider"
         },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OtherTransporter": null,
         "PlatformHeightOffset": 20,
         "Renderer": {
           "_type": "component",
+          "component_id": "d9d8b728-85fa-4f56-91bd-62575d46830a",
           "go": "c374803b-eaf4-43d8-be80-c24cbc7ff484",
           "component_type": "SkinnedModelRenderer"
         },
@@ -24,28 +43,98 @@
         "RingsRestingHeightOffset": 12
       },
       {
-        "__type": "ModelCollider",
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "6b64d47d-1b09-4122-b9f0-8cb8baa57c47",
+        "__enabled": true,
+        "Elasticity": null,
+        "Friction": null,
         "IsTrigger": false,
         "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
         "Static": false,
-        "Surface": null
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
       },
       {
-        "__type": "SkinnedModelRenderer",
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "d9d8b728-85fa-4f56-91bd-62575d46830a",
+        "__enabled": true,
+        "AnimationGraph": null,
         "BodyGroups": 18446744073709551615,
         "BoneMergeTarget": null,
+        "CreateAttachments": false,
         "CreateBoneObjects": false,
         "MaterialGroup": null,
         "MaterialOverride": null,
+        "Materials": null,
         "Model": "models/sbox_stargate/rings_ori/ring_ori_base.vmdl",
+        "Morphs": {},
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
+        "PlaybackRate": 1,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
-        "Tint": "1,1,1,1"
+        "Sequence": {
+          "Name": null,
+          "Looping": true,
+          "Blending": false
+        },
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
       }
     ],
-    "Children": []
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
 }

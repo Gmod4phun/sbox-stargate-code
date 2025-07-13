@@ -1,41 +1,101 @@
 {
   "RootObject": {
     "__guid": "2a935461-721f-49bb-8b66-a449b0655413",
+    "__version": 1,
     "Flags": 0,
     "Name": "zpm",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "67a8b08a-0b1d-4e24-a276-f8e2eea7ea5f",
+        "__enabled": true,
         "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Materials": null,
         "Model": "models/sbox_stargate/zpm/zpm.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
       {
         "__type": "Sandbox.ModelCollider",
         "__guid": "bfb0e5f4-25db-4592-a48d-24e3725928f1",
+        "__enabled": true,
+        "Elasticity": null,
+        "Friction": null,
         "IsTrigger": false,
         "Model": "models/sbox_stargate/zpm/zpm.vmdl",
-        "Static": false
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
+        "Static": false,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
       },
       {
         "__type": "Sandbox.Rigidbody",
         "__guid": "f2e5a939-cfd3-4e70-bb55-5139491ecfdb",
+        "__enabled": true,
         "AngularDamping": 0,
         "Gravity": true,
         "LinearDamping": 0,
-        "Locking": {},
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": "DisableCollisionSounds",
         "StartAsleep": false
       },
       {
         "__type": "Attachable",
         "__guid": "9f06a0a0-d030-41f5-a0f8-a3c68ed60de8",
+        "__enabled": true,
         "AttachableType": "ZPM",
+        "AttachedTo": null,
         "Body": {
           "_type": "component",
           "component_id": "f2e5a939-cfd3-4e70-bb55-5139491ecfdb",
@@ -43,26 +103,57 @@
           "component_type": "Rigidbody"
         },
         "ContinuousUse": false,
-        "IsAttached": false
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       },
       {
         "__type": "ZPM",
         "__guid": "72787502-964e-4685-bfa9-32f91e152c2d",
+        "__enabled": true,
         "Attachable": {
           "_type": "component",
           "component_id": "9f06a0a0-d030-41f5-a0f8-a3c68ed60de8",
           "go": "2a935461-721f-49bb-8b66-a449b0655413",
           "component_type": "Attachable"
-        }
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
     "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "ResourceVersion": 1,
+  "DontBreakAsTemplate": false,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

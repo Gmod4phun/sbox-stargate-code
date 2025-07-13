@@ -1,21 +1,48 @@
 {
   "RootObject": {
-    "Id": "0b1f80c3-23d0-41db-acc6-5b5647510c53",
+    "__guid": "0b1f80c3-23d0-41db-acc6-5b5647510c53",
+    "__version": 1,
+    "Flags": 0,
     "Name": "stargateuniverse",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "ModelCollider",
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "2763fb33-01ae-4db1-b2b3-3bf2860ba040",
+        "__enabled": true,
+        "Elasticity": null,
+        "Friction": null,
         "IsTrigger": false,
         "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
         "Static": false,
-        "Surface": null
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
       },
       {
-        "__type": "StargateUniverse",
+        "__type": "Sandbox.Components.Stargate.StargateUniverse",
+        "__guid": "3241206c-395f-4625-af3d-d669eca780a4",
+        "__enabled": true,
         "AutoClose": false,
         "CanOpenMenu": true,
-        "EventHorizon": null,
         "EventHorizonMaterialGroup": "universe",
         "GateAddress": "",
         "GateGlyphType": "UNIVERSE",
@@ -23,99 +50,276 @@
         "GateLocal": false,
         "GateName": "",
         "GatePrivate": false,
-        "Iris": null,
-        "OtherGate": null,
-        "Ramp": null,
+        "IrisType": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
         "ShowWormholeCinematic": false
       }
     ],
     "Children": [
       {
-        "Id": "20aef137-b98c-4761-b3ec-8af00d990336",
+        "__guid": "20aef137-b98c-4761-b3ec-8af00d990336",
+        "__version": 1,
+        "Flags": 0,
         "Name": "Ring",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
-            "__type": "StargateRingUniverse",
+            "__type": "Sandbox.Components.Stargate.StargateRingUniverse",
+            "__guid": "f04d3e7c-f43f-4832-9e7b-949d435302a8",
+            "__enabled": true,
             "_ringState": "STOPPED",
             "CurRingSymbol": " ",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
             "RingAngle": 0,
             "RingModel": {
               "_type": "component",
+              "component_id": "abeb76bb-e364-4d5e-8f59-c59ba8bc9f31",
               "go": "20aef137-b98c-4761-b3ec-8af00d990336",
               "component_type": "ModelRenderer"
             },
             "RingSymbols": " ZB9J QNLM@VKO6 DCWY #RTS 8APU F7H5X4IG0 12E3"
           },
           {
-            "__type": "ModelRenderer",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "abeb76bb-e364-4d5e-8f59-c59ba8bc9f31",
+            "__enabled": true,
             "BodyGroups": 1,
+            "CreateAttachments": false,
             "MaterialGroup": null,
             "MaterialOverride": null,
+            "Materials": null,
             "Model": "models/sbox_stargate/gate_universe/gate_universe.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
             "RenderType": "On",
             "Tint": "1,1,1,1"
           },
           {
-            "__type": "SkinnedModelRenderer",
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "439f1273-f11b-4337-bda6-02fdae684c68",
+            "__enabled": true,
+            "AnimationGraph": null,
             "BodyGroups": 22906492245,
             "BoneMergeTarget": null,
+            "CreateAttachments": false,
             "CreateBoneObjects": false,
             "MaterialGroup": null,
             "MaterialOverride": null,
+            "Materials": null,
             "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_1_18.vmdl",
+            "Morphs": {},
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "PlaybackRate": 1,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
             "RenderType": "On",
-            "Tint": "1,1,1,1"
+            "Sequence": {
+              "Name": null,
+              "Looping": true,
+              "Blending": false
+            },
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
           },
           {
-            "__type": "SkinnedModelRenderer",
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "d3d99769-a051-4454-a0df-2bd86c2f9cdc",
+            "__enabled": true,
+            "AnimationGraph": null,
             "BodyGroups": 22906492245,
             "BoneMergeTarget": null,
+            "CreateAttachments": false,
             "CreateBoneObjects": false,
             "MaterialGroup": null,
             "MaterialOverride": null,
+            "Materials": null,
             "Model": "models/sbox_stargate/gate_universe/gate_universe_symbols_19_36.vmdl",
+            "Morphs": {},
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "PlaybackRate": 1,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
             "RenderType": "On",
-            "Tint": "1,1,1,1"
+            "Sequence": {
+              "Name": null,
+              "Looping": true,
+              "Blending": false
+            },
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
           }
         ],
         "Children": [
           {
-            "Id": "387f1482-9739-482e-abde-2aff3536e3d1",
+            "__guid": "387f1482-9739-482e-abde-2aff3536e3d1",
+            "__version": 1,
+            "Flags": 0,
             "Name": "Chevrons",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
             "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkInterpolation": true,
+            "NetworkOrphaned": 0,
+            "OwnerTransfer": 1,
             "Components": [
               {
-                "__type": "Chevron",
+                "__type": "Sandbox.Components.Stargate.Chevron",
+                "__guid": "db9c6003-c7c8-42bf-8ae5-bbd973263f78",
+                "__enabled": true,
                 "ChevronLight": null,
                 "ChevronModel": {
                   "_type": "component",
+                  "component_id": "1cc0fd7c-f5d0-4462-b2ff-c5998650beab",
                   "go": "387f1482-9739-482e-abde-2aff3536e3d1",
                   "component_type": "SkinnedModelRenderer"
                 },
                 "Number": 1,
                 "On": false,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
                 "Open": false
               },
               {
-                "__type": "SkinnedModelRenderer",
+                "__type": "Sandbox.SkinnedModelRenderer",
+                "__guid": "1cc0fd7c-f5d0-4462-b2ff-c5998650beab",
+                "__enabled": true,
+                "AnimationGraph": null,
                 "BodyGroups": 18446744073709551615,
                 "BoneMergeTarget": null,
+                "CreateAttachments": false,
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
+                "Materials": null,
                 "Model": "models/sbox_stargate/gate_universe/chevrons_universe.vmdl",
+                "Morphs": {},
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "Parameters": {
+                  "bools": {},
+                  "ints": {},
+                  "floats": {},
+                  "vectors": {},
+                  "rotations": {}
+                },
+                "PlaybackRate": 1,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
                 "RenderType": "On",
-                "Tint": "1,1,1,1"
+                "Sequence": {
+                  "Name": null,
+                  "Looping": true,
+                  "Blending": false
+                },
+                "Tint": "1,1,1,1",
+                "UseAnimGraph": true
               }
-            ]
+            ],
+            "Children": []
           }
         ]
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
 }
