@@ -49,6 +49,13 @@ public class PlayerGrabber : Component
 				return;
 			}
 
+			if (!grabbedBody.PhysicsBody.IsValid())
+			{
+				grabbedOffset = default;
+				grabbedBody = default;
+				return;
+			}
+
 			var targetTx = aimTransform.ToWorld(grabbedOffset);
 
 			var worldStart = grabbedBody
@@ -124,8 +131,6 @@ public class PlayerGrabber : Component
 		if (IsProxy)
 			return;
 
-		Transform aimTransform = Scene.Camera.Transform.World;
-
 		if (waitForUp)
 		{
 			if (Input.Down("attack1") || Input.Down("attack2"))
@@ -136,10 +141,11 @@ public class PlayerGrabber : Component
 
 		waitForUp = false;
 
-		if (grabbedBody.IsValid())
+		if (grabbedBody.IsValid() && grabbedBody.PhysicsBody.IsValid())
 		{
 			if (Input.Down("attack1"))
 			{
+				Transform aimTransform = Scene.Camera.Transform.World;
 				var targetTx = aimTransform.ToWorld(grabbedOffset);
 				grabbedBody.PhysicsBody.SmoothMove(
 					targetTx,

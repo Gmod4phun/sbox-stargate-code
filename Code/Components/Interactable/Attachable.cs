@@ -1,7 +1,7 @@
 public class Attachable : Component, Component.IPressable
 {
 	[Property]
-	public Rigidbody Body => Components.Get<Rigidbody>();
+	public Rigidbody Body => Components.Get<Rigidbody>(FindMode.EverythingInSelf);
 
 	[Property]
 	public AttachPoint AttachedTo { get; private set; }
@@ -26,12 +26,12 @@ public class Attachable : Component, Component.IPressable
 		if (!force && TryAttachAction != null && !TryAttachAction.Invoke(attachPoint))
 			return;
 
-		Body.MotionEnabled = false;
-
 		GameObject.SetParent(attachPoint.GameObject, true);
 		GameObject.WorldPosition = attachPoint.WorldPosition;
 		GameObject.WorldRotation = attachPoint.WorldRotation;
 		GameObject.Transform.ClearInterpolation();
+
+		Body.Enabled = false;
 
 		AttachedTo = attachPoint;
 		AttachedTo.CurrentAttachable = this;
@@ -42,7 +42,7 @@ public class Attachable : Component, Component.IPressable
 		if (!IsAttached || !Body.IsValid())
 			return;
 
-		Body.MotionEnabled = true;
+		Body.Enabled = true;
 		GameObject.ClearParent();
 		AttachedTo.CurrentAttachable = null;
 		AttachedTo.TimeSinceLastDetach = 0;
