@@ -67,9 +67,10 @@ public class AttachPoint : Component, Component.ExecuteInEditor
 
 	protected override void OnStart()
 	{
-		base.OnStart();
+		if (Scene.IsEditor)
+			return;
 
-		if (DefaultPrefab != null && !Scene.IsEditor)
+		if (DefaultPrefab != null)
 		{
 			var go = SceneUtility.GetPrefabScene(DefaultPrefab).Clone();
 			TryAttachGameObject(go, true);

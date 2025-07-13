@@ -31,6 +31,9 @@ namespace Sandbox.Components.Stargate.Rings
 
 		protected override void OnStart()
 		{
+			if (Scene.IsEditor)
+				return;
+
 			GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
 		}
 

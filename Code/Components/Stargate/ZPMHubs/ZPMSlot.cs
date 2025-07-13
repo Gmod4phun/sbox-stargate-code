@@ -45,7 +45,9 @@ public class ZPMSlot : Component
 
 	protected override void OnStart()
 	{
-		base.OnStart();
+		if (Scene.IsEditor)
+			return;
+
 		IsUp = StartsUp;
 
 		if (StartsUp)

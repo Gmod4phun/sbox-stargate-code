@@ -51,6 +51,9 @@ public class Door : Component, Component.ExecuteInEditor
 
 	protected override void OnStart()
 	{
+		if (Scene.IsEditor)
+			return;
+
 		GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
 
 		if (StartsOpen)

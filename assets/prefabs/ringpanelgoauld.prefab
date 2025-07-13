@@ -9,7 +9,7 @@
     "Scale": "1,1,1",
     "Tags": "rings_no_teleport",
     "Enabled": true,
-    "NetworkMode": 1,
+    "NetworkMode": 2,
     "NetworkInterpolation": true,
     "NetworkOrphaned": 1,
     "OwnerTransfer": 0,

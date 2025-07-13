@@ -150,17 +150,6 @@ public class LensFlareEffect : PostProcess
 		}
 	}
 
-	// protected override void OnStart()
-	// {
-	// 	base.OnStart();
-
-	// 	var camera = Components.Get<CameraComponent>();
-	// 	if ( !camera.IsValid() )
-	// 		return;
-
-	// 	camera.AddHookBeforeOverlay( "DrawLensFlareEffect", 1, DrawLensFlare );
-	// }
-
 	protected override void UpdateCommandList()
 	{
 		DrawLensFlare();

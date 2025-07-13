@@ -30,7 +30,8 @@ public class MultiWorld : Component
 
 	protected override void OnStart()
 	{
-		base.OnStart();
+		if (Scene.IsEditor)
+			return;
 
 		Tags.Add(MultiWorldSystem.GetWorldTag(WorldIndex));
 

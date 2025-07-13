@@ -26,7 +26,9 @@ public class Shield
 
 	protected override void OnStart()
 	{
-		base.OnStart();
+		if (Scene.IsEditor)
+			return;
+
 		Tags.Add("shield");
 	}
 

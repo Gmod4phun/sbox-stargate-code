@@ -26,11 +26,6 @@ namespace Sandbox.Components.Stargate
 				WorldRotation.Forward.Normal
 			);
 
-		protected override void OnStart()
-		{
-			base.OnStart();
-		}
-
 		// protected override void OnDestroy()
 		// {
 		//     base.OnDestroy();

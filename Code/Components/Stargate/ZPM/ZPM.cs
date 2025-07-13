@@ -5,7 +5,8 @@ public class ZPM : Component
 
 	protected override void OnStart()
 	{
-		base.OnStart();
+		if (Scene.IsEditor)
+			return;
 
 		Attachable.UseAction = () =>
 		{

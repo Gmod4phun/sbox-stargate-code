@@ -157,14 +157,14 @@ namespace Sandbox.Components.Stargate
 
 		protected override void OnStart()
 		{
+			if (Scene.IsEditor)
+				return;
+
 			GameObject.SetupNetworking(orphaned: NetworkOrphaned.Host);
 
-			if (!Scene.IsEditor)
+			if (IrisType.HasValue)
 			{
-				if (IrisType.HasValue)
-				{
-					AddIris(this, IrisType.Value);
-				}
+				AddIris(this, IrisType.Value);
 			}
 		}
 

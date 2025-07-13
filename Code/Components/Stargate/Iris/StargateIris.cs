@@ -92,7 +92,8 @@ namespace Sandbox.Components.Stargate
 
 		protected override void OnStart()
 		{
-			base.OnStart();
+			if (Scene.IsEditor)
+				return;
 
 			Busy = false;
 			Closed = false;
