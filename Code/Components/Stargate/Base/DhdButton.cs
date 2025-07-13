@@ -18,12 +18,37 @@ namespace Sandbox.Components.Stargate
 		public bool On { get; set; } = false;
 		private float _glowScale = 0;
 
+		TimeSince lastPressed;
+		readonly float longPressDelay = 0.5f;
+
 		public bool Press(IPressable.Event e)
 		{
-			if (Time.Now < DHD.LastPressTime + DHD.PressDelay)
-				return false;
+			lastPressed = 0;
+			return true;
+		}
 
-			var user = e.Source.GameObject;
+		public bool Pressing(IPressable.Event e)
+		{
+			return lastPressed < longPressDelay;
+		}
+
+		public void Release(IPressable.Event e)
+		{
+			if (lastPressed < longPressDelay)
+			{
+				OnShortPress(e.Source.GameObject);
+				lastPressed = 0;
+				return;
+			}
+
+			OnLongPress();
+			lastPressed = 0;
+		}
+
+		void OnShortPress(GameObject user)
+		{
+			if (Time.Now < DHD.LastPressTime + DHD.PressDelay)
+				return;
 
 			Network.TakeOwnership();
 			DHD.Network.TakeOwnership();
@@ -31,13 +56,14 @@ namespace Sandbox.Components.Stargate
 
 			DHD.LastPressTime = Time.Now;
 			DHD.TriggerAction(Action, user);
-
-			return true;
 		}
 
-		public bool CanPress(IPressable.Event e)
+		void OnLongPress()
 		{
-			return !Disabled;
+			if (Action == "DIAL")
+			{
+				// TODO: add dial helper and show gate selection UI
+			}
 		}
 
 		protected override void OnUpdate()
