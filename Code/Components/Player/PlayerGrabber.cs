@@ -6,9 +6,6 @@ public class PlayerGrabber : Component
 	public GameObject ImpactEffect { get; set; }
 
 	[Property]
-	public GameObject DecalEffect { get; set; }
-
-	[Property]
 	public float ShootDamage { get; set; } = 9.0f;
 
 	[Property]
@@ -201,24 +198,7 @@ public class PlayerGrabber : Component
 			return;
 		}
 
-		if (ImpactEffect.IsValid())
-		{
-			ImpactEffect.Clone(
-				new Transform(tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt(tr.Normal))
-			);
-		}
-
-		if (DecalEffect.IsValid() && !tr.Tags.AsEnumerable().Contains("no_decal"))
-		{
-			var decal = DecalEffect.Clone(
-				new Transform(
-					tr.HitPosition + tr.Normal * 2.0f,
-					Rotation.LookAt(-tr.Normal, Vector3.Random),
-					Random.Shared.Float(0.8f, 1.2f)
-				)
-			);
-			decal.SetParent(tr.GameObject);
-		}
+		CreateImpactDecal(tr);
 
 		if (tr.Body.IsValid())
 		{
@@ -235,6 +215,55 @@ public class PlayerGrabber : Component
 		foreach (var damageable in tr.GameObject.Components.GetAll<IDamageable>())
 		{
 			damageable.OnDamage(damage);
+		}
+	}
+
+	void CreateImpactDecal(SceneTraceResult tr)
+	{
+		var decalDepth = 4f;
+		var impact = tr.Surface.PrefabCollection.BulletImpact.Clone(
+			new Transform(tr.HitPosition, Rotation.LookAt(tr.Normal, Vector3.Random), 1),
+			startEnabled: false
+		);
+
+		GameObject decalCollectionObject;
+
+		if (
+			tr.GameObject.Children.Find(o => o.Name == "DecalCollection")
+			is GameObject decalCollection
+		)
+		{
+			decalCollectionObject = decalCollection;
+		}
+		else
+		{
+			decalCollectionObject = tr.Scene.CreateObject(true);
+			decalCollectionObject.Name = "DecalCollection";
+			decalCollectionObject.WorldPosition = tr.GameObject.WorldPosition;
+			decalCollectionObject.WorldRotation = tr.GameObject.WorldRotation;
+			decalCollectionObject.SetParent(tr.GameObject, true);
+		}
+
+		impact.SetParent(decalCollectionObject);
+
+		var decal = impact.Components.Get<Decal>(FindMode.EverythingInDescendants);
+		if (decal.IsValid())
+		{
+			decal.ColorMix = 3;
+			decal.AttenuationAngle = 0.2f;
+			decal.Depth = decalDepth;
+			Log.Info($"Created decal with depth {decalDepth}");
+		}
+
+		impact.Enabled = true;
+
+		if (ImpactEffect.IsValid())
+		{
+			var impactEffect = ImpactEffect.Clone(
+				new Transform(tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt(tr.Normal))
+			);
+
+			impactEffect.SetParent(decalCollectionObject);
 		}
 	}
 
