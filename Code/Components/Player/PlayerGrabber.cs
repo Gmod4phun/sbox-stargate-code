@@ -258,7 +258,6 @@ public class PlayerGrabber : Component
 			decal.ColorMix = 3;
 			decal.AttenuationAngle = 0.2f;
 			decal.Depth = decalDepth;
-			Log.Info($"Created decal with depth {decalDepth}");
 		}
 
 		impact.Enabled = true;
