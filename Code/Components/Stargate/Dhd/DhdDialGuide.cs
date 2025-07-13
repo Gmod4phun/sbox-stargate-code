@@ -58,11 +58,11 @@ public class DhdDialGuide : Component
 			nextAction = "DIAL";
 		}
 
-		// Log.Info($"Next action to activate: {nextAction}");
+		if (string.IsNullOrEmpty(nextAction))
+			return;
 
 		var buttonToActivate = DHD.GetButtonByAction(nextAction);
-		// Log.Info($"Button to activate: {buttonToActivate.Action}");
-		if (!buttonToActivate.IsValid())
+		if (!buttonToActivate.IsValid() || !buttonToActivate.ButtonModel.IsValid())
 			return;
 
 		if (Scene.Camera.WorldPosition.DistanceSquared(DHD.GetSymbolPosition(nextAction)) > 4096)

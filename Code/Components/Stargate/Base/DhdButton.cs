@@ -62,7 +62,21 @@ namespace Sandbox.Components.Stargate
 		{
 			if (Action == "DIAL")
 			{
-				// TODO: add dial helper and show gate selection UI
+				ToggleGateListPanel();
+			}
+		}
+
+		void ToggleGateListPanel()
+		{
+			var dhdGateList = DHD.Components.Get<DhdGateList>(FindMode.EverythingInDescendants);
+			if (dhdGateList.IsValid() && dhdGateList.GameObject.IsValid())
+			{
+				dhdGateList.GameObject.Enabled = !dhdGateList.GameObject.Enabled;
+
+				if (!dhdGateList.GameObject.Enabled)
+				{
+					DHD.SetDialGuideState(false);
+				}
 			}
 		}
 

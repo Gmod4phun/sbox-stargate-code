@@ -89,6 +89,12 @@
         "__type": "PlayerCameraController",
         "__guid": "c5149510-bbe1-432d-93c1-637e35bef18e",
         "__enabled": true,
+        "Camera": {
+          "_type": "component",
+          "component_id": "6754bedf-412b-4beb-919c-661156a8ec55",
+          "go": "fca85967-6586-475b-b5c2-c64afc5b7201",
+          "component_type": "CameraComponent"
+        },
         "CameraOffset": "100,0,0",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -457,6 +463,19 @@
             "Quality": "High",
             "Radius": 128,
             "ThinCompensation": 0
+          },
+          {
+            "__type": "Sandbox.WorldInput",
+            "__guid": "f16cbcae-960c-4015-bcf2-c48250af2d8e",
+            "__enabled": true,
+            "LeftMouseAction": "Attack1",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RightMouseAction": "Attack2"
           }
         ],
         "Children": []

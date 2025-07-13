@@ -123,6 +123,11 @@ namespace Sandbox.Components.Stargate
 
 		public Vector3 GetSymbolPosition(string name)
 		{
+			if (name == "DIAL" && !ButtonPositions.TryGetValue("DIAL", out var _))
+			{
+				name = Stargate.PointOfOrigin.ToString();
+			}
+
 			if (ButtonPositions.TryGetValue(name, out var coord))
 			{
 				var _symbolPosition = coord - ButtonPositionsOffset;
@@ -140,6 +145,14 @@ namespace Sandbox.Components.Stargate
 			}
 
 			return Transform.World.Position;
+		}
+
+		public void SetDialGuideState(bool enabled)
+		{
+			if (Components.TryGet<DhdDialGuide>(out var guide))
+			{
+				guide.Enabled = enabled;
+			}
 		}
 
 		public void DrawSymbols()

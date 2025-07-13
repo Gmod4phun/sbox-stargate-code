@@ -1,0 +1,49 @@
+DhdGateList {
+    .background {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(63, 63, 63, 0.5);
+        backdrop-filter: blur(4px);
+        border-radius: 2%;
+    }
+
+    .gate-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gate-item {
+        padding: 6px;
+        border: 1px solid #ccc;
+        justify-content: center;
+        pointer-events: all;
+        width: 50%;
+
+        &:hover {
+            background-color: rgba(76, 255, 36, 0.581);
+        }
+    }
+
+    .gate-address {
+        font-size: 32px;
+        font-weight: bold;
+        font-family: Stargate Address Glyphs SG1;
+        color: #ffffff;
+        pointer-events: none;
+    }
+
+    .gate-type {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        pointer-events: none;
+    }
+
+}

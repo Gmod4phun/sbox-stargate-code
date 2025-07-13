@@ -9,7 +9,7 @@
     "Scale": "1,1,1",
     "Tags": "",
     "Enabled": true,
-    "NetworkMode": 1,
+    "NetworkMode": 2,
     "NetworkInterpolation": true,
     "NetworkOrphaned": 1,
     "OwnerTransfer": 0,
@@ -4108,6 +4108,58 @@
             "Static": false,
             "Surface": null,
             "SurfaceVelocity": "0,0,0"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "6a4f343b-a42d-4729-ae9c-a42521f6dcf5",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "GateListPanel",
+        "Position": "-33.45203,0,70.75282",
+        "Rotation": "0,-0.1305262,0,0.9914449",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": false,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "d7328f17-a492-403a-87ac-8d2315bb3595",
+            "__enabled": true,
+            "HorizontalAlign": "Center",
+            "InteractionRange": 80,
+            "LookAtCamera": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "PanelSize": "1600,900",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "DhdGateList",
+            "__guid": "a0da6e77-f8bf-49fa-b495-e2f1c874bbcd",
+            "__enabled": true,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null
           }
         ],
         "Children": []

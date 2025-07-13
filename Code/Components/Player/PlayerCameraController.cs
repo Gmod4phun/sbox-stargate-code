@@ -9,6 +9,9 @@ public class PlayerCameraController : Component
 	public Vector3 CameraOffset { get; set; } = new Vector3(100f, 0f, 0f);
 
 	[Property]
+	public CameraComponent Camera => Scene?.Camera;
+
+	[Property]
 	public bool UseFovFromPreferences { get; set; } = true;
 
 	float _cameraDistance = 100f;
@@ -31,7 +34,7 @@ public class PlayerCameraController : Component
 			return;
 		}
 
-		CameraComponent cam = base.Scene.Camera;
+		var cam = Camera;
 		if (cam == null)
 		{
 			return;

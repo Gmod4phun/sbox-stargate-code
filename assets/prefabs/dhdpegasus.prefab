@@ -4111,6 +4111,58 @@
           }
         ],
         "Children": []
+      },
+      {
+        "__guid": "5f3b64d8-4e06-48c9-bb00-8322b37287b8",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "GateListPanel",
+        "Position": "-33.45203,0,70.75282",
+        "Rotation": "0,-0.1305262,0,0.9914449",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": false,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "941bc953-dd83-4fd6-81b2-9de9211711ef",
+            "__enabled": true,
+            "HorizontalAlign": "Center",
+            "InteractionRange": 80,
+            "LookAtCamera": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "PanelSize": "1600,900",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "DhdGateList",
+            "__guid": "c9494cb3-e13e-4c17-8192-5999c19f60b3",
+            "__enabled": true,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null
+          }
+        ],
+        "Children": []
       }
     ],
     "__properties": {

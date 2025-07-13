@@ -1,0 +1,64 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Components.Stargate;
+@inherits PanelComponent
+
+<root>
+    <div class="background">
+        <div class="gate-list">
+            @if (DHD.IsValid())
+            {
+                @foreach (var gate in GetAvailableGates())
+                {
+                    var otherAddress = Stargate.GetOtherGateAddressForMenu(DHD.Gate, gate);
+
+                    AddressToGateDict[otherAddress] = gate;
+
+                    var gateType = "Milky Way";
+                    if (gate is StargatePegasus)
+                    {
+                        gateType = "Pegasus";
+                    }
+                    else if (gate is StargateUniverse)
+                    {
+                        gateType = "Universe";
+                    }
+
+                    var gateAddressClass = $"gate-address_{otherAddress}";
+
+                    var gateTypeFormatted = $"| ({gateType})";
+
+                    <div class="gate-item @gateAddressClass">
+                        <div class="gate-address">@otherAddress</div>
+                        @* <div class="gate-type">@gateTypeFormatted</div> *@
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</root>
+
+@code {
+    List<Stargate> AllGates => Scene.Components.GetAll<Stargate>().ToList();
+    Dhd DHD => Components.Get<Dhd>(FindMode.EverythingInSelfAndParent);
+    List<Stargate> GetAvailableGates()
+    {
+        return AllGates.Where(gate => !gate.GatePrivate && gate != DHD.Gate).ToList();
+    }
+
+    Dictionary<string, Stargate> AddressToGateDict = new();
+
+    protected override void OnMouseDown(MousePanelEvent e)
+    {
+        if (e.Target.Class.First(x => x.StartsWith("gate-address_")) is string addressClass)
+        {
+            var address = addressClass.Split('_')[1].ToUpperInvariant();
+            if (AddressToGateDict.TryGetValue(address, out var gate))
+            {
+                var guide = DHD.Components.GetOrCreate<DhdDialGuide>();
+                guide.DestinationGate = gate;
+                guide.Enabled = true;
+            }
+        }
+    }
+}

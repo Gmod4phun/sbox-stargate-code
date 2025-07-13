@@ -168,6 +168,11 @@ namespace Sandbox.Components.Stargate
 			}
 		}
 
+		public Dhd GetControllingDHD()
+		{
+			return Scene.Components.GetAll<Dhd>().FirstOrDefault(dhd => dhd.Gate == this);
+		}
+
 		/*
 		[ConCmd.Server]
 		public static void RequestDial( DialType type, string address, int gate, float initialDelay = 0 )
@@ -749,6 +754,11 @@ namespace Sandbox.Components.Stargate
 		public virtual void OnStargateClosed()
 		{
 			ResetGateVariablesToIdle();
+
+			if (GetControllingDHD() is Dhd DHD)
+			{
+				DHD.SetDialGuideState(false);
+			}
 			// Event.Run( StargateEvent.GateClosed, this );
 		}
 
