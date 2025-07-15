@@ -5,6 +5,7 @@ DhdGateList {
         background-color: rgba(63, 63, 63, 0.5);
         backdrop-filter: blur(4px);
         border-radius: 2%;
+        pointer-events: all;
     }
 
     .gate-list {
@@ -21,21 +22,21 @@ DhdGateList {
 
     .gate-item {
         padding: 6px;
-        border: 1px solid #ccc;
         justify-content: center;
         pointer-events: all;
-        width: 50%;
+        width: 100%;
 
         &:hover {
-            background-color: rgba(76, 255, 36, 0.581);
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 4px solid #00d5ff25;
         }
     }
 
     .gate-address {
-        font-size: 32px;
+        font-size: 24px;
         font-weight: bold;
         font-family: Stargate Address Glyphs SG1;
-        color: #ffffff;
+        color: #00d0ff;
         pointer-events: none;
     }
 

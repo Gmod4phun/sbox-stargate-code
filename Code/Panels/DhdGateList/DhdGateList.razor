@@ -27,10 +27,12 @@
                     var gateAddressClass = $"gate-address_{otherAddress}";
 
                     var gateTypeFormatted = $"| ({gateType})";
+                    var worldNumber = gate.GetMultiWorld().WorldIndex;
 
                     <div class="gate-item @gateAddressClass">
+                        <div class="gate-type">World @worldNumber |</div>
                         <div class="gate-address">@otherAddress</div>
-                        @* <div class="gate-type">@gateTypeFormatted</div> *@
+                        <div class="gate-type">@gateTypeFormatted</div>
                     </div>
                 }
             }
@@ -48,9 +50,13 @@
 
     Dictionary<string, Stargate> AddressToGateDict = new();
 
+    public bool Opening { get; set; } = false;
+    Vector2 TargetPanelSize => new Vector2(1600, 900);
+    Sandbox.WorldPanel WorldPanel => Components.Get<Sandbox.WorldPanel>(FindMode.EverythingInSelf);
+
     protected override void OnMouseDown(MousePanelEvent e)
     {
-        if (e.Target.Class.First(x => x.StartsWith("gate-address_")) is string addressClass)
+        if (e.Target.IsValid() && e.Target.Class.FirstOrDefault(x => x.StartsWith("gate-address_")) is string addressClass)
         {
             var address = addressClass.Split('_')[1].ToUpperInvariant();
             if (AddressToGateDict.TryGetValue(address, out var gate))
@@ -61,4 +67,37 @@
             }
         }
     }
+
+    protected override void OnEnabled()
+    {
+        if (WorldPanel.IsValid())
+        {
+            WorldPanel.PanelSize = new Vector2(0, 10);
+        }
+
+        Opening = true;
+    }
+
+    protected override void OnUpdate()
+    {
+        if (Opening && WorldPanel.IsValid() && WorldPanel.PanelSize.x != TargetPanelSize.x)
+        {
+            WorldPanel.PanelSize = WorldPanel.PanelSize.WithX(MathX.Lerp(WorldPanel.PanelSize.x, TargetPanelSize.x, Time.Delta *
+            5f));
+        }
+
+        if (Opening && WorldPanel.IsValid() && WorldPanel.PanelSize.x.AlmostEqual(TargetPanelSize.x, 10f) &&
+        WorldPanel.PanelSize.y !=
+        TargetPanelSize.y)
+        {
+            WorldPanel.PanelSize = WorldPanel.PanelSize.WithY(MathX.Lerp(WorldPanel.PanelSize.y, TargetPanelSize.y, Time.Delta *
+            5f));
+        }
+
+        if (WorldPanel.PanelSize == TargetPanelSize)
+        {
+            Opening = false;
+        }
+    }
+
 }

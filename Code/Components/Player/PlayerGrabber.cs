@@ -283,6 +283,9 @@ public class PlayerGrabber : Component
 		if (!player.IsValid())
 			return;
 
+		if (player.IsHoveringWorldPanel())
+			return;
+
 		Sound.Play(shootSound, player.EyePosition);
 
 		var ray = player.EyeTransform;

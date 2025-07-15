@@ -13,4 +13,10 @@ public static class PlayerControllerExtensions
 	{
 		return player.Components.Get<CameraComponent>(FindMode.InDescendants);
 	}
+
+	public static bool IsHoveringWorldPanel(this PlayerController player)
+	{
+		var worldInput = player.Components.Get<WorldInput>(FindMode.InDescendants);
+		return worldInput?.Hovered.IsValid() ?? false;
+	}
 }
