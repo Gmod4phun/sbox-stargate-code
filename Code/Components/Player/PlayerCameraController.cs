@@ -25,6 +25,17 @@ public class PlayerCameraController : Component
 		{
 			UpdateCameraPosition();
 		}
+
+		if (Input.Pressed("score"))
+		{
+			if (PlayerController.IsValid())
+			{
+				PlayerController.GameObject.SetMultiWorld(
+					PlayerController.GetMultiWorld().GetNextMultiWorld()
+				);
+				Log.Info($"Switched player to new world");
+			}
+		}
 	}
 
 	private void UpdateCameraPosition()
