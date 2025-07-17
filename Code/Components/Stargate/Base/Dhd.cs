@@ -408,10 +408,16 @@ namespace Sandbox.Components.Stargate
 
 				if (Gate.CanStargateStartDial())
 				{
-					var closestGate = Gate.FindClosestGate();
-					if (closestGate.IsValid())
+					var dialGuide = Components.Get<DhdDialGuide>(
+						FindMode.EverythingInSelfAndDescendants
+					);
+
+					if (dialGuide.IsValid() && dialGuide.DestinationGate.IsValid())
 					{
-						var address = Stargate.GetOtherGateAddressForMenu(Gate, closestGate);
+						var address = Stargate.GetOtherGateAddressForMenu(
+							Gate,
+							dialGuide.DestinationGate
+						);
 
 						if (action == "FAST")
 							Gate.BeginDialFast(address);

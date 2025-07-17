@@ -65,7 +65,7 @@ public class DhdDialGuide : Component
 		if (!buttonToActivate.IsValid() || !buttonToActivate.ButtonModel.IsValid())
 			return;
 
-		if (Scene.Camera.WorldPosition.DistanceSquared(DHD.GetSymbolPosition(nextAction)) > 4096)
+		if (Scene?.Camera?.WorldPosition.DistanceSquared(DHD.GetSymbolPosition(nextAction)) > 4096)
 			return;
 
 		if (!outline.Targets.Contains(buttonToActivate.ButtonModel))
