@@ -101,7 +101,7 @@ public class PlayerGrabber : Component
 		var tr = Scene
 			.Trace.Ray(
 				Scene.Camera.WorldPosition,
-				Scene.Camera.WorldPosition + Scene.Camera.WorldRotation.Forward * 1000
+				Scene.Camera.WorldPosition + Scene.Camera.WorldRotation.Forward * 10000
 			)
 			.WithWorld(GameObject)
 			.WithoutTags(GrabIgnoreTags)
