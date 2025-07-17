@@ -555,11 +555,14 @@ namespace Sandbox.Components.Stargate
 
 		public static void PlaySound(Component comp, string name, float delay = 0)
 		{
-			PlaySound(comp.GameObject, name, delay);
+			PlaySound(comp?.GameObject, name, delay);
 		}
 
 		public static async void PlaySound(GameObject gameObject, string name, float delay = 0)
 		{
+			if (!gameObject.IsValid())
+				return;
+
 			if (delay > 0)
 			{
 				await GameTask.DelaySeconds(delay);

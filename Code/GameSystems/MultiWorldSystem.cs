@@ -200,7 +200,7 @@ public class MultiWorldSystem : GameObjectSystem
 		if (world.IsValid())
 		{
 			var mixer = world.GetMixer();
-			if (mixer != null)
+			if (mixer != null && sound.Handle.IsValid())
 			{
 				sound.Handle.TargetMixer = mixer;
 			}
