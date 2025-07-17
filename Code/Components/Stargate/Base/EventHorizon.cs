@@ -1020,7 +1020,7 @@ namespace Sandbox.Components.Stargate
 		{
 			base.OnDestroy();
 
-			WormholeLoop.Stop();
+			WormholeLoop?.Stop();
 
 			if (_frontTrigger.IsValid())
 			{
