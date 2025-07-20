@@ -181,16 +181,30 @@
 		{
 			for (int i = 1; i <= num; i++)
 			{
-				ChevronAnimLock(GetChevronBasedOnAddressLength(i, num), delay, turnon);
+				var chev = GetChevronBasedOnAddressLength(i, num);
+				chev.PlaySoundOnOpenChanged = i == num;
+				ChevronAnimLock(chev, delay, turnon);
+				chev.PlaySoundOnOpenChanged = true;
 			}
 		}
 
 		public void ChevronAnimUnlockAll(float delay = 0, bool turnoff = false)
 		{
-			foreach (var chev in Chevrons)
+			Chevron lastChev = null;
+			for (int i = 1; i <= 9; i++)
 			{
+				var chev = GetChevron(i);
+				chev.PlaySoundOnOpenChanged = false;
 				if (chev.Open)
+				{
 					ChevronAnimUnlock(chev, delay, turnoff);
+				}
+				chev.PlaySoundOnOpenChanged = true;
+				lastChev = chev;
+			}
+			if (lastChev.IsValid())
+			{
+				lastChev.PlayCloseSound();
 			}
 		}
 
@@ -712,7 +726,7 @@
 						var chev = GetChevronBasedOnAddressLength(i, address.Length);
 						if (chev.IsValid())
 						{
-							ChevronActivate(chev, 0, ChevronLightup);
+							ChevronActivate(chev, 0, ChevronLightup, noSound: i < address.Length);
 						}
 					}
 				}

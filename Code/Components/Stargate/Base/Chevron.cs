@@ -22,16 +22,25 @@
 		[Property]
 		public int Number { get; set; } = 0;
 
+		public bool PlaySoundOnOpenChanged { get; set; } = true;
+
 		public void OnOpenChanged(bool oldValue, bool newValue)
 		{
 			if (ChevronModel.IsValid() && ChevronModel.SceneModel.IsValid())
 			{
 				ChevronModel.SceneModel.SetAnimParameter("Open", newValue);
 
-				Stargate.PlaySound(
-					this,
-					Gate.GetSound(newValue ? "chevron_open" : "chevron_close")
-				);
+				if (PlaySoundOnOpenChanged)
+				{
+					if (newValue)
+					{
+						PlayOpenSound();
+					}
+					else
+					{
+						PlayCloseSound();
+					}
+				}
 			}
 		}
 
