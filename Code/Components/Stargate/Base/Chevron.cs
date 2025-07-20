@@ -1,6 +1,6 @@
 ﻿namespace Sandbox.Components.Stargate
 {
-	public class Chevron : PropertyChangeComponent, Component.ExecuteInEditor
+	public class Chevron : Component, Component.ExecuteInEditor
 	{
 		private float _selfillumscale = 0;
 
@@ -13,7 +13,7 @@
 		[Property, Sync]
 		public bool On { get; set; }
 
-		[Property, OnChange(nameof(OnOpenChanged)), Sync]
+		[Property, Change(nameof(OnOpenChanged)), Sync]
 		public bool Open { get; set; }
 
 		public Stargate Gate =>

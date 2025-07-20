@@ -1,6 +1,6 @@
 namespace Sandbox.Components.Stargate
 {
-	public class StargateRing : PropertyChangeComponent, Component.ExecuteInEditor
+	public class StargateRing : Component, Component.ExecuteInEditor
 	{
 		public enum RingState
 		{
@@ -34,7 +34,7 @@ namespace Sandbox.Components.Stargate
 		[Sync]
 		private float _curRingSymbolOffset { get; set; } = 0f;
 
-		[Property, OnChange(nameof(OnRingStateChanged)), System.ComponentModel.ReadOnly(true), Sync]
+		[Property, Change(nameof(OnRingStateChanged)), System.ComponentModel.ReadOnly(true), Sync]
 		public RingState _ringState { get; set; } = RingState.STOPPED;
 
 		public float SpeedPerSecond => Gate.IsValid() ? Gate.RingSpeedPerSecond : 40;
