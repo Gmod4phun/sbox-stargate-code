@@ -183,7 +183,8 @@
             "scenes/worlds/world_test_pegasus.scene",
             "scenes/worlds/world_test_universe.scene",
             "scenes/worlds/world_snow.scene",
-            "scenes/worlds/world_gates_test.scene"
+            "scenes/worlds/world_gates_test.scene",
+            "scenes/worlds/world_test_space.scene"
           ]
         }
       ],
