@@ -20,7 +20,6 @@
 					{
 						m_id = 773623432
 					}
-					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_sequenceName = "iris_idle_closed"
 					m_nFrameIndex = 0
@@ -41,7 +40,6 @@
 					{
 						m_id = 1101070848
 					}
-					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_states = 
 					[
@@ -75,6 +73,7 @@
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
 									m_flFixedCycleValue = 0.0
+									m_bBlendCycle = false
 									m_blendCurve = 
 									{
 										m_vControlPoint1 = [ 0.5, 0.0 ]
@@ -135,6 +134,7 @@
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
 									m_flFixedCycleValue = 0.0
+									m_bBlendCycle = false
 									m_blendCurve = 
 									{
 										m_vControlPoint1 = [ 0.0, 0.0 ]
@@ -193,6 +193,19 @@
 												m_data = true
 											}
 										},
+										{
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 0
+											m_paramID = 
+											{
+												m_id = 285883196
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = true
+											}
+										},
 									]
 									m_blendDuration = 0.0
 									m_destState = 
@@ -202,6 +215,7 @@
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
 									m_flFixedCycleValue = 0.0
+									m_bBlendCycle = false
 									m_blendCurve = 
 									{
 										m_vControlPoint1 = [ 0.5, 0.0 ]
@@ -262,6 +276,7 @@
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
 									m_flFixedCycleValue = 0.0
+									m_bBlendCycle = false
 									m_blendCurve = 
 									{
 										m_vControlPoint1 = [ 0.0, 0.0 ]
@@ -318,7 +333,6 @@
 					{
 						m_id = 1524622393
 					}
-					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_tagSpans = [  ]
 					m_sequenceName = "iris_close"
@@ -340,7 +354,6 @@
 					{
 						m_id = 1681782078
 					}
-					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_inputConnection = 
 					{
@@ -369,7 +382,6 @@
 					{
 						m_id = 1892476804
 					}
-					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_sequenceName = "iris_idle_open"
 					m_nFrameIndex = 0
@@ -390,7 +402,6 @@
 					{
 						m_id = 2090025782
 					}
-					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_tagSpans = [  ]
 					m_sequenceName = "iris_open"
@@ -413,10 +424,20 @@
 					m_id = 1801646728
 				}
 				m_previewButton = "ANIMPARAM_BUTTON_NONE"
-				m_bNetwork = true
 				m_bUseMostRecentValue = false
 				m_bAutoReset = false
-				m_bPredicted = false
+				m_bDefaultValue = false
+			},
+			{
+				_class = "CBoolAnimParameter"
+				m_name = "CanTransition"
+				m_id = 
+				{
+					m_id = 285883196
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bUseMostRecentValue = false
+				m_bAutoReset = false
 				m_bDefaultValue = false
 			},
 		]
@@ -451,8 +472,6 @@
 			},
 			{
 				_class = "CAnimGraphNetworkSettings"
-				m_bNetworkingEnabled = true
-				m_defaultNetworkMode = "ServerAuthoritative"
 			},
 		]
 	}

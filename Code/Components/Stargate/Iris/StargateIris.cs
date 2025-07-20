@@ -31,7 +31,7 @@ namespace Sandbox.Components.Stargate
 			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
 			{
 				IrisModel.SceneModel.RenderingEnabled = true;
-				IrisModel.SceneModel.SetAnimParameter("Open", false);
+				IrisModel.Set("Open", false);
 			}
 
 			if (IrisCollider.IsValid())
@@ -104,8 +104,9 @@ namespace Sandbox.Components.Stargate
 			}
 			if (IrisModel.IsValid() && IrisModel.SceneModel.IsValid())
 			{
-				IrisModel.SceneModel.SetAnimParameter("Open", true);
-				IrisModel.SceneModel.RenderingEnabled = false;
+				IrisModel.Set("Open", true);
+				IrisModel.SceneModel.RenderingEnabled = true;
+				IrisModel.Set("CanTransition", true);
 			}
 		}
 
