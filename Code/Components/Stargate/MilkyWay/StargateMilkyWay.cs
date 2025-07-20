@@ -190,7 +190,7 @@
 
 		public void ChevronAnimUnlockAll(float delay = 0, bool turnoff = false)
 		{
-			Chevron lastChev = null;
+			Chevron lastOpenChev = null;
 			for (int i = 1; i <= 9; i++)
 			{
 				var chev = GetChevron(i);
@@ -198,13 +198,13 @@
 				if (chev.Open)
 				{
 					ChevronAnimUnlock(chev, delay, turnoff);
+					lastOpenChev = chev;
 				}
 				chev.PlaySoundOnOpenChanged = true;
-				lastChev = chev;
 			}
-			if (lastChev.IsValid())
+			if (lastOpenChev.IsValid())
 			{
-				lastChev.PlayCloseSound();
+				lastOpenChev.PlayCloseSound();
 			}
 		}
 
