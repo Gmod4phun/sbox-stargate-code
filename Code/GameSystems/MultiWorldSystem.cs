@@ -308,6 +308,11 @@ public class MultiWorldSystem : GameObjectSystem
 			Sandbox.Physics.CollisionRules.Result.Ignore
 		);
 
+		rules.Pairs.TryAdd(
+			new Sandbox.Physics.CollisionRules.Pair(StargateTags.PowerNode, StargateTags.EHTrigger),
+			Sandbox.Physics.CollisionRules.Result.Ignore
+		);
+
 		Log.Info($"MultiWorld: Initializing collision rules for {Worlds.Count()} worlds");
 
 		// world exclude rules

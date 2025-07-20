@@ -10,4 +10,5 @@ public static class StargateTags
 	public static string Ringsring => "ringsring";
 	public static string Ringplatform => "ringplatform";
 	public static string EHTrigger => "ehtrigger";
+	public static string PowerNode => "powernode";
 }

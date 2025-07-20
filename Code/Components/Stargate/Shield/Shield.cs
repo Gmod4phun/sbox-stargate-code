@@ -105,6 +105,9 @@ public class Shield
 
 	public void OnCollisionStart(Collision collision)
 	{
+		if (collision.Self.Collider?.GameObject != GameObject)
+			return;
+
 		if (collision.Contact.Speed.Length < 36)
 			return;
 
@@ -119,9 +122,6 @@ public class Shield
 
 	public void OnDamage(in DamageInfo damage)
 	{
-		if (damage.Shape?.Body?.GameObject != GameObject)
-			return;
-
 		CreateHitEffect(damage.Position);
 	}
 }

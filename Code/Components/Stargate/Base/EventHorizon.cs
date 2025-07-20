@@ -178,7 +178,7 @@ namespace Sandbox.Components.Stargate
 		{
 			EstablishClientAnim();
 
-			if (!Gate.IsIrisClosed() && doKawoosh)
+			if (!Gate.IsIrisClosed && doKawoosh)
 			{
 				if (!IsProxy)
 				{
@@ -653,7 +653,7 @@ namespace Sandbox.Components.Stargate
 			if (!ent.IsValid())
 				return;
 
-			if (!fromBack && Gate.IsIrisClosed()) // prevent shit accidentaly touching EH from front if our iris is closed
+			if (!fromBack && Gate.IsIrisClosed) // prevent shit accidentaly touching EH from front if our iris is closed
 				return;
 
 			foreach (var c in Stargate.GetSelfWithAllChildrenRecursive(ent))
@@ -773,7 +773,7 @@ namespace Sandbox.Components.Stargate
 
 		public void TeleportLogic(GameObject other, Action teleportFunc, bool fromBack)
 		{
-			if (!fromBack && Gate.IsIrisClosed()) // if we try to enter any gate from front and it has an active iris, do nothing
+			if (!fromBack && Gate.IsIrisClosed) // if we try to enter any gate from front and it has an active iris, do nothing
 				return;
 
 			if (Gate.Inbound || !IsFullyFormed) // if we entered inbound gate from any direction, dissolve
@@ -788,9 +788,9 @@ namespace Sandbox.Components.Stargate
 				}
 				else // othwerwise we entered from the front, so now decide what happens
 				{
-					if (!Gate.IsIrisClosed()) // try teleporting only if our iris is open
+					if (!Gate.IsIrisClosed) // try teleporting only if our iris is open
 					{
-						if (Gate.OtherGate.IsValid() && Gate.OtherGate.IsIrisClosed()) // if other gate's iris is closed, dissolve
+						if (Gate.OtherGate.IsValid() && Gate.OtherGate.IsIrisClosed) // if other gate's iris is closed, dissolve
 						{
 							DissolveEntity(other);
 							Gate.OtherGate.Iris.PlayHitSound(); // iris goes boom
@@ -823,7 +823,7 @@ namespace Sandbox.Components.Stargate
 		{
 			StartTouchEH(
 				other,
-				Gate.IsIrisClosed()
+				Gate.IsIrisClosed
 					? IsEntityBehindEventHorizon(other)
 					: WasEntityJustComingFromBehindEventHorizon(other)
 			);
@@ -840,7 +840,7 @@ namespace Sandbox.Components.Stargate
 			if (!Stargate.IsAllowedForGateTeleport(other))
 				return;
 
-			if (!fromBack && Gate.IsIrisClosed())
+			if (!fromBack && Gate.IsIrisClosed)
 				return;
 
 			if (!IsFullyFormed)
@@ -1137,7 +1137,7 @@ namespace Sandbox.Components.Stargate
 									);
 									var gate = eh.Gate;
 
-									if (gate.IsIrisClosed() && !fromBack)
+									if (gate.IsIrisClosed && !fromBack)
 										continue;
 
 									if (gate.IsValid())

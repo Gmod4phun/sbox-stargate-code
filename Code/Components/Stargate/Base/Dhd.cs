@@ -393,7 +393,7 @@ namespace Sandbox.Components.Stargate
 
 			if (action == "IRIS") // button for toggling the iris
 			{
-				if (Gate.HasIris())
+				if (Gate.HasIris)
 					Gate.Iris.Toggle();
 				return;
 			}

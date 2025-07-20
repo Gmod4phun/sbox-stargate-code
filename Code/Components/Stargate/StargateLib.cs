@@ -435,7 +435,7 @@ namespace Sandbox.Components.Stargate
 			StargateIris.IrisType irisType = StargateIris.IrisType.Standard
 		)
 		{
-			if (!gate.HasIris())
+			if (!gate.HasIris)
 			{
 				var iris_object = new GameObject();
 				iris_object.Name = "Iris";
@@ -493,9 +493,9 @@ namespace Sandbox.Components.Stargate
 		/// <returns>Whether or not the Iris was removed succesfully.</returns>
 		public static bool RemoveIris(Stargate gate)
 		{
-			if (gate.HasIris())
+			if (gate.HasIris)
 			{
-				gate.Iris.Destroy();
+				gate.Iris?.GameObject?.Destroy();
 				return true;
 			}
 			return false;
@@ -539,6 +539,76 @@ namespace Sandbox.Components.Stargate
 				return true;
 			}
 			return false;
+		}
+
+		/// <summary>
+		/// Adds a Power Nodes to the target Stargate (Space gates usually have these).
+		/// </summary>
+		public static void AddPowerNodes(Stargate gate)
+		{
+			var gate_rb = gate?.GameObject?.Components.GetOrCreate<Rigidbody>();
+			gate_rb.Enabled = false;
+			gate_rb.Gravity = false;
+
+			var nodeAngles = new int[] { -60, 60, 180 };
+			gate_rb.Enabled = true;
+			foreach (var angle in nodeAngles)
+			{
+				var node_object = new GameObject();
+				node_object.Name = "Power Node";
+				node_object.WorldPosition = gate.WorldPosition;
+				node_object.WorldRotation = gate.WorldRotation;
+				node_object.WorldRotation *= Rotation.FromRoll(angle);
+				node_object.WorldPosition += node_object.WorldRotation.Up * 134f;
+				node_object.WorldScale = gate.WorldScale;
+				node_object.Tags.Add(StargateTags.PowerNode);
+
+				var mr = node_object.Components.Create<ModelRenderer>();
+				mr.Model = Model.Load("models/sbox_stargate/powernode/powernode.vmdl");
+
+				node_object.Components.Create<ModelCollider>();
+				node_object.SetMultiWorld(gate.GetMultiWorld());
+
+				var rb = node_object.Components.Create<Rigidbody>();
+				rb.AngularDamping = 0.5f;
+				rb.LinearDamping = 0.5f;
+
+				var joint = node_object.Components.Create<FixedJoint>();
+				joint.Body = gate.GameObject;
+				joint.AngularDamping = 0;
+				joint.LinearDamping = 0;
+				joint.AngularFrequency = 0;
+				joint.LinearFrequency = 0;
+
+				var node = node_object.Components.Create<PowerNode>();
+				node.TargetPosition = node_object.WorldPosition;
+				node.EnableMovement = true;
+				node.Gate = gate;
+				node.Joint = joint;
+
+				gate.PowerNodes.Add(node);
+			}
+		}
+
+		/// <summary>
+		/// Removes all Power Nodes from the target Stargate.
+		/// /// </summary>
+		public static void RemovePowerNodes(Stargate gate)
+		{
+			if (!gate.IsValid())
+				return;
+
+			foreach (var node in gate.PowerNodes)
+			{
+				node?.GameObject?.Destroy();
+			}
+
+			gate.PowerNodes.Clear();
+			var gate_rb = gate?.GameObject?.Components.Get<Rigidbody>();
+			if (gate_rb.IsValid())
+			{
+				gate_rb.Gravity = true;
+			}
 		}
 
 		// sounds

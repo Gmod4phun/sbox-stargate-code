@@ -100,10 +100,7 @@ namespace Sandbox.Components.Stargate
 
 		public void OnDamage(in DamageInfo damage)
 		{
-			if (damage.Damage > 0 && damage.Shape?.Body?.GameObject == GameObject)
-			{
-				PlayHitSound();
-			}
+			PlayHitSound();
 		}
 	}
 }

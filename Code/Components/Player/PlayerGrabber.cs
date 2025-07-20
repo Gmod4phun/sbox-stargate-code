@@ -171,10 +171,10 @@ public class PlayerGrabber : Component
 			.IgnoreGameObjectHierarchy(GameObject)
 			.Run();
 
-		if (!tr.Hit || !tr.GameObject.IsValid())
+		if (!tr.Hit || !tr.Collider.IsValid())
 			return;
 
-		if (tr.GameObject.Components.TryGet<EventHorizon>(out var eh))
+		if (tr.Collider.Components.TryGet<EventHorizon>(out var eh))
 		{
 			eh.PlayTeleportSound();
 
@@ -183,7 +183,7 @@ public class PlayerGrabber : Component
 
 			var isInbound = eh.Gate.Inbound;
 			var otherEH = eh.GetOther();
-			var otherIrisClosed = otherEH.Gate.IsIrisClosed();
+			var otherIrisClosed = otherEH.Gate.IsIrisClosed;
 			var fromBehind = eh.IsPointBehindEventHorizon(tr.HitPosition);
 
 			if (!isInbound && !fromBehind && otherIrisClosed)
@@ -210,7 +210,7 @@ public class PlayerGrabber : Component
 		{
 			tr.Body.ApplyImpulseAt(
 				tr.HitPosition,
-				tr.Direction * 200.0f * tr.Body.Mass.Clamp(0, 200)
+				tr.Direction * 400.0f * tr.Body.Mass.Clamp(0, 400)
 			);
 		}
 
@@ -218,7 +218,9 @@ public class PlayerGrabber : Component
 		damage.Position = tr.HitPosition;
 		damage.Shape = tr.Shape;
 
-		foreach (var damageable in tr.GameObject.Components.GetAll<IDamageable>())
+		foreach (
+			var damageable in tr.Collider.Components.GetAll<IDamageable>(FindMode.EnabledInSelf)
+		)
 		{
 			damageable.OnDamage(damage);
 		}

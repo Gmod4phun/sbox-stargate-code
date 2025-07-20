@@ -50,9 +50,52 @@ namespace Sandbox.Components.Stargate
 		[Property]
 		public StargateIris.IrisType? IrisType { get; set; }
 
+		[Button("Add Gate Iris", "")]
+		[ShowIf(nameof(HasIris), false)]
+		public void ButtonAddIris()
+		{
+			AddIris(this, IrisType ?? StargateIris.IrisType.Standard);
+		}
+
+		[Button("Remove Gate Iris", "")]
+		[ShowIf(nameof(HasIris), true)]
+		public void ButtonRemoveIris()
+		{
+			RemoveIris(this);
+		}
+
 		[Property, JsonIgnore]
 		public StargateIris Iris =>
 			GameObject.Components.Get<StargateIris>(FindMode.EnabledInSelfAndDescendants);
+
+		[Button("Toggle Iris", "")]
+		[ShowIf(nameof(HasIris), true)]
+		public void ButtonToggleIris()
+		{
+			Iris.Toggle();
+		}
+
+		public List<PowerNode> PowerNodes { get; set; } = new();
+
+		[Property]
+		public bool HasPowerNodes => PowerNodes.Count > 0;
+
+		[Button("Add Power Nodes", "")]
+		[ShowIf(nameof(HasPowerNodes), false)]
+		public void ButtonAddPowerNodes()
+		{
+			AddPowerNodes(this);
+		}
+
+		[Button("Remove Power Nodes", "")]
+		[ShowIf(nameof(HasPowerNodes), true)]
+		public void ButtonRemovePowerNodes()
+		{
+			RemovePowerNodes(this);
+		}
+
+		public bool HasAllActivePowerNodes =>
+			PowerNodes.Count == 3 && PowerNodes.All(pn => pn.EnableMovement);
 
 		[Property, JsonIgnore]
 		public GateRamp Ramp => GameObject.Components.Get<GateRamp>(FindMode.InParent);
@@ -480,15 +523,9 @@ namespace Sandbox.Components.Stargate
 		}
 
 		// IRIS
-		public bool HasIris()
-		{
-			return Iris.IsValid();
-		}
+		public bool HasIris => Iris.IsValid();
 
-		public bool IsIrisClosed()
-		{
-			return HasIris() && Iris.Closed;
-		}
+		public bool IsIrisClosed => HasIris && Iris.Closed;
 
 		public void ToggleIris()
 		{
