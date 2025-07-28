@@ -288,7 +288,11 @@ public class PlayerGrabber : Component
 		if (player.IsHoveringWorldPanel())
 			return;
 
-		Sound.Play(shootSound, player.EyePosition);
+		MultiWorldSound.Play(
+			shootSound.ResourceName,
+			player.EyePosition,
+			GameObject.GetMultiWorld().WorldIndex
+		);
 
 		var ray = player.EyeTransform;
 
