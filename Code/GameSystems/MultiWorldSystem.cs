@@ -73,14 +73,6 @@ public class MultiWorldSystem : GameObjectSystem
 		return Worlds.FirstOrDefault(w => w.WorldIndex == worldIndex);
 	}
 
-	public static int GetWorldIndexOfObject(Component component)
-	{
-		if (!component.IsValid())
-			return -1;
-
-		return GetWorldIndexOfObject(component.GameObject);
-	}
-
 	public static int GetWorldIndexOfObject(GameObject gameObject)
 	{
 		if (!gameObject.IsValid())
@@ -96,15 +88,7 @@ public class MultiWorldSystem : GameObjectSystem
 
 	public static bool AreObjectsInSameWorld(GameObject a, GameObject b)
 	{
-		if (a.Components.TryGet<MultiWorld>(out var worldA, FindMode.InAncestors))
-		{
-			if (b.Components.TryGet<MultiWorld>(out var worldB, FindMode.InAncestors))
-			{
-				return worldA.WorldIndex == worldB.WorldIndex;
-			}
-		}
-
-		return false;
+		return a.GetMultiWorld() == b.GetMultiWorld();
 	}
 
 	public static bool AreObjectsInSameWorld(Component a, Component b)
@@ -148,28 +132,23 @@ public class MultiWorldSystem : GameObjectSystem
 		// add to new world
 		gameObject.SetParent(GetWorldByIndex(worldIndex).GameObject, true);
 
-		// if it's a player, handle that
-		if (gameObject.Components.TryGet<PlayerController>(out var ply))
+		if (
+			gameObject.Components.TryGet<CameraComponent>(
+				out var camera,
+				FindMode.EverythingInSelfAndDescendants
+			)
+		)
 		{
-			Log.Info($"Assigning player {ply} to world {worldIndex}");
-			AssignWorldToPlayer(ply, worldIndex);
+			AssignWorldToCamera(camera, worldIndex);
 		}
-
-		// Log.Info( $"Object {gameObject} has moved to world {worldIndex}" );
 	}
 
-	private static void AssignWorldToPlayer(PlayerController player, int worldIndex)
+	public static void AssignWorldToCamera(CameraComponent camera, int worldIndex)
 	{
-		if (!player.IsValid())
-			return;
-
-		// Log.Info( $"Assigning player {player} to world {worldIndex}" );
-
-		var camera = player.GetCamera();
 		var newWorldTag = GetWorldTag(worldIndex);
 		var excludeTags = AllWorldIndices.Where(i => i != worldIndex).Select(GetWorldTag).ToArray();
 
-		if (!excludeTags.Any())
+		if (excludeTags.Length == 0)
 		{
 			Log.Warning("No other worlds to exclude");
 			return;
@@ -180,18 +159,13 @@ public class MultiWorldSystem : GameObjectSystem
 			foreach (var t in excludeTags)
 			{
 				camera.RenderExcludeTags.Add(t);
-				// player.Tags.Remove( t );
 			}
 		}
 
-		// idk why this shit still has a problem, gotta figure out what broke recently
-		player.Tags.Toggle("_");
-		player.Tags.Toggle("_");
-
-		// remove exluce tag of the world we will be in
 		camera.RenderExcludeTags.Remove(newWorldTag);
 
-		ProcessFog();
+		var world = GetWorldByIndex(worldIndex);
+		ProcessEnvironmentalComponents(world);
 	}
 
 	public static void AddSound(MultiWorldSound sound)
@@ -215,7 +189,6 @@ public class MultiWorldSystem : GameObjectSystem
 	public static void Init()
 	{
 		InitializeCollisionRules();
-		// ProcessFog();
 	}
 
 	private static async void InitializeCollisionRules()
@@ -320,11 +293,6 @@ public class MultiWorldSystem : GameObjectSystem
 		{
 			foreach (var world in Worlds)
 			{
-				// rules.Defaults.TryAdd(
-				// 	GetWorldTag(world.WorldIndex),
-				// 	Sandbox.Physics.CollisionRules.Result.Collide
-				// );
-
 				foreach (var otherWorld in Worlds)
 				{
 					if (world.WorldIndex != otherWorld.WorldIndex)
@@ -359,8 +327,6 @@ public class MultiWorldSystem : GameObjectSystem
 			Game.ActiveScene.PhysicsWorld.CollisionRules = rules;
 			Log.Info("MultiWorld: Collision rules initialized");
 		}
-
-		ProcessFog();
 	}
 
 	void ProcessWorlds()
@@ -368,33 +334,18 @@ public class MultiWorldSystem : GameObjectSystem
 		if (!Worlds.Any())
 			return;
 
-		// if (Connection.Local.IsHost)
-		// {
-		// 	foreach (var player in Scene.GetAllComponents<PlayerController>())
-		// 	{
-		// 		if (
-		// 			player.IsValid()
-		// 			&& GetWorldIndexOfObject(player.GameObject) != player.GetMultiWorld()
-		// 		)
-		// 		{
-		// 			AssignWorldToObject(player.GameObject, player.CurrentWorldIndex);
-		// 		}
-		// 	}
-		// }
-
-		var localPlayer = Game
-			.ActiveScene.GetAllComponents<PlayerController>()
-			.FirstOrDefault(p => p.Network.Owner != null && p.Network.Owner == Connection.Local);
-		var playerWorldIndex = GetWorldIndexOfObject(localPlayer);
+		var camera = Scene.Camera;
+		if (!camera.IsValid())
+			return;
 
 		foreach (var rigidbody in Scene.GetAllComponents<Rigidbody>())
 		{
-			if (rigidbody.Tags.Has("player"))
+			if (rigidbody.Tags.Has("player")) // player controller handles its collision sounds
 				continue;
 
 			if (
 				rigidbody.IsValid()
-				&& GetWorldIndexOfObject(rigidbody.GameObject) != playerWorldIndex
+				&& rigidbody.GameObject.GetMultiWorld() != camera.GetMultiWorld()
 			)
 			{
 				rigidbody.RigidbodyFlags |= RigidbodyFlags.DisableCollisionSounds;
@@ -411,17 +362,17 @@ public class MultiWorldSystem : GameObjectSystem
 		if (!Worlds.Any())
 			return;
 
-		var player = Game
-			.ActiveScene.GetAllComponents<PlayerController>()
-			.FirstOrDefault(p => p.Network.Owner != null && p.Network.Owner == Connection.Local);
+		var camera = Scene.Camera;
+		if (!camera.IsValid())
+			return;
 
-		// set mixer hearable/unhearable for each player
+		// set mixer hearable/unhearable for active camera
 		foreach (var world in Worlds)
 		{
 			var mixer = world.GetMixer();
 			if (mixer != null)
 			{
-				mixer.Volume = GetWorldIndexOfObject(player) != world.WorldIndex ? 0 : 1; // change to Mute when implemented
+				mixer.Mute = camera.GetMultiWorld() != world;
 			}
 		}
 
@@ -448,7 +399,7 @@ public class MultiWorldSystem : GameObjectSystem
 		}
 	}
 
-	static void AdjustComponentEnabledState<T>(PlayerController player)
+	static void AdjustComponentEnabledState<T>(MultiWorld worldComponent)
 		where T : Component
 	{
 		foreach (var c in Game.ActiveScene.GetAllComponents<T>())
@@ -456,7 +407,6 @@ public class MultiWorldSystem : GameObjectSystem
 			c.Enabled = false;
 		}
 
-		var worldComponent = GetWorldByIndex(GetWorldIndexOfObject(player));
 		if (!worldComponent.IsValid())
 			return;
 
@@ -471,23 +421,13 @@ public class MultiWorldSystem : GameObjectSystem
 		}
 	}
 
-	public static void ProcessFog()
+	static void ProcessEnvironmentalComponents(MultiWorld worldComponent)
 	{
-		if (!Worlds.Any())
-			return;
-
-		var player = Game
-			.ActiveScene.GetAllComponents<PlayerController>()
-			.FirstOrDefault(p => p.Network.Owner != null && p.Network.Owner == Connection.Local);
-
-		if (!player.IsValid())
-			return;
-
-		AdjustComponentEnabledState<CubemapFog>(player);
-		AdjustComponentEnabledState<GradientFog>(player);
-		AdjustComponentEnabledState<VolumetricFogVolume>(player);
-		AdjustComponentEnabledState<DirectionalLight>(player);
-		AdjustComponentEnabledState<SkyBox2D>(player);
+		AdjustComponentEnabledState<CubemapFog>(worldComponent);
+		AdjustComponentEnabledState<GradientFog>(worldComponent);
+		AdjustComponentEnabledState<VolumetricFogVolume>(worldComponent);
+		AdjustComponentEnabledState<DirectionalLight>(worldComponent);
+		AdjustComponentEnabledState<SkyBox2D>(worldComponent);
 	}
 }
 

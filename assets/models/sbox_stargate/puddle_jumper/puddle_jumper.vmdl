@@ -81,7 +81,7 @@
 							},
 							{
 								from = "glass.vmat"
-								to = "models/sbox_props/security_light/security_light_glass.vmat"
+								to = "models/sbox_stargate/puddle_jumper/jumper_windshield.vmat"
 							},
 							{
 								from = "desk.vmat"
@@ -119,46 +119,34 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						frame_count = 1
 						frame_rate = 30
 					},
 					{
 						_class = "AnimFile"
-						name = "bcdoorc"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/bcdoorc.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "bcdooro"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "bcdooro"
+								frame = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
-						weight_list_name = ""
+						weight_list_name = "backdoor"
 						fade_in_time = 0.2
 						fade_out_time = 0.2
 						looping = false
-						delta = false
+						delta = true
 						worldSpace = false
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/bcdooro.smd"
 						start_frame = -1
@@ -169,84 +157,27 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "bodoorc"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/bodoorc.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "bodooro"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/bodooro.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "dcbulkc"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/dcbulkc.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "dcbulko"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "dcbulko"
+								frame = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
-						weight_list_name = ""
+						weight_list_name = "bulkhead"
 						fade_in_time = 0.2
 						fade_out_time = 0.2
 						looping = false
-						delta = false
+						delta = true
 						worldSpace = false
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/dcbulko.smd"
 						start_frame = -1
@@ -257,84 +188,27 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "dobulkc"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/dobulkc.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "dobulko"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/dobulko.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "epodc"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/epodc.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "epodo"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "epodo"
+								frame = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
-						weight_list_name = ""
+						weight_list_name = "enginepods"
 						fade_in_time = 0.2
 						fade_out_time = 0.2
 						looping = false
-						delta = false
+						delta = true
 						worldSpace = false
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/epodo.smd"
 						start_frame = -1
@@ -345,40 +219,27 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "wepc"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						enable_scale = false
-						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/wepc.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "wepo"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "wepo"
+								frame = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
-						weight_list_name = ""
+						weight_list_name = "dronepods"
 						fade_in_time = 0.2
 						fade_out_time = 0.2
 						looping = false
-						delta = false
+						delta = true
 						worldSpace = false
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/sbox_stargate/puddle_jumper/src/jumper_anims/wepo.smd"
 						start_frame = -1
@@ -420,10 +281,132 @@
 					},
 				]
 			},
+			{
+				_class = "WeightListList"
+				children = 
+				[
+					{
+						_class = "WeightList"
+						name = "backdoor"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "backdoor_bone"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "bulkhead"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "leftdoor_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightdoor_bone"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "enginepods"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "leftengine1_bone"
+								weight = 1.0
+							},
+							{
+								bone = "leftengine2_bone"
+								weight = 1.0
+							},
+							{
+								bone = "leftpod1_bone"
+								weight = 1.0
+							},
+							{
+								bone = "leftpod2_bone"
+								weight = 1.0
+							},
+							{
+								bone = "leftpod3_bone"
+								weight = 1.0
+							},
+							{
+								bone = "leftpod4_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightengine1_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightengine2_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightpod1_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightpod2_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightpod3_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightpod4_bone"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "dronepods"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "leftdrone_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rackl_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rackr_bone"
+								weight = 1.0
+							},
+							{
+								bone = "rightdrone_bone"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+				]
+			},
 		]
 		model_archetype = "animated_model"
 		primary_associated_entity = "prop_dynamic"
-		anim_graph_name = ""
+		anim_graph_name = "animgraphs/puddle_jumper.vanmgrph"
 		base_model_name = ""
 	}
 }

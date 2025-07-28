@@ -166,7 +166,7 @@
               "GateLocal": false,
               "GateName": "",
               "GatePrivate": false,
-              "HasPowerNodes": false,
+              "HasPowerNodes": true,
               "IrisType": null,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -2638,7 +2638,7 @@
           ]
         },
         {
-          "__guid": "3bc3880a-000f-4be1-b77b-b7fc51e8aa47",
+          "__guid": "7cd84a64-ebfb-42ab-8295-2aa0b882d771",
           "__version": 1,
           "Flags": 0,
           "Name": "Power Node",
@@ -2654,7 +2654,7 @@
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "d4214606-6abb-4266-82c6-f33d5432aea2",
+              "__guid": "3fde1ea7-a042-4de4-93c1-af8d4e314954",
               "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
@@ -2679,7 +2679,7 @@
             },
             {
               "__type": "Sandbox.ModelCollider",
-              "__guid": "c3e5e0f7-195e-4de5-a2ce-2b542e19c2ae",
+              "__guid": "3146e7b6-a8c5-40bb-b886-29fe54d087c9",
               "__enabled": true,
               "Elasticity": null,
               "Friction": null,
@@ -2702,7 +2702,7 @@
             },
             {
               "__type": "Sandbox.Rigidbody",
-              "__guid": "aea71ae3-92e0-463a-a4f2-e9dc301f2f34",
+              "__guid": "e92fc592-e2d9-4c37-a4e9-e647b23d83f8",
               "__enabled": true,
               "AngularDamping": 0.5,
               "Gravity": true,
@@ -2730,7 +2730,7 @@
             },
             {
               "__type": "Sandbox.FixedJoint",
-              "__guid": "88c0c9ac-e448-4eb8-92af-908698b46115",
+              "__guid": "6092af3c-cf3a-49ca-b84b-c0143a9a9140",
               "__enabled": true,
               "AngularDamping": 0,
               "AngularFrequency": 0,
@@ -2765,9 +2765,21 @@
             },
             {
               "__type": "PowerNode",
-              "__guid": "c4f69504-ca9c-4443-a4b5-70b92ac2e94e",
+              "__guid": "e0171ba0-c70b-498d-9f97-caac3f8d1cb7",
               "__enabled": true,
               "EnableMovement": true,
+              "Gate": {
+                "_type": "component",
+                "component_id": "3717e0b5-1b41-4b7a-9066-02f7066c9dab",
+                "go": "342f865c-971a-44b8-8f8e-5f9853ed438d",
+                "component_type": "StargatePegasus"
+              },
+              "Joint": {
+                "_type": "component",
+                "component_id": "6092af3c-cf3a-49ca-b84b-c0143a9a9140",
+                "go": "7cd84a64-ebfb-42ab-8295-2aa0b882d771",
+                "component_type": "FixedJoint"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -2780,7 +2792,7 @@
           "Children": []
         },
         {
-          "__guid": "19b01242-fd31-4331-8894-94b110fb4955",
+          "__guid": "2dc43f41-1c83-41ed-8d62-2ad27e62b03a",
           "__version": 1,
           "Flags": 0,
           "Name": "Power Node",
@@ -2796,7 +2808,7 @@
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "e10b0c1e-9919-4bbc-9197-995e007c6367",
+              "__guid": "402782d3-4163-4c08-a48b-b65f6daf8c8e",
               "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
@@ -2821,7 +2833,7 @@
             },
             {
               "__type": "Sandbox.ModelCollider",
-              "__guid": "23f16730-3c9f-43c4-b610-e5b328ce57c1",
+              "__guid": "986ede0f-de97-4051-8967-98ef9293d6fc",
               "__enabled": true,
               "Elasticity": null,
               "Friction": null,
@@ -2844,7 +2856,7 @@
             },
             {
               "__type": "Sandbox.Rigidbody",
-              "__guid": "8439f3da-cbe1-4471-8a2d-15bbc40945ed",
+              "__guid": "84e6a4a1-9c22-46ac-aafe-26df5b14674e",
               "__enabled": true,
               "AngularDamping": 0.5,
               "Gravity": true,
@@ -2872,7 +2884,7 @@
             },
             {
               "__type": "Sandbox.FixedJoint",
-              "__guid": "d1ebd64d-d63b-4ea9-b22f-f3352f31091e",
+              "__guid": "85bc5c8d-5051-4e1b-bb00-65395f5e6e83",
               "__enabled": true,
               "AngularDamping": 0,
               "AngularFrequency": 0,
@@ -2907,9 +2919,21 @@
             },
             {
               "__type": "PowerNode",
-              "__guid": "84d920cb-d53c-4271-9fd9-743ee185bdff",
+              "__guid": "d2b079f7-a10b-43eb-b1cc-eb7af998a04f",
               "__enabled": true,
               "EnableMovement": true,
+              "Gate": {
+                "_type": "component",
+                "component_id": "3717e0b5-1b41-4b7a-9066-02f7066c9dab",
+                "go": "342f865c-971a-44b8-8f8e-5f9853ed438d",
+                "component_type": "StargatePegasus"
+              },
+              "Joint": {
+                "_type": "component",
+                "component_id": "85bc5c8d-5051-4e1b-bb00-65395f5e6e83",
+                "go": "2dc43f41-1c83-41ed-8d62-2ad27e62b03a",
+                "component_type": "FixedJoint"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -2922,7 +2946,7 @@
           "Children": []
         },
         {
-          "__guid": "6208d842-a1eb-4a49-a2c1-9ef2c4dc4c1e",
+          "__guid": "6351593f-3e39-4f46-b0f2-e350092f5c00",
           "__version": 1,
           "Flags": 0,
           "Name": "Power Node",
@@ -2938,7 +2962,7 @@
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "869dd286-8ee4-4aa3-9a95-2d634c877142",
+              "__guid": "8d44d75b-8b9d-4356-bdb1-d7dbe756c34c",
               "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
@@ -2963,7 +2987,7 @@
             },
             {
               "__type": "Sandbox.ModelCollider",
-              "__guid": "c1ad89e5-9b18-4e7b-8b80-993b6b0bb748",
+              "__guid": "9817f6f0-13c4-4e88-a27e-2aad8d42d641",
               "__enabled": true,
               "Elasticity": null,
               "Friction": null,
@@ -2986,7 +3010,7 @@
             },
             {
               "__type": "Sandbox.Rigidbody",
-              "__guid": "2d58b64a-2ddc-49a7-a0e5-5ba68cfd0bbe",
+              "__guid": "1fa72eb0-4ba6-42da-be7d-e9b1ea64db73",
               "__enabled": true,
               "AngularDamping": 0.5,
               "Gravity": true,
@@ -3014,7 +3038,7 @@
             },
             {
               "__type": "Sandbox.FixedJoint",
-              "__guid": "557a51c4-a4df-4847-816c-7dad1424c31d",
+              "__guid": "b20ddf75-4f22-4444-99d7-f688d52728bd",
               "__enabled": true,
               "AngularDamping": 0,
               "AngularFrequency": 0,
@@ -3049,9 +3073,21 @@
             },
             {
               "__type": "PowerNode",
-              "__guid": "a0436e0e-46c0-4b5c-8eae-1451420b1dc9",
+              "__guid": "f8bd2f8a-1bfa-4f19-87a7-0705e220d9a9",
               "__enabled": true,
               "EnableMovement": true,
+              "Gate": {
+                "_type": "component",
+                "component_id": "3717e0b5-1b41-4b7a-9066-02f7066c9dab",
+                "go": "342f865c-971a-44b8-8f8e-5f9853ed438d",
+                "component_type": "StargatePegasus"
+              },
+              "Joint": {
+                "_type": "component",
+                "component_id": "b20ddf75-4f22-4444-99d7-f688d52728bd",
+                "go": "6351593f-3e39-4f46-b0f2-e350092f5c00",
+                "component_type": "FixedJoint"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,

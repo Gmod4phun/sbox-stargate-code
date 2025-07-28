@@ -2,12 +2,12 @@ public static class MultiWorldExtensions
 {
 	public static MultiWorld GetMultiWorld(this GameObject go)
 	{
-		return go.Components.Get<MultiWorld>(FindMode.Enabled | FindMode.InAncestors);
+		return go?.Components.Get<MultiWorld>(FindMode.EverythingInSelfAndAncestors);
 	}
 
 	public static MultiWorld GetMultiWorld(this Component component)
 	{
-		return component.GameObject.GetMultiWorld();
+		return component?.GameObject?.GetMultiWorld();
 	}
 
 	public static void SetMultiWorld(this GameObject go, MultiWorld world)

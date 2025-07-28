@@ -584,7 +584,6 @@ namespace Sandbox.Components.Stargate
 				node.TargetPosition = node_object.WorldPosition;
 				node.EnableMovement = true;
 				node.Gate = gate;
-				node.Joint = joint;
 
 				gate.PowerNodes.Add(node);
 			}

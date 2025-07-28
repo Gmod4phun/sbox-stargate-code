@@ -5,6 +5,7 @@ public class PowerNode : Component, Component.IDamageable
 	[Property]
 	public Vector3 TargetPosition { get; set; } = Vector3.Zero;
 
+	[Property]
 	public Stargate Gate { get; set; }
 
 	[Property, Change]
@@ -12,7 +13,8 @@ public class PowerNode : Component, Component.IDamageable
 
 	Rigidbody Rigidbody => Components?.Get<Rigidbody>(FindMode.EverythingInSelf);
 
-	public FixedJoint Joint { get; set; }
+	[Property]
+	public FixedJoint Joint => Components?.Get<FixedJoint>(FindMode.EverythingInSelf);
 
 	void OnEnableMovementChanged(bool oldValue, bool newValue)
 	{

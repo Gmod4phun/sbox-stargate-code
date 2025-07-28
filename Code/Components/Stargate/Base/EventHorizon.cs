@@ -552,7 +552,11 @@ namespace Sandbox.Components.Stargate
 				+ otherRot.Right * entPosCenterDiff.y
 				+ otherRot.Up * entPosCenterDiff.z;
 
-			if (isPlayer && ent.Components.Get<PlayerController>() is PlayerController ply)
+			if (
+				isPlayer
+				&& ent.Components.Get<PlayerController>(FindMode.EverythingInSelfAndDescendants)
+					is PlayerController ply
+			)
 			{
 				ply.ActivateTeleportScreenOverlay(0.05f);
 
@@ -602,8 +606,7 @@ namespace Sandbox.Components.Stargate
 			}
 
 			// handle multiWorld switching
-			var targetWorldIndex = MultiWorldSystem.GetWorldIndexOfObject(otherEH.GameObject);
-			MultiWorldSystem.AssignWorldToObject(ent, targetWorldIndex);
+			ent.SetMultiWorld(otherEH.GetMultiWorld());
 
 			HackyForceExitAfterTp(ent);
 		}
@@ -666,14 +669,6 @@ namespace Sandbox.Components.Stargate
 					continue;
 
 				SetModelClippingForEntity(ent, true, fromBack ? ClipPlaneBack : ClipPlaneFront);
-
-				var model = c.Components.Get<ModelRenderer>();
-				if (model.IsValid())
-				{
-					model.SceneObject.ColorTint = model.SceneObject.ColorTint.WithAlpha(
-						model.SceneObject.ColorTint.a.Clamp(0, 0.99f)
-					); // hack to fix MC (doesnt fix it all the times, job for sbox devs)
-				}
 			}
 		}
 
