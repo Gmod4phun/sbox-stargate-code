@@ -75,7 +75,7 @@ public class Shield
 		MultiWorldSound.Play(
 			"stargate.iris.atlantis.hit",
 			position,
-			MultiWorldSystem.GetWorldIndexOfObject(GameObject)
+			GameObject.GetMultiWorld().WorldIndex
 		);
 
 		var effect = new GameObject();

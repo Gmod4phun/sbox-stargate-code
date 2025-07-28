@@ -637,7 +637,7 @@ namespace Sandbox.Components.Stargate
 				await GameTask.DelaySeconds(delay);
 			}
 
-			var worldIndex = MultiWorldSystem.GetWorldIndexOfObject(gameObject);
+			var worldIndex = gameObject.GetMultiWorld().WorldIndex;
 			MultiWorldSound.Play(name, gameObject.WorldPosition, worldIndex);
 		}
 

@@ -7,7 +7,7 @@ public class MultiWorldSystem : GameObjectSystem
 		Game.ActiveScene.IsValid()
 			? Game.ActiveScene.GetAllComponents<MultiWorld>()
 			: new List<MultiWorld>();
-	public static IEnumerable<int> AllWorldIndices => Worlds.Select(w => w.WorldIndex);
+
 	public static List<MultiWorldSound> FollowingSounds = new();
 
 	public MultiWorldSystem(Scene scene)
@@ -34,27 +34,9 @@ public class MultiWorldSystem : GameObjectSystem
 		return false;
 	}
 
-	public static bool WorldExists(int worldIndex)
-	{
-		return AllWorldIndices.Contains(worldIndex);
-	}
-
 	public static MultiWorld GetWorldByIndex(int worldIndex)
 	{
 		return Worlds.FirstOrDefault(w => w.WorldIndex == worldIndex);
-	}
-
-	public static int GetWorldIndexOfObject(GameObject gameObject)
-	{
-		if (!gameObject.IsValid())
-			return -1;
-
-		if (gameObject.Components.TryGet<MultiWorld>(out var world, FindMode.InAncestors))
-		{
-			return world.WorldIndex;
-		}
-
-		return -1;
 	}
 
 	public static bool AreObjectsInSameWorld(GameObject a, GameObject b)
@@ -346,7 +328,7 @@ public class MultiWorldSystem : GameObjectSystem
 				{
 					sound.Handle.Position = sound.FollowObject.WorldPosition;
 
-					var desiredWorldIndex = GetWorldIndexOfObject(sound.FollowObject);
+					var desiredWorldIndex = sound.FollowObject.GetMultiWorld().WorldIndex;
 					if (desiredWorldIndex != -1 && desiredWorldIndex != sound.WorldIndex)
 					{
 						sound.Handle.TargetMixer = GetWorldByIndex(desiredWorldIndex).AudioMixer;

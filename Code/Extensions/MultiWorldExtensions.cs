@@ -44,14 +44,7 @@ public static class MultiWorldExtensions
 
 	public static void ClearParent(this GameObject go)
 	{
-		var worldIndex = MultiWorldSystem.GetWorldIndexOfObject(go);
-		if (MultiWorldSystem.WorldExists(worldIndex))
-		{
-			go.SetParent(MultiWorldSystem.GetWorldByIndex(worldIndex).GameObject, true);
-		}
-		else
-		{
-			go.SetParent(null, true);
-		}
+		var world = go.GetMultiWorld();
+		go.SetParent(world?.GameObject ?? null, true);
 	}
 }

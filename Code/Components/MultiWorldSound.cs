@@ -34,7 +34,7 @@ public class MultiWorldSound
 
 		var sound = new MultiWorldSound
 		{
-			WorldIndex = MultiWorldSystem.GetWorldIndexOfObject(gameObject),
+			WorldIndex = gameObject.GetMultiWorld().WorldIndex,
 			Handle = Sound.Play(name, gameObject.WorldPosition)
 		};
 
@@ -63,7 +63,7 @@ public class MultiWorldSound
 
 	public void UpdateWorldIndexFromFollowedObject()
 	{
-		WorldIndex = MultiWorldSystem.GetWorldIndexOfObject(FollowObject);
+		WorldIndex = FollowObject.GetMultiWorld().WorldIndex;
 	}
 
 	public void Stop(float fadeTime = 0)

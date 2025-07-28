@@ -184,8 +184,7 @@ namespace Sandbox.Components.Stargate.Rings
 				e.Transform.ClearInterpolation();
 
 				// handle multiWorld switching
-				var targetWorldIndex = MultiWorldSystem.GetWorldIndexOfObject(to.GameObject);
-				MultiWorldSystem.AssignWorldToObject(e, targetWorldIndex);
+				e.SetMultiWorld(to.GetMultiWorld());
 
 				if (prevOwner != null)
 					e.Network.AssignOwnership(prevOwner);
