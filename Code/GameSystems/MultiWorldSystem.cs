@@ -34,38 +34,9 @@ public class MultiWorldSystem : GameObjectSystem
 		return false;
 	}
 
-	public static string GetWorldTag(int worldIndex)
-	{
-		return $"world_{worldIndex}";
-	}
-
-	public static string GetWorldTag(MultiWorld world)
-	{
-		return GetWorldTag(world.WorldIndex);
-	}
-
 	public static bool WorldExists(int worldIndex)
 	{
 		return AllWorldIndices.Contains(worldIndex);
-	}
-
-	public static int GetNextWorldIndex(int previousWorldIndex)
-	{
-		if (!AllWorldIndices.Any())
-			return -1;
-
-		if (AllWorldIndices.Count() == 1)
-			return previousWorldIndex;
-
-		var curWorldPos = AllWorldIndices.ToList().IndexOf(previousWorldIndex);
-		var nextWorldIndex = AllWorldIndices.ElementAtOrDefault(curWorldPos + 1);
-
-		if (curWorldPos == AllWorldIndices.Count() - 1)
-		{
-			nextWorldIndex = AllWorldIndices.First();
-		}
-
-		return nextWorldIndex;
 	}
 
 	public static MultiWorld GetWorldByIndex(int worldIndex)
@@ -91,21 +62,6 @@ public class MultiWorldSystem : GameObjectSystem
 		return a.GetMultiWorld() == b.GetMultiWorld();
 	}
 
-	public static bool AreObjectsInSameWorld(Component a, Component b)
-	{
-		return AreObjectsInSameWorld(a.GameObject, b.GameObject);
-	}
-
-	public static bool AreObjectsInSameWorld(GameObject a, Component b)
-	{
-		return AreObjectsInSameWorld(a, b.GameObject);
-	}
-
-	public static bool AreObjectsInSameWorld(Component a, GameObject b)
-	{
-		return AreObjectsInSameWorld(a.GameObject, b);
-	}
-
 	public static void AssignWorldToObject(GameObject gameObject, int worldIndex)
 	{
 		AssignBroadcast(gameObject.Id, worldIndex);
@@ -123,14 +79,15 @@ public class MultiWorldSystem : GameObjectSystem
 
 	public static void AssignWorldToObjectMain(GameObject gameObject, int worldIndex)
 	{
-		if (!WorldExists(worldIndex))
+		var world = GetWorldByIndex(worldIndex);
+		if (!world.IsValid())
 		{
 			Log.Error($"World {worldIndex} does not exist");
 			return;
 		}
 
 		// add to new world
-		gameObject.SetParent(GetWorldByIndex(worldIndex).GameObject, true);
+		gameObject.SetParent(world.GameObject, true);
 
 		if (
 			gameObject.Components.TryGet<CameraComponent>(
@@ -139,14 +96,14 @@ public class MultiWorldSystem : GameObjectSystem
 			)
 		)
 		{
-			AssignWorldToCamera(camera, worldIndex);
+			AssignWorldToCamera(camera, world);
 		}
 	}
 
-	public static void AssignWorldToCamera(CameraComponent camera, int worldIndex)
+	public static void AssignWorldToCamera(CameraComponent camera, MultiWorld world)
 	{
-		var newWorldTag = GetWorldTag(worldIndex);
-		var excludeTags = AllWorldIndices.Where(i => i != worldIndex).Select(GetWorldTag).ToArray();
+		var newWorldTag = world.WorldTag;
+		var excludeTags = Worlds.Where(w => w != world).Select(w => w.WorldTag).ToArray();
 
 		if (excludeTags.Length == 0)
 		{
@@ -164,7 +121,7 @@ public class MultiWorldSystem : GameObjectSystem
 
 		camera.RenderExcludeTags.Remove(newWorldTag);
 
-		var world = GetWorldByIndex(worldIndex);
+		// var world = GetWorldByIndex(worldIndex);
 		ProcessEnvironmentalComponents(world);
 	}
 
@@ -173,7 +130,7 @@ public class MultiWorldSystem : GameObjectSystem
 		var world = GetWorldByIndex(sound.WorldIndex);
 		if (world.IsValid())
 		{
-			var mixer = world.GetMixer();
+			var mixer = world.AudioMixer;
 			if (mixer != null && sound.Handle.IsValid())
 			{
 				sound.Handle.TargetMixer = mixer;
@@ -299,8 +256,8 @@ public class MultiWorldSystem : GameObjectSystem
 					{
 						var result = rules.Pairs.TryAdd(
 							new Sandbox.Physics.CollisionRules.Pair(
-								GetWorldTag(world.WorldIndex),
-								GetWorldTag(otherWorld.WorldIndex)
+								world.WorldTag,
+								otherWorld.WorldTag
 							),
 							Sandbox.Physics.CollisionRules.Result.Ignore
 						);
@@ -369,7 +326,7 @@ public class MultiWorldSystem : GameObjectSystem
 		// set mixer hearable/unhearable for active camera
 		foreach (var world in Worlds)
 		{
-			var mixer = world.GetMixer();
+			var mixer = world.AudioMixer;
 			if (mixer != null)
 			{
 				mixer.Mute = camera.GetMultiWorld() != world;
@@ -392,7 +349,7 @@ public class MultiWorldSystem : GameObjectSystem
 					var desiredWorldIndex = GetWorldIndexOfObject(sound.FollowObject);
 					if (desiredWorldIndex != -1 && desiredWorldIndex != sound.WorldIndex)
 					{
-						sound.Handle.TargetMixer = GetWorldByIndex(desiredWorldIndex).GetMixer();
+						sound.Handle.TargetMixer = GetWorldByIndex(desiredWorldIndex).AudioMixer;
 					}
 				}
 			}
@@ -428,33 +385,5 @@ public class MultiWorldSystem : GameObjectSystem
 		AdjustComponentEnabledState<VolumetricFogVolume>(worldComponent);
 		AdjustComponentEnabledState<DirectionalLight>(worldComponent);
 		AdjustComponentEnabledState<SkyBox2D>(worldComponent);
-	}
-}
-
-public static class MultiWorldSystemExtensions
-{
-	public static SceneTrace WithWorld(this SceneTrace trace, GameObject go)
-	{
-		return trace.WithTag(
-			MultiWorldSystem.GetWorldTag(MultiWorldSystem.GetWorldIndexOfObject(go))
-		);
-	}
-
-	public static SceneTrace WithWorld(this SceneTrace trace, MultiWorld world)
-	{
-		return trace.WithTag(MultiWorldSystem.GetWorldTag(world));
-	}
-
-	public static void ClearParent(this GameObject go)
-	{
-		var worldIndex = MultiWorldSystem.GetWorldIndexOfObject(go);
-		if (MultiWorldSystem.WorldExists(worldIndex))
-		{
-			go.SetParent(MultiWorldSystem.GetWorldByIndex(worldIndex).GameObject, true);
-		}
-		else
-		{
-			go.SetParent(null, true);
-		}
 	}
 }

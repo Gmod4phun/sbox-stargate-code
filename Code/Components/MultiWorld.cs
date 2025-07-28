@@ -5,9 +5,11 @@ public class MultiWorld : Component
 	[Property]
 	public int WorldIndex { get; private set; } = -1;
 
-	public string GetMixerName() => "World " + WorldIndex + " Mixer";
+	public string MixerName => "World " + WorldIndex + " Mixer";
 
-	public Mixer GetMixer() => Mixer.FindMixerByName(GetMixerName());
+	public Mixer AudioMixer => Mixer.FindMixerByName(MixerName);
+
+	public string WorldTag => $"world_{WorldIndex}";
 
 	public IEnumerable<GameObject> GetAllChildrenRecursive()
 	{
@@ -21,10 +23,10 @@ public class MultiWorld : Component
 		}
 	}
 
-	public Mixer CreateMixer()
+	public Mixer CreateAudioMixer()
 	{
 		var mixer = Mixer.Master.AddChild();
-		mixer.Name = GetMixerName();
+		mixer.Name = MixerName;
 		return mixer;
 	}
 
@@ -33,13 +35,11 @@ public class MultiWorld : Component
 		if (Scene.IsEditor)
 			return;
 
-		Tags.Add(MultiWorldSystem.GetWorldTag(WorldIndex));
+		Tags.Add(WorldTag);
 
-		if (Mixer.FindMixerByName(GetMixerName()) == null)
+		if (Mixer.FindMixerByName(MixerName) == null)
 		{
-			CreateMixer();
+			CreateAudioMixer();
 		}
-
-		// MultiWorldSystem.Init();
 	}
 }

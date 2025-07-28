@@ -31,4 +31,27 @@ public static class MultiWorldExtensions
 		var nextIndex = (currentIndex + 1) % worlds.Count;
 		return worlds[nextIndex];
 	}
+
+	public static SceneTrace WithWorld(this SceneTrace trace, GameObject go)
+	{
+		return trace.WithWorld(go.GetMultiWorld());
+	}
+
+	public static SceneTrace WithWorld(this SceneTrace trace, MultiWorld world)
+	{
+		return trace.WithTag(world.WorldTag);
+	}
+
+	public static void ClearParent(this GameObject go)
+	{
+		var worldIndex = MultiWorldSystem.GetWorldIndexOfObject(go);
+		if (MultiWorldSystem.WorldExists(worldIndex))
+		{
+			go.SetParent(MultiWorldSystem.GetWorldByIndex(worldIndex).GameObject, true);
+		}
+		else
+		{
+			go.SetParent(null, true);
+		}
+	}
 }

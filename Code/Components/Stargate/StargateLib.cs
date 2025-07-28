@@ -384,7 +384,7 @@ namespace Sandbox.Components.Stargate
 		{
 			var allGates = Game
 				.ActiveScene.GetAllComponents<Stargate>()
-				.Where(g => !sameWorld || MultiWorldSystem.AreObjectsInSameWorld(g, ent))
+				.Where(g => !sameWorld || MultiWorldSystem.AreObjectsInSameWorld(g.GameObject, ent))
 				.ToList();
 			if (allGates.Count() is 0)
 				return null;
@@ -411,7 +411,7 @@ namespace Sandbox.Components.Stargate
 		{
 			var allGates = Game
 				.ActiveScene.GetAllComponents<Stargate>()
-				.Where(g => MultiWorldSystem.AreObjectsInSameWorld(g, ent))
+				.Where(g => MultiWorldSystem.AreObjectsInSameWorld(g.GameObject, ent))
 				.ToList();
 			if (allGates.Count() is 0)
 				return null;

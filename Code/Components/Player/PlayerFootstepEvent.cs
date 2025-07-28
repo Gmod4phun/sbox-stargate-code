@@ -69,11 +69,10 @@ public sealed class PlayerFootstepEvent : Component
 	)
 	{
 		var playerWorld = player.GetMultiWorld();
-		var currentWorldTag = MultiWorldSystem.GetWorldTag(playerWorld);
 
 		var tr = player
 			.Scene.Trace.Ray(position + Vector3.Up * 20, position + Vector3.Up * -20)
-			.WithTag(currentWorldTag)
+			.WithWorld(playerWorld)
 			.Run();
 
 		if (!tr.Hit)
