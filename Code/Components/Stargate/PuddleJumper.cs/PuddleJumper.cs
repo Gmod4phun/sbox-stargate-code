@@ -33,6 +33,34 @@ public class PuddleJumper : Component, Component.IPressable
 	[Property]
 	bool BulkheadDoorOpen { get; set; } = false;
 
+	// sounds
+	MultiWorldSound HoverSound;
+	MultiWorldSound EngineSound;
+
+	void PlayHoverSound()
+	{
+		StopHoverSound();
+		HoverSound = MultiWorldSound.Play("jumper_hover_loop", GameObject, true);
+	}
+
+	void StopHoverSound()
+	{
+		HoverSound?.Stop();
+		HoverSound = null;
+	}
+
+	void PlayEngineSound()
+	{
+		StopEngineSound();
+		EngineSound = MultiWorldSound.Play("jumper_engine_loop", GameObject, true);
+	}
+
+	void StopEngineSound()
+	{
+		EngineSound?.Stop();
+		EngineSound = null;
+	}
+
 	protected override void OnEnabled()
 	{
 		desiredTransform = WorldTransform;
@@ -179,6 +207,15 @@ public class PuddleJumper : Component, Component.IPressable
 			if (Input.Keyboard.Pressed("SHIFT"))
 			{
 				EnginePodsOpen = !EnginePodsOpen;
+
+				if (EnginePodsOpen)
+				{
+					MultiWorldSound.Play("jumper_drivepods_open", GameObject, true);
+				}
+				else
+				{
+					MultiWorldSound.Play("jumper_drivepods_close", GameObject, true);
+				}
 			}
 
 			if (Input.Keyboard.Pressed("Q"))
@@ -189,11 +226,15 @@ public class PuddleJumper : Component, Component.IPressable
 			if (Input.Keyboard.Pressed("R"))
 			{
 				RearDoorOpen = !RearDoorOpen;
+
+				MultiWorldSound.Play("jumper_rear_door", GameObject, true);
 			}
 
 			if (Input.Keyboard.Pressed("B"))
 			{
 				BulkheadDoorOpen = !BulkheadDoorOpen;
+
+				MultiWorldSound.Play("jumper_bulkhead_door", GameObject, true);
 			}
 
 			UpdateCameraPosition();
@@ -207,6 +248,33 @@ public class PuddleJumper : Component, Component.IPressable
 		Renderer?.Set("bulkhead_door", BulkheadDoorOpen);
 
 		Driver.WorldTransform = GameObject.WorldTransform;
+
+		ProcessSounds();
+	}
+
+	void ProcessSounds()
+	{
+		if (HoverSound != null && HoverSound.Handle.IsValid())
+		{
+			var vel = Rigidbody.Velocity.Length / MaxSpeed;
+			var targetPitch = Math.Clamp(0.8f + vel, 1f, 1.2f);
+			HoverSound.Handle.Pitch = targetPitch;
+			HoverSound.Handle.Volume = HoverSound.Handle.Volume.LerpTo(
+				EnginePodsOpen ? 0 : 1,
+				Time.Delta * 1f
+			);
+		}
+
+		if (EngineSound != null && EngineSound.Handle.IsValid())
+		{
+			var vel = Rigidbody.Velocity.Length / MaxSpeed;
+			var targetPitch = Math.Clamp(0.6f + vel, 0.75f, 1f);
+			EngineSound.Handle.Pitch = targetPitch;
+			EngineSound.Handle.Volume = EngineSound.Handle.Volume.LerpTo(
+				EnginePodsOpen ? 1 : 0,
+				Time.Delta * 1f
+			);
+		}
 	}
 
 	Vector3 Accel = Vector3.Zero;
@@ -376,6 +444,21 @@ public class PuddleJumper : Component, Component.IPressable
 				Roll = 0f;
 			}
 		}
+
+		MultiWorldSound.Play("jumper_startup", GameObject, true);
+
+		PlayHoverSound();
+		PlayEngineSound();
+
+		if (HoverSound != null && HoverSound.Handle.IsValid())
+		{
+			HoverSound.Handle.Volume = EnginePodsOpen ? 0 : 1;
+		}
+
+		if (EngineSound != null && EngineSound.Handle.IsValid())
+		{
+			EngineSound.Handle.Volume = EnginePodsOpen ? 1 : 0;
+		}
 	}
 
 	void UnparentDriver()
@@ -392,6 +475,11 @@ public class PuddleJumper : Component, Component.IPressable
 
 			desiredTransform = WorldTransform;
 		}
+
+		MultiWorldSound.Play("jumper_shutdown", GameObject, true);
+
+		StopHoverSound();
+		StopEngineSound();
 	}
 
 	protected override void OnDestroy()
