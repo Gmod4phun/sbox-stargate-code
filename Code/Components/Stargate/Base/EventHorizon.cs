@@ -596,6 +596,12 @@ namespace Sandbox.Components.Stargate
 
 			SetEntLastTeleportTime(ent, 0);
 
+			// post-teleport logic
+			if (ent.Components.TryGet<ITeleportable>(out var teleportable))
+			{
+				teleportable.PostGateTeleport();
+			}
+
 			// after any successful teleport, start autoclose timer if gate should autoclose
 			if (Gate.AutoClose)
 			{

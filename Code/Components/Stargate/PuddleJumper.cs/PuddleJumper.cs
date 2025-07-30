@@ -1,6 +1,8 @@
-using System.Numerics;
-
-public class PuddleJumper : Component, Component.IPressable, Component.ICollisionListener
+public class PuddleJumper
+	: Component,
+		Component.IPressable,
+		Component.ICollisionListener,
+		ITeleportable
 {
 	[Property]
 	public Rigidbody Rigidbody => Components.Get<Rigidbody>();
@@ -196,6 +198,11 @@ public class PuddleJumper : Component, Component.IPressable, Component.ICollisio
 		Camera.GameObject.WorldTransform = new Transform(pos, wr);
 	}
 
+	public void SetOrbitRotationToWorldRotation()
+	{
+		orbitRotation = WorldRotation.Angles().AsVector3();
+	}
+
 	protected override void OnUpdate()
 	{
 		if (!Rigidbody.IsValid())
@@ -222,6 +229,12 @@ public class PuddleJumper : Component, Component.IPressable, Component.ICollisio
 			if (Input.Pressed("view"))
 			{
 				ThirdPerson = !ThirdPerson;
+
+				if (ThirdPerson)
+				{
+					// set proper orbit camera rotation
+					SetOrbitRotationToWorldRotation();
+				}
 			}
 
 			if (Input.Keyboard.Pressed("SHIFT"))
@@ -548,5 +561,10 @@ public class PuddleJumper : Component, Component.IPressable, Component.ICollisio
 			Explode();
 			return;
 		}
+	}
+
+	public void PostGateTeleport()
+	{
+		SetOrbitRotationToWorldRotation();
 	}
 }
