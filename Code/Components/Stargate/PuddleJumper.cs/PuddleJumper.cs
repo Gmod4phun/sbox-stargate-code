@@ -1,6 +1,6 @@
 using System.Numerics;
 
-public class PuddleJumper : Component, Component.IPressable
+public class PuddleJumper : Component, Component.IPressable, Component.ICollisionListener
 {
 	[Property]
 	public Rigidbody Rigidbody => Components.Get<Rigidbody>();
@@ -32,6 +32,26 @@ public class PuddleJumper : Component, Component.IPressable
 
 	[Property]
 	bool BulkheadDoorOpen { get; set; } = false;
+
+	[Button("Explode")]
+	public void Explode()
+	{
+		if (Driver.IsValid())
+		{
+			UnparentDriver();
+		}
+
+		var collider = GameObject.Components.Get<ModelCollider>();
+		if (collider.IsValid())
+		{
+			collider.Enabled = false;
+		}
+
+		CreateJumperGibs();
+		MultiWorldSound.Play("jumper_explode", GameObject, false);
+
+		GameObject.Destroy();
+	}
 
 	// sounds
 	MultiWorldSound HoverSound;
@@ -235,6 +255,12 @@ public class PuddleJumper : Component, Component.IPressable
 				BulkheadDoorOpen = !BulkheadDoorOpen;
 
 				MultiWorldSound.Play("jumper_bulkhead_door", GameObject, true);
+			}
+
+			if (Input.Pressed("score"))
+			{
+				GameObject.SetMultiWorld(GameObject.GetMultiWorld().GetNextMultiWorld());
+				Log.Info($"Switched jumper to new world");
 			}
 
 			UpdateCameraPosition();
@@ -482,6 +508,29 @@ public class PuddleJumper : Component, Component.IPressable
 		StopEngineSound();
 	}
 
+	void CreateJumperGibs()
+	{
+		var prop = GameObject.Components.Create<Prop>();
+		prop.Model = Renderer.Model;
+		var gibs = prop.CreateGibs();
+		foreach (var gib in gibs)
+		{
+			gib.GameObject.SetMultiWorld(GameObject.GetMultiWorld());
+		}
+
+		foreach (var gib in gibs)
+		{
+			var rb = gib.Components.Get<Rigidbody>();
+			if (rb.IsValid())
+			{
+				var gibCenter = rb.PhysicsBody.MassCenter;
+				var gibDir = gibCenter - WorldPosition;
+				rb.Velocity = gibDir.Normal * 1200;
+				rb.AngularVelocity = Vector3.Random * 4f;
+			}
+		}
+	}
+
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -489,6 +538,15 @@ public class PuddleJumper : Component, Component.IPressable
 		if (Driver.IsValid())
 		{
 			UnparentDriver();
+		}
+	}
+
+	public void OnCollisionStart(Collision collision)
+	{
+		if (collision.Contact.NormalSpeed > 2000f && collision.Contact.Impulse > 50000f)
+		{
+			Explode();
+			return;
 		}
 	}
 }
