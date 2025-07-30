@@ -1,4 +1,6 @@
-public class PlayerCameraController : Component
+using Sandbox.Components.Stargate;
+
+public class PlayerCameraController : Component, ITeleportable
 {
 	public PlayerController PlayerController => Components.Get<PlayerController>(FindMode.InSelf);
 
@@ -122,5 +124,25 @@ public class PlayerCameraController : Component
 				x.PostCameraSetup(cam);
 			}
 		);
+	}
+
+	public void PostGateTeleport(Stargate from, Stargate to)
+	{
+		if (!PlayerController.IsValid())
+			return;
+
+		var ply = PlayerController;
+		ply.ActivateTeleportScreenOverlay(0.05f);
+
+		var DeltaAngleEH = to.WorldRotation.Angles() - from.WorldRotation.Angles();
+		ply.EyeAngles += new Angles(0, DeltaAngleEH.yaw + 180, 0);
+		var otherLocal = Scene.Transform.World.ToLocal(to.Transform.World);
+		var localVelNormPlayer = from.Transform.World.NormalToLocal(ply.Velocity.Normal);
+		var otherVelNormPlayer = otherLocal.NormalToWorld(
+			localVelNormPlayer.WithX(-localVelNormPlayer.x).WithY(-localVelNormPlayer.y)
+		);
+
+		var newPlayerVel = otherVelNormPlayer * ply.Velocity.Length;
+		ply.WishVelocity = newPlayerVel; // TODO: somehow set velocity without wish velocity
 	}
 }

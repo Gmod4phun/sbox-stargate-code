@@ -1,3 +1,5 @@
+using Sandbox.Components.Stargate;
+
 public class PuddleJumper
 	: Component,
 		Component.IPressable,
@@ -563,7 +565,7 @@ public class PuddleJumper
 		}
 	}
 
-	public void PostGateTeleport()
+	public void PostGateTeleport(Stargate from, Stargate to)
 	{
 		SetOrbitRotationToWorldRotation();
 	}

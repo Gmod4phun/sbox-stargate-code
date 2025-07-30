@@ -552,36 +552,9 @@ namespace Sandbox.Components.Stargate
 				+ otherRot.Right * entPosCenterDiff.y
 				+ otherRot.Up * entPosCenterDiff.z;
 
-			if (
-				isPlayer
-				&& ent.Components.Get<PlayerController>(FindMode.EverythingInSelfAndDescendants)
-					is PlayerController ply
-			)
-			{
-				ply.ActivateTeleportScreenOverlay(0.05f);
-
-				var DeltaAngleEH = otherEH.WorldRotation.Angles() - WorldRotation.Angles();
-				// ply.SetPlayerViewAngles(ply.EyeAngles + new Angles(0, DeltaAngleEH.yaw + 180, 0));
-				ply.EyeAngles += new Angles(0, DeltaAngleEH.yaw + 180, 0);
-
-				var localVelNormPlayer = Transform.World.NormalToLocal(ply.Velocity.Normal);
-				var otherVelNormPlayer = otherLocal.NormalToWorld(
-					localVelNormPlayer.WithX(-localVelNormPlayer.x).WithY(-localVelNormPlayer.y)
-				);
-
-				var newPlayerVel = otherVelNormPlayer * ply.Velocity.Length;
-				ply.WishVelocity = newPlayerVel; // TODO: somehow set velocity without wish velocity
-
-				// if ( Gate.ShowWormholeCinematic )
-				// {
-				// 	InTransitPlayers.Add( ply );
-				// 	PlayWormholeCinematic( To.Single( ply ) );
-				// }
-			}
-			else
-			{
-				ent.WorldRotation = otherRot;
-			}
+			ent.WorldPosition = otherPos;
+			ent.WorldRotation = otherRot;
+			ent.Transform.ClearInterpolation();
 
 			if (body.IsValid())
 			{
@@ -591,15 +564,12 @@ namespace Sandbox.Components.Stargate
 				body.AngularVelocity = newVelAngular;
 			}
 
-			ent.WorldPosition = otherPos;
-			ent.Transform.ClearInterpolation();
-
 			SetEntLastTeleportTime(ent, 0);
 
 			// post-teleport logic
 			if (ent.Components.TryGet<ITeleportable>(out var teleportable))
 			{
-				teleportable.PostGateTeleport();
+				teleportable.PostGateTeleport(Gate, Gate.OtherGate);
 			}
 
 			// after any successful teleport, start autoclose timer if gate should autoclose
