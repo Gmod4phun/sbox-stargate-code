@@ -328,10 +328,11 @@ public class MultiWorldSystem : GameObjectSystem
 				{
 					sound.Handle.Position = sound.FollowObject.WorldPosition;
 
-					var desiredWorldIndex = sound.FollowObject.GetMultiWorld().WorldIndex;
-					if (desiredWorldIndex != -1 && desiredWorldIndex != sound.WorldIndex)
+					var desiredWorld = sound.FollowObject.GetMultiWorld();
+					if (desiredWorld.IsValid() && desiredWorld.WorldIndex != sound.WorldIndex)
 					{
-						sound.Handle.TargetMixer = GetWorldByIndex(desiredWorldIndex).AudioMixer;
+						sound.Handle.TargetMixer = desiredWorld.AudioMixer;
+						sound.WorldIndex = desiredWorld.WorldIndex;
 					}
 				}
 			}

@@ -14,8 +14,6 @@ public class MultiWorldSound
 			Handle = Sound.Play(name, position)
 		};
 
-		// sound.Handle.Volume = 0;
-
 		MultiWorldSystem.AddSound(sound);
 
 		return sound;
@@ -38,8 +36,6 @@ public class MultiWorldSound
 			Handle = Sound.Play(name, gameObject.WorldPosition)
 		};
 
-		// sound.Handle.Volume = 0;
-
 		MultiWorldSystem.AddSound(sound);
 
 		return sound;
@@ -53,17 +49,9 @@ public class MultiWorldSound
 			Handle = Sound.Play(name, followObject.WorldPosition)
 		};
 
-		// sound.Handle.Volume = 0;
-		sound.UpdateWorldIndexFromFollowedObject();
-
 		MultiWorldSystem.AddSound(sound);
 
 		return sound;
-	}
-
-	public void UpdateWorldIndexFromFollowedObject()
-	{
-		WorldIndex = FollowObject.GetMultiWorld().WorldIndex;
 	}
 
 	public void Stop(float fadeTime = 0)
