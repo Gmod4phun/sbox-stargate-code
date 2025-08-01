@@ -287,8 +287,8 @@
             "RotationOffset": 0,
             "Scale": 1,
             "Shadows": false,
-            "SortMode": "Unsorted",
-            "Texture": "textures/particles/smoke/smoke1.vtex",
+            "SortMode": "ByDistance",
+            "Texture": "textures/particles/smoke/smoke_static_a.vtex",
             "TextureFilter": "Bilinear"
           },
           {

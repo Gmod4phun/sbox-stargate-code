@@ -2762,7 +2762,7 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke1.vtex",
+                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -2996,7 +2996,7 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke1.vtex",
+                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -3230,7 +3230,7 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke1.vtex",
+                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -3464,7 +3464,7 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke1.vtex",
+                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
                   "TextureFilter": "Bilinear"
                 },
                 {
