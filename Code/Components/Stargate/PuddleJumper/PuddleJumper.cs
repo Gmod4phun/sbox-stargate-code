@@ -151,9 +151,25 @@ public class PuddleJumper
 		var orbitCameraRotation =
 			WorldRotation * Rotation.From(orbitRotation.x, orbitRotation.y, 0f);
 
+		var tr = Scene
+			.Trace.Ray(
+				jumperCenterPos,
+				jumperCenterPos + orbitCameraRotation.Backward * OrbitCameraDistance
+			)
+			.WithoutTags("trigger")
+			.IgnoreGameObjectHierarchy(GameObject)
+			.WithWorld(GameObject.GetMultiWorld())
+			.Run();
+
+		var backwardsDistance = OrbitCameraDistance;
+		if (tr.Hit)
+		{
+			backwardsDistance = (tr.HitPosition - jumperCenterPos).Length;
+		}
+
 		var orbitCameraPos =
 			jumperCenterPos
-			+ orbitCameraRotation.Backward * OrbitCameraDistance
+			+ orbitCameraRotation.Backward * backwardsDistance
 			+ orbitCameraRotation.Up * OrbitCameraHeight;
 
 		Camera.GameObject.WorldTransform = new Transform(orbitCameraPos, orbitCameraRotation);
@@ -184,9 +200,25 @@ public class PuddleJumper
 		// Use world-space rotation for camera
 		var orbitCameraRotation = Rotation.From(orbitRotation.x, orbitRotation.y, orbitRotation.z);
 
+		var tr = Scene
+			.Trace.Ray(
+				jumperCenterPos,
+				jumperCenterPos + orbitCameraRotation.Backward * OrbitCameraDistance
+			)
+			.WithoutTags("trigger")
+			.IgnoreGameObjectHierarchy(GameObject)
+			.WithWorld(GameObject.GetMultiWorld())
+			.Run();
+
+		var backwardsDistance = OrbitCameraDistance;
+		if (tr.Hit)
+		{
+			backwardsDistance = (tr.HitPosition - jumperCenterPos).Length;
+		}
+
 		var orbitCameraPos =
 			jumperCenterPos
-			+ orbitCameraRotation.Backward * OrbitCameraDistance
+			+ orbitCameraRotation.Backward * backwardsDistance
 			+ orbitCameraRotation.Up * OrbitCameraHeight;
 
 		Camera.GameObject.WorldTransform = new Transform(orbitCameraPos, orbitCameraRotation);
