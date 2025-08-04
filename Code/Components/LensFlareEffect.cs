@@ -1,3 +1,5 @@
+using Sandbox.Rendering;
+
 public class LensFlareEffect : PostProcess
 {
 	/*
@@ -12,6 +14,9 @@ public class LensFlareEffect : PostProcess
 	public float Intensity { get; set; } = 1f;
 
 	[Property]
+	public float SunObstruction { get; set; } = 0f;
+
+	[Property]
 	public bool DrawRing { get; set; } = true;
 
 	[Property]
@@ -23,12 +28,13 @@ public class LensFlareEffect : PostProcess
 	[Property]
 	public bool DrawIris { get; set; } = true;
 
-	// RenderAttributes attributes = new RenderAttributes();
 	Material mat = Material.FromShader("ui_additive");
 	Texture texIris = Texture.Load("materials/lensflare/iris.png");
 	Texture texFlare = Texture.Load("materials/lensflare/flare.png");
 	Texture texRing = Texture.Load("materials/lensflare/color_ring.png");
 	Texture texBar = Texture.Load("materials/lensflare/bar.png");
+
+	float sunobstruction = 0f;
 
 	private float mulW(float x, float f)
 	{
@@ -62,33 +68,15 @@ public class LensFlareEffect : PostProcess
 		var eyepos = camera.WorldPosition;
 		var eyevector = camera.WorldRotation.Forward;
 		var sundirection = sun.WorldRotation.Backward.Normal;
-		var sunobstruction = 1f;
-
-		var trace = Scene
-			.Trace.Ray(eyepos, eyepos + sundirection * 128000)
-			.WithWorld(camera.GetMultiWorld());
-
-		var plyCameraController = camera.GameObject.Parent.Components.Get<PlayerCameraController>();
-		if (plyCameraController.IsValid() && !plyCameraController.ThirdPerson)
-		{
-			trace = trace.IgnoreGameObjectHierarchy(
-				plyCameraController.PlayerController.GameObject
-			);
-		}
-
-		var tr = trace.Run();
-
-		if (tr.Hit)
-			sunobstruction = 0;
+		sunobstruction = sunobstruction = sunobstruction.LerpTo(SunObstruction, Time.Delta * 60f);
 
 		var sunPos3D = eyepos + sundirection * camera.ZFar;
 		var sunPos2D = camera.PointToScreenNormal(sunPos3D, out var _);
-
 		var sunpos = sunPos2D * Screen.Size;
 
 		var rSz = Screen.Width * 0.1f;
 		var aMul = (float)
-			((sundirection.Dot(eyevector) - 0.4f) * (1 - Math.Pow(1 - sunobstruction, 2))).Clamp(
+			((sundirection.Dot(eyevector) - 0.4f) * (1 - Math.Pow(sunobstruction, 0.5f))).Clamp(
 				0f,
 				1f
 			);
@@ -153,5 +141,182 @@ public class LensFlareEffect : PostProcess
 	protected override void UpdateCommandList()
 	{
 		DrawLensFlare();
+	}
+}
+
+public class LensFlareOccluder : Component
+{
+	/*
+	 * Occlusion for the lens flare effect
+	 * Thanks to Peter Schraut for original Unity implementation
+	 * https://github.com/pschraut/UnityOcclusionLensFlare
+	*/
+
+	ModelRenderer sunOccluderRenderer;
+
+	CameraComponent occluderCamera;
+
+	DirectionalLight Sun => Components.Get<DirectionalLight>(FindMode.EverythingInSelf);
+
+	Texture occluderTexture;
+	CommandList cmdList;
+
+	SceneCustomObject mipMapGeneratorObject;
+
+	CommandList GetCommandList()
+	{
+		CommandList cmdList = new CommandList("LensFlareOccluder");
+		cmdList.DrawQuad(
+			new Rect(0, 0, Screen.Width, Screen.Height),
+			Material.UI.Basic,
+			Color.Black
+		);
+		cmdList.DrawRenderer(sunOccluderRenderer);
+
+		return cmdList;
+	}
+
+	private void GenerateOccluderTextureMipMaps(SceneObject sceneObject)
+	{
+		if (occluderTexture.IsValid())
+		{
+			Graphics.GenerateMipMaps(occluderTexture);
+		}
+	}
+
+	protected override void OnEnabled()
+	{
+		base.OnEnabled();
+
+		mipMapGeneratorObject?.Delete();
+		mipMapGeneratorObject = new SceneCustomObject(Scene.SceneWorld)
+		{
+			RenderOverride = GenerateOccluderTextureMipMaps
+		};
+
+		var sunOccluderRendererObject = new GameObject("LensFlareOccluderRenderer");
+		sunOccluderRendererObject.SetParent(GameObject, false);
+
+		sunOccluderRenderer = sunOccluderRendererObject.Components.GetOrCreate<ModelRenderer>(
+			FindMode.EverythingInSelf
+		);
+
+		var occluderCameraObject = new GameObject("LensFlareOccluderCamera");
+		occluderCameraObject.SetParent(GameObject, false);
+
+		occluderCamera = occluderCameraObject.Components.Create<CameraComponent>();
+		occluderCamera.IsMainCamera = false;
+
+		if (!sunOccluderRenderer.IsValid() || !occluderCamera.IsValid())
+			return;
+
+		sunOccluderRenderer.Model = Model.Load("models/dev/sphere.vmdl");
+		sunOccluderRenderer.MaterialOverride = Material.FromShader("lens_flare/sun_occluder");
+		sunOccluderRenderer.RenderType = ModelRenderer.ShadowRenderType.Off;
+		sunOccluderRenderer.RenderOptions.Game = false;
+
+		occluderTexture?.Dispose();
+		occluderTexture = Texture
+			.CreateRenderTarget()
+			.WithSize(32)
+			.WithFormat(ImageFormat.A8)
+			.WithDynamicUsage()
+			.WithUAVBinding()
+			.WithMips()
+			.Create();
+
+		cmdList = GetCommandList();
+
+		occluderCamera.AddCommandList(cmdList, Stage.AfterPostProcess);
+
+		occluderCamera.RenderTarget = occluderTexture;
+		occluderCamera.BackgroundColor = Color.Black;
+		occluderCamera.Enabled = false;
+	}
+
+	protected override void OnDisabled()
+	{
+		occluderCamera.ClearCommandLists();
+		occluderCamera.GameObject.Destroy();
+
+		occluderTexture?.Dispose();
+		occluderTexture = null;
+
+		sunOccluderRenderer.GameObject.Destroy();
+
+		mipMapGeneratorObject?.Delete();
+	}
+
+	protected override void OnUpdate()
+	{
+		var cam = Scene.Camera;
+		if (
+			!occluderCamera.IsValid()
+			|| !occluderTexture.IsValid()
+			|| !Sun.IsValid()
+			|| !cam.IsValid()
+		)
+			return;
+
+		var inSameWorld = cam.GetMultiWorld() == occluderCamera.GetMultiWorld();
+
+		occluderCamera.Enabled = inSameWorld;
+
+		if (!inSameWorld)
+			return;
+
+		var sunDir = Sun.WorldRotation.Backward.Normal;
+		var sunDistance = 10000f; // Arbitrary large distance for the sun occluder
+		var sunScale = 8; // Scale factor for the sun occluder, might make this configurable later
+
+		sunOccluderRenderer.WorldScale = sunScale;
+		sunOccluderRenderer.WorldPosition = cam.WorldPosition + sunDir * sunDistance;
+
+		// make us face the camera
+		sunOccluderRenderer.WorldRotation = Rotation
+			.LookAt(sunDir, Vector3.Up)
+			.RotateAroundAxis(Vector3.Right, 90f);
+
+		occluderCamera.RenderTags.RemoveAll();
+		occluderCamera.RenderExcludeTags.RemoveAll();
+		occluderCamera.RenderTags.Add(Scene.Camera.RenderTags);
+		occluderCamera.RenderExcludeTags.Add(Scene.Camera.RenderExcludeTags);
+		occluderCamera.RenderExcludeTags.Add("debugoverlay");
+		occluderCamera.RenderExcludeTags.Add("skybox");
+
+		// If sun is behind the camera, skip rendering
+		if (sunDir.Dot(cam.WorldRotation.Backward.Normal) > 0.5f)
+			return;
+
+		// var sunBounds = sunOccluderRenderer.Bounds;
+		// var sunDistance = (sunBounds.Center - cam.WorldTransform.Position).Length;
+		// var sunDistance = cam.WorldPosition.Distance(sunOccluderRenderer.WorldPosition);
+		// var sunHalfSize = MathF.Max(
+		// 	sunBounds.Extents.x,
+		// 	MathF.Max(sunBounds.Extents.y, sunBounds.Extents.z)
+		// );
+		var sunHalfSize = 32 * sunScale; // Assuming a fixed size for the sun occluder
+
+		// Fit sun object into camera view
+		// https://docs.unity3d.com/Manual/FrustumSizeAtDistance.html
+		occluderCamera.ZNear = cam.ZNear;
+		occluderCamera.ZFar = sunDistance + sunHalfSize;
+		occluderCamera.FieldOfView =
+			2.0f * MathX.RadianToDegree(MathF.Atan(sunHalfSize / sunDistance));
+		occluderCamera.WorldPosition = cam.WorldPosition;
+		occluderCamera.WorldRotation = Rotation.LookAt(
+			sunOccluderRenderer.WorldPosition - cam.WorldPosition,
+			Vector3.Up
+		);
+
+		var lensFlareEffect = cam.Components.Get<LensFlareEffect>();
+		if (lensFlareEffect.IsValid())
+		{
+			var sampledLastMip = occluderTexture.GetPixel(0, 0, occluderTexture.Mips - 1).r / 255f;
+			var obstruction = sampledLastMip.Remap(0f, 0.8f, 0f, 1f);
+			lensFlareEffect.SunObstruction = obstruction;
+		}
+
+		// DebugOverlay.Texture(occluderTexture, new Rect(0, 0, 256, 256));
 	}
 }
