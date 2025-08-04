@@ -5437,7 +5437,7 @@
           "Flags": 0,
           "Name": "Sun",
           "Position": "0,0,0",
-          "Rotation": "-0.2272705,-0.2294598,0.9183475,-0.2287664",
+          "Rotation": "0.2109176,0.2272028,-0.9233612,0.2264879",
           "Scale": "1,1,1",
           "Tags": "light_directional,light",
           "Enabled": true,

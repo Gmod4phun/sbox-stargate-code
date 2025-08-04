@@ -163,7 +163,7 @@
           "Flags": 0,
           "Name": "Sun",
           "Position": "0,0,0",
-          "Rotation": "0.3593683,0.158559,-0.371178,0.8413919",
+          "Rotation": "0.07831196,0.2395959,-0.3006442,0.9198229",
           "Scale": "1,1,1",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -6681,7 +6681,7 @@
             },
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "6c62e99f-7712-4752-b06e-7242c6b01605",
+              "__guid": "c5dcb121-3b5f-4dee-a1dc-4ea568ee6543",
               "__enabled": true,
               "AnimationGraph": null,
               "BodyGroups": 18446744073709551615,
@@ -6724,7 +6724,7 @@
             },
             {
               "__type": "Sandbox.ModelCollider",
-              "__guid": "26f5e79e-0e89-4f39-b548-fab99762b1b9",
+              "__guid": "f6a0ac71-68be-4d2b-9eb9-0edf4f1e690f",
               "__enabled": true,
               "Elasticity": null,
               "Friction": null,
@@ -7047,7 +7047,7 @@
             },
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "5b81392f-1500-430e-b39f-fece384a93fe",
+              "__guid": "622cd4e1-9f10-4d02-bfdb-d496cd399172",
               "__enabled": true,
               "AnimationGraph": null,
               "BodyGroups": 18446744073709551615,
@@ -7090,7 +7090,7 @@
             },
             {
               "__type": "Sandbox.ModelCollider",
-              "__guid": "6220e099-b793-4083-bc27-af7822f09efe",
+              "__guid": "007fe7c7-f7f5-4c40-a41b-46737dfd8f36",
               "__enabled": true,
               "Elasticity": null,
               "Friction": null,
@@ -7314,7 +7314,7 @@
             },
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "58ac84a5-0146-4815-8c8f-338ce14f6051",
+              "__guid": "3ad905a3-36a2-4889-9a82-1a66ddc66f0d",
               "__enabled": true,
               "AnimationGraph": null,
               "BodyGroups": 18446744073709551615,
@@ -7357,7 +7357,7 @@
             },
             {
               "__type": "Sandbox.ModelCollider",
-              "__guid": "54aa0c46-9db8-482e-b7e2-c047cafafc47",
+              "__guid": "14314998-5542-464c-972f-faa99be86f87",
               "__enabled": true,
               "Elasticity": null,
               "Friction": null,
@@ -7929,14 +7929,6 @@
                 },
                 "Property": "RigidbodyFlags",
                 "Value": "DisableCollisionSounds"
-              },
-              {
-                "Target": {
-                  "Type": "Component",
-                  "IdValue": "f5636b28-76f2-4881-bfc1-d77509181aff"
-                },
-                "Property": "Driver",
-                "Value": null
               }
             ],
             "MovedObjects": []
