@@ -17,6 +17,8 @@ code/Properties/*
 *.los
 
 *.sln
+*.slnx
+
 /.sbox
 
 # Blender backup files
