@@ -126,16 +126,18 @@ PS
 		float time = g_flTime;;
 
 		float2 offset1 = float2(time * 0.0725, time * 0.04);
-		float f1TintMask = g_tTintMask.Sample( TextureFiltering, f2FinalTexCoord + offset1 ).x;
+		float f1TintMask = g_tTintMask.Sample( g_sAniso, f2FinalTexCoord + offset1 ).x;
 
 		float2 offset2 = float2(time * -0.0725, time * -0.04);
-		float f2TintMask = g_tTintMask.Sample( TextureFiltering, f2FinalTexCoord + offset2 ).x;
+		float f2TintMask = g_tTintMask.Sample( g_sAniso, f2FinalTexCoord + offset2 ).x;
 
 		alpha = alpha * (f1TintMask + f2TintMask);
 
 		float3 outVar = g_vShieldColor * alpha;
 
 		outVar = outVar * g_flMasterAlphaMul;
+
+		outVar = saturate(outVar);
 
 		return float4(outVar, 0);
     }

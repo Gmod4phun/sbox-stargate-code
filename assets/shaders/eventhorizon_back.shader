@@ -12,7 +12,7 @@ FEATURES
 MODES
 {
 	Forward();
-	Depth( S_MODE_DEPTH );
+	Depth();
 	ToolsShadingComplexity( "tools_shading_complexity.shader" );
 }
 
@@ -29,7 +29,6 @@ COMMON
 	#include "procedural.hlsl"
 
 	#define S_UV2 1
-	#define CUSTOM_MATERIAL_INPUTS
 }
 
 struct VertexInput
@@ -62,7 +61,7 @@ VS
 		i.vPositionOs = v.vPositionOs.xyz;
 		i.vColor = v.vColor;
 		
-		ExtraShaderData_t extraShaderData = GetExtraPerInstanceShaderData( v );
+		ExtraShaderData_t extraShaderData = GetExtraPerInstanceShaderData( v.nInstanceTransformID );
 		i.vTintColor = extraShaderData.vTint;
 		
 		VS_DecodeObjectSpaceNormalAndTangent( v, i.vNormalOs, i.vTangentUOs_flTangentVSign );
@@ -76,22 +75,19 @@ PS
 	#include "common/pixel.hlsl"
 	
 	SamplerState g_sSampler0 < Filter( ANISO ); AddressU( WRAP ); AddressV( WRAP ); >;
-	CreateInputTexture2D( Color, Srgb, 8, "None", "_color", ",0/,0/0", Default4( 1.00, 1.00, 1.00, 1.00 ) );
-	Texture2D g_tColor < Channel( RGBA, Box( Color ), Srgb ); OutputFormat( BC7 ); SrgbRead( True ); >;
-	TextureAttribute( LightSim_DiffuseAlbedoTexture, g_tColor )
-	TextureAttribute( RepresentativeTexture, g_tColor )
+	Texture2D g_tColor < Attribute( "Color" ); >;
 	bool g_bGrayscale < UiGroup( ",0/,0/0" ); Default( 0 ); >;
 	float g_flInMin < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
 	float g_flInMax < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
 	float g_flOutMin < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
 	float g_flOutMax < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
 	float4 g_vSaturation < UiType( Color ); UiGroup( ",0/,0/0" ); Default4( 1.00, 1.00, 1.00, 1.00 ); >;
-	float g_flIllumbrightness < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 1, 10 ); >;
+	float g_flIllumbrightness < Attribute( "Illumbrightness" ); Default1( 1 ); >;
 	
 	float4 MainPs( PixelInput i ) : SV_Target0
 	{
 		
-		Material m = Material::Init();
+		Material m = Material::Init( i );
 		m.Albedo = float3( 1, 1, 1 );
 		m.Normal = float3( 0, 0, 1 );
 		m.Roughness = 1;
@@ -180,6 +176,6 @@ PS
 		m.WorldTangentV = i.vTangentVWs;
 		m.TextureCoords = i.vTextureCoords.xy;
 				
-		return ShadingModelStandard::Shade( i, m );
+		return ShadingModelStandard::Shade( m );
 	}
 }

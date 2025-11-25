@@ -398,7 +398,7 @@ namespace Sandbox.Components.Stargate
 
 			if (_shouldEstablish && !_isEstablished)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("illumbrightness", _curBrightness);
+				EventHorizonModel.SceneObject.Attributes.Set("Illumbrightness", _curBrightness);
 				_curBrightness = MathX.Approach(_curBrightness, _minBrightness, Time.Delta * 3f);
 				if (_curBrightness == _minBrightness)
 					_isEstablished = true;
@@ -406,7 +406,7 @@ namespace Sandbox.Components.Stargate
 
 			if (_shouldCollapse && !_isCollapsed)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("illumbrightness", _curBrightness);
+				EventHorizonModel.SceneObject.Attributes.Set("Illumbrightness", _curBrightness);
 				_curBrightness = MathX.Approach(_curBrightness, _maxBrightness, Time.Delta * 5f);
 
 				if (_curBrightness == _maxBrightness)
@@ -967,7 +967,7 @@ namespace Sandbox.Components.Stargate
 				&& _eventHorizonVideo.Texture.IsLoaded
 			)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("texture", _eventHorizonVideo.Texture);
+				EventHorizonModel.SceneObject.Attributes.Set("Color", _eventHorizonVideo.Texture);
 			}
 		}
 
