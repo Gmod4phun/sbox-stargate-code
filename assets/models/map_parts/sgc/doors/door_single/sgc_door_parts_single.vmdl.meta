@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Sgc Door Parts Single",
+      "Type": "model",
+      "Org": "local",
+      "Ident": "sgcdoorpartssingle",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.glass_a#19946"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "models/map_parts/sgc/doors/door_single/sgc_door_parts_single.vmdl"
+      }
+    }
+  }
+}
