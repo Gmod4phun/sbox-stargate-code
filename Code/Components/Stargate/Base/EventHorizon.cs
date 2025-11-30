@@ -155,6 +155,7 @@ namespace Sandbox.Components.Stargate
 			if (EventHorizonModel.IsValid())
 			{
 				EventHorizonModel.MaterialGroup = EventHorizonMaterialGroup;
+				EventHorizonModel.MaterialOverride = null;
 			}
 		}
 
@@ -304,8 +305,6 @@ namespace Sandbox.Components.Stargate
 			_shouldBeOff = false;
 
 			SkinEstablish();
-
-			EventHorizonModel.Enabled = true;
 		}
 
 		// [ClientRpc]
@@ -317,24 +316,6 @@ namespace Sandbox.Components.Stargate
 			_shouldEstablish = false;
 
 			SkinEventHorizon();
-		}
-
-		private Vector2 texCoordScale = new Vector2(1 / 8f, 1 / 4f);
-		private Vector2 texCoordOffset = new Vector2(0, 0);
-
-		void ApplyTextCoordAdjustments(SceneObject so, int frameNumber)
-		{
-			frameNumber = frameNumber.UnsignedMod(19);
-			so.Attributes.Set("texCoordScale", texCoordScale);
-			texCoordOffset.x = frameNumber % 8 * texCoordScale.x;
-			texCoordOffset.y = frameNumber / 8 * texCoordScale.y;
-			so.Attributes.Set("texCoordOffset", texCoordOffset);
-		}
-
-		void ResetTexCoordAdjustments(SceneObject so)
-		{
-			so.Attributes.Set("texCoordScale", new Vector2(1, 1));
-			so.Attributes.Set("texCoordOffset", new Vector2(0, 0));
 		}
 
 		public void ClientAnimLogic()
@@ -349,38 +330,36 @@ namespace Sandbox.Components.Stargate
 			if (_shouldBeOn && !_isOn)
 			{
 				_curFrame = MathX.Approach(_curFrame, _maxFrame, Time.Delta * 30);
-				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt()); // TODO check this
-				ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, _curFrame.FloorToInt());
+				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt());
 
 				if (_curFrame == _maxFrame)
 				{
 					_isOn = true;
 					_shouldEstablish = true;
 					_curBrightness = _maxBrightness;
-					ResetTexCoordAdjustments(EventHorizonModel.SceneObject);
 					SkinEventHorizon();
 
 					/*
 					_frontLight = new SpotLightEntity
 					{
-					    Position = Position + Rotation.Backward * 1f,
-					    Parent = this,
-					    Rotation = Rotation,
-					    Color = Color.FromBytes( 100, 180, 255 ),
-					    Brightness = 10,
-					    Enabled = true,
-					    //LightCookie = Texture.Load(FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
+						Position = Position + Rotation.Backward * 1f,
+						Parent = this,
+						Rotation = Rotation,
+						Color = Color.FromBytes( 100, 180, 255 ),
+						Brightness = 10,
+						Enabled = true,
+						//LightCookie = Texture.Load(FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
 					};
 
 					_backLight = new SpotLightEntity
 					{
-					    Position = Position + Rotation.Backward * 1f,
-					    Parent = this,
-					    Rotation = Rotation.RotateAroundAxis(Vector3.Up, 180),
-					    Color = Color.FromBytes( 100, 180, 255 ),
-					    Brightness = 10,
-					    Enabled = true,
-					    //LightCookie = Texture.Load( FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
+						Position = Position + Rotation.Backward * 1f,
+						Parent = this,
+						Rotation = Rotation.RotateAroundAxis(Vector3.Up, 180),
+						Color = Color.FromBytes( 100, 180, 255 ),
+						Brightness = 10,
+						Enabled = true,
+						//LightCookie = Texture.Load( FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
 					};
 					*/
 				}
@@ -390,7 +369,6 @@ namespace Sandbox.Components.Stargate
 			{
 				_curFrame = MathX.Approach(_curFrame, _minFrame, Time.Delta * 30);
 				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt());
-				ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, _curFrame.FloorToInt());
 
 				if (_curFrame == _minFrame)
 					_isOff = true;
@@ -398,7 +376,10 @@ namespace Sandbox.Components.Stargate
 
 			if (_shouldEstablish && !_isEstablished)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("Illumbrightness", _curBrightness);
+				EventHorizonModel.SceneObject.Attributes.Set(
+					"Illumbrightness",
+					_curBrightness * 0.4f
+				);
 				_curBrightness = MathX.Approach(_curBrightness, _minBrightness, Time.Delta * 3f);
 				if (_curBrightness == _minBrightness)
 					_isEstablished = true;
@@ -406,7 +387,10 @@ namespace Sandbox.Components.Stargate
 
 			if (_shouldCollapse && !_isCollapsed)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("Illumbrightness", _curBrightness);
+				EventHorizonModel.SceneObject.Attributes.Set(
+					"Illumbrightness",
+					_curBrightness * 0.4f
+				);
 				_curBrightness = MathX.Approach(_curBrightness, _maxBrightness, Time.Delta * 5f);
 
 				if (_curBrightness == _maxBrightness)
@@ -414,7 +398,6 @@ namespace Sandbox.Components.Stargate
 					_isCollapsed = true;
 					_shouldBeOff = true;
 					_curBrightness = _minBrightness;
-					ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, 18);
 					SkinEstablish();
 					// _frontLight?.Delete();
 					// _backLight?.Delete();
@@ -435,7 +418,7 @@ namespace Sandbox.Components.Stargate
 			var establishing = EventHorizonModel.MaterialGroup == "establish";
 			if (EventHorizonModel.SceneObject is SceneObject so && so.IsValid())
 			{
-				so.Flags.CastShadows = false;
+				// so.Flags.CastShadows = false;
 				so.Flags.IsTranslucent = establishing || behind;
 				so.Flags.IsOpaque = !so.Flags.IsTranslucent;
 			}
@@ -444,21 +427,21 @@ namespace Sandbox.Components.Stargate
 		/*
 		private void ClientLightAnimationLogic()
 		{
-		    var brightness = ((float)Math.Abs( Math.Sin( Time.Now * 12 ) )).Remap( 0, 1, 3.5f, 4f );
+			var brightness = ((float)Math.Abs( Math.Sin( Time.Now * 12 ) )).Remap( 0, 1, 3.5f, 4f );
 
-		    if (_frontLight.IsValid())
-		    {
-		        _frontLight.Brightness = brightness;
-		        _frontLight.OuterConeAngle = 150;
-		        _frontLight.InnerConeAngle = _frontLight.OuterConeAngle / 3;
-		    }
+			if (_frontLight.IsValid())
+			{
+				_frontLight.Brightness = brightness;
+				_frontLight.OuterConeAngle = 150;
+				_frontLight.InnerConeAngle = _frontLight.OuterConeAngle / 3;
+			}
 
-		    if ( _backLight.IsValid() )
-		    {
-		        _backLight.Brightness = brightness;
-		        _backLight.OuterConeAngle = 150;
-		        _backLight.InnerConeAngle = _backLight.OuterConeAngle / 3;
-		    }
+			if ( _backLight.IsValid() )
+			{
+				_backLight.Brightness = brightness;
+				_backLight.OuterConeAngle = 150;
+				_backLight.InnerConeAngle = _backLight.OuterConeAngle / 3;
+			}
 		}
 		*/
 
@@ -898,18 +881,18 @@ namespace Sandbox.Components.Stargate
 			/*
 			if ( WormholeLoop.IsValid() )
 			{
-			    WormholeLoop.Position = WorldPosition;
+				WormholeLoop.Position = WorldPosition;
 
-			    var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+				var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
 
-			    if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == MultiWorldSystem.GetWorldIndexOfObject( this ) )
-			    {
-			        WormholeLoop.Volume = 1;
-			    }
-			    else
-			    {
-			        WormholeLoop.Volume = 0;
-			    }
+				if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == MultiWorldSystem.GetWorldIndexOfObject( this ) )
+				{
+					WormholeLoop.Volume = 1;
+				}
+				else
+				{
+					WormholeLoop.Volume = 0;
+				}
 			}
 			*/
 
@@ -1018,15 +1001,15 @@ namespace Sandbox.Components.Stargate
 		[ConCmd.Server]
 		private static void OnPlayerEndWormhole( int netId )
 		{
-		    var eh = FindByIndex<EventHorizon>( netId );
-		    if ( !eh.IsValid() ) return;
+			var eh = FindByIndex<EventHorizon>( netId );
+			if ( !eh.IsValid() ) return;
 
-		    var pawn = ConsoleSystem.Caller.Pawn as Entity;
+			var pawn = ConsoleSystem.Caller.Pawn as Entity;
 
-		    var id = eh.InTransitPlayers.IndexOf( pawn );
-		    if ( id == -1 ) return;
+			var id = eh.InTransitPlayers.IndexOf( pawn );
+			if ( id == -1 ) return;
 
-		    eh.InTransitPlayers.RemoveAt( id );
+			eh.InTransitPlayers.RemoveAt( id );
 		}
 		*/
 
@@ -1179,29 +1162,29 @@ namespace Sandbox.Components.Stargate
 		[GameEvent.Physics.PostStep]
 		private void UpdateCollider()
 		{
-		    foreach ( var eh in All.OfType<EventHorizon>().Where( x => x.Gate.IsValid() && x._colliderFloor.IsValid() ) )
-		    {
-		        var startPos = eh.Position + eh.Rotation.Up * 110;
-		        var endPos = eh.Position - eh.Rotation.Up * 110;
-		        var tr = Trace.Ray( startPos, endPos ).WithTag( "world" ).Run();
+			foreach ( var eh in All.OfType<EventHorizon>().Where( x => x.Gate.IsValid() && x._colliderFloor.IsValid() ) )
+			{
+				var startPos = eh.Position + eh.Rotation.Up * 110;
+				var endPos = eh.Position - eh.Rotation.Up * 110;
+				var tr = Trace.Ray( startPos, endPos ).WithTag( "world" ).Run();
 
-		        var shouldUseCollider = tr.Hit && (Math.Abs( eh.Rotation.Angles().pitch )) < 15;
+				var shouldUseCollider = tr.Hit && (Math.Abs( eh.Rotation.Angles().pitch )) < 15;
 
-		        var collider = eh._colliderFloor;
-		        if ( collider.PhysicsBody.IsValid() )
-		            collider.PhysicsBody.Enabled = shouldUseCollider;
+				var collider = eh._colliderFloor;
+				if ( collider.PhysicsBody.IsValid() )
+					collider.PhysicsBody.Enabled = shouldUseCollider;
 
-		        if ( shouldUseCollider )
-		        {
-		            //DebugOverlay.TraceResult( tr );
+				if ( shouldUseCollider )
+				{
+					//DebugOverlay.TraceResult( tr );
 
-		            collider.Position = tr.HitPosition;
-		            collider.Rotation = Rotation.From( tr.Normal.EulerAngles )
-		                .RotateAroundAxis( Vector3.Right, -90 )
-		                .RotateAroundAxis( Vector3.Up, 90 )
-		                .RotateAroundAxis( Vector3.Up, eh.Rotation.Angles().yaw - 90 );
-		        }
-		    }
+					collider.Position = tr.HitPosition;
+					collider.Rotation = Rotation.From( tr.Normal.EulerAngles )
+						.RotateAroundAxis( Vector3.Right, -90 )
+						.RotateAroundAxis( Vector3.Up, 90 )
+						.RotateAroundAxis( Vector3.Up, eh.Rotation.Angles().yaw - 90 );
+				}
+			}
 		}
 		*/
 
@@ -1209,13 +1192,13 @@ namespace Sandbox.Components.Stargate
 		[ClientRpc]
 		private async void PlayWormholeCinematic()
 		{
-		    // TODO: Find a way to call this when the EH is deleted before the cinematic end to not keep the player stuck in this
-		    var panel = Game.RootPanel.AddChild<WormholeCinematic>();
+			// TODO: Find a way to call this when the EH is deleted before the cinematic end to not keep the player stuck in this
+			var panel = Game.RootPanel.AddChild<WormholeCinematic>();
 
-		    await GameTask.DelaySeconds( 7.07f );
+			await GameTask.DelaySeconds( 7.07f );
 
-		    panel.Delete( true );
-		    OnPlayerEndWormhole( NetworkIdent );
+			panel.Delete( true );
+			OnPlayerEndWormhole( NetworkIdent );
 		}
 		*/
 

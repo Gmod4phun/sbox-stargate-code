@@ -114,6 +114,7 @@ PS
         RenderState(DstBlend, INV_SRC_ALPHA);
     #endif
 
+    #include "common/utils/Material.CommonInputs.hlsl"
     #include "common/pixel.hlsl"
 
     BoolAttribute(bWantsFBCopyTexture, !S_CHEAP_GLASS);
@@ -274,11 +275,14 @@ PS
         m.Normal = lerp( m.Normal.xyz, customl_8.xyz, 0.5 );
 
         {
-            Material materialB = Material::From( i,
-                                                 Tex2DS(g_tColorB, TextureFiltering, i.vTextureCoords.xy),
-                                                 Tex2DS(g_tNormalB, TextureFiltering, i.vTextureCoords.xy),
-                                                 Tex2DS(g_tRmaB, TextureFiltering, i.vTextureCoords.xy),
-                                                 g_flTintColorB );
+            Material materialB = Material::From( i);
+
+            materialB.Albedo = Tex2DS( g_tColorB, g_sAniso, i.vTextureCoords.xy ).rgb;
+            materialB.Normal = Tex2DS( g_tNormalB, g_sAniso, i.vTextureCoords.xy ).rgb;
+            float4 rmaSample = Tex2DS( g_tRmaB, g_sAniso, i.vTextureCoords.xy );
+            materialB.Roughness = rmaSample.r;
+            materialB.Metalness = rmaSample.g;
+            materialB.AmbientOcclusion = rmaSample.b; 
 
             m = Material::lerp( m, materialB, materialB.Opacity );
         }

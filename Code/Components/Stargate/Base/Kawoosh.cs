@@ -110,13 +110,13 @@ namespace Sandbox.Components.Stargate
 			/*
 			if ( _light.IsValid() )
 			{
-			    var remappedProgress = _currentProgress.Remap( _minProgress, _maxProgress, 0, 1 );
-			    var lightLength = 128 * remappedProgress;
+				var remappedProgress = _currentProgress.Remap( _minProgress, _maxProgress, 0, 1 );
+				var lightLength = 128 * remappedProgress;
 
-			    _light.Enabled = true;
-			    _light.CapsuleLength = lightLength;
-			    _light.Position = Position + Rotation.Forward * lightLength;
-			    _light.Brightness = remappedProgress * 0.1f;
+				_light.Enabled = true;
+				_light.CapsuleLength = lightLength;
+				_light.Position = Position + Rotation.Forward * lightLength;
+				_light.Brightness = remappedProgress * 0.1f;
 			}
 			*/
 
@@ -127,7 +127,6 @@ namespace Sandbox.Components.Stargate
 			KawooshModelInside.SceneObject.Flags.IsOpaque = true;
 			KawooshModelInside.SceneObject.Flags.IsTranslucent = true;
 			KawooshModelInside.SceneObject.Batchable = false;
-			KawooshModelInside.SceneObject.Attributes.Set("emission", 6);
 		}
 
 		/// <summary>

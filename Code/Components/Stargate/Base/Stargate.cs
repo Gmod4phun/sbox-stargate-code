@@ -220,161 +220,161 @@ namespace Sandbox.Components.Stargate
 		[ConCmd.Server]
 		public static void RequestDial( DialType type, string address, int gate, float initialDelay = 0 )
 		{
-		    if ( FindByIndex( gate ) is Stargate g && g.IsValid() )
-		    {
-		        switch ( type )
-		        {
-		            case DialType.FAST:
-		                g.BeginDialFast( address );
-		                break;
+			if ( FindByIndex( gate ) is Stargate g && g.IsValid() )
+			{
+				switch ( type )
+				{
+					case DialType.FAST:
+						g.BeginDialFast( address );
+						break;
 
-		            case DialType.SLOW:
-		                g.BeginDialSlow( address, initialDelay );
-		                break;
+					case DialType.SLOW:
+						g.BeginDialSlow( address, initialDelay );
+						break;
 
-		            case DialType.INSTANT:
-		                g.BeginDialInstant( address );
-		                break;
-		        }
-		    }
+					case DialType.INSTANT:
+						g.BeginDialInstant( address );
+						break;
+				}
+			}
 		}
 
 		[ConCmd.Server]
 		public static void RequestClose( int gateID )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.Busy || ((g.Open || g.IsActive || g.Dialing) && g.Inbound) )
-		        {
-		            return;
-		        }
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.Busy || ((g.Open || g.IsActive || g.Dialing) && g.Inbound) )
+				{
+					return;
+				}
 
-		        if ( g.Open )
-		        {
-		            g.DoStargateClose( true );
-		        }
-		        else if ( g.Dialing )
-		        {
-		            g.StopDialing();
-		        }
-		    }
+				if ( g.Open )
+				{
+					g.DoStargateClose( true );
+				}
+				else if ( g.Dialing )
+				{
+					g.StopDialing();
+				}
+			}
 		}
 
 		[ConCmd.Server]
 		public static void ToggleIris( int gateID, int state )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.Iris.IsValid() )
-		        {
-		            if ( state == -1 )
-		                g.Iris.Toggle();
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.Iris.IsValid() )
+				{
+					if ( state == -1 )
+						g.Iris.Toggle();
 
-		            if ( state == 0 )
-		                g.Iris.Close();
+					if ( state == 0 )
+						g.Iris.Close();
 
-		            if ( state == 1 )
-		                g.Iris.Open();
-		        }
-		    }
+					if ( state == 1 )
+						g.Iris.Open();
+				}
+			}
 		}
 
 		[ConCmd.Server]
 		public static void RequestAddressChange( int gateID, string address )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.GateAddress == address || !IsValidAddressOnly( address ) )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.GateAddress == address || !IsValidAddressOnly( address ) )
+					return;
 
-		        g.GateAddress = address;
+				g.GateAddress = address;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 
 		[ConCmd.Server]
 		public static void RequestGroupChange( int gateID, string group )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.GateGroup == group || !IsValidGroup( group ) || group.Length != g.GateGroupLength )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.GateGroup == group || !IsValidGroup( group ) || group.Length != g.GateGroupLength )
+					return;
 
-		        g.GateGroup = group;
+				g.GateGroup = group;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 
 		[ConCmd.Server]
 		public static void RequestNameChange( int gateID, string name )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.GateName == name )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.GateName == name )
+					return;
 
-		        g.GateName = name;
+				g.GateName = name;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 
 		[ConCmd.Server]
 		public static void SetAutoClose( int gateID, bool state )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.AutoClose == state )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.AutoClose == state )
+					return;
 
-		        g.AutoClose = state;
+				g.AutoClose = state;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 
 		[ConCmd.Server]
 		public static void SetGatePrivate( int gateID, bool state )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.GatePrivate == state )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.GatePrivate == state )
+					return;
 
-		        g.GatePrivate = state;
+				g.GatePrivate = state;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 
 		[ConCmd.Server]
 		public static void SetGateLocal( int gateID, bool state )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.GateLocal == state )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.GateLocal == state )
+					return;
 
-		        g.GateLocal = state;
+				g.GateLocal = state;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 
 		[ConCmd.Server]
 		public static void ToggleWormhole( int gateID, bool state )
 		{
-		    if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
-		    {
-		        if ( g.ShowWormholeCinematic == state )
-		            return;
+			if ( FindByIndex( gateID ) is Stargate g && g.IsValid() )
+			{
+				if ( g.ShowWormholeCinematic == state )
+					return;
 
-		        g.ShowWormholeCinematic = state;
+				g.ShowWormholeCinematic = state;
 
-		        g.RefreshGateInformation();
-		    }
+				g.RefreshGateInformation();
+			}
 		}
 		*/
 
@@ -440,17 +440,17 @@ namespace Sandbox.Components.Stargate
 		// USABILITY
 		public bool IsUsable( Entity user )
 		{
-		    return true; // we should be always usable
+			return true; // we should be always usable
 		}
 
 		public bool OnUse( Entity user )
 		{
-		    if ( CanOpenMenu )
-		    {
-		        OpenStargateMenu( To.Single( user ) );
-		    }
+			if ( CanOpenMenu )
+			{
+				OpenStargateMenu( To.Single( user ) );
+			}
 
-		    return false; // aka SIMPLE_USE, not continuously
+			return false; // aka SIMPLE_USE, not continuously
 		}
 		*/
 
@@ -469,10 +469,20 @@ namespace Sandbox.Components.Stargate
 			EventHorizon = eh.Components.Create<EventHorizon>();
 			EventHorizon.EventHorizonMaterialGroup = EventHorizonMaterialGroup;
 
-			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>(false);
+			EventHorizon.EventHorizonModel = eh.Components.Create<ModelRenderer>();
+			EventHorizon.EventHorizonModel.RenderType = ModelRenderer.ShadowRenderType.Off;
 			EventHorizon.EventHorizonModel.Model = Model.Load(
 				"models/sbox_stargate/event_horizon/event_horizon.vmdl"
 			);
+			EventHorizon.EventHorizonModel.MaterialOverride = Material.Load(
+				"models/sbox_stargate/event_horizon/event_horizon_establish.vmat"
+			);
+
+			if (EventHorizon.EventHorizonModel.SceneObject is SceneObject so && so.IsValid())
+			{
+				so.Flags.IsTranslucent = true;
+				so.Flags.IsOpaque = !so.Flags.IsTranslucent;
+			}
 
 			EventHorizon.EventHorizonTrigger = eh.Components.Create<EventHorizonTrigger>();
 			EventHorizon.EventHorizonTrigger.Model = EventHorizon.EventHorizonModel.Model;
@@ -1065,11 +1075,11 @@ namespace Sandbox.Components.Stargate
 		[GameEvent.Client.Frame]
 		private void WorldPanelThink()
 		{
-		    var isNearGate = Position.DistanceSquared( Camera.Position ) < (512 * 512);
-		    if ( isNearGate && !WorldPanel.IsValid() )
-		        WorldPanel = new StargateWorldPanel( this );
-		    else if ( !isNearGate && WorldPanel.IsValid() )
-		        WorldPanel.Delete();
+			var isNearGate = Position.DistanceSquared( Camera.Position ) < (512 * 512);
+			if ( isNearGate && !WorldPanel.IsValid() )
+				WorldPanel = new StargateWorldPanel( this );
+			else if ( !isNearGate && WorldPanel.IsValid() )
+				WorldPanel.Delete();
 		}
 		*/
 
@@ -1079,18 +1089,18 @@ namespace Sandbox.Components.Stargate
 		[ClientRpc]
 		public void OpenStargateMenu( Dhd dhd = null )
 		{
-		    var hud = Game.RootPanel;
-		    var count = 0;
-		    foreach ( StargateMenuV2 menu in hud.ChildrenOfType<StargateMenuV2>() ) count++;
+			var hud = Game.RootPanel;
+			var count = 0;
+			foreach ( StargateMenuV2 menu in hud.ChildrenOfType<StargateMenuV2>() ) count++;
 
-		    // this makes sure if we already have the menu open, we cant open it again
-		    if ( count == 0 ) hud.AddChild( new StargateMenuV2( this, dhd ) );
+			// this makes sure if we already have the menu open, we cant open it again
+			if ( count == 0 ) hud.AddChild( new StargateMenuV2( this, dhd ) );
 		}
 
 		[ClientRpc]
 		public void RefreshGateInformation()
 		{
-		    Event.Run( "stargate.refreshgateinformation" );
+			Event.Run( "stargate.refreshgateinformation" );
 		}
 		*/
 

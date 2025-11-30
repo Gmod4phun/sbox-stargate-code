@@ -73,7 +73,8 @@ VS
 PS
 {
 	#include "common/pixel.hlsl"
-	
+	RenderState( CullMode, F_RENDER_BACKFACES ? NONE : DEFAULT );
+		
 	SamplerState g_sSampler0 < Filter( ANISO ); AddressU( WRAP ); AddressV( WRAP ); >;
 	Texture2D g_tColor < Attribute( "Color" ); >;
 	bool g_bGrayscale < UiGroup( ",0/,0/0" ); Default( 0 ); >;
@@ -105,7 +106,7 @@ PS
 		float2 l_4 = l_0 + float2( l_3, l_3 );
 		float2 l_5 = l_4 + float2( 0.49, 0.49 );
 		float4 l_6 = Tex2DS( g_tColor, g_sSampler0, l_5 );
-		l_6 = SrgbGammaToLinear( l_6 ).xyzz;
+		l_6 = SrgbGammaToLinear( l_6.xyz ).xyzz;
 		float l_7 = l_6.x;
 		float l_8 = l_7 * 0.299;
 		float l_9 = l_6.y;
