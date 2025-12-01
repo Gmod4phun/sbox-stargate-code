@@ -67,7 +67,7 @@ public class PlayerCameraController : Component, ITeleportable
 		cam.WorldRotation = worldRotation;
 		var from =
 			WorldPosition
-			+ Vector3.Up * (PlayerController.BodyHeight - PlayerController.EyeDistanceFromTop);
+			+ Vector3.Up * (PlayerController.CurrentHeight - PlayerController.EyeDistanceFromTop);
 		if (PlayerController.IsOnGround && _eyez != 0f)
 		{
 			from.z = _eyez.LerpTo(from.z, Time.Delta * 50f);
