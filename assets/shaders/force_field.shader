@@ -102,6 +102,9 @@ PS
 
     float4 MainPs( PixelInput i ) : SV_Target0
     {
+		if (g_flMasterAlphaMul <= 0.01)
+			discard;
+
 		float2 f2FinalTexCoord = i.vTextureCoords.xy;
 
 		float3 pos = i.vPositionWithOffsetWs.xyz;
