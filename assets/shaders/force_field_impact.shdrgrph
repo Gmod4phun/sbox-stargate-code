@@ -1,7 +1,24 @@
 {
+  "IsSubgraph": false,
+  "Path": "shaders/force_field_impact.shdrgrph",
   "Model": null,
+  "Title": null,
   "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
   "BlendMode": "Translucent",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
   "nodes": [
     {
       "_class": "Result",
@@ -10,7 +27,8 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
       "Identifier": "0",
-      "Position": "-1440,304",
+      "Position": "-1440,300",
+      "HandleOffsets": {},
       "Albedo": {
         "Identifier": "10",
         "Output": "Result"
@@ -26,43 +44,91 @@
       "Name": "",
       "IsAttribute": false,
       "UI": {
-        "Type": "Color"
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "1",
-      "Position": "-960,-688"
+      "Position": "-960,-684",
+      "HandleOffsets": {}
     },
     {
       "_class": "Float4",
       "Value": "1,1,1,1",
-      "Name": "Impact Color",
-      "IsAttribute": false,
+      "Name": "impactColor",
+      "IsAttribute": true,
       "UI": {
-        "Type": "Color"
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "2",
-      "Position": "-1968,-96"
+      "Position": "-1968,-96",
+      "HandleOffsets": {}
     },
     {
       "_class": "Float3",
       "Min": "0,0,0",
       "Max": "0,0,0",
       "Value": "0,0,-32",
-      "Name": "Impact Center",
-      "IsAttribute": false,
-      "UI": {},
+      "Name": "impactCenter",
+      "IsAttribute": true,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
       "Identifier": "3",
-      "Position": "-2608,224"
+      "Position": "-2604,228",
+      "HandleOffsets": {}
     },
     {
       "_class": "Float",
       "Min": 0,
       "Max": 0,
       "Value": 8,
-      "Name": "Radius",
-      "IsAttribute": false,
-      "UI": {},
+      "Name": "impactRadius",
+      "IsAttribute": true,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
       "Identifier": "4",
-      "Position": "-2384,464"
+      "Position": "-2388,468",
+      "HandleOffsets": {}
     },
     {
       "_class": "Float",
@@ -71,19 +137,34 @@
       "Value": 0,
       "Name": "Hardness",
       "IsAttribute": false,
-      "UI": {},
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
       "Identifier": "5",
-      "Position": "-2384,544"
+      "Position": "-2388,540",
+      "HandleOffsets": {}
     },
     {
       "_class": "WorldPosition",
       "Identifier": "6",
-      "Position": "-2688,64"
+      "Position": "-2688,60",
+      "HandleOffsets": {}
     },
     {
       "_class": "SphereMask",
       "Identifier": "7",
-      "Position": "-1952,448",
+      "Position": "-1956,444",
+      "HandleOffsets": {},
       "Center": {
         "Identifier": "8",
         "Output": "Result"
@@ -102,7 +183,8 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "8",
-      "Position": "-2320,144",
+      "Position": "-2316,144",
+      "HandleOffsets": {},
       "A": {
         "Identifier": "6",
         "Output": "Result"
@@ -117,18 +199,32 @@
       "Min": 0,
       "Max": 0,
       "Value": 1,
-      "Name": "ImpactColorMul",
-      "IsAttribute": false,
-      "UI": {},
+      "Name": "impactColorMul",
+      "IsAttribute": true,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
       "Identifier": "9",
-      "Position": "-2112,176"
+      "Position": "-2112,180",
+      "HandleOffsets": {}
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "10",
-      "Position": "-1600,96",
+      "Position": "-1596,96",
+      "HandleOffsets": {},
       "A": {
         "Identifier": "2",
         "Output": "Result"
@@ -141,7 +237,8 @@
     {
       "_class": "Saturate",
       "Identifier": "11",
-      "Position": "-1872,304",
+      "Position": "-1872,300",
+      "HandleOffsets": {},
       "Input": {
         "Identifier": "9",
         "Output": "Result"
@@ -152,7 +249,8 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "12",
-      "Position": "-1696,320",
+      "Position": "-1692,324",
+      "HandleOffsets": {},
       "A": {
         "Identifier": "11",
         "Output": "Result"
@@ -167,7 +265,8 @@
       "DefaultA": 0,
       "DefaultB": 4,
       "Identifier": "13",
-      "Position": "-1856,128",
+      "Position": "-1860,132",
+      "HandleOffsets": {},
       "InputA": {
         "Identifier": "9",
         "Output": "Result"

@@ -94,11 +94,11 @@ PS
 	CreateTexture2DWithoutSampler(g_tTintMask) 			< Channel(R,	Box(TextureTintMask),	Linear); OutputFormat(ATI1N); SrgbRead(false); > ;
 	// Texture2D g_tTintMask < Channel( RGBA, Box( TextureTintMask ), Srgb ); OutputFormat( ATI1N ); SrgbRead( false ); >;
 
-	float3 g_vShieldColor < UiType( Color ); UiGroup( ",0/,0/0" ); Default3( 1.00, 1.00, 1.00 ); >;
+	float3 g_vShieldColor < Attribute( "shieldColor" ); Default3( 1.00, 1.00, 1.00 ); >;
 	float g_flIntersectionSharpness < UiGroup( ",0/,0/0" ); Default1( 0.2 ); Range1( 0.01, 1 ); >;
 	float g_flBorderDistanceFromSphereCenter < UiGroup( ",0/,0/0" ); Default1( 3 ); Range1( 0.01, 5 ); >;
 	float g_flBubbleAlphaMul < UiGroup( ",0/,0/0" ); Default1( 0.1 ); Range1( 0, 10 ); >;
-	float g_flMasterAlphaMul < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
+	float g_flMasterAlphaMul < Attribute( "masterAlphaMul" ); Default1( 1 ); >;
 
     float4 MainPs( PixelInput i ) : SV_Target0
     {
