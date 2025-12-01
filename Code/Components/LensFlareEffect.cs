@@ -1,6 +1,6 @@
 using Sandbox.Rendering;
 
-public class LensFlareEffect : PostProcess
+public class LensFlareEffect : BasePostProcess<LensFlareEffect>
 {
 	/*
 	 * Lens Flare Post-Processing Effect
@@ -35,6 +35,7 @@ public class LensFlareEffect : PostProcess
 	Texture texBar = Texture.Load("materials/lensflare/bar.png");
 
 	float sunobstruction = 0f;
+	CommandList CommandList;
 
 	private float mulW(float x, float f)
 	{
@@ -54,7 +55,10 @@ public class LensFlareEffect : PostProcess
 
 	public void DrawLensFlare()
 	{
-		var camera = Components.Get<CameraComponent>();
+		CommandList = new CommandList("LensFlareEffect");
+
+		// var camera = Components.Get<CameraComponent>();
+		var camera = Camera;
 		if (camera == null || !camera.IsValid() || !camera.Enabled || !this.Enabled)
 			return;
 
@@ -62,6 +66,7 @@ public class LensFlareEffect : PostProcess
 			.GetAllComponents<DirectionalLight>()
 			.Where(sun => MultiWorldSystem.AreObjectsInSameWorld(sun.GameObject, camera.GameObject))
 			.FirstOrDefault();
+
 		if (!sun.IsValid())
 			return;
 
@@ -136,9 +141,11 @@ public class LensFlareEffect : PostProcess
 			CenteredSprite(mulW(sunpos.x, -1.5f), mulH(sunpos.y, -1.5f), rSz * 1f, colorIris);
 			CenteredSprite(mulW(sunpos.x, -1.7f), mulH(sunpos.y, -1.7f), rSz * 0.1f, colorIris);
 		}
+
+		InsertCommandList(CommandList, Stage.AfterUI, 1, "LensFlareEffect");
 	}
 
-	protected override void UpdateCommandList()
+	public override void Render()
 	{
 		DrawLensFlare();
 	}
@@ -191,7 +198,7 @@ public class LensFlareOccluder : Component
 		mipMapGeneratorObject?.Delete();
 		mipMapGeneratorObject = new SceneCustomObject(Scene.SceneWorld)
 		{
-			RenderOverride = GenerateOccluderTextureMipMaps
+			RenderOverride = GenerateOccluderTextureMipMaps,
 		};
 
 		var sunOccluderRendererObject = new GameObject("LensFlareOccluderRenderer");
@@ -314,6 +321,12 @@ public class LensFlareOccluder : Component
 		{
 			var sampledLastMip = occluderTexture.GetPixel(0, 0, occluderTexture.Mips - 1).r / 255f;
 			var obstruction = sampledLastMip.Remap(0f, 0.8f, 0f, 1f);
+
+			if (obstruction <= 0.01f)
+				obstruction = 0f;
+			else if (obstruction >= 0.99f)
+				obstruction = 1f;
+
 			lensFlareEffect.SunObstruction = obstruction;
 		}
 
