@@ -73,7 +73,7 @@ PS
     CreateInputTexture2D(TextureColor, Srgb, 8, "None", "_color", ",0/,0/0", DefaultFile("materials/dev/white_color.tga"));
 
     Texture2D g_tColor < Channel(RGB, Box(TextureColor), Srgb);
-    OutputFormat(BC7);
+    OutputFormat(DXT1);
     SrgbRead(true);
     > ;
 
