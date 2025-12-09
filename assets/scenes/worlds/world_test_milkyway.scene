@@ -14,6 +14,7 @@
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
       "OwnerTransfer": 1,
       "Components": [
         {
@@ -43,6 +44,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -51,6 +53,7 @@
               "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
               "Materials": null,
@@ -75,6 +78,7 @@
               "__guid": "9f95e077-caab-443d-bc50-b465e5af4b71",
               "__enabled": true,
               "Center": "0,0,-1",
+              "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
@@ -560,6 +564,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -568,6 +573,7 @@
               "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
@@ -591,6 +597,7 @@
               "__type": "Sandbox.ModelCollider",
               "__guid": "bcb43314-10ec-4971-b1a5-c7d166baeb44",
               "__enabled": true,
+              "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
@@ -651,6 +658,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -688,6 +696,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -737,6 +746,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -774,6 +784,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -811,6 +822,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -860,6 +872,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -897,6 +910,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -934,6 +948,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -983,6 +998,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1020,6 +1036,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1057,6 +1074,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1106,6 +1124,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1143,6 +1162,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1180,6 +1200,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1229,6 +1250,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1266,6 +1288,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1303,6 +1326,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1352,6 +1376,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1389,6 +1414,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1426,6 +1452,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1475,6 +1502,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1512,6 +1540,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1549,6 +1578,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1598,6 +1628,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1635,6 +1666,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1672,6 +1704,7 @@
                   "BoneMergeTarget": null,
                   "CreateAttachments": false,
                   "CreateBoneObjects": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1721,6 +1754,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -1758,6 +1792,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -1787,6 +1822,7 @@
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -1824,6 +1860,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -1833,6 +1870,7 @@
               "__version": 1,
               "ClipMapLodExtentTexels": 128,
               "ClipMapLodLevels": 7,
+              "ColliderFlags": 0,
               "Elasticity": null,
               "EnableCollision": true,
               "Friction": null,
@@ -1852,6 +1890,8 @@
               "RollingResistance": null,
               "Static": true,
               "Storage": "terrain/terrain_test.terrain",
+              "SubdivisionFactor": 1,
+              "SubdivisionLodCount": 3,
               "Surface": null,
               "SurfaceVelocity": "0,0,0",
               "TerrainHeight": 500,
@@ -2271,6 +2311,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -2305,6 +2346,7 @@
               "__type": "Sandbox.ModelCollider",
               "__guid": "2acaf605-7272-425a-9aa3-8454a42333c1",
               "__enabled": true,
+              "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
@@ -2333,6 +2375,7 @@
               "BoneMergeTarget": null,
               "CreateAttachments": false,
               "CreateBoneObjects": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
@@ -2383,6 +2426,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -2417,6 +2461,7 @@
               "__type": "Sandbox.ModelCollider",
               "__guid": "59906597-d58d-48e0-9607-9ee7cd07a6df",
               "__enabled": true,
+              "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
@@ -2445,6 +2490,7 @@
               "BoneMergeTarget": null,
               "CreateAttachments": false,
               "CreateBoneObjects": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
@@ -2495,6 +2541,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -2503,6 +2550,7 @@
               "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
@@ -2526,6 +2574,7 @@
               "__type": "Sandbox.ModelCollider",
               "__guid": "b153b105-3ebd-4644-92a2-4a5f03576537",
               "__enabled": true,
+              "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
@@ -2574,13 +2623,14 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
                   "__guid": "73af4738-57a6-4313-9b72-0c2929bbc5b9",
                   "__enabled": true,
-                  "__version": 2,
+                  "__version": 3,
                   "Alpha": {
                     "Type": "Curve",
                     "Evaluation": "Life",
@@ -2702,11 +2752,7 @@
                   "Pitch": 0,
                   "PreWarm": 0,
                   "PushStrength": 0,
-                  "Roll": {
-                    "Type": "Range",
-                    "Evaluation": "Seed",
-                    "Constants": "0,360,0,0"
-                  },
+                  "Roll": 0,
                   "Scale": {
                     "Type": "Range",
                     "Evaluation": "Seed",
@@ -2727,12 +2773,17 @@
                   "Timing": "GameTime",
                   "Tint": "1,1,1,1",
                   "UsePrefabFeature": false,
-                  "Yaw": 0
+                  "Yaw": {
+                    "Type": "Range",
+                    "Evaluation": "Seed",
+                    "Constants": "0,360,0,0"
+                  }
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "8ee9a6f5-e48e-4957-9941-e66460fcadf9",
                   "__enabled": true,
+                  "__version": 2,
                   "Additive": false,
                   "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
@@ -2751,7 +2802,7 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Opaque": false,
-                  "Pivot": "0.5,0.5",
+                  "PlaybackSpeed": 1,
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -2762,7 +2813,29 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                  "Sprite": {
+                    "$compiler": "embed",
+                    "$source": null,
+                    "data": {
+                      "Animations": [
+                        {
+                          "Name": "Default",
+                          "FrameRate": 15,
+                          "Origin": "0.5,0.5",
+                          "LoopMode": "Loop",
+                          "Frames": [
+                            {
+                              "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                              "BroadcastMessages": []
+                            }
+                          ]
+                        }
+                      ],
+                      "__references": null
+                    },
+                    "compiled": null
+                  },
+                  "StartingAnimationName": "Default",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -2808,13 +2881,14 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
                   "__guid": "3910306d-52ae-419d-9879-f812e50a42a3",
                   "__enabled": true,
-                  "__version": 2,
+                  "__version": 3,
                   "Alpha": {
                     "Type": "Curve",
                     "Evaluation": "Life",
@@ -2936,11 +3010,7 @@
                   "Pitch": 0,
                   "PreWarm": 0,
                   "PushStrength": 0,
-                  "Roll": {
-                    "Type": "Range",
-                    "Evaluation": "Seed",
-                    "Constants": "0,360,0,0"
-                  },
+                  "Roll": 0,
                   "Scale": {
                     "Type": "Range",
                     "Evaluation": "Seed",
@@ -2961,12 +3031,17 @@
                   "Timing": "GameTime",
                   "Tint": "1,1,1,1",
                   "UsePrefabFeature": false,
-                  "Yaw": 0
+                  "Yaw": {
+                    "Type": "Range",
+                    "Evaluation": "Seed",
+                    "Constants": "0,360,0,0"
+                  }
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "88206627-c9e3-4080-87a9-e1efb5e27add",
                   "__enabled": true,
+                  "__version": 2,
                   "Additive": false,
                   "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
@@ -2985,7 +3060,7 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Opaque": false,
-                  "Pivot": "0.5,0.5",
+                  "PlaybackSpeed": 1,
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -2996,7 +3071,29 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                  "Sprite": {
+                    "$compiler": "embed",
+                    "$source": null,
+                    "data": {
+                      "Animations": [
+                        {
+                          "Name": "Default",
+                          "FrameRate": 15,
+                          "Origin": "0.5,0.5",
+                          "LoopMode": "Loop",
+                          "Frames": [
+                            {
+                              "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                              "BroadcastMessages": []
+                            }
+                          ]
+                        }
+                      ],
+                      "__references": null
+                    },
+                    "compiled": null
+                  },
+                  "StartingAnimationName": "Default",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -3042,13 +3139,14 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
                   "__guid": "7c4f3ab0-8be8-4d5d-a5f4-3676d6d4045a",
                   "__enabled": true,
-                  "__version": 2,
+                  "__version": 3,
                   "Alpha": {
                     "Type": "Curve",
                     "Evaluation": "Life",
@@ -3170,11 +3268,7 @@
                   "Pitch": 0,
                   "PreWarm": 0,
                   "PushStrength": 0,
-                  "Roll": {
-                    "Type": "Range",
-                    "Evaluation": "Seed",
-                    "Constants": "0,360,0,0"
-                  },
+                  "Roll": 0,
                   "Scale": {
                     "Type": "Range",
                     "Evaluation": "Seed",
@@ -3195,12 +3289,17 @@
                   "Timing": "GameTime",
                   "Tint": "1,1,1,1",
                   "UsePrefabFeature": false,
-                  "Yaw": 0
+                  "Yaw": {
+                    "Type": "Range",
+                    "Evaluation": "Seed",
+                    "Constants": "0,360,0,0"
+                  }
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "0ec71c70-2ec8-44ee-96e3-ae060d6cdd36",
                   "__enabled": true,
+                  "__version": 2,
                   "Additive": false,
                   "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
@@ -3219,7 +3318,7 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Opaque": false,
-                  "Pivot": "0.5,0.5",
+                  "PlaybackSpeed": 1,
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -3230,7 +3329,29 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                  "Sprite": {
+                    "$compiler": "embed",
+                    "$source": null,
+                    "data": {
+                      "Animations": [
+                        {
+                          "Name": "Default",
+                          "FrameRate": 15,
+                          "Origin": "0.5,0.5",
+                          "LoopMode": "Loop",
+                          "Frames": [
+                            {
+                              "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                              "BroadcastMessages": []
+                            }
+                          ]
+                        }
+                      ],
+                      "__references": null
+                    },
+                    "compiled": null
+                  },
+                  "StartingAnimationName": "Default",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -3276,13 +3397,14 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
                   "__type": "Sandbox.ParticleEffect",
                   "__guid": "d417a9f0-7b2a-4c48-8705-83a92148a705",
                   "__enabled": true,
-                  "__version": 2,
+                  "__version": 3,
                   "Alpha": {
                     "Type": "Curve",
                     "Evaluation": "Life",
@@ -3404,11 +3526,7 @@
                   "Pitch": 0,
                   "PreWarm": 0,
                   "PushStrength": 0,
-                  "Roll": {
-                    "Type": "Range",
-                    "Evaluation": "Seed",
-                    "Constants": "0,360,0,0"
-                  },
+                  "Roll": 0,
                   "Scale": {
                     "Type": "Range",
                     "Evaluation": "Seed",
@@ -3429,12 +3547,17 @@
                   "Timing": "GameTime",
                   "Tint": "1,1,1,1",
                   "UsePrefabFeature": false,
-                  "Yaw": 0
+                  "Yaw": {
+                    "Type": "Range",
+                    "Evaluation": "Seed",
+                    "Constants": "0,360,0,0"
+                  }
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "263afc9a-0298-40ec-b760-b0d4707c30fa",
                   "__enabled": true,
+                  "__version": 2,
                   "Additive": false,
                   "Alignment": "LookAtCamera",
                   "BlurAmount": 0.5,
@@ -3453,7 +3576,7 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Opaque": false,
-                  "Pivot": "0.5,0.5",
+                  "PlaybackSpeed": 1,
                   "RenderOptions": {
                     "GameLayer": true,
                     "OverlayLayer": false,
@@ -3464,7 +3587,29 @@
                   "Scale": 2,
                   "Shadows": false,
                   "SortMode": "ByDistance",
-                  "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                  "Sprite": {
+                    "$compiler": "embed",
+                    "$source": null,
+                    "data": {
+                      "Animations": [
+                        {
+                          "Name": "Default",
+                          "FrameRate": 15,
+                          "Origin": "0.5,0.5",
+                          "LoopMode": "Loop",
+                          "Frames": [
+                            {
+                              "Texture": "textures/particles/smoke/smoke_static_a.vtex",
+                              "BroadcastMessages": []
+                            }
+                          ]
+                        }
+                      ],
+                      "__references": null
+                    },
+                    "compiled": null
+                  },
+                  "StartingAnimationName": "Default",
                   "TextureFilter": "Bilinear"
                 },
                 {
@@ -3510,6 +3655,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -3518,6 +3664,7 @@
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -3541,6 +3688,7 @@
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "0deeed36-b40b-432c-9d3c-aebbb1b9e9e1",
                   "__enabled": true,
+                  "ColliderFlags": 0,
                   "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
@@ -3601,6 +3749,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -3638,6 +3787,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -3687,6 +3837,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -3724,6 +3875,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -3761,6 +3913,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -3810,6 +3963,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -3847,6 +4001,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -3884,6 +4039,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -3933,6 +4089,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -3970,6 +4127,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4007,6 +4165,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4056,6 +4215,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -4093,6 +4253,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4130,6 +4291,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4179,6 +4341,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -4216,6 +4379,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4253,6 +4417,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4302,6 +4467,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -4339,6 +4505,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4376,6 +4543,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4425,6 +4593,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -4462,6 +4631,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4499,6 +4669,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4548,6 +4719,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -4585,6 +4757,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4622,6 +4795,7 @@
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4671,6 +4845,7 @@
                       "NetworkMode": 2,
                       "NetworkInterpolation": true,
                       "NetworkOrphaned": 0,
+                      "NetworkTransmit": true,
                       "OwnerTransfer": 1,
                       "Components": [
                         {
@@ -4708,6 +4883,7 @@
                   "NetworkMode": 2,
                   "NetworkInterpolation": true,
                   "NetworkOrphaned": 0,
+                  "NetworkTransmit": true,
                   "OwnerTransfer": 1,
                   "Components": [
                     {
@@ -4737,6 +4913,7 @@
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
                       "CreateAttachments": false,
+                      "LodOverride": null,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
                       "Materials": null,
@@ -4776,12 +4953,14 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
               "__type": "Sandbox.ModelCollider",
               "__guid": "ee94cfe0-a522-442f-ae95-104f1330444b",
               "__enabled": true,
+              "ColliderFlags": 0,
               "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
@@ -4810,6 +4989,7 @@
               "BoneMergeTarget": null,
               "CreateAttachments": false,
               "CreateBoneObjects": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
@@ -4877,6 +5057,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -4915,6 +5096,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -4953,6 +5135,7 @@
               "NetworkMode": 1,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 1,
+              "NetworkTransmit": true,
               "OwnerTransfer": 0,
               "Components": [
                 {
@@ -4961,6 +5144,7 @@
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -4984,6 +5168,7 @@
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "abb019f0-a524-4c8e-8ad6-546fa4cfe5af",
                   "__enabled": true,
+                  "ColliderFlags": 0,
                   "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
@@ -5056,6 +5241,7 @@
               "NetworkMode": 1,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 1,
+              "NetworkTransmit": true,
               "OwnerTransfer": 0,
               "Components": [
                 {
@@ -5064,6 +5250,7 @@
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -5087,6 +5274,7 @@
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "2b62352f-2f6d-485a-a2cd-ad9cdb1f3135",
                   "__enabled": true,
+                  "ColliderFlags": 0,
                   "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
@@ -5159,12 +5347,14 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "14ea9439-7dfb-4bd7-b982-04d6fe9fde8a",
                   "__enabled": true,
+                  "ColliderFlags": 0,
                   "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
@@ -5200,6 +5390,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -5208,6 +5399,7 @@
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -5231,6 +5423,7 @@
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "b05232cf-e0d7-46e5-a661-4a45c4b306c9",
                   "__enabled": true,
+                  "ColliderFlags": 0,
                   "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
@@ -5291,6 +5484,7 @@
               "NetworkMode": 2,
               "NetworkInterpolation": true,
               "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
               "OwnerTransfer": 1,
               "Components": [
                 {
@@ -5299,6 +5493,7 @@
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Materials": null,
@@ -5322,6 +5517,7 @@
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "23cbf946-e868-4c95-a377-dfa9263f9354",
                   "__enabled": true,
+                  "ColliderFlags": 0,
                   "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
@@ -5384,6 +5580,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -5444,6 +5641,7 @@
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
             {
@@ -5461,6 +5659,68 @@
               "OnComponentUpdate": null,
               "Shadows": true,
               "SkyColor": "0.05882,0.07451,0.08235,1"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "5d03de4b-4998-46c2-878c-bf7c47110f83",
+          "__version": 1,
+          "Flags": 0,
+          "Name": "Refract EH",
+          "Position": "-512,-512,148",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a6ab1473-1adf-4b4e-a913-fa8130940afc",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/sbox_stargate/event_horizon/event_horizon_refract.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "Off",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "SceneObjectDebug",
+              "__guid": "e5e20345-b350-4489-83dd-673a179521f1",
+              "__enabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Renderer": {
+                "_type": "component",
+                "component_id": "a6ab1473-1adf-4b4e-a913-fa8130940afc",
+                "go": "5d03de4b-4998-46c2-878c-bf7c47110f83",
+                "component_type": "ModelRenderer"
+              }
             }
           ],
           "Children": []

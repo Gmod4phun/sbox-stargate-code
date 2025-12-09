@@ -1,0 +1,17 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/sgp_test.shader"
+
+	g_bBackside "1"
+	g_flEstablished "1.000"
+	g_flMasterOpacity "1.000"
+	g_flRefractEdgeMargin "0.025"
+	g_flRefractStrength "0.500"
+	Noise "textures/noise_01.psd"
+	WaterNormal "materials/sbox_stargate/kawoosh/waternormal0001.tga"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

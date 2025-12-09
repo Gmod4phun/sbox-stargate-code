@@ -1,0 +1,38 @@
+{
+  "__version": 3,
+  "IsSubgraph": true,
+  "Path": "",
+  "Model": "",
+  "Title": "",
+  "Description": "",
+  "Category": null,
+  "Icon": "",
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "MaterialDomain": "Surface",
+  "Metadata": {},
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": true,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "nodes": [
+    {
+      "_class": "SubgraphOutput",
+      "__version": 1,
+      "OutputName": "Output0",
+      "OutputDescription": "",
+      "OutputType": "Vector3",
+      "Preview": "None",
+      "PortOrder": 0,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {}
+    }
+  ],
+  "parameters": []
+}

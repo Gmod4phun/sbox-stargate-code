@@ -1,0 +1,510 @@
+{
+  "__version": 4,
+  "IsSubgraph": false,
+  "Path": "shaders/sgp_customfunc_test.sgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": "",
+  "Description": null,
+  "Category": "",
+  "Icon": "",
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "Metadata": {},
+  "PreviewSettings": {
+    "ViewMode": "Perspective",
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "nodes": [
+    {
+      "_class": "Result",
+      "__version": 1,
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 0,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "2232,168",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "22",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Normal": {
+        "Identifier": "18",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SampleTexture2DNode",
+      "__version": 1,
+      "SamplerState": {
+        "__version": 2,
+        "Name": "",
+        "IsAttribute": false,
+        "Filter": "Bilinear",
+        "AddressModeU": "Wrap",
+        "AddressModeV": "Wrap",
+        "AddressModeW": "Wrap",
+        "MipLodBias": 0,
+        "MaxAnisotropy": 8,
+        "BorderColor": "0,0,0,0"
+      },
+      "UI": {
+        "Name": "WaterNormal",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "materials/sbox_stargate/kawoosh/waternormal0001.tga",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "1",
+      "Position": "120,96",
+      "HandleOffsets": {},
+      "Texture2DInput": {
+        "Identifier": "2",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "CoordsInput": {
+        "Identifier": "5",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Texture2DParameterNode",
+      "__version": 2,
+      "BlackboardParameterIdentifier": "56d04136-8870-41c7-8068-9d4fb82cad0a",
+      "UI": {
+        "Name": "WaterNormal",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "materials/sbox_stargate/kawoosh/waternormal0001.tga",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "2",
+      "Position": "-264,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TransformNormal",
+      "__version": 1,
+      "InputSpace": "Tangent",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": true,
+      "Identifier": "3",
+      "Position": "1500,228",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SampleTexture2DNode",
+      "__version": 1,
+      "SamplerState": {
+        "__version": 2,
+        "Name": "",
+        "IsAttribute": false,
+        "Filter": "Bilinear",
+        "AddressModeU": "Wrap",
+        "AddressModeV": "Wrap",
+        "AddressModeW": "Wrap",
+        "MipLodBias": 0,
+        "MaxAnisotropy": 8,
+        "BorderColor": "0,0,0,0"
+      },
+      "UI": {
+        "Name": "WaterNormal",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "materials/sbox_stargate/kawoosh/waternormal0001.tga",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "4",
+      "Position": "120,360",
+      "HandleOffsets": {},
+      "Texture2DInput": {
+        "Identifier": "2",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "CoordsInput": {
+        "Identifier": "6",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "__version": 1,
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "5",
+      "Position": "-216,168",
+      "HandleOffsets": {},
+      "Offset": {
+        "Identifier": "12",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "__version": 1,
+      "DefaultTile": "1.19,1.13",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "6",
+      "Position": "-228,372",
+      "HandleOffsets": {},
+      "Offset": {
+        "Identifier": "9",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 0.113,
+      "Identifier": "7",
+      "Position": "-900,84",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "10",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Float2ConstantNode",
+      "__version": 1,
+      "Min": "-1,-1",
+      "Max": "1,1",
+      "Step": 0,
+      "Value": "-0.1604054,-0.07358748",
+      "Identifier": "8",
+      "Position": "-768,396",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "9",
+      "Position": "-480,372",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "16",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "8",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Time",
+      "__version": 1,
+      "Identifier": "10",
+      "Position": "-1176,192",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float2ConstantNode",
+      "__version": 1,
+      "Min": "-1,-1",
+      "Max": "1,1",
+      "Step": 0,
+      "Value": "0.1423712,0.2291892",
+      "Identifier": "11",
+      "Position": "-780,192",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "12",
+      "Position": "-492,168",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "7",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "11",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "13",
+      "Position": "384,204",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "R",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "4",
+        "Output": "R",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "14",
+      "Position": "384,288",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "G",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "4",
+        "Output": "G",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "__version": 1,
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 1,
+      "DefaultW": 0,
+      "Identifier": "15",
+      "Position": "732,204",
+      "HandleOffsets": {},
+      "X": {
+        "Identifier": "13",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Y": {
+        "Identifier": "14",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Z": {
+        "Identifier": "23",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 0.12,
+      "Identifier": "16",
+      "Position": "-912,300",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "10",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "ColorConstantNode",
+      "__version": 1,
+      "Value": "0.00175,0.01713,0.04186,1",
+      "Identifier": "17",
+      "Position": "1500,-12",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Normalize",
+      "__version": 1,
+      "Identifier": "18",
+      "Position": "1728,228",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "ElipseShapeNode",
+      "__version": 1,
+      "DefaultWidth": 2,
+      "DefaultHeight": 2,
+      "Identifier": "19",
+      "Position": "1680,-144",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Lerp",
+      "__version": 1,
+      "DefaultA": 1,
+      "DefaultB": 1,
+      "Fraction": 1,
+      "Identifier": "20",
+      "Position": "1308,348",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "21",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "15",
+        "Output": "XYZ",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Float3ConstantNode",
+      "__version": 1,
+      "Min": "0,0,0",
+      "Max": "1,1,1",
+      "Step": 0,
+      "Value": "1,1,1",
+      "Identifier": "21",
+      "Position": "1080,180",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "22",
+      "Position": "1896,24",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "19",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "17",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "23",
+      "Position": "456,420",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "B",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "4",
+        "Output": "B",
+        "Subgraph": null
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "_class": "Texture2DParameter",
+      "Value": {
+        "Name": "",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "materials/sbox_stargate/kawoosh/waternormal0001.tga",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "56d04136-8870-41c7-8068-9d4fb82cad0a",
+      "Name": "WaterNormal"
+    }
+  ]
+}

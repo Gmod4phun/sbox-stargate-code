@@ -1,0 +1,423 @@
+{
+  "__version": 4,
+  "IsSubgraph": true,
+  "Path": "shaders/funcs/simplex_noise.sgpfunc",
+  "Model": "models/dev/plane.vmdl",
+  "Title": "Simplex 3D Round Masked",
+  "Description": null,
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": true,
+  "BlendMode": "Translucent",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "Metadata": {},
+  "PreviewSettings": {
+    "ViewMode": "Perspective",
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "nodes": [
+    {
+      "_class": "CustomFunctionNode",
+      "__version": 1,
+      "Name": "Simplex3D",
+      "Type": "File",
+      "Body": "\nOutFloat3_0 = float3( 1, 0, 1 );",
+      "Source": "procedural/simplex3d.hlsl",
+      "PixelStageOnly": false,
+      "CodeComment": "",
+      "ExpressionInputs": [
+        {
+          "Id": "b4520a0c-d5c5-45d8-986e-4ccddaaf76a8",
+          "Name": "input",
+          "Type": "Vector2",
+          "Priority": 0
+        },
+        {
+          "Id": "11d01c36-9b8f-4637-8708-ad044cbba80f",
+          "Name": "time",
+          "Type": "float",
+          "Priority": 0
+        }
+      ],
+      "ExpressionOutputs": [
+        {
+          "Id": "8a2dbd24-8418-451a-92c3-498f019c9172",
+          "Name": "output",
+          "Type": "float",
+          "Priority": 0
+        }
+      ],
+      "Identifier": "0",
+      "Position": "-1176,384",
+      "HandleOffsets": {},
+      "input": {
+        "Identifier": "4",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "time": {
+        "Identifier": "2",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Time",
+      "__version": 1,
+      "Identifier": "1",
+      "Position": "-1776,444",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "2",
+      "Position": "-1332,444",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "3",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "30a297f6-b4eb-4a20-81f1-499f9abe87a7",
+      "InputType": "Float",
+      "InputName": "Time Mul",
+      "InputDescription": "",
+      "DefaultData": 1,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "3",
+      "Position": "-1596,504",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "8d2635cc-6657-45fb-8d8f-1a6d2bf015f0",
+      "InputType": "Vector2",
+      "InputName": "UV",
+      "InputDescription": "",
+      "DefaultData": "0,0",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "4",
+      "Position": "-1596,384",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "RemapValue",
+      "__version": 1,
+      "In": 0.5,
+      "InMin": 0,
+      "InMax": 1,
+      "OutMin": 0,
+      "OutMax": 1,
+      "Clamp": true,
+      "Identifier": "5",
+      "Position": "-912,432",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "0",
+        "Output": "output",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "C": {
+        "Identifier": "7",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "D": {
+        "Identifier": "8",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "E": {
+        "Identifier": "9",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "86611a51-813f-4c3f-934b-16396da0e944",
+      "InputType": "Float",
+      "InputName": "In Min",
+      "InputDescription": "",
+      "DefaultData": 0,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "6",
+      "Position": "-1596,564",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "ad66a034-4aa7-41f6-bb38-9ae798e4a8c2",
+      "InputType": "Float",
+      "InputName": "In Max",
+      "InputDescription": "",
+      "DefaultData": 1,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "7",
+      "Position": "-1596,624",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "f132e33e-8c52-4255-85f6-ce2f6d5b9743",
+      "InputType": "Float",
+      "InputName": "Out Min",
+      "InputDescription": "",
+      "DefaultData": 0,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "8",
+      "Position": "-1596,684",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "c79dcad2-9412-48c8-9775-f3c7c36eb181",
+      "InputType": "Float",
+      "InputName": "Out Max",
+      "InputDescription": "",
+      "DefaultData": 1,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "9",
+      "Position": "-1596,744",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "RoundGradientNode",
+      "__version": 1,
+      "DefaultCenterPos": "0.5,0.5",
+      "DefaultRadius": 0.25,
+      "DefaultDensity": 2.33,
+      "DefaultInvert": false,
+      "Identifier": "10",
+      "Position": "-912,672",
+      "HandleOffsets": {},
+      "Radius": {
+        "Identifier": "12",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Density": {
+        "Identifier": "13",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Invert": {
+        "Identifier": "14",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "11",
+      "Position": "-576,516",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "5",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "178d04d5-f274-4cc7-ae14-bf5880e43d83",
+      "InputType": "Float",
+      "InputName": "Mask Radius",
+      "InputDescription": "",
+      "DefaultData": 0.5,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "12",
+      "Position": "-1596,840",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "5ad836c6-ea38-422f-9d6b-80025104a2d4",
+      "InputType": "Float",
+      "InputName": "Mask Density",
+      "InputDescription": "",
+      "DefaultData": 1,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "13",
+      "Position": "-1596,900",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "__version": 1,
+      "BlackboardParameterIdentifier": "effada37-2ed7-486c-ac90-9d3069127c22",
+      "InputType": "Bool",
+      "InputName": "Invert Mask",
+      "InputDescription": "",
+      "DefaultData": false,
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Identifier": "14",
+      "Position": "-1596,960",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphOutput",
+      "__version": 1,
+      "OutputIdentifier": "80c4b875-24d7-4168-ae6a-9cbb4e7156b5",
+      "OutputName": "Result",
+      "OutputDescription": "",
+      "OutputType": "Float",
+      "Preview": "Albedo",
+      "PortOrder": 0,
+      "Identifier": "15",
+      "Position": "-420,516",
+      "HandleOffsets": {},
+      "Result": {
+        "Identifier": "11",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "Time Mul",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 1,
+      "Identifier": "30a297f6-b4eb-4a20-81f1-499f9abe87a7"
+    },
+    {
+      "_class": "Float2SubgraphInputParameter",
+      "Min": "0,0",
+      "Max": "1,1",
+      "Name": "UV",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": "0,0",
+      "Identifier": "8d2635cc-6657-45fb-8d8f-1a6d2bf015f0"
+    },
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "In Min",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 0,
+      "Identifier": "86611a51-813f-4c3f-934b-16396da0e944"
+    },
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "In Max",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 1,
+      "Identifier": "ad66a034-4aa7-41f6-bb38-9ae798e4a8c2"
+    },
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "Out Min",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 0,
+      "Identifier": "f132e33e-8c52-4255-85f6-ce2f6d5b9743"
+    },
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "Out Max",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 1,
+      "Identifier": "c79dcad2-9412-48c8-9775-f3c7c36eb181"
+    },
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "Mask Radius",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 0.5,
+      "Identifier": "178d04d5-f274-4cc7-ae14-bf5880e43d83"
+    },
+    {
+      "_class": "FloatSubgraphInputParameter",
+      "Min": 0,
+      "Max": 1,
+      "Name": "Mask Density",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": 1,
+      "Identifier": "5ad836c6-ea38-422f-9d6b-80025104a2d4"
+    },
+    {
+      "_class": "BoolSubgraphInputParameter",
+      "Name": "Invert Mask",
+      "Description": "",
+      "IsRequired": false,
+      "PortOrder": 0,
+      "Value": false,
+      "Identifier": "effada37-2ed7-486c-ac90-9d3069127c22"
+    }
+  ]
+}

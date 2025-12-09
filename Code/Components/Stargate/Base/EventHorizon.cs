@@ -12,6 +12,9 @@ namespace Sandbox.Components.Stargate
 		public ModelRenderer EventHorizonModel { get; set; }
 
 		[Property]
+		public ModelRenderer DebugRenderer { get; set; }
+
+		[Property]
 		public EventHorizonTrigger EventHorizonTrigger { get; set; }
 
 		// material VARIABLES - probably name this better one day
@@ -342,24 +345,24 @@ namespace Sandbox.Components.Stargate
 					/*
 					_frontLight = new SpotLightEntity
 					{
-						Position = Position + Rotation.Backward * 1f,
-						Parent = this,
-						Rotation = Rotation,
-						Color = Color.FromBytes( 100, 180, 255 ),
-						Brightness = 10,
-						Enabled = true,
-						//LightCookie = Texture.Load(FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
+					    Position = Position + Rotation.Backward * 1f,
+					    Parent = this,
+					    Rotation = Rotation,
+					    Color = Color.FromBytes( 100, 180, 255 ),
+					    Brightness = 10,
+					    Enabled = true,
+					    //LightCookie = Texture.Load(FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
 					};
 
 					_backLight = new SpotLightEntity
 					{
-						Position = Position + Rotation.Backward * 1f,
-						Parent = this,
-						Rotation = Rotation.RotateAroundAxis(Vector3.Up, 180),
-						Color = Color.FromBytes( 100, 180, 255 ),
-						Brightness = 10,
-						Enabled = true,
-						//LightCookie = Texture.Load( FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
+					    Position = Position + Rotation.Backward * 1f,
+					    Parent = this,
+					    Rotation = Rotation.RotateAroundAxis(Vector3.Up, 180),
+					    Color = Color.FromBytes( 100, 180, 255 ),
+					    Brightness = 10,
+					    Enabled = true,
+					    //LightCookie = Texture.Load( FileSystem.Mounted, "textures/water/caustic_a/caustic_a.vtex" )
 					};
 					*/
 				}
@@ -427,21 +430,21 @@ namespace Sandbox.Components.Stargate
 		/*
 		private void ClientLightAnimationLogic()
 		{
-			var brightness = ((float)Math.Abs( Math.Sin( Time.Now * 12 ) )).Remap( 0, 1, 3.5f, 4f );
+		    var brightness = ((float)Math.Abs( Math.Sin( Time.Now * 12 ) )).Remap( 0, 1, 3.5f, 4f );
 
-			if (_frontLight.IsValid())
-			{
-				_frontLight.Brightness = brightness;
-				_frontLight.OuterConeAngle = 150;
-				_frontLight.InnerConeAngle = _frontLight.OuterConeAngle / 3;
-			}
+		    if (_frontLight.IsValid())
+		    {
+		        _frontLight.Brightness = brightness;
+		        _frontLight.OuterConeAngle = 150;
+		        _frontLight.InnerConeAngle = _frontLight.OuterConeAngle / 3;
+		    }
 
-			if ( _backLight.IsValid() )
-			{
-				_backLight.Brightness = brightness;
-				_backLight.OuterConeAngle = 150;
-				_backLight.InnerConeAngle = _backLight.OuterConeAngle / 3;
-			}
+		    if ( _backLight.IsValid() )
+		    {
+		        _backLight.Brightness = brightness;
+		        _backLight.OuterConeAngle = 150;
+		        _backLight.InnerConeAngle = _backLight.OuterConeAngle / 3;
+		    }
 		}
 		*/
 
@@ -881,18 +884,18 @@ namespace Sandbox.Components.Stargate
 			/*
 			if ( WormholeLoop.IsValid() )
 			{
-				WormholeLoop.Position = WorldPosition;
+			    WormholeLoop.Position = WorldPosition;
 
-				var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
+			    var player = Game.ActiveScene.GetAllComponents<PlayerController>().FirstOrDefault( p => p.Network.OwnerConnection != null && p.Network.OwnerConnection == Connection.Local );
 
-				if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == MultiWorldSystem.GetWorldIndexOfObject( this ) )
-				{
-					WormholeLoop.Volume = 1;
-				}
-				else
-				{
-					WormholeLoop.Volume = 0;
-				}
+			    if ( MultiWorldSystem.GetWorldIndexOfObject( player ) == MultiWorldSystem.GetWorldIndexOfObject( this ) )
+			    {
+			        WormholeLoop.Volume = 1;
+			    }
+			    else
+			    {
+			        WormholeLoop.Volume = 0;
+			    }
 			}
 			*/
 
@@ -935,7 +938,7 @@ namespace Sandbox.Components.Stargate
 			{
 				_eventHorizonVideo.Play(
 					FileSystem.Mounted,
-					"videos/event_horizon/event_horizon_loop.mp4"
+					"videos/event_horizon/event_horizon_loop_normal.mp4"
 				);
 				_eventHorizonVideo.Muted = true;
 				_eventHorizonVideo.Repeat = true;
@@ -951,6 +954,11 @@ namespace Sandbox.Components.Stargate
 			)
 			{
 				EventHorizonModel.SceneObject.Attributes.Set("Color", _eventHorizonVideo.Texture);
+
+				if (DebugRenderer.IsValid() && DebugRenderer.SceneObject.IsValid())
+				{
+					DebugRenderer.SceneObject.Attributes.Set("EHVideo", _eventHorizonVideo.Texture);
+				}
 			}
 		}
 
@@ -1001,15 +1009,15 @@ namespace Sandbox.Components.Stargate
 		[ConCmd.Server]
 		private static void OnPlayerEndWormhole( int netId )
 		{
-			var eh = FindByIndex<EventHorizon>( netId );
-			if ( !eh.IsValid() ) return;
+		    var eh = FindByIndex<EventHorizon>( netId );
+		    if ( !eh.IsValid() ) return;
 
-			var pawn = ConsoleSystem.Caller.Pawn as Entity;
+		    var pawn = ConsoleSystem.Caller.Pawn as Entity;
 
-			var id = eh.InTransitPlayers.IndexOf( pawn );
-			if ( id == -1 ) return;
+		    var id = eh.InTransitPlayers.IndexOf( pawn );
+		    if ( id == -1 ) return;
 
-			eh.InTransitPlayers.RemoveAt( id );
+		    eh.InTransitPlayers.RemoveAt( id );
 		}
 		*/
 
@@ -1162,29 +1170,29 @@ namespace Sandbox.Components.Stargate
 		[GameEvent.Physics.PostStep]
 		private void UpdateCollider()
 		{
-			foreach ( var eh in All.OfType<EventHorizon>().Where( x => x.Gate.IsValid() && x._colliderFloor.IsValid() ) )
-			{
-				var startPos = eh.Position + eh.Rotation.Up * 110;
-				var endPos = eh.Position - eh.Rotation.Up * 110;
-				var tr = Trace.Ray( startPos, endPos ).WithTag( "world" ).Run();
+		    foreach ( var eh in All.OfType<EventHorizon>().Where( x => x.Gate.IsValid() && x._colliderFloor.IsValid() ) )
+		    {
+		        var startPos = eh.Position + eh.Rotation.Up * 110;
+		        var endPos = eh.Position - eh.Rotation.Up * 110;
+		        var tr = Trace.Ray( startPos, endPos ).WithTag( "world" ).Run();
 
-				var shouldUseCollider = tr.Hit && (Math.Abs( eh.Rotation.Angles().pitch )) < 15;
+		        var shouldUseCollider = tr.Hit && (Math.Abs( eh.Rotation.Angles().pitch )) < 15;
 
-				var collider = eh._colliderFloor;
-				if ( collider.PhysicsBody.IsValid() )
-					collider.PhysicsBody.Enabled = shouldUseCollider;
+		        var collider = eh._colliderFloor;
+		        if ( collider.PhysicsBody.IsValid() )
+		            collider.PhysicsBody.Enabled = shouldUseCollider;
 
-				if ( shouldUseCollider )
-				{
-					//DebugOverlay.TraceResult( tr );
+		        if ( shouldUseCollider )
+		        {
+		            //DebugOverlay.TraceResult( tr );
 
-					collider.Position = tr.HitPosition;
-					collider.Rotation = Rotation.From( tr.Normal.EulerAngles )
-						.RotateAroundAxis( Vector3.Right, -90 )
-						.RotateAroundAxis( Vector3.Up, 90 )
-						.RotateAroundAxis( Vector3.Up, eh.Rotation.Angles().yaw - 90 );
-				}
-			}
+		            collider.Position = tr.HitPosition;
+		            collider.Rotation = Rotation.From( tr.Normal.EulerAngles )
+		                .RotateAroundAxis( Vector3.Right, -90 )
+		                .RotateAroundAxis( Vector3.Up, 90 )
+		                .RotateAroundAxis( Vector3.Up, eh.Rotation.Angles().yaw - 90 );
+		        }
+		    }
 		}
 		*/
 
@@ -1192,13 +1200,13 @@ namespace Sandbox.Components.Stargate
 		[ClientRpc]
 		private async void PlayWormholeCinematic()
 		{
-			// TODO: Find a way to call this when the EH is deleted before the cinematic end to not keep the player stuck in this
-			var panel = Game.RootPanel.AddChild<WormholeCinematic>();
+		    // TODO: Find a way to call this when the EH is deleted before the cinematic end to not keep the player stuck in this
+		    var panel = Game.RootPanel.AddChild<WormholeCinematic>();
 
-			await GameTask.DelaySeconds( 7.07f );
+		    await GameTask.DelaySeconds( 7.07f );
 
-			panel.Delete( true );
-			OnPlayerEndWormhole( NetworkIdent );
+		    panel.Delete( true );
+		    OnPlayerEndWormhole( NetworkIdent );
 		}
 		*/
 

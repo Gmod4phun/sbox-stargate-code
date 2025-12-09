@@ -1,0 +1,14 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/shadergraphplus/showcase/roundgradient.shader"
+
+	g_bInvertGradient "1"
+	g_flDensity "1.000"
+	g_flRadius "0.500"
+	g_vCenter "[0.500 0.500]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}
