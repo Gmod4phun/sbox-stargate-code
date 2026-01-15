@@ -39,7 +39,7 @@ public static class MultiWorldExtensions
 
 	public static SceneTrace WithWorld(this SceneTrace trace, MultiWorld world)
 	{
-		return trace.WithTag(world.WorldTag);
+		return world.IsValid() ? trace.WithTag(world.WorldTag) : trace;
 	}
 
 	public static void ClearParent(this GameObject go)

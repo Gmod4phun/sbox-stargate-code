@@ -11,22 +11,43 @@
   "ShadingModel": "Lit",
   "Domain": "Surface",
   "PreviewSettings": {
+    "RenderBackfaces": false,
     "EnableShadows": true,
+    "ShowGround": false,
     "ShowSkybox": true,
     "BackgroundColor": "0,0,0,1",
     "Tint": "1,1,1,1"
   },
+  "Version": 1,
   "nodes": [
     {
       "_class": "TextureSampler",
       "Image": "materials/dev/white_color.tga",
-      "Sampler": {},
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
       "UI": {
         "Name": "Metalness",
+        "IsAttribute": false,
         "Default": "1,1,1,1",
         "Extension": "Metal",
+        "CustomExtension": null,
         "ShowExtension": true,
-        "SrgbRead": true
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "0",
       "Position": "-240,372",
@@ -35,13 +56,31 @@
     {
       "_class": "TextureSampler",
       "Image": "materials/dev/white_color.tga",
-      "Sampler": {},
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
       "UI": {
         "Name": "Roughness",
+        "IsAttribute": false,
         "Default": "1,1,1,1",
         "Extension": "Rough",
+        "CustomExtension": null,
         "ShowExtension": true,
-        "SrgbRead": true
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "1",
       "Position": "-240,108",
@@ -50,12 +89,31 @@
     {
       "_class": "TextureSampler",
       "Image": "materials/sgc/doors/sgc_doors_door_main_ao.tga",
-      "Sampler": {},
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
       "UI": {
         "Name": "Color",
+        "IsAttribute": false,
         "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
         "ShowExtension": true,
-        "SrgbRead": true
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "2",
       "Position": "-144,-1152",
@@ -94,15 +152,31 @@
     {
       "_class": "TextureSampler",
       "Image": "materials/sgc/doors/sgc_doors_door_main_normal.tga",
-      "Sampler": {},
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
       "UI": {
         "Name": "Normal",
+        "IsAttribute": false,
         "Default": "1,1,1,1",
         "Extension": "Normal",
+        "CustomExtension": null,
         "ShowExtension": true,
+        "Processor": "None",
         "ColorSpace": "Linear",
         "ImageFormat": "BC7",
-        "SrgbRead": true
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "4",
       "Position": "-240,-144",
@@ -111,13 +185,31 @@
     {
       "_class": "TextureSampler",
       "Image": "materials/dev/white_color.tga",
-      "Sampler": {},
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
       "UI": {
         "Name": "Ambient Occlusion",
+        "IsAttribute": false,
         "Default": "1,1,1,1",
         "Extension": "AO",
+        "CustomExtension": null,
         "ShowExtension": true,
-        "SrgbRead": true
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "5",
       "Position": "-240,624",
@@ -126,13 +218,31 @@
     {
       "_class": "TextureSampler",
       "Image": "materials/sgc/doors/sgc_doors_door_main_stripe_diagonal_detailmask.tga",
-      "Sampler": {},
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
       "UI": {
         "Name": "Stripe Mask",
+        "IsAttribute": false,
         "Default": "1,1,1,1",
         "Extension": "Mask",
+        "CustomExtension": null,
         "ShowExtension": true,
-        "SrgbRead": true
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "6",
       "Position": "-60,-420",
@@ -144,7 +254,19 @@
       "IsAttribute": false,
       "Operator": "Equal",
       "Enabled": false,
-      "UI": {},
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
       "Identifier": "7",
       "Position": "876,-828",
       "HandleOffsets": {},
@@ -163,7 +285,17 @@
       "Name": "Stripe Color",
       "IsAttribute": false,
       "UI": {
-        "Type": "Color"
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "8",
       "Position": "-60,-624",
@@ -196,7 +328,17 @@
       "Name": "Door Color",
       "IsAttribute": false,
       "UI": {
-        "Type": "Color"
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
       },
       "Identifier": "10",
       "Position": "-144,-912",

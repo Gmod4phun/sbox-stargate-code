@@ -1,0 +1,14 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/shadergraphplus/features.shader"
+
+	//---- Noise ----
+	F_NOISE 1 // Voronoi
+
+	g_vRed "[1.000000 0.000000 0.000000 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

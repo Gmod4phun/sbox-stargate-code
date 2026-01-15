@@ -20,7 +20,7 @@ public class PowerNode : Component, Component.IDamageable
 	{
 		if (Gate.IsValid())
 		{
-			SetGateGravity(!Gate.HasAllActivePowerNodes);
+			SetGateGravity(!Gate.HasAllActivePowerNodes, true);
 		}
 	}
 
@@ -35,9 +35,11 @@ public class PowerNode : Component, Component.IDamageable
 		}
 	}
 
-	void SetGateGravity(bool has_gravity)
+	void SetGateGravity(bool has_gravity, bool force_create_rb = false)
 	{
-		var gate_rb = Gate?.GameObject?.Components?.GetOrCreate<Rigidbody>();
+		var gate_rb = force_create_rb
+			? Gate?.GameObject?.Components?.GetOrCreate<Rigidbody>()
+			: Gate?.GameObject?.Components?.Get<Rigidbody>();
 		if (gate_rb.IsValid())
 		{
 			gate_rb.Gravity = has_gravity;
@@ -58,6 +60,6 @@ public class PowerNode : Component, Component.IDamageable
 			Joint?.Destroy();
 		}
 
-		SetGateGravity(true);
+		SetGateGravity(true, true);
 	}
 }

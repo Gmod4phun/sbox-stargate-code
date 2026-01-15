@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Editor": {
+      "commandName": "Executable",
+      "executablePath": "H:\\steamlibrary\\steamapps\\common\\sbox\\sbox-dev.exe",
+      "commandLineArgs": "-project \u0022C:\\Users\\Gmod4\\Documents\\S\u0026box Projects\\sbox-stargate-code\\Libraries\\quack.shadergraphplus_staging\\ShaderGraphPlus.sbproj\u0022"
+    }
+  }
+}

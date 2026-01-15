@@ -1,3 +1,5 @@
+using Sandbox.Panels.DhdGateList;
+
 namespace Sandbox.Components.Stargate
 {
 	public class DhdButton : Component, Component.ExecuteInEditor, Component.IPressable

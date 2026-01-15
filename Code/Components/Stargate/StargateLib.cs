@@ -629,13 +629,13 @@ namespace Sandbox.Components.Stargate
 
 		public static async void PlaySound(GameObject gameObject, string name, float delay = 0)
 		{
-			if (!gameObject.IsValid())
-				return;
-
 			if (delay > 0)
 			{
 				await GameTask.DelaySeconds(delay);
 			}
+
+			if (!gameObject.IsValid())
+				return;
 
 			var worldIndex = gameObject.GetMultiWorld().WorldIndex;
 			MultiWorldSound.Play(name, gameObject.WorldPosition, worldIndex);

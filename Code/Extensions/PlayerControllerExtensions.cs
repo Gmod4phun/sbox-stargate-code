@@ -1,3 +1,5 @@
+using Sandbox.Panels;
+
 public static class PlayerControllerExtensions
 {
 	public static void ActivateTeleportScreenOverlay(this PlayerController player, float duration)

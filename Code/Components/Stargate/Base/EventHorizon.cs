@@ -155,6 +155,7 @@ namespace Sandbox.Components.Stargate
 			if (EventHorizonModel.IsValid())
 			{
 				EventHorizonModel.MaterialGroup = EventHorizonMaterialGroup;
+				EventHorizonModel.MaterialOverride = null;
 			}
 		}
 
@@ -304,8 +305,6 @@ namespace Sandbox.Components.Stargate
 			_shouldBeOff = false;
 
 			SkinEstablish();
-
-			EventHorizonModel.Enabled = true;
 		}
 
 		// [ClientRpc]
@@ -317,24 +316,6 @@ namespace Sandbox.Components.Stargate
 			_shouldEstablish = false;
 
 			SkinEventHorizon();
-		}
-
-		private Vector2 texCoordScale = new Vector2(1 / 8f, 1 / 4f);
-		private Vector2 texCoordOffset = new Vector2(0, 0);
-
-		void ApplyTextCoordAdjustments(SceneObject so, int frameNumber)
-		{
-			frameNumber = frameNumber.UnsignedMod(19);
-			so.Attributes.Set("texCoordScale", texCoordScale);
-			texCoordOffset.x = frameNumber % 8 * texCoordScale.x;
-			texCoordOffset.y = frameNumber / 8 * texCoordScale.y;
-			so.Attributes.Set("texCoordOffset", texCoordOffset);
-		}
-
-		void ResetTexCoordAdjustments(SceneObject so)
-		{
-			so.Attributes.Set("texCoordScale", new Vector2(1, 1));
-			so.Attributes.Set("texCoordOffset", new Vector2(0, 0));
 		}
 
 		public void ClientAnimLogic()
@@ -349,15 +330,13 @@ namespace Sandbox.Components.Stargate
 			if (_shouldBeOn && !_isOn)
 			{
 				_curFrame = MathX.Approach(_curFrame, _maxFrame, Time.Delta * 30);
-				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt()); // TODO check this
-				ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, _curFrame.FloorToInt());
+				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt());
 
 				if (_curFrame == _maxFrame)
 				{
 					_isOn = true;
 					_shouldEstablish = true;
 					_curBrightness = _maxBrightness;
-					ResetTexCoordAdjustments(EventHorizonModel.SceneObject);
 					SkinEventHorizon();
 
 					/*
@@ -390,7 +369,6 @@ namespace Sandbox.Components.Stargate
 			{
 				_curFrame = MathX.Approach(_curFrame, _minFrame, Time.Delta * 30);
 				EventHorizonModel.SceneObject.Attributes.Set("frame", _curFrame.FloorToInt());
-				ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, _curFrame.FloorToInt());
 
 				if (_curFrame == _minFrame)
 					_isOff = true;
@@ -398,7 +376,10 @@ namespace Sandbox.Components.Stargate
 
 			if (_shouldEstablish && !_isEstablished)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("illumbrightness", _curBrightness);
+				EventHorizonModel.SceneObject.Attributes.Set(
+					"Illumbrightness",
+					_curBrightness * 0.4f
+				);
 				_curBrightness = MathX.Approach(_curBrightness, _minBrightness, Time.Delta * 3f);
 				if (_curBrightness == _minBrightness)
 					_isEstablished = true;
@@ -406,7 +387,10 @@ namespace Sandbox.Components.Stargate
 
 			if (_shouldCollapse && !_isCollapsed)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("illumbrightness", _curBrightness);
+				EventHorizonModel.SceneObject.Attributes.Set(
+					"Illumbrightness",
+					_curBrightness * 0.4f
+				);
 				_curBrightness = MathX.Approach(_curBrightness, _maxBrightness, Time.Delta * 5f);
 
 				if (_curBrightness == _maxBrightness)
@@ -414,7 +398,6 @@ namespace Sandbox.Components.Stargate
 					_isCollapsed = true;
 					_shouldBeOff = true;
 					_curBrightness = _minBrightness;
-					ApplyTextCoordAdjustments(EventHorizonModel.SceneObject, 18);
 					SkinEstablish();
 					// _frontLight?.Delete();
 					// _backLight?.Delete();
@@ -435,7 +418,7 @@ namespace Sandbox.Components.Stargate
 			var establishing = EventHorizonModel.MaterialGroup == "establish";
 			if (EventHorizonModel.SceneObject is SceneObject so && so.IsValid())
 			{
-				so.Flags.CastShadows = false;
+				// so.Flags.CastShadows = false;
 				so.Flags.IsTranslucent = establishing || behind;
 				so.Flags.IsOpaque = !so.Flags.IsTranslucent;
 			}
@@ -967,7 +950,7 @@ namespace Sandbox.Components.Stargate
 				&& _eventHorizonVideo.Texture.IsLoaded
 			)
 			{
-				EventHorizonModel.SceneObject.Attributes.Set("texture", _eventHorizonVideo.Texture);
+				EventHorizonModel.SceneObject.Attributes.Set("Color", _eventHorizonVideo.Texture);
 			}
 		}
 

@@ -1,0 +1,18 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/shadergraphplus/showcase/flipbook.shader"
+
+	g_flColumnAmount "4.000"
+	g_flRowAmount "4.000"
+	g_flSpeed "1.000"
+	TexSheet "dev/vgui/materials/hud/gameinstructor_iconsheet1.tga"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.500"
+	g_flAntiAliasedEdgeStrength "1.000"
+}

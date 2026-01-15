@@ -94,14 +94,17 @@ PS
 	CreateTexture2DWithoutSampler(g_tTintMask) 			< Channel(R,	Box(TextureTintMask),	Linear); OutputFormat(ATI1N); SrgbRead(false); > ;
 	// Texture2D g_tTintMask < Channel( RGBA, Box( TextureTintMask ), Srgb ); OutputFormat( ATI1N ); SrgbRead( false ); >;
 
-	float3 g_vShieldColor < UiType( Color ); UiGroup( ",0/,0/0" ); Default3( 1.00, 1.00, 1.00 ); >;
+	float3 g_vShieldColor < Attribute( "shieldColor" ); Default3( 1.00, 1.00, 1.00 ); >;
 	float g_flIntersectionSharpness < UiGroup( ",0/,0/0" ); Default1( 0.2 ); Range1( 0.01, 1 ); >;
 	float g_flBorderDistanceFromSphereCenter < UiGroup( ",0/,0/0" ); Default1( 3 ); Range1( 0.01, 5 ); >;
 	float g_flBubbleAlphaMul < UiGroup( ",0/,0/0" ); Default1( 0.1 ); Range1( 0, 10 ); >;
-	float g_flMasterAlphaMul < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
+	float g_flMasterAlphaMul < Attribute( "masterAlphaMul" ); Default1( 1 ); >;
 
     float4 MainPs( PixelInput i ) : SV_Target0
     {
+		if (g_flMasterAlphaMul <= 0.01)
+			discard;
+
 		float2 f2FinalTexCoord = i.vTextureCoords.xy;
 
 		float3 pos = i.vPositionWithOffsetWs.xyz;
@@ -126,16 +129,18 @@ PS
 		float time = g_flTime;;
 
 		float2 offset1 = float2(time * 0.0725, time * 0.04);
-		float f1TintMask = g_tTintMask.Sample( TextureFiltering, f2FinalTexCoord + offset1 ).x;
+		float f1TintMask = g_tTintMask.Sample( g_sAniso, f2FinalTexCoord + offset1 ).x;
 
 		float2 offset2 = float2(time * -0.0725, time * -0.04);
-		float f2TintMask = g_tTintMask.Sample( TextureFiltering, f2FinalTexCoord + offset2 ).x;
+		float f2TintMask = g_tTintMask.Sample( g_sAniso, f2FinalTexCoord + offset2 ).x;
 
 		alpha = alpha * (f1TintMask + f2TintMask);
 
 		float3 outVar = g_vShieldColor * alpha;
 
 		outVar = outVar * g_flMasterAlphaMul;
+
+		outVar = saturate(outVar);
 
 		return float4(outVar, 0);
     }

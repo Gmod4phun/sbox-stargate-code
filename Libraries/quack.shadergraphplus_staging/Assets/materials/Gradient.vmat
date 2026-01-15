@@ -1,0 +1,9 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/shadergraphplus/gradients.shader"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

@@ -1,0 +1,1297 @@
+{
+  "__version": 4,
+  "IsSubgraph": false,
+  "Path": "shaders/sgp_test.sgrph",
+  "Model": "models/sbox_stargate/event_horizon/event_horizon.vmdl",
+  "Title": "",
+  "Description": null,
+  "Category": "",
+  "Icon": "",
+  "AddToNodeLibrary": false,
+  "BlendMode": "Translucent",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "Metadata": {},
+  "PreviewSettings": {
+    "ViewMode": "Perspective",
+    "RenderBackfaces": true,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "nodes": [
+    {
+      "_class": "Result",
+      "__version": 1,
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 0,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 0,
+      "Identifier": "0",
+      "Position": "2868,-852",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "47",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Emission": {
+        "Identifier": "34",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Opacity": {
+        "Identifier": "27",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Normal": {
+        "Identifier": "51",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SceneColorNode",
+      "__version": 1,
+      "AddressU": "Mirror",
+      "AddressV": "Mirror",
+      "Identifier": "1",
+      "Position": "912,-828",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "8",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SwitchNode",
+      "__version": 1,
+      "Name": "",
+      "IsAttribute": true,
+      "Enabled": true,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "2",
+      "Position": "1404,-1008",
+      "HandleOffsets": {},
+      "InputPredicate": {
+        "Identifier": "6",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "True": {
+        "Identifier": "30",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "False": {
+        "Identifier": "31",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "GradientConstantNode",
+      "__version": 1,
+      "Name": null,
+      "Gradient": {
+        "blend": "Linear",
+        "color": [
+          {
+            "t": 0.16666667,
+            "c": "0.0114,0.04902,0.14419,1"
+          },
+          {
+            "t": 0.89,
+            "c": "0.01785,0.04573,0.11628,1"
+          },
+          {
+            "t": 1,
+            "c": "0,0,0,1"
+          }
+        ],
+        "alpha": []
+      },
+      "Identifier": "3",
+      "Position": "228,-408",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "__version": 2,
+      "Size": "1248,320",
+      "Color": "0.2,0.71373,0.47451,1",
+      "Title": "EH Color",
+      "Description": "",
+      "DescriptionFontSize": 11,
+      "Layer": 4,
+      "Identifier": "4",
+      "Position": "-156,-480",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "__version": 2,
+      "Size": "1456,564",
+      "Color": "0.2,0.71373,0.47451,1",
+      "Title": "Scene Refracted Sample",
+      "Description": "",
+      "DescriptionFontSize": 11,
+      "Layer": 3,
+      "Identifier": "5",
+      "Position": "-360,-1068",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "BoolParameterNode",
+      "__version": 2,
+      "BlackboardParameterIdentifier": "c2cb2bf6-4b1c-475d-9190-b62ab77b9ab9",
+      "Value": false,
+      "Name": "Backside",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "6",
+      "Position": "1152,-1008",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TileAndOffset",
+      "__version": 1,
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "7",
+      "Position": "-12,-312",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "8",
+      "Position": "792,-828",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "15",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "29",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "__version": 2,
+      "Size": "1692,1044",
+      "Color": "0.2,0.71373,0.47451,1",
+      "Title": "Ripples",
+      "Description": "",
+      "DescriptionFontSize": 11,
+      "Layer": 5,
+      "Identifier": "9",
+      "Position": "-600,-132",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphNode",
+      "__version": 1,
+      "SubgraphPath": "shaders/funcs/simplex_noise.sgpfunc",
+      "DefaultValues": {
+        "In Max": 0.79999995,
+        "In Min": 0.72,
+        "Invert Mask": true,
+        "Mask Density": 0.7,
+        "Mask Radius": 0.35,
+        "Out Max": 0.12000022,
+        "Out Min": 0,
+        "Time Mul": 0.5,
+        "UV": "0,0"
+      },
+      "Identifier": "10",
+      "Position": "144,-60",
+      "HandleOffsets": {},
+      "UV": {
+        "Identifier": "42",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "__version": 1,
+      "DefaultTile": "12,20",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "11",
+      "Position": "-432,-48",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SampleTexture2DNode",
+      "__version": 1,
+      "SamplerState": {
+        "__version": 2,
+        "Name": "",
+        "IsAttribute": false,
+        "Filter": "Bilinear",
+        "AddressModeU": "Wrap",
+        "AddressModeV": "Wrap",
+        "AddressModeW": "Wrap",
+        "MipLodBias": 0,
+        "MaxAnisotropy": 8,
+        "BorderColor": "0,0,0,0"
+      },
+      "UI": {
+        "Name": "Noise",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "textures/noise_01.psd",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "12",
+      "Position": "216,-1704",
+      "HandleOffsets": {},
+      "Texture2DInput": {
+        "Identifier": "13",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "CoordsInput": {
+        "Identifier": "14",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Texture2DParameterNode",
+      "__version": 2,
+      "BlackboardParameterIdentifier": "17c35874-2ca6-4f8e-9f86-47b27a5290aa",
+      "UI": {
+        "Name": "Noise",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "textures/noise_01.psd",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "13",
+      "Position": "-96,-1704",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TileAndOffset",
+      "__version": 1,
+      "DefaultTile": "4,4",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "14",
+      "Position": "-72,-1524",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "ScreenCoordinate",
+      "__version": 1,
+      "Identifier": "15",
+      "Position": "444,-948",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SampleGradientNode",
+      "__version": 1,
+      "Identifier": "16",
+      "Position": "456,-408",
+      "HandleOffsets": {},
+      "Gradient": {
+        "Identifier": "3",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Time": {
+        "Identifier": "17",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "PolarCoordinates",
+      "__version": 1,
+      "DefaultCenter": "0.5,0.5",
+      "DefaultRadialScale": 1,
+      "DefaultLengthScale": 1,
+      "Identifier": "17",
+      "Position": "228,-312",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "7",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "RoundGradientNode",
+      "__version": 1,
+      "DefaultCenterPos": "0.5,0.5",
+      "DefaultRadius": 0.50000066,
+      "DefaultDensity": 16,
+      "DefaultInvert": false,
+      "Identifier": "18",
+      "Position": "468,-1572",
+      "HandleOffsets": {},
+      "Radius": {
+        "Identifier": "22",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "19",
+      "Position": "780,-1764",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "24",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "18",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "RoundGradientNode",
+      "__version": 1,
+      "DefaultCenterPos": "0.5,0.5",
+      "DefaultRadius": 0.5000007,
+      "DefaultDensity": 50,
+      "DefaultInvert": false,
+      "Identifier": "20",
+      "Position": "468,-1404",
+      "HandleOffsets": {},
+      "Radius": {
+        "Identifier": "22",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "21",
+      "Position": "924,-1764",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "19",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "20",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Subtract",
+      "__version": 1,
+      "DefaultA": 1,
+      "DefaultB": 1,
+      "Identifier": "22",
+      "Position": "252,-1368",
+      "HandleOffsets": {},
+      "B": {
+        "Identifier": "25",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Clamp",
+      "__version": 1,
+      "DefaultMin": 0,
+      "DefaultMax": 1,
+      "Identifier": "23",
+      "Position": "1044,-1764",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "21",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "RemapValue",
+      "__version": 1,
+      "In": 0.5,
+      "InMin": 0,
+      "InMax": 1,
+      "OutMin": 0,
+      "OutMax": 8.49,
+      "Clamp": true,
+      "Identifier": "24",
+      "Position": "468,-1764",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "12",
+        "Output": "B",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "FloatParameterNode",
+      "__version": 2,
+      "Min": 0,
+      "Max": 1,
+      "BlackboardParameterIdentifier": "554967c1-13f2-4b8a-b89f-627107163d13",
+      "Value": 1,
+      "Name": "Established",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "25",
+      "Position": "-96,-1344",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "FloatParameterNode",
+      "__version": 2,
+      "Min": 0,
+      "Max": 1,
+      "BlackboardParameterIdentifier": "8c9e8a7e-d552-4a1f-82e7-09dea728719f",
+      "Value": 1,
+      "Name": "Master Opacity",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "26",
+      "Position": "1308,-1668",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "27",
+      "Position": "1608,-1764",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "23",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "26",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "__version": 2,
+      "Size": "1920,624",
+      "Color": "0.2,0.71373,0.47451,1",
+      "Title": "Established opacity mask",
+      "Description": "",
+      "DescriptionFontSize": 11,
+      "Layer": 2,
+      "Identifier": "28",
+      "Position": "-228,-1836",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "HeightToNormal",
+      "__version": 1,
+      "OutputSpace": "Tangent",
+      "DefaultStrength": 1,
+      "Identifier": "29",
+      "Position": "444,-876",
+      "HandleOffsets": {},
+      "Height": {
+        "Identifier": "50",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Strength": {
+        "Identifier": "36",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "FloatConstantNode",
+      "__version": 1,
+      "Min": 0,
+      "Max": 1,
+      "Step": 0,
+      "Value": 0.4,
+      "Identifier": "30",
+      "Position": "1152,-948",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "FloatConstantNode",
+      "__version": 1,
+      "Min": 0,
+      "Max": 1,
+      "Step": 0,
+      "Value": 0,
+      "Identifier": "31",
+      "Position": "1152,-888",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "FloatParameterNode",
+      "__version": 2,
+      "Min": 0,
+      "Max": 1,
+      "BlackboardParameterIdentifier": "2566e86e-00c0-494e-80f4-988a48f02fa8",
+      "Value": 1,
+      "Name": "Refract Strength",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "32",
+      "Position": "-336,-672",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "FloatParameterNode",
+      "__version": 2,
+      "Min": 0,
+      "Max": 2,
+      "BlackboardParameterIdentifier": "7d3244c0-7abd-41e3-8f28-24256f0f95d5",
+      "Value": 1,
+      "Name": "Normal Strength",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "33",
+      "Position": "300,-600",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 2,
+      "Identifier": "34",
+      "Position": "2448,-792",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "47",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "RoundGradientNode",
+      "__version": 1,
+      "DefaultCenterPos": "0.5,0.5",
+      "DefaultRadius": 0.5,
+      "DefaultDensity": 8,
+      "DefaultInvert": true,
+      "Identifier": "35",
+      "Position": "84,-684",
+      "HandleOffsets": {},
+      "Radius": {
+        "Identifier": "38",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "36",
+      "Position": "288,-804",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "32",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "35",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "FloatParameterNode",
+      "__version": 2,
+      "Min": 0,
+      "Max": 0.1,
+      "BlackboardParameterIdentifier": "5036ce02-ba55-4ad2-9fb6-55ec67a47300",
+      "Value": 1,
+      "Name": "Refract Edge Margin",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "37",
+      "Position": "-336,-612",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Subtract",
+      "__version": 1,
+      "DefaultA": 0.5,
+      "DefaultB": 1,
+      "Identifier": "38",
+      "Position": "-84,-636",
+      "HandleOffsets": {},
+      "B": {
+        "Identifier": "37",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 0,
+      "Identifier": "39",
+      "Position": "1668,-408",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "16",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "53",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 4,
+      "Identifier": "40",
+      "Position": "1176,-60",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "41",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "ReroutePlus",
+      "__version": 1,
+      "Comment": null,
+      "Identifier": "41",
+      "Position": "804,-24",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "ReroutePlus",
+      "__version": 1,
+      "Comment": null,
+      "Identifier": "42",
+      "Position": "-120,168",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "__version": 1,
+      "SubgraphPath": "shaders/funcs/simplex_noise.sgpfunc",
+      "DefaultValues": {
+        "In Max": 1,
+        "In Min": 0,
+        "Invert Mask": true,
+        "Mask Density": 1,
+        "Mask Radius": 0.5,
+        "Out Max": 1,
+        "Out Min": 0,
+        "Time Mul": 1.2,
+        "UV": "0,0"
+      },
+      "Identifier": "43",
+      "Position": "60,-1020",
+      "HandleOffsets": {},
+      "UV": {
+        "Identifier": "44",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "__version": 1,
+      "DefaultTile": "8,8",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "44",
+      "Position": "-252,-828",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "__version": 2,
+      "Size": "472,252",
+      "Color": "0.2,0.71373,0.47451,1",
+      "Title": "Side Opacity",
+      "Description": "",
+      "DescriptionFontSize": 11,
+      "Layer": 1,
+      "Identifier": "45",
+      "Position": "1116,-1068",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "46",
+      "Position": "1680,-852",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "2",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "1",
+        "Output": "SceneColor",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "47",
+      "Position": "2136,-852",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "46",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "39",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "__version": 1,
+      "SubgraphPath": "shaders/funcs/simplex_noise.sgpfunc",
+      "DefaultValues": {
+        "In Max": 0.6499991,
+        "In Min": 0.030000009,
+        "Invert Mask": true,
+        "Mask Density": 0.109999985,
+        "Mask Radius": 0.40999997,
+        "Out Max": 0.34000003,
+        "Out Min": 0.08000004,
+        "Time Mul": 1.5,
+        "UV": "0,0"
+      },
+      "Identifier": "48",
+      "Position": "144,192",
+      "HandleOffsets": {},
+      "UV": {
+        "Identifier": "42",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "49",
+      "Position": "1308,-36",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "40",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "48",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "ReroutePlus",
+      "__version": 1,
+      "Comment": null,
+      "Identifier": "50",
+      "Position": "348,-876",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "43",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "HeightToNormal",
+      "__version": 1,
+      "OutputSpace": "World",
+      "DefaultStrength": 0.1,
+      "Identifier": "51",
+      "Position": "552,-684",
+      "HandleOffsets": {},
+      "Height": {
+        "Identifier": "50",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "Strength": {
+        "Identifier": "33",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "__version": 1,
+      "SubgraphPath": "shaders/funcs/simplex_noise.sgpfunc",
+      "DefaultValues": {
+        "In Max": 1.9499991,
+        "In Min": 0.55000013,
+        "Invert Mask": true,
+        "Mask Density": 0.750001,
+        "Mask Radius": 0.15,
+        "Out Max": 3.1599991,
+        "Out Min": 0,
+        "Time Mul": 0.6,
+        "UV": "0,0"
+      },
+      "Identifier": "52",
+      "Position": "144,444",
+      "HandleOffsets": {},
+      "UV": {
+        "Identifier": "42",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    },
+    {
+      "_class": "Add",
+      "__version": 1,
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "53",
+      "Position": "1500,84",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "49",
+        "Output": "Result",
+        "Subgraph": null
+      },
+      "B": {
+        "Identifier": "52",
+        "Output": "Result",
+        "Subgraph": null
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "_class": "Texture2DParameter",
+      "Value": {
+        "Name": "",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "textures/noise_01.psd",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "17c35874-2ca6-4f8e-9f86-47b27a5290aa",
+      "Name": "Noise"
+    },
+    {
+      "_class": "FloatParameter",
+      "Min": 0,
+      "Max": 1,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": 1,
+      "Identifier": "554967c1-13f2-4b8a-b89f-627107163d13",
+      "Name": "Established"
+    },
+    {
+      "_class": "FloatParameter",
+      "Min": 0,
+      "Max": 1,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": 1,
+      "Identifier": "8c9e8a7e-d552-4a1f-82e7-09dea728719f",
+      "Name": "Master Opacity"
+    },
+    {
+      "_class": "Texture2DParameter",
+      "Value": {
+        "Name": "",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": null,
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "BC7",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "ce66f7dd-1863-4756-9dd2-ed767b87fdc2",
+      "Name": "FrameBuffer"
+    },
+    {
+      "_class": "Texture2DParameter",
+      "Value": {
+        "Name": "",
+        "IsAttribute": false,
+        "DefaultColor": "0.50196,0.50196,1,1",
+        "DefaultTexture": "materials/sbox_stargate/kawoosh/kawoosh_particle_normal.tga",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "03ab7932-c200-477d-af91-3a7f91ceeb51",
+      "Name": "RefractNormal"
+    },
+    {
+      "_class": "BoolParameter",
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": false,
+      "Identifier": "c2cb2bf6-4b1c-475d-9190-b62ab77b9ab9",
+      "Name": "Backside"
+    },
+    {
+      "_class": "FloatParameter",
+      "Min": 0,
+      "Max": 1,
+      "UI": {
+        "Type": "Slider",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": 1,
+      "Identifier": "2566e86e-00c0-494e-80f4-988a48f02fa8",
+      "Name": "Refract Strength"
+    },
+    {
+      "_class": "FloatParameter",
+      "Min": 0,
+      "Max": 2,
+      "UI": {
+        "Type": "Slider",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": 1,
+      "Identifier": "7d3244c0-7abd-41e3-8f28-24256f0f95d5",
+      "Name": "Normal Strength"
+    },
+    {
+      "_class": "FloatParameter",
+      "Min": 0,
+      "Max": 0.1,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": 1,
+      "Identifier": "5036ce02-ba55-4ad2-9fb6-55ec67a47300",
+      "Name": "Refract Edge Margin"
+    },
+    {
+      "_class": "FloatParameter",
+      "Min": 1,
+      "Max": 10,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "IsAttribute": false,
+      "Value": 1,
+      "Identifier": "25719c27-43e0-4ee9-a6ab-163916554353",
+      "Name": "Emission Scale"
+    },
+    {
+      "_class": "Texture2DParameter",
+      "Value": {
+        "Name": "",
+        "IsAttribute": false,
+        "DefaultColor": "1,1,1,1",
+        "DefaultTexture": "materials/sbox_stargate/kawoosh/waternormal0001.tga",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "RGBA8888",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "cc36bca7-ef33-44d8-ad19-451dcae58682",
+      "Name": "WaterNormal"
+    }
+  ]
+}

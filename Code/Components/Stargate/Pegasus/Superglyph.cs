@@ -31,7 +31,7 @@ public class Superglyph : ModelRenderer, Component.ExecuteInEditor
 		if (SceneObject is not null && SceneObject.IsValid())
 		{
 			_selfIllumBrightness = _selfIllumBrightness.LerpTo(
-				GlyphEnabled ? 10 : 0,
+				GlyphEnabled ? 1 : 0,
 				Time.Delta * BrightnessTimeDelta
 			);
 			SceneObject.Batchable = false;
@@ -44,7 +44,7 @@ public class Superglyph : ModelRenderer, Component.ExecuteInEditor
 					-10 * PositionOnRing
 				)
 			);
-			SceneObject.Attributes.Set("selfillumbrightness", _selfIllumBrightness);
+			SceneObject.Attributes.Set("selfillumscale", _selfIllumBrightness);
 		}
 	}
 }

@@ -1,0 +1,41 @@
+{
+  "__version": 3,
+  "IsSubgraph": false,
+  "Path": "",
+  "Model": "models/dev/box.vmdl",
+  "Title": "",
+  "Description": "",
+  "Category": "",
+  "Icon": "",
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "MaterialDomain": "PostProcess",
+  "Metadata": {
+    "ProjectTemplate": {
+      "Icon": "camera",
+      "Order": 4,
+      "Description": "You want to make a Post Processing Shader"
+    }
+  },
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": true,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0"
+    }
+  ],
+  "parameters": []
+}
