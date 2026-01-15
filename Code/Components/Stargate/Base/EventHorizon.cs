@@ -12,9 +12,6 @@ namespace Sandbox.Components.Stargate
 		public ModelRenderer EventHorizonModel { get; set; }
 
 		[Property]
-		public ModelRenderer DebugRenderer { get; set; }
-
-		[Property]
 		public EventHorizonTrigger EventHorizonTrigger { get; set; }
 
 		// material VARIABLES - probably name this better one day
@@ -954,11 +951,6 @@ namespace Sandbox.Components.Stargate
 			)
 			{
 				EventHorizonModel.SceneObject.Attributes.Set("Color", _eventHorizonVideo.Texture);
-
-				if (DebugRenderer.IsValid() && DebugRenderer.SceneObject.IsValid())
-				{
-					DebugRenderer.SceneObject.Attributes.Set("EHVideo", _eventHorizonVideo.Texture);
-				}
 			}
 		}
 
