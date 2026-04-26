@@ -32,8 +32,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj": {
-                "projectPath": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj"
+              "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\code\\Base Library.csproj": {
+                "projectPath": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\code\\Base Library.csproj"
               }
             }
           }
@@ -342,14 +342,14 @@
         }
       }
     },
-    "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj": {
+    "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\code\\Base Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj",
+        "projectUniqueName": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\code\\Base Library.csproj",
         "projectName": "Base Library",
-        "projectPath": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj",
+        "projectPath": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\code\\Base Library.csproj",
         "packagesPath": "C:\\Users\\Gmod4\\.nuget\\packages\\",
-        "outputPath": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\obj\\",
+        "outputPath": "H:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\code\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

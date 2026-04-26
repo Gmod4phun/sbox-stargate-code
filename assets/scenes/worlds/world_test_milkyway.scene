@@ -2780,6 +2780,7 @@
                   "SequenceSpeed": 0.5,
                   "SequenceTime": 1,
                   "SheetSequence": true,
+                  "SnapToFrame": false,
                   "StartDelay": 0,
                   "StartVelocity": {
                     "Type": "Range",
@@ -3041,6 +3042,7 @@
                   "SequenceSpeed": 0.5,
                   "SequenceTime": 1,
                   "SheetSequence": true,
+                  "SnapToFrame": false,
                   "StartDelay": 0,
                   "StartVelocity": {
                     "Type": "Range",
@@ -3302,6 +3304,7 @@
                   "SequenceSpeed": 0.5,
                   "SequenceTime": 1,
                   "SheetSequence": true,
+                  "SnapToFrame": false,
                   "StartDelay": 0,
                   "StartVelocity": {
                     "Type": "Range",
@@ -3563,6 +3566,7 @@
                   "SequenceSpeed": 0.5,
                   "SequenceTime": 1,
                   "SheetSequence": true,
+                  "SnapToFrame": false,
                   "StartDelay": 0,
                   "StartVelocity": {
                     "Type": "Range",
@@ -5682,6 +5686,8 @@
               "__guid": "beafe30a-102b-4d13-b668-deb748830668",
               "__enabled": true,
               "Flags": 0,
+              "__version": 1,
+              "BakedTexture": "scenes/worlds/world_test_milkyway_scene_data/envmap/bake_beafe30a-102b-4d13-b668-deb748830668.vtex",
               "Bounds": {
                 "Mins": "-1600,-1600,0",
                 "Maxs": "1600,1600,1024"
@@ -5690,6 +5696,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "Mode": "Baked",
               "MultiBounce": false,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -5697,14 +5704,41 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
+              "Priority": 0,
               "Projection": "Sphere",
-              "RenderDynamically": false,
-              "Resolution": "Small",
+              "Resolution": "Medium",
               "Texture": "textures/cubemaps/default2.vtex",
               "TintColor": "1,1,1,1",
               "UpdateStrategy": "OnEnabled",
               "ZFar": 4096,
               "ZNear": 16
+            },
+            {
+              "__type": "Sandbox.IndirectLightVolume",
+              "__guid": "eb39c648-1df6-48bf-834c-9bb4eee6d6b1",
+              "__enabled": true,
+              "Flags": 0,
+              "Bounds": {
+                "Mins": "-1388.914,-1823.963,-41.33081",
+                "Maxs": "1337.279,1402.508,569.0536"
+              },
+              "Contrast": 2,
+              "DepthSharpness": 2,
+              "DistanceTexture": "scenes/worlds/world_test_milkyway_scene_data/ddgi/2d skybox_distance_eb39c648-1df6-48bf-834c-9bb4eee6d6b1.vtex",
+              "InsideGeometry": "Deactivate",
+              "IrradianceTexture": "scenes/worlds/world_test_milkyway_scene_data/ddgi/2d skybox_irradiance_eb39c648-1df6-48bf-834c-9bb4eee6d6b1.vtex",
+              "MaxRelocationDistanceFraction": 0.75,
+              "MinSurfaceDistanceFraction": 0.75,
+              "NormalBias": 5,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "ProbeDensity": 8,
+              "RelocationRayCount": 48,
+              "RelocationTexture": "scenes/worlds/world_test_milkyway_scene_data/ddgi/2d skybox_relocation_eb39c648-1df6-48bf-834c-9bb4eee6d6b1.vtex"
             }
           ],
           "Children": []
