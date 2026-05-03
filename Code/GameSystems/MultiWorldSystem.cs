@@ -134,9 +134,11 @@ public class MultiWorldSystem : GameObjectSystem
 	{
 		await Task.Delay(10);
 
-		// default rules, will need to get them from the project when thats implemented
-		// var rules = new Sandbox.Physics.CollisionRules();
-		var rules = ProjectSettings.Collision;
+		var rules = new Sandbox.Physics.CollisionRules();
+		foreach (var pair in ProjectSettings.Collision.Pairs)
+		{
+			rules.Pairs.TryAdd(pair.Key, pair.Value);
+		}
 
 		// setup rules for Stargate shit
 		rules.Pairs.TryAdd(
